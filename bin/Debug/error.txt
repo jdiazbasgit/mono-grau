@@ -1,0 +1,217 @@
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-04-10 07:09:42
+IsTerminating : True
+System.ComponentModel.InvalidAsynchronousStateException: Error al invocar el método. El subproceso de destino ya no existe.
+   en System.Windows.Forms.Control.WaitForWaitHandle(WaitHandle waitHandle)
+   en System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   en System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   en System.Windows.Forms.Control.Invoke(Delegate method)
+   en UHFAPP.ReadEPCForm.Time()
+   en UHFAPP.ReadEPCForm.<btnScanEPC_Click>b__28_0()
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+ExitApp
+-----------------------begin--------------------------
+Application_ThreadException:No se pudo encontrar el archivo 'C:\Users\PC\source\repos\C#\demo source code\UR4Demo\UR4Demo\bin\Debug\DEVICE.CFG'.
+   en System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   en System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   en System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   en System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize, Boolean checkHost)
+   en System.IO.StreamReader..ctor(String path, Encoding encoding)
+   en UHFAPP.custom.SetR3Form.ReadListSpecificationData() en C:\Users\PC\source\repos\C#\demo source code\UR4Demo\UR4Demo\custom\SetR3Form.cs:línea 189
+   en UHFAPP.custom.SetR3Form..ctor() en C:\Users\PC\source\repos\C#\demo source code\UR4Demo\UR4Demo\custom\SetR3Form.cs:línea 27
+   en UHFAPP.MainForm.SetR3ToolStripMenuItem_Click(Object sender, EventArgs e) en C:\Users\PC\source\repos\C#\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 415
+   en System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   en System.Windows.Forms.ToolStripMenuItem.OnClick(EventArgs e)
+   en System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   en System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   en System.Windows.Forms.ToolStripItem.FireEventInteractive(EventArgs e, ToolStripItemEventType met)
+   en System.Windows.Forms.ToolStripItem.FireEvent(EventArgs e, ToolStripItemEventType met)
+   en System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   en System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   en System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   en System.Windows.Forms.MenuStrip.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-04-12 10:05:50
+IsTerminating : True
+System.ObjectDisposedException: No se puede obtener acceso al objeto desechado.
+Nombre del objeto: 'MainForm'.
+   en System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   en System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   en System.Windows.Forms.Control.Invoke(Delegate method)
+   en UHFAPP.MainForm.OnDisconnectCallback(Int32 id) en C:\Users\PC\source\repos\C#\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 60
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-04-12 10:15:04
+IsTerminating : True
+System.ObjectDisposedException: No se puede obtener acceso al objeto desechado.
+Nombre del objeto: 'MainForm'.
+   en System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   en System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   en System.Windows.Forms.Control.Invoke(Delegate method)
+   en UHFAPP.MainForm.OnDisconnectCallback(Int32 id) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 60
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-04-12 10:33:32
+IsTerminating : True
+System.ObjectDisposedException: No se puede obtener acceso al objeto desechado.
+Nombre del objeto: 'MainForm'.
+   en System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   en System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   en System.Windows.Forms.Control.Invoke(Delegate method)
+   en UHFAPP.MainForm.OnDisconnectCallback(Int32 id) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 60
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-04-12 10:44:38
+IsTerminating : True
+System.ObjectDisposedException: No se puede obtener acceso al objeto desechado.
+Nombre del objeto: 'MainForm'.
+   en System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   en System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   en System.Windows.Forms.Control.Invoke(Delegate method)
+   en UHFAPP.MainForm.OnDisconnectCallback(Int32 id) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 60
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-04-12 10:46:18
+IsTerminating : True
+System.ObjectDisposedException: No se puede obtener acceso al objeto desechado.
+Nombre del objeto: 'MainForm'.
+   en System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   en System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   en System.Windows.Forms.Control.Invoke(Delegate method)
+   en UHFAPP.MainForm.OnDisconnectCallback(Int32 id) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 60
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-04-12 11:43:00
+IsTerminating : True
+System.ObjectDisposedException: No se puede obtener acceso al objeto desechado.
+Nombre del objeto: 'MainForm'.
+   en System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   en System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   en System.Windows.Forms.Control.Invoke(Delegate method)
+   en UHFAPP.MainForm.OnDisconnectCallback(Int32 id)
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-04-12 11:44:37
+IsTerminating : True
+System.ObjectDisposedException: No se puede obtener acceso al objeto desechado.
+Nombre del objeto: 'MainForm'.
+   en System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   en System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   en System.Windows.Forms.Control.Invoke(Delegate method)
+   en UHFAPP.MainForm.OnDisconnectCallback(Int32 id) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 60
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-04-12 11:49:57
+IsTerminating : True
+System.ObjectDisposedException: No se puede obtener acceso al objeto desechado.
+Nombre del objeto: 'MainForm'.
+   en System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   en System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   en System.Windows.Forms.Control.Invoke(Delegate method)
+   en UHFAPP.MainForm.OnDisconnectCallback(Int32 id) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 60
+-----------------------end----------------------------
+ExitApp
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-04-13 12:19:56
+IsTerminating : True
+System.ObjectDisposedException: No se puede obtener acceso al objeto desechado.
+Nombre del objeto: 'MainForm'.
+   en System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   en System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   en System.Windows.Forms.Control.Invoke(Delegate method)
+   en UHFAPP.MainForm.OnDisconnectCallback(Int32 id) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 60
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-04-13 12:22:38
+IsTerminating : True
+System.ObjectDisposedException: No se puede obtener acceso al objeto desechado.
+Nombre del objeto: 'MainForm'.
+   en System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   en System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   en System.Windows.Forms.Control.Invoke(Delegate method)
+   en UHFAPP.MainForm.OnDisconnectCallback(Int32 id) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 60
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-04-13 12:26:26
+IsTerminating : True
+System.ObjectDisposedException: No se puede obtener acceso al objeto desechado.
+Nombre del objeto: 'MainForm'.
+   en System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   en System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   en System.Windows.Forms.Control.Invoke(Delegate method)
+   en UHFAPP.MainForm.OnDisconnectCallback(Int32 id) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 60
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-04-13 12:27:49
+IsTerminating : True
+System.ObjectDisposedException: No se puede obtener acceso al objeto desechado.
+Nombre del objeto: 'MainForm'.
+   en System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   en System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   en System.Windows.Forms.Control.Invoke(Delegate method)
+   en UHFAPP.MainForm.OnDisconnectCallback(Int32 id) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 60
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-04-13 12:29:49
+IsTerminating : True
+System.ObjectDisposedException: No se puede obtener acceso al objeto desechado.
+Nombre del objeto: 'MainForm'.
+   en System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   en System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   en System.Windows.Forms.Control.Invoke(Delegate method)
+   en UHFAPP.MainForm.OnDisconnectCallback(Int32 id) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 60
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-04-13 01:09:54
+IsTerminating : True
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-04-13 01:17:32
+IsTerminating : True
+System.ObjectDisposedException: No se puede obtener acceso al objeto desechado.
+Nombre del objeto: 'MainForm'.
+   en System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   en System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   en System.Windows.Forms.Control.Invoke(Delegate method)
+   en UHFAPP.MainForm.OnDisconnectCallback(Int32 id) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 51
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-04-13 01:19:55
+IsTerminating : True
+System.ObjectDisposedException: No se puede obtener acceso al objeto desechado.
+Nombre del objeto: 'MainForm'.
+   en System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   en System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   en System.Windows.Forms.Control.Invoke(Delegate method)
+   en UHFAPP.MainForm.OnDisconnectCallback(Int32 id) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 51
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-04-13 01:26:17
+IsTerminating : True
+System.ObjectDisposedException: No se puede obtener acceso al objeto desechado.
+Nombre del objeto: 'MainForm'.
+   en System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   en System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   en System.Windows.Forms.Control.Invoke(Delegate method)
+   en UHFAPP.MainForm.OnDisconnectCallback(Int32 id) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 51
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-04-13 01:31:22
+IsTerminating : True
+System.ObjectDisposedException: No se puede obtener acceso al objeto desechado.
+Nombre del objeto: 'MainForm'.
+   en System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   en System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   en System.Windows.Forms.Control.Invoke(Delegate method)
+   en UHFAPP.MainForm.OnDisconnectCallback(Int32 id) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 51
+-----------------------end----------------------------
