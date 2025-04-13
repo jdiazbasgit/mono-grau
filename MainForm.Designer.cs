@@ -43,6 +43,9 @@
             this.label11 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
@@ -50,24 +53,22 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.btnScanEPC = new System.Windows.Forms.Button();
+            this.Load += new System.EventHandler(this.ScanEPCForm_Load);
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.label21 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.label21 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -228,9 +229,9 @@
             this.label10.ForeColor = System.Drawing.Color.Maroon;
             this.label10.Location = new System.Drawing.Point(221, 10);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(36, 27);
+            this.label10.Size = new System.Drawing.Size(30, 34);
             this.label10.TabIndex = 20;
-            this.label10.Text = "60";
+            this.label10.Text = "0";
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label11
@@ -268,6 +269,40 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(418, 48);
             this.panel1.TabIndex = 24;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label23.Location = new System.Drawing.Point(318, 10);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(30, 34);
+            this.label23.TabIndex = 29;
+            this.label23.Text = "0";
+            this.label23.Click += new System.EventHandler(this.label23_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.label8.Location = new System.Drawing.Point(14, -167);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(73, 27);
+            this.label8.TabIndex = 23;
+            this.label8.Text = "Leidos";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.label12.Location = new System.Drawing.Point(123, -167);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(82, 27);
+            this.label12.TabIndex = 33;
+            this.label12.Text = "Validos";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // panel3
             // 
@@ -346,18 +381,6 @@
             this.label22.Text = "400";
             this.label22.Click += new System.EventHandler(this.label22_Click);
             // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label23.Location = new System.Drawing.Point(318, 10);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(36, 27);
-            this.label23.TabIndex = 29;
-            this.label23.Text = "60";
-            this.label23.Click += new System.EventHandler(this.label23_Click);
-            // 
             // label25
             // 
             this.label25.AutoSize = true;
@@ -403,6 +426,7 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(539, 122);
             this.panel5.TabIndex = 35;
+            this.panel5.Visible = false;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // panel7
@@ -426,6 +450,7 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(539, 122);
             this.panel6.TabIndex = 36;
+            this.panel6.Visible = false;
             // 
             // panel8
             // 
@@ -466,15 +491,6 @@
             this.panel9.Size = new System.Drawing.Size(2337, 1137);
             this.panel9.TabIndex = 37;
             // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.label21.Location = new System.Drawing.Point(2208, 501);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(0, 27);
-            this.label21.TabIndex = 31;
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -487,37 +503,16 @@
             this.panel2.Size = new System.Drawing.Size(418, 48);
             this.panel2.TabIndex = 30;
             // 
-            // label8
+            // label4
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.label8.Location = new System.Drawing.Point(14, -167);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(73, 27);
-            this.label8.TabIndex = 23;
-            this.label8.Text = "Leidos";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.label12.Location = new System.Drawing.Point(123, -167);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(82, 27);
-            this.label12.TabIndex = 33;
-            this.label12.Text = "Validos";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.label15.Location = new System.Drawing.Point(108, 443);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(164, 27);
-            this.label15.TabIndex = 12;
-            this.label15.Text = "Lotes (opcional)";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label4.Location = new System.Drawing.Point(318, 14);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(48, 27);
+            this.label4.TabIndex = 29;
+            this.label4.Text = "400";
             // 
             // textBox3
             // 
@@ -529,16 +524,15 @@
             this.textBox3.TabIndex = 16;
             this.textBox3.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // label4
+            // label15
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label4.Location = new System.Drawing.Point(318, 14);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 27);
-            this.label4.TabIndex = 29;
-            this.label4.Text = "400";
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.label15.Location = new System.Drawing.Point(108, 443);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(164, 27);
+            this.label15.TabIndex = 12;
+            this.label15.Text = "Lotes (opcional)";
             // 
             // panel10
             // 
@@ -555,6 +549,15 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(114, 379);
             this.panel11.TabIndex = 35;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.label21.Location = new System.Drawing.Point(2208, 501);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(0, 27);
+            this.label21.TabIndex = 31;
             // 
             // MainForm
             // 

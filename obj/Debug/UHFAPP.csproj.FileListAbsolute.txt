@@ -72,3 +72,7 @@ C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\bin\Debug\of
 C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\bin\Debug\UHFControl.dll
 C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\bin\Debug\stdole.dll
 C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\obj\Debug\UHFAPP.csproj.Up2Date
+C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\bin\Debug\Lucene.Net.dll
+C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\bin\Debug\Lucene.Net.pdb
+C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\bin\Debug\Lucene.Net.xml

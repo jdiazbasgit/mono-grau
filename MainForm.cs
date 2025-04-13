@@ -2,16 +2,23 @@
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Sockets;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using BLEDeviceAPI;
+using Lucene.Net.Support;
+
 //using UHFAPP.barcode;
 using UHFAPP.Entity;
 using UHFAPP.RFID;
+using UHFAPP.utils;
 using WinForm_Test;
+using static Lucene.Net.Documents.Field;
 using static UHFAPP.UHFAPI;
+using static UHFAPP.utils.EpcInfo;
 
 namespace UHFAPP
 {
@@ -20,7 +27,7 @@ namespace UHFAPP
         public static int MODE = 1;//0:串口   1:网口    2:usb
         public static string ip = "";
         public static uint portData = 0;
-
+        int total = 0;
         public delegate void DelegateOpen(bool open);
         public static event DelegateOpen eventOpen = null;
         private ConfigForm configForm;
@@ -34,13 +41,14 @@ namespace UHFAPP
         string strClose = "  Desconectar lector  ";
         string strStart = "  Iniciar lectura  ";
         string strStop = "  Detener lectura  ";
-
+        private List<string> tags = new List<string>();
+        private List<int> tagsCantidad = new List<int>();
         private string currentFormName = "";
         private bool isOpen = false;
         public MainForm mainform = null;
         private ReadEPCForm readEPCForm = null;
         public static FormWindowState currState = FormWindowState.Normal;
-
+        List<EpcInfo> epcList = new List<EpcInfo>();
         public bool isSearch = false;
         List<ReaderDeviceInfo> listIP = new List<ReaderDeviceInfo>();
         #region  OnDisconnect
@@ -235,15 +243,17 @@ namespace UHFAPP
         
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
+            btnScanEPC.BackColor = System.Drawing.Color.White;
             if (button1.Text == strOpen)
             {
                 btnScanEPC.Enabled = true;
                 btnScanEPC.Visible = true;
-                btnScanEPC.BackColor = System.Drawing.Color.Green;
+                //btnScanEPC.BackColor = System.Drawing.Color.Green;
                 // int type = combCommunicationMode.SelectedIndex;//0
                 string msg =  "Conectando lector..." ;
 
-                
+                StartReceiveThread();
+
                 frmWaitingBox f = new frmWaitingBox((obj, args) =>
                 {
                     bool result = false;
@@ -276,8 +286,9 @@ namespace UHFAPP
                         Thread.Sleep(2000);
                     }
                 }, msg);
+                f.BackColor = System.Drawing.Color.Gray;
                 f.ShowDialog(this);
-                
+               // Thread.Sleep(5000);
                 button1.BackColor = System.Drawing.Color.GreenYellow;
                 button1.Text = strClose;
                 btnScanEPC.Visible = true;
@@ -322,6 +333,8 @@ namespace UHFAPP
         public static event KeyUpEventHandler keyUpEventHandler = null;
 
         private UHFAPP.UHFAPI.OnDataReceived onDataReceived = DataReceived;
+        private int suma;
+
         private static void DataReceived(IntPtr pdata, short len)
         {
             Console.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss:fff") + " DataReceived begin");
@@ -544,7 +557,14 @@ namespace UHFAPP
             if (!isRuning)
             {
                 isRuning = true;
-                new Thread(new ThreadStart(delegate { ReadEPC(); })).Start();
+                try
+                {
+                    new Thread(new ThreadStart(delegate { ReadEPC(); })).Start();
+                }
+                catch (Exception e)
+                {
+                    Console.Write(e.Message);
+                }
             }
         }
         private void StopReceiveThread()
@@ -553,23 +573,149 @@ namespace UHFAPP
             isRuning = false;
             Thread.Sleep(100);
         }
+        private void UpdataEPC(string epc, string tid, string rssi, string count, string ant, string user)
+        {
+
+           
+
+            if (epc == null)
+             {
+                 return;
+             }
+
+
+            /* bool[] exist = new bool[1];
+
+             int index = CheckUtils.getInsertIndex(epcList, epc, tid, exist);
+             if (exist[0])
+             {
+                 total++;
+
+                 epcList[index].AddAntennaInfoByAnt(int.Parse(ant), rssi);
+                 epcList[index].Count = epcList[index].Count + 1;
+
+                 label10.Text = count;
+
+                 /* epc;
+                   this.dgData.Rows[index].Cells[2].Value = tid;
+                   this.dgData.Rows[index].Cells[3].Value = user;
+                   this.dgData.Rows[index].Cells[4].Value = stringBuilderRSSI.ToString();
+                   this.dgData.Rows[index].Cells[5].Value = epcList[index].Count;
+                   this.dgData.Rows[index].Cells[6].Value = stringBuilderANT.ToString();*/
+
+            /* }
+             else
+             {
+                 EpcInfo epcInfo = new EpcInfo(epc, tid, int.Parse(count), DataConvert.HexStringToByteArray(epc), DataConvert.HexStringToByteArray(tid), int.Parse(ant), rssi, user);
+                 epcList.Insert(index, epcInfo);
+
+                 total++;*/
+            /* if (cmbFormat.SelectedIndex == 2)
+             {
+                 if (!string.IsNullOrEmpty(epc))
+                 {
+                     epc = epc + System.Environment.NewLine + "Ascii:" + System.Text.Encoding.ASCII.GetString(DataConvert.HexStringToByteArray(epc));
+                 }
+
+                 if (!string.IsNullOrEmpty(user))
+                 {
+                     user = user + System.Environment.NewLine + "Ascii:" + System.Text.Encoding.ASCII.GetString(DataConvert.HexStringToByteArray(user));
+                 }
+             }
+             else if (cmbFormat.SelectedIndex == 1)
+             {
+                 if (!string.IsNullOrEmpty(epc))
+                 {
+                     epc = System.Text.Encoding.ASCII.GetString(DataConvert.HexStringToByteArray(epc));
+                 }
+
+                 if (!string.IsNullOrEmpty(user))
+                 {
+                     user = System.Text.Encoding.ASCII.GetString(DataConvert.HexStringToByteArray(user));
+                 }
+             }
+
+             StringBuilder stringBuilder = new StringBuilder();
+             stringBuilder.Append("ANT");
+             stringBuilder.Append(ant);
+             stringBuilder.Append(": 1");
+
+             object[] values = new object[] { (index + 1), epc, tid, user, rssi, 1, stringBuilder.ToString() };
+             dgData.Rows.Insert(index, values);
+
+             lblTotal.Text = (dgData.RowCount - 1).ToString();
+
+         }
+         if (epc.Length > 40 || (user != null && user.Length > 40))
+         {
+             AutoCellsWidth(true);
+         }*/
+            /* label10.Text = total.ToString();
+             label23.Text = epcList[index].Count.ToString();
+
+         }*/
+            total++;
+
+            label10.Text = total.ToString();
+            label23.Text = total.ToString();
+            if (total == 25)
+            {
+                panel5.Visible = true;
+                total = 0;
+                StopEPC(true);
+            }
+        }
+        private void ScanEPCForm_Load(object sender, EventArgs e)
+        {
+            //LoadDataGridView();
+            //MainForm.eventOpen += MainForm_eventOpen;
+            setTextCallback = new SetTextCallback(UpdataEPC);
+           
+
+            //private void UpdataEPC(string epc, string tid, string rssi, string count,string ant)
+            // UpdataEPC("112233","","","1","1");
+            //sUpdataEPC("445566778899", "", "", "1", "1");
+            LoadUI();
+
+           
+
+        }
+
+
+
+        private void ScanEPCForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //MainForm.eventOpen -= MainForm_eventOpen;
+          
+            if (btnScanEPC.Text == strStop )
+            {
+                StopEPC(true);
+            }
+            StopReceiveThread();
+        }
+
         private void ReadEPC()
         {
+            
             try
             {
                 while (isRuning)
                 {
+                    //label22.Text= contadorLote.ToString();
+                    //label4.Text = contadorLote.ToString();
+
                     if (!isVisible)
                     {
                         Thread.Sleep(10);
                         // Console.WriteLine("isVisible false");
-                        continue;
+                       // continue;
                     }
                     UHFTAGInfo info = uhf.ReadTagFromBuffer();
 
                     if (info != null)
                     {
                         this.BeginInvoke(setTextCallback, new object[] { info.Epc, info.Tid, info.Rssi, "1", info.Ant, info.User });
+                        
                     }
                     else
                     {
@@ -580,7 +726,7 @@ namespace UHFAPP
             }
             catch (Exception ex)
             {
-
+                Console.Write(ex.ToString());
             }
         }
 
@@ -598,11 +744,12 @@ namespace UHFAPP
                 btnScanEPC.BackColor = System.Drawing.Color.Red;
                 btnScanEPC.Text = strStop;
                 mainform.disableControls(true);
+                panel5.Visible = false;
                 if (uhf.StartInventory())
                 {
                    
                     btnScanEPC.Text = strStop ;
-                    StartReceiveThread();
+                    //StartReceiveThread();
 
                     //+++++++++++++++++
                     
