@@ -28,6 +28,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.MenuItemScanEPC = new System.Windows.Forms.ToolStripMenuItem();
             this.configToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Load += new System.EventHandler(this.ScanEPCForm_Load);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,7 +57,6 @@
             this.label25 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.btnScanEPC = new System.Windows.Forms.Button();
-            this.Load += new System.EventHandler(this.ScanEPCForm_Load);
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -141,6 +141,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(211, 34);
             this.textBox1.TabIndex = 8;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button2
             // 
@@ -183,9 +184,8 @@
             this.label5.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label5.Location = new System.Drawing.Point(269, 235);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 27);
+            this.label5.Size = new System.Drawing.Size(0, 34);
             this.label5.TabIndex = 13;
-            this.label5.Text = "23403710";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
@@ -195,9 +195,9 @@
             this.label6.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label6.Location = new System.Drawing.Point(425, 235);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(365, 27);
+            this.label6.Size = new System.Drawing.Size(0, 34);
             this.label6.TabIndex = 14;
-            this.label6.Text = "Implante Inhex Std 3,75x10 mm ONE";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -206,9 +206,10 @@
             this.label7.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label7.Location = new System.Drawing.Point(425, 330);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(36, 27);
+            this.label7.Size = new System.Drawing.Size(30, 34);
             this.label7.TabIndex = 15;
-            this.label7.Text = "25";
+            this.label7.Text = "0";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label9
             // 
@@ -229,7 +230,7 @@
             this.label10.ForeColor = System.Drawing.Color.Maroon;
             this.label10.Location = new System.Drawing.Point(221, 10);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(30, 34);
+            this.label10.Size = new System.Drawing.Size(24, 27);
             this.label10.TabIndex = 20;
             this.label10.Text = "0";
             this.label10.Click += new System.EventHandler(this.label10_Click);
@@ -277,7 +278,7 @@
             this.label23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.label23.Location = new System.Drawing.Point(318, 10);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(30, 34);
+            this.label23.Size = new System.Drawing.Size(24, 27);
             this.label23.TabIndex = 29;
             this.label23.Text = "0";
             this.label23.Click += new System.EventHandler(this.label23_Click);
@@ -414,6 +415,7 @@
             this.btnScanEPC.Text = "  Iniciar lectura  ";
             this.btnScanEPC.UseCompatibleTextRendering = true;
             this.btnScanEPC.UseVisualStyleBackColor = true;
+            this.btnScanEPC.Visible = false;
             this.btnScanEPC.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel5

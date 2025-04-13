@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Media;
 using System.Net;
 using System.Net.Sockets;
 using System.Reflection;
@@ -7,9 +9,15 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 using System.Xml.Linq;
+using ApodemiaC;
 using BLEDeviceAPI;
 using Lucene.Net.Support;
+using Microsoft.Office.Interop.Excel;
+using Newtonsoft.Json;
+
+
 
 //using UHFAPP.barcode;
 using UHFAPP.Entity;
@@ -28,6 +36,7 @@ namespace UHFAPP
         public static string ip = "";
         public static uint portData = 0;
         int total = 0;
+        private GetMozo getMozo;
         public delegate void DelegateOpen(bool open);
         public static event DelegateOpen eventOpen = null;
         private ConfigForm configForm;
@@ -114,14 +123,7 @@ namespace UHFAPP
 
         public void ReadWriteTag(string tag, int bank)
         {
-           /* Form form = ShowForm(new ReadWriteTagForm(), true);
-            if (form != null)
-            {
-                if (form is ReadWriteTagForm)
-                {
-                    ((ReadWriteTagForm)form).SetTAG(isOpen, tag, bank);
-                }
-            }*/
+           
 
         }
 
@@ -176,29 +178,9 @@ namespace UHFAPP
             if(configForm!=null)
             configForm.Close();
             ocultarControles(true);
-            /* if (readEPCForm == null)
-             {
-                 readEPCForm = new ReadEPCForm(isOpen, mainform);
-             }
-            //Form form = ShowForm(readEPCForm, false);
-            
-             if (readEPCForm != null)
-             {
-                 readEPCForm.Show();
-                 readEPCForm.Focus();
-             }
-             else
-             {
-                 readEPCForm = new ReadEPCForm(isOpen, mainform);
-                 readEPCForm.Show();
-                 readEPCForm.Focus();
-             }*/
+           
         }
-        /// <summary>
-        /// Config
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+       
         private void configToolStripMenuItem_Click(object sender, EventArgs e)
         {
          
@@ -235,11 +217,7 @@ namespace UHFAPP
            // label26.Visible = dato;
             label27.Visible = dato;
         }
-        /// <summary>
-        /// kill
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+      
         
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
@@ -248,8 +226,7 @@ namespace UHFAPP
             {
                 btnScanEPC.Enabled = true;
                 btnScanEPC.Visible = true;
-                //btnScanEPC.BackColor = System.Drawing.Color.Green;
-                // int type = combCommunicationMode.SelectedIndex;//0
+                
                 string msg =  "Conectando lector..." ;
 
                 StartReceiveThread();
@@ -344,17 +321,11 @@ namespace UHFAPP
 
             byte[] cellData = new byte[len];
             Marshal.Copy(pdata, cellData, 0, len);
-            // cellData= Utils.CopyArray(pdata,0,len);
 
             byte[] pcontent;
-            // printf("OnReceivedData:");
-            for (int i = 0; i < len; i++)
-            {
-                // Console.WriteLine("%02X", cellData[i]);
-            }
+           
             byte[] temp = null;
             string str;
-            //  printf("\n");
             while (index < len)
             {
                 type = cellData[index++];
@@ -390,7 +361,6 @@ namespace UHFAPP
                         }
                         break;
                     default:
-                        //  printf("unknow parameter:%d\n", type);
                         break;
                 }
                 index += contentLen;
@@ -419,14 +389,10 @@ namespace UHFAPP
         private void MainForm_SizeChanged(object sender, EventArgs e)
         {
             currState = WindowState;
-           // panel2.Height = this.Height - 128;
-            //判断是否选择的是最小化按钮
             if (eventMainSizeChanged != null)
             {
                 eventMainSizeChanged(WindowState);
             }
-            // this.MdiParent = mainform;
-            //  Form form = ShowForm(new ConfigForm(isOpen), false);
         }
        
        
@@ -449,13 +415,7 @@ namespace UHFAPP
         }
         private void menuStrip1_ItemAdded(object sender, ToolStripItemEventArgs e)
         {
-            if (e.Item.Text.Length == 0             //隐藏子窗体图标
-              || e.Item.Text == "最小化(&N)"      //隐藏最小化按钮
-              || e.Item.Text == "还原(&R)"           //隐藏还原按钮
-              || e.Item.Text == "关闭(&C)")         //隐藏关闭按钮
-            {
-                e.Item.Visible = false;
-            }
+
         }
        
 
@@ -479,32 +439,21 @@ namespace UHFAPP
                     return null;
                 }
 
-                if (currForm.Name != "ReadEPCForm")// (currForm.Name == "ReadEPCForm" || currForm.Name == "ConfigForm")
+                if (currForm.Name != "ReadEPCForm")
+
                 {
-                    //Common.SaveForm(currForm);
                     currForm.Close();
                 }
                 else
                 {
                     currForm.Hide();
-                    // from = Common.GetForm(nextForm.GetType().Namespace, nextForm.Name, this);
                 }
             }
 
             from.WindowState = FormWindowState.Maximized;
             from.MdiParent = this;
             from.AutoScaleMode = AutoScaleMode.Inherit;
-           /* if (from.Name != "ReadEPCForm")
-            {
-                from.Left = 0;
-            }
-            else
-            {
-                if (from.Left != -8)
-                {
-                    from.Left = 303;
-                }
-            }*/
+          
 
             from.Show();
             return from;
@@ -584,100 +533,65 @@ namespace UHFAPP
              }
 
 
-            /* bool[] exist = new bool[1];
-
-             int index = CheckUtils.getInsertIndex(epcList, epc, tid, exist);
-             if (exist[0])
-             {
-                 total++;
-
-                 epcList[index].AddAntennaInfoByAnt(int.Parse(ant), rssi);
-                 epcList[index].Count = epcList[index].Count + 1;
-
-                 label10.Text = count;
-
-                 /* epc;
-                   this.dgData.Rows[index].Cells[2].Value = tid;
-                   this.dgData.Rows[index].Cells[3].Value = user;
-                   this.dgData.Rows[index].Cells[4].Value = stringBuilderRSSI.ToString();
-                   this.dgData.Rows[index].Cells[5].Value = epcList[index].Count;
-                   this.dgData.Rows[index].Cells[6].Value = stringBuilderANT.ToString();*/
-
-            /* }
-             else
-             {
-                 EpcInfo epcInfo = new EpcInfo(epc, tid, int.Parse(count), DataConvert.HexStringToByteArray(epc), DataConvert.HexStringToByteArray(tid), int.Parse(ant), rssi, user);
-                 epcList.Insert(index, epcInfo);
-
-                 total++;*/
-            /* if (cmbFormat.SelectedIndex == 2)
-             {
-                 if (!string.IsNullOrEmpty(epc))
-                 {
-                     epc = epc + System.Environment.NewLine + "Ascii:" + System.Text.Encoding.ASCII.GetString(DataConvert.HexStringToByteArray(epc));
-                 }
-
-                 if (!string.IsNullOrEmpty(user))
-                 {
-                     user = user + System.Environment.NewLine + "Ascii:" + System.Text.Encoding.ASCII.GetString(DataConvert.HexStringToByteArray(user));
-                 }
-             }
-             else if (cmbFormat.SelectedIndex == 1)
-             {
-                 if (!string.IsNullOrEmpty(epc))
-                 {
-                     epc = System.Text.Encoding.ASCII.GetString(DataConvert.HexStringToByteArray(epc));
-                 }
-
-                 if (!string.IsNullOrEmpty(user))
-                 {
-                     user = System.Text.Encoding.ASCII.GetString(DataConvert.HexStringToByteArray(user));
-                 }
-             }
-
-             StringBuilder stringBuilder = new StringBuilder();
-             stringBuilder.Append("ANT");
-             stringBuilder.Append(ant);
-             stringBuilder.Append(": 1");
-
-             object[] values = new object[] { (index + 1), epc, tid, user, rssi, 1, stringBuilder.ToString() };
-             dgData.Rows.Insert(index, values);
-
-             lblTotal.Text = (dgData.RowCount - 1).ToString();
-
-         }
-         if (epc.Length > 40 || (user != null && user.Length > 40))
-         {
-             AutoCellsWidth(true);
-         }*/
-            /* label10.Text = total.ToString();
-             label23.Text = epcList[index].Count.ToString();
-
-         }*/
+           
             total++;
 
             label10.Text = total.ToString();
             label23.Text = total.ToString();
-            if (total == 25)
+            if(total==25)
             {
                 panel5.Visible = true;
                 total = 0;
                 StopEPC(true);
             }
         }
+        private void leerOrden()
+        {
+            SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\chimes.wav");
+            simpleSound.Play();
+
+            var url = "https://webservice.mozo-grau.com:7048/BC200_MG_DESARROLLO/api/mozo/apiArco/v2.0/companies(0c0574f1-f098-ed11-965c-6045bd89ef6b)/linOrdenesProdArco?$filter=prodOrderNo eq '" + textBox1.Text + "'";
+
+            var request = (HttpWebRequest)WebRequest.Create(url);
+            string username = "WEBSERVICE";
+            string password = "BLZNChVZ4LAab/kewV3J0v1J/2rYZSwuDUcyyOWEkbY=";
+            string svcCredentials = Convert.ToBase64String(ASCIIEncoding.ASCII.GetBytes(username + ":" + password));
+            request.Headers.Add("Authorization", "Basic " + svcCredentials);
+            request.Method = "GET";
+            request.ContentType = "application/json";
+            request.Accept = "application/json";
+             try
+             {
+                 using (WebResponse response = request.GetResponse())
+                 {
+                     using (Stream strReader = response.GetResponseStream())
+                     {
+                         if (strReader == null) return;
+                         using (StreamReader objReader = new StreamReader(strReader))
+                         {
+                             string responseBody = objReader.ReadToEnd();
+                             string responseBodyFormater = responseBody.Replace("@odata.context", "dataContext");
+                             responseBodyFormater = responseBodyFormater.Replace("@odata.etag", "odataETag");
+                              getMozo = JsonConvert.DeserializeObject<GetMozo>(responseBodyFormater);
+                             label5.Text = getMozo.Value[0].ItemNo ;
+                            label6.Text = getMozo.Value[0].Description; 
+                             label7.Text = getMozo.Value[0].RemainingQtyBase.ToString();
+                             label2.Visible = true;
+                         }
+                     }
+                 }
+             }
+             catch (Exception ex)
+             {
+                 MessageBox.Show("Orden no existe"); // Handle error
+                 textBox1.Text = "";
+             }
+        }
         private void ScanEPCForm_Load(object sender, EventArgs e)
         {
-            //LoadDataGridView();
-            //MainForm.eventOpen += MainForm_eventOpen;
             setTextCallback = new SetTextCallback(UpdataEPC);
            
-
-            //private void UpdataEPC(string epc, string tid, string rssi, string count,string ant)
-            // UpdataEPC("112233","","","1","1");
-            //sUpdataEPC("445566778899", "", "", "1", "1");
             LoadUI();
-
-           
 
         }
 
@@ -685,7 +599,6 @@ namespace UHFAPP
 
         private void ScanEPCForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //MainForm.eventOpen -= MainForm_eventOpen;
           
             if (btnScanEPC.Text == strStop )
             {
@@ -701,14 +614,10 @@ namespace UHFAPP
             {
                 while (isRuning)
                 {
-                    //label22.Text= contadorLote.ToString();
-                    //label4.Text = contadorLote.ToString();
 
                     if (!isVisible)
                     {
                         Thread.Sleep(10);
-                        // Console.WriteLine("isVisible false");
-                       // continue;
                     }
                     UHFTAGInfo info = uhf.ReadTagFromBuffer();
 
@@ -749,12 +658,8 @@ namespace UHFAPP
                 {
                    
                     btnScanEPC.Text = strStop ;
-                    //StartReceiveThread();
-
-                    //+++++++++++++++++
                     
                     new Thread(new ThreadStart(delegate { Time(); })).Start();
-                    //+++++++++++++++++
                 }
                 else
                 {
@@ -835,6 +740,21 @@ namespace UHFAPP
             sb.Append("cinco\n");
             sb.Append("seis\n");
             
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

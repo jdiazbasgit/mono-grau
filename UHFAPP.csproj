@@ -144,11 +144,13 @@
     <Compile Include="BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Datos.cs" />
     <Compile Include="DeviceInfo.cs" />
     <Compile Include="Download\Downloader.cs" />
     <Compile Include="Download\FileInfo.cs" />
     <Compile Include="Entity\ReaderDeviceInfo.cs" />
     <Compile Include="excel\ExcelUtils.cs" />
+    <Compile Include="GetMozo.cs" />
     <Compile Include="interfaces\IAutoReceive.cs" />
     <Compile Include="multidevice\NetWork\API\AntennaEnum.cs" />
     <Compile Include="multidevice\NetWork\API\AntennaPowerEntity.cs" />
