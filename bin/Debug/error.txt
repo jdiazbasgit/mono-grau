@@ -247,3 +247,84 @@ Nombre del objeto: 'MainForm'.
    en UHFAPP.MainForm.OnDisconnectCallback(Int32 id) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 51
 -----------------------end----------------------------
 ExitApp
+-----------------------begin--------------------------
+Application_ThreadException:No se puede obtener acceso al objeto desechado.
+Nombre del objeto: 'ReadEPCForm'.
+   en System.Windows.Forms.Control.CreateHandle()
+   en System.Windows.Forms.Form.CreateHandle()
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.SetVisibleCore(Boolean value)
+   en System.Windows.Forms.Form.SetVisibleCore(Boolean value)
+   en System.Windows.Forms.Control.Show()
+   en UHFAPP.MainForm.MenuItemScanEPC_Click(Object sender, EventArgs e) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 176
+   en System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   en System.Windows.Forms.ToolStripMenuItem.OnClick(EventArgs e)
+   en System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   en System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   en System.Windows.Forms.ToolStripItem.FireEventInteractive(EventArgs e, ToolStripItemEventType met)
+   en System.Windows.Forms.ToolStripItem.FireEvent(EventArgs e, ToolStripItemEventType met)
+   en System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   en System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   en System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   en System.Windows.Forms.MenuStrip.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Referencia a objeto no establecida como instancia de un objeto.
+   en UHFAPP.MainForm.MenuItemScanEPC_Click(Object sender, EventArgs e) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 168
+   en UHFAPP.MainForm.Form1_Load(Object sender, EventArgs e) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 94
+   en System.Windows.Forms.Form.OnLoad(EventArgs e)
+   en System.Windows.Forms.Form.OnCreateControl()
+   en System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   en System.Windows.Forms.Control.CreateControl()
+   en System.Windows.Forms.Control.WmShowWindow(Message& m)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   en System.Windows.Forms.ContainerControl.WndProc(Message& m)
+   en System.Windows.Forms.Form.WmShowWindow(Message& m)
+   en System.Windows.Forms.Form.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Referencia a objeto no establecida como instancia de un objeto.
+   en UHFAPP.MainForm.configToolStripMenuItem_Click(Object sender, EventArgs e) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 196
+   en System.Windows.Forms.ToolStripItem.RaiseEvent(Object key, EventArgs e)
+   en System.Windows.Forms.ToolStripMenuItem.OnClick(EventArgs e)
+   en System.Windows.Forms.ToolStripItem.HandleClick(EventArgs e)
+   en System.Windows.Forms.ToolStripItem.HandleMouseUp(MouseEventArgs e)
+   en System.Windows.Forms.ToolStripItem.FireEventInteractive(EventArgs e, ToolStripItemEventType met)
+   en System.Windows.Forms.ToolStripItem.FireEvent(EventArgs e, ToolStripItemEventType met)
+   en System.Windows.Forms.ToolStrip.OnMouseUp(MouseEventArgs mea)
+   en System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   en System.Windows.Forms.ToolStrip.WndProc(Message& m)
+   en System.Windows.Forms.MenuStrip.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Referencia a objeto no establecida como instancia de un objeto.
+   en UHFAPP.MainForm.MenuItemScanEPC_Click(Object sender, EventArgs e) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 168
+   en UHFAPP.MainForm.Form1_Load(Object sender, EventArgs e) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 94
+   en System.Windows.Forms.Form.OnLoad(EventArgs e)
+   en System.Windows.Forms.Form.OnCreateControl()
+   en System.Windows.Forms.Control.CreateControl(Boolean fIgnoreVisible)
+   en System.Windows.Forms.Control.CreateControl()
+   en System.Windows.Forms.Control.WmShowWindow(Message& m)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   en System.Windows.Forms.ContainerControl.WndProc(Message& m)
+   en System.Windows.Forms.Form.WmShowWindow(Message& m)
+   en System.Windows.Forms.Form.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+-----------------------end----------------------------

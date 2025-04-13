@@ -315,22 +315,22 @@
             this.groupBox1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.groupBox1.Controls.Add(this.btnGetCW);
             this.groupBox1.Controls.Add(this.btnSetCW);
-            this.groupBox1.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox1.Font = new System.Drawing.Font("SimSun", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(902, 817);
+            this.groupBox1.Location = new System.Drawing.Point(902, 885);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(355, 68);
+            this.groupBox1.Size = new System.Drawing.Size(355, 74);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "cw";
             // 
             // btnGetCW
             // 
-            this.btnGetCW.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnGetCW.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnGetCW.ForeColor = System.Drawing.Color.Black;
-            this.btnGetCW.Location = new System.Drawing.Point(48, 24);
+            this.btnGetCW.Location = new System.Drawing.Point(48, 26);
             this.btnGetCW.Name = "btnGetCW";
-            this.btnGetCW.Size = new System.Drawing.Size(92, 31);
+            this.btnGetCW.Size = new System.Drawing.Size(92, 34);
             this.btnGetCW.TabIndex = 25;
             this.btnGetCW.Text = "ON";
             this.btnGetCW.UseVisualStyleBackColor = true;
@@ -338,11 +338,11 @@
             // 
             // btnSetCW
             // 
-            this.btnSetCW.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSetCW.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSetCW.ForeColor = System.Drawing.Color.Black;
-            this.btnSetCW.Location = new System.Drawing.Point(190, 20);
+            this.btnSetCW.Location = new System.Drawing.Point(190, 22);
             this.btnSetCW.Name = "btnSetCW";
-            this.btnSetCW.Size = new System.Drawing.Size(90, 31);
+            this.btnSetCW.Size = new System.Drawing.Size(90, 34);
             this.btnSetCW.TabIndex = 24;
             this.btnSetCW.Text = "OFF";
             this.btnSetCW.UseVisualStyleBackColor = true;
@@ -356,11 +356,11 @@
             this.groupBox3.Controls.Add(this.btnRFLinkSet);
             this.groupBox3.Controls.Add(this.cmbRFLink);
             this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox3.Font = new System.Drawing.Font("SimSun", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox3.ForeColor = System.Drawing.Color.Black;
-            this.groupBox3.Location = new System.Drawing.Point(902, 454);
+            this.groupBox3.Location = new System.Drawing.Point(902, 492);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(357, 93);
+            this.groupBox3.Size = new System.Drawing.Size(357, 101);
             this.groupBox3.TabIndex = 27;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "RFLink";
@@ -368,8 +368,8 @@
             // cbRFLink
             // 
             this.cbRFLink.AutoSize = true;
-            this.cbRFLink.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbRFLink.Location = new System.Drawing.Point(280, 57);
+            this.cbRFLink.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbRFLink.Location = new System.Drawing.Point(280, 62);
             this.cbRFLink.Name = "cbRFLink";
             this.cbRFLink.Size = new System.Drawing.Size(58, 20);
             this.cbRFLink.TabIndex = 28;
@@ -378,11 +378,11 @@
             // 
             // btnRFLinkGet
             // 
-            this.btnRFLinkGet.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnRFLinkGet.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnRFLinkGet.ForeColor = System.Drawing.Color.Black;
-            this.btnRFLinkGet.Location = new System.Drawing.Point(60, 50);
+            this.btnRFLinkGet.Location = new System.Drawing.Point(60, 54);
             this.btnRFLinkGet.Name = "btnRFLinkGet";
-            this.btnRFLinkGet.Size = new System.Drawing.Size(90, 31);
+            this.btnRFLinkGet.Size = new System.Drawing.Size(90, 34);
             this.btnRFLinkGet.TabIndex = 27;
             this.btnRFLinkGet.Text = "Get";
             this.btnRFLinkGet.UseVisualStyleBackColor = true;
@@ -390,11 +390,11 @@
             // 
             // btnRFLinkSet
             // 
-            this.btnRFLinkSet.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnRFLinkSet.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnRFLinkSet.ForeColor = System.Drawing.Color.Black;
-            this.btnRFLinkSet.Location = new System.Drawing.Point(181, 51);
+            this.btnRFLinkSet.Location = new System.Drawing.Point(181, 55);
             this.btnRFLinkSet.Name = "btnRFLinkSet";
-            this.btnRFLinkSet.Size = new System.Drawing.Size(90, 31);
+            this.btnRFLinkSet.Size = new System.Drawing.Size(90, 34);
             this.btnRFLinkSet.TabIndex = 26;
             this.btnRFLinkSet.Text = "Set";
             this.btnRFLinkSet.UseVisualStyleBackColor = true;
@@ -402,7 +402,7 @@
             // 
             // cmbRFLink
             // 
-            this.cmbRFLink.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbRFLink.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbRFLink.FormattingEnabled = true;
             this.cmbRFLink.Items.AddRange(new object[] {
             "0-PR ASK/Miller8/160KHz",
@@ -417,7 +417,7 @@
             "D-Gen2x/Miller4/ 640KHz",
             "E-Gen2X/Miller2/320KHz",
             "F-Gen2X/Miller2/ 640KHz"});
-            this.cmbRFLink.Location = new System.Drawing.Point(113, 20);
+            this.cmbRFLink.Location = new System.Drawing.Point(113, 22);
             this.cmbRFLink.Name = "cmbRFLink";
             this.cmbRFLink.Size = new System.Drawing.Size(220, 24);
             this.cmbRFLink.TabIndex = 18;
@@ -425,8 +425,8 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label5.Location = new System.Drawing.Point(48, 26);
+            this.label5.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label5.Location = new System.Drawing.Point(48, 28);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 16);
             this.label5.TabIndex = 22;
@@ -466,11 +466,11 @@
             this.groupBox5.Controls.Add(this.label11);
             this.groupBox5.Controls.Add(this.cmbTarget);
             this.groupBox5.Controls.Add(this.label10);
-            this.groupBox5.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox5.Font = new System.Drawing.Font("SimSun", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox5.ForeColor = System.Drawing.Color.Black;
-            this.groupBox5.Location = new System.Drawing.Point(426, 13);
+            this.groupBox5.Location = new System.Drawing.Point(426, 14);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(466, 128);
+            this.groupBox5.Size = new System.Drawing.Size(466, 139);
             this.groupBox5.TabIndex = 28;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Gen2";
@@ -478,9 +478,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label2.ForeColor = System.Drawing.Color.Maroon;
-            this.label2.Location = new System.Drawing.Point(199, 99);
+            this.label2.Location = new System.Drawing.Point(199, 107);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(95, 12);
             this.label2.TabIndex = 59;
@@ -489,11 +489,11 @@
             // 
             // btnGen2Get
             // 
-            this.btnGen2Get.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnGen2Get.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnGen2Get.ForeColor = System.Drawing.Color.Black;
-            this.btnGen2Get.Location = new System.Drawing.Point(100, 69);
+            this.btnGen2Get.Location = new System.Drawing.Point(100, 75);
             this.btnGen2Get.Name = "btnGen2Get";
-            this.btnGen2Get.Size = new System.Drawing.Size(90, 29);
+            this.btnGen2Get.Size = new System.Drawing.Size(90, 31);
             this.btnGen2Get.TabIndex = 58;
             this.btnGen2Get.Text = "Get";
             this.btnGen2Get.UseVisualStyleBackColor = true;
@@ -501,11 +501,11 @@
             // 
             // btnGen2Set
             // 
-            this.btnGen2Set.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnGen2Set.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnGen2Set.ForeColor = System.Drawing.Color.Black;
-            this.btnGen2Set.Location = new System.Drawing.Point(296, 67);
+            this.btnGen2Set.Location = new System.Drawing.Point(296, 73);
             this.btnGen2Set.Name = "btnGen2Set";
-            this.btnGen2Set.Size = new System.Drawing.Size(90, 31);
+            this.btnGen2Set.Size = new System.Drawing.Size(90, 34);
             this.btnGen2Set.TabIndex = 41;
             this.btnGen2Set.Text = "Set";
             this.btnGen2Set.UseVisualStyleBackColor = true;
@@ -514,7 +514,7 @@
             // cmbLinkFrequency
             // 
             this.cmbLinkFrequency.Enabled = false;
-            this.cmbLinkFrequency.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbLinkFrequency.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbLinkFrequency.FormattingEnabled = true;
             this.cmbLinkFrequency.Items.AddRange(new object[] {
             "000(40KHz )",
@@ -525,7 +525,7 @@
             "101(320KHz)",
             "110(400KHz)",
             "111(640KHz)"});
-            this.cmbLinkFrequency.Location = new System.Drawing.Point(323, 275);
+            this.cmbLinkFrequency.Location = new System.Drawing.Point(323, 298);
             this.cmbLinkFrequency.Name = "cmbLinkFrequency";
             this.cmbLinkFrequency.Size = new System.Drawing.Size(114, 24);
             this.cmbLinkFrequency.TabIndex = 57;
@@ -533,26 +533,26 @@
             // 
             // cmbG
             // 
-            this.cmbG.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbG.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbG.FormattingEnabled = true;
             this.cmbG.Items.AddRange(new object[] {
             "0(A)",
             "1(B)"});
-            this.cmbG.Location = new System.Drawing.Point(312, 26);
+            this.cmbG.Location = new System.Drawing.Point(312, 28);
             this.cmbG.Name = "cmbG";
             this.cmbG.Size = new System.Drawing.Size(114, 24);
             this.cmbG.TabIndex = 56;
             // 
             // cmbSession
             // 
-            this.cmbSession.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbSession.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbSession.FormattingEnabled = true;
             this.cmbSession.Items.AddRange(new object[] {
             "00(S0)",
             "01(S1)",
             "10(S2)",
             "11(S3)"});
-            this.cmbSession.Location = new System.Drawing.Point(97, 29);
+            this.cmbSession.Location = new System.Drawing.Point(97, 31);
             this.cmbSession.Name = "cmbSession";
             this.cmbSession.Size = new System.Drawing.Size(114, 24);
             this.cmbSession.TabIndex = 55;
@@ -560,8 +560,8 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label26.Location = new System.Drawing.Point(245, 30);
+            this.label26.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label26.Location = new System.Drawing.Point(245, 32);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(63, 16);
             this.label26.TabIndex = 54;
@@ -570,8 +570,8 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label22.Location = new System.Drawing.Point(197, 283);
+            this.label22.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label22.Location = new System.Drawing.Point(197, 307);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(119, 16);
             this.label22.TabIndex = 50;
@@ -580,14 +580,14 @@
             // 
             // cmbSel
             // 
-            this.cmbSel.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbSel.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbSel.FormattingEnabled = true;
             this.cmbSel.Items.AddRange(new object[] {
             "00(ALL)",
             "01(ALL)",
             "10(~SL)",
             "11(SL)"});
-            this.cmbSel.Location = new System.Drawing.Point(89, 261);
+            this.cmbSel.Location = new System.Drawing.Point(89, 283);
             this.cmbSel.Name = "cmbSel";
             this.cmbSel.Size = new System.Drawing.Size(114, 24);
             this.cmbSel.TabIndex = 49;
@@ -595,12 +595,12 @@
             // 
             // cmbP
             // 
-            this.cmbP.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbP.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbP.FormattingEnabled = true;
             this.cmbP.Items.AddRange(new object[] {
             "0(No pilot)",
             "1(Use pilot )"});
-            this.cmbP.Location = new System.Drawing.Point(89, 221);
+            this.cmbP.Location = new System.Drawing.Point(89, 239);
             this.cmbP.Name = "cmbP";
             this.cmbP.Size = new System.Drawing.Size(114, 24);
             this.cmbP.TabIndex = 48;
@@ -608,14 +608,14 @@
             // 
             // cmbCoding
             // 
-            this.cmbCoding.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbCoding.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbCoding.FormattingEnabled = true;
             this.cmbCoding.Items.AddRange(new object[] {
             "00(M=0)",
             "01(M=2)",
             "10(M=4)",
             "11(M=8)"});
-            this.cmbCoding.Location = new System.Drawing.Point(89, 177);
+            this.cmbCoding.Location = new System.Drawing.Point(89, 192);
             this.cmbCoding.Name = "cmbCoding";
             this.cmbCoding.Size = new System.Drawing.Size(114, 24);
             this.cmbCoding.TabIndex = 47;
@@ -623,12 +623,12 @@
             // 
             // cmbDr
             // 
-            this.cmbDr.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbDr.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbDr.FormattingEnabled = true;
             this.cmbDr.Items.AddRange(new object[] {
             "0(DR=8)",
             "1(DR=64/3)"});
-            this.cmbDr.Location = new System.Drawing.Point(323, 151);
+            this.cmbDr.Location = new System.Drawing.Point(323, 164);
             this.cmbDr.Name = "cmbDr";
             this.cmbDr.Size = new System.Drawing.Size(114, 24);
             this.cmbDr.TabIndex = 46;
@@ -636,7 +636,7 @@
             // 
             // cmbMaxQ
             // 
-            this.cmbMaxQ.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbMaxQ.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbMaxQ.FormattingEnabled = true;
             this.cmbMaxQ.Items.AddRange(new object[] {
             "0",
@@ -655,7 +655,7 @@
             "13",
             "14",
             "15"});
-            this.cmbMaxQ.Location = new System.Drawing.Point(325, 306);
+            this.cmbMaxQ.Location = new System.Drawing.Point(325, 332);
             this.cmbMaxQ.Name = "cmbMaxQ";
             this.cmbMaxQ.Size = new System.Drawing.Size(114, 24);
             this.cmbMaxQ.TabIndex = 45;
@@ -663,7 +663,7 @@
             // 
             // cmbMinQ
             // 
-            this.cmbMinQ.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbMinQ.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbMinQ.FormattingEnabled = true;
             this.cmbMinQ.Items.AddRange(new object[] {
             "0",
@@ -682,7 +682,7 @@
             "13",
             "14",
             "15"});
-            this.cmbMinQ.Location = new System.Drawing.Point(325, 221);
+            this.cmbMinQ.Location = new System.Drawing.Point(325, 239);
             this.cmbMinQ.Name = "cmbMinQ";
             this.cmbMinQ.Size = new System.Drawing.Size(114, 24);
             this.cmbMinQ.TabIndex = 44;
@@ -690,7 +690,7 @@
             // 
             // cmbStartQ
             // 
-            this.cmbStartQ.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbStartQ.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbStartQ.FormattingEnabled = true;
             this.cmbStartQ.Items.AddRange(new object[] {
             "0",
@@ -709,7 +709,7 @@
             "13",
             "14",
             "15"});
-            this.cmbStartQ.Location = new System.Drawing.Point(323, 187);
+            this.cmbStartQ.Location = new System.Drawing.Point(323, 203);
             this.cmbStartQ.Name = "cmbStartQ";
             this.cmbStartQ.Size = new System.Drawing.Size(114, 24);
             this.cmbStartQ.TabIndex = 43;
@@ -718,8 +718,8 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label21.Location = new System.Drawing.Point(253, 187);
+            this.label21.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label21.Location = new System.Drawing.Point(253, 203);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(63, 16);
             this.label21.TabIndex = 42;
@@ -729,8 +729,8 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label20.Location = new System.Drawing.Point(19, 29);
+            this.label20.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label20.Location = new System.Drawing.Point(19, 31);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(71, 16);
             this.label20.TabIndex = 41;
@@ -739,8 +739,8 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label19.Location = new System.Drawing.Point(43, 269);
+            this.label19.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label19.Location = new System.Drawing.Point(43, 291);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(39, 16);
             this.label19.TabIndex = 40;
@@ -750,8 +750,8 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label18.Location = new System.Drawing.Point(27, 224);
+            this.label18.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label18.Location = new System.Drawing.Point(27, 243);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(55, 16);
             this.label18.TabIndex = 39;
@@ -761,8 +761,8 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label17.Location = new System.Drawing.Point(285, 159);
+            this.label17.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label17.Location = new System.Drawing.Point(285, 172);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(31, 16);
             this.label17.TabIndex = 38;
@@ -772,8 +772,8 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label16.Location = new System.Drawing.Point(19, 180);
+            this.label16.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label16.Location = new System.Drawing.Point(19, 195);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(63, 16);
             this.label16.TabIndex = 37;
@@ -783,8 +783,8 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label15.Location = new System.Drawing.Point(271, 221);
+            this.label15.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label15.Location = new System.Drawing.Point(271, 239);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(47, 16);
             this.label15.TabIndex = 36;
@@ -794,8 +794,8 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label14.Location = new System.Drawing.Point(271, 306);
+            this.label14.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label14.Location = new System.Drawing.Point(271, 332);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(47, 16);
             this.label14.TabIndex = 35;
@@ -804,12 +804,12 @@
             // 
             // cmbQ
             // 
-            this.cmbQ.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbQ.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbQ.FormattingEnabled = true;
             this.cmbQ.Items.AddRange(new object[] {
             "0(Fixed)",
             "1(Dynamic)"});
-            this.cmbQ.Location = new System.Drawing.Point(89, 143);
+            this.cmbQ.Location = new System.Drawing.Point(89, 155);
             this.cmbQ.Name = "cmbQ";
             this.cmbQ.Size = new System.Drawing.Size(114, 24);
             this.cmbQ.TabIndex = 34;
@@ -818,8 +818,8 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label13.Location = new System.Drawing.Point(58, 146);
+            this.label13.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label13.Location = new System.Drawing.Point(58, 158);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(23, 16);
             this.label13.TabIndex = 33;
@@ -828,12 +828,12 @@
             // 
             // cmbT
             // 
-            this.cmbT.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbT.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbT.FormattingEnabled = true;
             this.cmbT.Items.AddRange(new object[] {
             "0(Disable)",
             "1(Enable)"});
-            this.cmbT.Location = new System.Drawing.Point(90, 327);
+            this.cmbT.Location = new System.Drawing.Point(90, 354);
             this.cmbT.Name = "cmbT";
             this.cmbT.Size = new System.Drawing.Size(114, 24);
             this.cmbT.TabIndex = 32;
@@ -842,8 +842,8 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label12.Location = new System.Drawing.Point(11, 329);
+            this.label12.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label12.Location = new System.Drawing.Point(11, 356);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(79, 16);
             this.label12.TabIndex = 31;
@@ -852,7 +852,7 @@
             // 
             // cmbAction
             // 
-            this.cmbAction.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbAction.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbAction.FormattingEnabled = true;
             this.cmbAction.Items.AddRange(new object[] {
             "000",
@@ -863,7 +863,7 @@
             "101",
             "110",
             "111"});
-            this.cmbAction.Location = new System.Drawing.Point(325, 246);
+            this.cmbAction.Location = new System.Drawing.Point(325, 266);
             this.cmbAction.Name = "cmbAction";
             this.cmbAction.Size = new System.Drawing.Size(114, 24);
             this.cmbAction.TabIndex = 30;
@@ -872,8 +872,8 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label11.Location = new System.Drawing.Point(255, 252);
+            this.label11.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label11.Location = new System.Drawing.Point(255, 273);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(63, 16);
             this.label11.TabIndex = 29;
@@ -882,7 +882,7 @@
             // 
             // cmbTarget
             // 
-            this.cmbTarget.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbTarget.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbTarget.FormattingEnabled = true;
             this.cmbTarget.Items.AddRange(new object[] {
             "000(s0) ",
@@ -890,7 +890,7 @@
             "010(s2) ",
             "011(s3) ",
             "100(SL)"});
-            this.cmbTarget.Location = new System.Drawing.Point(89, 296);
+            this.cmbTarget.Location = new System.Drawing.Point(89, 321);
             this.cmbTarget.Name = "cmbTarget";
             this.cmbTarget.Size = new System.Drawing.Size(114, 24);
             this.cmbTarget.TabIndex = 28;
@@ -899,8 +899,8 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label10.Location = new System.Drawing.Point(19, 299);
+            this.label10.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label10.Location = new System.Drawing.Point(19, 324);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(63, 16);
             this.label10.TabIndex = 17;
@@ -944,10 +944,10 @@
             this.groupBox12.Controls.Add(this.label7);
             this.groupBox12.Controls.Add(this.cmbPower1);
             this.groupBox12.Controls.Add(this.label27);
-            this.groupBox12.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox12.Location = new System.Drawing.Point(21, 837);
+            this.groupBox12.Font = new System.Drawing.Font("SimSun", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox12.Location = new System.Drawing.Point(21, 907);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(73, 25);
+            this.groupBox12.Size = new System.Drawing.Size(73, 27);
             this.groupBox12.TabIndex = 76;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Power";
@@ -956,8 +956,8 @@
             // cbSaveAllPower
             // 
             this.cbSaveAllPower.AutoSize = true;
-            this.cbSaveAllPower.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbSaveAllPower.Location = new System.Drawing.Point(319, 134);
+            this.cbSaveAllPower.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbSaveAllPower.Location = new System.Drawing.Point(319, 145);
             this.cbSaveAllPower.Name = "cbSaveAllPower";
             this.cbSaveAllPower.Size = new System.Drawing.Size(58, 20);
             this.cbSaveAllPower.TabIndex = 41;
@@ -966,11 +966,11 @@
             // 
             // btnSetAllPower
             // 
-            this.btnSetAllPower.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSetAllPower.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSetAllPower.ForeColor = System.Drawing.Color.Black;
-            this.btnSetAllPower.Location = new System.Drawing.Point(211, 129);
+            this.btnSetAllPower.Location = new System.Drawing.Point(211, 140);
             this.btnSetAllPower.Name = "btnSetAllPower";
-            this.btnSetAllPower.Size = new System.Drawing.Size(90, 31);
+            this.btnSetAllPower.Size = new System.Drawing.Size(90, 34);
             this.btnSetAllPower.TabIndex = 39;
             this.btnSetAllPower.Text = "Set";
             this.btnSetAllPower.UseVisualStyleBackColor = true;
@@ -978,11 +978,11 @@
             // 
             // btnGetAllPower
             // 
-            this.btnGetAllPower.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnGetAllPower.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnGetAllPower.ForeColor = System.Drawing.Color.Black;
-            this.btnGetAllPower.Location = new System.Drawing.Point(70, 129);
+            this.btnGetAllPower.Location = new System.Drawing.Point(70, 140);
             this.btnGetAllPower.Name = "btnGetAllPower";
-            this.btnGetAllPower.Size = new System.Drawing.Size(90, 31);
+            this.btnGetAllPower.Size = new System.Drawing.Size(90, 34);
             this.btnGetAllPower.TabIndex = 40;
             this.btnGetAllPower.Text = "Get";
             this.btnGetAllPower.UseVisualStyleBackColor = true;
@@ -990,7 +990,7 @@
             // 
             // cmbPower16
             // 
-            this.cmbPower16.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbPower16.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbPower16.FormattingEnabled = true;
             this.cmbPower16.Items.AddRange(new object[] {
             "1",
@@ -1023,7 +1023,7 @@
             "28",
             "29",
             "30"});
-            this.cmbPower16.Location = new System.Drawing.Point(352, 99);
+            this.cmbPower16.Location = new System.Drawing.Point(352, 107);
             this.cmbPower16.Name = "cmbPower16";
             this.cmbPower16.Size = new System.Drawing.Size(44, 24);
             this.cmbPower16.TabIndex = 38;
@@ -1031,8 +1031,8 @@
             // label60
             // 
             this.label60.AutoSize = true;
-            this.label60.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label60.Location = new System.Drawing.Point(299, 102);
+            this.label60.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label60.Location = new System.Drawing.Point(299, 111);
             this.label60.Name = "label60";
             this.label60.Size = new System.Drawing.Size(55, 16);
             this.label60.TabIndex = 37;
@@ -1040,7 +1040,7 @@
             // 
             // cmbPower15
             // 
-            this.cmbPower15.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbPower15.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbPower15.FormattingEnabled = true;
             this.cmbPower15.Items.AddRange(new object[] {
             "1",
@@ -1073,7 +1073,7 @@
             "28",
             "29",
             "30"});
-            this.cmbPower15.Location = new System.Drawing.Point(256, 100);
+            this.cmbPower15.Location = new System.Drawing.Point(256, 108);
             this.cmbPower15.Name = "cmbPower15";
             this.cmbPower15.Size = new System.Drawing.Size(42, 24);
             this.cmbPower15.TabIndex = 36;
@@ -1081,8 +1081,8 @@
             // label61
             // 
             this.label61.AutoSize = true;
-            this.label61.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label61.Location = new System.Drawing.Point(203, 102);
+            this.label61.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label61.Location = new System.Drawing.Point(203, 111);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(55, 16);
             this.label61.TabIndex = 35;
@@ -1090,7 +1090,7 @@
             // 
             // cmbPower14
             // 
-            this.cmbPower14.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbPower14.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbPower14.FormattingEnabled = true;
             this.cmbPower14.Items.AddRange(new object[] {
             "1",
@@ -1123,7 +1123,7 @@
             "28",
             "29",
             "30"});
-            this.cmbPower14.Location = new System.Drawing.Point(156, 100);
+            this.cmbPower14.Location = new System.Drawing.Point(156, 108);
             this.cmbPower14.Name = "cmbPower14";
             this.cmbPower14.Size = new System.Drawing.Size(42, 24);
             this.cmbPower14.TabIndex = 34;
@@ -1131,8 +1131,8 @@
             // label62
             // 
             this.label62.AutoSize = true;
-            this.label62.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label62.Location = new System.Drawing.Point(103, 102);
+            this.label62.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label62.Location = new System.Drawing.Point(103, 111);
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(55, 16);
             this.label62.TabIndex = 33;
@@ -1140,7 +1140,7 @@
             // 
             // cmbPower13
             // 
-            this.cmbPower13.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbPower13.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbPower13.FormattingEnabled = true;
             this.cmbPower13.Items.AddRange(new object[] {
             "1",
@@ -1173,7 +1173,7 @@
             "28",
             "29",
             "30"});
-            this.cmbPower13.Location = new System.Drawing.Point(52, 99);
+            this.cmbPower13.Location = new System.Drawing.Point(52, 107);
             this.cmbPower13.Name = "cmbPower13";
             this.cmbPower13.Size = new System.Drawing.Size(46, 24);
             this.cmbPower13.TabIndex = 32;
@@ -1181,8 +1181,8 @@
             // label63
             // 
             this.label63.AutoSize = true;
-            this.label63.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label63.Location = new System.Drawing.Point(3, 102);
+            this.label63.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label63.Location = new System.Drawing.Point(3, 111);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(55, 16);
             this.label63.TabIndex = 31;
@@ -1190,7 +1190,7 @@
             // 
             // cmbPower12
             // 
-            this.cmbPower12.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbPower12.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbPower12.FormattingEnabled = true;
             this.cmbPower12.Items.AddRange(new object[] {
             "1",
@@ -1223,7 +1223,7 @@
             "28",
             "29",
             "30"});
-            this.cmbPower12.Location = new System.Drawing.Point(352, 71);
+            this.cmbPower12.Location = new System.Drawing.Point(352, 77);
             this.cmbPower12.Name = "cmbPower12";
             this.cmbPower12.Size = new System.Drawing.Size(44, 24);
             this.cmbPower12.TabIndex = 30;
@@ -1231,8 +1231,8 @@
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label42.Location = new System.Drawing.Point(299, 74);
+            this.label42.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label42.Location = new System.Drawing.Point(299, 80);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(55, 16);
             this.label42.TabIndex = 29;
@@ -1240,7 +1240,7 @@
             // 
             // cmbPower11
             // 
-            this.cmbPower11.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbPower11.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbPower11.FormattingEnabled = true;
             this.cmbPower11.Items.AddRange(new object[] {
             "1",
@@ -1273,7 +1273,7 @@
             "28",
             "29",
             "30"});
-            this.cmbPower11.Location = new System.Drawing.Point(256, 73);
+            this.cmbPower11.Location = new System.Drawing.Point(256, 79);
             this.cmbPower11.Name = "cmbPower11";
             this.cmbPower11.Size = new System.Drawing.Size(42, 24);
             this.cmbPower11.TabIndex = 28;
@@ -1281,8 +1281,8 @@
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label43.Location = new System.Drawing.Point(203, 74);
+            this.label43.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label43.Location = new System.Drawing.Point(203, 80);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(55, 16);
             this.label43.TabIndex = 27;
@@ -1290,7 +1290,7 @@
             // 
             // cmbPower10
             // 
-            this.cmbPower10.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbPower10.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbPower10.FormattingEnabled = true;
             this.cmbPower10.Items.AddRange(new object[] {
             "1",
@@ -1323,7 +1323,7 @@
             "28",
             "29",
             "30"});
-            this.cmbPower10.Location = new System.Drawing.Point(156, 71);
+            this.cmbPower10.Location = new System.Drawing.Point(156, 77);
             this.cmbPower10.Name = "cmbPower10";
             this.cmbPower10.Size = new System.Drawing.Size(42, 24);
             this.cmbPower10.TabIndex = 26;
@@ -1331,8 +1331,8 @@
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label44.Location = new System.Drawing.Point(103, 74);
+            this.label44.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label44.Location = new System.Drawing.Point(103, 80);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(55, 16);
             this.label44.TabIndex = 25;
@@ -1340,7 +1340,7 @@
             // 
             // cmbPower9
             // 
-            this.cmbPower9.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbPower9.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbPower9.FormattingEnabled = true;
             this.cmbPower9.Items.AddRange(new object[] {
             "1",
@@ -1373,7 +1373,7 @@
             "28",
             "29",
             "30"});
-            this.cmbPower9.Location = new System.Drawing.Point(52, 71);
+            this.cmbPower9.Location = new System.Drawing.Point(52, 77);
             this.cmbPower9.Name = "cmbPower9";
             this.cmbPower9.Size = new System.Drawing.Size(46, 24);
             this.cmbPower9.TabIndex = 24;
@@ -1381,8 +1381,8 @@
             // label59
             // 
             this.label59.AutoSize = true;
-            this.label59.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label59.Location = new System.Drawing.Point(3, 74);
+            this.label59.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label59.Location = new System.Drawing.Point(3, 80);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(47, 16);
             this.label59.TabIndex = 23;
@@ -1390,7 +1390,7 @@
             // 
             // cmbPower8
             // 
-            this.cmbPower8.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbPower8.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbPower8.FormattingEnabled = true;
             this.cmbPower8.Items.AddRange(new object[] {
             "1",
@@ -1423,7 +1423,7 @@
             "28",
             "29",
             "30"});
-            this.cmbPower8.Location = new System.Drawing.Point(352, 44);
+            this.cmbPower8.Location = new System.Drawing.Point(352, 48);
             this.cmbPower8.Name = "cmbPower8";
             this.cmbPower8.Size = new System.Drawing.Size(44, 24);
             this.cmbPower8.TabIndex = 22;
@@ -1431,8 +1431,8 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label34.Location = new System.Drawing.Point(299, 47);
+            this.label34.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label34.Location = new System.Drawing.Point(299, 51);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(47, 16);
             this.label34.TabIndex = 21;
@@ -1440,7 +1440,7 @@
             // 
             // cmbPower7
             // 
-            this.cmbPower7.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbPower7.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbPower7.FormattingEnabled = true;
             this.cmbPower7.Items.AddRange(new object[] {
             "1",
@@ -1473,7 +1473,7 @@
             "28",
             "29",
             "30"});
-            this.cmbPower7.Location = new System.Drawing.Point(256, 44);
+            this.cmbPower7.Location = new System.Drawing.Point(256, 48);
             this.cmbPower7.Name = "cmbPower7";
             this.cmbPower7.Size = new System.Drawing.Size(42, 24);
             this.cmbPower7.TabIndex = 20;
@@ -1481,8 +1481,8 @@
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label36.Location = new System.Drawing.Point(203, 47);
+            this.label36.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label36.Location = new System.Drawing.Point(203, 51);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(47, 16);
             this.label36.TabIndex = 19;
@@ -1490,7 +1490,7 @@
             // 
             // cmbPower6
             // 
-            this.cmbPower6.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbPower6.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbPower6.FormattingEnabled = true;
             this.cmbPower6.Items.AddRange(new object[] {
             "1",
@@ -1523,7 +1523,7 @@
             "28",
             "29",
             "30"});
-            this.cmbPower6.Location = new System.Drawing.Point(156, 44);
+            this.cmbPower6.Location = new System.Drawing.Point(156, 48);
             this.cmbPower6.Name = "cmbPower6";
             this.cmbPower6.Size = new System.Drawing.Size(42, 24);
             this.cmbPower6.TabIndex = 18;
@@ -1531,8 +1531,8 @@
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label37.Location = new System.Drawing.Point(103, 47);
+            this.label37.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label37.Location = new System.Drawing.Point(103, 51);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(47, 16);
             this.label37.TabIndex = 17;
@@ -1540,7 +1540,7 @@
             // 
             // cmbPower5
             // 
-            this.cmbPower5.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbPower5.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbPower5.FormattingEnabled = true;
             this.cmbPower5.Items.AddRange(new object[] {
             "1",
@@ -1573,7 +1573,7 @@
             "28",
             "29",
             "30"});
-            this.cmbPower5.Location = new System.Drawing.Point(52, 44);
+            this.cmbPower5.Location = new System.Drawing.Point(52, 48);
             this.cmbPower5.Name = "cmbPower5";
             this.cmbPower5.Size = new System.Drawing.Size(46, 24);
             this.cmbPower5.TabIndex = 16;
@@ -1581,8 +1581,8 @@
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label41.Location = new System.Drawing.Point(3, 47);
+            this.label41.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label41.Location = new System.Drawing.Point(3, 51);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(47, 16);
             this.label41.TabIndex = 15;
@@ -1590,7 +1590,7 @@
             // 
             // cmbPower4
             // 
-            this.cmbPower4.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbPower4.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbPower4.FormattingEnabled = true;
             this.cmbPower4.Items.AddRange(new object[] {
             "1",
@@ -1623,7 +1623,7 @@
             "28",
             "29",
             "30"});
-            this.cmbPower4.Location = new System.Drawing.Point(352, 17);
+            this.cmbPower4.Location = new System.Drawing.Point(352, 18);
             this.cmbPower4.Name = "cmbPower4";
             this.cmbPower4.Size = new System.Drawing.Size(44, 24);
             this.cmbPower4.TabIndex = 14;
@@ -1631,8 +1631,8 @@
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label33.Location = new System.Drawing.Point(299, 20);
+            this.label33.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label33.Location = new System.Drawing.Point(299, 22);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(47, 16);
             this.label33.TabIndex = 13;
@@ -1640,7 +1640,7 @@
             // 
             // cmbPower3
             // 
-            this.cmbPower3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbPower3.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbPower3.FormattingEnabled = true;
             this.cmbPower3.Items.AddRange(new object[] {
             "1",
@@ -1673,7 +1673,7 @@
             "28",
             "29",
             "30"});
-            this.cmbPower3.Location = new System.Drawing.Point(256, 17);
+            this.cmbPower3.Location = new System.Drawing.Point(256, 18);
             this.cmbPower3.Name = "cmbPower3";
             this.cmbPower3.Size = new System.Drawing.Size(42, 24);
             this.cmbPower3.TabIndex = 12;
@@ -1681,8 +1681,8 @@
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label32.Location = new System.Drawing.Point(203, 20);
+            this.label32.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label32.Location = new System.Drawing.Point(203, 22);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(47, 16);
             this.label32.TabIndex = 11;
@@ -1690,7 +1690,7 @@
             // 
             // cmbPower2
             // 
-            this.cmbPower2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbPower2.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbPower2.FormattingEnabled = true;
             this.cmbPower2.Items.AddRange(new object[] {
             "1",
@@ -1723,7 +1723,7 @@
             "28",
             "29",
             "30"});
-            this.cmbPower2.Location = new System.Drawing.Point(156, 17);
+            this.cmbPower2.Location = new System.Drawing.Point(156, 18);
             this.cmbPower2.Name = "cmbPower2";
             this.cmbPower2.Size = new System.Drawing.Size(42, 24);
             this.cmbPower2.TabIndex = 10;
@@ -1731,8 +1731,8 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label7.Location = new System.Drawing.Point(103, 20);
+            this.label7.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label7.Location = new System.Drawing.Point(103, 22);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(47, 16);
             this.label7.TabIndex = 9;
@@ -1740,7 +1740,7 @@
             // 
             // cmbPower1
             // 
-            this.cmbPower1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbPower1.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbPower1.FormattingEnabled = true;
             this.cmbPower1.Items.AddRange(new object[] {
             "1",
@@ -1773,7 +1773,7 @@
             "28",
             "29",
             "30"});
-            this.cmbPower1.Location = new System.Drawing.Point(52, 16);
+            this.cmbPower1.Location = new System.Drawing.Point(52, 17);
             this.cmbPower1.Name = "cmbPower1";
             this.cmbPower1.Size = new System.Drawing.Size(45, 24);
             this.cmbPower1.TabIndex = 8;
@@ -1781,8 +1781,8 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label27.Location = new System.Drawing.Point(3, 20);
+            this.label27.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label27.Location = new System.Drawing.Point(3, 22);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(47, 16);
             this.label27.TabIndex = 7;
@@ -1797,11 +1797,11 @@
             this.groupBox6.Controls.Add(this.btnPowerGet_ANT1);
             this.groupBox6.Controls.Add(this.label23);
             this.groupBox6.Controls.Add(this.btnPowerSet_ANT1);
-            this.groupBox6.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox6.Font = new System.Drawing.Font("SimSun", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox6.ForeColor = System.Drawing.Color.Black;
-            this.groupBox6.Location = new System.Drawing.Point(9, 9);
+            this.groupBox6.Location = new System.Drawing.Point(9, 10);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(406, 155);
+            this.groupBox6.Size = new System.Drawing.Size(406, 168);
             this.groupBox6.TabIndex = 31;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Power";
@@ -1811,8 +1811,8 @@
             this.cbPower.AutoSize = true;
             this.cbPower.Checked = true;
             this.cbPower.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbPower.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbPower.Location = new System.Drawing.Point(308, 91);
+            this.cbPower.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbPower.Location = new System.Drawing.Point(308, 99);
             this.cbPower.Name = "cbPower";
             this.cbPower.Size = new System.Drawing.Size(58, 20);
             this.cbPower.TabIndex = 26;
@@ -1821,7 +1821,7 @@
             // 
             // cmbPower_ANT1
             // 
-            this.cmbPower_ANT1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbPower_ANT1.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbPower_ANT1.FormattingEnabled = true;
             this.cmbPower_ANT1.Items.AddRange(new object[] {
             "1",
@@ -1854,7 +1854,7 @@
             "28",
             "29",
             "30"});
-            this.cmbPower_ANT1.Location = new System.Drawing.Point(117, 33);
+            this.cmbPower_ANT1.Location = new System.Drawing.Point(117, 36);
             this.cmbPower_ANT1.Name = "cmbPower_ANT1";
             this.cmbPower_ANT1.Size = new System.Drawing.Size(216, 24);
             this.cmbPower_ANT1.TabIndex = 6;
@@ -1862,8 +1862,8 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label24.Location = new System.Drawing.Point(36, 36);
+            this.label24.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label24.Location = new System.Drawing.Point(36, 39);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(79, 16);
             this.label24.TabIndex = 14;
@@ -1871,11 +1871,11 @@
             // 
             // btnPowerGet_ANT1
             // 
-            this.btnPowerGet_ANT1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnPowerGet_ANT1.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnPowerGet_ANT1.ForeColor = System.Drawing.Color.Black;
-            this.btnPowerGet_ANT1.Location = new System.Drawing.Point(95, 82);
+            this.btnPowerGet_ANT1.Location = new System.Drawing.Point(95, 89);
             this.btnPowerGet_ANT1.Name = "btnPowerGet_ANT1";
-            this.btnPowerGet_ANT1.Size = new System.Drawing.Size(90, 31);
+            this.btnPowerGet_ANT1.Size = new System.Drawing.Size(90, 34);
             this.btnPowerGet_ANT1.TabIndex = 13;
             this.btnPowerGet_ANT1.Text = "Get";
             this.btnPowerGet_ANT1.UseVisualStyleBackColor = true;
@@ -1884,8 +1884,8 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label23.Location = new System.Drawing.Point(332, 38);
+            this.label23.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label23.Location = new System.Drawing.Point(332, 41);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(31, 16);
             this.label23.TabIndex = 12;
@@ -1893,11 +1893,11 @@
             // 
             // btnPowerSet_ANT1
             // 
-            this.btnPowerSet_ANT1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnPowerSet_ANT1.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnPowerSet_ANT1.ForeColor = System.Drawing.Color.Black;
-            this.btnPowerSet_ANT1.Location = new System.Drawing.Point(212, 82);
+            this.btnPowerSet_ANT1.Location = new System.Drawing.Point(212, 89);
             this.btnPowerSet_ANT1.Name = "btnPowerSet_ANT1";
-            this.btnPowerSet_ANT1.Size = new System.Drawing.Size(88, 31);
+            this.btnPowerSet_ANT1.Size = new System.Drawing.Size(88, 34);
             this.btnPowerSet_ANT1.TabIndex = 11;
             this.btnPowerSet_ANT1.Text = "Set";
             this.btnPowerSet_ANT1.UseVisualStyleBackColor = true;
@@ -1911,11 +1911,11 @@
             this.groupBox7.Controls.Add(this.label6);
             this.groupBox7.Controls.Add(this.btnWorkModeSet);
             this.groupBox7.Controls.Add(this.label28);
-            this.groupBox7.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox7.Font = new System.Drawing.Font("SimSun", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox7.ForeColor = System.Drawing.Color.Black;
-            this.groupBox7.Location = new System.Drawing.Point(426, 566);
+            this.groupBox7.Location = new System.Drawing.Point(426, 613);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(466, 112);
+            this.groupBox7.Size = new System.Drawing.Size(466, 121);
             this.groupBox7.TabIndex = 30;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Rrequency";
@@ -1999,15 +1999,15 @@
             "923.875",
             "924.125",
             "924.375"});
-            this.comboBox1.Location = new System.Drawing.Point(113, 29);
+            this.comboBox1.Location = new System.Drawing.Point(113, 31);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(220, 22);
             this.comboBox1.TabIndex = 23;
             // 
             // textBox1
             // 
-            this.textBox1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox1.Location = new System.Drawing.Point(115, 31);
+            this.textBox1.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBox1.Location = new System.Drawing.Point(115, 34);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(218, 21);
             this.textBox1.TabIndex = 22;
@@ -2017,8 +2017,8 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(339, 38);
+            this.label6.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label6.Location = new System.Drawing.Point(339, 41);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(23, 12);
             this.label6.TabIndex = 21;
@@ -2026,11 +2026,11 @@
             // 
             // btnWorkModeSet
             // 
-            this.btnWorkModeSet.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnWorkModeSet.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnWorkModeSet.ForeColor = System.Drawing.Color.Black;
-            this.btnWorkModeSet.Location = new System.Drawing.Point(132, 59);
+            this.btnWorkModeSet.Location = new System.Drawing.Point(132, 64);
             this.btnWorkModeSet.Name = "btnWorkModeSet";
-            this.btnWorkModeSet.Size = new System.Drawing.Size(90, 31);
+            this.btnWorkModeSet.Size = new System.Drawing.Size(90, 34);
             this.btnWorkModeSet.TabIndex = 11;
             this.btnWorkModeSet.Text = "Set";
             this.btnWorkModeSet.UseVisualStyleBackColor = true;
@@ -2039,8 +2039,8 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label28.Location = new System.Drawing.Point(27, 34);
+            this.label28.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label28.Location = new System.Drawing.Point(27, 37);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(87, 16);
             this.label28.TabIndex = 5;
@@ -2048,6 +2048,8 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.AutoScroll = true;
             this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
@@ -2076,7 +2078,7 @@
             this.panel1.Controls.Add(this.groupBox5);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1600, 893);
+            this.panel1.Size = new System.Drawing.Size(1484, 967);
             this.panel1.TabIndex = 32;
             // 
             // gbFastInventory
@@ -2085,10 +2087,10 @@
             this.gbFastInventory.Controls.Add(this.rbOpenFastInventory);
             this.gbFastInventory.Controls.Add(this.btnSetFastInventory);
             this.gbFastInventory.Controls.Add(this.btnGetFastInventory);
-            this.gbFastInventory.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold);
-            this.gbFastInventory.Location = new System.Drawing.Point(903, 183);
+            this.gbFastInventory.Font = new System.Drawing.Font("SimSun", 10.5F, System.Drawing.FontStyle.Bold);
+            this.gbFastInventory.Location = new System.Drawing.Point(903, 198);
             this.gbFastInventory.Name = "gbFastInventory";
-            this.gbFastInventory.Size = new System.Drawing.Size(354, 89);
+            this.gbFastInventory.Size = new System.Drawing.Size(354, 96);
             this.gbFastInventory.TabIndex = 78;
             this.gbFastInventory.TabStop = false;
             this.gbFastInventory.Text = "Fast Inventory(Gen2X)";
@@ -2096,8 +2098,8 @@
             // rbCloseFastInventory
             // 
             this.rbCloseFastInventory.AutoSize = true;
-            this.rbCloseFastInventory.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rbCloseFastInventory.Location = new System.Drawing.Point(220, 20);
+            this.rbCloseFastInventory.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rbCloseFastInventory.Location = new System.Drawing.Point(220, 22);
             this.rbCloseFastInventory.Name = "rbCloseFastInventory";
             this.rbCloseFastInventory.Size = new System.Drawing.Size(65, 20);
             this.rbCloseFastInventory.TabIndex = 48;
@@ -2108,8 +2110,8 @@
             // rbOpenFastInventory
             // 
             this.rbOpenFastInventory.AutoSize = true;
-            this.rbOpenFastInventory.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rbOpenFastInventory.Location = new System.Drawing.Point(80, 20);
+            this.rbOpenFastInventory.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rbOpenFastInventory.Location = new System.Drawing.Point(80, 22);
             this.rbOpenFastInventory.Name = "rbOpenFastInventory";
             this.rbOpenFastInventory.Size = new System.Drawing.Size(57, 20);
             this.rbOpenFastInventory.TabIndex = 47;
@@ -2119,11 +2121,11 @@
             // 
             // btnSetFastInventory
             // 
-            this.btnSetFastInventory.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSetFastInventory.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSetFastInventory.ForeColor = System.Drawing.Color.Black;
-            this.btnSetFastInventory.Location = new System.Drawing.Point(208, 46);
+            this.btnSetFastInventory.Location = new System.Drawing.Point(208, 50);
             this.btnSetFastInventory.Name = "btnSetFastInventory";
-            this.btnSetFastInventory.Size = new System.Drawing.Size(90, 31);
+            this.btnSetFastInventory.Size = new System.Drawing.Size(90, 34);
             this.btnSetFastInventory.TabIndex = 46;
             this.btnSetFastInventory.Text = "Set";
             this.btnSetFastInventory.UseVisualStyleBackColor = true;
@@ -2131,11 +2133,11 @@
             // 
             // btnGetFastInventory
             // 
-            this.btnGetFastInventory.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnGetFastInventory.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnGetFastInventory.ForeColor = System.Drawing.Color.Black;
-            this.btnGetFastInventory.Location = new System.Drawing.Point(57, 46);
+            this.btnGetFastInventory.Location = new System.Drawing.Point(57, 50);
             this.btnGetFastInventory.Name = "btnGetFastInventory";
-            this.btnGetFastInventory.Size = new System.Drawing.Size(90, 31);
+            this.btnGetFastInventory.Size = new System.Drawing.Size(90, 34);
             this.btnGetFastInventory.TabIndex = 45;
             this.btnGetFastInventory.Text = "Get";
             this.btnGetFastInventory.UseVisualStyleBackColor = true;
@@ -2144,9 +2146,9 @@
             // cbDedebug
             // 
             this.cbDedebug.AutoSize = true;
-            this.cbDedebug.Location = new System.Drawing.Point(425, 782);
+            this.cbDedebug.Location = new System.Drawing.Point(425, 847);
             this.cbDedebug.Name = "cbDedebug";
-            this.cbDedebug.Size = new System.Drawing.Size(54, 16);
+            this.cbDedebug.Size = new System.Drawing.Size(58, 17);
             this.cbDedebug.TabIndex = 77;
             this.cbDedebug.Text = "Debug";
             this.cbDedebug.UseVisualStyleBackColor = true;
@@ -2156,21 +2158,21 @@
             // 
             this.groupBox18.Controls.Add(this.button14);
             this.groupBox18.Controls.Add(this.textBox2);
-            this.groupBox18.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox18.Location = new System.Drawing.Point(426, 687);
+            this.groupBox18.Font = new System.Drawing.Font("SimSun", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox18.Location = new System.Drawing.Point(426, 744);
             this.groupBox18.Name = "groupBox18";
-            this.groupBox18.Size = new System.Drawing.Size(466, 92);
+            this.groupBox18.Size = new System.Drawing.Size(466, 100);
             this.groupBox18.TabIndex = 75;
             this.groupBox18.TabStop = false;
             this.groupBox18.Text = "DeviceID";
             // 
             // button14
             // 
-            this.button14.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button14.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button14.ForeColor = System.Drawing.Color.Black;
-            this.button14.Location = new System.Drawing.Point(336, 20);
+            this.button14.Location = new System.Drawing.Point(336, 22);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(90, 29);
+            this.button14.Size = new System.Drawing.Size(90, 31);
             this.button14.TabIndex = 70;
             this.button14.Text = "Get";
             this.button14.UseVisualStyleBackColor = true;
@@ -2178,8 +2180,8 @@
             // 
             // textBox2
             // 
-            this.textBox2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox2.Location = new System.Drawing.Point(21, 24);
+            this.textBox2.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBox2.Location = new System.Drawing.Point(21, 26);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(298, 26);
             this.textBox2.TabIndex = 69;
@@ -2191,10 +2193,10 @@
             this.groupBox9.Controls.Add(this.rbEnableBuzzer);
             this.groupBox9.Controls.Add(this.btnSetBuzzer);
             this.groupBox9.Controls.Add(this.btnGetBuzzer);
-            this.groupBox9.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox9.Location = new System.Drawing.Point(902, 275);
+            this.groupBox9.Font = new System.Drawing.Font("SimSun", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox9.Location = new System.Drawing.Point(902, 298);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(355, 80);
+            this.groupBox9.Size = new System.Drawing.Size(355, 87);
             this.groupBox9.TabIndex = 62;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "蜂鸣器";
@@ -2202,8 +2204,8 @@
             // rbDisableBuzzer
             // 
             this.rbDisableBuzzer.AutoSize = true;
-            this.rbDisableBuzzer.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rbDisableBuzzer.Location = new System.Drawing.Point(206, 20);
+            this.rbDisableBuzzer.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rbDisableBuzzer.Location = new System.Drawing.Point(206, 22);
             this.rbDisableBuzzer.Name = "rbDisableBuzzer";
             this.rbDisableBuzzer.Size = new System.Drawing.Size(65, 20);
             this.rbDisableBuzzer.TabIndex = 44;
@@ -2214,8 +2216,8 @@
             // rbEnableBuzzer
             // 
             this.rbEnableBuzzer.AutoSize = true;
-            this.rbEnableBuzzer.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rbEnableBuzzer.Location = new System.Drawing.Point(66, 20);
+            this.rbEnableBuzzer.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rbEnableBuzzer.Location = new System.Drawing.Point(66, 22);
             this.rbEnableBuzzer.Name = "rbEnableBuzzer";
             this.rbEnableBuzzer.Size = new System.Drawing.Size(57, 20);
             this.rbEnableBuzzer.TabIndex = 43;
@@ -2225,11 +2227,11 @@
             // 
             // btnSetBuzzer
             // 
-            this.btnSetBuzzer.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSetBuzzer.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSetBuzzer.ForeColor = System.Drawing.Color.Black;
-            this.btnSetBuzzer.Location = new System.Drawing.Point(194, 42);
+            this.btnSetBuzzer.Location = new System.Drawing.Point(194, 46);
             this.btnSetBuzzer.Name = "btnSetBuzzer";
-            this.btnSetBuzzer.Size = new System.Drawing.Size(90, 31);
+            this.btnSetBuzzer.Size = new System.Drawing.Size(90, 34);
             this.btnSetBuzzer.TabIndex = 26;
             this.btnSetBuzzer.Text = "Set";
             this.btnSetBuzzer.UseVisualStyleBackColor = true;
@@ -2237,11 +2239,11 @@
             // 
             // btnGetBuzzer
             // 
-            this.btnGetBuzzer.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnGetBuzzer.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnGetBuzzer.ForeColor = System.Drawing.Color.Black;
-            this.btnGetBuzzer.Location = new System.Drawing.Point(43, 42);
+            this.btnGetBuzzer.Location = new System.Drawing.Point(43, 46);
             this.btnGetBuzzer.Name = "btnGetBuzzer";
-            this.btnGetBuzzer.Size = new System.Drawing.Size(90, 31);
+            this.btnGetBuzzer.Size = new System.Drawing.Size(90, 34);
             this.btnGetBuzzer.TabIndex = 25;
             this.btnGetBuzzer.Text = "Get";
             this.btnGetBuzzer.UseVisualStyleBackColor = true;
@@ -2251,10 +2253,10 @@
             // 
             this.groupBox4.Controls.Add(this.groupBox10);
             this.groupBox4.Controls.Add(this.groupBox17);
-            this.groupBox4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.groupBox4.Location = new System.Drawing.Point(902, 703);
+            this.groupBox4.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox4.Location = new System.Drawing.Point(902, 762);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(355, 108);
+            this.groupBox4.Size = new System.Drawing.Size(355, 117);
             this.groupBox4.TabIndex = 74;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "GPIO-UR1A";
@@ -2266,31 +2268,31 @@
             this.groupBox10.Controls.Add(this.cmbInput2);
             this.groupBox10.Controls.Add(this.label55);
             this.groupBox10.Controls.Add(this.label56);
-            this.groupBox10.Location = new System.Drawing.Point(8, 63);
+            this.groupBox10.Location = new System.Drawing.Point(8, 68);
             this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(341, 39);
+            this.groupBox10.Size = new System.Drawing.Size(341, 42);
             this.groupBox10.TabIndex = 68;
             this.groupBox10.TabStop = false;
             // 
             // cmbInput1
             // 
-            this.cmbInput1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbInput1.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbInput1.FormattingEnabled = true;
             this.cmbInput1.Items.AddRange(new object[] {
             "低电平",
             "高电平"});
-            this.cmbInput1.Location = new System.Drawing.Point(62, 12);
+            this.cmbInput1.Location = new System.Drawing.Point(62, 13);
             this.cmbInput1.Name = "cmbInput1";
             this.cmbInput1.Size = new System.Drawing.Size(73, 24);
             this.cmbInput1.TabIndex = 19;
             // 
             // button12
             // 
-            this.button12.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button12.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button12.ForeColor = System.Drawing.Color.Black;
-            this.button12.Location = new System.Drawing.Point(271, 10);
+            this.button12.Location = new System.Drawing.Point(271, 11);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(67, 26);
+            this.button12.Size = new System.Drawing.Size(67, 28);
             this.button12.TabIndex = 26;
             this.button12.Text = "Get";
             this.button12.UseVisualStyleBackColor = true;
@@ -2298,12 +2300,12 @@
             // 
             // cmbInput2
             // 
-            this.cmbInput2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbInput2.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbInput2.FormattingEnabled = true;
             this.cmbInput2.Items.AddRange(new object[] {
             "低电平",
             "高电平"});
-            this.cmbInput2.Location = new System.Drawing.Point(197, 12);
+            this.cmbInput2.Location = new System.Drawing.Point(197, 13);
             this.cmbInput2.Name = "cmbInput2";
             this.cmbInput2.Size = new System.Drawing.Size(73, 24);
             this.cmbInput2.TabIndex = 20;
@@ -2311,8 +2313,8 @@
             // label55
             // 
             this.label55.AutoSize = true;
-            this.label55.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label55.Location = new System.Drawing.Point(3, 14);
+            this.label55.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label55.Location = new System.Drawing.Point(3, 15);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(63, 16);
             this.label55.TabIndex = 8;
@@ -2321,8 +2323,8 @@
             // label56
             // 
             this.label56.AutoSize = true;
-            this.label56.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label56.Location = new System.Drawing.Point(137, 15);
+            this.label56.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label56.Location = new System.Drawing.Point(137, 16);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(63, 16);
             this.label56.TabIndex = 9;
@@ -2335,20 +2337,20 @@
             this.groupBox17.Controls.Add(this.button13);
             this.groupBox17.Controls.Add(this.cmbOutput1);
             this.groupBox17.Controls.Add(this.label57);
-            this.groupBox17.Location = new System.Drawing.Point(7, 13);
+            this.groupBox17.Location = new System.Drawing.Point(7, 14);
             this.groupBox17.Name = "groupBox17";
-            this.groupBox17.Size = new System.Drawing.Size(336, 50);
+            this.groupBox17.Size = new System.Drawing.Size(336, 54);
             this.groupBox17.TabIndex = 67;
             this.groupBox17.TabStop = false;
             // 
             // cmbOutput2
             // 
-            this.cmbOutput2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbOutput2.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbOutput2.FormattingEnabled = true;
             this.cmbOutput2.Items.AddRange(new object[] {
             "低电平",
             "高电平"});
-            this.cmbOutput2.Location = new System.Drawing.Point(205, 16);
+            this.cmbOutput2.Location = new System.Drawing.Point(205, 17);
             this.cmbOutput2.Name = "cmbOutput2";
             this.cmbOutput2.Size = new System.Drawing.Size(73, 24);
             this.cmbOutput2.TabIndex = 68;
@@ -2356,8 +2358,8 @@
             // label58
             // 
             this.label58.AutoSize = true;
-            this.label58.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label58.Location = new System.Drawing.Point(147, 19);
+            this.label58.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label58.Location = new System.Drawing.Point(147, 21);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(63, 16);
             this.label58.TabIndex = 67;
@@ -2365,11 +2367,11 @@
             // 
             // button13
             // 
-            this.button13.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button13.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button13.ForeColor = System.Drawing.Color.Black;
-            this.button13.Location = new System.Drawing.Point(284, 12);
+            this.button13.Location = new System.Drawing.Point(284, 13);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(46, 31);
+            this.button13.Size = new System.Drawing.Size(46, 34);
             this.button13.TabIndex = 66;
             this.button13.Text = "Set";
             this.button13.UseVisualStyleBackColor = true;
@@ -2377,12 +2379,12 @@
             // 
             // cmbOutput1
             // 
-            this.cmbOutput1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbOutput1.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbOutput1.FormattingEnabled = true;
             this.cmbOutput1.Items.AddRange(new object[] {
             "低电平",
             "高电平"});
-            this.cmbOutput1.Location = new System.Drawing.Point(68, 16);
+            this.cmbOutput1.Location = new System.Drawing.Point(68, 17);
             this.cmbOutput1.Name = "cmbOutput1";
             this.cmbOutput1.Size = new System.Drawing.Size(73, 24);
             this.cmbOutput1.TabIndex = 22;
@@ -2390,8 +2392,8 @@
             // label57
             // 
             this.label57.AutoSize = true;
-            this.label57.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label57.Location = new System.Drawing.Point(6, 19);
+            this.label57.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label57.Location = new System.Drawing.Point(6, 21);
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(63, 16);
             this.label57.TabIndex = 21;
@@ -2401,9 +2403,9 @@
             // 
             this.groupBox25.Controls.Add(this.btnCalibration);
             this.groupBox25.Controls.Add(this.txtCalibration);
-            this.groupBox25.Location = new System.Drawing.Point(225, 825);
+            this.groupBox25.Location = new System.Drawing.Point(225, 894);
             this.groupBox25.Name = "groupBox25";
-            this.groupBox25.Size = new System.Drawing.Size(355, 65);
+            this.groupBox25.Size = new System.Drawing.Size(355, 70);
             this.groupBox25.TabIndex = 73;
             this.groupBox25.TabStop = false;
             this.groupBox25.Text = "校准";
@@ -2411,11 +2413,11 @@
             // 
             // btnCalibration
             // 
-            this.btnCalibration.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnCalibration.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnCalibration.ForeColor = System.Drawing.Color.Black;
-            this.btnCalibration.Location = new System.Drawing.Point(188, 20);
+            this.btnCalibration.Location = new System.Drawing.Point(188, 22);
             this.btnCalibration.Name = "btnCalibration";
-            this.btnCalibration.Size = new System.Drawing.Size(90, 29);
+            this.btnCalibration.Size = new System.Drawing.Size(90, 31);
             this.btnCalibration.TabIndex = 70;
             this.btnCalibration.Text = "校准";
             this.btnCalibration.UseVisualStyleBackColor = true;
@@ -2423,8 +2425,8 @@
             // 
             // txtCalibration
             // 
-            this.txtCalibration.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtCalibration.Location = new System.Drawing.Point(21, 24);
+            this.txtCalibration.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtCalibration.Location = new System.Drawing.Point(21, 26);
             this.txtCalibration.Name = "txtCalibration";
             this.txtCalibration.Size = new System.Drawing.Size(119, 26);
             this.txtCalibration.TabIndex = 69;
@@ -2440,18 +2442,18 @@
             this.gbInventoryMode.Controls.Add(this.label45);
             this.gbInventoryMode.Controls.Add(this.button10);
             this.gbInventoryMode.Controls.Add(this.button11);
-            this.gbInventoryMode.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gbInventoryMode.Location = new System.Drawing.Point(9, 278);
+            this.gbInventoryMode.Font = new System.Drawing.Font("SimSun", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gbInventoryMode.Location = new System.Drawing.Point(9, 301);
             this.gbInventoryMode.Name = "gbInventoryMode";
-            this.gbInventoryMode.Size = new System.Drawing.Size(403, 173);
+            this.gbInventoryMode.Size = new System.Drawing.Size(403, 187);
             this.gbInventoryMode.TabIndex = 72;
             this.gbInventoryMode.TabStop = false;
             // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.checkBox2.Location = new System.Drawing.Point(320, 142);
+            this.checkBox2.Font = new System.Drawing.Font("SimSun", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.checkBox2.Location = new System.Drawing.Point(320, 154);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(54, 18);
             this.checkBox2.TabIndex = 71;
@@ -2460,8 +2462,8 @@
             // 
             // txtUserLen
             // 
-            this.txtUserLen.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtUserLen.Location = new System.Drawing.Point(113, 92);
+            this.txtUserLen.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtUserLen.Location = new System.Drawing.Point(113, 100);
             this.txtUserLen.Name = "txtUserLen";
             this.txtUserLen.Size = new System.Drawing.Size(197, 26);
             this.txtUserLen.TabIndex = 70;
@@ -2470,8 +2472,8 @@
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label47.Location = new System.Drawing.Point(6, 88);
+            this.label47.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label47.Location = new System.Drawing.Point(6, 95);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(79, 16);
             this.label47.TabIndex = 69;
@@ -2479,8 +2481,8 @@
             // 
             // txtUserPtr
             // 
-            this.txtUserPtr.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtUserPtr.Location = new System.Drawing.Point(113, 59);
+            this.txtUserPtr.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtUserPtr.Location = new System.Drawing.Point(113, 64);
             this.txtUserPtr.Name = "txtUserPtr";
             this.txtUserPtr.Size = new System.Drawing.Size(197, 26);
             this.txtUserPtr.TabIndex = 68;
@@ -2489,8 +2491,8 @@
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label46.Location = new System.Drawing.Point(6, 61);
+            this.label46.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label46.Location = new System.Drawing.Point(6, 66);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(79, 16);
             this.label46.TabIndex = 67;
@@ -2498,13 +2500,13 @@
             // 
             // cbInventoryMode
             // 
-            this.cbInventoryMode.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbInventoryMode.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbInventoryMode.FormattingEnabled = true;
             this.cbInventoryMode.Items.AddRange(new object[] {
             "EPC",
             "EPC+TID",
             "EPC+TID+USER"});
-            this.cbInventoryMode.Location = new System.Drawing.Point(113, 29);
+            this.cbInventoryMode.Location = new System.Drawing.Point(113, 31);
             this.cbInventoryMode.Name = "cbInventoryMode";
             this.cbInventoryMode.Size = new System.Drawing.Size(197, 24);
             this.cbInventoryMode.TabIndex = 66;
@@ -2513,8 +2515,8 @@
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label45.Location = new System.Drawing.Point(7, 29);
+            this.label45.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label45.Location = new System.Drawing.Point(7, 31);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(47, 16);
             this.label45.TabIndex = 66;
@@ -2522,11 +2524,11 @@
             // 
             // button10
             // 
-            this.button10.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button10.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button10.ForeColor = System.Drawing.Color.Black;
-            this.button10.Location = new System.Drawing.Point(210, 127);
+            this.button10.Location = new System.Drawing.Point(210, 138);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(90, 31);
+            this.button10.Size = new System.Drawing.Size(90, 34);
             this.button10.TabIndex = 30;
             this.button10.Text = "Set";
             this.button10.UseVisualStyleBackColor = true;
@@ -2534,11 +2536,11 @@
             // 
             // button11
             // 
-            this.button11.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button11.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button11.ForeColor = System.Drawing.Color.Black;
-            this.button11.Location = new System.Drawing.Point(99, 127);
+            this.button11.Location = new System.Drawing.Point(99, 138);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(90, 31);
+            this.button11.Size = new System.Drawing.Size(90, 34);
             this.button11.TabIndex = 29;
             this.button11.Text = "Get";
             this.button11.UseVisualStyleBackColor = true;
@@ -2548,10 +2550,10 @@
             // 
             this.bgGPIO.Controls.Add(this.groupBox8);
             this.bgGPIO.Controls.Add(this.groupBox23);
-            this.bgGPIO.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.bgGPIO.Location = new System.Drawing.Point(903, 550);
+            this.bgGPIO.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.bgGPIO.Location = new System.Drawing.Point(903, 596);
             this.bgGPIO.Name = "bgGPIO";
-            this.bgGPIO.Size = new System.Drawing.Size(355, 147);
+            this.bgGPIO.Size = new System.Drawing.Size(355, 159);
             this.bgGPIO.TabIndex = 69;
             this.bgGPIO.TabStop = false;
             this.bgGPIO.Text = "GPIO-UR4";
@@ -2565,19 +2567,19 @@
             this.groupBox8.Controls.Add(this.label38);
             this.groupBox8.Controls.Add(this.cmbO1);
             this.groupBox8.Controls.Add(this.label4);
-            this.groupBox8.Location = new System.Drawing.Point(6, 13);
+            this.groupBox8.Location = new System.Drawing.Point(6, 14);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(338, 84);
+            this.groupBox8.Size = new System.Drawing.Size(338, 91);
             this.groupBox8.TabIndex = 76;
             this.groupBox8.TabStop = false;
             // 
             // button7
             // 
-            this.button7.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button7.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button7.ForeColor = System.Drawing.Color.Black;
-            this.button7.Location = new System.Drawing.Point(183, 46);
+            this.button7.Location = new System.Drawing.Point(183, 50);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(90, 31);
+            this.button7.Size = new System.Drawing.Size(90, 34);
             this.button7.TabIndex = 66;
             this.button7.Text = "Set";
             this.button7.UseVisualStyleBackColor = true;
@@ -2585,24 +2587,24 @@
             // 
             // cmbO2
             // 
-            this.cmbO2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbO2.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbO2.FormattingEnabled = true;
             this.cmbO2.Items.AddRange(new object[] {
             "低电平",
             "高电平"});
-            this.cmbO2.Location = new System.Drawing.Point(208, 14);
+            this.cmbO2.Location = new System.Drawing.Point(208, 15);
             this.cmbO2.Name = "cmbO2";
             this.cmbO2.Size = new System.Drawing.Size(73, 24);
             this.cmbO2.TabIndex = 68;
             // 
             // cmbOutStatus
             // 
-            this.cmbOutStatus.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbOutStatus.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbOutStatus.FormattingEnabled = true;
             this.cmbOutStatus.Items.AddRange(new object[] {
             "断开",
             "闭合"});
-            this.cmbOutStatus.Location = new System.Drawing.Point(71, 41);
+            this.cmbOutStatus.Location = new System.Drawing.Point(71, 44);
             this.cmbOutStatus.Name = "cmbOutStatus";
             this.cmbOutStatus.Size = new System.Drawing.Size(73, 24);
             this.cmbOutStatus.TabIndex = 22;
@@ -2610,8 +2612,8 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(150, 17);
+            this.label3.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label3.Location = new System.Drawing.Point(150, 18);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 16);
             this.label3.TabIndex = 67;
@@ -2620,8 +2622,8 @@
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label38.Location = new System.Drawing.Point(9, 44);
+            this.label38.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label38.Location = new System.Drawing.Point(9, 48);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(63, 16);
             this.label38.TabIndex = 21;
@@ -2629,12 +2631,12 @@
             // 
             // cmbO1
             // 
-            this.cmbO1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbO1.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbO1.FormattingEnabled = true;
             this.cmbO1.Items.AddRange(new object[] {
             "低电平",
             "高电平"});
-            this.cmbO1.Location = new System.Drawing.Point(71, 14);
+            this.cmbO1.Location = new System.Drawing.Point(71, 15);
             this.cmbO1.Name = "cmbO1";
             this.cmbO1.Size = new System.Drawing.Size(73, 24);
             this.cmbO1.TabIndex = 22;
@@ -2642,8 +2644,8 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label4.Location = new System.Drawing.Point(9, 17);
+            this.label4.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label4.Location = new System.Drawing.Point(9, 18);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 16);
             this.label4.TabIndex = 21;
@@ -2656,31 +2658,31 @@
             this.groupBox23.Controls.Add(this.comboBox3);
             this.groupBox23.Controls.Add(this.label39);
             this.groupBox23.Controls.Add(this.label40);
-            this.groupBox23.Location = new System.Drawing.Point(5, 99);
+            this.groupBox23.Location = new System.Drawing.Point(5, 107);
             this.groupBox23.Name = "groupBox23";
-            this.groupBox23.Size = new System.Drawing.Size(341, 39);
+            this.groupBox23.Size = new System.Drawing.Size(341, 42);
             this.groupBox23.TabIndex = 68;
             this.groupBox23.TabStop = false;
             // 
             // comboBox2
             // 
-            this.comboBox2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.comboBox2.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "低电平",
             "高电平"});
-            this.comboBox2.Location = new System.Drawing.Point(62, 12);
+            this.comboBox2.Location = new System.Drawing.Point(62, 13);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(73, 24);
             this.comboBox2.TabIndex = 19;
             // 
             // button6
             // 
-            this.button6.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button6.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button6.ForeColor = System.Drawing.Color.Black;
-            this.button6.Location = new System.Drawing.Point(271, 10);
+            this.button6.Location = new System.Drawing.Point(271, 11);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(67, 26);
+            this.button6.Size = new System.Drawing.Size(67, 28);
             this.button6.TabIndex = 26;
             this.button6.Text = "Get";
             this.button6.UseVisualStyleBackColor = true;
@@ -2688,12 +2690,12 @@
             // 
             // comboBox3
             // 
-            this.comboBox3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.comboBox3.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
             "低电平",
             "高电平"});
-            this.comboBox3.Location = new System.Drawing.Point(197, 12);
+            this.comboBox3.Location = new System.Drawing.Point(197, 13);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(73, 24);
             this.comboBox3.TabIndex = 20;
@@ -2701,8 +2703,8 @@
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label39.Location = new System.Drawing.Point(3, 14);
+            this.label39.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label39.Location = new System.Drawing.Point(3, 15);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(63, 16);
             this.label39.TabIndex = 8;
@@ -2711,8 +2713,8 @@
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label40.Location = new System.Drawing.Point(137, 15);
+            this.label40.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label40.Location = new System.Drawing.Point(137, 16);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(63, 16);
             this.label40.TabIndex = 9;
@@ -2725,22 +2727,22 @@
             this.groupBox19.Controls.Add(this.button5);
             this.groupBox19.Controls.Add(this.cmbProtocol);
             this.groupBox19.Controls.Add(this.label35);
-            this.groupBox19.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox19.Font = new System.Drawing.Font("SimSun", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox19.ForeColor = System.Drawing.Color.Black;
-            this.groupBox19.Location = new System.Drawing.Point(902, 358);
+            this.groupBox19.Location = new System.Drawing.Point(902, 388);
             this.groupBox19.Name = "groupBox19";
-            this.groupBox19.Size = new System.Drawing.Size(357, 93);
+            this.groupBox19.Size = new System.Drawing.Size(357, 101);
             this.groupBox19.TabIndex = 67;
             this.groupBox19.TabStop = false;
             this.groupBox19.Text = "Protocol";
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button2.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(57, 50);
+            this.button2.Location = new System.Drawing.Point(57, 54);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(92, 31);
+            this.button2.Size = new System.Drawing.Size(92, 34);
             this.button2.TabIndex = 27;
             this.button2.Text = "Get";
             this.button2.UseVisualStyleBackColor = true;
@@ -2748,11 +2750,11 @@
             // 
             // button5
             // 
-            this.button5.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button5.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Location = new System.Drawing.Point(190, 48);
+            this.button5.Location = new System.Drawing.Point(190, 52);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(90, 31);
+            this.button5.Size = new System.Drawing.Size(90, 34);
             this.button5.TabIndex = 26;
             this.button5.Text = "Set";
             this.button5.UseVisualStyleBackColor = true;
@@ -2760,14 +2762,14 @@
             // 
             // cmbProtocol
             // 
-            this.cmbProtocol.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbProtocol.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbProtocol.FormattingEnabled = true;
             this.cmbProtocol.Items.AddRange(new object[] {
             "ISO18000-6C",
             "GB/T 29768",
             "GJB 7377.1",
             "ISO18000-6B"});
-            this.cmbProtocol.Location = new System.Drawing.Point(113, 18);
+            this.cmbProtocol.Location = new System.Drawing.Point(113, 20);
             this.cmbProtocol.Name = "cmbProtocol";
             this.cmbProtocol.Size = new System.Drawing.Size(220, 24);
             this.cmbProtocol.TabIndex = 18;
@@ -2775,8 +2777,8 @@
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label35.Location = new System.Drawing.Point(36, 24);
+            this.label35.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label35.Location = new System.Drawing.Point(36, 26);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(79, 16);
             this.label35.TabIndex = 22;
@@ -2790,10 +2792,10 @@
             this.gbWorkMode.Controls.Add(this.button1);
             this.gbWorkMode.Controls.Add(this.btnGetWorkMode);
             this.gbWorkMode.Controls.Add(this.label29);
-            this.gbWorkMode.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gbWorkMode.Location = new System.Drawing.Point(426, 384);
+            this.gbWorkMode.Font = new System.Drawing.Font("SimSun", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gbWorkMode.Location = new System.Drawing.Point(426, 416);
             this.gbWorkMode.Name = "gbWorkMode";
-            this.gbWorkMode.Size = new System.Drawing.Size(466, 176);
+            this.gbWorkMode.Size = new System.Drawing.Size(466, 191);
             this.gbWorkMode.TabIndex = 64;
             this.gbWorkMode.TabStop = false;
             this.gbWorkMode.Text = "work mode";
@@ -2813,16 +2815,16 @@
             this.plWorkModePara.Controls.Add(this.cmbInput);
             this.plWorkModePara.Controls.Add(this.label48);
             this.plWorkModePara.Controls.Add(this.label51);
-            this.plWorkModePara.Location = new System.Drawing.Point(15, 50);
+            this.plWorkModePara.Location = new System.Drawing.Point(15, 54);
             this.plWorkModePara.Name = "plWorkModePara";
-            this.plWorkModePara.Size = new System.Drawing.Size(438, 113);
+            this.plWorkModePara.Size = new System.Drawing.Size(438, 122);
             this.plWorkModePara.TabIndex = 73;
             this.plWorkModePara.Visible = false;
             // 
             // txtIT
             // 
-            this.txtIT.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtIT.Location = new System.Drawing.Point(349, 46);
+            this.txtIT.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtIT.Location = new System.Drawing.Point(349, 50);
             this.txtIT.Name = "txtIT";
             this.txtIT.Size = new System.Drawing.Size(62, 26);
             this.txtIT.TabIndex = 77;
@@ -2831,8 +2833,8 @@
             // label52
             // 
             this.label52.AutoSize = true;
-            this.label52.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label52.Location = new System.Drawing.Point(406, 51);
+            this.label52.Font = new System.Drawing.Font("SimSun", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label52.Location = new System.Drawing.Point(406, 55);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(35, 14);
             this.label52.TabIndex = 83;
@@ -2840,11 +2842,11 @@
             // 
             // btnWorkModeParaGet
             // 
-            this.btnWorkModeParaGet.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnWorkModeParaGet.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnWorkModeParaGet.ForeColor = System.Drawing.Color.Black;
-            this.btnWorkModeParaGet.Location = new System.Drawing.Point(74, 76);
+            this.btnWorkModeParaGet.Location = new System.Drawing.Point(74, 82);
             this.btnWorkModeParaGet.Name = "btnWorkModeParaGet";
-            this.btnWorkModeParaGet.Size = new System.Drawing.Size(91, 31);
+            this.btnWorkModeParaGet.Size = new System.Drawing.Size(91, 34);
             this.btnWorkModeParaGet.TabIndex = 81;
             this.btnWorkModeParaGet.Text = "Get";
             this.btnWorkModeParaGet.UseVisualStyleBackColor = true;
@@ -2852,11 +2854,11 @@
             // 
             // btnWorkModeParaSet
             // 
-            this.btnWorkModeParaSet.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnWorkModeParaSet.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnWorkModeParaSet.ForeColor = System.Drawing.Color.Black;
-            this.btnWorkModeParaSet.Location = new System.Drawing.Point(212, 76);
+            this.btnWorkModeParaSet.Location = new System.Drawing.Point(212, 82);
             this.btnWorkModeParaSet.Name = "btnWorkModeParaSet";
-            this.btnWorkModeParaSet.Size = new System.Drawing.Size(90, 29);
+            this.btnWorkModeParaSet.Size = new System.Drawing.Size(90, 31);
             this.btnWorkModeParaSet.TabIndex = 80;
             this.btnWorkModeParaSet.Text = "Set";
             this.btnWorkModeParaSet.UseVisualStyleBackColor = true;
@@ -2864,12 +2866,12 @@
             // 
             // comRM
             // 
-            this.comRM.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.comRM.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.comRM.FormattingEnabled = true;
             this.comRM.Items.AddRange(new object[] {
             "SerialPort",
             "UDP"});
-            this.comRM.Location = new System.Drawing.Point(349, 19);
+            this.comRM.Location = new System.Drawing.Point(349, 21);
             this.comRM.Name = "comRM";
             this.comRM.Size = new System.Drawing.Size(81, 24);
             this.comRM.TabIndex = 79;
@@ -2877,8 +2879,8 @@
             // Mode
             // 
             this.Mode.AutoSize = true;
-            this.Mode.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Mode.Location = new System.Drawing.Point(269, 23);
+            this.Mode.Font = new System.Drawing.Font("SimSun", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Mode.Location = new System.Drawing.Point(269, 25);
             this.Mode.Name = "Mode";
             this.Mode.Size = new System.Drawing.Size(84, 14);
             this.Mode.TabIndex = 78;
@@ -2887,8 +2889,8 @@
             // label50
             // 
             this.label50.AutoSize = true;
-            this.label50.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label50.Location = new System.Drawing.Point(256, 49);
+            this.label50.Font = new System.Drawing.Font("SimSun", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label50.Location = new System.Drawing.Point(256, 53);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(98, 14);
             this.label50.TabIndex = 76;
@@ -2896,8 +2898,8 @@
             // 
             // txtWT
             // 
-            this.txtWT.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtWT.Location = new System.Drawing.Point(163, 44);
+            this.txtWT.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtWT.Location = new System.Drawing.Point(163, 48);
             this.txtWT.Name = "txtWT";
             this.txtWT.Size = new System.Drawing.Size(58, 26);
             this.txtWT.TabIndex = 75;
@@ -2906,8 +2908,8 @@
             // label49
             // 
             this.label49.AutoSize = true;
-            this.label49.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label49.Location = new System.Drawing.Point(96, 53);
+            this.label49.Font = new System.Drawing.Font("SimSun", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label49.Location = new System.Drawing.Point(96, 57);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(70, 14);
             this.label49.TabIndex = 74;
@@ -2915,12 +2917,12 @@
             // 
             // cmbInput
             // 
-            this.cmbInput.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbInput.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbInput.FormattingEnabled = true;
             this.cmbInput.Items.AddRange(new object[] {
             "1",
             "2"});
-            this.cmbInput.Location = new System.Drawing.Point(163, 16);
+            this.cmbInput.Location = new System.Drawing.Point(163, 17);
             this.cmbInput.Name = "cmbInput";
             this.cmbInput.Size = new System.Drawing.Size(58, 24);
             this.cmbInput.TabIndex = 73;
@@ -2928,8 +2930,8 @@
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label48.Location = new System.Drawing.Point(0, 19);
+            this.label48.Font = new System.Drawing.Font("SimSun", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label48.Location = new System.Drawing.Point(0, 21);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(154, 14);
             this.label48.TabIndex = 72;
@@ -2938,8 +2940,8 @@
             // label51
             // 
             this.label51.AutoSize = true;
-            this.label51.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label51.Location = new System.Drawing.Point(218, 49);
+            this.label51.Font = new System.Drawing.Font("SimSun", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label51.Location = new System.Drawing.Point(218, 53);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(35, 14);
             this.label51.TabIndex = 82;
@@ -2947,13 +2949,13 @@
             // 
             // workMode
             // 
-            this.workMode.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.workMode.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.workMode.FormattingEnabled = true;
             this.workMode.Items.AddRange(new object[] {
             "命令工作模式",
             "自动工作模式",
             "触发模式"});
-            this.workMode.Location = new System.Drawing.Point(67, 19);
+            this.workMode.Location = new System.Drawing.Point(67, 21);
             this.workMode.Name = "workMode";
             this.workMode.Size = new System.Drawing.Size(136, 24);
             this.workMode.TabIndex = 65;
@@ -2961,11 +2963,11 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button1.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(323, 15);
+            this.button1.Location = new System.Drawing.Point(323, 16);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 31);
+            this.button1.Size = new System.Drawing.Size(90, 34);
             this.button1.TabIndex = 26;
             this.button1.Text = "Set";
             this.button1.UseVisualStyleBackColor = true;
@@ -2973,11 +2975,11 @@
             // 
             // btnGetWorkMode
             // 
-            this.btnGetWorkMode.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnGetWorkMode.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnGetWorkMode.ForeColor = System.Drawing.Color.Black;
-            this.btnGetWorkMode.Location = new System.Drawing.Point(227, 14);
+            this.btnGetWorkMode.Location = new System.Drawing.Point(227, 15);
             this.btnGetWorkMode.Name = "btnGetWorkMode";
-            this.btnGetWorkMode.Size = new System.Drawing.Size(90, 31);
+            this.btnGetWorkMode.Size = new System.Drawing.Size(90, 34);
             this.btnGetWorkMode.TabIndex = 25;
             this.btnGetWorkMode.Text = "Get";
             this.btnGetWorkMode.UseVisualStyleBackColor = true;
@@ -2986,8 +2988,8 @@
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label29.Location = new System.Drawing.Point(18, 22);
+            this.label29.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label29.Location = new System.Drawing.Point(18, 24);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(47, 16);
             this.label29.TabIndex = 6;
@@ -3002,10 +3004,10 @@
             this.gbIp2.Controls.Add(this.txtPortDest);
             this.gbIp2.Controls.Add(this.label30);
             this.gbIp2.Controls.Add(this.label31);
-            this.gbIp2.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gbIp2.Location = new System.Drawing.Point(9, 664);
+            this.gbIp2.Font = new System.Drawing.Font("SimSun", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gbIp2.Location = new System.Drawing.Point(9, 719);
             this.gbIp2.Name = "gbIp2";
-            this.gbIp2.Size = new System.Drawing.Size(406, 153);
+            this.gbIp2.Size = new System.Drawing.Size(406, 166);
             this.gbIp2.TabIndex = 63;
             this.gbIp2.TabStop = false;
             this.gbIp2.Text = "目标IP";
@@ -3018,19 +3020,19 @@
         "",
         "",
         ""};
-            this.ipControlDest.Location = new System.Drawing.Point(113, 20);
+            this.ipControlDest.Location = new System.Drawing.Point(113, 22);
             this.ipControlDest.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ipControlDest.Name = "ipControlDest";
-            this.ipControlDest.Size = new System.Drawing.Size(264, 31);
+            this.ipControlDest.Size = new System.Drawing.Size(264, 34);
             this.ipControlDest.TabIndex = 28;
             // 
             // btnSetIpDest
             // 
-            this.btnSetIpDest.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSetIpDest.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSetIpDest.ForeColor = System.Drawing.Color.Black;
-            this.btnSetIpDest.Location = new System.Drawing.Point(214, 107);
+            this.btnSetIpDest.Location = new System.Drawing.Point(214, 116);
             this.btnSetIpDest.Name = "btnSetIpDest";
-            this.btnSetIpDest.Size = new System.Drawing.Size(90, 31);
+            this.btnSetIpDest.Size = new System.Drawing.Size(90, 34);
             this.btnSetIpDest.TabIndex = 26;
             this.btnSetIpDest.Text = "Set";
             this.btnSetIpDest.UseVisualStyleBackColor = true;
@@ -3038,11 +3040,11 @@
             // 
             // btnGetIpDest
             // 
-            this.btnGetIpDest.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnGetIpDest.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnGetIpDest.ForeColor = System.Drawing.Color.Black;
-            this.btnGetIpDest.Location = new System.Drawing.Point(99, 107);
+            this.btnGetIpDest.Location = new System.Drawing.Point(99, 116);
             this.btnGetIpDest.Name = "btnGetIpDest";
-            this.btnGetIpDest.Size = new System.Drawing.Size(90, 31);
+            this.btnGetIpDest.Size = new System.Drawing.Size(90, 34);
             this.btnGetIpDest.TabIndex = 25;
             this.btnGetIpDest.Text = "Get";
             this.btnGetIpDest.UseVisualStyleBackColor = true;
@@ -3050,8 +3052,8 @@
             // 
             // txtPortDest
             // 
-            this.txtPortDest.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtPortDest.Location = new System.Drawing.Point(113, 69);
+            this.txtPortDest.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtPortDest.Location = new System.Drawing.Point(113, 75);
             this.txtPortDest.Name = "txtPortDest";
             this.txtPortDest.Size = new System.Drawing.Size(218, 26);
             this.txtPortDest.TabIndex = 24;
@@ -3059,8 +3061,8 @@
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label30.Location = new System.Drawing.Point(59, 74);
+            this.label30.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label30.Location = new System.Drawing.Point(59, 80);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(47, 16);
             this.label30.TabIndex = 7;
@@ -3069,8 +3071,8 @@
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label31.Location = new System.Drawing.Point(80, 27);
+            this.label31.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label31.Location = new System.Drawing.Point(80, 29);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(31, 16);
             this.label31.TabIndex = 6;
@@ -3089,10 +3091,10 @@
             this.gbIP.Controls.Add(this.txtLocalPort);
             this.gbIP.Controls.Add(this.label9);
             this.gbIP.Controls.Add(this.label25);
-            this.gbIP.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.gbIP.Location = new System.Drawing.Point(9, 457);
+            this.gbIP.Font = new System.Drawing.Font("SimSun", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gbIP.Location = new System.Drawing.Point(9, 495);
             this.gbIP.Name = "gbIP";
-            this.gbIP.Size = new System.Drawing.Size(406, 199);
+            this.gbIP.Size = new System.Drawing.Size(406, 216);
             this.gbIP.TabIndex = 61;
             this.gbIP.TabStop = false;
             this.gbIP.Text = "本机IP";
@@ -3100,8 +3102,8 @@
             // label54
             // 
             this.label54.AutoSize = true;
-            this.label54.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label54.Location = new System.Drawing.Point(40, 123);
+            this.label54.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label54.Location = new System.Drawing.Point(40, 133);
             this.label54.Name = "label54";
             this.label54.Size = new System.Drawing.Size(71, 16);
             this.label54.TabIndex = 31;
@@ -3110,8 +3112,8 @@
             // label53
             // 
             this.label53.AutoSize = true;
-            this.label53.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label53.Location = new System.Drawing.Point(9, 91);
+            this.label53.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label53.Location = new System.Drawing.Point(9, 99);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(103, 16);
             this.label53.TabIndex = 30;
@@ -3125,10 +3127,10 @@
         "",
         "",
         ""};
-            this.ipGateway.Location = new System.Drawing.Point(115, 119);
+            this.ipGateway.Location = new System.Drawing.Point(115, 129);
             this.ipGateway.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.ipGateway.Name = "ipGateway";
-            this.ipGateway.Size = new System.Drawing.Size(261, 31);
+            this.ipGateway.Size = new System.Drawing.Size(261, 34);
             this.ipGateway.TabIndex = 29;
             // 
             // ipControlSubnetMask
@@ -3139,10 +3141,10 @@
         "",
         "",
         ""};
-            this.ipControlSubnetMask.Location = new System.Drawing.Point(115, 84);
+            this.ipControlSubnetMask.Location = new System.Drawing.Point(115, 91);
             this.ipControlSubnetMask.Margin = new System.Windows.Forms.Padding(4);
             this.ipControlSubnetMask.Name = "ipControlSubnetMask";
-            this.ipControlSubnetMask.Size = new System.Drawing.Size(261, 31);
+            this.ipControlSubnetMask.Size = new System.Drawing.Size(261, 34);
             this.ipControlSubnetMask.TabIndex = 28;
             // 
             // ipControlLocal
@@ -3153,19 +3155,19 @@
         "",
         "",
         ""};
-            this.ipControlLocal.Location = new System.Drawing.Point(115, 20);
+            this.ipControlLocal.Location = new System.Drawing.Point(115, 22);
             this.ipControlLocal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ipControlLocal.Name = "ipControlLocal";
-            this.ipControlLocal.Size = new System.Drawing.Size(261, 31);
+            this.ipControlLocal.Size = new System.Drawing.Size(261, 34);
             this.ipControlLocal.TabIndex = 27;
             // 
             // btnSetIPLocal
             // 
-            this.btnSetIPLocal.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSetIPLocal.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSetIPLocal.ForeColor = System.Drawing.Color.Black;
-            this.btnSetIPLocal.Location = new System.Drawing.Point(214, 156);
+            this.btnSetIPLocal.Location = new System.Drawing.Point(214, 169);
             this.btnSetIPLocal.Name = "btnSetIPLocal";
-            this.btnSetIPLocal.Size = new System.Drawing.Size(90, 31);
+            this.btnSetIPLocal.Size = new System.Drawing.Size(90, 34);
             this.btnSetIPLocal.TabIndex = 26;
             this.btnSetIPLocal.Text = "Set";
             this.btnSetIPLocal.UseVisualStyleBackColor = true;
@@ -3173,11 +3175,11 @@
             // 
             // btnGetIPLocal
             // 
-            this.btnGetIPLocal.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnGetIPLocal.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnGetIPLocal.ForeColor = System.Drawing.Color.Black;
-            this.btnGetIPLocal.Location = new System.Drawing.Point(99, 156);
+            this.btnGetIPLocal.Location = new System.Drawing.Point(99, 169);
             this.btnGetIPLocal.Name = "btnGetIPLocal";
-            this.btnGetIPLocal.Size = new System.Drawing.Size(90, 31);
+            this.btnGetIPLocal.Size = new System.Drawing.Size(90, 34);
             this.btnGetIPLocal.TabIndex = 25;
             this.btnGetIPLocal.Text = "Get";
             this.btnGetIPLocal.UseVisualStyleBackColor = true;
@@ -3185,8 +3187,8 @@
             // 
             // txtLocalPort
             // 
-            this.txtLocalPort.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtLocalPort.Location = new System.Drawing.Point(116, 54);
+            this.txtLocalPort.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtLocalPort.Location = new System.Drawing.Point(116, 59);
             this.txtLocalPort.Name = "txtLocalPort";
             this.txtLocalPort.Size = new System.Drawing.Size(261, 26);
             this.txtLocalPort.TabIndex = 24;
@@ -3194,8 +3196,8 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label9.Location = new System.Drawing.Point(80, 27);
+            this.label9.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label9.Location = new System.Drawing.Point(80, 29);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(31, 16);
             this.label9.TabIndex = 6;
@@ -3204,8 +3206,8 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label25.Location = new System.Drawing.Point(67, 59);
+            this.label25.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label25.Location = new System.Drawing.Point(67, 64);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(47, 16);
             this.label25.TabIndex = 7;
@@ -3215,9 +3217,9 @@
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(205, 664);
+            this.label8.Location = new System.Drawing.Point(205, 719);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(0, 12);
+            this.label8.Size = new System.Drawing.Size(0, 13);
             this.label8.TabIndex = 60;
             // 
             // groupBox15
@@ -3227,11 +3229,11 @@
             this.groupBox15.Controls.Add(this.btnrbTagfocusGet);
             this.groupBox15.Controls.Add(this.btnrbTagfocusSet);
             this.groupBox15.Controls.Add(this.rbTagfocusEnable);
-            this.groupBox15.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox15.Font = new System.Drawing.Font("SimSun", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox15.ForeColor = System.Drawing.Color.Black;
-            this.groupBox15.Location = new System.Drawing.Point(903, 13);
+            this.groupBox15.Location = new System.Drawing.Point(903, 14);
             this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(355, 80);
+            this.groupBox15.Size = new System.Drawing.Size(355, 87);
             this.groupBox15.TabIndex = 46;
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "Tagfocus";
@@ -3239,8 +3241,8 @@
             // rbTagfocusDisable
             // 
             this.rbTagfocusDisable.AutoSize = true;
-            this.rbTagfocusDisable.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rbTagfocusDisable.Location = new System.Drawing.Point(206, 20);
+            this.rbTagfocusDisable.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rbTagfocusDisable.Location = new System.Drawing.Point(206, 22);
             this.rbTagfocusDisable.Name = "rbTagfocusDisable";
             this.rbTagfocusDisable.Size = new System.Drawing.Size(81, 20);
             this.rbTagfocusDisable.TabIndex = 42;
@@ -3250,11 +3252,11 @@
             // 
             // btnrbTagfocusGet
             // 
-            this.btnrbTagfocusGet.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnrbTagfocusGet.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnrbTagfocusGet.ForeColor = System.Drawing.Color.Black;
-            this.btnrbTagfocusGet.Location = new System.Drawing.Point(43, 40);
+            this.btnrbTagfocusGet.Location = new System.Drawing.Point(43, 43);
             this.btnrbTagfocusGet.Name = "btnrbTagfocusGet";
-            this.btnrbTagfocusGet.Size = new System.Drawing.Size(90, 31);
+            this.btnrbTagfocusGet.Size = new System.Drawing.Size(90, 34);
             this.btnrbTagfocusGet.TabIndex = 40;
             this.btnrbTagfocusGet.Text = "Get";
             this.btnrbTagfocusGet.UseVisualStyleBackColor = true;
@@ -3262,11 +3264,11 @@
             // 
             // btnrbTagfocusSet
             // 
-            this.btnrbTagfocusSet.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnrbTagfocusSet.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnrbTagfocusSet.ForeColor = System.Drawing.Color.Black;
-            this.btnrbTagfocusSet.Location = new System.Drawing.Point(198, 40);
+            this.btnrbTagfocusSet.Location = new System.Drawing.Point(198, 43);
             this.btnrbTagfocusSet.Name = "btnrbTagfocusSet";
-            this.btnrbTagfocusSet.Size = new System.Drawing.Size(90, 31);
+            this.btnrbTagfocusSet.Size = new System.Drawing.Size(90, 34);
             this.btnrbTagfocusSet.TabIndex = 39;
             this.btnrbTagfocusSet.Text = "Set";
             this.btnrbTagfocusSet.UseVisualStyleBackColor = true;
@@ -3275,8 +3277,8 @@
             // rbTagfocusEnable
             // 
             this.rbTagfocusEnable.AutoSize = true;
-            this.rbTagfocusEnable.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rbTagfocusEnable.Location = new System.Drawing.Point(66, 17);
+            this.rbTagfocusEnable.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rbTagfocusEnable.Location = new System.Drawing.Point(66, 18);
             this.rbTagfocusEnable.Name = "rbTagfocusEnable";
             this.rbTagfocusEnable.Size = new System.Drawing.Size(73, 20);
             this.rbTagfocusEnable.TabIndex = 41;
@@ -3291,11 +3293,11 @@
             this.groupBox14.Controls.Add(this.rbFastIDEnable);
             this.groupBox14.Controls.Add(this.btnFastIDGet);
             this.groupBox14.Controls.Add(this.btnFastIDSet);
-            this.groupBox14.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox14.Font = new System.Drawing.Font("SimSun", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox14.ForeColor = System.Drawing.Color.Black;
-            this.groupBox14.Location = new System.Drawing.Point(903, 93);
+            this.groupBox14.Location = new System.Drawing.Point(903, 101);
             this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(355, 85);
+            this.groupBox14.Size = new System.Drawing.Size(355, 92);
             this.groupBox14.TabIndex = 45;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "FastID";
@@ -3303,8 +3305,8 @@
             // rbFastIDDisable
             // 
             this.rbFastIDDisable.AutoSize = true;
-            this.rbFastIDDisable.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rbFastIDDisable.Location = new System.Drawing.Point(203, 17);
+            this.rbFastIDDisable.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rbFastIDDisable.Location = new System.Drawing.Point(203, 18);
             this.rbFastIDDisable.Name = "rbFastIDDisable";
             this.rbFastIDDisable.Size = new System.Drawing.Size(81, 20);
             this.rbFastIDDisable.TabIndex = 44;
@@ -3315,8 +3317,8 @@
             // rbFastIDEnable
             // 
             this.rbFastIDEnable.AutoSize = true;
-            this.rbFastIDEnable.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rbFastIDEnable.Location = new System.Drawing.Point(58, 17);
+            this.rbFastIDEnable.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rbFastIDEnable.Location = new System.Drawing.Point(58, 18);
             this.rbFastIDEnable.Name = "rbFastIDEnable";
             this.rbFastIDEnable.Size = new System.Drawing.Size(73, 20);
             this.rbFastIDEnable.TabIndex = 43;
@@ -3326,11 +3328,11 @@
             // 
             // btnFastIDGet
             // 
-            this.btnFastIDGet.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnFastIDGet.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnFastIDGet.ForeColor = System.Drawing.Color.Black;
-            this.btnFastIDGet.Location = new System.Drawing.Point(38, 43);
+            this.btnFastIDGet.Location = new System.Drawing.Point(38, 47);
             this.btnFastIDGet.Name = "btnFastIDGet";
-            this.btnFastIDGet.Size = new System.Drawing.Size(90, 31);
+            this.btnFastIDGet.Size = new System.Drawing.Size(90, 34);
             this.btnFastIDGet.TabIndex = 40;
             this.btnFastIDGet.Text = "Get";
             this.btnFastIDGet.UseVisualStyleBackColor = true;
@@ -3338,11 +3340,11 @@
             // 
             // btnFastIDSet
             // 
-            this.btnFastIDSet.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnFastIDSet.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnFastIDSet.ForeColor = System.Drawing.Color.Black;
-            this.btnFastIDSet.Location = new System.Drawing.Point(193, 43);
+            this.btnFastIDSet.Location = new System.Drawing.Point(193, 47);
             this.btnFastIDSet.Name = "btnFastIDSet";
-            this.btnFastIDSet.Size = new System.Drawing.Size(90, 31);
+            this.btnFastIDSet.Size = new System.Drawing.Size(90, 34);
             this.btnFastIDSet.TabIndex = 39;
             this.btnFastIDSet.Text = "Set";
             this.btnFastIDSet.UseVisualStyleBackColor = true;
@@ -3356,18 +3358,18 @@
             this.groupBox11.Controls.Add(this.btnRegionGet);
             this.groupBox11.Controls.Add(this.btnRegionSet);
             this.groupBox11.Controls.Add(this.label1);
-            this.groupBox11.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox11.Font = new System.Drawing.Font("SimSun", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox11.ForeColor = System.Drawing.Color.Black;
-            this.groupBox11.Location = new System.Drawing.Point(9, 180);
+            this.groupBox11.Location = new System.Drawing.Point(9, 195);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(406, 93);
+            this.groupBox11.Size = new System.Drawing.Size(406, 101);
             this.groupBox11.TabIndex = 44;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Region";
             // 
             // cmbRegion
             // 
-            this.cmbRegion.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbRegion.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cmbRegion.FormattingEnabled = true;
             this.cmbRegion.Items.AddRange(new object[] {
             "China Standard1(840~845MHz)",
@@ -3391,7 +3393,7 @@
             "New Zealand  ",
             "880-930Mhz",
             "Singapore"});
-            this.cmbRegion.Location = new System.Drawing.Point(113, 17);
+            this.cmbRegion.Location = new System.Drawing.Point(113, 18);
             this.cmbRegion.Name = "cmbRegion";
             this.cmbRegion.Size = new System.Drawing.Size(253, 24);
             this.cmbRegion.TabIndex = 18;
@@ -3401,8 +3403,8 @@
             this.cbRegionSave.AutoSize = true;
             this.cbRegionSave.Checked = true;
             this.cbRegionSave.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbRegionSave.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbRegionSave.Location = new System.Drawing.Point(311, 55);
+            this.cbRegionSave.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbRegionSave.Location = new System.Drawing.Point(311, 60);
             this.cbRegionSave.Name = "cbRegionSave";
             this.cbRegionSave.Size = new System.Drawing.Size(58, 20);
             this.cbRegionSave.TabIndex = 25;
@@ -3411,11 +3413,11 @@
             // 
             // btnRegionGet
             // 
-            this.btnRegionGet.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnRegionGet.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnRegionGet.ForeColor = System.Drawing.Color.Black;
-            this.btnRegionGet.Location = new System.Drawing.Point(95, 49);
+            this.btnRegionGet.Location = new System.Drawing.Point(95, 53);
             this.btnRegionGet.Name = "btnRegionGet";
-            this.btnRegionGet.Size = new System.Drawing.Size(90, 31);
+            this.btnRegionGet.Size = new System.Drawing.Size(90, 34);
             this.btnRegionGet.TabIndex = 24;
             this.btnRegionGet.Text = "Get";
             this.btnRegionGet.UseVisualStyleBackColor = true;
@@ -3423,11 +3425,11 @@
             // 
             // btnRegionSet
             // 
-            this.btnRegionSet.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnRegionSet.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnRegionSet.ForeColor = System.Drawing.Color.Black;
-            this.btnRegionSet.Location = new System.Drawing.Point(212, 49);
+            this.btnRegionSet.Location = new System.Drawing.Point(212, 53);
             this.btnRegionSet.Name = "btnRegionSet";
-            this.btnRegionSet.Size = new System.Drawing.Size(92, 31);
+            this.btnRegionSet.Size = new System.Drawing.Size(92, 34);
             this.btnRegionSet.TabIndex = 23;
             this.btnRegionSet.Text = "Set";
             this.btnRegionSet.UseVisualStyleBackColor = true;
@@ -3436,8 +3438,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(51, 24);
+            this.label1.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(51, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(63, 16);
             this.label1.TabIndex = 22;
@@ -3448,11 +3450,11 @@
             this.gbAnt.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.gbAnt.Controls.Add(this.groupBox2);
             this.gbAnt.Controls.Add(this.groupBox13);
-            this.gbAnt.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.gbAnt.Font = new System.Drawing.Font("SimSun", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.gbAnt.ForeColor = System.Drawing.Color.Black;
-            this.gbAnt.Location = new System.Drawing.Point(426, 147);
+            this.gbAnt.Location = new System.Drawing.Point(426, 159);
             this.gbAnt.Name = "gbAnt";
-            this.gbAnt.Size = new System.Drawing.Size(466, 229);
+            this.gbAnt.Size = new System.Drawing.Size(466, 248);
             this.gbAnt.TabIndex = 43;
             this.gbAnt.TabStop = false;
             this.gbAnt.Text = "ANT";
@@ -3469,19 +3471,19 @@
             this.groupBox2.Controls.Add(this.cbANT6_state);
             this.groupBox2.Controls.Add(this.cbANT8_state);
             this.groupBox2.Controls.Add(this.cbANT7_state);
-            this.groupBox2.Location = new System.Drawing.Point(9, 148);
+            this.groupBox2.Location = new System.Drawing.Point(9, 160);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(450, 71);
+            this.groupBox2.Size = new System.Drawing.Size(450, 77);
             this.groupBox2.TabIndex = 60;
             this.groupBox2.TabStop = false;
             // 
             // btnAntennaConnectionState
             // 
-            this.btnAntennaConnectionState.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnAntennaConnectionState.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnAntennaConnectionState.ForeColor = System.Drawing.Color.Black;
-            this.btnAntennaConnectionState.Location = new System.Drawing.Point(91, 34);
+            this.btnAntennaConnectionState.Location = new System.Drawing.Point(91, 37);
             this.btnAntennaConnectionState.Name = "btnAntennaConnectionState";
-            this.btnAntennaConnectionState.Size = new System.Drawing.Size(302, 31);
+            this.btnAntennaConnectionState.Size = new System.Drawing.Size(302, 34);
             this.btnAntennaConnectionState.TabIndex = 41;
             this.btnAntennaConnectionState.Text = "Antenna connection state";
             this.btnAntennaConnectionState.UseVisualStyleBackColor = true;
@@ -3491,8 +3493,8 @@
             // 
             this.cbANT2_state.AutoSize = true;
             this.cbANT2_state.Enabled = false;
-            this.cbANT2_state.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbANT2_state.Location = new System.Drawing.Point(67, 16);
+            this.cbANT2_state.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbANT2_state.Location = new System.Drawing.Point(67, 17);
             this.cbANT2_state.Name = "cbANT2_state";
             this.cbANT2_state.Size = new System.Drawing.Size(48, 16);
             this.cbANT2_state.TabIndex = 43;
@@ -3503,8 +3505,8 @@
             // 
             this.cbANT1_state.AutoSize = true;
             this.cbANT1_state.Enabled = false;
-            this.cbANT1_state.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbANT1_state.Location = new System.Drawing.Point(14, 16);
+            this.cbANT1_state.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbANT1_state.Location = new System.Drawing.Point(14, 17);
             this.cbANT1_state.Name = "cbANT1_state";
             this.cbANT1_state.Size = new System.Drawing.Size(48, 16);
             this.cbANT1_state.TabIndex = 42;
@@ -3515,8 +3517,8 @@
             // 
             this.cbANT3_state.AutoSize = true;
             this.cbANT3_state.Enabled = false;
-            this.cbANT3_state.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbANT3_state.Location = new System.Drawing.Point(123, 16);
+            this.cbANT3_state.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbANT3_state.Location = new System.Drawing.Point(123, 17);
             this.cbANT3_state.Name = "cbANT3_state";
             this.cbANT3_state.Size = new System.Drawing.Size(48, 16);
             this.cbANT3_state.TabIndex = 44;
@@ -3527,8 +3529,8 @@
             // 
             this.cbANT4_state.AutoSize = true;
             this.cbANT4_state.Enabled = false;
-            this.cbANT4_state.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbANT4_state.Location = new System.Drawing.Point(177, 16);
+            this.cbANT4_state.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbANT4_state.Location = new System.Drawing.Point(177, 17);
             this.cbANT4_state.Name = "cbANT4_state";
             this.cbANT4_state.Size = new System.Drawing.Size(48, 16);
             this.cbANT4_state.TabIndex = 45;
@@ -3539,8 +3541,8 @@
             // 
             this.cbANT5_state.AutoSize = true;
             this.cbANT5_state.Enabled = false;
-            this.cbANT5_state.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbANT5_state.Location = new System.Drawing.Point(231, 16);
+            this.cbANT5_state.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbANT5_state.Location = new System.Drawing.Point(231, 17);
             this.cbANT5_state.Name = "cbANT5_state";
             this.cbANT5_state.Size = new System.Drawing.Size(48, 16);
             this.cbANT5_state.TabIndex = 46;
@@ -3551,8 +3553,8 @@
             // 
             this.cbANT6_state.AutoSize = true;
             this.cbANT6_state.Enabled = false;
-            this.cbANT6_state.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbANT6_state.Location = new System.Drawing.Point(285, 16);
+            this.cbANT6_state.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbANT6_state.Location = new System.Drawing.Point(285, 17);
             this.cbANT6_state.Name = "cbANT6_state";
             this.cbANT6_state.Size = new System.Drawing.Size(48, 16);
             this.cbANT6_state.TabIndex = 47;
@@ -3563,8 +3565,8 @@
             // 
             this.cbANT8_state.AutoSize = true;
             this.cbANT8_state.Enabled = false;
-            this.cbANT8_state.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbANT8_state.Location = new System.Drawing.Point(388, 16);
+            this.cbANT8_state.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbANT8_state.Location = new System.Drawing.Point(388, 17);
             this.cbANT8_state.Name = "cbANT8_state";
             this.cbANT8_state.Size = new System.Drawing.Size(48, 16);
             this.cbANT8_state.TabIndex = 49;
@@ -3575,8 +3577,8 @@
             // 
             this.cbANT7_state.AutoSize = true;
             this.cbANT7_state.Enabled = false;
-            this.cbANT7_state.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbANT7_state.Location = new System.Drawing.Point(339, 16);
+            this.cbANT7_state.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbANT7_state.Location = new System.Drawing.Point(339, 17);
             this.cbANT7_state.Name = "cbANT7_state";
             this.cbANT7_state.Size = new System.Drawing.Size(48, 16);
             this.cbANT7_state.TabIndex = 48;
@@ -3621,19 +3623,19 @@
             this.groupBox13.Controls.Add(this.cmbAnt6);
             this.groupBox13.Controls.Add(this.cmbAnt8);
             this.groupBox13.Controls.Add(this.cmbAnt7);
-            this.groupBox13.Location = new System.Drawing.Point(9, 15);
+            this.groupBox13.Location = new System.Drawing.Point(9, 16);
             this.groupBox13.Name = "groupBox13";
-            this.groupBox13.Size = new System.Drawing.Size(450, 134);
+            this.groupBox13.Size = new System.Drawing.Size(450, 145);
             this.groupBox13.TabIndex = 59;
             this.groupBox13.TabStop = false;
             // 
             // btnSetAnt
             // 
-            this.btnSetAnt.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSetAnt.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSetAnt.ForeColor = System.Drawing.Color.Black;
-            this.btnSetAnt.Location = new System.Drawing.Point(227, 81);
+            this.btnSetAnt.Location = new System.Drawing.Point(227, 88);
             this.btnSetAnt.Name = "btnSetAnt";
-            this.btnSetAnt.Size = new System.Drawing.Size(90, 31);
+            this.btnSetAnt.Size = new System.Drawing.Size(90, 34);
             this.btnSetAnt.TabIndex = 40;
             this.btnSetAnt.Text = "Set";
             this.btnSetAnt.UseVisualStyleBackColor = true;
@@ -3641,11 +3643,11 @@
             // 
             // btnGetANT
             // 
-            this.btnGetANT.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnGetANT.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnGetANT.ForeColor = System.Drawing.Color.Black;
-            this.btnGetANT.Location = new System.Drawing.Point(67, 81);
+            this.btnGetANT.Location = new System.Drawing.Point(67, 88);
             this.btnGetANT.Name = "btnGetANT";
-            this.btnGetANT.Size = new System.Drawing.Size(90, 31);
+            this.btnGetANT.Size = new System.Drawing.Size(90, 34);
             this.btnGetANT.TabIndex = 41;
             this.btnGetANT.Text = "Get";
             this.btnGetANT.UseVisualStyleBackColor = true;
@@ -3654,8 +3656,8 @@
             // cbANT32
             // 
             this.cbANT32.AutoSize = true;
-            this.cbANT32.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbANT32.Location = new System.Drawing.Point(388, 80);
+            this.cbANT32.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbANT32.Location = new System.Drawing.Point(388, 87);
             this.cbANT32.Name = "cbANT32";
             this.cbANT32.Size = new System.Drawing.Size(54, 16);
             this.cbANT32.TabIndex = 74;
@@ -3666,8 +3668,8 @@
             // cbANT31
             // 
             this.cbANT31.AutoSize = true;
-            this.cbANT31.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbANT31.Location = new System.Drawing.Point(339, 80);
+            this.cbANT31.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbANT31.Location = new System.Drawing.Point(339, 87);
             this.cbANT31.Name = "cbANT31";
             this.cbANT31.Size = new System.Drawing.Size(54, 16);
             this.cbANT31.TabIndex = 73;
@@ -3678,8 +3680,8 @@
             // cbANT30
             // 
             this.cbANT30.AutoSize = true;
-            this.cbANT30.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbANT30.Location = new System.Drawing.Point(285, 80);
+            this.cbANT30.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbANT30.Location = new System.Drawing.Point(285, 87);
             this.cbANT30.Name = "cbANT30";
             this.cbANT30.Size = new System.Drawing.Size(54, 16);
             this.cbANT30.TabIndex = 72;
@@ -3690,8 +3692,8 @@
             // cbANT18
             // 
             this.cbANT18.AutoSize = true;
-            this.cbANT18.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbANT18.Location = new System.Drawing.Point(67, 58);
+            this.cbANT18.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbANT18.Location = new System.Drawing.Point(67, 63);
             this.cbANT18.Name = "cbANT18";
             this.cbANT18.Size = new System.Drawing.Size(54, 16);
             this.cbANT18.TabIndex = 60;
@@ -3702,8 +3704,8 @@
             // cbANT29
             // 
             this.cbANT29.AutoSize = true;
-            this.cbANT29.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbANT29.Location = new System.Drawing.Point(231, 80);
+            this.cbANT29.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbANT29.Location = new System.Drawing.Point(231, 87);
             this.cbANT29.Name = "cbANT29";
             this.cbANT29.Size = new System.Drawing.Size(54, 16);
             this.cbANT29.TabIndex = 71;
@@ -3714,8 +3716,8 @@
             // cbANT17
             // 
             this.cbANT17.AutoSize = true;
-            this.cbANT17.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbANT17.Location = new System.Drawing.Point(14, 58);
+            this.cbANT17.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbANT17.Location = new System.Drawing.Point(14, 63);
             this.cbANT17.Name = "cbANT17";
             this.cbANT17.Size = new System.Drawing.Size(54, 16);
             this.cbANT17.TabIndex = 59;
@@ -3726,8 +3728,8 @@
             // cbANT28
             // 
             this.cbANT28.AutoSize = true;
-            this.cbANT28.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbANT28.Location = new System.Drawing.Point(177, 80);
+            this.cbANT28.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbANT28.Location = new System.Drawing.Point(177, 87);
             this.cbANT28.Name = "cbANT28";
             this.cbANT28.Size = new System.Drawing.Size(54, 16);
             this.cbANT28.TabIndex = 70;
@@ -3738,8 +3740,8 @@
             // cbANT19
             // 
             this.cbANT19.AutoSize = true;
-            this.cbANT19.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbANT19.Location = new System.Drawing.Point(123, 58);
+            this.cbANT19.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbANT19.Location = new System.Drawing.Point(123, 63);
             this.cbANT19.Name = "cbANT19";
             this.cbANT19.Size = new System.Drawing.Size(54, 16);
             this.cbANT19.TabIndex = 61;
@@ -3750,8 +3752,8 @@
             // cbANT27
             // 
             this.cbANT27.AutoSize = true;
-            this.cbANT27.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbANT27.Location = new System.Drawing.Point(123, 80);
+            this.cbANT27.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbANT27.Location = new System.Drawing.Point(123, 87);
             this.cbANT27.Name = "cbANT27";
             this.cbANT27.Size = new System.Drawing.Size(54, 16);
             this.cbANT27.TabIndex = 69;
@@ -3762,8 +3764,8 @@
             // cbANT20
             // 
             this.cbANT20.AutoSize = true;
-            this.cbANT20.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbANT20.Location = new System.Drawing.Point(177, 58);
+            this.cbANT20.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbANT20.Location = new System.Drawing.Point(177, 63);
             this.cbANT20.Name = "cbANT20";
             this.cbANT20.Size = new System.Drawing.Size(54, 16);
             this.cbANT20.TabIndex = 62;
@@ -3774,8 +3776,8 @@
             // cbANT26
             // 
             this.cbANT26.AutoSize = true;
-            this.cbANT26.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbANT26.Location = new System.Drawing.Point(67, 80);
+            this.cbANT26.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbANT26.Location = new System.Drawing.Point(67, 87);
             this.cbANT26.Name = "cbANT26";
             this.cbANT26.Size = new System.Drawing.Size(54, 16);
             this.cbANT26.TabIndex = 68;
@@ -3786,8 +3788,8 @@
             // cbANT21
             // 
             this.cbANT21.AutoSize = true;
-            this.cbANT21.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbANT21.Location = new System.Drawing.Point(231, 58);
+            this.cbANT21.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbANT21.Location = new System.Drawing.Point(231, 63);
             this.cbANT21.Name = "cbANT21";
             this.cbANT21.Size = new System.Drawing.Size(54, 16);
             this.cbANT21.TabIndex = 63;
@@ -3798,8 +3800,8 @@
             // cbANT25
             // 
             this.cbANT25.AutoSize = true;
-            this.cbANT25.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbANT25.Location = new System.Drawing.Point(14, 80);
+            this.cbANT25.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbANT25.Location = new System.Drawing.Point(14, 87);
             this.cbANT25.Name = "cbANT25";
             this.cbANT25.Size = new System.Drawing.Size(54, 16);
             this.cbANT25.TabIndex = 67;
@@ -3810,8 +3812,8 @@
             // cbANT22
             // 
             this.cbANT22.AutoSize = true;
-            this.cbANT22.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbANT22.Location = new System.Drawing.Point(285, 58);
+            this.cbANT22.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbANT22.Location = new System.Drawing.Point(285, 63);
             this.cbANT22.Name = "cbANT22";
             this.cbANT22.Size = new System.Drawing.Size(54, 16);
             this.cbANT22.TabIndex = 64;
@@ -3822,8 +3824,8 @@
             // cbANT24
             // 
             this.cbANT24.AutoSize = true;
-            this.cbANT24.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbANT24.Location = new System.Drawing.Point(388, 58);
+            this.cbANT24.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbANT24.Location = new System.Drawing.Point(388, 63);
             this.cbANT24.Name = "cbANT24";
             this.cbANT24.Size = new System.Drawing.Size(54, 16);
             this.cbANT24.TabIndex = 66;
@@ -3834,8 +3836,8 @@
             // cbANT23
             // 
             this.cbANT23.AutoSize = true;
-            this.cbANT23.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbANT23.Location = new System.Drawing.Point(339, 58);
+            this.cbANT23.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbANT23.Location = new System.Drawing.Point(339, 63);
             this.cbANT23.Name = "cbANT23";
             this.cbANT23.Size = new System.Drawing.Size(54, 16);
             this.cbANT23.TabIndex = 65;
@@ -3846,8 +3848,8 @@
             // cmbAnt16
             // 
             this.cmbAnt16.AutoSize = true;
-            this.cmbAnt16.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cmbAnt16.Location = new System.Drawing.Point(388, 36);
+            this.cmbAnt16.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbAnt16.Location = new System.Drawing.Point(388, 39);
             this.cmbAnt16.Name = "cmbAnt16";
             this.cmbAnt16.Size = new System.Drawing.Size(54, 16);
             this.cmbAnt16.TabIndex = 57;
@@ -3859,8 +3861,8 @@
             this.cbAntSet.AutoSize = true;
             this.cbAntSet.Checked = true;
             this.cbAntSet.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbAntSet.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cbAntSet.Location = new System.Drawing.Point(332, 88);
+            this.cbAntSet.Font = new System.Drawing.Font("SimSun", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbAntSet.Location = new System.Drawing.Point(332, 95);
             this.cbAntSet.Name = "cbAntSet";
             this.cbAntSet.Size = new System.Drawing.Size(54, 18);
             this.cbAntSet.TabIndex = 58;
@@ -3870,8 +3872,8 @@
             // cmbAnt15
             // 
             this.cmbAnt15.AutoSize = true;
-            this.cmbAnt15.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cmbAnt15.Location = new System.Drawing.Point(339, 36);
+            this.cmbAnt15.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbAnt15.Location = new System.Drawing.Point(339, 39);
             this.cmbAnt15.Name = "cmbAnt15";
             this.cmbAnt15.Size = new System.Drawing.Size(54, 16);
             this.cmbAnt15.TabIndex = 56;
@@ -3881,8 +3883,8 @@
             // cmbAnt14
             // 
             this.cmbAnt14.AutoSize = true;
-            this.cmbAnt14.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cmbAnt14.Location = new System.Drawing.Point(285, 36);
+            this.cmbAnt14.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbAnt14.Location = new System.Drawing.Point(285, 39);
             this.cmbAnt14.Name = "cmbAnt14";
             this.cmbAnt14.Size = new System.Drawing.Size(54, 16);
             this.cmbAnt14.TabIndex = 55;
@@ -3892,8 +3894,8 @@
             // cmbAnt2
             // 
             this.cmbAnt2.AutoSize = true;
-            this.cmbAnt2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cmbAnt2.Location = new System.Drawing.Point(67, 14);
+            this.cmbAnt2.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbAnt2.Location = new System.Drawing.Point(67, 15);
             this.cmbAnt2.Name = "cmbAnt2";
             this.cmbAnt2.Size = new System.Drawing.Size(48, 16);
             this.cmbAnt2.TabIndex = 43;
@@ -3903,8 +3905,8 @@
             // cmbAnt13
             // 
             this.cmbAnt13.AutoSize = true;
-            this.cmbAnt13.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cmbAnt13.Location = new System.Drawing.Point(231, 36);
+            this.cmbAnt13.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbAnt13.Location = new System.Drawing.Point(231, 39);
             this.cmbAnt13.Name = "cmbAnt13";
             this.cmbAnt13.Size = new System.Drawing.Size(54, 16);
             this.cmbAnt13.TabIndex = 54;
@@ -3914,8 +3916,8 @@
             // cmbAnt1
             // 
             this.cmbAnt1.AutoSize = true;
-            this.cmbAnt1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cmbAnt1.Location = new System.Drawing.Point(14, 14);
+            this.cmbAnt1.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbAnt1.Location = new System.Drawing.Point(14, 15);
             this.cmbAnt1.Name = "cmbAnt1";
             this.cmbAnt1.Size = new System.Drawing.Size(48, 16);
             this.cmbAnt1.TabIndex = 42;
@@ -3925,8 +3927,8 @@
             // cmbAnt12
             // 
             this.cmbAnt12.AutoSize = true;
-            this.cmbAnt12.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cmbAnt12.Location = new System.Drawing.Point(177, 36);
+            this.cmbAnt12.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbAnt12.Location = new System.Drawing.Point(177, 39);
             this.cmbAnt12.Name = "cmbAnt12";
             this.cmbAnt12.Size = new System.Drawing.Size(54, 16);
             this.cmbAnt12.TabIndex = 53;
@@ -3936,8 +3938,8 @@
             // cmbAnt3
             // 
             this.cmbAnt3.AutoSize = true;
-            this.cmbAnt3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cmbAnt3.Location = new System.Drawing.Point(123, 14);
+            this.cmbAnt3.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbAnt3.Location = new System.Drawing.Point(123, 15);
             this.cmbAnt3.Name = "cmbAnt3";
             this.cmbAnt3.Size = new System.Drawing.Size(48, 16);
             this.cmbAnt3.TabIndex = 44;
@@ -3947,8 +3949,8 @@
             // cmbAnt11
             // 
             this.cmbAnt11.AutoSize = true;
-            this.cmbAnt11.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cmbAnt11.Location = new System.Drawing.Point(123, 36);
+            this.cmbAnt11.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbAnt11.Location = new System.Drawing.Point(123, 39);
             this.cmbAnt11.Name = "cmbAnt11";
             this.cmbAnt11.Size = new System.Drawing.Size(54, 16);
             this.cmbAnt11.TabIndex = 52;
@@ -3958,8 +3960,8 @@
             // cmbAnt4
             // 
             this.cmbAnt4.AutoSize = true;
-            this.cmbAnt4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cmbAnt4.Location = new System.Drawing.Point(177, 14);
+            this.cmbAnt4.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbAnt4.Location = new System.Drawing.Point(177, 15);
             this.cmbAnt4.Name = "cmbAnt4";
             this.cmbAnt4.Size = new System.Drawing.Size(48, 16);
             this.cmbAnt4.TabIndex = 45;
@@ -3969,8 +3971,8 @@
             // cmbAnt10
             // 
             this.cmbAnt10.AutoSize = true;
-            this.cmbAnt10.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cmbAnt10.Location = new System.Drawing.Point(67, 36);
+            this.cmbAnt10.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbAnt10.Location = new System.Drawing.Point(67, 39);
             this.cmbAnt10.Name = "cmbAnt10";
             this.cmbAnt10.Size = new System.Drawing.Size(54, 16);
             this.cmbAnt10.TabIndex = 51;
@@ -3980,8 +3982,8 @@
             // cmbAnt5
             // 
             this.cmbAnt5.AutoSize = true;
-            this.cmbAnt5.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cmbAnt5.Location = new System.Drawing.Point(231, 14);
+            this.cmbAnt5.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbAnt5.Location = new System.Drawing.Point(231, 15);
             this.cmbAnt5.Name = "cmbAnt5";
             this.cmbAnt5.Size = new System.Drawing.Size(48, 16);
             this.cmbAnt5.TabIndex = 46;
@@ -3991,8 +3993,8 @@
             // cmbAnt9
             // 
             this.cmbAnt9.AutoSize = true;
-            this.cmbAnt9.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cmbAnt9.Location = new System.Drawing.Point(14, 36);
+            this.cmbAnt9.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbAnt9.Location = new System.Drawing.Point(14, 39);
             this.cmbAnt9.Name = "cmbAnt9";
             this.cmbAnt9.Size = new System.Drawing.Size(48, 16);
             this.cmbAnt9.TabIndex = 50;
@@ -4002,8 +4004,8 @@
             // cmbAnt6
             // 
             this.cmbAnt6.AutoSize = true;
-            this.cmbAnt6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cmbAnt6.Location = new System.Drawing.Point(285, 14);
+            this.cmbAnt6.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbAnt6.Location = new System.Drawing.Point(285, 15);
             this.cmbAnt6.Name = "cmbAnt6";
             this.cmbAnt6.Size = new System.Drawing.Size(48, 16);
             this.cmbAnt6.TabIndex = 47;
@@ -4013,8 +4015,8 @@
             // cmbAnt8
             // 
             this.cmbAnt8.AutoSize = true;
-            this.cmbAnt8.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cmbAnt8.Location = new System.Drawing.Point(388, 14);
+            this.cmbAnt8.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbAnt8.Location = new System.Drawing.Point(388, 15);
             this.cmbAnt8.Name = "cmbAnt8";
             this.cmbAnt8.Size = new System.Drawing.Size(48, 16);
             this.cmbAnt8.TabIndex = 49;
@@ -4024,8 +4026,8 @@
             // cmbAnt7
             // 
             this.cmbAnt7.AutoSize = true;
-            this.cmbAnt7.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.cmbAnt7.Location = new System.Drawing.Point(339, 14);
+            this.cmbAnt7.Font = new System.Drawing.Font("SimSun", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cmbAnt7.Location = new System.Drawing.Point(339, 15);
             this.cmbAnt7.Name = "cmbAnt7";
             this.cmbAnt7.Size = new System.Drawing.Size(48, 16);
             this.cmbAnt7.TabIndex = 48;
@@ -4034,12 +4036,12 @@
             // 
             // ConfigForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(1484, 972);
+            this.ClientSize = new System.Drawing.Size(1484, 1053);
             this.Controls.Add(this.panel1);
             this.Name = "ConfigForm";
             this.Text = "ConfigForm";

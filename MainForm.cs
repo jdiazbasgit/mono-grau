@@ -23,15 +23,17 @@ namespace UHFAPP
 
         public delegate void DelegateOpen(bool open);
         public static event DelegateOpen eventOpen = null;
-
+        private ConfigForm configForm;
         public delegate void DelegateSwitchUI();
         public static event DelegateSwitchUI eventSwitchUI = null;
-
+        public static bool isVisible = false;
         public delegate void MainSizeChanged(FormWindowState state);
         public static event MainSizeChanged eventMainSizeChanged = null;
-
+        bool isRuning = false;
         string strOpen = "  Conectar lector  ";
         string strClose = "  Desconectar lector  ";
+        string strStart = "  Iniciar lectura  ";
+        string strStop = "  Detener lectura  ";
 
         private string currentFormName = "";
         private bool isOpen = false;
@@ -42,7 +44,8 @@ namespace UHFAPP
         public bool isSearch = false;
         List<ReaderDeviceInfo> listIP = new List<ReaderDeviceInfo>();
         #region  OnDisconnect
-        //step1：定义断开回调函数
+        delegate void SetTextCallback(string epc, string tid, string rssi, string count, string ant, string user);
+        SetTextCallback setTextCallback;
         private void OnDisconnectCallback(int id)
         {
             try
@@ -162,11 +165,26 @@ namespace UHFAPP
         /// <param name="e"></param>
         private void MenuItemScanEPC_Click(object sender, EventArgs e)
         {
-            if (readEPCForm == null)
-            {
-                readEPCForm = new ReadEPCForm(isOpen, mainform);
-            }
-           // Form form = ShowForm(readEPCForm, false);
+            if(configForm!=null)
+            configForm.Close();
+            ocultarControles(true);
+            /* if (readEPCForm == null)
+             {
+                 readEPCForm = new ReadEPCForm(isOpen, mainform);
+             }
+            //Form form = ShowForm(readEPCForm, false);
+            
+             if (readEPCForm != null)
+             {
+                 readEPCForm.Show();
+                 readEPCForm.Focus();
+             }
+             else
+             {
+                 readEPCForm = new ReadEPCForm(isOpen, mainform);
+                 readEPCForm.Show();
+                 readEPCForm.Focus();
+             }*/
         }
         /// <summary>
         /// Config
@@ -175,7 +193,39 @@ namespace UHFAPP
         /// <param name="e"></param>
         private void configToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form form = ShowForm(new ConfigForm(isOpen), false);
+         
+             configForm = new ConfigForm(isOpen,this);
+           configForm.Visible = true;   
+            ocultarControles(false);
+            
+            Form form = ShowForm(configForm, false);
+        }
+        private void ocultarControles(bool dato)
+        {
+           
+            label1.Visible = dato;
+            textBox1.Visible = dato;
+            button2.Visible = dato;
+            //textBox2.Visible = dato;
+            btnScanEPC.Visible = dato;
+            label2.Visible = dato;
+            label3.Visible = dato;
+          //  label4.Visible = dato;
+            label5.Visible = dato;
+            label6.Visible = dato;
+            label7.Visible = dato;
+            label8.Visible = dato;
+            label9.Visible = dato;
+            label14.Visible = dato;
+            label15.Visible = dato;
+          // label16.Visible = dato;
+            label17.Visible = dato;
+            label18.Visible = dato;
+            label19.Visible = dato;
+            label20.Visible = dato;
+            label22.Visible = dato;
+           // label26.Visible = dato;
+            label27.Visible = dato;
         }
         /// <summary>
         /// kill
@@ -187,7 +237,10 @@ namespace UHFAPP
         {
             if (button1.Text == strOpen)
             {
-               // int type = combCommunicationMode.SelectedIndex;//0
+                btnScanEPC.Enabled = true;
+                btnScanEPC.Visible = true;
+                btnScanEPC.BackColor = System.Drawing.Color.Green;
+                // int type = combCommunicationMode.SelectedIndex;//0
                 string msg =  "Conectando lector..." ;
 
                 
@@ -224,8 +277,12 @@ namespace UHFAPP
                     }
                 }, msg);
                 f.ShowDialog(this);
-                 button1.Text = strClose;
-                button1.BackColor = System.Drawing.Color.Green;
+                
+                button1.BackColor = System.Drawing.Color.GreenYellow;
+                button1.Text = strClose;
+                btnScanEPC.Visible = true;
+                btnScanEPC.BackColor = System.Drawing.Color.Green;
+                btnScanEPC.Text = strStart;
 
             }
             else
@@ -235,6 +292,8 @@ namespace UHFAPP
                     disableControls(false);
                     button1.Text = strOpen;
                     button1.BackColor = System.Drawing.Color.Red;
+                    btnScanEPC.Visible = false;
+
                     isOpen = false;
                     if (eventOpen != null)
                     {
@@ -458,6 +517,177 @@ namespace UHFAPP
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StopEPC(bool isStop)
+        {
+            bool reuslt = uhf.StopInventory();
+          
+            if (!reuslt)
+            {
+                MessageBox.Show(!IsChineseSimple() ? "Stop fail" : "停止失败");
+            }
+
+            btnScanEPC.Text = strStart ;
+            mainform.enableControls();
+            Thread.Sleep(100);
+        }
+
+        private void Time() { }
+        private void StartReceiveThread()
+        {
+            if (!isRuning)
+            {
+                isRuning = true;
+                new Thread(new ThreadStart(delegate { ReadEPC(); })).Start();
+            }
+        }
+        private void StopReceiveThread()
+        {
+            isVisible = false;
+            isRuning = false;
+            Thread.Sleep(100);
+        }
+        private void ReadEPC()
+        {
+            try
+            {
+                while (isRuning)
+                {
+                    if (!isVisible)
+                    {
+                        Thread.Sleep(10);
+                        // Console.WriteLine("isVisible false");
+                        continue;
+                    }
+                    UHFTAGInfo info = uhf.ReadTagFromBuffer();
+
+                    if (info != null)
+                    {
+                        this.BeginInvoke(setTextCallback, new object[] { info.Epc, info.Tid, info.Rssi, "1", info.Ant, info.User });
+                    }
+                    else
+                    {
+                        this.BeginInvoke(setTextCallback, new object[] { null, null, null, null, null, null });
+                        Thread.Sleep(10);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (btnScanEPC.Text == strStop )
+            {
+                StopEPC(true);
+                btnScanEPC.Text = strStart;
+                btnScanEPC.BackColor = System.Drawing.Color.Green;
+
+            }
+            else
+            {
+                btnScanEPC.BackColor = System.Drawing.Color.Red;
+                btnScanEPC.Text = strStop;
+                mainform.disableControls(true);
+                if (uhf.StartInventory())
+                {
+                   
+                    btnScanEPC.Text = strStop ;
+                    StartReceiveThread();
+
+                    //+++++++++++++++++
+                    
+                    new Thread(new ThreadStart(delegate { Time(); })).Start();
+                    //+++++++++++++++++
+                }
+                else
+                {
+                    MessageBoxEx.Show(this, "Inventory failure!");
+                    mainform.enableControls();
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label25_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label23_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label22_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel12_Paint(object sender, PaintEventArgs e)
+        {
+
+            StringBuilder sb = new StringBuilder();
+            sb.Append("uno\n");
+            sb.Append("dos\n");
+            sb.Append("tres\n");
+            sb.Append("cuatro\n");
+            sb.Append("cinco\n");
+            sb.Append("seis\n");
+            
         }
     }
 }

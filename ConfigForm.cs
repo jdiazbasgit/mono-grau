@@ -17,14 +17,17 @@ namespace UHFAPP
     public partial class ConfigForm : BaseForm
     {
         bool isAllPower = false;
-       
-        public ConfigForm(bool isOpen)
+
+        private MainForm mainForm;
+        public ConfigForm(bool isOpen,MainForm mainForm)
         {
+           this.mainForm = mainForm;
+
             InitializeComponent();
             if (isOpen)
             {
                 GetAllConfig();
-                panel1.Enabled = true;
+                panel1.Enabled = false;
             }
             else
             {
@@ -165,20 +168,26 @@ namespace UHFAPP
             MainForm.eventOpen -= MainForm_eventOpen;
      
         }
-       #region 获取所有参数
+       #region 
         private void GetAllConfig()
         {
-            string msg = "waiting...";
+            string msg = "Cargando configuracíón.....";
             frmWaitingBox f = new frmWaitingBox((obj, args) =>
             {
                 int errorCount = 0;
                 byte power = 0;
                 if (uhf.GetPower(ref power))
                 {
+                    try{ 
                     this.Invoke(new EventHandler(delegate
                     {
                         cmbPower_ANT1.SelectedIndex = power - 1;
                     }));
+                    }
+                    catch (Exception ex)
+                    {
+                        errorCount++;
+                    }
                 }
                 else
                 {
@@ -190,10 +199,19 @@ namespace UHFAPP
                     int index = GetRegionIndex(region);
                     if (index >= 0)
                     {
-                        this.Invoke(new EventHandler(delegate
+                        try
                         {
-                            cmbRegion.SelectedIndex = index;
-                        }));
+                            this.Invoke(new EventHandler(delegate
+                            {
+                                cmbRegion.SelectedIndex = index;
+                            }));
+
+                        }
+                        catch (Exception ex)
+                        {
+                            errorCount++;
+                        }
+
                     }
                 }
                 else
@@ -483,7 +501,7 @@ namespace UHFAPP
 
 
             }, msg);
-            f.ShowDialog(this);
+            f.ShowDialog(mainForm);
         }
         public int GetRegionIndex(int region)
         {
@@ -540,19 +558,19 @@ namespace UHFAPP
         #region 功率
         private void btnPowerGet_Click(object sender, EventArgs e)
         {
-            string msg = !IsChineseSimple() ? "Failure!" : "失败!";
+            string msg = !IsChineseSimple() ? "Error!" : "失败!";
             byte power =0;
             if (uhf.GetPower(ref power))
             {
                 cmbPower_ANT1.SelectedIndex = power - 1;
-                msg = !IsChineseSimple() ? "Success" : "成功!";
+                msg ="Correcto!" ;
             }
             showMessage(msg);
         }
 
         private void btnPowerSet_Click(object sender, EventArgs e)
         {
-            string msg = !IsChineseSimple() ? "Failure!" : "失败!";
+            string msg = "Error !" ;
             if (cmbPower_ANT1.SelectedIndex >= 0)
             {
                 byte power1 = (byte)(cmbPower_ANT1.SelectedIndex + 1);
@@ -560,7 +578,7 @@ namespace UHFAPP
                 byte save = (byte)(cbPower.Checked?1:0);
                 if (uhf.SetPower(save, power1))
                 {
-                    msg = !IsChineseSimple() ? "Success" : "成功!";
+                    msg = "Correcto..." ;
                 }
 
             }
@@ -605,7 +623,7 @@ namespace UHFAPP
 
         private void btnWorkModeSet_Click(object sender, EventArgs e)
         {
-            string msg = !IsChineseSimple() ? "Failure!" : "失败!";
+            string msg = !IsChineseSimple() ? "Error!" : "失败!";
             try
              {
                  if (comboBox1.Text != "")
@@ -626,7 +644,7 @@ namespace UHFAPP
                          int[] ifrequency = new int[] { int.Parse(frequency) };
                          if (uhf.SetJumpFrequency(1, ifrequency))
                          {
-                            msg = !IsChineseSimple() ? "Success" : "成功!";
+                            msg = "Correcto...";
                         }
                      }
                  }
@@ -657,7 +675,7 @@ namespace UHFAPP
             byte Session = 0;
             byte G = 0;
             byte LF = 0;
-            string msg = !IsChineseSimple() ? "Failure!" : "失败!";
+            string msg = !IsChineseSimple() ? "Error!" : "失败!";
             int start = Environment.TickCount;
 
             bool result=uhf.GetGen2(ref  Target, ref   Action, ref   T, ref   Q,
@@ -681,7 +699,7 @@ namespace UHFAPP
                 cmbSession.SelectedIndex = Session;
                 cmbG.SelectedIndex = G;
                 cmbLinkFrequency.SelectedIndex = LF;
-                msg = !IsChineseSimple() ? "Success" : "成功!";
+                msg = "Correcto...";
                 btnGen2Set.Enabled = true;
             }
 
@@ -690,7 +708,7 @@ namespace UHFAPP
         }
         private void btnGen2Set_Click(object sender, EventArgs e)
         {
-            string msg = !IsChineseSimple() ? "Failure!" : "失败!";
+            string msg = !IsChineseSimple() ? "Error!" : "失败!";
             try
             {
                 byte Target =(byte) cmbTarget.SelectedIndex;
@@ -709,7 +727,7 @@ namespace UHFAPP
                 byte LF = (byte)cmbLinkFrequency.SelectedIndex;
                 if (uhf.SetGen2(Target, Action, T, Q, StartQ, MinQ, MaxQ, D, Coding, P, Sel, Session, G, LF))
                 {
-                    msg = !IsChineseSimple() ? "Success" : "成功!";
+                    msg = "Correcto...";
                 }
                 
             }
@@ -724,19 +742,19 @@ namespace UHFAPP
         #region CW
         private void btnGetCW_Click(object sender, EventArgs e)
         {
-            string msg = !IsChineseSimple() ? "Failure!" : "失败!";
+            string msg = !IsChineseSimple() ? "Error!" : "失败!";
             if (uhf.SetCW(1))
             {
-                msg = !IsChineseSimple() ? "Success" : "成功!";
+                msg = "Correcto...";
             }
             showMessage(msg);
         }
         private void btnSetCW_Click(object sender, EventArgs e)
         {
-            string msg = !IsChineseSimple() ? "Failure!" : "失败!";
+            string msg = !IsChineseSimple() ? "Error!" : "失败!";
             if (uhf.SetCW(0))
             {
-                msg = !IsChineseSimple() ? "Success" : "成功!";
+                msg = "Correcto...";
             }
             showMessage(msg);
         }
@@ -746,7 +764,7 @@ namespace UHFAPP
         private void btnGetANT_Click(object sender, EventArgs e)
         {
   
-            string msg = !IsChineseSimple() ? "Failure!" : "失败!";
+            string msg = !IsChineseSimple() ? "Error!" : "失败!";
             byte[] ant = new byte[4];
             if (uhf.GetANTTo32(ant))
             {
@@ -791,15 +809,15 @@ namespace UHFAPP
     
 
 
-                msg = !IsChineseSimple() ? "Success" : "成功!";
-                //  msg = Common.isEnglish?"success":"获取天线成功!("+ DataConvert.ByteArrayToHexString(ant)+")";
+                msg = !IsChineseSimple() ? "Correcto!" : "成功!";
+                //  msg = Common.isEnglish?"Correcto!":"获取天线成功!("+ DataConvert.ByteArrayToHexString(ant)+")";
             }
 
             showMessage(msg);
         }
         private void btnSetAnt_Click(object sender, EventArgs e)
         {
-            string msg = !IsChineseSimple() ? "Failure!" : "失败!";
+            string msg = !IsChineseSimple() ? "Error!" : "失败!";
             int b1 = 0;
             int b2 = 0;
              
@@ -846,8 +864,7 @@ namespace UHFAPP
             byte flag = cbAntSet.Checked ? (byte)1 : (byte)0;
             if (uhf.SetANTTo32(flag, ant))
             {
-                msg = !IsChineseSimple() ? "Success" : "成功!";
-                // msg = Common.isEnglish ? "success" : "设置天线成功!(" + DataConvert.ByteArrayToHexString(ant) + ")"; ;
+                msg = "Correcto...";                // msg = Common.isEnglish ? "Correcto!" : "设置天线成功!(" + DataConvert.ByteArrayToHexString(ant) + ")"; ;
             }
             showMessage(msg);
 
@@ -865,19 +882,19 @@ namespace UHFAPP
         {
             if (frequencyBandHashtable != null)
             {
-                string msg2 = !IsChineseSimple() ? "Failure!" : "失败!";
+                string msg1 = !IsChineseSimple() ? "Error!" : "失败!";
                 byte region2 = 0;
                 if (uhf.GetRegion(ref region2))
                 {
                     cmbRegion.SelectedIndex = 0;
-                    msg2 = !IsChineseSimple() ? "Success" : "成功!";
+                    msg1 = "Correcto...";
                 }
-                showMessage(msg2);
+                showMessage(msg1);
                 return;
             }
 
             //0x01(China1),0x02(China2),0x04(Europe),0x08(USA),0x16(Korea),0x32(Japan)
-            string msg = !IsChineseSimple() ? "Failure!" : "失败!";
+            string msg = !IsChineseSimple() ? "Error!" : "失败!";
             byte region=0;
             if (uhf.GetRegion(ref region))
             {
@@ -948,7 +965,7 @@ namespace UHFAPP
                         break;
 
                 }
-                msg  = !IsChineseSimple() ? "Success" : "成功!";
+                msg = "Correcto...";
             }
 
             showMessage(msg);
@@ -962,11 +979,11 @@ namespace UHFAPP
                 if (frequencyBandHashtable.ContainsKey(cmbRegion.Text))
                 {
                     int flag2 = cbRegionSave.Checked ? 1 : 0;
-                    string msg2 = !IsChineseSimple() ? "Failure!" : "失败!";
+                    string msg2 = !IsChineseSimple() ? "Error!" : "失败!";
                     string value = (string)frequencyBandHashtable[cmbRegion.Text];
                     if (uhf.SetRegion((byte)flag2, (byte)Convert.ToInt32(value.Replace("0x",""), 16)))
                     {
-                        msg2 = !IsChineseSimple() ? "Success" : "成功!";
+                        msg2 = "Correcto...";
                     }
                     showMessage(msg2);
                 }
@@ -1041,12 +1058,12 @@ namespace UHFAPP
                     break;
 
             }
-            string msg = !IsChineseSimple() ? "Failure!" : "失败!";
+            string msg = !IsChineseSimple() ? "Error!" : "失败!";
             if (region >= 0)
             {
                 if (uhf.SetRegion((byte)flag, (byte)region))
                 {
-                    msg = !IsChineseSimple() ? "Success" : "成功!";
+                    msg = "Correcto...";
                 }
                  
             }
@@ -1058,7 +1075,7 @@ namespace UHFAPP
         #region 链路组合
         private void btnRFLinkGet_Click(object sender, EventArgs e)
         {
-            string msg = !IsChineseSimple() ? "Failure!" : "失败!";
+            string msg = !IsChineseSimple() ? "Error!" : "失败!";
             byte mode = 0;
             if (uhf.GetRFLink(ref mode))
             {
@@ -1081,14 +1098,14 @@ namespace UHFAPP
                         cmbRFLink.SelectedIndex = mode-4;
                         break;
                 }
-                msg = !IsChineseSimple() ? "Success" : "成功!";
+                msg = "Correcto...";
             }
 
             showMessage(msg);
         }
         private void btnRFLinkSet_Click(object sender, EventArgs e)
         {
-            string msg = !IsChineseSimple() ? "Failure!" : "失败!";
+            string msg = !IsChineseSimple() ? "Error!" : "失败!";
             int flag = cbRFLink.Checked ? 1 : 0;
             if (cmbRFLink.SelectedIndex >= 0)
             {
@@ -1105,7 +1122,7 @@ namespace UHFAPP
                         break;
                 }
                 if (uhf.SetRFLink((byte)flag, (byte)v)) {
-                    msg = !IsChineseSimple() ? "Success" : "成功!";
+                    msg = "Correcto...";
                 }
             }
 
@@ -1118,20 +1135,20 @@ namespace UHFAPP
         private void btnFastIDGet_Click(object sender, EventArgs e)
         {
             byte flag = 0;
-            string msg = !IsChineseSimple() ? "Failure!" : "失败!";
+            string msg = !IsChineseSimple() ? "Error!" : "失败!";
             if (uhf.GetFastID(ref flag))
             {
                 if (flag == 0)
                 {
                     rbFastIDEnable.Checked = false;
                     rbFastIDDisable.Checked = true;
-                    msg = !IsChineseSimple() ? "Success" : "成功!";
+                    msg = !IsChineseSimple() ? "Suc<cess" : "成功!";
                 }
                 else if (flag == 1)
                 {
                     rbFastIDEnable.Checked = true;
                     rbFastIDDisable.Checked = false;
-                    msg = !IsChineseSimple() ? "Success" : "成功!";
+                    msg = !IsChineseSimple() ? "Correcto!" : "成功!";
                 }
             }
             showMessage(msg);
@@ -1139,7 +1156,7 @@ namespace UHFAPP
         private void btnFastIDSet_Click(object sender, EventArgs e)
         {
             int flag = -1;
-            string msg = !IsChineseSimple() ? "Failure!" : "失败!";
+            string msg = !IsChineseSimple() ? "Error!" : "失败!";
             if (rbFastIDEnable.Checked)
             {
                 flag = 1;
@@ -1153,7 +1170,7 @@ namespace UHFAPP
             {
                 if (uhf.SetFastID((byte)flag))
                 {
-                    msg = !IsChineseSimple() ? "Success" : "成功!";
+                    msg = !IsChineseSimple() ? "Correcto!" : "成功!";
 
                     if (flag == 1) {
                         if (uhf.SetTagfocus(0))
@@ -1177,7 +1194,7 @@ namespace UHFAPP
         #region Tagfocus
         private void btnrbTagfocusGet_Click(object sender, EventArgs e)
         {
-            string msg = !IsChineseSimple() ? "Failure!" : "失败!";
+            string msg = !IsChineseSimple() ? "Error!" : "失败!";
             byte flag = 0;
             if (uhf.GetTagfocus(ref flag))
             {
@@ -1185,13 +1202,13 @@ namespace UHFAPP
                 {
                     rbTagfocusEnable.Checked = false;
                     rbTagfocusDisable.Checked = true;
-                    msg = !IsChineseSimple() ? "Success" : "成功!";
+                    msg = !IsChineseSimple() ? "Correcto!" : "成功!";
                 }
                 else if (flag == 1)
                 {
                     rbTagfocusEnable.Checked = true;
                     rbTagfocusDisable.Checked = false;
-                    msg = !IsChineseSimple() ? "Success" : "成功!";
+                    msg = !IsChineseSimple() ? "Correcto!" : "成功!";
                 }
             }
 
@@ -1200,7 +1217,7 @@ namespace UHFAPP
         private void btnrbTagfocusSet_Click(object sender, EventArgs e)
         {
             int flag = -1;
-            string msg = !IsChineseSimple() ? "Failure!" : "失败!";
+            string msg = !IsChineseSimple() ? "Error!" : "失败!";
             if (rbTagfocusEnable.Checked)
             {
                 flag = 1;
@@ -1214,7 +1231,7 @@ namespace UHFAPP
             {
                 if (uhf.SetTagfocus((byte)flag))
                 {
-                    msg = !IsChineseSimple() ? "Success" : "成功!";
+                    msg = !IsChineseSimple() ? "Correcto!" : "成功!";
                     if (flag == 1)
                     {
 
@@ -1237,10 +1254,10 @@ namespace UHFAPP
         #region 设置软复位
         private void btnReset_Click(object sender, EventArgs e)
         {
-            string msg = !IsChineseSimple() ? "Failure!" : "失败!";
+            string msg = !IsChineseSimple() ? "Error!" : "失败!";
             if (uhf.SetSoftReset())
             {
-                msg = !IsChineseSimple() ? "Success" : "成功!";
+                msg = !IsChineseSimple() ? "Correcto!" : "成功!";
             }
 
             showMessage(msg);
@@ -1251,20 +1268,20 @@ namespace UHFAPP
         private void btnGetFastInventory_Click(object sender, EventArgs e)
         {
             byte flag = 0;
-            string msg = !IsChineseSimple() ? "Failure!" : "失败!";
+            string msg = !IsChineseSimple() ? "Error!" : "失败!";
             if (uhf.GetFastInventory(ref flag))
             {
                 if (flag == 0)
                 {
                     rbOpenFastInventory.Checked = false;
                     rbCloseFastInventory.Checked = true;
-                    msg = !IsChineseSimple() ? "Success" : "成功!";
+                    msg = !IsChineseSimple() ? "Correcto!" : "成功!";
                 }
                 else if (flag == 1)
                 {
                     rbOpenFastInventory.Checked = true;
                     rbCloseFastInventory.Checked = false;
-                    msg = !IsChineseSimple() ? "Success" : "成功!";
+                    msg = !IsChineseSimple() ? "Correcto!" : "成功!";
                 }
             }
             showMessage(msg);
@@ -1273,7 +1290,7 @@ namespace UHFAPP
         private void btnSetFastInventory_Click(object sender, EventArgs e)
         {
             int flag = -1;
-            string msg = !IsChineseSimple() ? "Failure!" : "失败!";
+            string msg = !IsChineseSimple() ? "Error!" : "失败!";
             if (rbOpenFastInventory.Checked)
             {
                 flag = 1;
@@ -1287,7 +1304,7 @@ namespace UHFAPP
             {
                 if (uhf.SetFastInventory((byte)flag))
                 {
-                    msg = !IsChineseSimple() ? "Success" : "成功!";
+                    msg = !IsChineseSimple() ? "Correcto!" : "成功!";
                 }
 
             }
@@ -1300,11 +1317,11 @@ namespace UHFAPP
         #region 协议
         private void button2_Click_1(object sender, EventArgs e)
         {
-            string msg = !IsChineseSimple() ? "Failure!" : "失败!";
+            string msg = !IsChineseSimple() ? "Error!" : "失败!";
             int type = uhf.GetProtocol();
             if (type>-1)
             {
-                msg = !IsChineseSimple() ? "Success" : "成功!";
+                msg = !IsChineseSimple() ? "Correcto!" : "成功!";
                 cmbProtocol.SelectedIndex = type;
             }
             showMessage(msg);
@@ -1312,13 +1329,13 @@ namespace UHFAPP
 
         private void button5_Click(object sender, EventArgs e)
         {
-            string msg = !IsChineseSimple() ? "Failure!" : "失败!";
+            string msg = !IsChineseSimple() ? "Error!" : "失败!";
             int type = cmbProtocol.SelectedIndex;
             if (type >= 0)
             {
                 if (uhf.SetProtocol((byte)type))
                 {
-                    msg = !IsChineseSimple() ? "Success" : "成功!";
+                    msg = !IsChineseSimple() ? "Correcto!" : "成功!";
                 }
             }
             showMessage(msg);
@@ -1355,14 +1372,14 @@ namespace UHFAPP
 
     
 
-        private void showMessage(string msg,int time) {
+        public void showMessage(string msg,int time) {
             frmWaitingBox f = new frmWaitingBox((obj, args) =>
             {
                 System.Threading.Thread.Sleep(time);
             }, msg);
             f.ShowDialog(this);
         }
-        private void showMessage(string msg)
+        public void showMessage(string msg)
         {
             frmWaitingBox f = new frmWaitingBox((obj, args) =>
             {
@@ -1408,42 +1425,42 @@ namespace UHFAPP
 
             if (!StringUtils.isIP(ip.ToString()) || !StringUtils.isIP(sbMask.ToString()) || !StringUtils.isIP(gate.ToString()))
             {
-                string msg = !IsChineseSimple() ? "Failure!" : "设置IP失败!";
+                string msg = !IsChineseSimple() ? "Error!" : "设置IP失败!";
                 showMessage(msg);
                 return;
             }
             if (!StringUtils.IsNumber(port))
             {
-                string msg = !IsChineseSimple() ? "Failure!" : "设置IP失败!";
+                string msg = !IsChineseSimple() ? "Error!" : "设置IP失败!";
                 showMessage(msg);
                 return;
             }
 
             if (ipControlLocal.IpData[0] == "255")
             {
-                string msg = !IsChineseSimple() ? "Failure!" : "IP地址不能255开头,设置IP失败!";
+                string msg = !IsChineseSimple() ? "Error!" : "IP地址不能255开头,设置IP失败!";
                 showMessage(msg);
                 return;
             }
             if (ipControlSubnetMask.IpData[0] != "255")
             {
-                string msg = !IsChineseSimple() ? "Failure!" : "子网掩码必须255开头,设置IP失败!";
+                string msg = !IsChineseSimple() ? "Error!" : "子网掩码必须255开头,设置IP失败!";
                 showMessage(msg);
                 return;
             }
             if (ipGateway.IpData[0] == "255")
             {
-                string msg = !IsChineseSimple() ? "Failure!" : "网关不能255开头,设置IP失败!";
+                string msg = !IsChineseSimple() ? "Error!" : "网关不能255开头,设置IP失败!";
                 showMessage(msg);
                 return;
             }
             if (!uhf.SetReaderIP(ip.ToString(), int.Parse(port), sbMask.ToString(), gate.ToString()))
             {
-                string msg = !IsChineseSimple() ? "Failure!" : "设置IP失败!";
+                string msg = !IsChineseSimple() ? "Error!" : "设置IP失败!";
                 showMessage(msg);
                 return;
             }
-             string msg2 = !IsChineseSimple() ? "Success" : "成功!";
+             string msg2 = !IsChineseSimple() ? "Correcto!" : "成功!";
              showMessage(msg2);
            }
         //获取本地IP
@@ -1463,11 +1480,11 @@ namespace UHFAPP
             }
             else
             {
-                string msg = !IsChineseSimple() ? "Failure!" : "获取IP失败!";
+                string msg = !IsChineseSimple() ? "Error!" : "获取IP失败!";
                 showMessage(msg);
                 return;
             }
-            string msg2 = !IsChineseSimple() ? "Success" : "成功!";
+            string msg2 = !IsChineseSimple() ? "Correcto!" : "成功!";
             showMessage(msg2);
 
         }
@@ -1485,11 +1502,11 @@ namespace UHFAPP
             }
             else
             {
-                string msg = !IsChineseSimple() ? "Failure!" : "获取IP失败!";
+                string msg = !IsChineseSimple() ? "Error!" : "获取IP失败!";
                 showMessage(msg);
                 return;
             }
-            string msg2 = !IsChineseSimple() ? "Success" : "成功!";
+            string msg2 = !IsChineseSimple() ? "Correcto!" : "成功!";
             showMessage(msg2);
         }
 
@@ -1511,30 +1528,30 @@ namespace UHFAPP
   
             if (!StringUtils.isIP(ip))
             {
-                string msg = !IsChineseSimple() ? "Failure!" : "设置IP失败!";
+                string msg = !IsChineseSimple() ? "Error!" : "设置IP失败!";
                 showMessage(msg);
                 return;
             }
             if (!StringUtils.IsNumber(port))
             {
-                string msg = !IsChineseSimple() ? "Failure!" : "设置IP失败!";
+                string msg = !IsChineseSimple() ? "Error!" : "设置IP失败!";
                 showMessage(msg);
                 return;
             }
             if (ipControlDest.IpData[0] == "255")
             {
-                string msg = !IsChineseSimple() ? "Failure!" : "IP地址不能255开头，设置IP失败!";
+                string msg = !IsChineseSimple() ? "Error!" : "IP地址不能255开头，设置IP失败!";
                 showMessage(msg);
                 return;
             }
 
             if (!uhf.SetDestIP(ip, int.Parse(port)))
             {
-                string msg = !IsChineseSimple() ? "Failure!" : "设置IP失败!";
+                string msg = !IsChineseSimple() ? "Error!" : "设置IP失败!";
                 showMessage(msg);
                 return;
             }
-            string msg2 = !IsChineseSimple() ? "Success" : "成功!";
+            string msg2 = !IsChineseSimple() ? "Correcto!" : "成功!";
             showMessage(msg2);
         }
 
@@ -1547,7 +1564,7 @@ namespace UHFAPP
             byte[] mode=new byte[10];
             if (!uhf.UHFGetBuzzer(mode))
             {
-                string msg = !IsChineseSimple() ? "Failure!" : "失败!";
+                string msg = !IsChineseSimple() ? "Error!" : "失败!";
                 showMessage(msg);
                 return;
             }
@@ -1566,7 +1583,7 @@ namespace UHFAPP
                 }
 
             }
-            string msg2 = !IsChineseSimple() ? "Success" : "成功!";
+            string msg2 = !IsChineseSimple() ? "Correcto!" : "成功!";
             showMessage(msg2);
         }
         //设置蜂鸣器
@@ -1584,18 +1601,18 @@ namespace UHFAPP
             }
             else {
 
-                string msg = !IsChineseSimple() ? "Failure" : "失败!";
+                string msg = !IsChineseSimple() ? "Error" : "失败!";
                 showMessage(msg);
                 return;
             }
 
             if (!uhf.UHFSetBuzzer(mode))
             {
-                string msg = !IsChineseSimple() ? "Failure" : "失败!";
+                string msg = !IsChineseSimple() ? "Error" : "失败!";
                 showMessage(msg);
                 return;
             }
-            string msg2 = !IsChineseSimple() ? "Success" : "成功!";
+            string msg2 = !IsChineseSimple() ? "Correcto!" : "成功!";
             showMessage(msg2);
         }
         #endregion
@@ -1622,12 +1639,12 @@ namespace UHFAPP
             }
             else
             {
-                string msg = !IsChineseSimple() ? "Failure" : "失败!";
+                string msg = !IsChineseSimple() ? "Error" : "失败!";
                 showMessage(msg);
                 return;
 
             }
-            string msg2 = !IsChineseSimple() ? "Success" : "成功!";
+            string msg2 = !IsChineseSimple() ? "Correcto!" : "成功!";
             showMessage(msg2);
         }
 
@@ -1636,12 +1653,12 @@ namespace UHFAPP
             byte mode=(byte) workMode.SelectedIndex;
             if (!uhf.SetWorkMode(mode))
             {
-                string msg = !IsChineseSimple() ? "Failure" : "失败!";
+                string msg = !IsChineseSimple() ? "Error" : "失败!";
                 showMessage(msg);
                 return;
              
             }
-            string msg2 = !IsChineseSimple() ? "Success" : "成功!";
+            string msg2 = !IsChineseSimple() ? "Correcto!" : "成功!";
             showMessage(msg2);
         }
 
@@ -1652,12 +1669,12 @@ namespace UHFAPP
             {
                 if (txtWT.Text.Trim().Length == 0)
                 {
-                    string msg = !IsChineseSimple() ? "Failure" : "失败!";
+                    string msg = !IsChineseSimple() ? "Error" : "失败!";
                     showMessage(msg);
                 }
                 if (txtIT.Text.Trim().Length == 0)
                 {
-                    string msg = !IsChineseSimple() ? "Failure" : "失败!";
+                    string msg = !IsChineseSimple() ? "Error" : "失败!";
                     showMessage(msg);
                 }
 
@@ -1667,10 +1684,10 @@ namespace UHFAPP
                 int receiveMode = comRM.SelectedIndex;
                 if (!uhfAPI.SetWorkModePara((byte)input, workTime, waitTime, (byte)receiveMode))
                 {
-                    string msg = !IsChineseSimple() ? "Failure" : "失败!";
+                    string msg = !IsChineseSimple() ? "Error" : "失败!";
                     showMessage(msg);
                 }
-                string msg2 = !IsChineseSimple() ? "Success" : "成功!";
+                string msg2 = !IsChineseSimple() ? "Correcto!" : "成功!";
                 showMessage(msg2);
             }
 
@@ -1691,13 +1708,13 @@ namespace UHFAPP
                     txtWT.Text = workTime.ToString();
                     txtIT.Text = intervalTime.ToString();
                     comRM.SelectedIndex = mode;
-                    string msg2 = !IsChineseSimple() ? "Success" : "成功!";
+                    string msg2 = !IsChineseSimple() ? "Correcto!" : "成功!";
                     showMessage(msg2);
 
                 }
                 else
                 {
-                    string msg = !IsChineseSimple() ? "Failure" : "失败!";
+                    string msg = !IsChineseSimple() ? "Error" : "失败!";
                     showMessage(msg);
                 }            
             }
@@ -1714,14 +1731,14 @@ namespace UHFAPP
             byte[] data = new byte[2];
             if (!uhf.getIOControl(data))
             {
-                string msg = !IsChineseSimple() ? "Failure" : "失败!";
+                string msg = !IsChineseSimple() ? "Error" : "失败!";
                 showMessage(msg);
                 return;
             }
             else {
                 comboBox2.SelectedIndex = data[0];
                 comboBox3.SelectedIndex = data[1];
-                string msg2 = !IsChineseSimple() ? "Success" : "成功!";
+                string msg2 = !IsChineseSimple() ? "Correcto!" : "成功!";
                 showMessage(msg2);
             }
         }
@@ -1734,11 +1751,11 @@ namespace UHFAPP
  
             if (!uhf.setIOControl((byte)ouput1, (byte)ouput2, (byte)status))
             {
-                string msg = !IsChineseSimple() ? "Failure" : "失败!";
+                string msg = !IsChineseSimple() ? "Error" : "失败!";
                 showMessage(msg);
                 return;
             }
-            string msg2 = !IsChineseSimple() ? "Success" : "成功!";
+            string msg2 = !IsChineseSimple() ? "Correcto!" : "成功!";
             showMessage(msg2);
         }
         #endregion
@@ -1751,7 +1768,7 @@ namespace UHFAPP
         {
             byte userPtr = 0;
             byte userLen = 0;
-            string msg2 = !IsChineseSimple() ? "Success" : "成功!";
+            string msg2 = !IsChineseSimple() ? "Correcto!" : "成功!";
  
             int mode=uhf.getEPCTIDUSERMode(ref userPtr,ref userLen);
             switch (mode)
@@ -1768,7 +1785,7 @@ namespace UHFAPP
                     txtUserPtr.Text = userPtr + "";
                     break;
                 default:
-                    msg2 = !IsChineseSimple() ? "Failure" : "失败!";
+                    msg2 = !IsChineseSimple() ? "Error" : "失败!";
                     cbInventoryMode.SelectedIndex = -1;
                     break;
             }
@@ -1798,11 +1815,11 @@ namespace UHFAPP
 
             if (!result)
             {
-                string msg = !IsChineseSimple() ? "Failure" : "失败!";
+                string msg = !IsChineseSimple() ? "Error" : "失败!";
                 showMessage(msg);
                 return;
             }
-            string msg2 = !IsChineseSimple() ? "Success" : "成功!";
+            string msg2 = !IsChineseSimple() ? "Correcto!" : "成功!";
             showMessage(msg2);
         }
 
@@ -1852,7 +1869,7 @@ namespace UHFAPP
             cbANT7_state.Checked = false;
             cbANT8_state.Checked = false;
 
-            string msg = !IsChineseSimple() ? "Failure" : "失败!";
+            string msg = !IsChineseSimple() ? "Error" : "失败!";
             short[] antstate = new short[1];
             if (uhf.GetANTLinkStatus(antstate))
             {
@@ -1865,7 +1882,7 @@ namespace UHFAPP
                 if (((antS >> 2) & 1) == 1) cbANT3_state.Checked = true;
                 if (((antS >> 1) & 1) == 1) cbANT2_state.Checked = true;
                 if ((antS & 1) == 1) cbANT1_state.Checked = true;
-                msg = !IsChineseSimple() ? "Success" : "成功!";
+                msg = !IsChineseSimple() ? "Correcto!" : "成功!";
             }
             showMessage(msg);
         }
@@ -1880,12 +1897,12 @@ namespace UHFAPP
         private void button12_Click(object sender, EventArgs e)
         {
             byte[] statusData = new byte[2];
-            string msg = !IsChineseSimple() ? "Failure" : "失败!";
+            string msg = !IsChineseSimple() ? "Error" : "失败!";
             if (uhf.GetInputStatus(statusData))
             {
                 cmbInput1.SelectedIndex = statusData[0];
                 cmbInput2.SelectedIndex = statusData[1];
-                msg = !IsChineseSimple() ? "Success" : "成功!";
+                msg = !IsChineseSimple() ? "Correcto!" : "成功!";
             }
             showMessage(msg);
 
@@ -1896,11 +1913,11 @@ namespace UHFAPP
             byte[] outData = new byte[5];
             outData[3] = (byte)cmbOutput1.SelectedIndex;
             outData[4] = (byte)cmbOutput2.SelectedIndex;
-            string msg = !IsChineseSimple() ? "Failure" : "失败!";
+            string msg = !IsChineseSimple() ? "Error" : "失败!";
             if (uhf.SetOutput(outData))
             {
 
-                msg = !IsChineseSimple() ? "Success" : "成功!";
+                msg = !IsChineseSimple() ? "Correcto!" : "成功!";
             }
             showMessage(msg);
         }
@@ -1915,12 +1932,12 @@ namespace UHFAPP
         private void button14_Click(object sender, EventArgs e)
         {
             string id = uhf.GetUHFGetDeviceID();
-            string msg = !IsChineseSimple() ? "Failure" : "失败!";
+            string msg = !IsChineseSimple() ? "Error" : "失败!";
             if (id !=null)
             {
                 
                 textBox2.Text = id;
-                msg = !IsChineseSimple() ? "Success" : "成功!";
+                msg = !IsChineseSimple() ? "Correcto!" : "成功!";
                 showMessage(msg);
                 return;
             }
@@ -2175,7 +2192,7 @@ namespace UHFAPP
 
         private void btnGetAllPower_Click(object sender, EventArgs e)
         {
-            string msg = !IsChineseSimple() ? "Failure!" : "失败!";
+            string msg = !IsChineseSimple() ? "Error!" : "失败!";
             byte[] power = uhf.GetAntennaAllPower();
             if (power != null && power.Length > 0)
             {
@@ -2233,7 +2250,7 @@ namespace UHFAPP
                             break;
                     }
                 }
-                msg = !IsChineseSimple() ? "Success" : "成功!";
+                msg = !IsChineseSimple() ? "Correcto!" : "成功!";
             }
             showMessage(msg);
         }
@@ -2257,7 +2274,7 @@ namespace UHFAPP
             list.Add(cmbPower14);
             list.Add(cmbPower15);
             list.Add(cmbPower16);
-            string msg = !IsChineseSimple() ? "Failure!" : "失败!";
+            string msg = !IsChineseSimple() ? "Error!" : "失败!";
             bool result = false;
             byte save =cbSaveAllPower.Checked?(byte)1: (byte)0;
 
@@ -2282,7 +2299,7 @@ namespace UHFAPP
                 return;
 
             }
-            msg = !IsChineseSimple() ? "Success" : "成功!";
+            msg = !IsChineseSimple() ? "Correcto!" : "成功!";
             showMessage(msg);
         }
 

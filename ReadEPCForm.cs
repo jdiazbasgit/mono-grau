@@ -56,9 +56,9 @@ namespace UHFAPP
             this.SetStyle(ControlStyles.OptimizedDoubleBuffer | ControlStyles.ResizeRedraw | ControlStyles.AllPaintingInWmPaint, true);
             this.UpdateStyles();
             InitializeComponent();
-            Type dgvType = this.dgData.GetType();
-            PropertyInfo pi = dgvType.GetProperty("DoubleBuffered", BindingFlags.Instance | BindingFlags.NonPublic);
-            pi.SetValue(this.dgData, true, null);
+           // Type dgvType = this.dgData.GetType();
+            //PropertyInfo pi = dgvType.GetProperty("DoubleBuffered", BindingFlags.Instance | BindingFlags.NonPublic);
+            //pi.SetValue(this.dgData, true, null);
 
             if (isOpen)
             {
@@ -90,9 +90,9 @@ namespace UHFAPP
         private void LoadDataGridView()
         {
             //设置自动换行  
-            dgData.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+           // dgData.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             //设置自动调整高度  
-            if (isUIFast)
+            /*if (isUIFast)
             {
                 dgData.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
                 dgData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
@@ -101,10 +101,10 @@ namespace UHFAPP
             {
                 dgData.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells; //  DisplayedCells
                 dgData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            }
+            }*/
 
 
-            foreach (DataGridViewColumn col in dgData.Columns)
+            /*foreach (DataGridViewColumn col in dgData.Columns)
             {
                 col.HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 col.HeaderCell.Style.Font = new Font("宋体", 18F, FontStyle.Regular, GraphicsUnit.Pixel);
@@ -121,7 +121,7 @@ namespace UHFAPP
             foreach (DataGridViewColumn dgvc in dgData.Columns)
             {
                 dgvc.SortMode = DataGridViewColumnSortMode.NotSortable;
-            }
+            }*/
 
         }
         private void AutoCellsWidth(bool auto)
@@ -130,22 +130,22 @@ namespace UHFAPP
             {
                 if (auto)
                 {
-                    if (dgData.AutoSizeColumnsMode != DataGridViewAutoSizeColumnsMode.None)
+                   /*if (dgData.AutoSizeColumnsMode != DataGridViewAutoSizeColumnsMode.None)
                     {
                         dgData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
                         dgData.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
                         // dgData.Columns[3].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
-                    }
+                    }*/
                 }
                 else
                 {
 
-                    if (dgData.AutoSizeColumnsMode != DataGridViewAutoSizeColumnsMode.Fill)
+                    /*if (dgData.AutoSizeColumnsMode != DataGridViewAutoSizeColumnsMode.Fill)
                     {
                         dgData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                         dgData.Columns[3].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
 
-                    }
+                    }*/
 
                 }
             }
@@ -157,13 +157,13 @@ namespace UHFAPP
             if (MainForm.currState == FormWindowState.Normal)
             {
                 panel1.Size = new Size(1139 - 50, 673 - 60);
-                dgData.Size = new Size(1097, 390);
+                //dgData.Size = new Size(1097, 390);
                 panel2.Location = new Point(3, 482);
             }
             else if (MainForm.currState == FormWindowState.Maximized)
             {
                 panel1.Size = new Size(Size.Width - 350, Size.Height - 50);
-                dgData.Size = new Size(Size.Width - 350, Size.Height - 280);
+                //dgData.Size = new Size(Size.Width - 350, Size.Height - 280);
                 panel2.Location = new Point(panel2.Location.X, Size.Height - 180);
             }
 
@@ -318,12 +318,12 @@ namespace UHFAPP
                 epcList[index].TidBytes = DataConvert.HexStringToByteArray(tid);
 
               
-                this.dgData.Rows[index].Cells[1].Value = epc;
+              /*  this.dgData.Rows[index].Cells[1].Value = epc;
                 this.dgData.Rows[index].Cells[2].Value = tid;
                 this.dgData.Rows[index].Cells[3].Value = user;
                 this.dgData.Rows[index].Cells[4].Value = stringBuilderRSSI.ToString();
                 this.dgData.Rows[index].Cells[5].Value = epcList[index].Count;
-                this.dgData.Rows[index].Cells[6].Value = stringBuilderANT.ToString();
+                this.dgData.Rows[index].Cells[6].Value = stringBuilderANT.ToString();*/
 
             }
             else {
@@ -339,7 +339,7 @@ namespace UHFAPP
                 stringBuilder.Append(": 1");
 
                 object[] values = new object[] { (index + 1), epc, tid, user, rssi, 1, stringBuilder.ToString() };
-                dgData.Rows.Insert(index, values);
+                //dgData.Rows.Insert(index, values);
 
                // lblTotal.Text = (dgData.RowCount - 1).ToString();
 
@@ -356,7 +356,7 @@ namespace UHFAPP
 
 
 
-        private void dgData_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        /*private void dgData_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (btnScanEPC.Text == strStop || btnScanEPC.Text == strStop2)
             {
@@ -389,12 +389,12 @@ namespace UHFAPP
                     Common.bank = Col_index;
                 }
             }
-        }
+        }*/
 
         private void contextMenuStrip1_Click(object sender, EventArgs e)
         {
 
-            int Col_index = dgData.CurrentCell.ColumnIndex;
+           /* int Col_index = dgData.CurrentCell.ColumnIndex;
             if (Col_index == 1 || Col_index == 2 || Col_index == 3)
             {
                 int Row_index = dgData.CurrentRow.Index;
@@ -421,7 +421,7 @@ namespace UHFAPP
 
                     Clipboard.SetDataObject(data);
                 }
-            }
+            }*/
 
         }
 
@@ -447,13 +447,13 @@ namespace UHFAPP
             if (state == FormWindowState.Normal)
             {
                 panel1.Size = new Size(1139 - 50, 673 - 60);
-                dgData.Size = new Size(1097, 390);
+                //dgData.Size = new Size(1097, 390);
                 panel2.Location = new Point(3, 482);
             }
             else if (state == FormWindowState.Maximized)
             {
                 panel1.Size = new Size(Size.Width - 350, Size.Height - 50);
-                dgData.Size = new Size(Size.Width - 350, Size.Height - 280);
+               //dgData.Size = new Size(Size.Width - 350, Size.Height - 280);
                 panel2.Location = new Point(panel2.Location.X, Size.Height - 180);
             }
 
@@ -527,6 +527,16 @@ namespace UHFAPP
                     mainform.enableControls();
                 }
             }
+        }
+
+        private void dgData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
