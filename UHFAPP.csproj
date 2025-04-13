@@ -138,78 +138,6 @@
     <Compile Include="BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="custom\authenticate\AuthenticateForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="custom\authenticate\AuthenticateForm.Designer.cs">
-      <DependentUpon>AuthenticateForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="custom\authenticate\AuthenticateAPI.cs" />
-    <Compile Include="custom\CryptoTransmitForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="custom\CryptoTransmitForm.Designer.cs">
-      <DependentUpon>CryptoTransmitForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="custom\m775Authenticate\M775AuthenticateAPI.cs" />
-    <Compile Include="custom\m775Authenticate\M775AuthenticateForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="custom\m775Authenticate\M775AuthenticateForm.Designer.cs">
-      <DependentUpon>M775AuthenticateForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="custom\R5ModifyParametersForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="custom\R5ModifyParametersForm.Designer.cs">
-      <DependentUpon>R5ModifyParametersForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="custom\SetR3Form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="custom\SetR3Form.Designer.cs">
-      <DependentUpon>SetR3Form.cs</DependentUpon>
-    </Compile>
-    <Compile Include="custom\TempertureTag2\ReadEPCFormT2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="custom\TempertureTag2\ReadEPCFormT2.Designer.cs">
-      <DependentUpon>ReadEPCFormT2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="custom\TempertureTag2\TempertureInfo.cs" />
-    <Compile Include="custom\TempertureTag2\TempertureTag2MainForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="custom\TempertureTag2\TempertureTag2MainForm.Designer.cs">
-      <DependentUpon>TempertureTag2MainForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="custom\TempertureTag2\TempertureTag2ReadEPCForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="custom\TempertureTag2\TempertureTag2ReadEPCForm.Designer.cs">
-      <DependentUpon>TempertureTag2ReadEPCForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="custom\TempertureTag2\UHFAPI_Temperture.cs">
-    </Compile>
-    <Compile Include="custom\TempertureTag\TempertureTagForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="custom\TempertureTag\TempertureTagForm.Designer.cs">
-      <DependentUpon>TempertureTagForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="custom\TempertureTag\ReadEPCForm2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="custom\TempertureTag\ReadEPCForm2.Designer.cs">
-      <DependentUpon>ReadEPCForm2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="custom\TempertureTag\UHFAPI_RFMicronMagnus_S3.cs" />
-    <Compile Include="custom\WriteEPCSimpleDemo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="custom\WriteEPCSimpleDemo.Designer.cs">
-      <DependentUpon>WriteEPCSimpleDemo.cs</DependentUpon>
-    </Compile>
     <Compile Include="DeviceInfo.cs" />
     <Compile Include="Download\Downloader.cs" />
     <Compile Include="Download\FileInfo.cs" />
@@ -303,50 +231,6 @@
       <DependentUpon>ConfigForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="custom\authenticate\AuthenticateForm.resx">
-      <DependentUpon>AuthenticateForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="custom\CryptoTransmitForm.resx">
-      <DependentUpon>CryptoTransmitForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="custom\m775Authenticate\M775AuthenticateForm.resx">
-      <DependentUpon>M775AuthenticateForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="custom\R5ModifyParametersForm.resx">
-      <DependentUpon>R5ModifyParametersForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="custom\SetR3Form.resx">
-      <DependentUpon>SetR3Form.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="custom\TempertureTag2\ReadEPCFormT2.resx">
-      <DependentUpon>ReadEPCFormT2.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="custom\TempertureTag2\TempertureTag2MainForm.resx">
-      <DependentUpon>TempertureTag2MainForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="custom\TempertureTag2\TempertureTag2ReadEPCForm.resx">
-      <DependentUpon>TempertureTag2ReadEPCForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="custom\TempertureTag\TempertureTagForm.resx">
-      <DependentUpon>TempertureTagForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="custom\TempertureTag\ReadEPCForm2.resx">
-      <DependentUpon>ReadEPCForm2.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="custom\WriteEPCSimpleDemo.resx">
-      <DependentUpon>WriteEPCSimpleDemo.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmWaitingBox.resx">
       <DependentUpon>frmWaitingBox.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -387,14 +271,6 @@
       <DependentUpon>HFMainForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="TipForm.resx">
-      <DependentUpon>TipForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="WaitForm.resx">
-      <DependentUpon>WaitForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
@@ -424,22 +300,10 @@
       <DependentUpon>ReceiveEPC.cs</DependentUpon>
     </Compile>
     <Compile Include="utils\StringUtils.cs" />
-    <Compile Include="TipForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TipForm.Designer.cs">
-      <DependentUpon>TipForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="UHFAPI.cs" />
     <Compile Include="utils\Debug.cs" />
     <Compile Include="UHFTAGInfo.cs" />
     <Compile Include="utils\Utils.cs" />
-    <Compile Include="WaitForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WaitForm.Designer.cs">
-      <DependentUpon>WaitForm.cs</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="img\button_green_32px_500051_easyicon.net.png" />
@@ -468,9 +332,7 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="barcode\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

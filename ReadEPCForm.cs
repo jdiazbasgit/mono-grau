@@ -52,11 +52,10 @@ namespace UHFAPP
        
         public ReadEPCForm(bool isOpen, MainForm mainform)
         {
-            //设置窗体的双缓冲
+            
             this.SetStyle(ControlStyles.OptimizedDoubleBuffer | ControlStyles.ResizeRedraw | ControlStyles.AllPaintingInWmPaint, true);
             this.UpdateStyles();
             InitializeComponent();
-            //利用反射设置DataGridView的双缓冲
             Type dgvType = this.dgData.GetType();
             PropertyInfo pi = dgvType.GetProperty("DoubleBuffered", BindingFlags.Instance | BindingFlags.NonPublic);
             pi.SetValue(this.dgData, true, null);

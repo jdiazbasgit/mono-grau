@@ -30,8 +30,8 @@ namespace UHFAPP
         public delegate void MainSizeChanged(FormWindowState state);
         public static event MainSizeChanged eventMainSizeChanged = null;
 
-        string strOpen = "  Open  ";
-        string strClose = "  Close  ";
+        string strOpen = "  Conectar lector  ";
+        string strClose = "  Desconectar lector  ";
 
         private string currentFormName = "";
         private bool isOpen = false;
@@ -45,25 +45,31 @@ namespace UHFAPP
         //step1：定义断开回调函数
         private void OnDisconnectCallback(int id)
         {
-            System.Console.WriteLine("OnDisconnectCallback");
-            if (!this.IsDisposed)
+            try
             {
-                this.Invoke(new EventHandler(delegate {
-                    disableControls(false);
-                    toolStripOpen.Text = strOpen;
-                   
-                    isOpen = false;
-                    if (eventOpen != null)
+                if (!this.IsDisposed)
+                {
+                    this.Invoke(new EventHandler(delegate
                     {
-                        eventOpen(false);
-                    }
+                        disableControls(false);
+                        button1.Text = strOpen;
+                        button1.BackColor = System.Drawing.Color.Red;
+                        isOpen = false;
+                        if (eventOpen != null)
+                        {
+                            eventOpen(false);
+                        }
 
-                }));
+                    }));
 
+                }
+            }
+            catch (Exception ex)
+            {
             }
 
         }
-        //step2：定义断开回调委托
+      
         UHFAPP.UHFAPI.OnDisconnectCallback DisconnectCallback = null;
 
         #endregion
@@ -75,7 +81,8 @@ namespace UHFAPP
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
             this.IsMdiContainer = true;
             mainform = this;
-            toolStripOpen.Text = "  Open  ";
+            button1.Text = strOpen;
+            button1.BackColor = System.Drawing.Color.Red;
             DisconnectCallback = OnDisconnectCallback;
         }
 
@@ -124,7 +131,7 @@ namespace UHFAPP
         private bool UHFClose()
         {
 
-            if (toolStripOpen.Text.Trim() == strClose.Trim())
+            if (button1.Text.Trim() == strClose.Trim())
             {
                 
                     uhf.CloseUsb();
@@ -159,7 +166,7 @@ namespace UHFAPP
             {
                 readEPCForm = new ReadEPCForm(isOpen, mainform);
             }
-            Form form = ShowForm(readEPCForm, false);
+           // Form form = ShowForm(readEPCForm, false);
         }
         /// <summary>
         /// Config
@@ -178,10 +185,10 @@ namespace UHFAPP
         
         private void toolStripButton1_Click(object sender, EventArgs e)
         {
-            if (toolStripOpen.Text == strOpen)
+            if (button1.Text == strOpen)
             {
                // int type = combCommunicationMode.SelectedIndex;//0
-                string msg =  "Conectando..." ;
+                string msg =  "Conectando lector..." ;
 
                 
                 frmWaitingBox f = new frmWaitingBox((obj, args) =>
@@ -197,7 +204,7 @@ namespace UHFAPP
                     {
                         this.Invoke(new EventHandler(delegate
                         {
-                            toolStripOpen.Text = strClose;
+                           
                             isOpen = true;
                             if (eventOpen != null)
                             {
@@ -207,14 +214,18 @@ namespace UHFAPP
 
                         }));
                         Thread.Sleep(2000);
+                       
+                        
                     }
                     else
                     {
-                        frmWaitingBox.message = "fail";
+                        frmWaitingBox.message = "Error al desconectar el lector";
                         Thread.Sleep(2000);
                     }
                 }, msg);
                 f.ShowDialog(this);
+                 button1.Text = strClose;
+                button1.BackColor = System.Drawing.Color.Green;
 
             }
             else
@@ -222,7 +233,8 @@ namespace UHFAPP
                 if (UHFClose())
                 {
                     disableControls(false);
-                    toolStripOpen.Text = strOpen;
+                    button1.Text = strOpen;
+                    button1.BackColor = System.Drawing.Color.Red;
                     isOpen = false;
                     if (eventOpen != null)
                     {
@@ -234,20 +246,7 @@ namespace UHFAPP
         }
 
 
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            if (isOpen)
-            {
-                frmWaitingBox f = new frmWaitingBox((obj, args) =>
-                {
-                    string Temperature = uhf.GetTemperature();
-                    string temp = (!IsChineseSimple() ? "Temperature:" : "温度:") + Temperature + "℃";
-                    frmWaitingBox.message = temp;
-                    System.Threading.Thread.Sleep(1500);
-                });
-                f.ShowDialog(this);
-            }
-        }
+        
 
 
         
@@ -447,6 +446,16 @@ namespace UHFAPP
         #endregion
 
         private void toolStripButton1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            toolStripButton1_Click(sender, e);  
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }

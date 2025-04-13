@@ -215,3 +215,35 @@ Nombre del objeto: 'MainForm'.
    en System.Windows.Forms.Control.Invoke(Delegate method)
    en UHFAPP.MainForm.OnDisconnectCallback(Int32 id) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 51
 -----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-04-13 01:44:09
+IsTerminating : True
+System.ObjectDisposedException: No se puede obtener acceso al objeto desechado.
+Nombre del objeto: 'MainForm'.
+   en System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   en System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   en System.Windows.Forms.Control.Invoke(Delegate method)
+   en UHFAPP.MainForm.OnDisconnectCallback(Int32 id) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 51
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-04-13 10:59:00
+IsTerminating : True
+System.ObjectDisposedException: No se puede obtener acceso al objeto desechado.
+Nombre del objeto: 'MainForm'.
+   en System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   en System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   en System.Windows.Forms.Control.Invoke(Delegate method)
+   en UHFAPP.MainForm.OnDisconnectCallback(Int32 id) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 51
+-----------------------end----------------------------
+ExitApp
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-04-13 11:06:53
+IsTerminating : True
+System.ObjectDisposedException: No se puede obtener acceso al objeto desechado.
+Nombre del objeto: 'MainForm'.
+   en System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   en System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   en System.Windows.Forms.Control.Invoke(Delegate method)
+   en UHFAPP.MainForm.OnDisconnectCallback(Int32 id) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 51
+-----------------------end----------------------------
+ExitApp

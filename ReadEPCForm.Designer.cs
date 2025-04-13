@@ -77,10 +77,10 @@
             this.panel1.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.dgData);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(-39, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(2158, 829);
+            this.panel1.Size = new System.Drawing.Size(1910, 663);
             this.panel1.TabIndex = 31;
             // 
             // panel2
@@ -117,14 +117,14 @@
             this.ant});
             this.dgData.ContextMenuStrip = this.contextMenuStrip1;
             this.dgData.Location = new System.Drawing.Point(0, 0);
-            this.dgData.Margin = new System.Windows.Forms.Padding(4);
+            this.dgData.Margin = new System.Windows.Forms.Padding(0);
             this.dgData.Name = "dgData";
             this.dgData.RowHeadersWidth = 51;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("SimSun", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dgData.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgData.RowTemplate.Height = 23;
-            this.dgData.Size = new System.Drawing.Size(1463, 632);
-            this.dgData.TabIndex = 76;
+            this.dgData.Size = new System.Drawing.Size(1923, 632);
+            this.dgData.TabIndex = 0;
             this.dgData.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgData_CellContentDoubleClick);
             // 
             // id
@@ -216,7 +216,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
+            this.AutoSize = true;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(2171, 845);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.Black;

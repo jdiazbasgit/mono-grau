@@ -34,6 +34,7 @@
             this.MenuItemScanEPC = new System.Windows.Forms.ToolStripMenuItem();
             this.configToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.button1 = new System.Windows.Forms.Button();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -49,15 +50,16 @@
             this.toolStripOpen.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.toolStripOpen.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripOpen.Name = "toolStripOpen";
-            this.toolStripOpen.Size = new System.Drawing.Size(69, 42);
+            this.toolStripOpen.Size = new System.Drawing.Size(69, 895);
             this.toolStripOpen.Text = "  Open  ";
             this.toolStripOpen.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.toolStripOpen.Visible = false;
             this.toolStripOpen.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // toolStripLabel6
             // 
             this.toolStripLabel6.Name = "toolStripLabel6";
-            this.toolStripLabel6.Size = new System.Drawing.Size(0, 42);
+            this.toolStripLabel6.Size = new System.Drawing.Size(0, 895);
             // 
             // toolStrip1
             // 
@@ -70,9 +72,10 @@
             this.toolStrip1.Location = new System.Drawing.Point(0, 30);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.toolStrip1.Size = new System.Drawing.Size(2192, 45);
+            this.toolStrip1.Size = new System.Drawing.Size(2192, 898);
             this.toolStrip1.TabIndex = 5;
             this.toolStrip1.Text = "Open";
+            this.toolStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.toolStrip1_ItemClicked);
             // 
             // MenuItemScanEPC
             // 
@@ -103,6 +106,17 @@
             this.menuStrip1.Text = "ScanEPC";
             this.menuStrip1.ItemAdded += new System.Windows.Forms.ToolStripItemEventHandler(this.menuStrip1_ItemAdded);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 9F);
+            this.button1.Location = new System.Drawing.Point(0, 24);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(169, 58);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -110,6 +124,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(2192, 936);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.KeyPreview = true;
@@ -139,6 +154,7 @@
         private System.Windows.Forms.ToolStripMenuItem MenuItemScanEPC;
         private System.Windows.Forms.ToolStripMenuItem configToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.Button button1;
     }
 }
 
