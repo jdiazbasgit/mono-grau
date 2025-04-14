@@ -170,7 +170,7 @@ namespace UHFAPP
             if (!first) panel1.Left = 310;// 380;
         }
 
-        private void ScanEPCForm_Load(object sender, EventArgs e)
+       /* private void ScanEPCForm_Load(object sender, EventArgs e)
         {
             LoadDataGridView();
             MainForm.eventOpen += MainForm_eventOpen;
@@ -189,7 +189,7 @@ namespace UHFAPP
             MainForm.keyUpEventHandler -= KeyUpEventHandler;
             MainForm.keyUpEventHandler += KeyUpEventHandler;
 
-        }
+        }*/
 
 
 

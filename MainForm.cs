@@ -492,12 +492,13 @@ namespace UHFAPP
           
             if (!reuslt)
             {
-                MessageBox.Show(!IsChineseSimple() ? "Stop fail" : "停止失败");
+                MessageBox.Show("Stop fail" );
             }
 
             btnScanEPC.Text = strStart ;
+            btnScanEPC.BackColor = System.Drawing.Color.Green;
             mainform.enableControls();
-            Thread.Sleep(100);
+           // Thread.Sleep(100);
         }
 
         private void Time() { }
@@ -525,26 +526,154 @@ namespace UHFAPP
         private void UpdataEPC(string epc, string tid, string rssi, string count, string ant, string user)
         {
 
-           
-
             if (epc == null)
-             {
-                 return;
-             }
-
-
-           
-            total++;
-
-            label10.Text = total.ToString();
-            label23.Text = total.ToString();
-            if(total==25)
             {
-                panel5.Visible = true;
-                total = 0;
-                StopEPC(true);
+                return;
             }
+           // label6.Text = (tempCount += int.Parse(count)).ToString();
+
+            bool[] exist = new bool[1];
+            int index = CheckUtils.getInsertIndex(epcList, epc, tid, exist);
+
+            total++;
+            if (exist[0])
+            {
+                epcList[index].AddAntennaInfoByAnt(int.Parse(ant), rssi);
+
+                List<AntennaInfo> list = epcList[index].AntList;
+                StringBuilder stringBuilderANT = new StringBuilder();
+                StringBuilder stringBuilderRSSI = new StringBuilder();
+                for (int k = 0; k < list.Count; k++)
+                {
+                    stringBuilderANT.Append("ANT");
+                    stringBuilderANT.Append(list[k].AntennaPort);
+                    stringBuilderANT.Append(": ");
+                    stringBuilderANT.Append(list[k].Count);
+                    // stringBuilderRSSI.Append("RSSI:");
+                    stringBuilderRSSI.Append(list[k].Rssi);
+                    if (k != list.Count - 1)
+                    {
+                        stringBuilderANT.Append(System.Environment.NewLine);
+                        stringBuilderRSSI.Append(System.Environment.NewLine);
+                    }
+                }
+                epcList[index].Count = epcList[index].Count + 1;
+                epcList[index].User = user;
+                epcList[index].Tid = tid;
+                epcList[index].TidBytes = DataConvert.HexStringToByteArray(tid);
+
+               /* if (cmbFormat.SelectedIndex == 2)
+                {
+                    if (!string.IsNullOrEmpty(epc))
+                    {
+                        epc = epc + System.Environment.NewLine + "Ascii:" + System.Text.Encoding.ASCII.GetString(DataConvert.HexStringToByteArray(epc));
+                    }
+
+                    if (!string.IsNullOrEmpty(user))
+                    {
+                        user = user + System.Environment.NewLine + "Ascii:" + System.Text.Encoding.ASCII.GetString(DataConvert.HexStringToByteArray(user));
+                    }
+                }
+                else if (cmbFormat.SelectedIndex == 1)
+                {
+                    if (!string.IsNullOrEmpty(epc))
+                    {
+                        epc = System.Text.Encoding.ASCII.GetString(DataConvert.HexStringToByteArray(epc));
+                    }
+
+                    if (!string.IsNullOrEmpty(user))
+                    {
+                        user = System.Text.Encoding.ASCII.GetString(DataConvert.HexStringToByteArray(user));
+                    }
+                }
+                this.dgData.Rows[index].Cells[1].Value = epc;
+                this.dgData.Rows[index].Cells[2].Value = tid;
+                this.dgData.Rows[index].Cells[3].Value = user;
+                this.dgData.Rows[index].Cells[4].Value = stringBuilderRSSI.ToString();
+                this.dgData.Rows[index].Cells[5].Value = epcList[index].Count;
+                this.dgData.Rows[index].Cells[6].Value = stringBuilderANT.ToString();*/
+
+            }
+            else
+            {
+                EpcInfo epcInfo = new EpcInfo(epc, tid, int.Parse(count), DataConvert.HexStringToByteArray(epc), DataConvert.HexStringToByteArray(tid), int.Parse(ant), rssi, user);
+                epcList.Insert(index, epcInfo);
+
+               // total++;
+                /* if (cmbFormat.SelectedIndex == 2)
+                 {
+                     if (!string.IsNullOrEmpty(epc))
+                     {
+                         epc = epc + System.Environment.NewLine + "Ascii:" + System.Text.Encoding.ASCII.GetString(DataConvert.HexStringToByteArray(epc));
+                     }
+
+                     if (!string.IsNullOrEmpty(user))
+                     {
+                         user = user + System.Environment.NewLine + "Ascii:" + System.Text.Encoding.ASCII.GetString(DataConvert.HexStringToByteArray(user));
+                     }
+                 }
+                 else if (cmbFormat.SelectedIndex == 1)
+                 {
+                     if (!string.IsNullOrEmpty(epc))
+                     {
+                         epc = System.Text.Encoding.ASCII.GetString(DataConvert.HexStringToByteArray(epc));
+                     }
+
+                     if (!string.IsNullOrEmpty(user))
+                     {
+                         user = System.Text.Encoding.ASCII.GetString(DataConvert.HexStringToByteArray(user));
+                     }
+                 }*/
+
+                /* StringBuilder stringBuilder = new StringBuilder();
+                 stringBuilder.Append("ANT");
+                 stringBuilder.Append(ant);
+                 stringBuilder.Append(": 1");
+
+                 object[] values = new object[] { (index + 1), epc, tid, user, rssi, 1, stringBuilder.ToString() };
+                 dgData.Rows.Insert(index, values);*/
+
+                //  lblTotal.Text = (dgData.RowCount - 1).ToString();
+                label10.Text = total.ToString();
+                label23.Text = epcList.Count.ToString();
+                //if (total >= Int32.Parse(label7.Text))
+                if (Int32.Parse(label23.Text) >= Int32.Parse(label7.Text))
+                {
+                    panel5.Visible = true;
+                    total = 0;
+                    StopEPC(true);
+                    epcList.Clear();
+                }
+
+            }
+           /* if (epc.Length > 40 || (user != null && user.Length > 40))
+            {
+                AutoCellsWidth(true);
+            }*/
+
         }
+
+
+        /*
+                    if (epc == null)
+                     {
+                         return;
+                     }
+
+
+
+                    total++;
+
+                    label10.Text = total.ToString();
+                    label23.Text = total.ToString();
+                    if (total== Int32.Parse(label7.Text))
+                    {
+                        panel5.Visible = true;
+                        total = 0;
+                        StopEPC(true);
+                    }*/
+       
+       // }
         private void leerOrden()
         {
             SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\chimes.wav");
@@ -629,8 +758,9 @@ namespace UHFAPP
                     else
                     {
                         this.BeginInvoke(setTextCallback, new object[] { null, null, null, null, null, null });
-                        Thread.Sleep(10);
+                       
                     }
+                   
                 }
             }
             catch (Exception ex)
@@ -671,7 +801,7 @@ namespace UHFAPP
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            leerOrden();
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)

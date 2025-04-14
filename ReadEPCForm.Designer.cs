@@ -143,7 +143,7 @@
             this.Text = "ReadEPC";
             this.Activated += new System.EventHandler(this.ReadEPCForm_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ScanEPCForm_FormClosing);
-            this.Load += new System.EventHandler(this.ScanEPCForm_Load);
+            
             this.VisibleChanged += new System.EventHandler(this.ReadEPCForm_VisibleChanged);
             this.contextMenuStrip1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

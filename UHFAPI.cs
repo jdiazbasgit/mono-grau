@@ -8,6 +8,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Windows.Forms;
 using UHFAPP.multidevice;
+using System.Threading;
 
 namespace UHFAPP
 {
@@ -2041,7 +2042,7 @@ namespace UHFAPP
                 info.Rssi = rssi_data;
                 info.Ant = ant_data;
                 info.User = user_data;
-
+                Thread.Sleep(300);
                 return info;
             }
             else

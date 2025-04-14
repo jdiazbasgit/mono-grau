@@ -3,23 +3,55 @@
   "WorkspaceRootPath": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|UHFAPP.csproj|c:\\users\\pc\\source\\repos\\mono-grau\\demo source code\\ur4demo\\ur4demo\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|UHFAPP.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mono-grau.csproj|c:\\users\\pc\\source\\repos\\mono-grau\\demo source code\\ur4demo\\ur4demo\\readepcform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mono-grau.csproj|solutionrelative:readepcform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|UHFAPP.csproj|C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|UHFAPP.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mono-grau.csproj|c:\\users\\pc\\source\\repos\\mono-grau\\demo source code\\ur4demo\\ur4demo\\configform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mono-grau.csproj|solutionrelative:configform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|UHFAPP.csproj|c:\\users\\pc\\source\\repos\\mono-grau\\demo source code\\ur4demo\\ur4demo\\datos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|UHFAPP.csproj|solutionrelative:datos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mono-grau.csproj|c:\\users\\pc\\source\\repos\\mono-grau\\demo source code\\ur4demo\\ur4demo\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mono-grau.csproj|solutionrelative:mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|UHFAPP.csproj|C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|UHFAPP.csproj|solutionrelative:mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|UHFAPP.csproj|c:\\users\\pc\\source\\repos\\mono-grau\\demo source code\\ur4demo\\ur4demo\\getmozo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mono-grau.csproj|c:\\users\\pc\\source\\repos\\mono-grau\\demo source code\\ur4demo\\ur4demo\\readepcform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mono-grau.csproj|solutionrelative:readepcform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mono-grau.csproj|c:\\users\\pc\\source\\repos\\mono-grau\\demo source code\\ur4demo\\ur4demo\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mono-grau.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mono-grau.csproj|c:\\users\\pc\\source\\repos\\mono-grau\\demo source code\\ur4demo\\ur4demo\\utils\\common.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mono-grau.csproj|solutionrelative:utils\\common.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mono-grau.csproj|c:\\users\\pc\\source\\repos\\mono-grau\\demo source code\\ur4demo\\ur4demo\\configform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mono-grau.csproj|solutionrelative:configform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mono-grau.csproj|C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mono-grau.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|UHFAPP.csproj|C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|UHFAPP.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|UHFAPP.csproj|C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\uhfapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|UHFAPP.csproj|solutionrelative:uhfapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|UHFAPP.csproj|C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\datos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|UHFAPP.csproj|solutionrelative:datos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|UHFAPP.csproj|C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\getmozo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|UHFAPP.csproj|solutionrelative:getmozo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -33,10 +65,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|UHFAPP.csproj|C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\interfaces\\iuhf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|UHFAPP.csproj|solutionrelative:interfaces\\iuhf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|UHFAPP.csproj|C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\uhfapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|UHFAPP.csproj|solutionrelative:uhfapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|UHFAPP.csproj|C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\readepcformdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -114,11 +142,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ConfigForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\ConfigForm.Designer.cs",
+              "RelativeDocumentMoniker": "ConfigForm.Designer.cs",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\ConfigForm.Designer.cs*",
+              "RelativeToolTip": "ConfigForm.Designer.cs*",
+              "ViewState": "AgIAALwPAAAAAAAAAAAQwNAPAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T19:28:57.502Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "MainForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\MainForm.Designer.cs",
+              "RelativeDocumentMoniker": "MainForm.Designer.cs",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\MainForm.Designer.cs",
+              "RelativeToolTip": "MainForm.Designer.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBwAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T19:28:43.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ReadEPCForm.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\ReadEPCForm.cs",
+              "RelativeDocumentMoniker": "ReadEPCForm.cs",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\ReadEPCForm.cs",
+              "RelativeToolTip": "ReadEPCForm.cs",
+              "ViewState": "AgIAAJ8AAAAAAAAAAAAIwL8AAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T19:28:43.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ReadEPCForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\ReadEPCForm.Designer.cs",
+              "RelativeDocumentMoniker": "ReadEPCForm.Designer.cs",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\ReadEPCForm.Designer.cs*",
+              "RelativeToolTip": "ReadEPCForm.Designer.cs*",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAQwJEAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T19:28:43.591Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "Datos.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\Datos.cs",
               "RelativeDocumentMoniker": "Datos.cs",
@@ -126,12 +206,11 @@
               "RelativeToolTip": "Datos.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T21:54:15.727Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-13T21:54:15.727Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 15,
               "Title": "IUHF.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\interfaces\\IUHF.cs",
               "RelativeDocumentMoniker": "interfaces\\IUHF.cs",
@@ -143,20 +222,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "MainForm.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\MainForm.cs",
               "RelativeDocumentMoniker": "MainForm.cs",
               "ToolTip": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\MainForm.cs",
               "RelativeToolTip": "MainForm.cs",
-              "ViewState": "AgIAAOoCAAAAAAAAAAAEwJYCAAARAAAAAAAAAA==",
+              "ViewState": "AgIAALoCAAAAAAAAAAApwM4CAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-12T21:54:02.06Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 18,
               "Title": "frmWaitingBox.designer.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\frmWaitingBox.designer.cs",
               "RelativeDocumentMoniker": "frmWaitingBox.designer.cs",
@@ -168,7 +247,57 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\MainForm.Designer.cs",
+              "RelativeDocumentMoniker": "MainForm.Designer.cs",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\MainForm.Designer.cs",
+              "RelativeToolTip": "MainForm.Designer.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAhwBMAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-12T21:12:33.972Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MainForm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\MainForm.cs",
+              "RelativeDocumentMoniker": "MainForm.cs",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\MainForm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "MainForm.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T19:16:51.65Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ConfigForm.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\ConfigForm.cs",
+              "RelativeDocumentMoniker": "ConfigForm.cs",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\ConfigForm.cs",
+              "RelativeToolTip": "ConfigForm.cs",
+              "ViewState": "AgIAAGYIAAAAAAAAAAApwHoIAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T19:27:53.031Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "Common.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\utils\\Common.cs",
+              "RelativeDocumentMoniker": "utils\\Common.cs",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\utils\\Common.cs",
+              "RelativeToolTip": "utils\\Common.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAACEAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-14T19:28:55.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "ReadEPCForm.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\ReadEPCForm.cs",
               "RelativeDocumentMoniker": "ReadEPCForm.cs",
@@ -180,31 +309,30 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "UHFAPI.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\UHFAPI.cs",
               "RelativeDocumentMoniker": "UHFAPI.cs",
               "ToolTip": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\UHFAPI.cs",
               "RelativeToolTip": "UHFAPI.cs",
-              "ViewState": "AgIAANICAAAAAAAAAADgv+ECAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAOYHAAAAAAAAAAAhwPwHAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-28T00:53:31.705Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "MainForm.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\MainForm.cs",
               "RelativeDocumentMoniker": "MainForm.cs",
               "ToolTip": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\MainForm.cs [Dise\u00F1o]",
               "RelativeToolTip": "MainForm.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T17:38:18.683Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-04-13T17:38:18.683Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 17,
               "Title": "BaseForm.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\BaseForm.cs",
               "RelativeDocumentMoniker": "BaseForm.cs",
@@ -215,20 +343,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainForm.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\MainForm.Designer.cs",
-              "RelativeDocumentMoniker": "MainForm.Designer.cs",
-              "ToolTip": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\MainForm.Designer.cs",
-              "RelativeToolTip": "MainForm.Designer.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAhwBMAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-12T21:12:33.972Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 12,
               "Title": "GetMozo.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\GetMozo.cs",
               "RelativeDocumentMoniker": "GetMozo.cs",
@@ -236,24 +351,22 @@
               "RelativeToolTip": "GetMozo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-13T21:41:20.217Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-13T21:41:20.217Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 13,
               "Title": "MainForm.resx",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\MainForm.resx",
               "RelativeDocumentMoniker": "MainForm.resx",
               "ToolTip": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\MainForm.resx",
               "RelativeToolTip": "MainForm.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-04-13T17:15:51.059Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-13T17:15:51.059Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 21,
               "Title": "ConfigForm.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\ConfigForm.cs",
               "RelativeDocumentMoniker": "ConfigForm.cs",
@@ -261,12 +374,11 @@
               "RelativeToolTip": "ConfigForm.cs",
               "ViewState": "AgIAABoAAAAAAAAAAABRwB0AAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T06:43:00.522Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-26T06:43:00.522Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 23,
               "Title": "ReceiveEPC.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\ReceiveEPC.cs",
               "RelativeDocumentMoniker": "ReceiveEPC.cs",
@@ -277,7 +389,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 22,
               "Title": "ReadEPCForm.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\ReadEPCForm.cs",
               "RelativeDocumentMoniker": "ReadEPCForm.cs",
@@ -288,7 +400,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 16,
               "Title": "ReadEPCFormData.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\ReadEPCFormData.cs",
               "RelativeDocumentMoniker": "ReadEPCFormData.cs",
@@ -300,7 +412,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 19,
               "Title": "MainForm.resx",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\MainForm.resx",
               "RelativeDocumentMoniker": "MainForm.resx",
@@ -308,24 +420,22 @@
               "RelativeToolTip": "MainForm.resx",
               "ViewState": "AgIAAAAAAAAAAAAAAADgvyUCAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-04-13T17:18:22.598Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-13T17:18:22.598Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 20,
               "Title": "ConfigForm.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\ConfigForm.cs",
               "RelativeDocumentMoniker": "ConfigForm.cs",
               "ToolTip": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\ConfigForm.cs [Dise\u00F1o]",
               "RelativeToolTip": "ConfigForm.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-26T06:42:57.186Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-08-26T06:42:57.186Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 24,
               "Title": "ReceiveEPC.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\ReceiveEPC.cs",
               "RelativeDocumentMoniker": "ReceiveEPC.cs",
@@ -337,7 +447,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 32,
               "Title": "TempertureTag2MainForm.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\custom\\TempertureTag2\\TempertureTag2MainForm.cs",
               "RelativeDocumentMoniker": "custom\\TempertureTag2\\TempertureTag2MainForm.cs",
@@ -348,7 +458,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 25,
               "Title": "frmWaitingBox.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\frmWaitingBox.cs",
               "RelativeDocumentMoniker": "frmWaitingBox.cs",
@@ -360,7 +470,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 26,
               "Title": "frmWaitingBox.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\frmWaitingBox.cs",
               "RelativeDocumentMoniker": "frmWaitingBox.cs",
@@ -371,7 +481,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 27,
               "Title": "ReadEPCForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\ReadEPCForm.Designer.cs",
               "RelativeDocumentMoniker": "ReadEPCForm.Designer.cs",
@@ -383,7 +493,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 29,
               "Title": "BaseForm.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\BaseForm.cs",
               "RelativeDocumentMoniker": "BaseForm.cs",
@@ -395,7 +505,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 28,
               "Title": "DeviceInfo.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\DeviceInfo.cs",
               "RelativeDocumentMoniker": "DeviceInfo.cs",
@@ -407,7 +517,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 30,
               "Title": "app.config",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\app.config",
               "RelativeDocumentMoniker": "app.config",
@@ -415,12 +525,11 @@
               "RelativeToolTip": "app.config",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-04-12T17:39:36.975Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-12T17:39:36.975Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 31,
               "Title": "Test.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mono-grau\\demo source code\\UR4Demo\\UR4Demo\\Test.cs",
               "RelativeDocumentMoniker": "Test.cs",

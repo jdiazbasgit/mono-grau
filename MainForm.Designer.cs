@@ -26,9 +26,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            this.Load += new System.EventHandler(this.ScanEPCForm_Load);
             this.MenuItemScanEPC = new System.Windows.Forms.ToolStripMenuItem();
             this.configToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.Load += new System.EventHandler(this.ScanEPCForm_Load);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -184,7 +184,7 @@
             this.label5.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label5.Location = new System.Drawing.Point(269, 235);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 34);
+            this.label5.Size = new System.Drawing.Size(0, 27);
             this.label5.TabIndex = 13;
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
@@ -195,7 +195,7 @@
             this.label6.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label6.Location = new System.Drawing.Point(425, 235);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 34);
+            this.label6.Size = new System.Drawing.Size(0, 27);
             this.label6.TabIndex = 14;
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
@@ -206,9 +206,9 @@
             this.label7.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label7.Location = new System.Drawing.Point(425, 330);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(30, 34);
+            this.label7.Size = new System.Drawing.Size(24, 27);
             this.label7.TabIndex = 15;
-            this.label7.Text = "0";
+            this.label7.Text = "8";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label9
@@ -608,6 +608,7 @@
 
         #endregion
         private System.Windows.Forms.ToolStripMenuItem MenuItemScanEPC;
+
         private System.Windows.Forms.ToolStripMenuItem configToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Button button1;
