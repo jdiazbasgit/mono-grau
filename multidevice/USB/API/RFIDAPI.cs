@@ -146,7 +146,7 @@ namespace UHFAPP.USB.multidevice
             //    list.Add(new AntennaPowerEntity(AntennaEnum.ANT8, (power[7] == 0 ? power[0] : power[7]) - 1));
             //    return list;
             //}
-            return -1;
+            //return -1;
         }
 
         #endregion

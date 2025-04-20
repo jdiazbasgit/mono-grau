@@ -405,3 +405,71 @@ Nombre del parámetro: index
    en System.Collections.Generic.List`1.get_Item(Int32 index)
    en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 643
 -----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Referencia a objeto no establecida como instancia de un objeto.
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 516
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Referencia a objeto no establecida como instancia de un objeto.
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 516
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Referencia a objeto no establecida como instancia de un objeto.
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 516
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Referencia a objeto no establecida como instancia de un objeto.
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 516
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Referencia a objeto no establecida como instancia de un objeto.
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 516
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Referencia a objeto no establecida como instancia de un objeto.
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 516
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Error en el servidor remoto: (404) No se encontró.
+   en System.Net.HttpWebRequest.GetResponse()
+   en UHFAPP.MainForm.grabarOrdenAmipem()
+   en UHFAPP.MainForm.textBox3_TextChanged(Object sender, EventArgs e)
+   en System.Windows.Forms.Control.OnTextChanged(EventArgs e)
+   en System.Windows.Forms.TextBoxBase.OnTextChanged(EventArgs e)
+   en System.Windows.Forms.TextBoxBase.WmReflectCommand(Message& m)
+   en System.Windows.Forms.TextBoxBase.WndProc(Message& m)
+   en System.Windows.Forms.TextBox.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Error en el servidor remoto: (500) Error interno del servidor.
+   en System.Net.HttpWebRequest.GetResponse()
+   en UHFAPP.MainForm.grabarOrdenAmipem() en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 647
+   en UHFAPP.MainForm.textBox3_TextChanged(Object sender, EventArgs e) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 853
+   en System.Windows.Forms.Control.OnTextChanged(EventArgs e)
+   en System.Windows.Forms.TextBoxBase.OnTextChanged(EventArgs e)
+   en System.Windows.Forms.TextBoxBase.WmReflectCommand(Message& m)
+   en System.Windows.Forms.TextBoxBase.WndProc(Message& m)
+   en System.Windows.Forms.TextBox.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Int32.Parse(String s)
+   en UHFAPP.MainForm.grabarOrdenAmipem() en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 640
+   en UHFAPP.MainForm.textBox3_TextChanged(Object sender, EventArgs e) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 855
+   en System.Windows.Forms.Control.OnTextChanged(EventArgs e)
+   en System.Windows.Forms.TextBoxBase.OnTextChanged(EventArgs e)
+   en System.Windows.Forms.TextBoxBase.WmReflectCommand(Message& m)
+   en System.Windows.Forms.TextBoxBase.WndProc(Message& m)
+   en System.Windows.Forms.TextBox.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+-----------------------end----------------------------

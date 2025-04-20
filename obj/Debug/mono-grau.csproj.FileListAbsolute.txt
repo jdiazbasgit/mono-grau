@@ -1,6 +1,5 @@
 C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\obj\Debug\mono-grau.csproj.AssemblyReference.cache
 C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\obj\Debug\UHFAPP.BaseForm.resources
-C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\obj\Debug\UHFAPP.ConfigForm.resources
 C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\obj\Debug\WinForm_Test.frmWaitingBox.resources
 C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\obj\Debug\UHFAPP.MainForm.resources
 C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\obj\Debug\UHFAPP.multidevice.DeviceListForm.resources
@@ -8,8 +7,6 @@ C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\obj\Debug\UH
 C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\obj\Debug\UHFAPP.USB.multidevice.DeviceListForm.resources
 C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\obj\Debug\UHFAPP.USB.multidevice.UsbMainForm.resources
 C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\obj\Debug\UHFAPP.Properties.Resources.resources
-C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\obj\Debug\UHFAPP.ReadEPCForm.resources
-C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\obj\Debug\UHFAPP.ReceiveEPC.resources
 C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\obj\Debug\UHFAPP.RFID.RFIDMainForm.resources
 C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\obj\Debug\mono-grau.csproj.GenerateResource.cache
 C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\obj\Debug\mono-grau.csproj.CoreCompileInputs.cache

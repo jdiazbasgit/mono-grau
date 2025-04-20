@@ -14,7 +14,6 @@ using System.Xml.Linq;
 using ApodemiaC;
 using BLEDeviceAPI;
 using Lucene.Net.Support;
-using Microsoft.Office.Interop.Excel;
 using Newtonsoft.Json;
 
 
@@ -39,7 +38,6 @@ namespace UHFAPP
         private GetMozo getMozo;
         public delegate void DelegateOpen(bool open);
         public static event DelegateOpen eventOpen = null;
-        private ConfigForm configForm;
         public delegate void DelegateSwitchUI();
         public static event DelegateSwitchUI eventSwitchUI = null;
         public static bool isVisible = false;
@@ -54,8 +52,12 @@ namespace UHFAPP
         private List<int> tagsCantidad = new List<int>();
         private string currentFormName = "";
         private bool isOpen = false;
+        private int idOrdenAmipem;
+        private int totalesLeidos;
+        private int totalesValidos;
         public MainForm mainform = null;
-        private ReadEPCForm readEPCForm = null;
+        private int cantidadPorLote;
+        private int loteActual;
         public static FormWindowState currState = FormWindowState.Normal;
         List<EpcInfo> epcList = new List<EpcInfo>();
         public bool isSearch = false;
@@ -89,7 +91,7 @@ namespace UHFAPP
             }
 
         }
-      
+
         UHFAPP.UHFAPI.OnDisconnectCallback DisconnectCallback = null;
 
         #endregion
@@ -104,11 +106,11 @@ namespace UHFAPP
             button1.Text = strOpen;
             button1.BackColor = System.Drawing.Color.Red;
             DisconnectCallback = OnDisconnectCallback;
+            toolStripButton1_Click();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            MenuItemScanEPC_Click(null, null);
             setComPort();
             disableControls(false);
 
@@ -123,7 +125,7 @@ namespace UHFAPP
 
         public void ReadWriteTag(string tag, int bank)
         {
-           
+
 
         }
 
@@ -146,10 +148,10 @@ namespace UHFAPP
 
             if (button1.Text.Trim() == strClose.Trim())
             {
-                
-                    uhf.CloseUsb();
-                    return true;
-               
+
+                uhf.CloseUsb();
+                return true;
+
 
 
             }
@@ -173,26 +175,10 @@ namespace UHFAPP
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void MenuItemScanEPC_Click(object sender, EventArgs e)
-        {
-            if(configForm!=null)
-            configForm.Close();
-            ocultarControles(true);
-           
-        }
        
-        private void configToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-         
-             configForm = new ConfigForm(isOpen,this);
-           configForm.Visible = true;   
-            ocultarControles(false);
-            
-            Form form = ShowForm(configForm, false);
-        }
         private void ocultarControles(bool dato)
         {
-           
+
             label1.Visible = dato;
             textBox1.Visible = dato;
             button2.Visible = dato;
@@ -200,7 +186,7 @@ namespace UHFAPP
             btnScanEPC.Visible = dato;
             label2.Visible = dato;
             label3.Visible = dato;
-          //  label4.Visible = dato;
+            //  label4.Visible = dato;
             label5.Visible = dato;
             label6.Visible = dato;
             label7.Visible = dato;
@@ -208,43 +194,42 @@ namespace UHFAPP
             label9.Visible = dato;
             label14.Visible = dato;
             label15.Visible = dato;
-          // label16.Visible = dato;
+            // label16.Visible = dato;
             label17.Visible = dato;
             label18.Visible = dato;
             label19.Visible = dato;
             label20.Visible = dato;
             label22.Visible = dato;
-           // label26.Visible = dato;
+            // label26.Visible = dato;
             label27.Visible = dato;
         }
-      
-        
-        private void toolStripButton1_Click(object sender, EventArgs e)
+
+
+        private void toolStripButton1_Click()
         {
             btnScanEPC.BackColor = System.Drawing.Color.White;
-            if (button1.Text == strOpen)
-            {
+            
                 btnScanEPC.Enabled = true;
                 btnScanEPC.Visible = true;
-                
-                string msg =  "Conectando lector..." ;
+
+                string msg = "Conectando lector...";
 
                 StartReceiveThread();
 
                 frmWaitingBox f = new frmWaitingBox((obj, args) =>
                 {
                     bool result = false;
-                   
-                        result = uhf.OpenUsb();
-                        UHFAPI.setOnDataReceived(onDataReceived);
-                   
+
+                    result = uhf.OpenUsb();
+                    UHFAPI.setOnDataReceived(onDataReceived);
+
                     UHFAPI.SetDisconnectCallback(DisconnectCallback);
 
                     if (result)
                     {
                         this.Invoke(new EventHandler(delegate
                         {
-                           
+
                             isOpen = true;
                             if (eventOpen != null)
                             {
@@ -254,49 +239,30 @@ namespace UHFAPP
 
                         }));
                         Thread.Sleep(2000);
-                       
-                        
+
+
                     }
                     else
                     {
-                        frmWaitingBox.message = "Error al desconectar el lector";
+                        frmWaitingBox.message = "Error al conectar el lector";
                         Thread.Sleep(2000);
                     }
                 }, msg);
                 f.BackColor = System.Drawing.Color.Gray;
                 f.ShowDialog(this);
-               // Thread.Sleep(5000);
+                // Thread.Sleep(5000);
                 button1.BackColor = System.Drawing.Color.GreenYellow;
                 button1.Text = strClose;
                 btnScanEPC.Visible = true;
                 btnScanEPC.BackColor = System.Drawing.Color.Green;
                 btnScanEPC.Text = strStart;
-
-            }
-            else
-            {
-                if (UHFClose())
-                {
-                    disableControls(false);
-                    button1.Text = strOpen;
-                    button1.BackColor = System.Drawing.Color.Red;
-                    btnScanEPC.Visible = false;
-
-                    isOpen = false;
-                    if (eventOpen != null)
-                    {
-                        eventOpen(false);
-                    }
-                }
-            }
-
         }
 
 
-        
 
 
-        
+
+
 
         #endregion
 
@@ -323,7 +289,7 @@ namespace UHFAPP
             Marshal.Copy(pdata, cellData, 0, len);
 
             byte[] pcontent;
-           
+
             byte[] temp = null;
             string str;
             while (index < len)
@@ -374,14 +340,14 @@ namespace UHFAPP
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-           
+
         }
 
-       
 
-       
 
-       
+
+
+
 
         #endregion
 
@@ -394,22 +360,22 @@ namespace UHFAPP
                 eventMainSizeChanged(WindowState);
             }
         }
-       
-       
+
+
 
         public void enableControls()
         {
             MenuItemScanEPC.Enabled = true;
             configToolStripMenuItem.Enabled = true;
-           
 
-           
+
+
         }
         public void disableControls(bool isInventory)
         {
             MenuItemScanEPC.Enabled = false;
             configToolStripMenuItem.Enabled = false;
-           
+
 
 
         }
@@ -417,12 +383,12 @@ namespace UHFAPP
         {
 
         }
-       
 
-      
+
+
         private void setComPort()
         {
-           
+
         }
 
         public Form ShowForm(Form nextForm, bool isCache)
@@ -453,7 +419,7 @@ namespace UHFAPP
             from.WindowState = FormWindowState.Maximized;
             from.MdiParent = this;
             from.AutoScaleMode = AutoScaleMode.Inherit;
-          
+
 
             from.Show();
             return from;
@@ -461,7 +427,7 @@ namespace UHFAPP
 
         private void LoadUI()
         {
-           
+
         }
 
         #endregion
@@ -473,7 +439,7 @@ namespace UHFAPP
 
         private void button1_Click(object sender, EventArgs e)
         {
-            toolStripButton1_Click(sender, e);  
+            toolStripButton1_Click();
         }
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -489,16 +455,16 @@ namespace UHFAPP
         private void StopEPC(bool isStop)
         {
             bool reuslt = uhf.StopInventory();
-          
+
             if (!reuslt)
             {
-                MessageBox.Show("Stop fail" );
+                MessageBox.Show("Stop fail");
             }
 
-            btnScanEPC.Text = strStart ;
+            btnScanEPC.Text = strStart;
             btnScanEPC.BackColor = System.Drawing.Color.Green;
             mainform.enableControls();
-           // Thread.Sleep(100);
+            // Thread.Sleep(100);
         }
 
         private void Time() { }
@@ -530,12 +496,13 @@ namespace UHFAPP
             {
                 return;
             }
-           // label6.Text = (tempCount += int.Parse(count)).ToString();
+            // label6.Text = (tempCount += int.Parse(count)).ToString();
 
             bool[] exist = new bool[1];
             int index = CheckUtils.getInsertIndex(epcList, epc, tid, exist);
 
             total++;
+
             if (exist[0])
             {
                 epcList[index].AddAntennaInfoByAnt(int.Parse(ant), rssi);
@@ -549,7 +516,6 @@ namespace UHFAPP
                     stringBuilderANT.Append(list[k].AntennaPort);
                     stringBuilderANT.Append(": ");
                     stringBuilderANT.Append(list[k].Count);
-                    // stringBuilderRSSI.Append("RSSI:");
                     stringBuilderRSSI.Append(list[k].Rssi);
                     if (k != list.Count - 1)
                     {
@@ -562,36 +528,7 @@ namespace UHFAPP
                 epcList[index].Tid = tid;
                 epcList[index].TidBytes = DataConvert.HexStringToByteArray(tid);
 
-               /* if (cmbFormat.SelectedIndex == 2)
-                {
-                    if (!string.IsNullOrEmpty(epc))
-                    {
-                        epc = epc + System.Environment.NewLine + "Ascii:" + System.Text.Encoding.ASCII.GetString(DataConvert.HexStringToByteArray(epc));
-                    }
-
-                    if (!string.IsNullOrEmpty(user))
-                    {
-                        user = user + System.Environment.NewLine + "Ascii:" + System.Text.Encoding.ASCII.GetString(DataConvert.HexStringToByteArray(user));
-                    }
-                }
-                else if (cmbFormat.SelectedIndex == 1)
-                {
-                    if (!string.IsNullOrEmpty(epc))
-                    {
-                        epc = System.Text.Encoding.ASCII.GetString(DataConvert.HexStringToByteArray(epc));
-                    }
-
-                    if (!string.IsNullOrEmpty(user))
-                    {
-                        user = System.Text.Encoding.ASCII.GetString(DataConvert.HexStringToByteArray(user));
-                    }
-                }
-                this.dgData.Rows[index].Cells[1].Value = epc;
-                this.dgData.Rows[index].Cells[2].Value = tid;
-                this.dgData.Rows[index].Cells[3].Value = user;
-                this.dgData.Rows[index].Cells[4].Value = stringBuilderRSSI.ToString();
-                this.dgData.Rows[index].Cells[5].Value = epcList[index].Count;
-                this.dgData.Rows[index].Cells[6].Value = stringBuilderANT.ToString();*/
+               
 
             }
             else
@@ -599,45 +536,16 @@ namespace UHFAPP
                 EpcInfo epcInfo = new EpcInfo(epc, tid, int.Parse(count), DataConvert.HexStringToByteArray(epc), DataConvert.HexStringToByteArray(tid), int.Parse(ant), rssi, user);
                 epcList.Insert(index, epcInfo);
 
-               // total++;
-                /* if (cmbFormat.SelectedIndex == 2)
-                 {
-                     if (!string.IsNullOrEmpty(epc))
-                     {
-                         epc = epc + System.Environment.NewLine + "Ascii:" + System.Text.Encoding.ASCII.GetString(DataConvert.HexStringToByteArray(epc));
-                     }
 
-                     if (!string.IsNullOrEmpty(user))
-                     {
-                         user = user + System.Environment.NewLine + "Ascii:" + System.Text.Encoding.ASCII.GetString(DataConvert.HexStringToByteArray(user));
-                     }
-                 }
-                 else if (cmbFormat.SelectedIndex == 1)
-                 {
-                     if (!string.IsNullOrEmpty(epc))
-                     {
-                         epc = System.Text.Encoding.ASCII.GetString(DataConvert.HexStringToByteArray(epc));
-                     }
 
-                     if (!string.IsNullOrEmpty(user))
-                     {
-                         user = System.Text.Encoding.ASCII.GetString(DataConvert.HexStringToByteArray(user));
-                     }
-                 }*/
-
-                /* StringBuilder stringBuilder = new StringBuilder();
-                 stringBuilder.Append("ANT");
-                 stringBuilder.Append(ant);
-                 stringBuilder.Append(": 1");
-
-                 object[] values = new object[] { (index + 1), epc, tid, user, rssi, 1, stringBuilder.ToString() };
-                 dgData.Rows.Insert(index, values);*/
-
-                //  lblTotal.Text = (dgData.RowCount - 1).ToString();
                 label10.Text = total.ToString();
                 label23.Text = epcList.Count.ToString();
+                totalesLeidos += total;
+                totalesValidos += epcList.Count;
+                label22.Text = "" + totalesLeidos;
+                label4.Text = "" + totalesValidos;
                 //if (total >= Int32.Parse(label7.Text))
-                if (Int32.Parse(label23.Text) >= Int32.Parse(label7.Text))
+                if (Int32.Parse(label23.Text) >= cantidadPorLote)
                 {
                     panel5.Visible = true;
                     total = 0;
@@ -646,34 +554,10 @@ namespace UHFAPP
                 }
 
             }
-           /* if (epc.Length > 40 || (user != null && user.Length > 40))
-            {
-                AutoCellsWidth(true);
-            }*/
+           
 
         }
 
-
-        /*
-                    if (epc == null)
-                     {
-                         return;
-                     }
-
-
-
-                    total++;
-
-                    label10.Text = total.ToString();
-                    label23.Text = total.ToString();
-                    if (total== Int32.Parse(label7.Text))
-                    {
-                        panel5.Visible = true;
-                        total = 0;
-                        StopEPC(true);
-                    }*/
-       
-       // }
         private void leerOrden()
         {
             SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\chimes.wav");
@@ -689,37 +573,141 @@ namespace UHFAPP
             request.Method = "GET";
             request.ContentType = "application/json";
             request.Accept = "application/json";
-             try
-             {
-                 using (WebResponse response = request.GetResponse())
-                 {
-                     using (Stream strReader = response.GetResponseStream())
-                     {
-                         if (strReader == null) return;
-                         using (StreamReader objReader = new StreamReader(strReader))
-                         {
-                             string responseBody = objReader.ReadToEnd();
-                             string responseBodyFormater = responseBody.Replace("@odata.context", "dataContext");
-                             responseBodyFormater = responseBodyFormater.Replace("@odata.etag", "odataETag");
-                              getMozo = JsonConvert.DeserializeObject<GetMozo>(responseBodyFormater);
-                             label5.Text = getMozo.Value[0].ItemNo ;
-                            label6.Text = getMozo.Value[0].Description; 
-                             label7.Text = getMozo.Value[0].RemainingQtyBase.ToString();
-                             label2.Visible = true;
-                         }
-                     }
-                 }
-             }
-             catch (Exception ex)
-             {
-                 MessageBox.Show("Orden no existe"); // Handle error
-                 textBox1.Text = "";
-             }
+            try
+            {
+                using (WebResponse response = request.GetResponse())
+                {
+                    using (Stream strReader = response.GetResponseStream())
+                    {
+                        if (strReader == null) return;
+                        using (StreamReader objReader = new StreamReader(strReader))
+                        {
+                            string responseBody = objReader.ReadToEnd();
+                            string responseBodyFormater = responseBody.Replace("@odata.context", "dataContext");
+                            responseBodyFormater = responseBodyFormater.Replace("@odata.etag", "odataETag");
+                            getMozo = JsonConvert.DeserializeObject<GetMozo>(responseBodyFormater);
+                            label5.Text = getMozo.Value[0].ItemNo;
+                            label6.Text = getMozo.Value[0].Description;
+                            label7.Text = getMozo.Value[0].RemainingQtyBase.ToString();
+                            label2.Visible = true;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Orden no existe"); // Handle error
+                textBox1.Text = "";
+            }
         }
+
+        private void leerOrdenAmipem()
+        {
+            SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\chimes.wav");
+            simpleSound.Play();
+
+            var url = "http://localhost:8080/leerOrden/"+textBox1.Text;
+
+            var request = (HttpWebRequest)WebRequest.Create(url);
+            
+            request.Method = "POST";
+            request.ContentType = "application/json";
+            request.Accept = "application/json";
+            try
+            {
+                using (WebResponse response = request.GetResponse())
+                {
+                    using (Stream strReader = response.GetResponseStream())
+                    {
+                        if (strReader == null) return;
+                        using (StreamReader objReader = new StreamReader(strReader))
+                        {
+                           
+                            string responseBody = objReader.ReadToEnd();
+                            Orden orden = JsonConvert.DeserializeObject<Orden>(responseBody);
+                            label5.Text = orden.item;
+                            label6.Text = orden.descripcion;
+                            label7.Text = ""+orden.cantidad;
+                            label11.Text ="Lote actual:"+loteActual;
+                            label2.Visible = true;
+                            idOrdenAmipem = orden.id;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Orden no existe"); // Handle error
+                textBox1.Text = "";
+            }
+        }
+
+        private void grabarOrdenAmipem()
+        {
+            SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\chimes.wav");
+            simpleSound.Play();
+
+            var url = "http://localhost:8080/grabarOrden/";
+
+            var request = (HttpWebRequest)WebRequest.Create(url);
+
+            request.Method = "POST";
+            request.ContentType = "application/json";
+            request.Accept = "application/json";
+            try
+            {
+                Orden orden = new Orden(idOrdenAmipem, textBox1.Text, label6.Text, label5.Text, Int32.Parse(textBox3.Text), Int32.Parse(label7.Text));
+                string salida = JsonConvert.SerializeObject(orden);
+                byte[] data = Encoding.UTF8.GetBytes(salida);
+                request.ContentLength = data.Length;
+                Stream stream = request.GetRequestStream();
+                stream.Write(data, 0, data.Length);
+                stream.Close();
+                using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
+                {
+                    //Leer el resultado de la llamada
+                    Stream stream1 = response.GetResponseStream();
+                    StreamReader sr = new StreamReader(stream1);
+                    string strsb = sr.ReadToEnd();
+                    Orden ordenRetorno = JsonConvert.DeserializeObject<Orden>(strsb);
+                    cantidadPorLote = Int32.Parse(label7.Text) / Int32.Parse(textBox3.Text);
+                    label25.Text = "LOTES: " + ordenRetorno.lotes+" ("+cantidadPorLote + ")";
+                    loteActual = 1;
+                }
+            }
+            catch (Exception e) { }
+
+
+
+           /*try
+            {
+                using (WebResponse response = request.GetResponse())
+                {
+                    using (Stream strReader = response.GetResponseStream())
+                    {
+                        if (strReader == null) return;
+                        using (StreamReader objReader = new StreamReader(strReader))
+                        {
+                            string responseBody = objReader.ReadToEnd();
+                            label5.Text = orden.item;
+                            label6.Text = orden.descripcion;
+                            label7.Text = "" + orden.cantidad;
+                            label2.Visible = true;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Orden no existe"); // Handle error
+                textBox1.Text = "";
+            }*/
+        }
+
         private void ScanEPCForm_Load(object sender, EventArgs e)
         {
             setTextCallback = new SetTextCallback(UpdataEPC);
-           
+
             LoadUI();
 
         }
@@ -728,8 +716,8 @@ namespace UHFAPP
 
         private void ScanEPCForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-          
-            if (btnScanEPC.Text == strStop )
+
+            if (btnScanEPC.Text == strStop)
             {
                 StopEPC(true);
             }
@@ -738,7 +726,7 @@ namespace UHFAPP
 
         private void ReadEPC()
         {
-            
+
             try
             {
                 while (isRuning)
@@ -753,14 +741,14 @@ namespace UHFAPP
                     if (info != null)
                     {
                         this.BeginInvoke(setTextCallback, new object[] { info.Epc, info.Tid, info.Rssi, "1", info.Ant, info.User });
-                        
+
                     }
                     else
                     {
                         this.BeginInvoke(setTextCallback, new object[] { null, null, null, null, null, null });
-                       
+
                     }
-                   
+
                 }
             }
             catch (Exception ex)
@@ -771,7 +759,7 @@ namespace UHFAPP
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (btnScanEPC.Text == strStop )
+            if (btnScanEPC.Text == strStop)
             {
                 StopEPC(true);
                 btnScanEPC.Text = strStart;
@@ -784,11 +772,14 @@ namespace UHFAPP
                 btnScanEPC.Text = strStop;
                 mainform.disableControls(true);
                 panel5.Visible = false;
+                loteActual++;
+                label11.Text = "Lote actual:" + loteActual;
+
                 if (uhf.StartInventory())
                 {
-                   
-                    btnScanEPC.Text = strStop ;
-                    
+
+                    btnScanEPC.Text = strStop;
+
                     new Thread(new ThreadStart(delegate { Time(); })).Start();
                 }
                 else
@@ -801,13 +792,11 @@ namespace UHFAPP
 
         private void button2_Click(object sender, EventArgs e)
         {
-            leerOrden();
+            //leerOrden();
+            leerOrdenAmipem();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void panel5_Paint(object sender, PaintEventArgs e)
         {
@@ -869,7 +858,7 @@ namespace UHFAPP
             sb.Append("cuatro\n");
             sb.Append("cinco\n");
             sb.Append("seis\n");
-            
+
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -885,6 +874,11 @@ namespace UHFAPP
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            grabarOrdenAmipem();
         }
     }
 }

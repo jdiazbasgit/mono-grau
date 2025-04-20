@@ -144,6 +144,7 @@
     <Compile Include="BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Contador.cs" />
     <Compile Include="Datos.cs" />
     <Compile Include="DeviceInfo.cs" />
     <Compile Include="Download\Downloader.cs" />
@@ -203,13 +204,10 @@
     <Compile Include="RFID-HF\ISO15693Entity.cs" />
     <Compile Include="RFID-HF\PSAMAPI.cs" />
     <Compile Include="utils\CheckUtils.cs" />
+    <Compile Include="utils\Orden.cs" />
+    <Compile Include="utils\Peticion.cs" />
+    <Compile Include="utils\Grabacion.cs" />
     <Compile Include="utils\Common.cs" />
-    <Compile Include="ConfigForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ConfigForm.Designer.cs">
-      <DependentUpon>ConfigForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="utils\DataConvert.cs" />
     <Compile Include="utils\EpcInfo.cs" />
     <Compile Include="utils\FileManage.cs" />
@@ -233,10 +231,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ConfigForm.resx">
-      <DependentUpon>ConfigForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmWaitingBox.resx">
@@ -267,14 +261,6 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReadEPCForm.resx">
-      <DependentUpon>ReadEPCForm.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ReceiveEPC.resx">
-      <DependentUpon>ReceiveEPC.cs</DependentUpon>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
     <EmbeddedResource Include="RFID-HF\HFMainForm.resx">
       <DependentUpon>HFMainForm.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -294,19 +280,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-    <Compile Include="ReadEPCFormData.cs" />
-    <Compile Include="ReadEPCForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ReadEPCForm.Designer.cs">
-      <DependentUpon>ReadEPCForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ReceiveEPC.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ReceiveEPC.Designer.cs">
-      <DependentUpon>ReceiveEPC.cs</DependentUpon>
     </Compile>
     <Compile Include="utils\StringUtils.cs" />
     <Compile Include="UHFAPI.cs" />
