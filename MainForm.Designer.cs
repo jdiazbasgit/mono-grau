@@ -26,10 +26,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.MenuItemScanEPC = new System.Windows.Forms.ToolStripMenuItem();
-            this.configToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,7 +42,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -53,41 +51,12 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.menuStrip1.SuspendLayout();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.epcs)).BeginInit();
             this.panel9.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // MenuItemScanEPC
-            // 
-            this.MenuItemScanEPC.Name = "MenuItemScanEPC";
-            this.MenuItemScanEPC.Size = new System.Drawing.Size(74, 50);
-            this.MenuItemScanEPC.Text = "Calidad";
-            this.MenuItemScanEPC.Visible = false;
-            // 
-            // configToolStripMenuItem
-            // 
-            this.configToolStripMenuItem.Name = "configToolStripMenuItem";
-            this.configToolStripMenuItem.Size = new System.Drawing.Size(114, 50);
-            this.configToolStripMenuItem.Text = "Configuration";
-            this.configToolStripMenuItem.Visible = false;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.Color.White;
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MenuItemScanEPC,
-            this.configToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.MinimumSize = new System.Drawing.Size(1737, 50);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(0);
-            this.menuStrip1.Size = new System.Drawing.Size(2324, 50);
-            this.menuStrip1.TabIndex = 2;
-            this.menuStrip1.Text = "ScanEPC";
             // 
             // button1
             // 
@@ -105,30 +74,30 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold);
             this.label3.Location = new System.Drawing.Point(1145, 161);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 27);
+            this.label3.Size = new System.Drawing.Size(113, 27);
             this.label3.TabIndex = 11;
             this.label3.Text = "Unidades:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold);
             this.label2.Location = new System.Drawing.Point(855, 161);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 27);
+            this.label2.Size = new System.Drawing.Size(125, 27);
             this.label2.TabIndex = 10;
             this.label2.Text = "Referencia:";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.label15.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold);
             this.label15.Location = new System.Drawing.Point(1328, 161);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(164, 27);
+            this.label15.Size = new System.Drawing.Size(174, 27);
             this.label15.TabIndex = 12;
             this.label15.Text = "Lotes (opcional)";
             // 
@@ -136,18 +105,17 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label5.Location = new System.Drawing.Point(977, 161);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(24, 27);
+            this.label5.Size = new System.Drawing.Size(0, 27);
             this.label5.TabIndex = 13;
-            this.label5.Text = "5";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label7.Location = new System.Drawing.Point(1257, 161);
             this.label7.Name = "label7";
@@ -158,13 +126,12 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 16F);
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label6.Location = new System.Drawing.Point(855, 219);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(31, 35);
+            this.label6.Size = new System.Drawing.Size(0, 36);
             this.label6.TabIndex = 14;
-            this.label6.Text = "6";
             // 
             // textBox1
             // 
@@ -178,10 +145,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold);
             this.label1.Location = new System.Drawing.Point(171, 165);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 27);
+            this.label1.Size = new System.Drawing.Size(80, 27);
             this.label1.TabIndex = 7;
             this.label1.Text = "Orden:";
             // 
@@ -198,7 +165,7 @@
             // button2
             // 
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button2.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.button2.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold);
             this.button2.Location = new System.Drawing.Point(586, 153);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
@@ -231,28 +198,16 @@
             this.panel7.Size = new System.Drawing.Size(100, 89);
             this.panel7.TabIndex = 37;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label9.Font = new System.Drawing.Font("Microsoft YaHei", 20F);
-            this.label9.ForeColor = System.Drawing.Color.Olive;
-            this.label9.Location = new System.Drawing.Point(975, 379);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(40, 45);
-            this.label9.TabIndex = 17;
-            this.label9.Text = "9";
-            // 
             // label23
             // 
             this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.Color.White;
             this.label23.Font = new System.Drawing.Font("Microsoft YaHei", 20F);
             this.label23.ForeColor = System.Drawing.Color.Black;
-            this.label23.Location = new System.Drawing.Point(1236, 379);
+            this.label23.Location = new System.Drawing.Point(1254, 347);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(60, 45);
+            this.label23.Size = new System.Drawing.Size(0, 56);
             this.label23.TabIndex = 29;
-            this.label23.Text = "23";
             // 
             // panel6
             // 
@@ -279,20 +234,32 @@
             // 
             // epcs
             // 
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.epcs.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.epcs.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.epcs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.epcs.BackgroundColor = System.Drawing.Color.White;
             this.epcs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.epcs.DefaultCellStyle = dataGridViewCellStyle2;
             this.epcs.GridColor = System.Drawing.Color.White;
             this.epcs.Location = new System.Drawing.Point(861, 427);
             this.epcs.Name = "epcs";
             this.epcs.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.NullValue = null;
-            this.epcs.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.NullValue = null;
+            this.epcs.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.epcs.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.epcs.RowTemplate.Height = 24;
+            this.epcs.RowTemplate.ReadOnly = true;
             this.epcs.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.epcs.Size = new System.Drawing.Size(1168, 479);
             this.epcs.TabIndex = 37;
@@ -300,17 +267,17 @@
             // label25
             // 
             this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.White;
             this.label25.Font = new System.Drawing.Font("Microsoft YaHei", 20F);
             this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label25.Location = new System.Drawing.Point(1566, 379);
+            this.label25.Location = new System.Drawing.Point(1566, 347);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(60, 45);
+            this.label25.Size = new System.Drawing.Size(0, 45);
             this.label25.TabIndex = 19;
-            this.label25.Text = "25";
             // 
             // btnScanEPC
             // 
-            this.btnScanEPC.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.btnScanEPC.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold);
             this.btnScanEPC.Location = new System.Drawing.Point(288, 256);
             this.btnScanEPC.Margin = new System.Windows.Forms.Padding(4);
             this.btnScanEPC.Name = "btnScanEPC";
@@ -325,13 +292,13 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 20F);
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(1869, 379);
+            this.label4.Location = new System.Drawing.Point(1869, 347);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(40, 45);
+            this.label4.Size = new System.Drawing.Size(0, 56);
             this.label4.TabIndex = 29;
-            this.label4.Text = "0";
             // 
             // panel9
             // 
@@ -365,10 +332,21 @@
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(513, 28);
+            this.panel1.Location = new System.Drawing.Point(1669, 28);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(346, 82);
+            this.panel1.Size = new System.Drawing.Size(346, 227);
             this.panel1.TabIndex = 38;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.White;
+            this.label9.Font = new System.Drawing.Font("Microsoft YaHei", 20F);
+            this.label9.ForeColor = System.Drawing.Color.Olive;
+            this.label9.Location = new System.Drawing.Point(975, 347);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(0, 56);
+            this.label9.TabIndex = 17;
             // 
             // MainForm
             // 
@@ -377,11 +355,9 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(2005, 1129);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.panel9);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
-            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "MainForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
@@ -391,23 +367,16 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.Load += new System.EventHandler(this.ScanEPCForm_Load);
             this.SizeChanged += new System.EventHandler(this.MainForm_SizeChanged);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.epcs)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.ToolStripMenuItem MenuItemScanEPC;
-
-        private System.Windows.Forms.ToolStripMenuItem configToolStripMenuItem;
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -421,7 +390,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel8;
@@ -431,6 +399,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label9;
         // private System.Windows.Forms.Panel panel1;
     }
 }

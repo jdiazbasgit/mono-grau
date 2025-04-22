@@ -554,3 +554,63 @@ Application_ThreadException:La cadena de entrada no tiene el formato correcto.
    en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
    en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
 -----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Int32.Parse(String s)
+   en UHFAPP.MainForm.textBox3_TextChanged(Object sender, EventArgs e) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 672
+   en System.Windows.Forms.Control.OnTextChanged(EventArgs e)
+   en System.Windows.Forms.TextBoxBase.OnTextChanged(EventArgs e)
+   en System.Windows.Forms.TextBoxBase.WmReflectCommand(Message& m)
+   en System.Windows.Forms.TextBoxBase.WndProc(Message& m)
+   en System.Windows.Forms.TextBox.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Int32.Parse(String s)
+   en UHFAPP.MainForm.textBox3_TextChanged(Object sender, EventArgs e) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 672
+   en System.Windows.Forms.Control.OnTextChanged(EventArgs e)
+   en System.Windows.Forms.TextBoxBase.OnTextChanged(EventArgs e)
+   en System.Windows.Forms.TextBoxBase.WmReflectCommand(Message& m)
+   en System.Windows.Forms.TextBoxBase.WndProc(Message& m)
+   en System.Windows.Forms.TextBox.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Int32.Parse(String s)
+   en UHFAPP.MainForm.textBox3_TextChanged(Object sender, EventArgs e) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 672
+   en System.Windows.Forms.Control.OnTextChanged(EventArgs e)
+   en System.Windows.Forms.TextBoxBase.OnTextChanged(EventArgs e)
+   en System.Windows.Forms.TextBoxBase.WmReflectCommand(Message& m)
+   en System.Windows.Forms.TextBoxBase.WndProc(Message& m)
+   en System.Windows.Forms.TextBox.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Int32.Parse(String s)
+   en UHFAPP.MainForm.textBox3_TextChanged(Object sender, EventArgs e) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 672
+   en System.Windows.Forms.Control.OnTextChanged(EventArgs e)
+   en System.Windows.Forms.TextBoxBase.OnTextChanged(EventArgs e)
+   en System.Windows.Forms.TextBoxBase.WmReflectCommand(Message& m)
+   en System.Windows.Forms.TextBoxBase.WndProc(Message& m)
+   en System.Windows.Forms.TextBox.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+-----------------------end----------------------------

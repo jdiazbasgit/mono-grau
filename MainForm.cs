@@ -71,7 +71,6 @@ namespace UHFAPP
                 {
                     this.Invoke(new EventHandler(delegate
                     {
-                        disableControls(false);
                         button1.Text = strOpen;
                         button1.BackColor = System.Drawing.Color.Red;
                         isOpen = false;
@@ -156,7 +155,6 @@ namespace UHFAPP
                             {
                                 eventOpen(true);
                             }
-                            enableControls();
 
                         }));
                         Thread.Sleep(2000);
@@ -257,17 +255,7 @@ namespace UHFAPP
             }
         }
 
-        public void enableControls()
-        {
-            MenuItemScanEPC.Enabled = true;
-            configToolStripMenuItem.Enabled = true;
-
-        }
-        public void disableControls(bool isInventory)
-        {
-            MenuItemScanEPC.Enabled = false;
-            configToolStripMenuItem.Enabled = false;
-        }
+        
 
        
 
@@ -292,7 +280,6 @@ namespace UHFAPP
 
             btnScanEPC.Text = strStart;
             btnScanEPC.BackColor = System.Drawing.Color.Green;
-            mainform.enableControls();
             // Thread.Sleep(100);
         }
 
@@ -366,35 +353,11 @@ namespace UHFAPP
 
 
 
-                label23.Text = epcList.Count.ToString();
+                label4.Text = epcList.Count.ToString();
                 totalesValidos++;
-                label4.Text = "" + totalesValidos;
+                label23.Text = "" + totalesValidos;
                 epcs.Rows.Add(epcList[epcList.Count - 1].Epc,"EPC");
 
-
-               /* epcs.Rows.Clear();
-                int l = 1;
-                for (int i = 0; i < epcList.Count; i++)
-                {
-                    for (int j = 0; j < lotesOrden; j++)
-                    {
-                        if (i == 0)
-                        {
-                            epcs.Rows.Add("LOTE: " + 1, "EPC");
-                            break;
-                        }
-                        else
-                        if (j == loteActual)
-                        {
-                            epcs.Rows.Add("LOTE: " + loteActual, "EPC");
-                        }
-
-                        epcs.Rows.Add(epcList[i].Epc, "EPC");
-                    }
-                }*/
-               
-                //if (total >= Int32.Parse(label7.Text))
-               // if (Int32.Parse(label23.Text) >= cantidadPorLote)
                if(cantidadPorLote*loteActual== epcList.Count)
                 {
                     
@@ -417,6 +380,7 @@ namespace UHFAPP
                         epcList.Clear();
                         textBox1.Text = "";
                         epcs.Rows.Add("FIN DE ORDEN" ,"EPC");
+                        epcs.Rows[epcs.Rows.Count - 2].DefaultCellStyle.BackColor = System.Drawing.Color.Red;
 
                     }
                     else
@@ -607,7 +571,8 @@ namespace UHFAPP
             loteActual++;
             label9.Text = "Lote actual: " + loteActual;
             epcs.Rows.Add("LOTE:" + loteActual, "EPC");
-           // epcs.Rows.Add("LOTE: "+loteActual, "EPC");
+            epcs.Rows[epcs.Rows.Count - 2].DefaultCellStyle.BackColor = System.Drawing.Color.Red;
+            // epcs.Rows.Add("LOTE: "+loteActual, "EPC");
             if (btnScanEPC.Text == strStop)
             {
                 StopEPC(true);
@@ -619,7 +584,6 @@ namespace UHFAPP
             {
                 btnScanEPC.BackColor = System.Drawing.Color.Red;
                 btnScanEPC.Text = strStop;
-                mainform.disableControls(true);
                 panel5.Visible = false;
                 
                 //loteActual++;
@@ -635,7 +599,6 @@ namespace UHFAPP
                 else
                 {
                     MessageBoxEx.Show(this, "Inventory failure!");
-                    mainform.enableControls();
                 }
             }
         }
@@ -659,6 +622,7 @@ namespace UHFAPP
             label9.Text = "Lote actual: " + loteActual;
             panel5.Visible = false;
             panel6.Visible = false;
+            epcs.Rows.Add("" ,"EPC");
 
         }
 
@@ -666,29 +630,20 @@ namespace UHFAPP
 
       
 
-        private void panel12_Paint(object sender, PaintEventArgs e)
-        {
-
-            StringBuilder sb = new StringBuilder();
-            sb.Append("uno\n");
-            sb.Append("dos\n");
-            sb.Append("tres\n");
-            sb.Append("cuatro\n");
-            sb.Append("cinco\n");
-            sb.Append("seis\n");
-
-        }
-
+       
        
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            grabarOrdenAmipem();
-            cantidadPorLote = Int32.Parse(label7.Text) / Int32.Parse(textBox3.Text);
-            label25.Text = "Lotes: " + Int32.Parse(textBox3.Text) + " (" + cantidadPorLote + ")";
-            label9.Text = "Lote actual: " + loteActual;
+            if (textBox3.Text.Length > 0)
+            {
+                grabarOrdenAmipem();
+                cantidadPorLote = Int32.Parse(label7.Text) / Int32.Parse(textBox3.Text);
+                label25.Text = "Lotes: " + Int32.Parse(textBox3.Text) + " (" + cantidadPorLote + ")";
+                label9.Text = "Lote actual: " + loteActual;
+            }
         }
 
-       
+        
     }
 }
