@@ -3,29 +3,25 @@ using System.Collections.Generic;
 using System.IO;
 using System.Media;
 using System.Net;
-using System.Net.Sockets;
-using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
-using System.Xml.Linq;
 using ApodemiaC;
 using BLEDeviceAPI;
-using Lucene.Net.Support;
 using Newtonsoft.Json;
 
 
 
 //using UHFAPP.barcode;
 using UHFAPP.Entity;
-using UHFAPP.RFID;
 using UHFAPP.utils;
 using WinForm_Test;
-using static Lucene.Net.Documents.Field;
+using WMPLib;
 using static UHFAPP.UHFAPI;
 using static UHFAPP.utils.EpcInfo;
+
+
 
 namespace UHFAPP
 {
@@ -53,7 +49,7 @@ namespace UHFAPP
         private string currentFormName = "";
         private bool isOpen = false;
         private int idOrdenAmipem;
-        private int totalesLeidos;
+       
         private int totalesValidos;
         private int lotesOrden;
         public MainForm mainform = null;
@@ -109,27 +105,7 @@ namespace UHFAPP
             DisconnectCallback = OnDisconnectCallback;
             toolStripButton1_Click();
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            setComPort();
-            disableControls(false);
-
-            btnSearch_Click(null, null);
-            LoadUI();
-            //combCommunicationMode.SelectedIndex = 1;
-            if (eventMainSizeChanged != null)
-            {
-                eventMainSizeChanged(WindowState);
-            }
-        }
-
-        public void ReadWriteTag(string tag, int bank)
-        {
-
-
-        }
-
+    
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
 
@@ -146,90 +122,32 @@ namespace UHFAPP
         }
         private bool UHFClose()
         {
-
             if (button1.Text.Trim() == strClose.Trim())
             {
-
                 uhf.CloseUsb();
                 return true;
-
-
-
             }
             return false;
         }
 
-
-
-        #region MenuItem_Click
-        /// <summary>
-        /// R/W
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void MenuItemReadWriteTag_Click(object sender, EventArgs e)
-        {
-            ReadWriteTag("", 0);
-        }
-        /// <summary>
-        /// Inventory
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-       
-        private void ocultarControles(bool dato)
-        {
-
-            label1.Visible = dato;
-            textBox1.Visible = dato;
-            button2.Visible = dato;
-            //textBox2.Visible = dato;
-            btnScanEPC.Visible = dato;
-            label2.Visible = dato;
-            label3.Visible = dato;
-            //  label4.Visible = dato;
-            label5.Visible = dato;
-            label6.Visible = dato;
-            label7.Visible = dato;
-            label8.Visible = dato;
-            label9.Visible = dato;
-            label14.Visible = dato;
-            label15.Visible = dato;
-            // label16.Visible = dato;
-            
-            label19.Visible = dato;
-            label20.Visible = dato;
-            label22.Visible = dato;
-            // label26.Visible = dato;
-            label27.Visible = dato;
-        }
-
-
+               
         private void toolStripButton1_Click()
         {
             btnScanEPC.BackColor = System.Drawing.Color.White;
-            
                 btnScanEPC.Enabled = true;
                 btnScanEPC.Visible = true;
-
                 string msg = "Conectando lector...";
-
                 StartReceiveThread();
-
                 frmWaitingBox f = new frmWaitingBox((obj, args) =>
                 {
                     bool result = false;
-
                     result = uhf.OpenUsb();
                     UHFAPI.setOnDataReceived(onDataReceived);
-
                     UHFAPI.SetDisconnectCallback(DisconnectCallback);
-
                     if (result)
                     {
                         this.Invoke(new EventHandler(delegate
                         {
-
                             isOpen = true;
                             if (eventOpen != null)
                             {
@@ -239,8 +157,6 @@ namespace UHFAPP
 
                         }));
                         Thread.Sleep(2000);
-
-
                     }
                     else
                     {
@@ -250,21 +166,12 @@ namespace UHFAPP
                 }, msg);
                 f.BackColor = System.Drawing.Color.Gray;
                 f.ShowDialog(this);
-                // Thread.Sleep(5000);
                 button1.BackColor = System.Drawing.Color.GreenYellow;
                 button1.Text = strClose;
                 btnScanEPC.Visible = true;
                 btnScanEPC.BackColor = System.Drawing.Color.Green;
                 btnScanEPC.Text = strStart;
         }
-
-
-
-
-
-
-
-        #endregion
 
 
         #region RS160 KeyDwon
@@ -290,8 +197,6 @@ namespace UHFAPP
 
             byte[] pcontent;
 
-            byte[] temp = null;
-            string str;
             while (index < len)
             {
                 type = cellData[index++];
@@ -336,21 +241,7 @@ namespace UHFAPP
         #endregion 
 
 
-        #region Search
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-
-
-
-
-        #endregion
-
+       
         #region  UI
         private void MainForm_SizeChanged(object sender, EventArgs e)
         {
@@ -361,96 +252,29 @@ namespace UHFAPP
             }
         }
 
-
-
         public void enableControls()
         {
             MenuItemScanEPC.Enabled = true;
             configToolStripMenuItem.Enabled = true;
-
-
 
         }
         public void disableControls(bool isInventory)
         {
             MenuItemScanEPC.Enabled = false;
             configToolStripMenuItem.Enabled = false;
-
-
-
-        }
-        private void menuStrip1_ItemAdded(object sender, ToolStripItemEventArgs e)
-        {
-
         }
 
-
-
-        private void setComPort()
-        {
-
-        }
-
-        public Form ShowForm(Form nextForm, bool isCache)
-        {
-            isCache = false;
-
-            ///toolStripStatusLabel1.Visible = false;
-            Form currForm = this.ActiveMdiChild;
-            Form from = nextForm;
-            if (currForm != null)
-            {
-                if (currForm.Name == from.Name)
-                {
-                    return null;
-                }
-
-                if (currForm.Name != "ReadEPCForm")
-
-                {
-                    currForm.Close();
-                }
-                else
-                {
-                    currForm.Hide();
-                }
-            }
-
-            from.WindowState = FormWindowState.Maximized;
-            from.MdiParent = this;
-            from.AutoScaleMode = AutoScaleMode.Inherit;
-
-
-            from.Show();
-            return from;
-        }
-
-        private void LoadUI()
-        {
-
-        }
+       
 
         #endregion
 
-        private void toolStripButton1_Click_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
             toolStripButton1_Click();
         }
 
-        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void StopEPC(bool isStop)
         {
@@ -502,7 +326,6 @@ namespace UHFAPP
             int index = CheckUtils.getInsertIndex(epcList, epc, tid, exist);
 
             total++;
-            totalesLeidos++;
             if (exist[0])
             {
                 epcList[index].AddAntennaInfoByAnt(int.Parse(ant), rssi);
@@ -538,32 +361,41 @@ namespace UHFAPP
 
 
 
-                label10.Text = total.ToString();
                 label23.Text = epcList.Count.ToString();
-                totalesLeidos += total;
-                
-                label22.Text = "" + totalesLeidos;
+                totalesValidos++;
                 label4.Text = "" + totalesValidos;
                 //if (total >= Int32.Parse(label7.Text))
-                if (Int32.Parse(label23.Text) >= cantidadPorLote)
+               // if (Int32.Parse(label23.Text) >= cantidadPorLote)
+               if(cantidadPorLote*loteActual== epcList.Count)
                 {
+                    
                     panel5.Visible = true;
                     total = 0;
                     StopEPC(true);
-                    epcList.Clear();
-                    label10.Text = "0";
+                    
                     label23.Text = "0";
                     //loteActual++;
                     label9.Text = "Lote actual: " + loteActual;
-                    if (lotesOrden == loteActual)
+                    if (Int32.Parse(label7.Text) == epcList.Count)
                     {
-                        label22.Text = "0";
-                        label4.Text = "0";
-                        label10.Text = "0";
+                        string url = Environment.CurrentDirectory + "\\aplausos.wav";
+                        SoundPlayer simpleSound1 = new SoundPlayer(@url);
+                        simpleSound1.Play();
+
+                        // label4.Text = "0";
                         label23.Text = "0";
                         panel6.Visible = true;
+                        epcList.Clear();
                     }
-                    return;
+                    else
+                    {
+                        
+                        var wplayer = new WindowsMediaPlayer();
+                        wplayer.URL = Environment.CurrentDirectory+"\\sirena.mp3";
+                        wplayer.controls.play();
+                        
+                    }
+                        return;
                 }
 
             }
@@ -688,57 +520,19 @@ namespace UHFAPP
                     label25.Text = "Lotes: " + lotesOrden+" ("+cantidadPorLote + ")";
                    // loteActual = 1;
                     label9.Text = "Lote actual: " + loteActual;
-                    label11.Text = "Total lineas:" ;
                 }
             }
             catch (Exception e) { }
-
-
-
-           /*try
-            {
-                using (WebResponse response = request.GetResponse())
-                {
-                    using (Stream strReader = response.GetResponseStream())
-                    {
-                        if (strReader == null) return;
-                        using (StreamReader objReader = new StreamReader(strReader))
-                        {
-                            string responseBody = objReader.ReadToEnd();
-                            label5.Text = orden.item;
-                            label6.Text = orden.descripcion;
-                            label7.Text = "" + orden.cantidad;
-                            label2.Visible = true;
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Orden no existe"); // Handle error
-                textBox1.Text = "";
-            }*/
         }
 
         private void ScanEPCForm_Load(object sender, EventArgs e)
         {
             setTextCallback = new SetTextCallback(UpdataEPC);
 
-            LoadUI();
-
         }
 
 
 
-        private void ScanEPCForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-
-            if (btnScanEPC.Text == strStop)
-            {
-                StopEPC(true);
-            }
-            StopReceiveThread();
-        }
 
         private void ReadEPC()
         {
@@ -757,7 +551,6 @@ namespace UHFAPP
                     if (info != null)
                     {
                         this.BeginInvoke(setTextCallback, new object[] { info.Epc, info.Tid, info.Rssi, "1", info.Ant, info.User });
-                        totalesLeidos++;
 
                     }
                     else
@@ -812,62 +605,13 @@ namespace UHFAPP
         private void button2_Click(object sender, EventArgs e)
         {
             //leerOrden();
-            label22.Text = "0";
             label4.Text = "0";
             leerOrdenAmipem();
         }
 
         
 
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label25_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label23_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label22_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label18_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void panel12_Paint(object sender, PaintEventArgs e)
         {
@@ -882,29 +626,13 @@ namespace UHFAPP
 
         }
 
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
             grabarOrdenAmipem();
         }
 
-        private void label4_Click_1(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

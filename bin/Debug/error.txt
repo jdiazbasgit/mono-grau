@@ -473,3 +473,52 @@ Application_ThreadException:La cadena de entrada no tiene el formato correcto.
    en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
    en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
 -----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Asegúrese de que hay un archivo de sonido en la ubicación especificada.
+   en System.Media.SoundPlayer.ValidateSoundFile(String fileName)
+   en System.Media.SoundPlayer.LoadAndPlay(Int32 flags)
+   en System.Media.SoundPlayer.Play()
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 380
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Asegúrese de que hay un archivo de sonido en la ubicación especificada.
+   en System.Media.SoundPlayer.ValidateSoundFile(String fileName)
+   en System.Media.SoundPlayer.LoadAndPlay(Int32 flags)
+   en System.Media.SoundPlayer.Play()
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 389
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Asegúrese de que hay un archivo de sonido en la ubicación especificada.
+   en System.Media.SoundPlayer.ValidateSoundFile(String fileName)
+   en System.Media.SoundPlayer.LoadAndPlay(Int32 flags)
+   en System.Media.SoundPlayer.Play()
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 389
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Asegúrese de que hay un archivo de sonido en la ubicación especificada.
+   en System.Media.SoundPlayer.ValidateSoundFile(String fileName)
+   en System.Media.SoundPlayer.LoadAndPlay(Int32 flags)
+   en System.Media.SoundPlayer.Play()
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 389
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Asegúrese de que hay un archivo de sonido en la ubicación especificada.
+   en System.Media.SoundPlayer.ValidateSoundFile(String fileName)
+   en System.Media.SoundPlayer.LoadAndPlay(Int32 flags)
+   en System.Media.SoundPlayer.Play()
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 389
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:El archivo que se encuentra en c:\Windows\media\sirena.mp3 no es un archivo de onda válido.
+   en System.Media.SoundPlayer.ValidateSoundFile(String fileName)
+   en System.Media.SoundPlayer.LoadAndPlay(Int32 flags)
+   en System.Media.SoundPlayer.Play()
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 389
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Asegúrese de que hay un archivo de sonido en la ubicación especificada.
+   en System.Media.SoundPlayer.ValidateSoundFile(String fileName)
+   en System.Media.SoundPlayer.LoadAndPlay(Int32 flags)
+   en System.Media.SoundPlayer.Play()
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 383
+-----------------------end----------------------------

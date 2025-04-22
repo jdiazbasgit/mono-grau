@@ -288,8 +288,10 @@
     <Compile Include="utils\Utils.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="aplausos.wav" />
     <Content Include="img\button_green_32px_500051_easyicon.net.png" />
     <Content Include="img\button_light_blue_32px_500052_easyicon.net.png" />
+    <Content Include="sirena.mp3" />
     <Content Include="修改说明.txt" />
   </ItemGroup>
   <ItemGroup>
@@ -314,7 +316,17 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
