@@ -18,6 +18,7 @@ using UHFAPP.Entity;
 using UHFAPP.utils;
 using WinForm_Test;
 using WMPLib;
+using static ICSharpCode.SharpZipLib.Zip.ExtendedUnixData;
 using static UHFAPP.UHFAPI;
 using static UHFAPP.utils.EpcInfo;
 
@@ -103,6 +104,8 @@ namespace UHFAPP
             button1.Text = strOpen;
             button1.BackColor = System.Drawing.Color.Red;
             DisconnectCallback = OnDisconnectCallback;
+            epcs.Columns.Add("EPC","EPC");
+                   
             toolStripButton1_Click();
         }
     
@@ -163,6 +166,8 @@ namespace UHFAPP
                         frmWaitingBox.message = "Error al conectar el lector";
                         Thread.Sleep(2000);
                     }
+                    byte b = 1;
+                    uhf.SetTagfocus(b);
                 }, msg);
                 f.BackColor = System.Drawing.Color.Gray;
                 f.ShowDialog(this);
@@ -364,6 +369,30 @@ namespace UHFAPP
                 label23.Text = epcList.Count.ToString();
                 totalesValidos++;
                 label4.Text = "" + totalesValidos;
+                epcs.Rows.Add(epcList[epcList.Count - 1].Epc,"EPC");
+
+
+               /* epcs.Rows.Clear();
+                int l = 1;
+                for (int i = 0; i < epcList.Count; i++)
+                {
+                    for (int j = 0; j < lotesOrden; j++)
+                    {
+                        if (i == 0)
+                        {
+                            epcs.Rows.Add("LOTE: " + 1, "EPC");
+                            break;
+                        }
+                        else
+                        if (j == loteActual)
+                        {
+                            epcs.Rows.Add("LOTE: " + loteActual, "EPC");
+                        }
+
+                        epcs.Rows.Add(epcList[i].Epc, "EPC");
+                    }
+                }*/
+               
                 //if (total >= Int32.Parse(label7.Text))
                // if (Int32.Parse(label23.Text) >= cantidadPorLote)
                if(cantidadPorLote*loteActual== epcList.Count)
@@ -386,6 +415,9 @@ namespace UHFAPP
                         label23.Text = "0";
                         panel6.Visible = true;
                         epcList.Clear();
+                        textBox1.Text = "";
+                        epcs.Rows.Add("FIN DE ORDEN" ,"EPC");
+
                     }
                     else
                     {
@@ -515,10 +547,10 @@ namespace UHFAPP
                     StreamReader sr = new StreamReader(stream1);
                     string strsb = sr.ReadToEnd();
                     Orden ordenRetorno = JsonConvert.DeserializeObject<Orden>(strsb);
-                    cantidadPorLote = Int32.Parse(label7.Text) / Int32.Parse(textBox3.Text);
+                   
                     lotesOrden = ordenRetorno.lotes;
+                    cantidadPorLote = Int32.Parse(label7.Text) / Int32.Parse(textBox3.Text);
                     label25.Text = "Lotes: " + lotesOrden+" ("+cantidadPorLote + ")";
-                   // loteActual = 1;
                     label9.Text = "Lote actual: " + loteActual;
                 }
             }
@@ -569,8 +601,13 @@ namespace UHFAPP
 
         private void button3_Click(object sender, EventArgs e)
         {
+
+            grabarOrdenAmipem();
+            totalesValidos = 0;
             loteActual++;
             label9.Text = "Lote actual: " + loteActual;
+            epcs.Rows.Add("LOTE:" + loteActual, "EPC");
+           // epcs.Rows.Add("LOTE: "+loteActual, "EPC");
             if (btnScanEPC.Text == strStop)
             {
                 StopEPC(true);
@@ -584,6 +621,7 @@ namespace UHFAPP
                 btnScanEPC.Text = strStop;
                 mainform.disableControls(true);
                 panel5.Visible = false;
+                
                 //loteActual++;
                
 
@@ -604,9 +642,24 @@ namespace UHFAPP
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //leerOrden();
+            //leerOrden();ç
+            textBox3.Text = "1";
+           
+            epcList.Clear();
+            loteActual = 0;
+            
+            epcs.Columns.Clear();
+            epcs.Columns.
+                Add("EPC", "EPC");
+            epcs.Rows.Clear();
             label4.Text = "0";
             leerOrdenAmipem();
+            cantidadPorLote = Int32.Parse(label7.Text) / Int32.Parse(textBox3.Text);
+            label25.Text = "Lotes: " + Int32.Parse(textBox3.Text) + " (" + cantidadPorLote + ")";
+            label9.Text = "Lote actual: " + loteActual;
+            panel5.Visible = false;
+            panel6.Visible = false;
+
         }
 
         
@@ -631,6 +684,9 @@ namespace UHFAPP
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
             grabarOrdenAmipem();
+            cantidadPorLote = Int32.Parse(label7.Text) / Int32.Parse(textBox3.Text);
+            label25.Text = "Lotes: " + Int32.Parse(textBox3.Text) + " (" + cantidadPorLote + ")";
+            label9.Text = "Lote actual: " + loteActual;
         }
 
        

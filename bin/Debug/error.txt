@@ -522,3 +522,35 @@ Application_ThreadException:Asegúrese de que hay un archivo de sonido en la ubic
    en System.Media.SoundPlayer.Play()
    en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 383
 -----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Operación no válida a través de subprocesos: Se tuvo acceso al control 'MainForm' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Form.UpdateMenuHandles(MainMenu menu, Boolean forceRedraw)
+   en System.Windows.Forms.Form.UpdateMenuHandles()
+   en System.Windows.Forms.Form.MenuChanged(Int32 change, Menu menu)
+   en System.Windows.Forms.Form.Dispose(Boolean disposing)
+   en UHFAPP.BaseForm.Dispose(Boolean disposing) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\BaseForm.Designer.cs:línea 20
+   en UHFAPP.MainForm.Dispose(Boolean disposing) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.Designer.cs:línea 20
+   en System.Windows.Forms.Form.WmClose(Message& m)
+   en System.Windows.Forms.Form.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Int32.Parse(String s)
+   en UHFAPP.MainForm.button2_Click(Object sender, EventArgs e) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 646
+   en System.Windows.Forms.Control.OnClick(EventArgs e)
+   en System.Windows.Forms.Button.OnClick(EventArgs e)
+   en System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   en System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   en System.Windows.Forms.Button.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+-----------------------end----------------------------
