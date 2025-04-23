@@ -13,7 +13,8 @@
 	<artifactId>mono</artifactId>
 	<version>1</version>
 	<name>mozo</name>
-	<properties>
+		<packaging>war</packaging>
+		<properties>
 		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
