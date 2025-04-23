@@ -12,7 +12,8 @@
 	<groupId>com.amipem</groupId>
 	<artifactId>mono</artifactId>
 	<version>1</version>
-	<name>mono</name>
+	<name>mozo</name>
+	<packaging>war</packaging>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
