@@ -9,11 +9,11 @@ namespace UHFAPP.utils
     internal class Grabacion
     {
         private int id  { get; set; }
-        private string orden { get; set; }
+        private Orden orden { get; set; }
         private string tag { get; set; }
         private int lote { get; set; }
        
-        public Grabacion(int id, string orden, string tag, int lote)
+        public Grabacion(int id, Orden orden, string tag, int lote)
         {
             this.id = id;
             this.orden = orden;

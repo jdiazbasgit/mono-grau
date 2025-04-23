@@ -4,6 +4,7 @@ using System.IO;
 using System.Media;
 using System.Net;
 using System.Runtime.InteropServices;
+using System.Security.Policy;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
@@ -350,15 +351,44 @@ namespace UHFAPP
             {
                 EpcInfo epcInfo = new EpcInfo(epc, tid, int.Parse(count), DataConvert.HexStringToByteArray(epc), DataConvert.HexStringToByteArray(tid), int.Parse(ant), rssi, user);
                 epcList.Insert(index, epcInfo);
+                Thread.Sleep(100);
+                epcs.Rows.Add(epcList[epcList.Count - 1].Epc, "EPC");
+                epcs.Rows[epcs.Rows.Count - 2].DefaultCellStyle.BackColor = System.Drawing.Color.Red;
+                if (grabarTagContadorAmipem(epcList[epcList.Count - 1].Epc, loteActual))
+                {
+
+                    totalesValidos++;
+                    label23.Text = "" + totalesValidos;
 
 
 
-                label4.Text = epcList.Count.ToString();
-                totalesValidos++;
-                label23.Text = "" + totalesValidos;
-                epcs.Rows.Add(epcList[epcList.Count - 1].Epc,"EPC");
+                }
+                else
+                {
+                    try { 
+                    string url = Environment.CurrentDirectory + "\\chimes.wav";
+                    SoundPlayer simpleSound1 = new SoundPlayer(@url);
+                    simpleSound1.Play();
+                }
+                    catch (Exception e) { }
 
-               if(cantidadPorLote*loteActual== epcList.Count)
+                    MessageBox.Show("Tag  grabado");
+                    
+                }
+                int cantidadBuena=0;
+                for (int k = 0; k < epcList.Count; k++)
+                {
+                    if (epcs.Rows[epcs.Rows.Count - 1].DefaultCellStyle.BackColor != System.Drawing.Color.Red)
+                    {
+                        cantidadBuena++;
+                    }
+                }
+                label4.Text = ""+cantidadBuena;
+
+               
+               
+
+                if (cantidadPorLote*loteActual== cantidadBuena)
                 {
                     
                     panel5.Visible = true;
@@ -380,7 +410,8 @@ namespace UHFAPP
                         epcList.Clear();
                         textBox1.Text = "";
                         epcs.Rows.Add("FIN DE ORDEN" ,"EPC");
-                        epcs.Rows[epcs.Rows.Count - 2].DefaultCellStyle.BackColor = System.Drawing.Color.Red;
+                        epcs.Rows[epcs.Rows.Count - 2].DefaultCellStyle.BackColor = System.Drawing.Color.Green;
+                        epcs.Rows[epcs.Rows.Count - 2].DefaultCellStyle.ForeColor = System.Drawing.Color.White;
 
                     }
                     else
@@ -437,6 +468,8 @@ namespace UHFAPP
             }
             catch (Exception ex)
             {
+                SoundPlayer simpleSound1 = new SoundPlayer(@url);
+                simpleSound1.Play();
                 MessageBox.Show("Orden no existe"); // Handle error
                 textBox1.Text = "";
             }
@@ -521,6 +554,86 @@ namespace UHFAPP
             catch (Exception e) { }
         }
 
+
+
+        private bool grabarTagContadorAmipem(string epc, int lote)
+        {
+            bool resultado = false;
+            epcs.Rows[epcs.Rows.Count - 2].DefaultCellStyle.BackColor = System.Drawing.Color.Red;
+            SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\chimes.wav");
+            simpleSound.Play();
+
+            var url = "http://localhost:8080/grabarTagContador/";
+
+            var request = (HttpWebRequest)WebRequest.Create(url);
+
+            request.Method = "POST";
+            request.ContentType = "application/json";
+            request.Accept = "application/json";
+            try
+            {
+
+                GrabacionDTO grabacionDTO = new GrabacionDTO(1, textBox1.Text, lote,epc);
+                string salida = JsonConvert.SerializeObject(grabacionDTO);
+                byte[] data = Encoding.UTF8.GetBytes(salida);
+                request.ContentLength = data.Length;
+                Stream stream = request.GetRequestStream();
+                stream.Write(data, 0, data.Length);
+                stream.Close();
+                using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
+                {
+                    Stream stream1 = response.GetResponseStream();
+                    StreamReader sr = new StreamReader(stream1);
+                    string strsb = sr.ReadToEnd();
+                    Grabacion ordenRetorno = JsonConvert.DeserializeObject<Grabacion>(strsb);
+                    epcs.Rows[epcs.Rows.Count - 2].DefaultCellStyle.BackColor = System.Drawing.Color.White;
+                    resultado = true;
+                }
+            }
+            catch (Exception e) {
+                resultado = false;
+
+            }
+            return resultado;
+        }
+
+
+        private void grabarTagContadorMozo(string epc, int lote)
+        {
+            epcs.Rows[epcs.Rows.Count - 2].DefaultCellStyle.BackColor = System.Drawing.Color.Red;
+            SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\chimes.wav");
+            simpleSound.Play();
+
+            var url = "https://webservice.mozo-grau.com:7048/BC200_MG_DESARROLLO/api/mozo/apiArco/v2.0/companies(0c0574f1-f098-ed11-965c-6045bd89ef6b)/https://webservice.mozo-grau.com:7048/BC200_MG_DESARROLLO/api/mozo/apiArco/v2.0/companies(0c0574f1-f098-ed11-965c-6045bd89ef6b)/registrarSalidasRFID?";
+
+            var request = (HttpWebRequest)WebRequest.Create(url);
+            string username = "WEBSERVICE";
+            string password = "BLZNChVZ4LAab/kewV3J0v1J/2rYZSwuDUcyyOWEkbY=";
+            string svcCredentials = Convert.ToBase64String(ASCIIEncoding.ASCII.GetBytes(username + ":" + password));
+            request.Headers.Add("Authorization", "Basic " + svcCredentials);
+            request.Method = "POST";
+            request.ContentType = "application/json";
+            request.Accept = "application/json";
+            try
+            {
+                GrabacionMozo grabacion = new GrabacionMozo(epc, textBox1.Text,10000, 1);
+                string salida = JsonConvert.SerializeObject(grabacion);
+                byte[] data = Encoding.UTF8.GetBytes(salida);
+                request.ContentLength = data.Length;
+                Stream stream = request.GetRequestStream();
+                stream.Write(data, 0, data.Length);
+                stream.Close();
+                using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
+                {
+                    Stream stream1 = response.GetResponseStream();
+                    StreamReader sr = new StreamReader(stream1);
+                    string strsb = sr.ReadToEnd();
+                    GrabacionMozo ordenRetorno = JsonConvert.DeserializeObject<GrabacionMozo>(strsb);
+                    epcs.Rows[epcs.Rows.Count - 2].DefaultCellStyle.BackColor = System.Drawing.Color.White;
+                }
+            }
+            catch (Exception e) { }
+        }
         private void ScanEPCForm_Load(object sender, EventArgs e)
         {
             setTextCallback = new SetTextCallback(UpdataEPC);
@@ -571,7 +684,8 @@ namespace UHFAPP
             loteActual++;
             label9.Text = "Lote actual: " + loteActual;
             epcs.Rows.Add("LOTE:" + loteActual, "EPC");
-            epcs.Rows[epcs.Rows.Count - 2].DefaultCellStyle.BackColor = System.Drawing.Color.Red;
+            epcs.Rows[epcs.Rows.Count - 2].DefaultCellStyle.BackColor = System.Drawing.Color.Green;
+            epcs.Rows[epcs.Rows.Count - 2].DefaultCellStyle.ForeColor = System.Drawing.Color.White;
             // epcs.Rows.Add("LOTE: "+loteActual, "EPC");
             if (btnScanEPC.Text == strStop)
             {
