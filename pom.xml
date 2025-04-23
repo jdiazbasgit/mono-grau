@@ -12,15 +12,9 @@
 	<groupId>com.amipem</groupId>
 	<artifactId>mono</artifactId>
 	<version>1</version>
-<<<<<<< HEAD
 	<name>mozo</name>   
 	<packaging>war</packaging>
 	<properties>
-=======
-	<name>mozo</name>
-		<packaging>war</packaging>
-		<properties>
->>>>>>> 6be476eeff44695abe2376ebe2c41afab160133e
 		<java.version>1.8</java.version>
 	</properties>
 	<dependencies> 
