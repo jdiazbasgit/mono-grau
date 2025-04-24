@@ -42,6 +42,12 @@ public class GrabacionRestController {
 		return getOrdenCrudRepository().findByCodigo(codigo);
 	}
 	
+	@PostMapping("leerTagsOrden/{orden}")
+	public List<Grabacion> getTagsFromOrden(@PathVariable String orden){
+		return getGrabacionCrudRepository().getTagsByOrden(orden);
+		
+	}
+	
 	@PostMapping("grabarTagContador")
 	public Grabacion grabaTag(@RequestBody GrabacionDTO grabacionDTO) {
 		Orden orden=getOrdenCrudRepository().findByCodigo(grabacionDTO.getOrden());
