@@ -18,4 +18,6 @@ public class GrabacionDTO {
 	private int lote;
 
 	private String tag;
+	
+	private int linea;
 }

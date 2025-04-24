@@ -45,7 +45,7 @@ public class GrabacionRestController {
 	@PostMapping("grabarTagContador")
 	public Grabacion grabaTag(@RequestBody GrabacionDTO grabacionDTO) {
 		Orden orden=getOrdenCrudRepository().findByCodigo(grabacionDTO.getOrden());
-		Grabacion grabacion= new Grabacion(0, orden, grabacionDTO.getTag(), grabacionDTO.getLote());
+		Grabacion grabacion= new Grabacion(0, orden, grabacionDTO.getTag(), grabacionDTO.getLote(),grabacionDTO.getLinea());
 		return getGrabacionCrudRepository().save(grabacion);
 	}
 	
