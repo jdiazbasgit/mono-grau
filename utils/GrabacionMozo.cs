@@ -8,10 +8,10 @@ namespace UHFAPP.utils
 {
     internal class GrabacionMozo
     {
-        private string lecturaRFID { get; set; }
-        private string noOrdenProduccion { get; set; }
-        private int noLinOrdenProducc { get; set; }
-        private int cantidad { get; set; }
+        public string lecturaRFID { get; set; }
+        public string noOrdenProduccion { get; set; }
+        public int noLinOrdenProducc { get; set; }
+        public int cantidad { get; set; }
 
         public GrabacionMozo(string lecturaRFID, string noOrdenProduccion, int noLinOrdenProducc, int cantidad)
         {
