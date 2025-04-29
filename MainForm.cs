@@ -64,6 +64,7 @@ namespace UHFAPP
         private int cantidadPorLote;
         private int loteActual;
         private string ubicación;
+        private string idProducto;
         public static FormWindowState currState = FormWindowState.Normal;
         List<EpcInfo> epcList = new List<EpcInfo>();
         public bool isSearch = false;
@@ -114,9 +115,9 @@ namespace UHFAPP
             DisconnectCallback = OnDisconnectCallback;
             epcs.Columns.Add("EPC", "EPC");
             epcs.Columns.Add("LOTE", "LOTE");
-            epcs.Columns.Add("TERMINAL", "TERMINAL");
-            epcs.Columns[0].Width = 640;
-            epcs.Columns[1].Width = 80;
+            epcs.Columns.Add("LINEA", "LINEA");
+            epcs.Columns[0].Width = 635;
+            epcs.Columns[1].Width = 43;
             epcs.Columns[2].Width = 70;
             toolStripButton1_Click();
         }
@@ -191,8 +192,7 @@ namespace UHFAPP
                 }
                 else
                 {
-                    frmWaitingBox.message = "Error al conectar el lector";
-                    Thread.Sleep(2000);
+                    caja("Error al conectar el lector", 3000);
                 }
                 byte b = 1;
                 uhf.SetTagfocus(b);
@@ -408,8 +408,7 @@ namespace UHFAPP
                                     simpleSound1.Play();
                                 }
                                 catch (Exception e) { }
-
-                                MessageBox.Show("Tag ya está grabado");
+                                caja("Tag ya está grabado", 3000);
 
                             }
                         else
@@ -427,15 +426,54 @@ namespace UHFAPP
                                 simpleSound1.Play();
                             }
                             catch (Exception e) { }
-
-                            MessageBox.Show("Tag ya está grabado");
+                            caja("Tag ya está grabado", 3000);
 
                         }
+                }
+                else
+                {
+                    if (validaProducto(epc))
+                        //if (grabarTagContadorMozo(epcInfo.Epc, loteActual))
+                            if (grabarTagContadorAmipem(epcInfo.Epc, loteActual))
+                            {
+                                totalesValidos++;
+                                label23.Text = "" + totalesValidos;
+                            }
+                            else
+                            {
+                                try
+                                {
+                                    string url = Environment.CurrentDirectory + "\\chimes.wav";
+                                    SoundPlayer simpleSound1 = new SoundPlayer(@url);
+                                    simpleSound1.Play();
+                                }
+                                catch (Exception e) { }
+                            caja("Tag ya está grabado", 3000);
+
+                        }
+                        else
+                            if (grabarTagContadorAmipem(epcInfo.Epc, loteActual))
+                        {
+                            totalesValidos++;
+                            label23.Text = "" + totalesValidos;
+                        }
+                        else
+                        {
+                            try
+                            {
+                                string url = Environment.CurrentDirectory + "\\chimes.wav";
+                                SoundPlayer simpleSound1 = new SoundPlayer(@url);
+                                simpleSound1.Play();
+                            }
+                            catch (Exception e) { }
+                        caja("Tag ya está grabado", 3000);
+
+                    }
                 }
 
 
 
-                int cantidadBuena = 0;
+                    int cantidadBuena = 0;
                 for (int k = 0; k < epcList.Count; k++)
                 {
                     if (epcs.Rows[epcs.Rows.Count - 1].DefaultCellStyle.BackColor != System.Drawing.Color.Red)
@@ -487,7 +525,7 @@ namespace UHFAPP
 
                     }
                     return;
-                }
+                }  
 
             }
 
@@ -497,15 +535,59 @@ namespace UHFAPP
         private bool validaProducto(string epc)
         {
             bool resultado = false;
+
+            var url = apiMozoBase + "api/mozo/apiArco/v2.0/companies(0c0574f1-f098-ed11-965c-6045bd89ef6b)/desglosarRFIDs";
+
+            var request = (HttpWebRequest)WebRequest.Create(url);
+            string username = this.usuario;
+            
+            string password = this.password;
+            string svcCredentials = Convert.ToBase64String(ASCIIEncoding.ASCII.GetBytes(username + ":" + password));
+            request.Headers.Add("Authorization", "Basic " + svcCredentials);
+            request.Method = "POST";
+            request.ContentType = "application/json";
+            request.Accept = "*/*";
+            try
+            {
+               // GrabacionMozo grabacion = new GrabacionMozo(epc, textBox1.Text, 10000, 1);
+               // string salida = JsonConvert.SerializeObject(grabacion);
+               string salida= "{\"lecturaRFID\": \""+epc+"\"}";
+                byte[] data = Encoding.UTF8.GetBytes(salida);
+                request.ContentLength = data.Length;
+                Stream stream = request.GetRequestStream();
+                stream.Write(data, 0, data.Length);
+                stream.Flush();
+                stream.Close();
+                using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
+                {
+                    Stream stream1 = response.GetResponseStream();
+                    StreamReader sr = new StreamReader(stream1);
+                    string strsb = sr.ReadToEnd();
+                    strsb = strsb.Replace("@odata.context", "dataContext");
+                    strsb = strsb.Replace("@odata.etag", "dataTag");
+                    Validacion validacion = JsonConvert.DeserializeObject<Validacion>(strsb);
+                   if(validacion.noProducto.Equals(producto))
+                    resultado = true;
+                   else
+                        caja("Producto no coincide", 3000);
+                }
+            }
+            catch (Exception e)
+            {
+                System.Diagnostics.Debug.WriteLine(e.Message);
+                resultado = false;
+            }
             return resultado;
         }
 
-        private void leerOrden()
+        private bool leerOrden()
         {
+
+            bool resultado = false;
             SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\chimes.wav");
             simpleSound.Play();
 
-            var url = apiMozoBase + "BC200_MG_DESARROLLO/api/mozo/apiArco/v2.0/companies(0c0574f1-f098-ed11-965c-6045bd89ef6b)/linOrdenesProdArco?$filter=prodOrderNo eq '" + textBox1.Text + "'";
+            var url = apiMozoBase + "api/mozo/apiArco/v2.0/companies(0c0574f1-f098-ed11-965c-6045bd89ef6b)/linOrdenesProdArco?$filter=prodOrderNo eq '" + textBox1.Text + "'";
 
             var request = (HttpWebRequest)WebRequest.Create(url);
             string username = usuario;
@@ -521,7 +603,8 @@ namespace UHFAPP
                 {
                     using (Stream strReader = response.GetResponseStream())
                     {
-                        if (strReader == null) return;
+                        if (strReader == null)
+                            return resultado;
                         using (StreamReader objReader = new StreamReader(strReader))
                         {
                             string responseBody = objReader.ReadToEnd();
@@ -534,6 +617,7 @@ namespace UHFAPP
                             label7.Text = getMozo.Value[0].RemainingQtyBase.ToString();
 
                             label2.Visible = true;
+                            resultado = true;
                         }
                     }
                 }
@@ -542,9 +626,11 @@ namespace UHFAPP
             {
                 // SoundPlayer simpleSound1 = new SoundPlayer(@url);
                 //simpleSound1.Play();
-                MessageBox.Show("Orden no existe"); // Handle error
+                resultado = false;
+                caja("Orden no existe", 3000);
                 textBox1.Text = "";
             }
+            return resultado;
         }
 
         private void leerTagsOrdenAmipem()
@@ -588,14 +674,28 @@ namespace UHFAPP
 
             }
         }
+        private void caja(string texto,int duracion)
+        {
+            frmWaitingBox f = new frmWaitingBox((obj, args) =>
+            {
+                this.FontHeight = 22;
+                Thread.Sleep(duracion);
 
+            }, duracion, texto, true, true);
+            f.BackColor = System.Drawing.Color.Gray;
+            f.Font = new System.Drawing.Font("Arial", 12, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+
+            f.ShowDialog(this);
+
+        }
         private void leerOrdenAmipem()
         {
             SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\chimes.wav");
             simpleSound.Play();
-            if (textBox3.Text.Trim().Equals(""))
+            if (textBox1.Text.Trim().Equals(""))
             {
-                MessageBox.Show("Orden no existe");
+                caja("Orden no existe", 3000);
+                
                 return;
             }
             var url = apiAmipemBase + "mozo/leerOrden/" + textBox1.Text;
@@ -631,7 +731,7 @@ namespace UHFAPP
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Orden no existe"); // Handle error
+                caja("Orden no existe", 3000);
                 textBox1.Text = "";
             }
         }
@@ -732,7 +832,7 @@ namespace UHFAPP
             SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\chimes.wav");
             simpleSound.Play();
 
-            var url = apiMozoBase + "BC200_MG_DESARROLLO/api/mozo/apiArco/v2.0/companies(0c0574f1-f098-ed11-965c-6045bd89ef6b)/registrarSalidasRFID?";
+            var url = apiMozoBase + "api/mozo/apiArco/v2.0/companies(0c0574f1-f098-ed11-965c-6045bd89ef6b)/registrarSalidasRFID?";
 
             var request = (HttpWebRequest)WebRequest.Create(url);
             string username = this.usuario;
@@ -745,6 +845,7 @@ namespace UHFAPP
             try
             {
                 GrabacionMozo grabacion = new GrabacionMozo(epc, textBox1.Text, 10000, 1);
+               // grabacion.lecturaRFID = epc.Replace("100701","555666");
                 string salida = JsonConvert.SerializeObject(grabacion);
                 byte[] data = Encoding.UTF8.GetBytes(salida);
                 request.ContentLength = data.Length;
@@ -794,17 +895,7 @@ namespace UHFAPP
             {
                 while (isRuning)
                 {
-                    // Fix for CS8370, CS1503, and CS1002 errors in the problematic line
-                    uhf.writeDataToEpc(
-                        new byte[] { 1, 2, 3, 4, 5 }, // Corrected to use a byte array instead of collection initializer
-                        0,
-                        0,
-                        0,
-                        new byte[] { 1, 1, 1, 1, 1 }, // Corrected to use a byte array instead of object array
-                        new byte[] { } // Corrected to use a byte array instead of object array
-                    );
-
-
+                   
                     if (!isVisible)
                     {
                         Thread.Sleep(10);
@@ -833,7 +924,7 @@ namespace UHFAPP
         private void button3_Click(object sender, EventArgs e)
         {
 
-            grabarOrdenAmipem();
+            
             totalesValidos = 0;
             loteActual++;
             label9.Text = "Lote actual: " + loteActual;
@@ -891,7 +982,8 @@ namespace UHFAPP
                 leerOrdenAmipem();
             else
             {
-                leerOrden();
+                
+                if(leerOrden())
                 grabarOrdenAmipem();
             }
                 
@@ -916,7 +1008,7 @@ namespace UHFAPP
         {
             if (textBox3.Text.Length > 0)
             {
-                grabarOrdenAmipem();
+               
                 cantidadPorLote = Int32.Parse(label7.Text) / Int32.Parse(textBox3.Text);
                 label25.Text = "Lotes: " + Int32.Parse(textBox3.Text) + " (" + cantidadPorLote + ")";
                 label9.Text = "Lote actual: " + loteActual;
