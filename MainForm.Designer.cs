@@ -56,7 +56,6 @@
             this.tbLinea = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.epcs)).BeginInit();
@@ -112,9 +111,8 @@
             this.label7.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label7.Location = new System.Drawing.Point(415, 25);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(24, 27);
+            this.label7.Size = new System.Drawing.Size(0, 34);
             this.label7.TabIndex = 15;
-            this.label7.Text = "7";
             // 
             // label6
             // 
@@ -159,7 +157,7 @@
             // 
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(586, 153);
+            this.button2.Location = new System.Drawing.Point(591, 149);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(201, 39);
@@ -232,7 +230,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.epcs.DefaultCellStyle = dataGridViewCellStyle2;
             this.epcs.GridColor = System.Drawing.Color.White;
-            this.epcs.Location = new System.Drawing.Point(861, 427);
+            this.epcs.Location = new System.Drawing.Point(861, 395);
             this.epcs.Name = "epcs";
             this.epcs.RowHeadersWidth = 51;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -328,7 +326,6 @@
             // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.comboBox1);
             this.panel9.Controls.Add(this.panel3);
             this.panel9.Controls.Add(this.btnScanEPC);
             this.panel9.Controls.Add(this.tbLinea);
@@ -395,14 +392,6 @@
             this.panel2.Size = new System.Drawing.Size(269, 73);
             this.panel2.TabIndex = 39;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(477, 46);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(9, 24);
-            this.comboBox1.TabIndex = 43;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -462,7 +451,6 @@
         private System.Windows.Forms.TextBox tbLinea;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.ComboBox comboBox1;
 
         #endregion
         // private System.Windows.Forms.Panel panel1;

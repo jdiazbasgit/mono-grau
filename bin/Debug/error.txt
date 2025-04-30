@@ -792,3 +792,422 @@ Application_ThreadException:Al control DataGridView no se puede agregar ninguna 
    en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
    en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
 -----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Referencia a objeto no establecida como instancia de un objeto.
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 529
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 410
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Referencia a objeto no establecida como instancia de un objeto.
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 529
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 410
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Referencia a objeto no establecida como instancia de un objeto.
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 529
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 410
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Referencia a objeto no establecida como instancia de un objeto.
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 529
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 410
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Referencia a objeto no establecida como instancia de un objeto.
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 529
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 410
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Referencia a objeto no establecida como instancia de un objeto.
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 529
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 410
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Referencia a objeto no establecida como instancia de un objeto.
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 529
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 410
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Referencia a objeto no establecida como instancia de un objeto.
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 529
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 410
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Referencia a objeto no establecida como instancia de un objeto.
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 529
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 410
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Referencia a objeto no establecida como instancia de un objeto.
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 529
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 410
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Referencia a objeto no establecida como instancia de un objeto.
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 529
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 410
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Referencia a objeto no establecida como instancia de un objeto.
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 529
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 410
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Referencia a objeto no establecida como instancia de un objeto.
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 529
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 410
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Referencia a objeto no establecida como instancia de un objeto.
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 529
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 410
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Referencia a objeto no establecida como instancia de un objeto.
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 529
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 410
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Referencia a objeto no establecida como instancia de un objeto.
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 529
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 410
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Referencia a objeto no establecida como instancia de un objeto.
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 529
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 410
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Referencia a objeto no establecida como instancia de un objeto.
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 529
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 410
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Referencia a objeto no establecida como instancia de un objeto.
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 529
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 410
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Referencia a objeto no establecida como instancia de un objeto.
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 529
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 410
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Referencia a objeto no establecida como instancia de un objeto.
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 529
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 410
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Referencia a objeto no establecida como instancia de un objeto.
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 529
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 410
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Referencia a objeto no establecida como instancia de un objeto.
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 529
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 410
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Referencia a objeto no establecida como instancia de un objeto.
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 529
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 410
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Referencia a objeto no establecida como instancia de un objeto.
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 529
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 410
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Referencia a objeto no establecida como instancia de un objeto.
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 529
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 410
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Referencia a objeto no establecida como instancia de un objeto.
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 529
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 410
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Referencia a objeto no establecida como instancia de un objeto.
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 529
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 410
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Referencia a objeto no establecida como instancia de un objeto.
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 529
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 410
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Referencia a objeto no establecida como instancia de un objeto.
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 529
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 410
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Referencia a objeto no establecida como instancia de un objeto.
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 529
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 410
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Int32.Parse(String s)
+   en UHFAPP.MainForm.textBox3_TextChanged(Object sender, EventArgs e) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 1017
+   en System.Windows.Forms.Control.OnTextChanged(EventArgs e)
+   en System.Windows.Forms.TextBoxBase.OnTextChanged(EventArgs e)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.TextBoxBase.set_Text(String value)
+   en System.Windows.Forms.TextBox.set_Text(String value)
+   en UHFAPP.MainForm.button2_Click(Object sender, EventArgs e) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 973
+   en System.Windows.Forms.Control.OnClick(EventArgs e)
+   en System.Windows.Forms.Button.OnClick(EventArgs e)
+   en System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   en System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   en System.Windows.Forms.Button.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Int32.Parse(String s)
+   en UHFAPP.MainForm.button2_Click(Object sender, EventArgs e) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 998
+   en System.Windows.Forms.Control.OnClick(EventArgs e)
+   en System.Windows.Forms.Button.OnClick(EventArgs e)
+   en System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   en System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   en System.Windows.Forms.Button.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Int32.Parse(String s)
+   en UHFAPP.MainForm.textBox3_TextChanged(Object sender, EventArgs e) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 1021
+   en System.Windows.Forms.Control.OnTextChanged(EventArgs e)
+   en System.Windows.Forms.TextBoxBase.OnTextChanged(EventArgs e)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.TextBoxBase.set_Text(String value)
+   en System.Windows.Forms.TextBox.set_Text(String value)
+   en UHFAPP.MainForm.button2_Click(Object sender, EventArgs e) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 979
+   en System.Windows.Forms.Control.OnClick(EventArgs e)
+   en System.Windows.Forms.Button.OnClick(EventArgs e)
+   en System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   en System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   en System.Windows.Forms.Button.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Int32.Parse(String s)
+   en UHFAPP.MainForm.textBox3_TextChanged(Object sender, EventArgs e) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 1021
+   en System.Windows.Forms.Control.OnTextChanged(EventArgs e)
+   en System.Windows.Forms.TextBoxBase.OnTextChanged(EventArgs e)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.TextBoxBase.set_Text(String value)
+   en System.Windows.Forms.TextBox.set_Text(String value)
+   en UHFAPP.MainForm.button2_Click(Object sender, EventArgs e) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 979
+   en System.Windows.Forms.Control.OnClick(EventArgs e)
+   en System.Windows.Forms.Button.OnClick(EventArgs e)
+   en System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   en System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   en System.Windows.Forms.Button.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Int32.Parse(String s)
+   en UHFAPP.MainForm.textBox3_TextChanged(Object sender, EventArgs e)
+   en System.Windows.Forms.Control.OnTextChanged(EventArgs e)
+   en System.Windows.Forms.TextBoxBase.OnTextChanged(EventArgs e)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.TextBoxBase.set_Text(String value)
+   en System.Windows.Forms.TextBox.set_Text(String value)
+   en UHFAPP.MainForm.button2_Click(Object sender, EventArgs e)
+   en System.Windows.Forms.Control.OnClick(EventArgs e)
+   en System.Windows.Forms.Button.OnClick(EventArgs e)
+   en System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   en System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   en System.Windows.Forms.Button.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:El valor no puede ser nulo.
+Nombre del parámetro: String
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Int32.Parse(String s)
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 465
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Int32.Parse(String s)
+   en UHFAPP.MainForm.textBox3_TextChanged(Object sender, EventArgs e) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 1023
+   en System.Windows.Forms.Control.OnTextChanged(EventArgs e)
+   en System.Windows.Forms.TextBoxBase.OnTextChanged(EventArgs e)
+   en System.Windows.Forms.TextBoxBase.WmReflectCommand(Message& m)
+   en System.Windows.Forms.TextBoxBase.WndProc(Message& m)
+   en System.Windows.Forms.TextBox.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Int32.Parse(String s)
+   en UHFAPP.MainForm.textBox3_TextChanged(Object sender, EventArgs e) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 1021
+   en System.Windows.Forms.Control.OnTextChanged(EventArgs e)
+   en System.Windows.Forms.TextBoxBase.OnTextChanged(EventArgs e)
+   en System.Windows.Forms.TextBoxBase.WmReflectCommand(Message& m)
+   en System.Windows.Forms.TextBoxBase.WndProc(Message& m)
+   en System.Windows.Forms.TextBox.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Int32.Parse(String s)
+   en UHFAPP.MainForm.textBox3_TextChanged(Object sender, EventArgs e) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 1021
+   en System.Windows.Forms.Control.OnTextChanged(EventArgs e)
+   en System.Windows.Forms.TextBoxBase.OnTextChanged(EventArgs e)
+   en System.Windows.Forms.TextBoxBase.WmReflectCommand(Message& m)
+   en System.Windows.Forms.TextBoxBase.WndProc(Message& m)
+   en System.Windows.Forms.TextBox.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:No se reconoce el prefijo URI.
+   en System.Net.WebRequest.Create(Uri requestUri, Boolean useUriBase)
+   en System.Net.WebRequest.Create(String requestUriString)
+   en UHFAPP.MainForm.leerOrdenAmipem() en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 713
+   en UHFAPP.MainForm.button2_Click(Object sender, EventArgs e) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 994
+   en System.Windows.Forms.Control.OnClick(EventArgs e)
+   en System.Windows.Forms.Button.OnClick(EventArgs e)
+   en System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   en System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   en System.Windows.Forms.Button.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:No se reconoce el prefijo URI.
+   en System.Net.WebRequest.Create(Uri requestUri, Boolean useUriBase)
+   en System.Net.WebRequest.Create(String requestUriString)
+   en UHFAPP.MainForm.leerOrdenAmipem() en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 713
+   en UHFAPP.MainForm.button2_Click(Object sender, EventArgs e) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 994
+   en System.Windows.Forms.Control.OnClick(EventArgs e)
+   en System.Windows.Forms.Button.OnClick(EventArgs e)
+   en System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   en System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   en System.Windows.Forms.Button.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:No se reconoce el prefijo URI.
+   en System.Net.WebRequest.Create(Uri requestUri, Boolean useUriBase)
+   en System.Net.WebRequest.Create(String requestUriString)
+   en UHFAPP.MainForm.leerOrdenAmipem() en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 713
+   en UHFAPP.MainForm.button2_Click(Object sender, EventArgs e) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 994
+   en System.Windows.Forms.Control.OnClick(EventArgs e)
+   en System.Windows.Forms.Button.OnClick(EventArgs e)
+   en System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   en System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   en System.Windows.Forms.Button.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:No se reconoce el prefijo URI.
+   en System.Net.WebRequest.Create(Uri requestUri, Boolean useUriBase)
+   en System.Net.WebRequest.Create(String requestUriString)
+   en UHFAPP.MainForm.leerOrdenAmipem() en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 713
+   en UHFAPP.MainForm.button2_Click(Object sender, EventArgs e) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 994
+   en System.Windows.Forms.Control.OnClick(EventArgs e)
+   en System.Windows.Forms.Button.OnClick(EventArgs e)
+   en System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   en System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   en System.Windows.Forms.Button.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:No se reconoce el prefijo URI.
+   en System.Net.WebRequest.Create(Uri requestUri, Boolean useUriBase)
+   en System.Net.WebRequest.Create(String requestUriString)
+   en UHFAPP.MainForm.leerOrdenAmipem() en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 713
+   en UHFAPP.MainForm.button2_Click(Object sender, EventArgs e) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 994
+   en System.Windows.Forms.Control.OnClick(EventArgs e)
+   en System.Windows.Forms.Button.OnClick(EventArgs e)
+   en System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   en System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   en System.Windows.Forms.Button.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:No se reconoce el prefijo URI.
+   en System.Net.WebRequest.Create(Uri requestUri, Boolean useUriBase)
+   en System.Net.WebRequest.Create(String requestUriString)
+   en UHFAPP.MainForm.leerOrdenAmipem() en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 713
+   en UHFAPP.MainForm.button2_Click(Object sender, EventArgs e) en C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\MainForm.cs:línea 994
+   en System.Windows.Forms.Control.OnClick(EventArgs e)
+   en System.Windows.Forms.Button.OnClick(EventArgs e)
+   en System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   en System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   en System.Windows.Forms.Button.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+-----------------------end----------------------------

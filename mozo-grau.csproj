@@ -208,6 +208,7 @@
     <Compile Include="utils\CheckUtils.cs" />
     <Compile Include="utils\GrabacionDTO.cs" />
     <Compile Include="utils\GrabacionMozo.cs" />
+    <Compile Include="utils\Gtin.cs" />
     <Compile Include="utils\Orden.cs" />
     <Compile Include="utils\Peticion.cs" />
     <Compile Include="utils\Grabacion.cs" />
@@ -234,6 +235,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="utils\Validacion.cs" />
+    <Compile Include="utils\Value.cs" />
     <EmbeddedResource Include="BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -295,8 +297,10 @@
   <ItemGroup>
     <Content Include="aplausos.wav" />
     <Content Include="chimes.wav" />
+    <Content Include="error.mp3" />
     <Content Include="img\button_green_32px_500051_easyicon.net.png" />
     <Content Include="img\button_light_blue_32px_500052_easyicon.net.png" />
+    <Content Include="parametros.txt" />
     <Content Include="sirena.mp3" />
     <Content Include="修改说明.txt" />
   </ItemGroup>
