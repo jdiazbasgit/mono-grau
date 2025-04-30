@@ -2,15 +2,9 @@
 {
     partial class MainForm
     {
-        /// <summary>
-        /// 必需的设计器变量。
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// 清理所有正在使用的资源。
-        /// </summary>
-        /// <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+     
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -29,6 +23,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -39,15 +34,15 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.finLote = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.epcs = new System.Windows.Forms.DataGridView();
             this.label25 = new System.Windows.Forms.Label();
             this.btnScanEPC = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
+            this.totalesOrden = new System.Windows.Forms.Label();
+            this.totaLote = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -56,7 +51,7 @@
             this.tbLinea = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel5.SuspendLayout();
+            this.finLote.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.epcs)).BeginInit();
             this.panel9.SuspendLayout();
@@ -111,7 +106,7 @@
             this.label7.ForeColor = System.Drawing.SystemColors.Highlight;
             this.label7.Location = new System.Drawing.Point(415, 25);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(0, 34);
+            this.label7.Size = new System.Drawing.Size(0, 27);
             this.label7.TabIndex = 15;
             // 
             // label6
@@ -166,17 +161,17 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // panel5
+            // finLote
             // 
-            this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
-            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel5.Controls.Add(this.panel7);
-            this.panel5.Location = new System.Drawing.Point(274, 427);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(539, 122);
-            this.panel5.TabIndex = 35;
-            this.panel5.Visible = false;
+            this.finLote.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("finLote.BackgroundImage")));
+            this.finLote.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.finLote.Controls.Add(this.panel7);
+            this.finLote.Location = new System.Drawing.Point(274, 427);
+            this.finLote.Margin = new System.Windows.Forms.Padding(4);
+            this.finLote.Name = "finLote";
+            this.finLote.Size = new System.Drawing.Size(539, 122);
+            this.finLote.TabIndex = 35;
+            this.finLote.Visible = false;
             // 
             // panel7
             // 
@@ -220,23 +215,31 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.epcs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.epcs.BackgroundColor = System.Drawing.Color.White;
-            this.epcs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.epcs.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.epcs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.epcs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.epcs.DefaultCellStyle = dataGridViewCellStyle3;
             this.epcs.GridColor = System.Drawing.Color.White;
             this.epcs.Location = new System.Drawing.Point(861, 395);
             this.epcs.Name = "epcs";
             this.epcs.RowHeadersWidth = 51;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.NullValue = null;
-            this.epcs.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.NullValue = null;
+            this.epcs.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.epcs.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.epcs.RowTemplate.Height = 24;
             this.epcs.RowTemplate.ReadOnly = true;
@@ -269,27 +272,27 @@
             this.btnScanEPC.Visible = false;
             this.btnScanEPC.Click += new System.EventHandler(this.button3_Click);
             // 
-            // label4
+            // totalesOrden
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.White;
-            this.label4.Font = new System.Drawing.Font("Microsoft YaHei", 20F);
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(1869, 347);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(0, 45);
-            this.label4.TabIndex = 29;
+            this.totalesOrden.AutoSize = true;
+            this.totalesOrden.BackColor = System.Drawing.Color.White;
+            this.totalesOrden.Font = new System.Drawing.Font("Microsoft YaHei", 20F);
+            this.totalesOrden.ForeColor = System.Drawing.Color.Black;
+            this.totalesOrden.Location = new System.Drawing.Point(1869, 347);
+            this.totalesOrden.Name = "totalesOrden";
+            this.totalesOrden.Size = new System.Drawing.Size(0, 45);
+            this.totalesOrden.TabIndex = 29;
             // 
-            // label23
+            // totaLote
             // 
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.White;
-            this.label23.Font = new System.Drawing.Font("Microsoft YaHei", 20F);
-            this.label23.ForeColor = System.Drawing.Color.Black;
-            this.label23.Location = new System.Drawing.Point(1254, 347);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(0, 45);
-            this.label23.TabIndex = 29;
+            this.totaLote.AutoSize = true;
+            this.totaLote.BackColor = System.Drawing.Color.White;
+            this.totaLote.Font = new System.Drawing.Font("Microsoft YaHei", 20F);
+            this.totaLote.ForeColor = System.Drawing.Color.Black;
+            this.totaLote.Location = new System.Drawing.Point(1254, 347);
+            this.totaLote.Name = "totaLote";
+            this.totaLote.Size = new System.Drawing.Size(0, 45);
+            this.totaLote.TabIndex = 29;
             // 
             // label9
             // 
@@ -334,12 +337,12 @@
             this.panel9.Controls.Add(this.button1);
             this.panel9.Controls.Add(this.panel1);
             this.panel9.Controls.Add(this.label9);
-            this.panel9.Controls.Add(this.label23);
-            this.panel9.Controls.Add(this.label4);
+            this.panel9.Controls.Add(this.totaLote);
+            this.panel9.Controls.Add(this.totalesOrden);
             this.panel9.Controls.Add(this.label25);
             this.panel9.Controls.Add(this.epcs);
             this.panel9.Controls.Add(this.panel6);
-            this.panel9.Controls.Add(this.panel5);
+            this.panel9.Controls.Add(this.finLote);
             this.panel9.Controls.Add(this.button2);
             this.panel9.Controls.Add(this.label1);
             this.panel9.Controls.Add(this.textBox1);
@@ -413,7 +416,7 @@
             this.Load += new System.EventHandler(this.ScanEPCForm_Load);
             this.ResizeEnd += new System.EventHandler(this.MainForm_ResizeEnd);
             this.SizeChanged += new System.EventHandler(this.MainForm_SizeChanged);
-            this.panel5.ResumeLayout(false);
+            this.finLote.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.epcs)).EndInit();
             this.panel9.ResumeLayout(false);
@@ -434,15 +437,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel finLote;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.DataGridView epcs;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Button btnScanEPC;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label totalesOrden;
+        private System.Windows.Forms.Label totaLote;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
@@ -453,6 +456,6 @@
         private System.Windows.Forms.Panel panel3;
 
         #endregion
-        // private System.Windows.Forms.Panel panel1;
+       
     }
 }

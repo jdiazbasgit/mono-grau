@@ -7,42 +7,27 @@ using System.Net.Security;
 
 namespace FileDownload
 {
-    /// <summary>
-    /// 文件下载类
-    /// </summary>
+   
     public class Downloader
     {
         public delegate void DelProInfoArg(FileInfo _file);
         public delegate void DeldownloadEndArg();
         public delegate void DeldownloadException(Exception ex);
-        /// <summary>
-        /// 开始下载文件，事件
-        /// </summary>
+       
         public event DelProInfoArg DownloadStartingEvent;
-        /// <summary>
-        /// 分包下载 事件(通知显示更新进度)
-        /// </summary>
+        
         public event DelProInfoArg DownloadedEvent;
-        /// <summary>
-        /// 一个文件下载结束,事件
-        /// </summary>
+        
         public event DelProInfoArg DownloadEndEvent;
-        /// <summary>
-        /// 所有的文件下载结束，事件
-        /// </summary>
+       
         public event DeldownloadEndArg DownloadALLEnd;
 
-        /// <summary>
-        /// 所有的文件下载结束，事件
-        /// </summary>
+        
         public event DeldownloadException DownloadException;
 
         private List<FileInfo> _waitDownloadFiles;
 
-        /// <summary>
-        /// 下载一批文件文件
-        /// </summary>
-        /// <param name="list">文件列表</param>
+       
         public Downloader(List<FileInfo> list)
         {
             _waitDownloadFiles = list;
@@ -53,9 +38,7 @@ namespace FileDownload
             list.Add(file);
             _waitDownloadFiles = list;
         }
-        /// <summary>
-        /// 开始下载
-        /// </summary>
+        
         public void Start()
         {
             System.Threading.Thread DownloadThread = new System.Threading.Thread(new System.Threading.ThreadStart(StartDownload));
@@ -63,9 +46,6 @@ namespace FileDownload
             DownloadThread.Start();
         }
 
-        /// <summary>
-        /// 线程启动，开始获取数据包
-        /// </summary>
         private void StartDownload()
         {
             if (_waitDownloadFiles != null && _waitDownloadFiles.Count > 0)
@@ -119,7 +99,7 @@ namespace FileDownload
                         so.Close();
                         st.Close();
 
-                        if (DownloadEndEvent != null)//一个文件下载完成
+                        if (DownloadEndEvent != null)
                         {
                             DownloadEndEvent(file);
                         }
@@ -127,35 +107,28 @@ namespace FileDownload
                     catch (Exception ex)
                     {
                         // throw ex;
-                        if (DownloadException != null)//一个文件下载完成
+                        if (DownloadException != null)
                         {
                             DownloadException(ex); 
                         }
                     }
                 }
 
-                if (DownloadALLEnd != null)//下载结束
+                if (DownloadALLEnd != null)
                 {
                     DownloadALLEnd();
                 }
             }
             else
             {
-                if (DownloadALLEnd != null)//下载结束
+                if (DownloadALLEnd != null)
                 {
                     DownloadALLEnd();
                 }
             }
         }
 
-        /// <summary>
-        /// 自定义的服务器证书验证回调方法，这里始终认为存在证书可以下载,返回True
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="certificate"></param>
-        /// <param name="chain"></param>
-        /// <param name="sslPolicyErrors"></param>
-        /// <returns></returns>
+        
         protected bool ValidateServerCertificate(object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors)
         {
             return true;

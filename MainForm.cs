@@ -128,7 +128,7 @@ namespace UHFAPP
         public void cargarDatos(string archivo)
         {
             //Pass the file path and file name to the StreamReader constructor
-            StreamReader sr = new StreamReader(Environment.CurrentDirectory + "\\"+archivo);
+            StreamReader sr = new StreamReader(Environment.CurrentDirectory + "\\" + archivo);
             //Read the first line of text
             apiAmipemBase = sr.ReadLine();
             apiMozoBase = sr.ReadLine();
@@ -405,7 +405,7 @@ namespace UHFAPP
                 }
                 if (!ubicación.Equals("casa"))
 
-                    panel5.Visible = false;
+                    finLote.Visible = false;
                 epcs.Rows[epcs.Rows.Count - 2].DefaultCellStyle.BackColor = System.Drawing.Color.Red;
                 if (!ubicación.Equals("casa"))
                 {
@@ -416,7 +416,11 @@ namespace UHFAPP
                             if (grabarTagContadorAmipem(epcInfo.Epc, loteActual))
                             {
                                 totalesValidos++;
-                                label4.Text = "" + totalesValidos;
+                                totalesOrden.Text = "" + totalesValidos;
+                                totalLote++;
+                                totaLote.Text = "" + totalLote;
+                                if (finLote.Visible)
+                                    finLote.Visible = !finLote.Visible;
                             }
                             else
                             {
@@ -439,13 +443,16 @@ namespace UHFAPP
                 {
                     if (validaProducto(epc))
                     {
+
                         //if (grabarTagContadorMozo(epcInfo.Epc, loteActual))
                         if (grabarTagContadorAmipem(epcInfo.Epc, loteActual))
                         {
                             totalesValidos++;
                             totalLote++;
-                            label4.Text = "" + totalesValidos;
-                            label23.Text = "" + totalLote;
+                            totalesOrden.Text = "" + totalesValidos;
+                            totaLote.Text = "" + totalLote;
+                            if (finLote.Visible)
+                                finLote.Visible = !finLote.Visible;
                         }
                         else
                         {
@@ -463,57 +470,57 @@ namespace UHFAPP
                     }
 
                 }
-                int cantidadBuena = 0;
+                /*int cantidadBuena = 0;
                 for (int i = 0; i < epcs.Rows.Count; i++)
                 {
                     if(!epcs.Rows[i].DefaultCellStyle.BackColor.Equals(System.Drawing.Color.Green))
                         cantidadBuena++;
+                }*/
+
+                if (totalLote == cantidadPorLote)
+                {
+                    finLote.Visible = true;
+                    loteActual++;
+                    total = 0;
+                    totaLote.Text = "0";
+                    totalLote = 0;
+                    //loteActual++;
+                    label9.Text = "Lote actual: " + loteActual;
+
+                    if (totalesValidos == cantidadTotal)
+                    {
+                        StopEPC(true);
+                        string url = Environment.CurrentDirectory + "\\aplausos.wav";
+                        SoundPlayer simpleSound1 = new SoundPlayer(@url);
+                        simpleSound1.Play();
+
+                        // label4.Text = "0";
+                        totaLote.Text = "0";
+                        panel6.Visible = true;
+                        epcList.Clear();
+                        textBox1.Text = "";
+
+                        // Replace the problematic line causing the error:  
+                        // epcs.Rows.Add(["FIN DE ORDEN","",""] );  
+
+                        // With the following corrected line:  
+                        epcs.Rows.Add(new object[] { "FIN DE ORDEN", "", "" });
+                        epcs.Rows[epcs.Rows.Count - 2].DefaultCellStyle.BackColor = System.Drawing.Color.Green;
+                        epcs.Rows[epcs.Rows.Count - 2].DefaultCellStyle.ForeColor = System.Drawing.Color.White;
+
+                    }
+                    else
+                    {
+
+                        var wplayer = new WindowsMediaPlayer();
+                        wplayer.URL = Environment.CurrentDirectory + "\\sirena.mp3";
+                        wplayer.controls.play();
+
+                    }
+                    return;
                 }
 
-                    if (cantidadPorLote * loteActual == epcList.Count)
-                    {
-                    StopEPC(true);
-                    panel5.Visible = true;
-                        loteActual++;
-                        total = 0;
-                        label23.Text = "0";
-                        //loteActual++;
-                        label9.Text = "Lote actual: " + loteActual;
-                    
-                        if (cantidadTotal == epcs.Rows.Count)
-                        {
-                            StopEPC(true);
-                            string url = Environment.CurrentDirectory + "\\aplausos.wav";
-                            SoundPlayer simpleSound1 = new SoundPlayer(@url);
-                            simpleSound1.Play();
 
-                            // label4.Text = "0";
-                            label23.Text = "0";
-                            panel6.Visible = true;
-                            epcList.Clear();
-                            textBox1.Text = "";
-
-                            // Replace the problematic line causing the error:  
-                            // epcs.Rows.Add(["FIN DE ORDEN","",""] );  
-
-                            // With the following corrected line:  
-                            epcs.Rows.Add(new object[] { "FIN DE ORDEN", "", "" });
-                            epcs.Rows[epcs.Rows.Count - 2].DefaultCellStyle.BackColor = System.Drawing.Color.Green;
-                            epcs.Rows[epcs.Rows.Count - 2].DefaultCellStyle.ForeColor = System.Drawing.Color.White;
-
-                        }
-                        else
-                        {
-
-                            var wplayer = new WindowsMediaPlayer();
-                            wplayer.URL = Environment.CurrentDirectory + "\\sirena.mp3";
-                            wplayer.controls.play();
-
-                        }
-                        return;
-                    }
-
-                
 
 
             }
@@ -549,7 +556,7 @@ namespace UHFAPP
                             strsb = strsb.Replace("@odata.etag", "dataTag");
                             Gtin gtinWeb = JsonConvert.DeserializeObject<Gtin>(strsb);
                             gtin = "8435482613646";
-                           // gtin = gtinWeb.value[0].gtin;
+                            // gtin = gtinWeb.value[0].gtin;
                         }
                     }
                     catch (Exception e)
@@ -668,7 +675,7 @@ namespace UHFAPP
                             string responseBody = objReader.ReadToEnd();
                             Grabacion[] grabaciones = JsonConvert.DeserializeObject<Grabacion[]>(responseBody);
                             totalesValidos = grabaciones.Length;
-                            label4.Text = "" +totalesValidos;
+                            totalesOrden.Text = "" + totalesValidos;
 
 
                             for (int i = 0; i < grabaciones.Length; i++)
@@ -739,11 +746,9 @@ namespace UHFAPP
                             label6.Text = orden.descripcion;
                             cantidadTotal = orden.cantidad;
                             label7.Text = "" + cantidadTotal;
-                            textBox3.Text = "" + orden.lotes;
-                            //label11.Text ="Lote actual:"+loteActual;
                             label2.Visible = true;
                             idOrdenAmipem = orden.id;
-                            textBox3.Text = ""+orden.lotes;
+                            textBox3.Text = "" + orden.lotes;
                             cantidadPorLote = Int32.Parse(label7.Text) / Int32.Parse(textBox3.Text);
                             label25.Text = "Lotes: " + Int32.Parse(textBox3.Text) + " (" + cantidadPorLote + ")";
                             label9.Text = "Lote actual: " + loteActual;
@@ -969,7 +974,7 @@ namespace UHFAPP
             {
                 btnScanEPC.BackColor = System.Drawing.Color.Red;
                 btnScanEPC.Text = strStop;
-                panel5.Visible = false;
+                finLote.Visible = false;
 
                 //loteActual++;
 
@@ -1000,7 +1005,10 @@ namespace UHFAPP
             epcs.Columns.
                Add("LINEA", "LINEA");
             epcs.Rows.Clear();
-            label4.Text = "0";
+            epcs.Columns[0].Width = 635;
+            epcs.Columns[1].Width = 43;
+            epcs.Columns[2].Width = 70;
+            totalesOrden.Text = "0";
             if (ubicación.Equals("casa"))
                 leerOrdenAmipem();
             else
@@ -1012,8 +1020,8 @@ namespace UHFAPP
             }
 
 
-           
-            panel5.Visible = false;
+
+            finLote.Visible = false;
             panel6.Visible = false;
             StopEPC(true);
             btnScanEPC.Text = strStart;
@@ -1034,12 +1042,13 @@ namespace UHFAPP
                     cantidadPorLote = Int32.Parse(label7.Text) / Int32.Parse(textBox3.Text);
                     label25.Text = "Lotes: " + Int32.Parse(textBox3.Text) + " (" + cantidadPorLote + ")";
                     label9.Text = "Lote actual: " + loteActual;
-                    actualizaLotes();
+                    if (Int32.Parse(textBox3.Text) > 1)
+                        actualizaLotes();
                 }
                 catch (Exception)
                 {
 
-                    
+
                 }
             }
         }
@@ -1071,10 +1080,10 @@ namespace UHFAPP
 
                             string responseBody = objReader.ReadToEnd();
                             Orden orden = JsonConvert.DeserializeObject<Orden>(responseBody);
-                            
+
 
                             var url1 = apiAmipemBase + "grabarOrden/";
-                            
+
                             var request1 = (HttpWebRequest)WebRequest.Create(url1);
 
                             request1.Method = "POST";
@@ -1098,7 +1107,7 @@ namespace UHFAPP
                                     string strsb = sr.ReadToEnd();
                                     Orden ordenRetorno = JsonConvert.DeserializeObject<Orden>(strsb);
 
-                                   
+
                                 }
                             }
                             catch (Exception e)

@@ -1,4 +1,4 @@
-http://82.223.202.137/mozo/
+http://localhost:8080/
 https://webservice.mozo-grau.com:7048/BC200_MG_DESARROLLO/
 0c0574f1-f098-ed11-965c-6045bd89ef6b
 WEBSERVICE
