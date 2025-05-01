@@ -1224,5 +1224,10 @@ namespace UHFAPP
         {
 
         }
+
+        private void epcs_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

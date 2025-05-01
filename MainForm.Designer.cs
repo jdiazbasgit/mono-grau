@@ -50,9 +50,9 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.pReferencia = new System.Windows.Forms.Panel();
             this.tbLinea = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pPelPda = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.pPelPda = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.finLote.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.epcs)).BeginInit();
@@ -199,7 +199,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.epcs.DefaultCellStyle = dataGridViewCellStyle3;
             this.epcs.GridColor = System.Drawing.Color.White;
-            this.epcs.Location = new System.Drawing.Point(861, 482);
+            this.epcs.Location = new System.Drawing.Point(861, 475);
             this.epcs.Name = "epcs";
             this.epcs.RowHeadersWidth = 51;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -210,8 +210,9 @@
             this.epcs.RowTemplate.Height = 24;
             this.epcs.RowTemplate.ReadOnly = true;
             this.epcs.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.epcs.Size = new System.Drawing.Size(2599, 599);
+            this.epcs.Size = new System.Drawing.Size(1408, 599);
             this.epcs.TabIndex = 37;
+            this.epcs.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.epcs_CellContentClick);
             // 
             // label25
             // 
@@ -258,7 +259,7 @@
             this.label9.ForeColor = System.Drawing.Color.Olive;
             this.label9.Location = new System.Drawing.Point(1036, 420);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 56);
+            this.label9.Size = new System.Drawing.Size(0, 45);
             this.label9.TabIndex = 17;
             // 
             // panel1
@@ -285,6 +286,7 @@
             // 
             // panel9
             // 
+            this.panel9.Controls.Add(this.panel11);
             this.panel9.Controls.Add(this.pTotal);
             this.panel9.Controls.Add(this.pLinea);
             this.panel9.Controls.Add(this.panel4);
@@ -298,11 +300,10 @@
             this.panel9.Controls.Add(this.finLote);
             this.panel9.Controls.Add(this.button2);
             this.panel9.Controls.Add(this.textBox1);
-            this.panel9.Controls.Add(this.panel11);
             this.panel9.Location = new System.Drawing.Point(-30, -12);
             this.panel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(1890, 914);
+            this.panel9.Size = new System.Drawing.Size(2519, 914);
             this.panel9.TabIndex = 37;
             // 
             // pTotal
@@ -388,14 +389,17 @@
             this.tbLinea.TabIndex = 41;
             this.tbLinea.Text = "1";
             // 
-            // panel2
+            // panel11
             // 
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Location = new System.Drawing.Point(684, 20);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(281, 73);
-            this.panel2.TabIndex = 39;
+            this.panel11.BackColor = System.Drawing.Color.LightGray;
+            this.panel11.Controls.Add(this.pPelPda);
+            this.panel11.Controls.Add(this.panel2);
+            this.panel11.Controls.Add(this.button1);
+            this.panel11.Controls.Add(this.panel1);
+            this.panel11.Location = new System.Drawing.Point(41, 20);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(2355, 110);
+            this.panel11.TabIndex = 47;
             // 
             // pPelPda
             // 
@@ -408,17 +412,14 @@
             this.pPelPda.TabIndex = 46;
             this.pPelPda.TabStop = true;
             // 
-            // panel11
+            // panel2
             // 
-            this.panel11.BackColor = System.Drawing.Color.LightGray;
-            this.panel11.Controls.Add(this.pPelPda);
-            this.panel11.Controls.Add(this.panel2);
-            this.panel11.Controls.Add(this.button1);
-            this.panel11.Controls.Add(this.panel1);
-            this.panel11.Location = new System.Drawing.Point(41, 20);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(2000, 110);
-            this.panel11.TabIndex = 47;
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Location = new System.Drawing.Point(684, 20);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(281, 73);
+            this.panel2.TabIndex = 39;
             // 
             // MainForm
             // 
@@ -426,7 +427,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(2005, 1129);
+            this.ClientSize = new System.Drawing.Size(2316, 1129);
             this.Controls.Add(this.panel9);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
