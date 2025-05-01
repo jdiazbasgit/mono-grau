@@ -628,12 +628,12 @@ namespace UHFAPP
                             string responseBodyFormater = responseBody.Replace("@odata.context", "dataContext");
                             responseBodyFormater = responseBodyFormater.Replace("@odata.etag", "odataETag");
                             getMozo = JsonConvert.DeserializeObject<GetMozo>(responseBodyFormater);
-                            label5.Text = getMozo.Value[0].ItemNo;
+                            lReferencia.Text = getMozo.Value[0].ItemNo;
                             producto = getMozo.Value[0].ItemNo;
-                            label6.Text = getMozo.Value[0].Description;
-                            label7.Text = getMozo.Value[0].RemainingQtyBase.ToString();
+                            lDescripcion.Text = getMozo.Value[0].Description;
+                            lCantidadTotal.Text = getMozo.Value[0].RemainingQtyBase.ToString();
 
-                            label2.Visible = true;
+                            pReferencia.Visible = true;
                             resultado = true;
                         }
                     }
@@ -742,14 +742,14 @@ namespace UHFAPP
 
                             string responseBody = objReader.ReadToEnd();
                             Orden orden = JsonConvert.DeserializeObject<Orden>(responseBody);
-                            label5.Text = orden.item;
-                            label6.Text = orden.descripcion;
+                            lReferencia.Text = orden.item;
+                            lDescripcion.Text = orden.descripcion;
                             cantidadTotal = orden.cantidad;
-                            label7.Text = "" + cantidadTotal;
-                            label2.Visible = true;
+                            lCantidadTotal.Text = "" + cantidadTotal;
+                            pReferencia.Visible = true;
                             idOrdenAmipem = orden.id;
                             textBox3.Text = "" + orden.lotes;
-                            cantidadPorLote = Int32.Parse(label7.Text) / Int32.Parse(textBox3.Text);
+                            cantidadPorLote = Int32.Parse(lCantidadTotal.Text) / Int32.Parse(textBox3.Text);
                             label25.Text = "Lotes: " + Int32.Parse(textBox3.Text) + " (" + cantidadPorLote + ")";
                             label9.Text = "Lote actual: " + loteActual;
                             leerTagsOrdenAmipem();
@@ -778,7 +778,7 @@ namespace UHFAPP
             request.Accept = "application/json";
             try
             {
-                Orden orden = new Orden(idOrdenAmipem, textBox1.Text, label6.Text, label5.Text, Int32.Parse(textBox3.Text), Int32.Parse(label7.Text));
+                Orden orden = new Orden(idOrdenAmipem, textBox1.Text, lDescripcion.Text, lReferencia.Text, Int32.Parse(textBox3.Text), Int32.Parse(lCantidadTotal.Text));
                 string salida = JsonConvert.SerializeObject(orden);
                 byte[] data = Encoding.UTF8.GetBytes(salida);
                 request.ContentLength = data.Length;
@@ -794,7 +794,7 @@ namespace UHFAPP
                     Orden ordenRetorno = JsonConvert.DeserializeObject<Orden>(strsb);
 
                     lotesOrden = ordenRetorno.lotes;
-                    cantidadPorLote = Int32.Parse(label7.Text) / Int32.Parse(textBox3.Text);
+                    cantidadPorLote = Int32.Parse(lCantidadTotal.Text) / Int32.Parse(textBox3.Text);
                     label25.Text = "Lotes: " + lotesOrden + " (" + cantidadPorLote + ")";
                     label9.Text = "Lote actual: " + loteActual;
                 }
@@ -1039,7 +1039,7 @@ namespace UHFAPP
                 try
                 {
 
-                    cantidadPorLote = Int32.Parse(label7.Text) / Int32.Parse(textBox3.Text);
+                    cantidadPorLote = Int32.Parse(lCantidadTotal.Text) / Int32.Parse(textBox3.Text);
                     label25.Text = "Lotes: " + Int32.Parse(textBox3.Text) + " (" + cantidadPorLote + ")";
                     label9.Text = "Lote actual: " + loteActual;
                     if (Int32.Parse(textBox3.Text) > 1)
@@ -1144,6 +1144,26 @@ namespace UHFAPP
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pReferencia_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lUnidades_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void totalesOrden_Click(object sender, EventArgs e)
         {
 
         }

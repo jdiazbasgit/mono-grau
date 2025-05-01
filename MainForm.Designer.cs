@@ -20,18 +20,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.lReferencia = new System.Windows.Forms.Label();
+            this.lCantidadTotal = new System.Windows.Forms.Label();
+            this.lDescripcion = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.finLote = new System.Windows.Forms.Panel();
@@ -49,8 +45,13 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.tbLinea = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.pLinea = new System.Windows.Forms.Panel();
+            this.pReferencia = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.pLotes = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.finLote.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.epcs)).BeginInit();
@@ -58,90 +59,53 @@
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label3
+            // lReferencia
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(303, 25);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 27);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Unidades:";
+            this.lReferencia.AutoSize = true;
+            this.lReferencia.BackColor = System.Drawing.Color.Transparent;
+            this.lReferencia.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold);
+            this.lReferencia.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lReferencia.Location = new System.Drawing.Point(243, 25);
+            this.lReferencia.Name = "lReferencia";
+            this.lReferencia.Size = new System.Drawing.Size(0, 34);
+            this.lReferencia.TabIndex = 13;
+            this.lReferencia.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // label2
+            // lCantidadTotal
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(13, 25);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(125, 27);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Referencia:";
+            this.lCantidadTotal.AutoSize = true;
+            this.lCantidadTotal.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold);
+            this.lCantidadTotal.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lCantidadTotal.Location = new System.Drawing.Point(243, 111);
+            this.lCantidadTotal.Name = "lCantidadTotal";
+            this.lCantidadTotal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lCantidadTotal.Size = new System.Drawing.Size(0, 34);
+            this.lCantidadTotal.TabIndex = 15;
             // 
-            // label15
+            // lDescripcion
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold);
-            this.label15.Location = new System.Drawing.Point(486, 25);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(174, 27);
-            this.label15.TabIndex = 12;
-            this.label15.Text = "Lotes (opcional)";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label5.Location = new System.Drawing.Point(135, 25);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(0, 27);
-            this.label5.TabIndex = 13;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold);
-            this.label7.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label7.Location = new System.Drawing.Point(415, 25);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(0, 27);
-            this.label7.TabIndex = 15;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label6.Location = new System.Drawing.Point(13, 83);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(0, 36);
-            this.label6.TabIndex = 14;
+            this.lDescripcion.AutoSize = true;
+            this.lDescripcion.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Bold);
+            this.lDescripcion.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lDescripcion.Location = new System.Drawing.Point(38, 185);
+            this.lDescripcion.Name = "lDescripcion";
+            this.lDescripcion.Size = new System.Drawing.Size(0, 45);
+            this.lDescripcion.TabIndex = 14;
+            this.lDescripcion.Click += new System.EventHandler(this.lUnidades_Click);
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.textBox1.Location = new System.Drawing.Point(274, 158);
+            this.textBox1.Location = new System.Drawing.Point(294, 171);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(180, 34);
             this.textBox1.TabIndex = 8;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(171, 165);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 27);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Orden:";
-            // 
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.textBox3.Location = new System.Drawing.Point(678, 15);
+            this.textBox3.Location = new System.Drawing.Point(691, 80);
             this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(88, 34);
@@ -152,7 +116,7 @@
             // 
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(591, 149);
+            this.button2.Location = new System.Drawing.Point(595, 149);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(201, 39);
@@ -169,7 +133,7 @@
             this.finLote.Location = new System.Drawing.Point(274, 427);
             this.finLote.Margin = new System.Windows.Forms.Padding(4);
             this.finLote.Name = "finLote";
-            this.finLote.Size = new System.Drawing.Size(539, 122);
+            this.finLote.Size = new System.Drawing.Size(452, 118);
             this.finLote.TabIndex = 35;
             this.finLote.Visible = false;
             // 
@@ -192,7 +156,7 @@
             this.panel6.Location = new System.Drawing.Point(274, 655);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(539, 122);
+            this.panel6.Size = new System.Drawing.Size(452, 118);
             this.panel6.TabIndex = 36;
             this.panel6.Visible = false;
             // 
@@ -209,53 +173,53 @@
             // 
             // epcs
             // 
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.epcs.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.epcs.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.epcs.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.epcs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.epcs.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.epcs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.epcs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.epcs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.epcs.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.epcs.DefaultCellStyle = dataGridViewCellStyle15;
             this.epcs.GridColor = System.Drawing.Color.White;
-            this.epcs.Location = new System.Drawing.Point(861, 395);
+            this.epcs.Location = new System.Drawing.Point(861, 482);
             this.epcs.Name = "epcs";
             this.epcs.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.NullValue = null;
-            this.epcs.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.NullValue = null;
+            this.epcs.RowsDefaultCellStyle = dataGridViewCellStyle16;
             this.epcs.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.epcs.RowTemplate.Height = 24;
             this.epcs.RowTemplate.ReadOnly = true;
             this.epcs.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.epcs.Size = new System.Drawing.Size(1446, 599);
+            this.epcs.Size = new System.Drawing.Size(2599, 599);
             this.epcs.TabIndex = 37;
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.White;
+            this.label25.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label25.Font = new System.Drawing.Font("Microsoft YaHei", 20F);
             this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label25.Location = new System.Drawing.Point(1566, 347);
+            this.label25.Location = new System.Drawing.Point(413, 134);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(0, 45);
+            this.label25.Size = new System.Drawing.Size(0, 56);
             this.label25.TabIndex = 19;
             // 
             // btnScanEPC
@@ -278,10 +242,11 @@
             this.totalesOrden.BackColor = System.Drawing.Color.White;
             this.totalesOrden.Font = new System.Drawing.Font("Microsoft YaHei", 20F);
             this.totalesOrden.ForeColor = System.Drawing.Color.Black;
-            this.totalesOrden.Location = new System.Drawing.Point(1869, 347);
+            this.totalesOrden.Location = new System.Drawing.Point(1760, 420);
             this.totalesOrden.Name = "totalesOrden";
-            this.totalesOrden.Size = new System.Drawing.Size(0, 45);
+            this.totalesOrden.Size = new System.Drawing.Size(0, 56);
             this.totalesOrden.TabIndex = 29;
+            this.totalesOrden.Click += new System.EventHandler(this.totalesOrden_Click);
             // 
             // totaLote
             // 
@@ -300,18 +265,18 @@
             this.label9.BackColor = System.Drawing.Color.White;
             this.label9.Font = new System.Drawing.Font("Microsoft YaHei", 20F);
             this.label9.ForeColor = System.Drawing.Color.Olive;
-            this.label9.Location = new System.Drawing.Point(975, 347);
+            this.label9.Location = new System.Drawing.Point(1036, 420);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 45);
+            this.label9.Size = new System.Drawing.Size(0, 56);
             this.label9.TabIndex = 17;
             // 
             // panel1
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(1669, 28);
+            this.panel1.Location = new System.Drawing.Point(1677, 16);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(346, 227);
+            this.panel1.Size = new System.Drawing.Size(346, 209);
             this.panel1.TabIndex = 38;
             // 
             // button1
@@ -329,22 +294,22 @@
             // 
             // panel9
             // 
+            this.panel9.Controls.Add(this.panel10);
+            this.panel9.Controls.Add(this.pLinea);
+            this.panel9.Controls.Add(this.panel4);
             this.panel9.Controls.Add(this.panel3);
             this.panel9.Controls.Add(this.btnScanEPC);
             this.panel9.Controls.Add(this.tbLinea);
-            this.panel9.Controls.Add(this.label8);
             this.panel9.Controls.Add(this.panel2);
             this.panel9.Controls.Add(this.button1);
             this.panel9.Controls.Add(this.panel1);
             this.panel9.Controls.Add(this.label9);
             this.panel9.Controls.Add(this.totaLote);
             this.panel9.Controls.Add(this.totalesOrden);
-            this.panel9.Controls.Add(this.label25);
             this.panel9.Controls.Add(this.epcs);
             this.panel9.Controls.Add(this.panel6);
             this.panel9.Controls.Add(this.finLote);
             this.panel9.Controls.Add(this.button2);
-            this.panel9.Controls.Add(this.label1);
             this.panel9.Controls.Add(this.textBox1);
             this.panel9.Location = new System.Drawing.Point(-30, -12);
             this.panel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -355,45 +320,93 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel3.Controls.Add(this.pLotes);
+            this.panel3.Controls.Add(this.panel5);
+            this.panel3.Controls.Add(this.pReferencia);
             this.panel3.Controls.Add(this.textBox3);
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.label7);
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.label15);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(842, 136);
+            this.panel3.Controls.Add(this.lDescripcion);
+            this.panel3.Controls.Add(this.lCantidadTotal);
+            this.panel3.Controls.Add(this.lReferencia);
+            this.panel3.Controls.Add(this.label25);
+            this.panel3.Location = new System.Drawing.Point(861, 136);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(782, 166);
+            this.panel3.Size = new System.Drawing.Size(850, 253);
             this.panel3.TabIndex = 42;
             // 
             // tbLinea
             // 
             this.tbLinea.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.tbLinea.Location = new System.Drawing.Point(267, 237);
+            this.tbLinea.Location = new System.Drawing.Point(317, 294);
             this.tbLinea.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbLinea.Name = "tbLinea";
             this.tbLinea.Size = new System.Drawing.Size(62, 34);
             this.tbLinea.TabIndex = 41;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(171, 240);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(72, 27);
-            this.label8.TabIndex = 40;
-            this.label8.Text = "Linea:";
+            this.tbLinea.Text = "1";
             // 
             // panel2
             // 
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Location = new System.Drawing.Point(842, 28);
+            this.panel2.Location = new System.Drawing.Point(90, 16);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(269, 73);
+            this.panel2.Size = new System.Drawing.Size(281, 73);
             this.panel2.TabIndex = 39;
+            // 
+            // panel4
+            // 
+            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel4.Location = new System.Drawing.Point(71, 161);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(190, 54);
+            this.panel4.TabIndex = 43;
+            // 
+            // pLinea
+            // 
+            this.pLinea.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pLinea.BackgroundImage")));
+            this.pLinea.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pLinea.Location = new System.Drawing.Point(71, 281);
+            this.pLinea.Name = "pLinea";
+            this.pLinea.Size = new System.Drawing.Size(190, 58);
+            this.pLinea.TabIndex = 44;
+            // 
+            // pReferencia
+            // 
+            this.pReferencia.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pReferencia.BackgroundImage")));
+            this.pReferencia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pReferencia.Location = new System.Drawing.Point(19, 15);
+            this.pReferencia.Name = "pReferencia";
+            this.pReferencia.Size = new System.Drawing.Size(196, 47);
+            this.pReferencia.TabIndex = 17;
+            this.pReferencia.Paint += new System.Windows.Forms.PaintEventHandler(this.pReferencia_Paint);
+            // 
+            // panel5
+            // 
+            this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel5.Location = new System.Drawing.Point(19, 98);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(196, 47);
+            this.panel5.TabIndex = 18;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            // 
+            // pLotes
+            // 
+            this.pLotes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pLotes.BackgroundImage")));
+            this.pLotes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pLotes.Location = new System.Drawing.Point(421, 73);
+            this.pLotes.Name = "pLotes";
+            this.pLotes.Size = new System.Drawing.Size(239, 41);
+            this.pLotes.TabIndex = 19;
+            // 
+            // panel10
+            // 
+            this.panel10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel10.BackgroundImage")));
+            this.panel10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel10.Location = new System.Drawing.Point(1491, 420);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(220, 49);
+            this.panel10.TabIndex = 45;
             // 
             // MainForm
             // 
@@ -426,15 +439,10 @@
             this.ResumeLayout(false);
 
         }
-
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lReferencia;
+        private System.Windows.Forms.Label lCantidadTotal;
+        private System.Windows.Forms.Label lDescripcion;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel finLote;
@@ -452,10 +460,15 @@
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox tbLinea;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel3;
 
         #endregion
-       
+
+        private System.Windows.Forms.Panel pLinea;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel pReferencia;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel pLotes;
+        private System.Windows.Forms.Panel panel10;
     }
 }
