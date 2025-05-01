@@ -20,15 +20,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lReferencia = new System.Windows.Forms.Label();
             this.lCantidadTotal = new System.Windows.Forms.Label();
             this.lDescripcion = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.tbLotes = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.finLote = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -38,25 +38,27 @@
             this.label25 = new System.Windows.Forms.Label();
             this.btnScanEPC = new System.Windows.Forms.Button();
             this.totalesOrden = new System.Windows.Forms.Label();
-            this.totaLote = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.pTotal = new System.Windows.Forms.Panel();
+            this.pLinea = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.pLotes = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.pReferencia = new System.Windows.Forms.Panel();
             this.tbLinea = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.pLinea = new System.Windows.Forms.Panel();
-            this.pReferencia = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.pLotes = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
+            this.pPelPda = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
             this.finLote.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.epcs)).BeginInit();
             this.panel9.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // lReferencia
@@ -67,7 +69,7 @@
             this.lReferencia.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lReferencia.Location = new System.Drawing.Point(243, 25);
             this.lReferencia.Name = "lReferencia";
-            this.lReferencia.Size = new System.Drawing.Size(0, 34);
+            this.lReferencia.Size = new System.Drawing.Size(0, 27);
             this.lReferencia.TabIndex = 13;
             this.lReferencia.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -79,7 +81,7 @@
             this.lCantidadTotal.Location = new System.Drawing.Point(243, 111);
             this.lCantidadTotal.Name = "lCantidadTotal";
             this.lCantidadTotal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lCantidadTotal.Size = new System.Drawing.Size(0, 34);
+            this.lCantidadTotal.Size = new System.Drawing.Size(0, 27);
             this.lCantidadTotal.TabIndex = 15;
             // 
             // lDescripcion
@@ -89,7 +91,7 @@
             this.lDescripcion.ForeColor = System.Drawing.SystemColors.Highlight;
             this.lDescripcion.Location = new System.Drawing.Point(38, 185);
             this.lDescripcion.Name = "lDescripcion";
-            this.lDescripcion.Size = new System.Drawing.Size(0, 45);
+            this.lDescripcion.Size = new System.Drawing.Size(0, 36);
             this.lDescripcion.TabIndex = 14;
             this.lDescripcion.Click += new System.EventHandler(this.lUnidades_Click);
             // 
@@ -102,21 +104,21 @@
             this.textBox1.Size = new System.Drawing.Size(180, 34);
             this.textBox1.TabIndex = 8;
             // 
-            // textBox3
+            // tbLotes
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.textBox3.Location = new System.Drawing.Point(691, 80);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(88, 34);
-            this.textBox3.TabIndex = 16;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.tbLotes.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.tbLotes.Location = new System.Drawing.Point(691, 80);
+            this.tbLotes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbLotes.Name = "tbLotes";
+            this.tbLotes.Size = new System.Drawing.Size(88, 34);
+            this.tbLotes.TabIndex = 16;
+            this.tbLotes.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // button2
             // 
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(595, 149);
+            this.button2.Location = new System.Drawing.Point(509, 168);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(201, 39);
@@ -173,37 +175,37 @@
             // 
             // epcs
             // 
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.epcs.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.epcs.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.epcs.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.epcs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.epcs.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.epcs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.epcs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.epcs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.epcs.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.epcs.DefaultCellStyle = dataGridViewCellStyle3;
             this.epcs.GridColor = System.Drawing.Color.White;
             this.epcs.Location = new System.Drawing.Point(861, 482);
             this.epcs.Name = "epcs";
             this.epcs.RowHeadersWidth = 51;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.NullValue = null;
-            this.epcs.RowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.NullValue = null;
+            this.epcs.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.epcs.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.epcs.RowTemplate.Height = 24;
             this.epcs.RowTemplate.ReadOnly = true;
@@ -219,7 +221,7 @@
             this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label25.Location = new System.Drawing.Point(413, 134);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(0, 56);
+            this.label25.Size = new System.Drawing.Size(0, 45);
             this.label25.TabIndex = 19;
             // 
             // btnScanEPC
@@ -244,20 +246,9 @@
             this.totalesOrden.ForeColor = System.Drawing.Color.Black;
             this.totalesOrden.Location = new System.Drawing.Point(1760, 420);
             this.totalesOrden.Name = "totalesOrden";
-            this.totalesOrden.Size = new System.Drawing.Size(0, 56);
+            this.totalesOrden.Size = new System.Drawing.Size(0, 45);
             this.totalesOrden.TabIndex = 29;
             this.totalesOrden.Click += new System.EventHandler(this.totalesOrden_Click);
-            // 
-            // totaLote
-            // 
-            this.totaLote.AutoSize = true;
-            this.totaLote.BackColor = System.Drawing.Color.White;
-            this.totaLote.Font = new System.Drawing.Font("Microsoft YaHei", 20F);
-            this.totaLote.ForeColor = System.Drawing.Color.Black;
-            this.totaLote.Location = new System.Drawing.Point(1254, 347);
-            this.totaLote.Name = "totaLote";
-            this.totaLote.Size = new System.Drawing.Size(0, 45);
-            this.totaLote.TabIndex = 29;
             // 
             // label9
             // 
@@ -274,15 +265,15 @@
             // 
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Location = new System.Drawing.Point(1677, 16);
+            this.panel1.Location = new System.Drawing.Point(233, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(346, 209);
+            this.panel1.Size = new System.Drawing.Size(346, 89);
             this.panel1.TabIndex = 38;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.button1.Location = new System.Drawing.Point(63, 94);
+            this.button1.Location = new System.Drawing.Point(22, 74);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(169, 40);
@@ -294,28 +285,53 @@
             // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.panel10);
+            this.panel9.Controls.Add(this.pTotal);
             this.panel9.Controls.Add(this.pLinea);
             this.panel9.Controls.Add(this.panel4);
             this.panel9.Controls.Add(this.panel3);
             this.panel9.Controls.Add(this.btnScanEPC);
             this.panel9.Controls.Add(this.tbLinea);
-            this.panel9.Controls.Add(this.panel2);
-            this.panel9.Controls.Add(this.button1);
-            this.panel9.Controls.Add(this.panel1);
             this.panel9.Controls.Add(this.label9);
-            this.panel9.Controls.Add(this.totaLote);
             this.panel9.Controls.Add(this.totalesOrden);
             this.panel9.Controls.Add(this.epcs);
             this.panel9.Controls.Add(this.panel6);
             this.panel9.Controls.Add(this.finLote);
             this.panel9.Controls.Add(this.button2);
             this.panel9.Controls.Add(this.textBox1);
+            this.panel9.Controls.Add(this.panel11);
             this.panel9.Location = new System.Drawing.Point(-30, -12);
             this.panel9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(1890, 914);
             this.panel9.TabIndex = 37;
+            // 
+            // pTotal
+            // 
+            this.pTotal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pTotal.BackgroundImage")));
+            this.pTotal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pTotal.Location = new System.Drawing.Point(1491, 420);
+            this.pTotal.Name = "pTotal";
+            this.pTotal.Size = new System.Drawing.Size(220, 49);
+            this.pTotal.TabIndex = 45;
+            this.pTotal.Visible = false;
+            // 
+            // pLinea
+            // 
+            this.pLinea.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pLinea.BackgroundImage")));
+            this.pLinea.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pLinea.Location = new System.Drawing.Point(71, 281);
+            this.pLinea.Name = "pLinea";
+            this.pLinea.Size = new System.Drawing.Size(190, 58);
+            this.pLinea.TabIndex = 44;
+            // 
+            // panel4
+            // 
+            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
+            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel4.Location = new System.Drawing.Point(71, 161);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(190, 54);
+            this.panel4.TabIndex = 43;
             // 
             // panel3
             // 
@@ -323,7 +339,7 @@
             this.panel3.Controls.Add(this.pLotes);
             this.panel3.Controls.Add(this.panel5);
             this.panel3.Controls.Add(this.pReferencia);
-            this.panel3.Controls.Add(this.textBox3);
+            this.panel3.Controls.Add(this.tbLotes);
             this.panel3.Controls.Add(this.lDescripcion);
             this.panel3.Controls.Add(this.lCantidadTotal);
             this.panel3.Controls.Add(this.lReferencia);
@@ -332,6 +348,35 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(850, 253);
             this.panel3.TabIndex = 42;
+            // 
+            // pLotes
+            // 
+            this.pLotes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pLotes.BackgroundImage")));
+            this.pLotes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pLotes.Location = new System.Drawing.Point(421, 73);
+            this.pLotes.Name = "pLotes";
+            this.pLotes.Size = new System.Drawing.Size(239, 41);
+            this.pLotes.TabIndex = 19;
+            // 
+            // panel5
+            // 
+            this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel5.Location = new System.Drawing.Point(19, 98);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(196, 47);
+            this.panel5.TabIndex = 18;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            // 
+            // pReferencia
+            // 
+            this.pReferencia.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pReferencia.BackgroundImage")));
+            this.pReferencia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pReferencia.Location = new System.Drawing.Point(19, 15);
+            this.pReferencia.Name = "pReferencia";
+            this.pReferencia.Size = new System.Drawing.Size(196, 47);
+            this.pReferencia.TabIndex = 17;
+            this.pReferencia.Paint += new System.Windows.Forms.PaintEventHandler(this.pReferencia_Paint);
             // 
             // tbLinea
             // 
@@ -347,66 +392,33 @@
             // 
             this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
             this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Location = new System.Drawing.Point(90, 16);
+            this.panel2.Location = new System.Drawing.Point(684, 20);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(281, 73);
             this.panel2.TabIndex = 39;
             // 
-            // panel4
+            // pPelPda
             // 
-            this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
-            this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel4.Location = new System.Drawing.Point(71, 161);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(190, 54);
-            this.panel4.TabIndex = 43;
+            this.pPelPda.BackColor = System.Drawing.Color.LightGray;
+            this.pPelPda.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pPelPda.BackgroundImage")));
+            this.pPelPda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pPelPda.Location = new System.Drawing.Point(30, 4);
+            this.pPelPda.Name = "pPelPda";
+            this.pPelPda.Size = new System.Drawing.Size(119, 110);
+            this.pPelPda.TabIndex = 46;
+            this.pPelPda.TabStop = true;
             // 
-            // pLinea
+            // panel11
             // 
-            this.pLinea.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pLinea.BackgroundImage")));
-            this.pLinea.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pLinea.Location = new System.Drawing.Point(71, 281);
-            this.pLinea.Name = "pLinea";
-            this.pLinea.Size = new System.Drawing.Size(190, 58);
-            this.pLinea.TabIndex = 44;
-            // 
-            // pReferencia
-            // 
-            this.pReferencia.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pReferencia.BackgroundImage")));
-            this.pReferencia.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pReferencia.Location = new System.Drawing.Point(19, 15);
-            this.pReferencia.Name = "pReferencia";
-            this.pReferencia.Size = new System.Drawing.Size(196, 47);
-            this.pReferencia.TabIndex = 17;
-            this.pReferencia.Paint += new System.Windows.Forms.PaintEventHandler(this.pReferencia_Paint);
-            // 
-            // panel5
-            // 
-            this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
-            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel5.Location = new System.Drawing.Point(19, 98);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(196, 47);
-            this.panel5.TabIndex = 18;
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
-            // 
-            // pLotes
-            // 
-            this.pLotes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pLotes.BackgroundImage")));
-            this.pLotes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pLotes.Location = new System.Drawing.Point(421, 73);
-            this.pLotes.Name = "pLotes";
-            this.pLotes.Size = new System.Drawing.Size(239, 41);
-            this.pLotes.TabIndex = 19;
-            // 
-            // panel10
-            // 
-            this.panel10.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel10.BackgroundImage")));
-            this.panel10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel10.Location = new System.Drawing.Point(1491, 420);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(220, 49);
-            this.panel10.TabIndex = 45;
+            this.panel11.BackColor = System.Drawing.Color.LightGray;
+            this.panel11.Controls.Add(this.pPelPda);
+            this.panel11.Controls.Add(this.panel2);
+            this.panel11.Controls.Add(this.button1);
+            this.panel11.Controls.Add(this.panel1);
+            this.panel11.Location = new System.Drawing.Point(41, 20);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(2000, 110);
+            this.panel11.TabIndex = 47;
             // 
             // MainForm
             // 
@@ -436,6 +448,7 @@
             this.panel9.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel11.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -443,7 +456,7 @@
         private System.Windows.Forms.Label lCantidadTotal;
         private System.Windows.Forms.Label lDescripcion;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox tbLotes;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel finLote;
         private System.Windows.Forms.Panel panel7;
@@ -453,7 +466,6 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Button btnScanEPC;
         private System.Windows.Forms.Label totalesOrden;
-        private System.Windows.Forms.Label totaLote;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
@@ -469,6 +481,8 @@
         private System.Windows.Forms.Panel pReferencia;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel pLotes;
-        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Panel pTotal;
+        private System.Windows.Forms.Panel pPelPda;
+        private System.Windows.Forms.Panel panel11;
     }
 }

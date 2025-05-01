@@ -1211,3 +1211,113 @@ Application_ThreadException:No se reconoce el prefijo URI.
    en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
    en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
 -----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:La clave proporcionada no se encontró en el diccionario.
+   en System.Collections.Generic.SortedDictionary`2.get_Item(TKey key)
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:La clave proporcionada no se encontró en el diccionario.
+   en System.Collections.Generic.SortedDictionary`2.get_Item(TKey key)
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 517
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:La clave proporcionada no se encontró en el diccionario.
+   en System.Collections.Generic.SortedDictionary`2.get_Item(TKey key)
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 517
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:La clave proporcionada no se encontró en el diccionario.
+   en System.Collections.Generic.SortedDictionary`2.get_Item(TKey key)
+   en UHFAPP.MainForm.button3_Click(Object sender, EventArgs e)
+   en System.Windows.Forms.Control.OnClick(EventArgs e)
+   en System.Windows.Forms.Button.OnClick(EventArgs e)
+   en System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   en System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   en System.Windows.Forms.Button.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:La clave proporcionada no se encontró en el diccionario.
+   en System.Collections.Generic.SortedDictionary`2.get_Item(TKey key)
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 505
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:La clave proporcionada no se encontró en el diccionario.
+   en System.Collections.Generic.SortedDictionary`2.get_Item(TKey key)
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 505
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:La clave proporcionada no se encontró en el diccionario.
+   en System.Collections.Generic.SortedDictionary`2.get_Item(TKey key)
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 505
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:La clave proporcionada no se encontró en el diccionario.
+   en System.Collections.Generic.SortedDictionary`2.get_Item(TKey key)
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 505
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:La clave proporcionada no se encontró en el diccionario.
+   en System.Collections.Generic.SortedDictionary`2.get_Item(TKey key)
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 505
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:La clave proporcionada no se encontró en el diccionario.
+   en System.Collections.Generic.SortedDictionary`2.get_Item(TKey key)
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 512
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:La clave proporcionada no se encontró en el diccionario.
+   en System.Collections.Generic.SortedDictionary`2.get_Item(TKey key)
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 512
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:La clave proporcionada no se encontró en el diccionario.
+   en System.Collections.Generic.SortedDictionary`2.get_Item(TKey key)
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 512
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:La clave proporcionada no se encontró en el diccionario.
+   en System.Collections.Generic.SortedDictionary`2.get_Item(TKey key)
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 512
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:La clave proporcionada no se encontró en el diccionario.
+   en System.Collections.Generic.SortedDictionary`2.get_Item(TKey key)
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 512
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:La clave proporcionada no se encontró en el diccionario.
+   en System.Collections.Generic.SortedDictionary`2.get_Item(TKey key)
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 512
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:La clave proporcionada no se encontró en el diccionario.
+   en System.Collections.Generic.SortedDictionary`2.get_Item(TKey key)
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 512
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:La clave proporcionada no se encontró en el diccionario.
+   en System.Collections.Generic.SortedDictionary`2.get_Item(TKey key)
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 512
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:La cadena de entrada no tiene el formato correcto.
+   en System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   en System.Double.Parse(String s)
+   en UHFAPP.MainForm.button2_Click(Object sender, EventArgs e) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 1072
+   en System.Windows.Forms.Control.OnClick(EventArgs e)
+   en System.Windows.Forms.Button.OnClick(EventArgs e)
+   en System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   en System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   en System.Windows.Forms.Button.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+-----------------------end----------------------------

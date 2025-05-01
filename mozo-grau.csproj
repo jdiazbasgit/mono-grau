@@ -209,6 +209,7 @@
     <Compile Include="utils\GrabacionDTO.cs" />
     <Compile Include="utils\GrabacionMozo.cs" />
     <Compile Include="utils\Gtin.cs" />
+    <Compile Include="utils\Lectura.cs" />
     <Compile Include="utils\Orden.cs" />
     <Compile Include="utils\Peticion.cs" />
     <Compile Include="utils\Grabacion.cs" />
