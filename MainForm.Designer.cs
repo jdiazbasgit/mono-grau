@@ -42,6 +42,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.pPelPda = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.pTotal = new System.Windows.Forms.Panel();
             this.pLinea = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -50,15 +53,12 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.pReferencia = new System.Windows.Forms.Panel();
             this.tbLinea = new System.Windows.Forms.TextBox();
-            this.panel11 = new System.Windows.Forms.Panel();
-            this.pPelPda = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.finLote.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.epcs)).BeginInit();
             this.panel9.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel11.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // lReferencia
@@ -306,6 +306,38 @@
             this.panel9.Size = new System.Drawing.Size(2519, 914);
             this.panel9.TabIndex = 37;
             // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.LightGray;
+            this.panel11.Controls.Add(this.pPelPda);
+            this.panel11.Controls.Add(this.panel2);
+            this.panel11.Controls.Add(this.button1);
+            this.panel11.Controls.Add(this.panel1);
+            this.panel11.Location = new System.Drawing.Point(41, 20);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(2355, 110);
+            this.panel11.TabIndex = 47;
+            // 
+            // pPelPda
+            // 
+            this.pPelPda.BackColor = System.Drawing.Color.LightGray;
+            this.pPelPda.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pPelPda.BackgroundImage")));
+            this.pPelPda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pPelPda.Location = new System.Drawing.Point(30, 4);
+            this.pPelPda.Name = "pPelPda";
+            this.pPelPda.Size = new System.Drawing.Size(119, 110);
+            this.pPelPda.TabIndex = 46;
+            this.pPelPda.TabStop = true;
+            // 
+            // panel2
+            // 
+            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
+            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel2.Location = new System.Drawing.Point(684, 20);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(281, 73);
+            this.panel2.TabIndex = 39;
+            // 
             // pTotal
             // 
             this.pTotal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pTotal.BackgroundImage")));
@@ -389,38 +421,6 @@
             this.tbLinea.TabIndex = 41;
             this.tbLinea.Text = "1";
             // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.LightGray;
-            this.panel11.Controls.Add(this.pPelPda);
-            this.panel11.Controls.Add(this.panel2);
-            this.panel11.Controls.Add(this.button1);
-            this.panel11.Controls.Add(this.panel1);
-            this.panel11.Location = new System.Drawing.Point(41, 20);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(2355, 110);
-            this.panel11.TabIndex = 47;
-            // 
-            // pPelPda
-            // 
-            this.pPelPda.BackColor = System.Drawing.Color.LightGray;
-            this.pPelPda.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pPelPda.BackgroundImage")));
-            this.pPelPda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pPelPda.Location = new System.Drawing.Point(30, 4);
-            this.pPelPda.Name = "pPelPda";
-            this.pPelPda.Size = new System.Drawing.Size(119, 110);
-            this.pPelPda.TabIndex = 46;
-            this.pPelPda.TabStop = true;
-            // 
-            // panel2
-            // 
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel2.Location = new System.Drawing.Point(684, 20);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(281, 73);
-            this.panel2.TabIndex = 39;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -447,9 +447,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.epcs)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            this.panel11.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel11.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

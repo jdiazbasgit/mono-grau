@@ -697,12 +697,6 @@ namespace UHFAPP
                                 loteActual = grabaciones[i].lote;
                             }
 
-
-
-
-                            // Fix for CS0019: Ensure the subtraction operation is performed on integers, not a string and an integer.
-                            //loteActual = tagsOrden.Keys.Count;
-
                             if (epcList.Count == cantidadTotal)
                             {
                                 epcs.Rows.Add(new object[] { "FIN DE ORDEN", "", "" });
@@ -867,12 +861,42 @@ namespace UHFAPP
                     Stream stream1 = response.GetResponseStream();
                     StreamReader sr = new StreamReader(stream1);
                     string strsb = sr.ReadToEnd();
-                    Grabacion ordenRetorno = JsonConvert.DeserializeObject<Grabacion>(strsb);
-                    int lastRowIndex = epcs.Rows.GetLastRow(DataGridViewElementStates.Visible);
-                    if (lastRowIndex >= 0)
+                    Grabacion[] grabaciones = JsonConvert.DeserializeObject<Grabacion[]>(strsb);
+
+                    if (grabaciones[0].id== -1)
                     {
-                        epcs.Rows[lastRowIndex].DefaultCellStyle.BackColor = System.Drawing.Color.White;
+                       caja("Orden finalizada", 3000);
+                       leerTagsOrdenAmipem();
+                        resultado = true;
                     }
+                    else
+                    {
+                        tagsOrden.Clear();
+                        for (int i = 0; i < grabaciones.Length; i++)
+                        {
+                            if (!tagsOrden.ContainsKey(grabaciones[i].lote))
+                                tagsOrden.Add(grabaciones[i].lote, new List<Lectura>());
+                            tagsOrden[grabaciones[i].lote].Add(new Lectura(grabaciones[i].tag, grabaciones[i].lote, grabaciones[i].linea));
+                            //epcs.Rows.Add(new object[] { grabaciones[i].tag, grabaciones[i].lote, grabaciones[i].linea });
+                            bool[] exist = new bool[1];
+                            int index = CheckUtils.getInsertIndex(epcList, grabaciones[i].tag, "", exist);
+                            EpcInfo epcInfo = new EpcInfo(grabaciones[i].tag, "", grabaciones.Length, DataConvert.HexStringToByteArray(grabaciones[i].tag), DataConvert.HexStringToByteArray(""), 1, "-79.20", "");
+                            epcList.Insert(index, epcInfo);
+                            epcs.Rows.Add(new object[] { grabaciones[i].tag, grabaciones[i].lote, grabaciones[i].linea });
+                            loteActual = grabaciones[i].lote;
+                        }
+
+                        if (epcList.Count == cantidadTotal)
+                        {
+                            epcs.Rows.Add(new object[] { "FIN DE ORDEN", "", "" });
+                            tbLotes.Enabled = false;
+                            tbLinea.Enabled = false;
+                        }
+                        else
+                            label9.Text = "Lote actual(" + loteActual + "): " + tagsOrden[loteActual].Count;
+
+                    }
+
                     resultado = true;
                 }
             }
@@ -950,7 +974,7 @@ namespace UHFAPP
             panel9.Height = this.Height;
             epcs.Width = panel9.Width - epcs.Location.X;
             epcs.Height = panel9.Height - epcs.Location.Y - 100;
-            //this.MaximumSize = SystemInformation.PrimaryMonitorMaximizedWindowSize;
+            this.MaximumSize = SystemInformation.PrimaryMonitorMaximizedWindowSize;
             this.WindowState = FormWindowState.Maximized;
         }
         private void ReadEPC()
