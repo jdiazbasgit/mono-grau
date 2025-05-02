@@ -61,6 +61,7 @@ public class GrabacionRestController {
 		}
 		else {
 		Grabacion grabacion= new Grabacion(0, orden, grabacionDTO.getTag(), grabacionDTO.getLote(),grabacionDTO.getLinea());
+		getGrabacionCrudRepository().save(grabacion);
 		return getGrabacionCrudRepository().getTagsByOrden(grabacionDTO.getOrden());
 		}
 	}
