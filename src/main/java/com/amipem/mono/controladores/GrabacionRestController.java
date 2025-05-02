@@ -1,5 +1,6 @@
 package com.amipem.mono.controladores;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,10 +50,19 @@ public class GrabacionRestController {
 	}
 	
 	@PostMapping("grabarTagContador")
-	public Grabacion grabaTag(@RequestBody GrabacionDTO grabacionDTO) {
+	public List<Grabacion> grabaTag(@RequestBody GrabacionDTO grabacionDTO) {
 		Orden orden=getOrdenCrudRepository().findByCodigo(grabacionDTO.getOrden());
+		List<Grabacion> grabaciones=getGrabacionCrudRepository().getTagsByOrden(grabacionDTO.getOrden());
+		if(grabaciones.size()>=orden.getCantidad()) {
+			ArrayList<Grabacion> salida= new ArrayList<Grabacion>();
+			Grabacion grabacion= new Grabacion(-1, orden, null, 0, 0);
+			salida.add(grabacion);
+			return salida;
+		}
+		else {
 		Grabacion grabacion= new Grabacion(0, orden, grabacionDTO.getTag(), grabacionDTO.getLote(),grabacionDTO.getLinea());
-		return getGrabacionCrudRepository().save(grabacion);
+		return getGrabacionCrudRepository().getTagsByOrden(grabacionDTO.getOrden());
+		}
 	}
 	
 	@PostMapping("grabarOrden")
