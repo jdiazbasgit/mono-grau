@@ -2596,7 +2596,7 @@
         {
             "@odata.etag": "W/\"JzIwOzEyNDQ1NTc4Mzg2NzkyODExMzYxMTswMDsn\"",
             "systemId": "bb1b6121-e2b9-ee11-b671-d8382e06cfe4",
-            "prodOrderNo": "24003142",
+            "prodOrderNo": "",
             "lineNo": 10000,
             "itemNo": "232037132",
             "description": "IMPLANTE INHEX 3713 CON TRATAMIENTO RBM",

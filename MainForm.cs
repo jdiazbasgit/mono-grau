@@ -17,7 +17,6 @@ using Newtonsoft.Json;
 
 
 //using UHFAPP.barcode;
-using UHFAPP.Entity;
 using UHFAPP.utils;
 using WinForm_Test;
 using WMPLib;
@@ -45,6 +44,7 @@ namespace UHFAPP
         public delegate void MainSizeChanged(FormWindowState state);
         public static event MainSizeChanged eventMainSizeChanged = null;
         bool isRuning = false;
+        int cantidadReal = 0;
         string strOpen = "  Conectar lector  ";
         string strClose = "  Desconectar lector  ";
         string strStart = "  Iniciar lectura  ";
@@ -73,7 +73,6 @@ namespace UHFAPP
         public static FormWindowState currState = FormWindowState.Normal;
         List<EpcInfo> epcList = new List<EpcInfo>();
         public bool isSearch = false;
-        List<ReaderDeviceInfo> listIP = new List<ReaderDeviceInfo>();
         #region  OnDisconnect
         delegate void SetTextCallback(string epc, string tid, string rssi, string count, string ant, string user);
         SetTextCallback setTextCallback;
@@ -143,11 +142,12 @@ namespace UHFAPP
             sr.Close();
             Console.ReadLine();
             loteActual++;
-            
+
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
+          
 
         }
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -177,7 +177,7 @@ namespace UHFAPP
             btnScanEPC.Enabled = false;
             btnScanEPC.Visible = true;
             string msg = "Conectando lector...";
-            StartReceiveThread();
+            //StartReceiveThread();
             frmWaitingBox f = new frmWaitingBox((obj, args) =>
             {
                 bool result = false;
@@ -202,7 +202,10 @@ namespace UHFAPP
                     caja("Error al conectar el lector", 3000);
                 }
                 byte b = 1;
-                uhf.SetTagfocus(b);
+                uhf.SetGen2(0, 0, 1, 1, 4, 0, 15, 1, 2, 1, 00, 0, 0, 3);
+
+                
+                
             }, msg);
             f.BackColor = System.Drawing.Color.Gray;
             f.ShowDialog(this);
@@ -227,6 +230,7 @@ namespace UHFAPP
 
         public int cantidadTotal { get; private set; }
         public int ultimoLote { get; private set; }
+        public Thread hiloLectura;
 
         private static void DataReceived(IntPtr pdata, short len)
         {
@@ -316,7 +320,8 @@ namespace UHFAPP
 
             if (isStop)
             {
-                if (uhf.StopInventory()){
+                if (uhf.StopInventory())
+                {
                     btnScanEPC.Text = strStart;
                     btnScanEPC.BackColor = System.Drawing.Color.Green;
                 }
@@ -333,6 +338,15 @@ namespace UHFAPP
         }
 
         private void Time() { }
+       
+        private void StopReceiveThread()
+        {
+            isVisible = false;
+            isRuning = false;
+            Thread.Sleep(100);
+        }
+        
+
         private void StartReceiveThread()
         {
             if (!isRuning)
@@ -340,7 +354,8 @@ namespace UHFAPP
                 isRuning = true;
                 try
                 {
-                    new Thread(new ThreadStart(delegate { ReadEPC(); })).Start();
+                    hiloLectura = new Thread(new ThreadStart(delegate { ReadEPC(); }));
+                    hiloLectura.Start();
                 }
                 catch (Exception e)
                 {
@@ -348,20 +363,15 @@ namespace UHFAPP
                 }
             }
         }
-        private void StopReceiveThread()
-        {
-            isVisible = false;
-            isRuning = false;
-            Thread.Sleep(100);
-        }
+
+       
+
         private void UpdataEPC(string epc, string tid, string rssi, string count, string ant, string user)
         {
-
             if (epc == null)
             {
                 return;
             }
-            // label6.Text = (tempCount += int.Parse(count)).ToString();
 
             bool[] exist = new bool[1];
             int index = CheckUtils.getInsertIndex(epcList, epc, tid, exist);
@@ -369,42 +379,18 @@ namespace UHFAPP
             total++;
             if (exist[0])
             {
-                epcList[index].AddAntennaInfoByAnt(int.Parse(ant), rssi);
-
-                List<AntennaInfo> list = epcList[index].AntList;
-                StringBuilder stringBuilderANT = new StringBuilder();
-                StringBuilder stringBuilderRSSI = new StringBuilder();
-                for (int k = 0; k < list.Count; k++)
-                {
-                    stringBuilderANT.Append("ANT");
-                    stringBuilderANT.Append(list[k].AntennaPort);
-                    stringBuilderANT.Append(": ");
-                    stringBuilderANT.Append(list[k].Count);
-                    stringBuilderRSSI.Append(list[k].Rssi);
-                    if (k != list.Count - 1)
-                    {
-                        stringBuilderANT.Append(System.Environment.NewLine);
-                        stringBuilderRSSI.Append(System.Environment.NewLine);
-                    }
-                }
-                epcList[index].Count = epcList[index].Count + 1;
-                epcList[index].User = user;
-                epcList[index].Tid = tid;
-                epcList[index].TidBytes = DataConvert.HexStringToByteArray(tid);
-
-
-
+                return;
             }
             else
             {
                 EpcInfo epcInfo = new EpcInfo(epc, tid, int.Parse(count), DataConvert.HexStringToByteArray(epc), DataConvert.HexStringToByteArray(tid), int.Parse(ant), rssi, user);
                 epcList.Insert(index, epcInfo);
-                Thread.Sleep(200);
-
+                //Thread.Sleep(300);
 
                 int lastRowIndex = epcs.Rows.GetLastRow(DataGridViewElementStates.Visible);
 
                 finLote.Visible = false;
+               // StopReceiveThread();
 
                 if (!ubicación.Equals("casa"))
                 {
@@ -414,38 +400,14 @@ namespace UHFAPP
                         {
                             if (grabarTagContadorAmipem(epcInfo.Epc, loteActual))
                             {
-
-
-                                if (!tagsOrden.ContainsKey(loteActual))
-                                {
-                                    tagsOrden.Add(loteActual, new List<Lectura>());
-                                }
-                                tagsOrden[loteActual].Add(new Lectura(epcInfo.Epc, loteActual, Int32.Parse(tbLinea.Text)));
-
-                                epcs.Rows.Clear();
-                                int totalesTodasLineas = 0;
-                                foreach (int lote in tagsOrden.Keys)
-                                {
-                                    foreach (Lectura lectura in tagsOrden[lote])
-                                    {
-                                        totalesTodasLineas++;
-                                        epcs.Rows.Add(lectura.epc, lectura.lote, lectura.linea);
-                                    }
-
-                                }
-                                totalesOrden.Text = "" + totalesTodasLineas;
-                                epcs.Columns[0].Width = 635;
-                                epcs.Columns[1].Width = 43;
-                                epcs.Columns[2].Width = 70;
+                                leerTagsOrdenAmipem();
                             }
                             else
                             {
                                 caja("Tag ya está grabado", 3000);
                             }
                         }
-
                     }
-
                 }
                 else
                 {
@@ -459,16 +421,15 @@ namespace UHFAPP
                             }
                             tagsOrden[loteActual].Add(new Lectura(epcInfo.Epc, loteActual, Int32.Parse(tbLinea.Text)));
 
-                            epcs.Rows.Clear();
+                           // epcs.Rows.Clear();
                             int totalesTodasLineas = 0;
                             foreach (int lote in tagsOrden.Keys)
                             {
                                 foreach (Lectura lectura in tagsOrden[lote])
                                 {
                                     totalesTodasLineas++;
-                                    epcs.Rows.Add(lectura.epc, lectura.lote, lectura.linea);
+                                   // epcs.Rows.Add(lectura.epc, lectura.lote, lectura.linea);
                                 }
-
                             }
                             totalesOrden.Text = "" + totalesTodasLineas;
                             epcs.Columns[0].Width = 635;
@@ -480,8 +441,8 @@ namespace UHFAPP
                             caja("Tag ya está grabado", 3000);
                         }
                     }
-
                 }
+
                 int totalGrabados = 0;
                 foreach (List<Lectura> lectura in tagsOrden.Values)
                 {
@@ -493,8 +454,6 @@ namespace UHFAPP
                 }
                 catch (Exception)
                 {
-
-
                 }
                 try
                 {
@@ -510,23 +469,31 @@ namespace UHFAPP
                         loteActual++;
                         if (totalGrabados == cantidadTotal)
                         {
+                            StopReceiveThread();
                             StopEPC(true);
+                            uhf.Close();
+                            button3_Click(null, null);
                             panel6.Visible = true;
                             epcList.Clear();
                             epcs.Rows.Add(new object[] { "FIN DE ORDEN", "", "" });
                             tbLotes.Enabled = false;
                             tbLinea.Enabled = false;
+                            leerTagsOrdenAmipem();
+                            return;
                         }
                         return;
                     }
                 }
                 catch (Exception)
                 {
-
-
                 }
+                leerTagsOrdenAmipem();
+                // uhf.StartInventory();
             }
+            //StartReceiveThread();
         }
+
+       
 
         private bool validaProducto(string epc)
         {
@@ -606,11 +573,11 @@ namespace UHFAPP
             SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\chimes.wav");
             simpleSound.Play();
 
-            var url = apiMozoBase + "api/mozo/apiArco/v2.0/companies(0c0574f1-f098-ed11-965c-6045bd89ef6b)/linOrdenesProdArco?$filter=prodOrderNo eq '" + textBox1.Text + "'";
-
+            var url = apiMozoBase + "api/mozo/apiArco/v2.0/companies(" + cliente + ")/linOrdenesProdArco?$filter=prodOrderNo eq '" + textBox1.Text + "'";
+            cantidadReal = 0;
             var request = (HttpWebRequest)WebRequest.Create(url);
             string username = usuario;
-            string password = "BLZNChVZ4LAab/kewV3J0v1J/2rYZSwuDUcyyOWEkbY=";
+            string password = this.password;
             string svcCredentials = Convert.ToBase64String(ASCIIEncoding.ASCII.GetBytes(username + ":" + password));
             request.Headers.Add("Authorization", "Basic " + svcCredentials);
             request.Method = "GET";
@@ -630,12 +597,16 @@ namespace UHFAPP
                             string responseBodyFormater = responseBody.Replace("@odata.context", "dataContext");
                             responseBodyFormater = responseBodyFormater.Replace("@odata.etag", "odataETag");
                             getMozo = JsonConvert.DeserializeObject<GetMozo>(responseBodyFormater);
-                            lReferencia.Text = getMozo.Value[0].ItemNo;
-                            producto = getMozo.Value[0].ItemNo;
-                            lDescripcion.Text = getMozo.Value[0].Description;
-                            lCantidadTotal.Text = getMozo.Value[0].RemainingQtyBase.ToString();
+                            if (getMozo.Value.Length > 0)
+                            {
+                                lReferencia.Text = getMozo.Value[0].ItemNo;
+                                producto = getMozo.Value[0].ItemNo;
+                                cantidadReal = getMozo.Value[0].RemainingQtyBase;
+                                lDescripcion.Text = getMozo.Value[0].Description;
+                                lCantidadTotal.Text = getMozo.Value[0].RemainingQtyBase.ToString();
 
-                            pReferencia.Visible = true;
+                                pReferencia.Visible = true;
+                            }
                             resultado = true;
                         }
                     }
@@ -654,8 +625,6 @@ namespace UHFAPP
 
         private void leerTagsOrdenAmipem()
         {
-            SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\chimes.wav");
-            simpleSound.Play();
 
             var url = apiAmipemBase + "leerTagsOrden/" + textBox1.Text;
 
@@ -683,6 +652,8 @@ namespace UHFAPP
                             /*if (grabaciones.Length > 0)
                                 loteActual = 1;*/
                             tagsOrden.Clear();
+                            epcList.Clear();
+                            epcs.Rows.Clear();
                             for (int i = 0; i < grabaciones.Length; i++)
                             {
                                 if (!tagsOrden.ContainsKey(grabaciones[i].lote))
@@ -696,15 +667,17 @@ namespace UHFAPP
                                 epcs.Rows.Add(new object[] { grabaciones[i].tag, grabaciones[i].lote, grabaciones[i].linea });
                                 loteActual = grabaciones[i].lote;
                             }
-
+                            cantidadReal = cantidadTotal - grabaciones.Length;
                             if (epcList.Count == cantidadTotal)
                             {
                                 epcs.Rows.Add(new object[] { "FIN DE ORDEN", "", "" });
                                 tbLotes.Enabled = false;
                                 tbLinea.Enabled = false;
+                                
                             }
                             else
                                 label9.Text = "Lote actual(" + loteActual + "): " + tagsOrden[loteActual].Count;
+                            totalesOrden.Text = "" + tagsOrden.Count;
 
                         }
                     }
@@ -715,6 +688,9 @@ namespace UHFAPP
 
             }
         }
+
+
+
         private void caja(string texto, int duracion)
         {
             var wplayer = new WindowsMediaPlayer();
@@ -735,11 +711,9 @@ namespace UHFAPP
         }
         private void leerOrdenAmipem()
         {
-            SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\chimes.wav");
-            simpleSound.Play();
             if (textBox1.Text.Trim().Equals(""))
             {
-                caja("Orden no existe", 3000);
+                caja("Orden no puede estar vacia", 3000);
 
                 return;
             }
@@ -765,12 +739,31 @@ namespace UHFAPP
                             lReferencia.Text = orden.item;
                             lDescripcion.Text = orden.descripcion;
                             cantidadTotal = orden.cantidad;
-                            lCantidadTotal.Text = "" + cantidadTotal;
+                            try
+                            {
+                                lCantidadTotal.Text = "" + cantidadTotal + "/" + cantidadReal;
+                            }
+                            catch (Exception)
+                            {
+
+                                lCantidadTotal.Text = "" + cantidadTotal + "/0";
+                            }
                             pReferencia.Visible = true;
                             pTotal.Visible = true;
                             idOrdenAmipem = orden.id;
                             tbLotes.Text = "" + orden.lotes;
-                            cantidadPorLote = Int32.Parse(lCantidadTotal.Text) / Int32.Parse(tbLotes.Text);
+                            try
+                            {
+                                cantidadPorLote = cantidadTotal / cantidadReal;
+                            }
+                            catch (Exception)
+                            {
+                                double parcial1 = (double)((double)cantidadTotal / Double.Parse(tbLotes.Text));
+                                cantidadPorLote = (int)Math.Ceiling(parcial1);
+
+                            }
+                            double parcial = (double)((double)cantidadTotal / Double.Parse(tbLotes.Text));
+                            cantidadPorLote = (int)Math.Ceiling(parcial);
                             label25.Text = "Lotes: " + Int32.Parse(tbLotes.Text) + " (" + cantidadPorLote + ")";
                             btnScanEPC.Enabled = true;
                             leerTagsOrdenAmipem();
@@ -834,6 +827,7 @@ namespace UHFAPP
 
         private bool grabarTagContadorAmipem(string epc, int lote)
         {
+            //uhf.StopInventory();
             bool resultado = false;
             //epcs.Rows[epcs.Rows.Count - 2].DefaultCellStyle.BackColor = System.Drawing.Color.Red;
             SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\chimes.wav");
@@ -863,15 +857,18 @@ namespace UHFAPP
                     string strsb = sr.ReadToEnd();
                     Grabacion[] grabaciones = JsonConvert.DeserializeObject<Grabacion[]>(strsb);
 
-                    if (grabaciones[0].id== -1)
+                    if (grabaciones[0].id == -1)
                     {
-                       caja("Orden finalizada", 3000);
-                       leerTagsOrdenAmipem();
+                        caja("Orden finalizada", 3000);
+                        leerTagsOrdenAmipem();
                         resultado = true;
+                        StopEPC(true);
                     }
                     else
                     {
                         tagsOrden.Clear();
+                        epcList.Clear();
+                        epcs.Rows.Clear();
                         for (int i = 0; i < grabaciones.Length; i++)
                         {
                             if (!tagsOrden.ContainsKey(grabaciones[i].lote))
@@ -894,6 +891,8 @@ namespace UHFAPP
                         }
                         else
                             label9.Text = "Lote actual(" + loteActual + "): " + tagsOrden[loteActual].Count;
+                        cantidadReal--;
+                        lCantidadTotal.Text = "" + cantidadTotal + "/" + cantidadReal;
 
                     }
 
@@ -902,23 +901,24 @@ namespace UHFAPP
             }
             catch (Exception e)
             {
-                SoundPlayer simpleSound1 = new SoundPlayer(@"c:\Windows\Media\chimes.wav");
-                simpleSound1.Play();
+                caja("Tag ya grabado", 3000);
                 resultado = false;
 
             }
+            //uhf.StartInventory();
             return resultado;
         }
 
 
         private bool grabarTagContadorMozo(string epc, int lote)
         {
+
             bool resultado = false;
             //epcs.Rows[epcs.Rows.Count - 2].DefaultCellStyle.BackColor = System.Drawing.Color.Red;
             SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\chimes.wav");
             simpleSound.Play();
 
-            var url = apiMozoBase + "api/mozo/apiArco/v2.0/companies(0c0574f1-f098-ed11-965c-6045bd89ef6b)/registrarSalidasRFID?";
+            var url = apiMozoBase + "api/mozo/apiArco/v2.0/companies(" + cliente + ")/registrarSalidasRFID?";
 
             var request = (HttpWebRequest)WebRequest.Create(url);
             string username = this.usuario;
@@ -960,6 +960,7 @@ namespace UHFAPP
                 caja("Tag ya grabado", 3000);
                 resultado = false;
             }
+
             return resultado;
             //return true;
         }
@@ -977,7 +978,7 @@ namespace UHFAPP
             this.MaximumSize = SystemInformation.PrimaryMonitorMaximizedWindowSize;
             this.WindowState = FormWindowState.Maximized;
         }
-        private void ReadEPC()
+       private void ReadEPC()
         {
 
             try
@@ -985,10 +986,10 @@ namespace UHFAPP
                 while (isRuning)
                 {
 
-                    if (!isVisible)
+                   /* if (!isVisible)
                     {
                         Thread.Sleep(10);
-                    }
+                    }*/
                     UHFTAGInfo info = uhf.ReadTagFromBuffer();
 
                     if (info != null)
@@ -1001,6 +1002,7 @@ namespace UHFAPP
                         this.BeginInvoke(setTextCallback, new object[] { null, null, null, null, null, null });
 
                     }
+                    Thread.Sleep(100);
 
                 }
             }
@@ -1012,6 +1014,7 @@ namespace UHFAPP
 
         private void button3_Click(object sender, EventArgs e)
         {
+            
             int totalesTodasLineas = 0;
             foreach (int lote in tagsOrden.Keys)
             {
@@ -1022,25 +1025,21 @@ namespace UHFAPP
                 }
 
             }
-            if (totalesTodasLineas == cantidadTotal)
+           if (btnScanEPC.Text == strStop)
             {
-                caja("Orden finalizada", 3000);
-                return;
-            }
-
-            if (btnScanEPC.Text == strStop)
-            {
+                StopReceiveThread();
                 StopEPC(true);
+
 
 
             }
             else
             {
-
+                StartReceiveThread();
                 StopEPC(false);
 
             }
-            
+
 
 
             try
@@ -1058,6 +1057,8 @@ namespace UHFAPP
 
         private void button2_Click(object sender, EventArgs e)
         {
+            epcs.Rows.Clear();
+            tagsOrden.Clear();
             tbLotes.Text = "1";
             gtin = "";
             epcList.Clear();
@@ -1081,10 +1082,19 @@ namespace UHFAPP
             else
             {
 
-                if (leerOrden())
-                    if (grabarOrdenAmipem())
-                        leerOrdenAmipem();
+                try
+                {
+                    leerOrden();
+                    grabarOrdenAmipem();
+                }
+                catch (Exception)
+                {
 
+                    int a = 0;
+                }
+
+                leerOrdenAmipem();
+                btnScanEPC.Enabled = true;
             }
 
 
@@ -1094,7 +1104,7 @@ namespace UHFAPP
             StopEPC(true);
             btnScanEPC.Text = strStart;
             btnScanEPC.BackColor = System.Drawing.Color.Green;
-            
+
             try
             {
                 double parcial = (double)(Double.Parse(lCantidadTotal.Text) / Double.Parse(tbLotes.Text));
@@ -1105,7 +1115,7 @@ namespace UHFAPP
             catch (Exception)
             {
 
-                label9.Text = "Lote actual: (" + loteActual + "): 0" ;
+                label9.Text = "Lote actual: (" + loteActual + "): 0";
             }
 
 
@@ -1253,5 +1263,7 @@ namespace UHFAPP
         {
 
         }
+
+
     }
 }

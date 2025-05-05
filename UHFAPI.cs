@@ -7,7 +7,6 @@ using BLEDeviceAPI;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Windows.Forms;
-using UHFAPP.multidevice;
 using System.Threading;
 
 namespace UHFAPP

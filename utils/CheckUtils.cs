@@ -4,58 +4,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UHFAPP.utils;
 using System.Net;
-using UHFAPP.Entity;
 namespace UHFAPP
 {
     public class CheckUtils
     {
 
-        public static int getInsertIndex(List<ReaderDeviceInfo> listIp, ReaderDeviceInfo info, bool[] exists)
-        {
-
-            int startIndex = 0;
-            int endIndex = listIp.Count;
-            int judgeIndex;
-            int ret;
-            if (endIndex == 0)
-            {
-                exists[0] = false;
-                return 0;
-            }
-
-            byte[] ipAndMac = info.GetIpAndMac() ; //ip.Split('.'); //System.Text.ASCIIEncoding.ASCII.GetBytes(ip.Replace(".",""));
-            endIndex--;
-            while (true)
-            {
-                judgeIndex = (startIndex + endIndex) / 2;
-                byte[] temp = listIp[judgeIndex].GetIpAndMac();// System.Text.ASCIIEncoding.ASCII.GetBytes(listIp[judgeIndex].Replace(".", ""));
-                ret = compareBytes(ipAndMac, temp);
-                if (ret > 0)
-                {
-                    if (judgeIndex == endIndex)
-                    {
-                        exists[0] = false;
-                        return judgeIndex + 1;
-                    }
-                    startIndex = judgeIndex + 1;
-                }
-                else if (ret < 0)
-                {
-                    if (judgeIndex == startIndex)
-                    {
-                        exists[0] = false;
-                        return judgeIndex;
-                    }
-                    endIndex = judgeIndex - 1;
-                }
-                else
-                {
-                    exists[0] = true;
-                    return judgeIndex;
-                }
-            }
-
-        }
+       
 
 
         public static int getInsertIndex(List<EpcInfo> listEpc, string Epc, string tid, bool[] exists)

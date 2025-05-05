@@ -107,10 +107,6 @@ C:\Users\PC\source\repos\mozo-grau\mozo-calidad\obj\Debug\mozo-grau.csproj.Resol
 C:\Users\PC\source\repos\mozo-grau\mozo-calidad\obj\Debug\UHFAPP.BaseForm.resources
 C:\Users\PC\source\repos\mozo-grau\mozo-calidad\obj\Debug\WinForm_Test.frmWaitingBox.resources
 C:\Users\PC\source\repos\mozo-grau\mozo-calidad\obj\Debug\UHFAPP.MainForm.resources
-C:\Users\PC\source\repos\mozo-grau\mozo-calidad\obj\Debug\UHFAPP.multidevice.DeviceListForm.resources
-C:\Users\PC\source\repos\mozo-grau\mozo-calidad\obj\Debug\UHFAPP.MultiDevice.NetWork.API.MainForm.resources
-C:\Users\PC\source\repos\mozo-grau\mozo-calidad\obj\Debug\UHFAPP.USB.multidevice.DeviceListForm.resources
-C:\Users\PC\source\repos\mozo-grau\mozo-calidad\obj\Debug\UHFAPP.USB.multidevice.UsbMainForm.resources
 C:\Users\PC\source\repos\mozo-grau\mozo-calidad\obj\Debug\UHFAPP.Properties.Resources.resources
 C:\Users\PC\source\repos\mozo-grau\mozo-calidad\obj\Debug\UHFAPP.RFID.RFIDMainForm.resources
 C:\Users\PC\source\repos\mozo-grau\mozo-calidad\obj\Debug\mozo-grau.csproj.GenerateResource.cache
