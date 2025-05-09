@@ -1,6 +1,7 @@
 package com.amipem.mono.controladores;
 
 import java.util.ArrayList;
+import java.util.GregorianCalendar;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -55,12 +56,12 @@ public class GrabacionRestController {
 		List<Grabacion> grabaciones=getGrabacionCrudRepository().getTagsByOrden(grabacionDTO.getOrden());
 		if(grabaciones.size()>=orden.getCantidad()) {
 			ArrayList<Grabacion> salida= new ArrayList<Grabacion>();
-			Grabacion grabacion= new Grabacion(-1, orden, null, 0, 0);
+			Grabacion grabacion= new Grabacion(-1, orden, null, 0, 0,new GregorianCalendar());
 			salida.add(grabacion);
 			return salida;
 		}
 		else {
-		Grabacion grabacion= new Grabacion(0, orden, grabacionDTO.getTag(), grabacionDTO.getLote(),grabacionDTO.getLinea());
+		Grabacion grabacion= new Grabacion(0, orden, grabacionDTO.getTag(), grabacionDTO.getLote(),grabacionDTO.getLinea(),new GregorianCalendar());
 		getGrabacionCrudRepository().save(grabacion);
 		return getGrabacionCrudRepository().getTagsByOrden(grabacionDTO.getOrden());
 		}

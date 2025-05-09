@@ -1,5 +1,7 @@
 package com.amipem.mono.entidades;
 
+import java.util.GregorianCalendar;
+
 import javax.persistence.*;
 
 import lombok.AllArgsConstructor;
@@ -22,7 +24,7 @@ public class Grabacion {
 	private String tag;
 	private int lote;
 	private int linea;
-
+	private GregorianCalendar fecha;
 	
 	
 }
