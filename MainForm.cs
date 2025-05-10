@@ -117,12 +117,13 @@ namespace UHFAPP
             button1.Text = strOpen;
             button1.BackColor = System.Drawing.Color.Red;
             DisconnectCallback = OnDisconnectCallback;
-            epcs.Columns.Add("EPC", "EPC");
+            /*epcs.Columns.Add("PRODUCTO", "PRODUCTO");
             epcs.Columns.Add("LOTE", "LOTE");
+            epcs.Columns.Add("NUMERO DE SERIE", "NUMERO DE SERIE");
             epcs.Columns.Add("LINEA", "LINEA");
-            epcs.Columns[0].Width = 635;
-            epcs.Columns[1].Width = 43;
-            epcs.Columns[2].Width = 70;
+            epcs.Columns.Add("FECHA", "FECHA");*/
+
+
             toolStripButton1_Click();
         }
         public void cargarDatos(string archivo)
@@ -147,7 +148,7 @@ namespace UHFAPP
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-          
+
 
         }
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -204,8 +205,8 @@ namespace UHFAPP
                 byte b = 1;
                 uhf.SetGen2(0, 0, 1, 1, 4, 0, 15, 1, 2, 1, 00, 0, 0, 3);
 
-                
-                
+
+
             }, msg);
             f.BackColor = System.Drawing.Color.Gray;
             f.ShowDialog(this);
@@ -338,14 +339,14 @@ namespace UHFAPP
         }
 
         private void Time() { }
-       
+
         private void StopReceiveThread()
         {
             isVisible = false;
             isRuning = false;
             Thread.Sleep(100);
         }
-        
+
 
         private void StartReceiveThread()
         {
@@ -364,7 +365,7 @@ namespace UHFAPP
             }
         }
 
-       
+
 
         private void UpdataEPC(string epc, string tid, string rssi, string count, string ant, string user)
         {
@@ -390,7 +391,7 @@ namespace UHFAPP
                 int lastRowIndex = epcs.Rows.GetLastRow(DataGridViewElementStates.Visible);
 
                 finLote.Visible = false;
-               // StopReceiveThread();
+                // StopReceiveThread();
 
                 if (!ubicación.Equals("casa"))
                 {
@@ -398,15 +399,16 @@ namespace UHFAPP
                     {
                         if (grabarTagContadorMozo(epcInfo.Epc, loteActual))
                         {
-                            if (grabarTagContadorAmipem(epcInfo.Epc, loteActual))
-                            {
-                                leerTagsOrdenAmipem();
-                            }
-                            else
+                            if (!grabarTagContadorAmipem(epcInfo.Epc, loteActual))
                             {
                                 caja("Tag ya está grabado", 3000);
                             }
                         }
+                    }
+                    else
+                    {
+                        caja("Producto no corresponde a la orden", 3000);
+
                     }
                 }
                 else
@@ -420,21 +422,23 @@ namespace UHFAPP
                                 tagsOrden.Add(loteActual, new List<Lectura>());
                             }
                             tagsOrden[loteActual].Add(new Lectura(epcInfo.Epc, loteActual, Int32.Parse(tbLinea.Text)));
+                            totalesValidos++;
+                            totalesOrden.Text = "" + totalesValidos;
 
-                           // epcs.Rows.Clear();
+                            // epcs.Rows.Clear();
                             int totalesTodasLineas = 0;
                             foreach (int lote in tagsOrden.Keys)
                             {
                                 foreach (Lectura lectura in tagsOrden[lote])
                                 {
                                     totalesTodasLineas++;
-                                   // epcs.Rows.Add(lectura.epc, lectura.lote, lectura.linea);
+                                    // epcs.Rows.Add(lectura.epc, lectura.lote, lectura.linea);
                                 }
                             }
-                            totalesOrden.Text = "" + totalesTodasLineas;
-                            epcs.Columns[0].Width = 635;
+                            //totalesOrden.Text = "" + totalesTodasLineas;
+                            /*epcs.Columns[0].Width = 635;
                             epcs.Columns[1].Width = 43;
-                            epcs.Columns[2].Width = 70;
+                            epcs.Columns[2].Width = 70;*/
                         }
                         else
                         {
@@ -448,55 +452,22 @@ namespace UHFAPP
                 {
                     totalGrabados += lectura.Count;
                 }
-                try
-                {
-                    label9.Text = "Lote actual(" + loteActual + "): " + tagsOrden[loteActual].Count;
-                }
-                catch (Exception)
-                {
-                }
-                try
-                {
-                    if (tagsOrden[loteActual].Count == cantidadPorLote || totalGrabados == cantidadTotal)
-                    {
-                        finLote.Visible = true;
-                        total = 0;
-                        totalLote = 0;
-                        label9.Text = "Lote actual(" + loteActual + "): " + tagsOrden[loteActual].Count;
-                        var wplayer = new WindowsMediaPlayer();
-                        wplayer.URL = Environment.CurrentDirectory + "\\error.mp3";
-                        wplayer.controls.play();
-                        loteActual++;
-                        if (totalGrabados == cantidadTotal)
-                        {
-                            StopReceiveThread();
-                            StopEPC(true);
-                            uhf.Close();
-                            button3_Click(null, null);
-                            panel6.Visible = true;
-                            epcList.Clear();
-                            epcs.Rows.Add(new object[] { "FIN DE ORDEN", "", "" });
-                            tbLotes.Enabled = false;
-                            tbLinea.Enabled = false;
-                            leerTagsOrdenAmipem();
-                            return;
-                        }
-                        return;
-                    }
-                }
-                catch (Exception)
-                {
-                }
-                leerTagsOrdenAmipem();
-                // uhf.StartInventory();
+
+
             }
-            //StartReceiveThread();
+
         }
 
-       
+
 
         private bool validaProducto(string epc)
         {
+            // The following line was causing the CS7036 error because the required "uDatabuf" parameter was not provided.  
+            // Fix: Provide a valid byte array for the "uDatabuf" parameter.  
+            byte[] uno = { 0, 0, 0, 0 };
+            byte[] uDatabuf = { 1, 0 };
+            bool grabado = uhf.BlockWriteData(uno, 2, 0, 0, uno, 2, 0, 2, uDatabuf);
+
             bool resultado = false;
             if (!ubicación.Equals("casa"))
             {
@@ -515,7 +486,6 @@ namespace UHFAPP
                     request.Accept = "*/*";
                     try
                     {
-
                         using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
                         {
                             Stream stream1 = response.GetResponseStream();
@@ -524,7 +494,6 @@ namespace UHFAPP
                             strsb = strsb.Replace("@odata.context", "dataContext");
                             strsb = strsb.Replace("@odata.etag", "dataTag");
                             Gtin gtinWeb = JsonConvert.DeserializeObject<Gtin>(strsb);
-                            //gtin = "8435482613646";
                             gtin = gtinWeb.value[0].gtin;
                         }
                     }
@@ -552,16 +521,15 @@ namespace UHFAPP
                     caja("EPC no corresponde a la orden", 3000);
                 }
 
-
                 return resultado;
             }
             else
             {
-                int lastRowIndex = epcs.Rows.GetLastRow(DataGridViewElementStates.Visible);
-                if (lastRowIndex >= 0)
-                {
-                    epcs.Rows[lastRowIndex].DefaultCellStyle.BackColor = System.Drawing.Color.White;
-                }
+                /* int lastRowIndex = epcs.Rows.GetLastRow(DataGridViewElementStates.Visible);
+                 if (lastRowIndex >= 0)
+                 {
+                     epcs.Rows[lastRowIndex].DefaultCellStyle.BackColor = System.Drawing.Color.White;
+                 }*/
                 return true;
             }
         }
@@ -664,20 +632,35 @@ namespace UHFAPP
                                 int index = CheckUtils.getInsertIndex(epcList, grabaciones[i].tag, "", exist);
                                 EpcInfo epcInfo = new EpcInfo(grabaciones[i].tag, "", grabaciones.Length, DataConvert.HexStringToByteArray(grabaciones[i].tag), DataConvert.HexStringToByteArray(""), 1, "-79.20", "");
                                 epcList.Insert(index, epcInfo);
-                                epcs.Rows.Add(new object[] { grabaciones[i].tag, grabaciones[i].lote, grabaciones[i].linea });
-                                loteActual = grabaciones[i].lote;
+                                leerFicha(grabaciones[i].tag);
+                                //loteActual = grabaciones[i].lote;
                             }
                             cantidadReal = cantidadTotal - grabaciones.Length;
                             if (epcList.Count == cantidadTotal)
                             {
-                                epcs.Rows.Add(new object[] { "FIN DE ORDEN", "", "" });
+                                StopReceiveThread();
+                                StopEPC(true);
+                                uhf.Close();
+                                button3_Click(null, null);
+                                epcList.Clear();
                                 tbLotes.Enabled = false;
                                 tbLinea.Enabled = false;
-                                
+                                panel6.Visible = true;
+                                epcs.Rows.Add(new object[] { "", "", "FIN DE ORDEN", "", "" });
+
+                                // Fix for CS7036: Provide the required argument "includeFilter" to GetLastRow method  
+                                int lastRowIndex = epcs.Rows.GetLastRow(DataGridViewElementStates.Visible);
+                                if (lastRowIndex >= 0)
+                                {
+                                    // Fix for CS0103: Ensure DefaultCellStyle is accessed correctly  
+                                    epcs.Rows[lastRowIndex - 1].DefaultCellStyle.BackColor = System.Drawing.Color.Red;
+                                }
+                                btnScanEPC.Enabled = false;
+
+
                             }
-                            else
-                                label9.Text = "Lote actual(" + loteActual + "): " + tagsOrden[loteActual].Count;
-                            totalesOrden.Text = "" + tagsOrden.Count;
+
+                            totalesOrden.Text = "" + grabaciones.Length;
 
                         }
                     }
@@ -685,17 +668,124 @@ namespace UHFAPP
             }
             catch (Exception ex)
             {
-
+                int f = 0;
             }
         }
 
+        private void leerFicha(string tag)
+        {
+           /* System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.epcs.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.epcs.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.epcs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.epcs.BackgroundColor = System.Drawing.Color.White;
+            this.epcs.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.NullValue = "\"\"";
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.epcs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.epcs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+          this.epcs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.epcs.DefaultCellStyle = dataGridViewCellStyle3;
+            this.epcs.GridColor = System.Drawing.Color.White;
+            this.epcs.Location = new System.Drawing.Point(861, 475);
+            this.epcs.Name = "epcs";
+            this.epcs.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.NullValue = null;
+            this.epcs.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.epcs.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.epcs.RowTemplate.Height = 24;
+            this.epcs.RowTemplate.ReadOnly = true;
+            this.epcs.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.epcs.Size = new System.Drawing.Size(1408, 599);
+            this.epcs.TabIndex = 37;
+            this.epcs.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.epcs_CellContentClick);
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.HeaderText = "PRODUCTO";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.HeaderText = "LOTE";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.HeaderText = "NUMERO DE SERIE";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.HeaderText = "LINEA";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column5.HeaderText = "FECHA";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.False;*/
+            if (ubicación.Equals("casa"))
+            {
+                
+                //totalesOrden.Text = "" + grabaciones.Length;
 
+                epcs.Rows.Add(new object[] { "23207930", "25017318", "250173180017", "1", "01/01/2025" });
+
+            }
+            else
+            {
+
+            }
+            
+        }
 
         private void caja(string texto, int duracion)
         {
-            var wplayer = new WindowsMediaPlayer();
-            wplayer.URL = Environment.CurrentDirectory + "\\error.mp3";
-            wplayer.controls.play();
+            /* var wplayer = new WindowsMediaPlayer();
+             wplayer.URL = Environment.CurrentDirectory + "\\error.mp3";
+             wplayer.controls.play();*/
 
             frmWaitingBox f = new frmWaitingBox((obj, args) =>
             {
@@ -751,20 +841,6 @@ namespace UHFAPP
                             pReferencia.Visible = true;
                             pTotal.Visible = true;
                             idOrdenAmipem = orden.id;
-                            tbLotes.Text = "" + orden.lotes;
-                            try
-                            {
-                                cantidadPorLote = cantidadTotal / cantidadReal;
-                            }
-                            catch (Exception)
-                            {
-                                double parcial1 = (double)((double)cantidadTotal / Double.Parse(tbLotes.Text));
-                                cantidadPorLote = (int)Math.Ceiling(parcial1);
-
-                            }
-                            double parcial = (double)((double)cantidadTotal / Double.Parse(tbLotes.Text));
-                            cantidadPorLote = (int)Math.Ceiling(parcial);
-                            label25.Text = "Lotes: " + Int32.Parse(tbLotes.Text) + " (" + cantidadPorLote + ")";
                             btnScanEPC.Enabled = true;
                             leerTagsOrdenAmipem();
                         }
@@ -792,7 +868,7 @@ namespace UHFAPP
             request.Accept = "application/json";
             try
             {
-                Orden orden = new Orden(idOrdenAmipem, textBox1.Text, lDescripcion.Text, lReferencia.Text, Int32.Parse(tbLotes.Text), Int32.Parse(lCantidadTotal.Text));
+                Orden orden = new Orden(idOrdenAmipem, textBox1.Text, lDescripcion.Text, lReferencia.Text, Int32.Parse(lCantidadTotal.Text));
                 string salida = JsonConvert.SerializeObject(orden);
                 byte[] data = Encoding.UTF8.GetBytes(salida);
                 request.ContentLength = data.Length;
@@ -807,10 +883,10 @@ namespace UHFAPP
                     string strsb = sr.ReadToEnd();
                     Orden ordenRetorno = JsonConvert.DeserializeObject<Orden>(strsb);
 
-                    lotesOrden = ordenRetorno.lotes;
+                    /*lotesOrden = ordenRetorno.lotes;
                     cantidadPorLote = Int32.Parse(lCantidadTotal.Text) / Int32.Parse(tbLotes.Text);
                     label25.Text = "Lotes: " + lotesOrden + " (" + cantidadPorLote + ")";
-                    label9.Text = "Lote actual(" + loteActual + "): " + tagsOrden[loteActual].Count;
+                    label9.Text = "Lote actual(" + loteActual + "): " + tagsOrden[loteActual].Count;*/
                     btnScanEPC.Enabled = true;
                     resultado = true;
                 }
@@ -843,7 +919,8 @@ namespace UHFAPP
             try
             {
 
-                GrabacionDTO grabacionDTO = new GrabacionDTO(1, textBox1.Text, lote, epc, Int32.Parse(tbLinea.Text.ToString()));
+                DateTime fecha = DateTime.Now;
+                GrabacionDTO grabacionDTO = new GrabacionDTO(1, textBox1.Text, epc, Int32.Parse(tbLinea.Text.ToString()));
                 string salida = JsonConvert.SerializeObject(grabacionDTO);
                 byte[] data = Encoding.UTF8.GetBytes(salida);
                 request.ContentLength = data.Length;
@@ -857,42 +934,43 @@ namespace UHFAPP
                     string strsb = sr.ReadToEnd();
                     Grabacion[] grabaciones = JsonConvert.DeserializeObject<Grabacion[]>(strsb);
 
-                    if (grabaciones[0].id == -1)
+                    tagsOrden.Clear();
+                    epcList.Clear();
+                    epcs.Rows.Clear();
+                    for (int i = 0; i < grabaciones.Length; i++)
                     {
-                        caja("Orden finalizada", 3000);
-                        leerTagsOrdenAmipem();
+                        if (!tagsOrden.ContainsKey(grabaciones[i].lote))
+                            tagsOrden.Add(grabaciones[i].lote, new List<Lectura>());
+                        tagsOrden[grabaciones[i].lote].Add(new Lectura(grabaciones[i].tag, grabaciones[i].lote, grabaciones[i].linea));
+                        bool[] exist = new bool[1];
+                        int index = CheckUtils.getInsertIndex(epcList, grabaciones[i].tag, "", exist);
+                        EpcInfo epcInfo = new EpcInfo(grabaciones[i].tag, "", grabaciones.Length, DataConvert.HexStringToByteArray(grabaciones[i].tag), DataConvert.HexStringToByteArray(""), 1, "-79.20", "");
+                        epcList.Insert(index, epcInfo);
+                        leerFicha(grabaciones[i].tag);
+                        loteActual = grabaciones[i].lote;
+
+                    }
+                    if (grabaciones.Length == cantidadTotal)
+                    {
+                        panel6.Visible = true;
+                        epcs.Rows.Add(new object[] { "", "", "FIN DE ORDEN", "", "" });
+                        int lastRowIndex = epcs.Rows.GetLastRow(DataGridViewElementStates.Visible);
+                        if (lastRowIndex >= 0)
+                        {
+                            // Fix for CS0103: Ensure DefaultCellStyle is accessed correctly  
+                            epcs.Rows[lastRowIndex - 1].DefaultCellStyle.BackColor = System.Drawing.Color.Red;
+                        }
+                        tbLotes.Enabled = false;
+                        tbLinea.Enabled = false;
                         resultado = true;
                         StopEPC(true);
                     }
                     else
                     {
-                        tagsOrden.Clear();
-                        epcList.Clear();
-                        epcs.Rows.Clear();
-                        for (int i = 0; i < grabaciones.Length; i++)
-                        {
-                            if (!tagsOrden.ContainsKey(grabaciones[i].lote))
-                                tagsOrden.Add(grabaciones[i].lote, new List<Lectura>());
-                            tagsOrden[grabaciones[i].lote].Add(new Lectura(grabaciones[i].tag, grabaciones[i].lote, grabaciones[i].linea));
-                            //epcs.Rows.Add(new object[] { grabaciones[i].tag, grabaciones[i].lote, grabaciones[i].linea });
-                            bool[] exist = new bool[1];
-                            int index = CheckUtils.getInsertIndex(epcList, grabaciones[i].tag, "", exist);
-                            EpcInfo epcInfo = new EpcInfo(grabaciones[i].tag, "", grabaciones.Length, DataConvert.HexStringToByteArray(grabaciones[i].tag), DataConvert.HexStringToByteArray(""), 1, "-79.20", "");
-                            epcList.Insert(index, epcInfo);
-                            epcs.Rows.Add(new object[] { grabaciones[i].tag, grabaciones[i].lote, grabaciones[i].linea });
-                            loteActual = grabaciones[i].lote;
-                        }
+                       
 
-                        if (epcList.Count == cantidadTotal)
-                        {
-                            epcs.Rows.Add(new object[] { "FIN DE ORDEN", "", "" });
-                            tbLotes.Enabled = false;
-                            tbLinea.Enabled = false;
-                        }
-                        else
-                            label9.Text = "Lote actual(" + loteActual + "): " + tagsOrden[loteActual].Count;
                         cantidadReal--;
-                        lCantidadTotal.Text = "" + cantidadTotal + "/" + cantidadReal;
+                        lCantidadTotal.Text = "" + cantidadTotal + "/" + (cantidadTotal - grabaciones.Length);
 
                     }
 
@@ -978,7 +1056,7 @@ namespace UHFAPP
             this.MaximumSize = SystemInformation.PrimaryMonitorMaximizedWindowSize;
             this.WindowState = FormWindowState.Maximized;
         }
-       private void ReadEPC()
+        private void ReadEPC()
         {
 
             try
@@ -986,10 +1064,10 @@ namespace UHFAPP
                 while (isRuning)
                 {
 
-                   /* if (!isVisible)
-                    {
-                        Thread.Sleep(10);
-                    }*/
+                    /* if (!isVisible)
+                     {
+                         Thread.Sleep(10);
+                     }*/
                     UHFTAGInfo info = uhf.ReadTagFromBuffer();
 
                     if (info != null)
@@ -1014,7 +1092,7 @@ namespace UHFAPP
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+
             int totalesTodasLineas = 0;
             foreach (int lote in tagsOrden.Keys)
             {
@@ -1025,7 +1103,7 @@ namespace UHFAPP
                 }
 
             }
-           if (btnScanEPC.Text == strStop)
+            if (btnScanEPC.Text == strStop)
             {
                 StopReceiveThread();
                 StopEPC(true);
@@ -1042,15 +1120,6 @@ namespace UHFAPP
 
 
 
-            try
-            {
-                label9.Text = "Lote actual(" + loteActual + "): " + tagsOrden[loteActual].Count;
-            }
-            catch (Exception)
-            {
-
-                label9.Text = "Lote actual(" + loteActual + "):  0";
-            }
 
 
         }
@@ -1065,20 +1134,14 @@ namespace UHFAPP
             loteActual = 1;
             tbLinea.Enabled = true;
             tbLotes.Enabled = true;
-            epcs.Columns.Clear();
-            epcs.Columns.
-                Add("EPC", "EPC");
-            epcs.Columns.
-               Add("LOTE", "LOTE");
-            epcs.Columns.
-               Add("LINEA", "LINEA");
+
             epcs.Rows.Clear();
-            epcs.Columns[0].Width = 635;
-            epcs.Columns[1].Width = 43;
-            epcs.Columns[2].Width = 70;
+
             totalesOrden.Text = "0";
             if (ubicación.Equals("casa"))
+            {
                 leerOrdenAmipem();
+            }
             else
             {
 
@@ -1086,6 +1149,7 @@ namespace UHFAPP
                 {
                     leerOrden();
                     grabarOrdenAmipem();
+
                 }
                 catch (Exception)
                 {
@@ -1100,23 +1164,11 @@ namespace UHFAPP
 
 
             finLote.Visible = false;
-            panel6.Visible = false;
+            // panel6.Visible = false;
             StopEPC(true);
             btnScanEPC.Text = strStart;
             btnScanEPC.BackColor = System.Drawing.Color.Green;
 
-            try
-            {
-                double parcial = (double)(Double.Parse(lCantidadTotal.Text) / Double.Parse(tbLotes.Text));
-                cantidadPorLote = (int)Math.Ceiling(parcial);
-                label25.Text = "Lotes: " + Int32.Parse(tbLotes.Text) + " (" + cantidadPorLote + ")";
-                label9.Text = "Lote actual: (" + loteActual + "): " + tagsOrden[loteActual].Count;
-            }
-            catch (Exception)
-            {
-
-                label9.Text = "Lote actual: (" + loteActual + "): 0";
-            }
 
 
             //epcs.Rows.Add("" ,"EPC");
@@ -1130,12 +1182,10 @@ namespace UHFAPP
                 try
                 {
                     double parcial = (double)(Double.Parse(lCantidadTotal.Text) / Double.Parse(tbLotes.Text));
-                    cantidadPorLote = (int)Math.Ceiling(parcial);
-                    label25.Text = "Lotes: " + Int32.Parse(tbLotes.Text) + " (" + cantidadPorLote + ")";
-                    label9.Text = "Lote actual: (" + loteActual + "): 0";
-                    if (Int32.Parse(tbLotes.Text) > 1)
-                        actualizaLotes();
+                    // cantidadPorLote = (int)Math.Ceiling(parcial);
+                    //lCantidad.Text = "Lotes: " + Int32.Parse(tbLotes.Text) + " (" + cantidadPorLote + ")";
                 }
+
                 catch (Exception)
                 {
 
@@ -1182,8 +1232,7 @@ namespace UHFAPP
                             request1.Accept = "application/json";
                             try
                             {
-                                // Orden orden = new Orden(idOrdenAmipem, textBox1.Text, label6.Text, label5.Text, Int32.Parse(textBox3.Text), Int32.Parse(label7.Text));
-                                orden.lotes = Int32.Parse(tbLotes.Text);
+                                // Orden orden = new Orden(idOrdenAmipem, texorden.lotes = Int32.Parse(tbLotes.Text);
                                 string salida = JsonConvert.SerializeObject(orden);
                                 byte[] data = Encoding.UTF8.GetBytes(salida);
                                 request1.ContentLength = data.Length;
@@ -1264,6 +1313,9 @@ namespace UHFAPP
 
         }
 
+        private void pLotes_Paint(object sender, PaintEventArgs e)
+        {
 
+        }
     }
 }

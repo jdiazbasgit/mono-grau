@@ -24,21 +24,20 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.lReferencia = new System.Windows.Forms.Label();
-            this.lCantidadTotal = new System.Windows.Forms.Label();
-            this.lDescripcion = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.tbLotes = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.finLote = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.epcs = new System.Windows.Forms.DataGridView();
-            this.label25 = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnScanEPC = new System.Windows.Forms.Button();
             this.totalesOrden = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -52,6 +51,10 @@
             this.pLotes = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pReferencia = new System.Windows.Forms.Panel();
+            this.tbLotes = new System.Windows.Forms.TextBox();
+            this.lDescripcion = new System.Windows.Forms.Label();
+            this.lCantidadTotal = new System.Windows.Forms.Label();
+            this.lReferencia = new System.Windows.Forms.Label();
             this.tbLinea = new System.Windows.Forms.TextBox();
             this.finLote.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -61,40 +64,6 @@
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lReferencia
-            // 
-            this.lReferencia.AutoSize = true;
-            this.lReferencia.BackColor = System.Drawing.Color.Transparent;
-            this.lReferencia.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold);
-            this.lReferencia.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lReferencia.Location = new System.Drawing.Point(243, 25);
-            this.lReferencia.Name = "lReferencia";
-            this.lReferencia.Size = new System.Drawing.Size(0, 27);
-            this.lReferencia.TabIndex = 13;
-            this.lReferencia.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // lCantidadTotal
-            // 
-            this.lCantidadTotal.AutoSize = true;
-            this.lCantidadTotal.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold);
-            this.lCantidadTotal.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lCantidadTotal.Location = new System.Drawing.Point(243, 111);
-            this.lCantidadTotal.Name = "lCantidadTotal";
-            this.lCantidadTotal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.lCantidadTotal.Size = new System.Drawing.Size(0, 27);
-            this.lCantidadTotal.TabIndex = 15;
-            // 
-            // lDescripcion
-            // 
-            this.lDescripcion.AutoSize = true;
-            this.lDescripcion.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Bold);
-            this.lDescripcion.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.lDescripcion.Location = new System.Drawing.Point(38, 185);
-            this.lDescripcion.Name = "lDescripcion";
-            this.lDescripcion.Size = new System.Drawing.Size(0, 36);
-            this.lDescripcion.TabIndex = 14;
-            this.lDescripcion.Click += new System.EventHandler(this.lUnidades_Click);
-            // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
@@ -103,16 +72,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(180, 34);
             this.textBox1.TabIndex = 8;
-            // 
-            // tbLotes
-            // 
-            this.tbLotes.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
-            this.tbLotes.Location = new System.Drawing.Point(691, 80);
-            this.tbLotes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tbLotes.Name = "tbLotes";
-            this.tbLotes.Size = new System.Drawing.Size(88, 34);
-            this.tbLotes.TabIndex = 16;
-            this.tbLotes.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // button2
             // 
@@ -181,15 +140,23 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.epcs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.epcs.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.epcs.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.NullValue = "\"\"";
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.epcs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.epcs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.epcs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -201,7 +168,7 @@
             this.epcs.GridColor = System.Drawing.Color.White;
             this.epcs.Location = new System.Drawing.Point(861, 475);
             this.epcs.Name = "epcs";
-            this.epcs.RowHeadersWidth = 51;
+            this.epcs.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.NullValue = null;
@@ -214,16 +181,50 @@
             this.epcs.TabIndex = 37;
             this.epcs.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.epcs_CellContentClick);
             // 
-            // label25
+            // Column1
             // 
-            this.label25.AutoSize = true;
-            this.label25.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.label25.Font = new System.Drawing.Font("Microsoft YaHei", 20F);
-            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label25.Location = new System.Drawing.Point(413, 134);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(0, 45);
-            this.label25.TabIndex = 19;
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.HeaderText = "PRODUCTO";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.HeaderText = "LOTE";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.HeaderText = "NUMERO DE SERIE";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.HeaderText = "LINEA";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column5.HeaderText = "FECHA";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // btnScanEPC
             // 
@@ -250,17 +251,6 @@
             this.totalesOrden.Size = new System.Drawing.Size(0, 45);
             this.totalesOrden.TabIndex = 29;
             this.totalesOrden.Click += new System.EventHandler(this.totalesOrden_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.White;
-            this.label9.Font = new System.Drawing.Font("Microsoft YaHei", 20F);
-            this.label9.ForeColor = System.Drawing.Color.Olive;
-            this.label9.Location = new System.Drawing.Point(1036, 420);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(0, 45);
-            this.label9.TabIndex = 17;
             // 
             // panel1
             // 
@@ -293,7 +283,6 @@
             this.panel9.Controls.Add(this.panel3);
             this.panel9.Controls.Add(this.btnScanEPC);
             this.panel9.Controls.Add(this.tbLinea);
-            this.panel9.Controls.Add(this.label9);
             this.panel9.Controls.Add(this.totalesOrden);
             this.panel9.Controls.Add(this.epcs);
             this.panel9.Controls.Add(this.panel6);
@@ -376,7 +365,6 @@
             this.panel3.Controls.Add(this.lDescripcion);
             this.panel3.Controls.Add(this.lCantidadTotal);
             this.panel3.Controls.Add(this.lReferencia);
-            this.panel3.Controls.Add(this.label25);
             this.panel3.Location = new System.Drawing.Point(861, 136);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(850, 253);
@@ -390,6 +378,7 @@
             this.pLotes.Name = "pLotes";
             this.pLotes.Size = new System.Drawing.Size(239, 41);
             this.pLotes.TabIndex = 19;
+            this.pLotes.Paint += new System.Windows.Forms.PaintEventHandler(this.pLotes_Paint);
             // 
             // panel5
             // 
@@ -411,6 +400,50 @@
             this.pReferencia.TabIndex = 17;
             this.pReferencia.Paint += new System.Windows.Forms.PaintEventHandler(this.pReferencia_Paint);
             // 
+            // tbLotes
+            // 
+            this.tbLotes.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
+            this.tbLotes.Location = new System.Drawing.Point(691, 80);
+            this.tbLotes.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbLotes.Name = "tbLotes";
+            this.tbLotes.Size = new System.Drawing.Size(88, 34);
+            this.tbLotes.TabIndex = 16;
+            this.tbLotes.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
+            // lDescripcion
+            // 
+            this.lDescripcion.AutoSize = true;
+            this.lDescripcion.Font = new System.Drawing.Font("Microsoft YaHei", 16F, System.Drawing.FontStyle.Bold);
+            this.lDescripcion.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lDescripcion.Location = new System.Drawing.Point(38, 185);
+            this.lDescripcion.Name = "lDescripcion";
+            this.lDescripcion.Size = new System.Drawing.Size(0, 36);
+            this.lDescripcion.TabIndex = 14;
+            this.lDescripcion.Click += new System.EventHandler(this.lUnidades_Click);
+            // 
+            // lCantidadTotal
+            // 
+            this.lCantidadTotal.AutoSize = true;
+            this.lCantidadTotal.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold);
+            this.lCantidadTotal.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lCantidadTotal.Location = new System.Drawing.Point(243, 111);
+            this.lCantidadTotal.Name = "lCantidadTotal";
+            this.lCantidadTotal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lCantidadTotal.Size = new System.Drawing.Size(0, 27);
+            this.lCantidadTotal.TabIndex = 15;
+            // 
+            // lReferencia
+            // 
+            this.lReferencia.AutoSize = true;
+            this.lReferencia.BackColor = System.Drawing.Color.Transparent;
+            this.lReferencia.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold);
+            this.lReferencia.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lReferencia.Location = new System.Drawing.Point(243, 25);
+            this.lReferencia.Name = "lReferencia";
+            this.lReferencia.Size = new System.Drawing.Size(0, 27);
+            this.lReferencia.TabIndex = 13;
+            this.lReferencia.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // tbLinea
             // 
             this.tbLinea.Font = new System.Drawing.Font("Microsoft YaHei", 12F);
@@ -427,7 +460,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(2316, 1129);
+            this.ClientSize = new System.Drawing.Size(2316, 1150);
             this.Controls.Add(this.panel9);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
@@ -453,37 +486,40 @@
             this.ResumeLayout(false);
 
         }
-        private System.Windows.Forms.Label lReferencia;
-        private System.Windows.Forms.Label lCantidadTotal;
-        private System.Windows.Forms.Label lDescripcion;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox tbLotes;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Panel finLote;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.DataGridView epcs;
-        private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Button btnScanEPC;
         private System.Windows.Forms.Label totalesOrden;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox tbLinea;
-        private System.Windows.Forms.Panel panel3;
 
         #endregion
 
         private System.Windows.Forms.Panel pLinea;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel pReferencia;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel pLotes;
         private System.Windows.Forms.Panel pTotal;
         private System.Windows.Forms.Panel pPelPda;
         private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel pReferencia;
+        private System.Windows.Forms.TextBox tbLotes;
+        private System.Windows.Forms.Label lDescripcion;
+        private System.Windows.Forms.Label lCantidadTotal;
+        private System.Windows.Forms.Label lReferencia;
+        private System.Windows.Forms.Panel pLotes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
     }
 }

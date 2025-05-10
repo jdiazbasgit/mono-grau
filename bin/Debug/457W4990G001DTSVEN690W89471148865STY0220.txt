@@ -1,0 +1,23 @@
+457W4990G001DTSVEN690W89471148865STY022025889FDMD00R5IND4930
+
+457W4990G001-DTSVEN690W89471148865STY-02-2025-889FDMD-00R5-IND493000
+
+457W4990G001-DTSVEN/1148865/STY-02-2025-889/FDMD-00R5-IND4930000
+
+{
+    "@odata.context": "https://webservice.mozo-grau.com:7048/BC200_MG/api/mozo/apiArco/v2.0/$metadata#companies(0c0574f1-f098-ed11-965c-6045bd89ef6b)/desglosarRFIDs/$entity",
+    "@odata.etag": "W/\"JzE4OzU5NjgyODA5MDM5MjAwMTQwMjE7MDA7Jw==\"",
+    "systemId": "00000000-0000-0000-0000-000000000000",
+    "lecturaRFID": "0108435482618337100025017318240594530992100171122042025170000000",
+    "noProducto": "23207930",
+    "noLote": "25017318",
+    "codExplorer": "",
+    "noSerie": "250173180017",
+    "idImplantCard": "59453099"
+}
+
+ epcs.Columns.Add("PRODUCTO", "PRODUCTO");
+ epcs.Columns.Add("LOTE", "LOTE");
+ epcs.Columns.Add("NUMERO DE SERIE", "NUMERO DE SERIE");
+ epcs.Columns.Add("LINEA", "LINEA");
+ epcs.Columns.Add("FECHA", "FECHA");

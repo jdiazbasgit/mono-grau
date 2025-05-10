@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WMPLib;
+
 
 namespace UHFAPP.utils
 {
@@ -11,22 +7,25 @@ namespace UHFAPP.utils
     {
         public int cantidad { get; set; }
 
-        public String orden { get; set; }
+        public String codigo { get; set; }
 
-        public int lote { get; set; }
+        
 
         public String tag { get; set; }
 
         public int linea { get; set; }
 
+     
 
-        public GrabacionDTO(int cantidad, String orden, int lote, string tag,int linea)
+
+        public GrabacionDTO(int cantidad, string codigo, string tag, int linea)
         {
             this.cantidad = cantidad;
-            this.orden = orden;
-            this.lote = lote;
+            this.codigo = codigo;
             this.tag = tag;
             this.linea = linea;
-        }
+          
+        }   
+        
     }
 }

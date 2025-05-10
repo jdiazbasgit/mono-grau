@@ -1328,3 +1328,39 @@ Application_ThreadException:Subproceso en ejecución o terminado; no se puede rei
    en System.Threading.Thread.Start()
    en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 517
 -----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:URI no válido: no se pudo analizar la autoridad ni el host.
+   en System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   en System.Uri..ctor(String uriString)
+   en System.Net.WebRequest.Create(String requestUriString)
+   en UHFAPP.MainForm.leerOrdenAmipem() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 718
+   en UHFAPP.MainForm.button2_Click(Object sender, EventArgs e) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 1067
+   en System.Windows.Forms.Control.OnClick(EventArgs e)
+   en System.Windows.Forms.Button.OnClick(EventArgs e)
+   en System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   en System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   en System.Windows.Forms.Button.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:URI no válido: no se pudo analizar la autoridad ni el host.
+   en System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   en System.Uri..ctor(String uriString)
+   en System.Net.WebRequest.Create(String requestUriString)
+   en UHFAPP.MainForm.leerOrdenAmipem() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 718
+   en UHFAPP.MainForm.button2_Click(Object sender, EventArgs e) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 1067
+   en System.Windows.Forms.Control.OnClick(EventArgs e)
+   en System.Windows.Forms.Button.OnClick(EventArgs e)
+   en System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   en System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   en System.Windows.Forms.Button.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+-----------------------end----------------------------
