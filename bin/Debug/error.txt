@@ -1364,3 +1364,220 @@ Application_ThreadException:URI no válido: no se pudo analizar la autoridad ni e
    en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
    en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
 -----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.leerFicha(String tag, Int32 linea) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 697
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 431
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.leerFicha(String tag, Int32 linea) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 697
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 431
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.leerFicha(String tag, Int32 linea) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 697
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 431
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.leerFicha(String tag, Int32 linea) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 697
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 431
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.leerFicha(String tag, Int32 linea) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 697
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 431
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.leerFicha(String tag, Int32 linea) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 697
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 431
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.leerFicha(String tag, Int32 linea) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 697
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 431
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.leerFicha(String tag, Int32 linea) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 697
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 431
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.leerFicha(String tag, Int32 linea) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 697
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 431
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.leerFicha(String tag, Int32 linea) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 697
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 431
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.leerFicha(String tag, Int32 linea) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 697
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 431
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.leerFicha(String tag, Int32 linea) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 697
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 431
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.leerFicha(String tag, Int32 linea) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 697
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 431
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.leerFicha(String tag, Int32 linea) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 697
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 431
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.leerFicha(String tag, Int32 linea) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 697
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 431
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.leerFicha(String tag, Int32 linea) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 697
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 431
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.leerFicha(String tag, Int32 linea) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 697
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 431
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.leerFicha(String tag, Int32 linea) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 697
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 431
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.leerFicha(String tag, Int32 linea) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 697
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 431
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.leerFicha(String tag, Int32 linea) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 697
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 431
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.leerFicha(String tag, Int32 linea) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 697
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 431
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.leerFicha(String tag, Int32 linea) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 697
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 431
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.leerFicha(String tag, Int32 linea) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 697
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 431
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.leerFicha(String tag, Int32 linea) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 697
+   en UHFAPP.MainForm.UpdataEPC(String epc, String tid, String rssi, String count, String ant, String user) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 431
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Esta operación no se puede realizar cuando se está cambiando de tamaño una columna de relleno automático.
+   en System.Windows.Forms.DataGridView.PerformLayoutPrivate(Boolean useRowShortcut, Boolean computeVisibleRows, Boolean invalidInAdjustFillingColumns, Boolean repositionEditingControl)
+   en System.Windows.Forms.DataGridView.SetColumnHeadersHeightInternal(Int32 columnHeadersHeight, Boolean invalidInAdjustFillingColumns)
+   en System.Windows.Forms.DataGridView.AutoResizeColumnHeadersHeight(Boolean fixedRowHeadersWidth, Boolean fixedColumnsWidth)
+   en System.Windows.Forms.DataGridView.OnColumnHeadersGlobalAutoSize()
+   en System.Windows.Forms.DataGridView.set_TopLeftHeaderCell(DataGridViewHeaderCell value)
+   en System.Windows.Forms.DataGridView.get_TopLeftHeaderCell()
+   en System.Windows.Forms.DataGridView.GetCellInternal(Int32 columnIndex, Int32 rowIndex)
+   en System.Windows.Forms.DataGridView.OnCellMouseEnter(DataGridViewCellEventArgs e)
+   en System.Windows.Forms.DataGridView.UpdateMouseEnteredCell(HitTestInfo hti, MouseEventArgs e)
+   en System.Windows.Forms.DataGridView.OnColumnWidthChanged(DataGridViewColumnEventArgs e)
+   en System.Windows.Forms.DataGridView.OnBandThicknessChanged(DataGridViewBand dataGridViewBand)
+   en System.Windows.Forms.DataGridViewBand.set_ThicknessInternal(Int32 value)
+   en System.Windows.Forms.DataGridView.AdjustFillingColumns()
+   en System.Windows.Forms.DataGridView.ComputeLayout()
+   en System.Windows.Forms.DataGridView.PerformLayoutPrivate(Boolean useRowShortcut, Boolean computeVisibleRows, Boolean invalidInAdjustFillingColumns, Boolean repositionEditingControl)
+   en System.Windows.Forms.DataGridView.OnHandleCreated(EventArgs e)
+   en System.Windows.Forms.Control.WmCreate(Message& m)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.DataGridView.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+-----------------------end----------------------------

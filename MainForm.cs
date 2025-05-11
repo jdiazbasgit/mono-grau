@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Media;
 using System.Net;
@@ -69,13 +70,13 @@ namespace UHFAPP
         private int loteActual = 1;
         private string ubicación;
         private string idProducto;
-        SortedDictionary<int, List<Lectura>> tagsOrden = new SortedDictionary<int, List<Lectura>>();
+        SortedDictionary<string, int> tagsOrden = new SortedDictionary<string, int>();
         public static FormWindowState currState = FormWindowState.Normal;
         List<EpcInfo> epcList = new List<EpcInfo>();
         public bool isSearch = false;
         #region  OnDisconnect
-        delegate void SetTextCallback(string epc, string tid, string rssi, string count, string ant, string user);
-        SetTextCallback setTextCallback;
+        //elegate void SetTextCallback(string epc, DataGridView epcs);
+        //SetTextCallback setTextCallback;
         private void OnDisconnectCallback(int id)
         {
             try
@@ -159,7 +160,7 @@ namespace UHFAPP
             {
                 eventOpen(false);
             }
-            Thread.Sleep(500);
+           // Thread.Sleep(500);
         }
         private bool UHFClose()
         {
@@ -183,7 +184,7 @@ namespace UHFAPP
             {
                 bool result = false;
                 result = uhf.OpenUsb();
-                UHFAPI.setOnDataReceived(onDataReceived);
+                // UHFAPI.setOnDataReceived(onDataReceived);
                 UHFAPI.SetDisconnectCallback(DisconnectCallback);
                 if (result)
                 {
@@ -196,14 +197,14 @@ namespace UHFAPP
                         }
 
                     }));
-                    Thread.Sleep(2000);
+                   // Thread.Sleep(2000);
                 }
                 else
                 {
                     caja("Error al conectar el lector", 3000);
                 }
                 byte b = 1;
-                uhf.SetGen2(0, 0, 1, 1, 4, 0, 15, 1, 2, 1, 00, 0, 0, 3);
+                //uhf.SetGen2(0, 0, 1, 1, 4, 0, 15, 1, 2, 1, 00, 0, 0, 3);
 
 
 
@@ -220,71 +221,12 @@ namespace UHFAPP
 
         #region RS160 KeyDwon
 
-        public delegate void KeyDownEventHandler(int keyCode);
-        public static event KeyDownEventHandler keyDownEventHandler = null;
 
-        public delegate void KeyUpEventHandler(int keyCode);
-        public static event KeyUpEventHandler keyUpEventHandler = null;
-
-        private UHFAPP.UHFAPI.OnDataReceived onDataReceived = DataReceived;
-        private int suma;
 
         public int cantidadTotal { get; private set; }
-        public int ultimoLote { get; private set; }
-        public Thread hiloLectura;
 
-        private static void DataReceived(IntPtr pdata, short len)
-        {
-            Console.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss:fff") + " DataReceived begin");
-            short contentLen;
-            short index = 0;
-            byte type;
 
-            byte[] cellData = new byte[len];
-            Marshal.Copy(pdata, cellData, 0, len);
 
-            byte[] pcontent;
-
-            while (index < len)
-            {
-                type = cellData[index++];
-                if ((cellData[index] & 0x80) == 0x80)
-                {
-                    contentLen = (short)(((cellData[index] & 0x7F) << 7) | (cellData[index + 1] & 0x7F));
-                    index += 2;
-                }
-                else
-                {
-                    contentLen = cellData[index++];
-                }
-
-                pcontent = Utils.CopyArray(cellData, index, contentLen);
-                switch (type)
-                {
-                    case CELL_KEY_CODE:
-                        if (pcontent[0] == 03)
-                        {
-                            int keyCode = pcontent[0];
-                            if (keyDownEventHandler != null)
-                            {
-                                keyDownEventHandler(keyCode);
-                            }
-                        }
-                        else if (pcontent[0] == 04)
-                        {
-                            int keyCode = pcontent[0];
-                            if (keyUpEventHandler != null)
-                            {
-                                keyUpEventHandler(keyCode);
-                            }
-                        }
-                        break;
-                    default:
-                        break;
-                }
-                index += contentLen;
-            }
-        }
 
         #endregion
 
@@ -344,19 +286,24 @@ namespace UHFAPP
         {
             isVisible = false;
             isRuning = false;
-            Thread.Sleep(100);
+           // Thread.Sleep(100);
         }
 
 
-        private void StartReceiveThread()
+        private void StartReceiveThread(DataGridView epcs)
         {
             if (!isRuning)
             {
                 isRuning = true;
                 try
                 {
-                    hiloLectura = new Thread(new ThreadStart(delegate { ReadEPC(); }));
-                    hiloLectura.Start();
+                    /* hiloLectura = new Thread(new ThreadStart(delegate { ReadEPC(epcs); }));
+                     hiloLectura.Start();*/
+                    ReadEPC(() =>
+                    {
+                        
+                    }, this);
+
                 }
                 catch (Exception e)
                 {
@@ -367,43 +314,27 @@ namespace UHFAPP
 
 
 
-        private void UpdataEPC(string epc, string tid, string rssi, string count, string ant, string user)
+        private void UpdataEPC(string epc)
         {
+
             if (epc == null)
             {
                 return;
             }
 
-            bool[] exist = new bool[1];
-            int index = CheckUtils.getInsertIndex(epcList, epc, tid, exist);
 
-            total++;
-            if (exist[0])
+
+            if (!ubicación.Equals("casa"))
             {
-                return;
-            }
-            else
-            {
-                EpcInfo epcInfo = new EpcInfo(epc, tid, int.Parse(count), DataConvert.HexStringToByteArray(epc), DataConvert.HexStringToByteArray(tid), int.Parse(ant), rssi, user);
-                epcList.Insert(index, epcInfo);
-                //Thread.Sleep(300);
-
-                int lastRowIndex = epcs.Rows.GetLastRow(DataGridViewElementStates.Visible);
-
-                finLote.Visible = false;
-                // StopReceiveThread();
-
-                if (!ubicación.Equals("casa"))
+                try
                 {
                     if (validaProducto(epc))
                     {
-                        if (grabarTagContadorMozo(epcInfo.Epc, loteActual))
-                        {
-                            if (!grabarTagContadorAmipem(epcInfo.Epc, loteActual))
-                            {
-                                caja("Tag ya está grabado", 3000);
-                            }
-                        }
+
+                        leerFicha(epc, Int32.Parse(tbLinea.Text), epcs);
+
+                       
+                        //leerOrden();
                     }
                     else
                     {
@@ -411,50 +342,38 @@ namespace UHFAPP
 
                     }
                 }
-                else
+                catch (Exception e)
                 {
-                    if (validaProducto(epc))
-                    {
-                        if (grabarTagContadorAmipem(epcInfo.Epc, loteActual))
-                        {
-                            if (!tagsOrden.ContainsKey(loteActual))
-                            {
-                                tagsOrden.Add(loteActual, new List<Lectura>());
-                            }
-                            tagsOrden[loteActual].Add(new Lectura(epcInfo.Epc, loteActual, Int32.Parse(tbLinea.Text)));
-                            totalesValidos++;
-                            totalesOrden.Text = "" + totalesValidos;
 
-                            // epcs.Rows.Clear();
-                            int totalesTodasLineas = 0;
-                            foreach (int lote in tagsOrden.Keys)
-                            {
-                                foreach (Lectura lectura in tagsOrden[lote])
-                                {
-                                    totalesTodasLineas++;
-                                    // epcs.Rows.Add(lectura.epc, lectura.lote, lectura.linea);
-                                }
-                            }
-                            //totalesOrden.Text = "" + totalesTodasLineas;
-                            /*epcs.Columns[0].Width = 635;
-                            epcs.Columns[1].Width = 43;
-                            epcs.Columns[2].Width = 70;*/
-                        }
-                        else
-                        {
-                            caja("Tag ya está grabado", 3000);
-                        }
-                    }
+                    Console.Write(e.Message);
                 }
-
-                int totalGrabados = 0;
-                foreach (List<Lectura> lectura in tagsOrden.Values)
-                {
-                    totalGrabados += lectura.Count;
-                }
-
-
             }
+            else
+            {
+                if (validaProducto(epc))
+                {
+                    leerFicha(epc, Int32.Parse(tbLinea.Text), epcs);
+
+                }
+            }
+
+            if (epcs.InvokeRequired)
+            {
+                
+                    epcs.Invoke(new Action(() => epcs.Rows.Add(new object[] { "23207930", "25017318", "250173180017", 1, "01/01/2025" })));
+                    
+            }
+            else
+            {
+                
+                    epcs.Rows.Add(new object[] { "23207930", "25017318", "250173180017", 1, "01/01/2025" });
+                    
+                
+            }
+            Console.Write(epc);
+
+
+
 
         }
 
@@ -624,19 +543,18 @@ namespace UHFAPP
                             epcs.Rows.Clear();
                             for (int i = 0; i < grabaciones.Length; i++)
                             {
-                                if (!tagsOrden.ContainsKey(grabaciones[i].lote))
-                                    tagsOrden.Add(grabaciones[i].lote, new List<Lectura>());
-                                tagsOrden[grabaciones[i].lote].Add(new Lectura(grabaciones[i].tag, grabaciones[i].lote, grabaciones[i].linea));
+
+                                // tagsOrden.Add(grabaciones[i].tag, Int32.Parse(tbLinea.Text));
                                 //epcs.Rows.Add(new object[] { grabaciones[i].tag, grabaciones[i].lote, grabaciones[i].linea });
-                                bool[] exist = new bool[1];
-                                int index = CheckUtils.getInsertIndex(epcList, grabaciones[i].tag, "", exist);
-                                EpcInfo epcInfo = new EpcInfo(grabaciones[i].tag, "", grabaciones.Length, DataConvert.HexStringToByteArray(grabaciones[i].tag), DataConvert.HexStringToByteArray(""), 1, "-79.20", "");
-                                epcList.Insert(index, epcInfo);
-                                leerFicha(grabaciones[i].tag);
+                                /* bool[] exist = new bool[1];
+                                 int index = CheckUtils.getInsertIndex(epcList, grabaciones[i].tag, "", exist);
+                                 EpcInfo epcInfo = new EpcInfo(grabaciones[i].tag, "", grabaciones.Length, DataConvert.HexStringToByteArray(grabaciones[i].tag), DataConvert.HexStringToByteArray(""), 1, "-79.20", "");
+                                 epcList.Insert(index, epcInfo);*/
+                                leerFicha(grabaciones[i].tag, grabaciones[i].linea, epcs);
                                 //loteActual = grabaciones[i].lote;
                             }
                             cantidadReal = cantidadTotal - grabaciones.Length;
-                            if (epcList.Count == cantidadTotal)
+                            if (tagsOrden.Count == cantidadTotal)
                             {
                                 StopReceiveThread();
                                 StopEPC(true);
@@ -672,113 +590,31 @@ namespace UHFAPP
             }
         }
 
-        private void leerFicha(string tag)
+        private void leerFicha(string tag, int linea, DataGridView epcs1)
         {
-           /* System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.epcs.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.epcs.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.epcs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.epcs.BackgroundColor = System.Drawing.Color.White;
-            this.epcs.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.NullValue = "\"\"";
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.epcs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.epcs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-          this.epcs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.epcs.DefaultCellStyle = dataGridViewCellStyle3;
-            this.epcs.GridColor = System.Drawing.Color.White;
-            this.epcs.Location = new System.Drawing.Point(861, 475);
-            this.epcs.Name = "epcs";
-            this.epcs.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.NullValue = null;
-            this.epcs.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.epcs.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.epcs.RowTemplate.Height = 24;
-            this.epcs.RowTemplate.ReadOnly = true;
-            this.epcs.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.epcs.Size = new System.Drawing.Size(1408, 599);
-            this.epcs.TabIndex = 37;
-            this.epcs.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.epcs_CellContentClick);
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.HeaderText = "PRODUCTO";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.HeaderText = "LOTE";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.HeaderText = "NUMERO DE SERIE";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.HeaderText = "LINEA";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column5.HeaderText = "FECHA";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.False;*/
-            if (ubicación.Equals("casa"))
+            try
             {
-                
-                //totalesOrden.Text = "" + grabaciones.Length;
+                tagsOrden.Add(tag, linea);
 
-                epcs.Rows.Add(new object[] { "23207930", "25017318", "250173180017", "1", "01/01/2025" });
+                if (ubicación.Equals("casa"))
+                {
+
+
+                    epcs1.Rows.Add(new object[] { "23207930", "25017318", "250173180017", linea, "01/01/2025" });
+
+
+                }
+                else
+                {
+
+                }
 
             }
-            else
+            catch (Exception e)
             {
 
+                int i = 0;
             }
-            
         }
 
         private void caja(string texto, int duracion)
@@ -939,15 +775,15 @@ namespace UHFAPP
                     epcs.Rows.Clear();
                     for (int i = 0; i < grabaciones.Length; i++)
                     {
-                        if (!tagsOrden.ContainsKey(grabaciones[i].lote))
-                            tagsOrden.Add(grabaciones[i].lote, new List<Lectura>());
-                        tagsOrden[grabaciones[i].lote].Add(new Lectura(grabaciones[i].tag, grabaciones[i].lote, grabaciones[i].linea));
+                        //if (!tagsOrden.ContainsKey(grabaciones[i].lote))
+                        //tagsOrden.Add(grabaciones[i].tag, grabaciones[i].linea);
+                        //tagsOrden[grabaciones[i].lote].Add(new Lectura(grabaciones[i].tag, grabaciones[i].lote, grabaciones[i].linea));
                         bool[] exist = new bool[1];
                         int index = CheckUtils.getInsertIndex(epcList, grabaciones[i].tag, "", exist);
                         EpcInfo epcInfo = new EpcInfo(grabaciones[i].tag, "", grabaciones.Length, DataConvert.HexStringToByteArray(grabaciones[i].tag), DataConvert.HexStringToByteArray(""), 1, "-79.20", "");
                         epcList.Insert(index, epcInfo);
-                        leerFicha(grabaciones[i].tag);
-                        loteActual = grabaciones[i].lote;
+                        leerFicha(grabaciones[i].tag, grabaciones[i].linea, epcs);
+                        // loteActual = grabaciones[i].lote;
 
                     }
                     if (grabaciones.Length == cantidadTotal)
@@ -967,7 +803,7 @@ namespace UHFAPP
                     }
                     else
                     {
-                       
+
 
                         cantidadReal--;
                         lCantidadTotal.Text = "" + cantidadTotal + "/" + (cantidadTotal - grabaciones.Length);
@@ -1044,7 +880,7 @@ namespace UHFAPP
         }
         private void ScanEPCForm_Load(object sender, EventArgs e)
         {
-            setTextCallback = new SetTextCallback(UpdataEPC);
+            //setTextCallback = new SetTextCallback(UpdataEPC);
 
             var bounds = Screen.FromControl(this).Bounds;
             this.Width = bounds.Width - 50;
@@ -1056,53 +892,55 @@ namespace UHFAPP
             this.MaximumSize = SystemInformation.PrimaryMonitorMaximizedWindowSize;
             this.WindowState = FormWindowState.Maximized;
         }
-        private void ReadEPC()
+        private void ReadEPC(Action callback, MainForm yo)
         {
-
             try
             {
-                while (isRuning)
+                BackgroundWorker worker = new BackgroundWorker();
+                worker.DoWork += (obj, e) =>
                 {
-
-                    /* if (!isVisible)
-                     {
-                         Thread.Sleep(10);
-                     }*/
-                    UHFTAGInfo info = uhf.ReadTagFromBuffer();
-
-                    if (info != null)
+                    while (isRuning)
                     {
-                        this.BeginInvoke(setTextCallback, new object[] { info.Epc, info.Tid, info.Rssi, "1", info.Ant, info.User });
+                        UHFTAGInfo info = uhf.ReadTagFromBuffer();
+                        
 
+                        // uhf.GetCW(ref 1);
+
+                        // Fixed line
+                        byte flag = 1; // Declare a variable to hold the value
+                        //Console.Write(uhf.GetCW(ref flag)); // Pass the variable as a ref parameter
+                        
+
+                        if (info != null && !tagsOrden.ContainsKey(info.Epc))
+                        {
+                            //this.BeginInvoke(setTextCallback, new object[] { info.Epc ,epcs});
+                            UpdataEPC(info.Epc);
+
+                        }
+                        //Thread.Sleep(100);
                     }
-                    else
-                    {
-                        this.BeginInvoke(setTextCallback, new object[] { null, null, null, null, null, null });
-
-                    }
-                    Thread.Sleep(100);
-
-                }
+                };
+                worker.RunWorkerAsync();
             }
             catch (Exception ex)
             {
-                Console.Write(ex.ToString());
+                Console.WriteLine(ex.ToString());
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
 
-            int totalesTodasLineas = 0;
-            foreach (int lote in tagsOrden.Keys)
-            {
-                foreach (Lectura lectura in tagsOrden[lote])
-                {
-                    totalesTodasLineas++;
+            //int totalesTodasLineas = 0;
+            /* foreach (int lote in tagsOrden.Keys)
+             {
+                 foreach (Lectura lectura in tagsOrden[lote])
+                 {
+                     totalesTodasLineas++;
 
-                }
+                 }
 
-            }
+             }*/
             if (btnScanEPC.Text == strStop)
             {
                 StopReceiveThread();
@@ -1113,7 +951,7 @@ namespace UHFAPP
             }
             else
             {
-                StartReceiveThread();
+                StartReceiveThread(epcs);
                 StopEPC(false);
 
             }
@@ -1135,7 +973,7 @@ namespace UHFAPP
             tbLinea.Enabled = true;
             tbLotes.Enabled = true;
 
-            epcs.Rows.Clear();
+
 
             totalesOrden.Text = "0";
             if (ubicación.Equals("casa"))
@@ -1148,7 +986,7 @@ namespace UHFAPP
                 try
                 {
                     leerOrden();
-                    grabarOrdenAmipem();
+                    // grabarOrdenAmipem();
 
                 }
                 catch (Exception)
@@ -1157,7 +995,7 @@ namespace UHFAPP
                     int a = 0;
                 }
 
-                leerOrdenAmipem();
+
                 btnScanEPC.Enabled = true;
             }
 
