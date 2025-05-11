@@ -11,7 +11,7 @@ public class Contador {
 	
 	private String orden;
 	
-
+	private int lote;
 	
 	
 }
