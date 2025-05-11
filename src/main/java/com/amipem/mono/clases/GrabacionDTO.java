@@ -1,5 +1,10 @@
 package com.amipem.mono.clases;
 
+import java.sql.Date;
+import java.util.GregorianCalendar;
+
+import javax.persistence.Temporal;
+
 import com.amipem.mono.entidades.Grabacion;
 import com.amipem.mono.entidades.Orden;
 
@@ -13,11 +18,13 @@ import lombok.NoArgsConstructor;
 public class GrabacionDTO {
 	private int cantidad;
 
-	private String orden;
+	private String codigo;
 
-	private int lote;
+
 
 	private String tag;
 	
 	private int linea;
+	
+
 }

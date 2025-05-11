@@ -9,8 +9,8 @@ import com.amipem.mono.entidades.Grabacion;
 
 public interface GrabacionCRUDRepository extends CrudRepository<Grabacion, Integer> {
 	
-	@Query("from Grabacion as g where g.orden=:orden and g.lote=:lote")
-	public List<Grabacion> getCountOrder(String orden,int lote);
+	@Query("from Grabacion as g where g.orden=:orden")
+	public List<Grabacion> getCountOrder(String orden);
 
 	@Query("from Grabacion as g where g.orden.codigo=:orden")
 	public List<Grabacion> getTagsByOrden(String orden);

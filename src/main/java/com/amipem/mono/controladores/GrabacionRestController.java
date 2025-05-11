@@ -26,55 +26,53 @@ public class GrabacionRestController {
 
 	@Autowired
 	private GrabacionCRUDRepository grabacionCrudRepository;
-	
+
 	@Autowired
 	private OrdenCRUDRepository ordenCrudRepository;
-	
-	
-	
-	@PostMapping("leerContador/{orden}/{lote}")
-	public Contador getContador( @PathVariable String orden, @PathVariable int lote) {
-		List<Grabacion> grabaciones=getGrabacionCrudRepository().getCountOrder(orden, lote);
-		return new Contador(grabaciones.size(), orden ,lote);
+
+	@PostMapping("leerContador")
+	public Contador getContador(@PathVariable String orden) {
+		List<Grabacion> grabaciones = getGrabacionCrudRepository().getCountOrder(orden);
+		return new Contador(grabaciones.size(), orden);
 	}
-	
+
 	@PostMapping("leerOrden/{codigo}")
-	public Orden getOrden( @PathVariable String codigo) {
-		
+	public Orden getOrden(@PathVariable String codigo) {
+
 		return getOrdenCrudRepository().findByCodigo(codigo);
 	}
-	
+
 	@PostMapping("leerTagsOrden/{orden}")
-	public List<Grabacion> getTagsFromOrden(@PathVariable String orden){
+	public List<Grabacion> getTagsFromOrden(@PathVariable String orden) {
 		return getGrabacionCrudRepository().getTagsByOrden(orden);
-		
+
 	}
-	
+
 	@PostMapping("grabarTagContador")
 	public List<Grabacion> grabaTag(@RequestBody GrabacionDTO grabacionDTO) {
-		Orden orden=getOrdenCrudRepository().findByCodigo(grabacionDTO.getOrden());
-		List<Grabacion> grabaciones=getGrabacionCrudRepository().getTagsByOrden(grabacionDTO.getOrden());
-		if(grabaciones.size()>=orden.getCantidad()) {
-			ArrayList<Grabacion> salida= new ArrayList<Grabacion>();
-			Grabacion grabacion= new Grabacion(-1, orden, null, 0, 0,new GregorianCalendar());
-			salida.add(grabacion);
-			return salida;
+		Orden orden = getOrdenCrudRepository().findByCodigo(grabacionDTO.getCodigo());
+
+		// if(grabaciones.size()>=orden.getCantidad()) {
+		List<Grabacion> grabaciones = getGrabacionCrudRepository().getTagsByOrden(grabacionDTO.getCodigo());
+		if (grabaciones.size() < orden.getCantidad()) {
+			Grabacion grabacion = new Grabacion(0, orden, grabacionDTO.getTag(), grabacionDTO.getLinea(),
+					new GregorianCalendar());
+			getGrabacionCrudRepository().save(grabacion);
+			if (grabacion.getId() > 0)
+				grabaciones.add(grabacion);
 		}
-		else {
-		Grabacion grabacion= new Grabacion(0, orden, grabacionDTO.getTag(), grabacionDTO.getLote(),grabacionDTO.getLinea(),new GregorianCalendar());
-		getGrabacionCrudRepository().save(grabacion);
-		return getGrabacionCrudRepository().getTagsByOrden(grabacionDTO.getOrden());
-		}
+		return grabaciones;
 	}
-	
+
 	@PostMapping("grabarOrden")
 	public Orden grabaOrden(@RequestBody Orden orden) {
 		orden.setId(0);
 		return getOrdenCrudRepository().save(orden);
 	}
-	
+
 	@GetMapping("simulacion")
 	public String simulacion() {
 		return "";
 	}
 }
+;

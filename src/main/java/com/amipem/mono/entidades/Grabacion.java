@@ -22,7 +22,6 @@ public class Grabacion {
 	@JoinColumn(name="orden_id")
 	private Orden orden;
 	private String tag;
-	private int lote;
 	private int linea;
 	private GregorianCalendar fecha;
 	
