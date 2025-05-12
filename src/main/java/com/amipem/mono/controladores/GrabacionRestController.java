@@ -68,6 +68,7 @@ public class GrabacionRestController {
 	
 	@PostMapping("grabarOrden")
 	public Orden grabaOrden(@RequestBody Orden orden) {
+		orden.setId(0);
 		return getOrdenCrudRepository().save(orden);
 	}
 	
