@@ -105,7 +105,6 @@ C:\Users\PC\source\repos\mozo-grau\mozo-calidad\obj\Debug\mozo-grau.csproj.Assem
 C:\Users\PC\source\repos\mozo-grau\mozo-calidad\obj\Debug\Interop.WMPLib.dll
 C:\Users\PC\source\repos\mozo-grau\mozo-calidad\obj\Debug\mozo-grau.csproj.ResolveComReference.cache
 C:\Users\PC\source\repos\mozo-grau\mozo-calidad\obj\Debug\UHFAPP.BaseForm.resources
-C:\Users\PC\source\repos\mozo-grau\mozo-calidad\obj\Debug\WinForm_Test.frmWaitingBox.resources
 C:\Users\PC\source\repos\mozo-grau\mozo-calidad\obj\Debug\UHFAPP.MainForm.resources
 C:\Users\PC\source\repos\mozo-grau\mozo-calidad\obj\Debug\UHFAPP.Properties.Resources.resources
 C:\Users\PC\source\repos\mozo-grau\mozo-calidad\obj\Debug\UHFAPP.RFID.RFIDMainForm.resources

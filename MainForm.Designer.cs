@@ -19,32 +19,21 @@
 
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.finLote = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel8 = new System.Windows.Forms.Panel();
             this.epcs = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnScanEPC = new System.Windows.Forms.Button();
-            this.totalesOrden = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.pPelPda = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pTotal = new System.Windows.Forms.Panel();
             this.pLinea = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -56,8 +45,11 @@
             this.lCantidadTotal = new System.Windows.Forms.Label();
             this.lReferencia = new System.Windows.Forms.Label();
             this.tbLinea = new System.Windows.Forms.TextBox();
-            this.finLote.SuspendLayout();
-            this.panel6.SuspendLayout();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.epcs)).BeginInit();
             this.panel9.SuspendLayout();
             this.panel11.SuspendLayout();
@@ -86,55 +78,10 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // finLote
-            // 
-            this.finLote.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("finLote.BackgroundImage")));
-            this.finLote.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.finLote.Controls.Add(this.panel7);
-            this.finLote.Location = new System.Drawing.Point(274, 427);
-            this.finLote.Margin = new System.Windows.Forms.Padding(4);
-            this.finLote.Name = "finLote";
-            this.finLote.Size = new System.Drawing.Size(452, 118);
-            this.finLote.TabIndex = 35;
-            this.finLote.Visible = false;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.Red;
-            this.panel7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel7.BackgroundImage")));
-            this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel7.Location = new System.Drawing.Point(20, 17);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(100, 89);
-            this.panel7.TabIndex = 37;
-            // 
-            // panel6
-            // 
-            this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
-            this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel6.Controls.Add(this.panel8);
-            this.panel6.Location = new System.Drawing.Point(274, 655);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(452, 118);
-            this.panel6.TabIndex = 36;
-            this.panel6.Visible = false;
-            // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.Red;
-            this.panel8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel8.BackgroundImage")));
-            this.panel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel8.Location = new System.Drawing.Point(43, 17);
-            this.panel8.Margin = new System.Windows.Forms.Padding(4);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(100, 89);
-            this.panel8.TabIndex = 38;
-            // 
             // epcs
             // 
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.NullValue = null;
             this.epcs.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.epcs.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -166,7 +113,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.epcs.DefaultCellStyle = dataGridViewCellStyle3;
             this.epcs.GridColor = System.Drawing.Color.White;
-            this.epcs.Location = new System.Drawing.Point(861, 475);
+            this.epcs.Location = new System.Drawing.Point(861, 395);
             this.epcs.Name = "epcs";
             this.epcs.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -177,59 +124,14 @@
             this.epcs.RowTemplate.Height = 24;
             this.epcs.RowTemplate.ReadOnly = true;
             this.epcs.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.epcs.Size = new System.Drawing.Size(1408, 599);
+            this.epcs.Size = new System.Drawing.Size(1408, 755);
             this.epcs.TabIndex = 37;
             this.epcs.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.epcs_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column1.HeaderText = "PRODUCTO";
-            this.Column1.MinimumWidth = 6;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column2.HeaderText = "LOTE";
-            this.Column2.MinimumWidth = 6;
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column3.HeaderText = "NUMERO DE SERIE";
-            this.Column3.MinimumWidth = 6;
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column4.HeaderText = "LINEA";
-            this.Column4.MinimumWidth = 6;
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Column5.HeaderText = "FECHA";
-            this.Column5.MinimumWidth = 6;
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // btnScanEPC
             // 
             this.btnScanEPC.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold);
-            this.btnScanEPC.Location = new System.Drawing.Point(408, 842);
+            this.btnScanEPC.Location = new System.Drawing.Point(614, 856);
             this.btnScanEPC.Margin = new System.Windows.Forms.Padding(4);
             this.btnScanEPC.Name = "btnScanEPC";
             this.btnScanEPC.Size = new System.Drawing.Size(240, 54);
@@ -239,18 +141,6 @@
             this.btnScanEPC.UseVisualStyleBackColor = false;
             this.btnScanEPC.Visible = false;
             this.btnScanEPC.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // totalesOrden
-            // 
-            this.totalesOrden.AutoSize = true;
-            this.totalesOrden.BackColor = System.Drawing.Color.White;
-            this.totalesOrden.Font = new System.Drawing.Font("Microsoft YaHei", 20F);
-            this.totalesOrden.ForeColor = System.Drawing.Color.Black;
-            this.totalesOrden.Location = new System.Drawing.Point(1760, 420);
-            this.totalesOrden.Name = "totalesOrden";
-            this.totalesOrden.Size = new System.Drawing.Size(0, 45);
-            this.totalesOrden.TabIndex = 29;
-            this.totalesOrden.Click += new System.EventHandler(this.totalesOrden_Click);
             // 
             // panel1
             // 
@@ -277,16 +167,12 @@
             // panel9
             // 
             this.panel9.Controls.Add(this.panel11);
-            this.panel9.Controls.Add(this.pTotal);
             this.panel9.Controls.Add(this.pLinea);
             this.panel9.Controls.Add(this.panel4);
             this.panel9.Controls.Add(this.panel3);
             this.panel9.Controls.Add(this.btnScanEPC);
             this.panel9.Controls.Add(this.tbLinea);
-            this.panel9.Controls.Add(this.totalesOrden);
             this.panel9.Controls.Add(this.epcs);
-            this.panel9.Controls.Add(this.panel6);
-            this.panel9.Controls.Add(this.finLote);
             this.panel9.Controls.Add(this.button2);
             this.panel9.Controls.Add(this.textBox1);
             this.panel9.Location = new System.Drawing.Point(-30, -12);
@@ -294,6 +180,7 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(2519, 914);
             this.panel9.TabIndex = 37;
+            this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
             // 
             // panel11
             // 
@@ -326,16 +213,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(281, 73);
             this.panel2.TabIndex = 39;
-            // 
-            // pTotal
-            // 
-            this.pTotal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pTotal.BackgroundImage")));
-            this.pTotal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pTotal.Location = new System.Drawing.Point(1491, 420);
-            this.pTotal.Name = "pTotal";
-            this.pTotal.Size = new System.Drawing.Size(220, 49);
-            this.pTotal.TabIndex = 45;
-            this.pTotal.Visible = false;
             // 
             // pLinea
             // 
@@ -454,13 +331,62 @@
             this.tbLinea.TabIndex = 41;
             this.tbLinea.Text = "1";
             // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.FillWeight = 146.1281F;
+            this.Column1.HeaderText = "PRODUCTO";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.FillWeight = 109.0447F;
+            this.Column2.HeaderText = "LOTE";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Column3
+            // 
+            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column3.FillWeight = 109.0447F;
+            this.Column3.HeaderText = "NUMERO DE SERIE";
+            this.Column3.MinimumWidth = 6;
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Column4
+            // 
+            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column4.FillWeight = 26.73797F;
+            this.Column4.HeaderText = "LINEA";
+            this.Column4.MinimumWidth = 6;
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Column5
+            // 
+            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column5.FillWeight = 109.0447F;
+            this.Column5.HeaderText = "FECHA";
+            this.Column5.MinimumWidth = 6;
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(2316, 1150);
+            this.ClientSize = new System.Drawing.Size(2316, 1127);
             this.Controls.Add(this.panel9);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
@@ -475,8 +401,6 @@
             this.Load += new System.EventHandler(this.ScanEPCForm_Load);
             this.ResizeEnd += new System.EventHandler(this.MainForm_ResizeEnd);
             this.SizeChanged += new System.EventHandler(this.MainForm_SizeChanged);
-            this.finLote.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.epcs)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
@@ -488,13 +412,8 @@
         }
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel finLote;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.DataGridView epcs;
         private System.Windows.Forms.Button btnScanEPC;
-        private System.Windows.Forms.Label totalesOrden;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel9;
@@ -505,7 +424,6 @@
 
         private System.Windows.Forms.Panel pLinea;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel pTotal;
         private System.Windows.Forms.Panel pPelPda;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel3;

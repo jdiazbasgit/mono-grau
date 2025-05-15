@@ -5,9 +5,9 @@ namespace UHFAPP.utils
 {
     internal class GrabacionDTO
     {
-        public int cantidad { get; set; }
+        
 
-        public String codigo { get; set; }
+        public String orden { get; set; }
 
         
 
@@ -18,10 +18,10 @@ namespace UHFAPP.utils
      
 
 
-        public GrabacionDTO(int cantidad, string codigo, string tag, int linea)
+        public GrabacionDTO( string orden, string tag, int linea)
         {
-            this.cantidad = cantidad;
-            this.codigo = codigo;
+            
+            this.orden = orden;
             this.tag = tag;
             this.linea = linea;
           

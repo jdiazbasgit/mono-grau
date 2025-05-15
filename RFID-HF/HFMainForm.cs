@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using WinForm_Test;
+
 using UHFAPP.RFID_HF;
 
 namespace UHFAPP.RFID
@@ -569,13 +569,6 @@ namespace UHFAPP.RFID
         private void ShowMessage(string msg)
         {
              
-                {
-                    frmWaitingBox f = new frmWaitingBox((obj, args) =>
-                    {
-                        System.Threading.Thread.Sleep(500);
-                    }, msg);
-                    f.ShowDialog(this);
-                }
         }
  
         private void FormatHex(TextBox txt)

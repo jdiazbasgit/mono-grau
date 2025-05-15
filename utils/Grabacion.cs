@@ -14,17 +14,16 @@ namespace UHFAPP.utils
         
         public int lote { get; set; }
 
-        public int linea { get; set; }
-
+      
         public DateTime fecha { get; set; }
 
 
-        public Grabacion(int id, Orden orden, string tag, int linea, int lote, DateTime fecha)
+        public Grabacion(int id, Orden orden, string tag, int lote, DateTime fecha)
         {
             this.id = id;
             this.orden = orden;
             this.tag = tag;
-            this.linea = linea;
+            
             this.lote = lote;
             this.fecha = fecha;
         }
