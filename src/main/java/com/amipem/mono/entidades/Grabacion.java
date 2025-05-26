@@ -1,5 +1,8 @@
 package com.amipem.mono.entidades;
 
+import java.sql.Date;
+import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 import java.util.GregorianCalendar;
 
 import javax.persistence.*;
@@ -23,7 +26,7 @@ public class Grabacion {
 	private Orden orden;
 	private String tag;
 	private int linea;
-	private GregorianCalendar fecha;
+	private OffsetDateTime fecha;
 	
 	
 }

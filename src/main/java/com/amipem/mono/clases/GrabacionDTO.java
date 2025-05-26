@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
 public class GrabacionDTO {
 	private int cantidad;
 
-	private String codigo;
+	private String orden;
 
 
 

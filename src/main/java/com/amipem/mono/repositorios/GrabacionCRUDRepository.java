@@ -15,4 +15,7 @@ public interface GrabacionCRUDRepository extends CrudRepository<Grabacion, Integ
 	@Query("from Grabacion as g where g.orden.codigo=:orden")
 	public List<Grabacion> getTagsByOrden(String orden);
 
+	public Grabacion findByTag(String tag);
+
+	
 }

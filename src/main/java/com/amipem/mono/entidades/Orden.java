@@ -21,10 +21,10 @@ public class Orden {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	private String codigo;
-	private String item;
 	private String descripcion;
+	private String item;
 	private int cantidad;
-	private int parcial;
+
 	
 	
 
