@@ -36,7 +36,7 @@ namespace UHFAPP
         public static int MODE = 1;//0:串口   1:网口    2:usb
         public static string ip = "";
         public static uint portData = 0;
-        int total = 0;
+
         private GetMozo getMozo;
         public delegate void DelegateOpen(bool open);
         public static event DelegateOpen eventOpen = null;
@@ -51,10 +51,13 @@ namespace UHFAPP
         string strClose = "  Desconectar lector  ";
         string strStart = "  Iniciar lectura  ";
         string strStop = "  Detener lectura  ";
+        string strStartConsulta = "  Iniciar comprobacion  ";
+        string strStopConsulta = "  Detener comprobacion  ";
         private List<string> tags = new List<string>();
         private List<int> tagsCantidad = new List<int>();
         private string currentFormName = "";
         private bool isOpen = false;
+        private bool consulta;
         private int idOrdenAmipem;
         private string apiMozoBase;
         private string apiAmipemBase;
@@ -70,8 +73,13 @@ namespace UHFAPP
         private int cantidadPorLote;
         private int loteActual = 1;
         private string ubicación;
+        private string session;
+        private string potencia;
+        private string tagFocus;
+
         private string idProducto;
         SortedDictionary<string, int> tagsOrden = new SortedDictionary<string, int>();
+        SortedDictionary<string, int> tagsComprobacion = new SortedDictionary<string, int>();
         public static FormWindowState currState = FormWindowState.Normal;
         List<EpcInfo> epcList = new List<EpcInfo>();
         public bool isSearch = false;
@@ -105,6 +113,7 @@ namespace UHFAPP
         }
 
         UHFAPP.UHFAPI.OnDisconnectCallback DisconnectCallback = null;
+        private string epcErroneo;
 
         #endregion
 
@@ -139,12 +148,12 @@ namespace UHFAPP
             usuario = sr.ReadLine();
             password = sr.ReadLine();
             ubicación = sr.ReadLine();
-            //Continue to read until you reach end of file
-
-            //  uhf.SetTagfocus(0);
-            //uhf.SetGen2()
-
-            //close the file
+            potencia = sr.ReadLine();
+            session = sr.ReadLine();
+            tagFocus = sr.ReadLine();
+           // uhf.SetTagfocus(Byte.Parse(tagFocus));
+           // uhf.SetPower(1,Byte.Parse(potencia));
+         
             sr.Close();
             Console.ReadLine();
             loteActual++;
@@ -210,6 +219,7 @@ namespace UHFAPP
 
 
 
+
         #endregion
 
 
@@ -247,40 +257,72 @@ namespace UHFAPP
             {
                 if (uhf.StopInventory())
                 {
-                    if (epcs.InvokeRequired)
+                    if (!consulta)
+                        if (btnScanEPC.InvokeRequired)
+                        {
+
+                            btnScanEPC.Invoke(new Action(() => btnScanEPC.Text = strStart));
+
+                        }
+                        else
+                        {
+                            btnScanEPC.Text = strStart;
+                            btnScanEPC.BackColor = System.Drawing.Color.Green;
+                            btnScanEPC.ForeColor = System.Drawing.Color.White;
+                        }
+                    else if (buttonConsulta.InvokeRequired)
                     {
 
-                        epcs.Invoke(new Action(() => btnScanEPC.Text = strStart));
-                        epcs.Invoke(new Action(() => btnScanEPC.BackColor = System.Drawing.Color.Green));
-                        epcs.Invoke(new Action(() => btnScanEPC.ForeColor = System.Drawing.Color.White));
+                        buttonConsulta.Invoke(new Action(() => buttonConsulta.Text = strStartConsulta));
+                        buttonConsulta.Invoke(new Action(() => buttonConsulta.BackColor = System.Drawing.Color.Green));
+                        buttonConsulta.Invoke(new Action(() => buttonConsulta.ForeColor = System.Drawing.Color.White));
 
                     }
                     else
                     {
-                        btnScanEPC.Text = strStart;
-                        btnScanEPC.BackColor = System.Drawing.Color.Green;
-                        btnScanEPC.ForeColor = System.Drawing.Color.White;
+                        buttonConsulta.Text = strStartConsulta;
+                        buttonConsulta.BackColor = System.Drawing.Color.Green;
+                        buttonConsulta.ForeColor = System.Drawing.Color.White;
                     }
                 }
             }
             else
             {
+
                 if (uhf.StartInventory())
                 {
-                    if (epcs.InvokeRequired)
-                    {
+                    if (!consulta)
+                        if (buttonConsulta.InvokeRequired)
+                        {
 
-                        epcs.Invoke(new Action(() => btnScanEPC.Text = strStop));
-                        epcs.Invoke(new Action(() => btnScanEPC.BackColor = System.Drawing.Color.Red));
-                        epcs.Invoke(new Action(() => btnScanEPC.ForeColor = System.Drawing.Color.White));
-                    }
+                            btnScanEPC.Invoke(new Action(() => btnScanEPC.Text = strStop));
+                            btnScanEPC.Invoke(new Action(() => btnScanEPC.BackColor = System.Drawing.Color.Red));
+                            btnScanEPC.Invoke(new Action(() => btnScanEPC.ForeColor = System.Drawing.Color.White));
+                        }
+                        else
+                        {
+                            btnScanEPC.Text = strStop;
+                            btnScanEPC.BackColor = System.Drawing.Color.Red;
+                            btnScanEPC.ForeColor = System.Drawing.Color.White;
+                        }
                     else
                     {
-                        btnScanEPC.Text = strStop;
-                        btnScanEPC.BackColor = System.Drawing.Color.Red;
-                        epcs.Invoke(new Action(() => btnScanEPC.ForeColor = System.Drawing.Color.White));
+                        if (buttonConsulta.InvokeRequired)
+                        {
+
+                            buttonConsulta.Invoke(new Action(() => buttonConsulta.Text = strStopConsulta));
+                            buttonConsulta.Invoke(new Action(() => buttonConsulta.BackColor = System.Drawing.Color.Red));
+                            buttonConsulta.Invoke(new Action(() => buttonConsulta.ForeColor = System.Drawing.Color.White));
+                        }
+                        else
+                        {
+                            buttonConsulta.Text = strStopConsulta;
+                            buttonConsulta.BackColor = System.Drawing.Color.Red;
+                            buttonConsulta.ForeColor = System.Drawing.Color.White;
+                        }
                     }
                 }
+
             }
 
         }
@@ -302,12 +344,7 @@ namespace UHFAPP
                 isRuning = true;
                 try
                 {
-                    /* hiloLectura = new Thread(new ThreadStart(delegate { ReadEPC(epcs); }));
-                     hiloLectura.Start();*/
-                    ReadEPC(() =>
-                    {
-
-                    }, this);
+                    new Thread(new ThreadStart(delegate { ReadEPC(); })).Start();
 
                 }
                 catch (Exception e)
@@ -319,75 +356,12 @@ namespace UHFAPP
 
 
 
-        /*private void UpdataEPC(string epc)
-        {
 
-            if (epc == null)
-            {
-                return;
-            }
-
-
-
-            if (!ubicación.Equals("casa"))
-            {
-                try
-                {
-                    if (validaProducto(epc))
-                    {
-
-                        //leerFicha(epc, Int32.Parse(tbLinea.Text), epcs);
-
-
-                        //leerOrden();
-                    }
-                    else
-                    {
-                        caja("Producto no corresponde a la orden", 3000);
-
-                    }
-                }
-                catch (Exception e)
-                {
-
-                    Console.Write(e.Message);
-                }
-            }
-            else
-            {
-                if (validaProducto(epc))
-                {
-                    // leerFicha(epc, Int32.Parse(tbLinea.Text), epcs);
-                    if (epcs.InvokeRequired)
-                    {
-
-                        epcs.Invoke(new Action(() => epcs.Rows.Add(new object[] { "23207930", "25017318", "250173180017", 1, "01/01/2025" })));
-
-                    }
-                    else
-                    {
-
-                        epcs.Rows.Add(new object[] { "23207930", "25017318", "250173180017", 1, "01/01/2025" });
-
-
-                    }
-                    Console.Write(epc);
-                }
-            }
-
-
-
-
-
-        */
-
-
-
-        private bool validaProducto(string epc,Action callback)
+        private void validaProducto(string epc)
         {
 
 
-            bool resultado = false;
+            //bool resultado = false;
             if (!ubicación.Equals("casa"))
             {
                 if (gtin.Trim().Length == 0)
@@ -420,44 +394,20 @@ namespace UHFAPP
                     {
 
                         System.Diagnostics.Debug.WriteLine(e.Message);
-                        resultado = false;
+                        // resultado = false;
                     }
                 }
 
                 if (epc.Substring(3, 13).Equals(gtin))
                 {
-                    resultado = true;
+                    tagsOrden.Add(epc, Int32.Parse(tbLinea.Text));
+                    desglosaEpc(epc, DateTime.Now.ToShortDateString());
 
                 }
                 else
                 {
-                    resultado = false;
-                    /*ry
-                    {
-                        
-                        if (epcs.InvokeRequired)
-                        {
-                            epcs.Invoke(new Action(() => epcs.Rows.Add(new object[] { "", "", "EPC no corresponde a la orden", "", "" })));
-                        }
-                        else
-                        {
-                            epcs.Rows.Add(new object[] { "", "", "EPC no corresponde a la orden", "", "" });
-                        }
-                        epcs.Rows[epcs.Rows.GetLastRow(DataGridViewElementStates.Visible)-1].DefaultCellStyle.BackColor = System.Drawing.Color.Red;
-
-                    }
-                    catch (Exception e) {
-                        int i = 0;
-                    }*/
-                    //  caja("Producto no corresponde a la orden\r "+desglosaEpcErroneo(epc), 3000);
+                    caja("Producto no corresponde a la orden\n" + desglosaEpcErroneo(epc), epc);
                 }
-
-                return resultado;
-            }
-            else
-            {
-
-                return true;
             }
         }
 
@@ -517,7 +467,7 @@ namespace UHFAPP
                 // SoundPlayer simpleSound1 = new SoundPlayer(@url);
                 //simpleSound1.Play();
                 resultado = false;
-                caja("Orden no existe", 3000);
+                caja("Orden no existe", "");
                 textBox1.Text = "";
             }
             return resultado;
@@ -526,7 +476,7 @@ namespace UHFAPP
         private void leerTagsOrdenAmipem()
         {
 
-            var url = apiAmipemBase + "leerTagsOrden" ;
+            var url = apiAmipemBase + "leerTagsOrden";
 
             var request = (HttpWebRequest)WebRequest.Create(url);
 
@@ -553,14 +503,8 @@ namespace UHFAPP
                             Stream stream1 = response.GetResponseStream();
                             StreamReader sr = new StreamReader(stream1);
                             string responseBody = sr.ReadToEnd();
+                            // string respuestaCambiada = responseBody.Replace("+02:00", ".00");
                             GrabacionRespuesta grabacionRespuesta = JsonConvert.DeserializeObject<GrabacionRespuesta>(responseBody);
-                            totalesValidos = grabacionRespuesta.grabaciones.Length;
-
-
-
-                            /*if (grabaciones.Length > 0)
-                                loteActual = 1;*/
-                            //tagsOrden.Clear();
                             epcList.Clear();
                             if (epcs.InvokeRequired)
                             {
@@ -574,47 +518,14 @@ namespace UHFAPP
                             for (int i = 0; i < grabacionRespuesta.grabaciones.Length; i++)
                             {
 
-                                tagsOrden.Add(grabacionRespuesta.grabaciones[i].tag, Int32.Parse(tbLinea.Text));
+                                tagsOrden.Add(grabacionRespuesta.grabaciones[i].tag, grabacionRespuesta.grabaciones[i].linea);
 
-                                desglosaEpc(grabacionRespuesta.grabaciones[i].tag, grabacionRespuesta.grabaciones[grabacionRespuesta.grabaciones.Length - 1].fecha.ToShortDateString() + " " + grabacionRespuesta.grabaciones[grabacionRespuesta.grabaciones.Length - 1].fecha.ToShortTimeString());
+                                desglosaEpc(grabacionRespuesta.grabaciones[i].tag, grabacionRespuesta.grabaciones[grabacionRespuesta.grabaciones.Length - 1].fecha.ToLocalTime().ToString());
 
 
                             }
                             cantidadReal = cantidadTotal - grabacionRespuesta.grabaciones.Length;
-                            /* if (grabaciones.Length == cantidadTotal)
-                             {
-                                 StopReceiveThread();
-                                 StopEPC(true);
-                                 uhf.Close();
-                                 button3_Click(null, null);
-                                 epcList.Clear();
-
-
-
-                                 int lastRowIndex = epcs.Rows.GetLastRow(DataGridViewElementStates.Visible);
-                                 if (epcs.InvokeRequired)
-                                 {
-                                     epcs.Invoke(new Action(() => epcs.Rows.Add(new object[] { "", "", "Orden finalizada", "", "" })));
-
-
-
-                                 }
-                                 else
-                                 {
-                                     epcs.Rows.Add(new object[] { "", "", "Orden finalizada", "", "" });
-
-                                 }
-                                 btnScanEPC.Enabled = false;
-                                 epcs.Rows[lastRowIndex].DefaultCellStyle.BackColor = System.Drawing.Color.Red;
-                                 epcs.Rows[lastRowIndex].DefaultCellStyle.ForeColor = System.Drawing.Color.White;
-                                 btnScanEPC.Enabled = false;
-                                 StopEPC(true);
-                                 StopReceiveThread();
-
-
-                             }*/
-
-
+                            lCantidadTotal.Text = "" + cantidadTotal + "/" + (cantidadTotal - cantidadReal);
 
                         }
                     }
@@ -628,16 +539,25 @@ namespace UHFAPP
 
 
 
-        private void caja(string texto, int duracion)
+        private void caja(string texto, string epc)
         {
-            // Replacing the problematic 'DisplayAlert' with a MessageBox for Windows Forms.  
-            System.Windows.Forms.MessageBox.Show(texto, "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            try
+            {
+                StopEPC(true);
+                textoCaja.Invoke(new Action(() => textoCaja.Text = texto));
+                panelCaja.Invoke(new Action(() => panelCaja.Visible = true));
+            }
+            catch (Exception e)
+            {
+
+                Console.WriteLine(e.Message);
+            }
         }
         private void leerOrdenAmipem()
         {
             if (textBox1.Text.Trim().Equals(""))
             {
-                caja("Orden no puede estar vacia", 3000);
+                caja("Orden no puede estar vacia", "");
 
                 return;
             }
@@ -671,17 +591,8 @@ namespace UHFAPP
                             producto = orden.item;
                             lDescripcion.Text = orden.descripcion;
                             cantidadTotal = orden.cantidad;
-                            try
-                            {
-                                lCantidadTotal.Text = "" + cantidadTotal + "/" + cantidadReal;
-                            }
-                            catch (Exception)
-                            {
-
-                                lCantidadTotal.Text = "" + cantidadTotal + "/0";
-                            }
+                            lCantidadTotal.Text = "" + cantidadTotal + "/0";
                             pReferencia.Visible = true;
-
                             idOrdenAmipem = orden.id;
                             btnScanEPC.Enabled = true;
                             leerTagsOrdenAmipem();
@@ -691,7 +602,7 @@ namespace UHFAPP
             }
             catch (Exception ex)
             {
-                caja("Orden no existe", 3000);
+                caja("Orden no existe", "");
                 textBox1.Text = "";
             }
         }
@@ -742,164 +653,144 @@ namespace UHFAPP
 
 
 
-        private void grabarTagContadorAmipem(string epc, int lote, Action callback, MainForm yo)
+        private void grabarTagContadorAmipem(string epc, int lote, int posicion)
         {
-            BackgroundWorker worker = new BackgroundWorker();
-            worker.DoWork += (obj, e) =>
+
+            try
             {
-
-                try
+                if (tagsOrden.ContainsKey(epc))
                 {
-                    if(!tagsOrden.ContainsKey(epc))
-                    {
-                        
-                    
-
 
                     var url = apiAmipemBase + "grabarTagContador";
-
                     var request = (HttpWebRequest)WebRequest.Create(url);
-
                     request.Method = "POST";
                     request.ContentType = "application/json";
                     request.Accept = "application/json";
                     DateTime fecha = DateTime.Now;
-                    GrabacionDTO grabacionDTO = new GrabacionDTO( textBox1.Text, epc, Int32.Parse(tbLinea.Text.ToString()));
+                    GrabacionDTO grabacionDTO = new GrabacionDTO(textBox1.Text, epc, Int32.Parse(tbLinea.Text.ToString()));
                     string salida = JsonConvert.SerializeObject(grabacionDTO);
                     byte[] data = Encoding.UTF8.GetBytes(salida);
                     request.ContentLength = data.Length;
                     Stream stream = request.GetRequestStream();
                     stream.Write(data, 0, data.Length);
                     stream.Close();
-                        using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
+                    using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
+                    {
+                        Stream stream1 = response.GetResponseStream();
+                        StreamReader sr = new StreamReader(stream1);
+                        string strsb = sr.ReadToEnd();
+                        GrabacionRespuesta grabacionRespuesta = JsonConvert.DeserializeObject<GrabacionRespuesta>(strsb);
+
+
+
+                        //new Thread(new ThreadStart(delegate { grabarTagContadorMozo(epc, Int32.Parse(tbLinea.Text), posicion); })).Start();
+
+                        /* if (!finOrden)
+                          {
+                              if (epcs.InvokeRequired)
+                              {
+                                  epcs.Invoke(new Action(() => epcs.Rows[posicion].DefaultCellStyle.BackColor = System.Drawing.Color.Yellow));
+                                  epcs.Invoke(new Action(() => epcs.Rows[posicion].DefaultCellStyle.ForeColor = System.Drawing.Color.Black));
+                              }
+                              else
+                              {
+                                  epcs.Rows[posicion].DefaultCellStyle.BackColor = System.Drawing.Color.Yellow;
+                                  epcs.Rows[posicion].DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+                              }
+                          }*/
+
+
+                        if (lCantidadTotal.InvokeRequired)
                         {
-                            Stream stream1 = response.GetResponseStream();
-                            StreamReader sr = new StreamReader(stream1);
-                            string strsb = sr.ReadToEnd();
-                            GrabacionRespuesta grabacionRespuesta = JsonConvert.DeserializeObject<GrabacionRespuesta>(strsb);
-                            tagsOrden.Add(epc, Int32.Parse(tbLinea.Text));
-
-                            int ultimograbado = desglosaEpc(epc, grabacionRespuesta.grabaciones[grabacionRespuesta.grabaciones.Length - 1].fecha.ToShortDateString() + " " + grabacionRespuesta.grabaciones[grabacionRespuesta.grabaciones.Length - 1].fecha.ToShortTimeString());
-
-                            grabarTagContadorMozo(epc, Int32.Parse(tbLinea.Text), () =>
-                            {
-
-                            }, this, ultimograbado);
-                            if (!finOrden)
-                                if (epcs.InvokeRequired)
-                                {
-                                    epcs.Invoke(new Action(() => epcs.Rows[ultimograbado].DefaultCellStyle.BackColor = System.Drawing.Color.Yellow));
-                                    epcs.Invoke(new Action(() => epcs.Rows[ultimograbado].DefaultCellStyle.ForeColor = System.Drawing.Color.Black));
-                                }
-                                else
-                                {
-                                    epcs.Rows[ultimograbado].DefaultCellStyle.BackColor = System.Drawing.Color.Yellow;
-                                    epcs.Rows[ultimograbado].DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-                                }
-
-                            cantidadReal--;
-                            if (lCantidadTotal.InvokeRequired)
-                            {
-                                epcs.Invoke(new Action(() => lCantidadTotal.Text = "" + cantidadTotal + "/" + (cantidadTotal - grabacionRespuesta.grabaciones.Length)));
-                            }
-                            else
-                            {
-                                lCantidadTotal.Text = "" + cantidadTotal + "/" + (cantidadTotal - grabacionRespuesta.grabaciones.Length);
-                            }
-
-
-
+                            lCantidadTotal.Invoke(new Action(() => lCantidadTotal.Text = "" + cantidadTotal + "/" + (cantidadTotal - grabacionRespuesta.grabaciones.Length)));
+                        }
+                        else
+                        {
+                            lCantidadTotal.Text = "" + cantidadTotal + "/" + (cantidadTotal - grabacionRespuesta.grabaciones.Length);
                         }
 
+
+
                     }
-                }
-                catch (Exception e1)
-                {
-                    Console.WriteLine(e1.Message);
-
 
                 }
-                //uhf.StartInventory();
+            }
+            catch (Exception e1)
+            {
+                Console.WriteLine(e1.Message);
 
-            };
-            worker.RunWorkerAsync();
+
+            }
+            //uhf.StartInventory();
+
         }
 
 
-        private bool grabarTagContadorMozo(string epc, int lote, Action callback, MainForm yo, int posicion)
+        private bool grabarTagContadorMozo(string epc, int lote, int posicion)
         {
 
-            try
-            {
-                BackgroundWorker worker = new BackgroundWorker();
-                worker.DoWork += (obj, e) =>
-                {
-                    //Thread.Sleep(3000);
-                    if (tagsOrden.Count >= cantidadTotal)
-                    {
-                        StopEPC(true);
-                        StopReceiveThread();
-
-
-                    }
-                    // Thread.Sleep(2000);
-
-                    epcs.Rows[posicion - 1].DefaultCellStyle.BackColor = System.Drawing.Color.LightGreen;
-                    epcs.Rows[posicion - 1].DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-                    //StartReceiveThread();
-                };
-                worker.RunWorkerAsync();
-            }
-            catch (Exception e)
-            {
-
-                Console.Write(e.Message);
-            }
-            return true;
-
-            /* if (!ubicación.Equals("casa"))
+            /* try
              {
 
-                 //epcs.Rows[epcs.Rows.Count - 2].DefaultCellStyle.BackColor = System.Drawing.Color.Red;
-                 SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\chimes.wav");
-                 simpleSound.Play();
-
-                 var url = apiMozoBase + "api/mozo/apiArco/v2.0/companies(" + cliente + ")/registrarSalidasRFID?";
-
-                 var request = (HttpWebRequest)WebRequest.Create(url);
-                 string username = this.usuario;
-                 string password = this.password;
-                 string svcCredentials = Convert.ToBase64String(ASCIIEncoding.ASCII.GetBytes(username + ":" + password));
-                 request.Headers.Add("Authorization", "Basic " + svcCredentials);
-                 request.Method = "POST";
-                 request.ContentType = "application/json";
-                 request.Accept = "*";
-                 try
+                 if (tagsOrden.Count >= cantidadTotal)
                  {
-                     GrabacionMozo grabacion = new GrabacionMozo(epc, textBox1.Text, 10000, 1);
-                     // grabacion.lecturaRFID = epc.Replace("100701","555666");
-                     string salida = JsonConvert.SerializeObject(grabacion);
-                     byte[] data = Encoding.UTF8.GetBytes(salida);
-                     request.ContentLength = data.Length;
-                     Stream stream = request.GetRequestStream();
-                     stream.Write(data, 0, data.Length);
-                     stream.Flush();
-                     stream.Close();
-                     using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
-                     {
-                         Stream stream1 = response.GetResponseStream();
-                         StreamReader sr = new StreamReader(stream1);
-                         string strsb = sr.ReadToEnd();
-                         GrabacionMozo ordenRetorno = JsonConvert.DeserializeObject<GrabacionMozo>(strsb);
+                     StopEPC(true);
+                     StopReceiveThread();
 
-                         int lastRowIndex = epcs.Rows.GetLastRow(DataGridViewElementStates.Visible);
-                         if (lastRowIndex >= 0)
+
+                 }
+
+
+                 epcs.Rows[posicion - 1].DefaultCellStyle.BackColor = System.Drawing.Color.LightGreen;
+                 epcs.Rows[posicion - 1].DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+
+             }
+             catch (Exception e)
+             {
+
+                 Console.Write(e.Message);
+             }
+             return true;*/
+            bool resultado = false;
+            if (ubicación.Equals("mozo"))
+            {
+
+
+
+                var url = apiMozoBase + "api/mozo/apiArco/v2.0/companies(" + cliente + ")/registrarSalidasRFID?";
+
+                var request = (HttpWebRequest)WebRequest.Create(url);
+                string username = this.usuario;
+                string password = this.password;
+                string svcCredentials = Convert.ToBase64String(ASCIIEncoding.ASCII.GetBytes(username + ":" + password));
+                request.Headers.Add("Authorization", "Basic " + svcCredentials);
+                request.Method = "POST";
+                request.ContentType = "application/json";
+                request.Accept = "*";
+                try
+                {
+                    GrabacionMozo grabacion = new GrabacionMozo(epc, textBox1.Text, 10000, 1);
+                    string salida = JsonConvert.SerializeObject(grabacion);
+                    byte[] data = Encoding.UTF8.GetBytes(salida);
+                    request.ContentLength = data.Length;
+                    Stream stream = request.GetRequestStream();
+                    stream.Write(data, 0, data.Length);
+                    stream.Flush();
+                    stream.Close();
+                    using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
+                    {
+                        Stream stream1 = response.GetResponseStream();
+                        StreamReader sr = new StreamReader(stream1);
+                        string strsb = sr.ReadToEnd();
+                        GrabacionMozo ordenRetorno = JsonConvert.DeserializeObject<GrabacionMozo>(strsb);
+
+                        int lastRowIndex = epcs.Rows.GetLastRow(DataGridViewElementStates.Visible);
+                        /* if (lastRowIndex >= 0)
                          {
-                             // Fix for CS0103: Ensure DefaultCellStyle is accessed correctly
-                             epcs.Rows[lastRowIndex].DefaultCellStyle.BackColor = System.Drawing.Color.Yellow;
+                             epcs.Rows[lastRowIndex].DefaultCellStyle.BackColor = System.Drawing.Color.LightGreen;
                              epcs.Rows[lastRowIndex].DefaultCellStyle.BackColor = System.Drawing.Color.Black;
-                         }
-                         if (tagsOrden.Count == cantidadTotal)
+                         }*/
+                        /* if (tagsOrden.Count == cantidadTotal)
                          {
                              if (epcs.InvokeRequired)
                              {
@@ -916,28 +807,20 @@ namespace UHFAPP
 
                              StopEPC(true);
                              StopReceiveThread();
-                         }
-                         resultado = true;
-                     }
-                 }
-                 catch (Exception e)
-                 {
-                     borraUltimaGrabacion(epc);
-                     //borrar ultimo registro
+                         }*/
+                        resultado = true;
+                    }
+                }
+                catch (Exception e)
+                {
+                    borraUltimaGrabacion(epc);
+                    //borrar ultimo registro
 
-                     resultado = false;
-                 }
+                    resultado = false;
+                }
 
-             }
-             else
-             {
-                 int lastRowIndex = epcs.Rows.GetLastRow(DataGridViewElementStates.Visible);
-                 epcs.Rows[lastRowIndex].DefaultCellStyle.BackColor = System.Drawing.Color.Yellow;
-                 epcs.Rows[lastRowIndex].DefaultCellStyle.BackColor = System.Drawing.Color.Black;
-             }
-
-             return resultado;*/
-
+            }
+            return resultado;
         }
 
         private void borraUltimaGrabacion(string epc)
@@ -966,7 +849,7 @@ namespace UHFAPP
             }
             catch (Exception ex)
             {
-                caja("Orden no existe", 3000);
+                caja("Orden no existe", "");
                 textBox1.Text = "";
             }
         }
@@ -985,39 +868,69 @@ namespace UHFAPP
             this.MaximumSize = SystemInformation.PrimaryMonitorMaximizedWindowSize;
             this.WindowState = FormWindowState.Maximized;
         }
-        private void ReadEPC(Action callback, MainForm yo)
+        private void ReadEPC()
         {
             try
             {
-                BackgroundWorker worker = new BackgroundWorker();
-                worker.DoWork += (obj, e) =>
+
+                int i = 0;
+                while (isRuning)
                 {
-                    int i = 0;
-                    while (isRuning)
-                    {
-
-
-
-                        if (tagsOrden.Count <= cantidadTotal + 1)
+                    UHFTAGInfo info = uhf.ReadTagFromBuffer();
+                    if (!ubicación.Equals("casa"))
+                        if (!consulta)
                         {
-                            UHFTAGInfo info = uhf.ReadTagFromBuffer();
-
-                            if (info != null && !tagsOrden.ContainsKey(info.Epc))
+                            if (tagsOrden.Count <= cantidadTotal + 1)
                             {
-                                // caja(info.Epc, 1);
-                                //StopReceiveThread();
-                                validaProducto(info.Epc,() => { });
-                                    grabarTagContadorAmipem(info.Epc, Int32.Parse(tbLinea.Text), () =>
+                                if (info != null && !tagsOrden.ContainsKey(info.Epc))
+                                {
+                                    new Thread(new ThreadStart(delegate { validaProducto(info.Epc); })).Start();
+                                }
+                            }
+                        }
+                        else
+                        {
+                            if (info != null && !tagsComprobacion.ContainsKey(info.Epc))
+                            {
+                                tagsComprobacion.Add(info.Epc, 1);
+                                new Thread(new ThreadStart(delegate { desglosaEpc(info.Epc); })).Start();
+                            }
+                        }
+                    else
+                    {
+                        if (info != null && consulta && !tagsComprobacion.ContainsKey(info.Epc))
+                        {
+                            tagsComprobacion.Add(info.Epc, 1);
+                            if (dataGridView1.InvokeRequired)
+                            {
+                                dataGridView1.Invoke(new Action(() => dataGridView1.Rows.Add(new object[] { "23207930", "25017318", "250173180017", 1, "01/01/2025" })));
+                            }
+                            else
+                            {
+                                dataGridView1.Rows.Add(new object[] { "23207930", "25017318", "250173180017", 1, "01/01/2025" });
+                            }
+                        }
+                        if (info != null && !consulta && !tagsOrden.ContainsKey(info.Epc))
+                        {
+                            if (!consulta)
+                            {
+                                if (tagsOrden.Count <= cantidadTotal + 1)
+                                {
+                                    if (info != null && !tagsOrden.ContainsKey(info.Epc))
                                     {
-
-                                    }, this);
+                                        new Thread(new ThreadStart(delegate { validaProducto(info.Epc); })).Start();
+                                    }
+                                }
                             }
 
+
+
                         }
-                        //Thread.Sleep(200);
                     }
-                };
-                worker.RunWorkerAsync();
+
+                }
+
+
             }
             catch (Exception ex)
             {
@@ -1025,17 +938,62 @@ namespace UHFAPP
             }
         }
 
+        private void desglosaEpc(string epc)
+        {
+            int i = 0;
+            try
+            {
+                var url = apiMozoBase + "api/mozo/apiArco/v2.0/companies(0c0574f1-f098-ed11-965c-6045bd89ef6b)/desglosarRFIDs";
+
+
+
+                var request = (HttpWebRequest)WebRequest.Create(url);
+                string username = this.usuario;
+
+                string password = this.password;
+                string svcCredentials = Convert.ToBase64String(ASCIIEncoding.ASCII.GetBytes(username + ":" + password));
+                request.Headers.Add("Authorization", "Basic " + svcCredentials);
+                request.Method = "POST";
+                request.ContentType = "application/json";
+                request.Accept = "*/*";
+                string salida = "{'lecturaRfid':'" + epc + "'}";
+                byte[] data = Encoding.UTF8.GetBytes(salida);
+                request.ContentLength = data.Length;
+                Stream stream = request.GetRequestStream();
+                stream.Write(data, 0, data.Length);
+                stream.Close();
+
+                using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
+                {
+                    Stream stream1 = response.GetResponseStream();
+                    StreamReader sr = new StreamReader(stream1);
+                    string strsb = sr.ReadToEnd();
+                    strsb = strsb.Replace("@odata.context", "dataContext");
+                    strsb = strsb.Replace("@odata.etag", "dataTag");
+                    Desglose desglose = JsonConvert.DeserializeObject<Desglose>(strsb);
+                    if (dataGridView1.InvokeRequired)
+                    {
+                        dataGridView1.Invoke(new Action(() => dataGridView1.Rows.Add(new object[] { desglose.noProducto, desglose.noLote, desglose.noSerie })));
+                    }
+                    else
+                    {
+                        dataGridView1.Rows.Add(new object[] { desglose.noProducto, desglose.noLote, desglose.noSerie });
+                    }
+                    cantidadComprobacion.Invoke(new Action(() => cantidadComprobacion.Text = "Cantidad: " + tagsComprobacion.Count));
+                }
+            }
+            catch (Exception e)
+            {
+
+                Console.WriteLine(e.Message);
+            }
+        }
+
         private int desglosaEpc(string epc, string fecha)
         {
-            //tagsOrden.Add(epc, Int32.Parse(tbLinea.Text));
-
-
             int ultimograbado = 0;
             if (ubicación.Equals("casa"))
             {
-
-
-
 
                 if (epcs.InvokeRequired)
                 {
@@ -1045,27 +1003,18 @@ namespace UHFAPP
                 }
                 else
                 {
-
-                    //epcs.Rows.Add(new object[] { "23207930", "25017318", "250173180017", 1, "01/01/2025" });
                     epcs.Rows.Add(new object[] { "23207930", "25017318", "250173180017", 1, "01/01/2025" });
                     ultimograbado = epcs.Rows.GetLastRow(DataGridViewElementStates.Visible);
                 }
-                epcs.Rows[ultimograbado - 1].DefaultCellStyle.BackColor = System.Drawing.Color.Red;
-
-
+                // epcs.Rows[ultimograbado - 1].DefaultCellStyle.BackColor = System.Drawing.Color.Red;
             }
             else
             {
-
                 try
                 {
                     var url = apiMozoBase + "api/mozo/apiArco/v2.0/companies(0c0574f1-f098-ed11-965c-6045bd89ef6b)/desglosarRFIDs";
-
-
-
                     var request = (HttpWebRequest)WebRequest.Create(url);
                     string username = this.usuario;
-
                     string password = this.password;
                     string svcCredentials = Convert.ToBase64String(ASCIIEncoding.ASCII.GetBytes(username + ":" + password));
                     request.Headers.Add("Authorization", "Basic " + svcCredentials);
@@ -1078,7 +1027,6 @@ namespace UHFAPP
                     Stream stream = request.GetRequestStream();
                     stream.Write(data, 0, data.Length);
                     stream.Close();
-
                     using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
                     {
                         Stream stream1 = response.GetResponseStream();
@@ -1087,42 +1035,47 @@ namespace UHFAPP
                         strsb = strsb.Replace("@odata.context", "dataContext");
                         strsb = strsb.Replace("@odata.etag", "dataTag");
                         Desglose desglose = JsonConvert.DeserializeObject<Desglose>(strsb);
-                        //Thread.Sleep(500);
                         if (epcs.InvokeRequired)
                         {
-
-
                             epcs.Invoke(new Action(() => epcs.Rows.Add(new object[] { desglose.noProducto, desglose.noLote, desglose.noSerie, Int32.Parse(tbLinea.Text), fecha })));
                         }
                         else
                         {
-
-
-
                             epcs.Rows.Add(new object[] { desglose.noProducto, desglose.noLote, desglose.noSerie, Int32.Parse(tbLinea.Text), fecha });
                         }
-                        ultimograbado = epcs.Rows.GetLastRow(DataGridViewElementStates.Visible);
-                        epcs.Rows[ultimograbado - 1].DefaultCellStyle.BackColor = System.Drawing.Color.LightGreen;
-                        epcs.Rows[ultimograbado - 1].DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+
+                        if (ubicación.Equals("mozo"))
+                            new Thread(new ThreadStart(delegate { grabarTagContadorMozo(epc, Int32.Parse(tbLinea.Text), ultimograbado); })).Start();
+                        new Thread(new ThreadStart(delegate { grabarTagContadorAmipem(epc, Int32.Parse(tbLinea.Text), ultimograbado); })).Start();
+
+
                         if (tagsOrden.Count >= cantidadTotal)
                         {
-                            finOrden = true;
-                            if (epcs.InvokeRequired)
+
+                            int lastRowIndex = epcs.Rows.GetLastRow(DataGridViewElementStates.Visible);
+                            if (!finOrden)
                             {
-
-                                epcs.Invoke(new Action(() => epcs.Rows.Add(new object[] { "", "", "Orden finalizada", "", "" })));
-                                epcs.Rows[epcs.Rows.GetLastRow(DataGridViewElementStates.Visible) - 1].DefaultCellStyle.BackColor = System.Drawing.Color.Red;
-
+                                finOrden = true;
+                                if (epcs.InvokeRequired)
+                                {
+                                    epcs.Invoke(new Action(() => epcs.Rows.Add(new object[] { "", "", "Orden finalizada", "", "" })));
+                                }
+                                else
+                                {
+                                    epcs.Rows.Add(new object[] { "", "", "Orden finalizada", "", "" });
+                                }
+                                epcs.Rows[lastRowIndex].DefaultCellStyle.BackColor = System.Drawing.Color.Red;
+                                epcs.Rows[lastRowIndex].DefaultCellStyle.ForeColor = System.Drawing.Color.White;
                             }
-                            else
-                            {
-                                epcs.Invoke(new Action(() => epcs.Rows.Add(new object[] { "", "", "Orden finalizada", "", "" })));
-                                epcs.Rows[epcs.Rows.GetLastRow(DataGridViewElementStates.Visible) - 1].DefaultCellStyle.BackColor = System.Drawing.Color.Red;
-                            }
-
-                            StopEPC(true);
                             StopReceiveThread();
-                            // leerTagsOrdenAmipem();
+                            StopEPC(true);
+                            // uhf.Close();
+                            // button3_Click(null, null);
+                            epcList.Clear();
+
+                            btnScanEPC.Invoke(new Action(() => btnScanEPC.Enabled = false));
+                            btnScanEPC.Invoke(new Action(() => btnScanEPC.Text = strStart));
+
                         }
 
                     }
@@ -1132,16 +1085,9 @@ namespace UHFAPP
                     System.Diagnostics.Debug.WriteLine(e.Message);
 
                 }
-
-
-
             }
-
             return ultimograbado;
         }
-
-
-
         private string desglosaEpcErroneo(string epc)
         {
             //tagsOrden.Add(epc, Int32.Parse(tbLinea.Text));
@@ -1227,7 +1173,7 @@ namespace UHFAPP
         }
         private void button3_Click(object sender, EventArgs e)
         {
-
+            consulta = false;
 
             if (btnScanEPC.Text == strStop)
             {
@@ -1261,7 +1207,7 @@ namespace UHFAPP
             loteActual = 1;
             tbLinea.Enabled = true;
             tbLotes.Enabled = true;
-
+            consulta = false;
 
 
 
@@ -1274,16 +1220,14 @@ namespace UHFAPP
 
                 try
                 {
-                   
+
                     if (leerOrden())
                         grabarOrdenAmipem();
                     leerOrdenAmipem();
                     if (tagsOrden.Count == cantidadTotal)
-                    {
                         btnScanEPC.Enabled = false;
-                    }
-
-
+                    else
+                        btnScanEPC.Enabled = true;
                 }
                 catch (Exception e1)
                 {
@@ -1325,83 +1269,6 @@ namespace UHFAPP
             }
         }
 
-        private void actualizaLotes()
-        {
-            if (textBox1.Text.Trim().Equals(""))
-            {
-                caja("Orden no existe", 3000);
-
-                return;
-            }
-            var url = apiAmipemBase + "leerOrden/" + textBox1.Text;
-
-            var request = (HttpWebRequest)WebRequest.Create(url);
-
-            request.Method = "POST";
-            request.ContentType = "application/json";
-            request.Accept = "application/json";
-            try
-            {
-                using (WebResponse response = request.GetResponse())
-                {
-                    using (Stream strReader = response.GetResponseStream())
-                    {
-                        if (strReader == null) return;
-                        using (StreamReader objReader = new StreamReader(strReader))
-                        {
-
-                            string responseBody = objReader.ReadToEnd();
-                            Orden orden = JsonConvert.DeserializeObject<Orden>(responseBody);
-
-
-                            var url1 = apiAmipemBase + "grabarOrden/";
-
-                            var request1 = (HttpWebRequest)WebRequest.Create(url1);
-
-                            request1.Method = "POST";
-                            request1.ContentType = "application/json";
-                            request1.Accept = "application/json";
-                            try
-                            {
-                                // Orden orden = new Orden(idOrdenAmipem, texorden.lotes = Int32.Parse(tbLotes.Text);
-                                string salida = JsonConvert.SerializeObject(orden);
-                                byte[] data = Encoding.UTF8.GetBytes(salida);
-                                request1.ContentLength = data.Length;
-                                Stream stream = request1.GetRequestStream();
-                                stream.Write(data, 0, data.Length);
-                                stream.Close();
-                                using (HttpWebResponse response1 = request1.GetResponse() as HttpWebResponse)
-                                {
-                                    //Leer el resultado de la llamada
-                                    Stream stream1 = response1.GetResponseStream();
-                                    StreamReader sr = new StreamReader(stream1);
-                                    string strsb = sr.ReadToEnd();
-                                    Orden ordenRetorno = JsonConvert.DeserializeObject<Orden>(strsb);
-
-
-                                }
-                            }
-                            catch (Exception e)
-                            {
-                                caja("Lotes no grabados", 3000);
-
-                            }
-
-
-
-
-
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                caja("Orden no existe", 3000);
-                textBox1.Text = "";
-            }
-
-        }
 
         private void MainForm_ResizeEnd(object sender, EventArgs e)
         {
@@ -1414,44 +1281,46 @@ namespace UHFAPP
             epcs.Height = this.Height - epcs.Location.Y - 100;
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+
+
+        private void buttonConsulta_Click(object sender, EventArgs e)
         {
+            consulta = true;
+
+
+            if (buttonConsulta.Text == strStopConsulta)
+            {
+                StopReceiveThread();
+                StopEPC(true);
+
+
+
+            }
+            else
+            {
+                cantidadComprobacion.Text = "Cantidad: 0";
+                dataGridView1.Rows.Clear();
+                tagsComprobacion.Clear();
+                StartReceiveThread();
+                StopEPC(false);
+
+            }
 
         }
 
-        private void pReferencia_Paint(object sender, PaintEventArgs e)
+        private void botonCaja_Click(object sender, EventArgs e)
         {
+            panelCaja.Visible = false;
+            try
+            {
+                tagsOrden.Remove(epcErroneo);
+            }
+            catch (Exception e1)
+            {
 
-        }
-
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void lUnidades_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void totalesOrden_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void epcs_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void pLotes_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel9_Paint(object sender, PaintEventArgs e)
-        {
-
+                Console.WriteLine(e1.Message);
+            }
+            StopEPC(false);
         }
     }
 }

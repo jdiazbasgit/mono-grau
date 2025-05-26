@@ -1642,3 +1642,1414 @@ Application_ThreadException:Esta operación no se puede realizar cuando se está c
    en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
    en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
 -----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 05:47:22
+IsTerminating : True
+Microsoft.VisualStudio.Debugger.Runtime.CrossThreadMessagingException: Se produjo una excepción 'Microsoft.VisualStudio.Debugger.Runtime.CrossThreadMessagingException'
+   en Microsoft.VisualStudio.Debugger.Runtime.Main.ThrowCrossThreadMessageException(String formatString)
+   en System.Windows.Forms.SafeNativeMethods.GetWindowTextLength(HandleRef hWnd)
+   en System.Windows.Forms.Control.get_WindowText()
+   en System.Windows.Forms.TextBoxBase.get_WindowText()
+   en System.Windows.Forms.Control.get_Text()
+   en System.Windows.Forms.TextBox.get_Text()
+   en UHFAPP.MainForm.<>c__DisplayClass85_0.<desglosaEpc>b__3() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 1059
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+ExitApp
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 05:49:33
+IsTerminating : True
+System.FormatException: La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Int32.Parse(String s)
+   en UHFAPP.MainForm.<>c__DisplayClass85_0.<desglosaEpc>b__3()
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+ExitApp
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 05:49:34
+IsTerminating : True
+System.FormatException: La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Int32.Parse(String s)
+   en UHFAPP.MainForm.<>c__DisplayClass85_0.<desglosaEpc>b__3()
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+ExitApp
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:18
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:18
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:18
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:19
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:19
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:19
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:20
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:20
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:20
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:21
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:21
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:21
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:22
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:22
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:22
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:23
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:23
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:23
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:23
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:24
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:24
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:24
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:25
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:25
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:25
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:26
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:26
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:26
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:27
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:27
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:27
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:28
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:28
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:28
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:28
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:29
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:29
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:29
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:30
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:30
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:30
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:31
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:31
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:31
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:32
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:32
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:32
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:53
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:53
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:54
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:54
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:54
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:55
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:55
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:57
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:57
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:58
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:58
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:58
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:59
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:59
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:59
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:03:59
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:04:00
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:04:00
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:04:00
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:04:01
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:04:01
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:04:01
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:04:27
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:04:29
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:04:30
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:04:32
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:04:33
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:04:50
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:04:51
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:04:53
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:04:55
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:05:30
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-22 07:05:32
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textoCaja' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en UHFAPP.MainForm.caja(String texto) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 539
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 404
+   en UHFAPP.MainForm.<>c__DisplayClass83_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 873
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+ExitApp
+ExitApp
+ExitApp

@@ -188,6 +188,7 @@
     <Compile Include="utils\MessageBoxEx.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="utils\Tag.cs" />
     <Compile Include="utils\Validacion.cs" />
     <Compile Include="utils\Value.cs" />
     <EmbeddedResource Include="BaseForm.resx">
