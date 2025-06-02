@@ -3053,3 +3053,36 @@ System.InvalidOperationException: Operación no válida a través de subprocesos: S
 ExitApp
 ExitApp
 ExitApp
+-----------------------begin--------------------------
+Application_ThreadException:No es posible conectar con el servidor remoto
+   en System.Net.HttpWebRequest.GetRequestStream(TransportContext& context)
+   en System.Net.HttpWebRequest.GetRequestStream()
+   en UHFAPP.MainForm.leerOrdenAmipem() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 575
+   en UHFAPP.MainForm.button2_Click(Object sender, EventArgs e) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 1222
+   en System.Windows.Forms.Control.OnClick(EventArgs e)
+   en System.Windows.Forms.Button.OnClick(EventArgs e)
+   en System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+   en System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   en System.Windows.Forms.Button.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-05-30 01:18:38
+IsTerminating : True
+System.ArgumentException: Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 348
+   en UHFAPP.MainForm.<>c__DisplayClass86_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 768
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+ExitApp
