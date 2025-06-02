@@ -1,8 +1,5 @@
 package com.amipem.mono.controladores;
 
-import java.util.ArrayList;
-import java.sql.Date;
-import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
 import java.util.GregorianCalendar;
 import java.util.List;
@@ -14,13 +11,17 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 import com.amipem.mono.MonoApplication;
 import com.amipem.mono.clases.Contador;
 import com.amipem.mono.clases.GrabacionDTO;
+import com.amipem.mono.clases.LogInput;
 import com.amipem.mono.clases.RespuestaContador;
 import com.amipem.mono.entidades.Grabacion;
+import com.amipem.mono.entidades.Log;
 import com.amipem.mono.entidades.Orden;
 import com.amipem.mono.repositorios.GrabacionCRUDRepository;
+import com.amipem.mono.repositorios.LogCRUDRepository;
 import com.amipem.mono.repositorios.OrdenCRUDRepository;
 
 import lombok.Data;
@@ -37,9 +38,23 @@ public class GrabacionRestController {
 
 	@Autowired
 	private OrdenCRUDRepository ordenCrudRepository;
+	
+
+	@Autowired
+	private LogCRUDRepository logCrudRepository;
+
 
     GrabacionRestController(MonoApplication monoApplication) {
         this.monoApplication = monoApplication;
+    }
+    
+    
+    @PostMapping("log")
+    public void log(@RequestBody LogInput logInput) {
+    	
+    	Log log=  new Log(0,logInput.getTexto(),new GregorianCalendar());
+    	getLogCrudRepository().save(log);
+    	
     }
 
 	@PostMapping("leerContador")
@@ -51,7 +66,10 @@ public class GrabacionRestController {
 	@PostMapping("leerOrden")
 	public Orden getOrden(@RequestBody Entrada entrada) {
 
-		return getOrdenCrudRepository().findByCodigo(entrada.getCodigo());
+		Orden orden=getOrdenCrudRepository().findByCodigo(entrada.getCodigo());
+		if(orden==null)
+			return new Orden();
+		return orden;
 	}
 
 	@PostMapping("leerTagsOrden")
@@ -67,13 +85,18 @@ public class GrabacionRestController {
 	@PostMapping("grabarTagContador")
 	public RespuestaContador grabaTag(@RequestBody GrabacionDTO grabacionDTO) {
 		Orden orden = getOrdenCrudRepository().findByCodigo(grabacionDTO.getOrden());
-
+;
 		// if(grabaciones.size()>=orden.getCantidad()) {
 		List<Grabacion> grabaciones = getGrabacionCrudRepository().getTagsByOrden(grabacionDTO.getOrden());
 		if (grabaciones.size() < orden.getCantidad()) {
 			Grabacion grabacion = new Grabacion(0, orden, grabacionDTO.getTag(), grabacionDTO.getLinea(),
 					OffsetDateTime.now());
-			getGrabacionCrudRepository().save(grabacion);
+			try {
+				getGrabacionCrudRepository().save(grabacion);
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+			
 			if (grabacion.getId() > 0)
 				grabaciones.add(grabacion);
 		}
@@ -85,7 +108,12 @@ public class GrabacionRestController {
 	@PostMapping("grabarOrden")
 	public Orden grabaOrden(@RequestBody Orden orden) {
 		orden.setId(0);
-		return getOrdenCrudRepository().save(orden);
+		try {
+			orden=getOrdenCrudRepository().save(orden);
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return orden;
 	}
 	
 	@PostMapping("borraUltimaGrabacion/{epc}")
