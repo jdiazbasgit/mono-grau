@@ -75,6 +75,8 @@ namespace UHFAPP
         private string session;
         private string potencia;
         private string tagFocus;
+        private string buzzer;
+        private bool sinValidar;
         private string idProducto;
         SortedDictionary<string, int> tagsOrden = new SortedDictionary<string, int>();
         SortedDictionary<string, int> tagsComprobacion = new SortedDictionary<string, int>();
@@ -106,7 +108,7 @@ namespace UHFAPP
             }
             catch (Exception ex)
             {
-                log(ex.Message);
+                log("OnDisconectCallback:" + ex.Message);
             }
 
         }
@@ -129,19 +131,31 @@ namespace UHFAPP
             //Pass the file path and file name to the StreamReader constructor
             StreamReader sr = new StreamReader(Environment.CurrentDirectory + "\\" + archivo);
             //Read the first line of text
-            apiAmipemBase = sr.ReadLine();
-            apiMozoBase = sr.ReadLine();
-            cliente = sr.ReadLine();
-            usuario = sr.ReadLine();
-            password = sr.ReadLine();
-            ubicación = sr.ReadLine();
-            potencia = sr.ReadLine();
-            session = sr.ReadLine();
-            tagFocus = sr.ReadLine();
+            apiAmipemBase = leerParametro(sr);
+            apiMozoBase = leerParametro(sr);
+            cliente = leerParametro(sr);
+            usuario = leerParametro(sr);
+            password = leerParametro(sr);
+            ubicación = leerParametro(sr);
+            potencia = leerParametro(sr);
+            session = leerParametro(sr);
+            tagFocus = leerParametro(sr);
+            buzzer = leerParametro(sr);
+            sinValidar = Boolean.Parse(leerParametro(sr));
             sr.Close();
             Console.ReadLine();
             //loteActual++;
-           
+
+
+        }
+        private string leerParametro(StreamReader sr)
+        {
+            string lectura = sr.ReadLine();
+            while (lectura.StartsWith("#"))
+            {
+                lectura = sr.ReadLine();
+            }
+            return lectura;
 
         }
 
@@ -182,6 +196,7 @@ namespace UHFAPP
             uhf.SetPower(1, Byte.Parse(potencia));
             uhf.SetTagfocus(Byte.Parse(tagFocus));
             uhf.SetGen2(0, 0, 0, 1, 4, 0, 15, 1, 2, 1, 1, 1, 0, 3);
+            uhf.UHFSetBuzzer(Byte.Parse(buzzer));
 
         }
 
@@ -303,7 +318,7 @@ namespace UHFAPP
                 }
                 catch (Exception e)
                 {
-                    log(e.Message);
+                    log("StartReceiveThread:" + e.Message);
                 }
             }
         }
@@ -313,6 +328,7 @@ namespace UHFAPP
 
         private void validaProducto(string epc)
         {
+
             if (!ubicación.Equals("casa"))
             {
                 if (gtin.Trim().Length == 0)
@@ -338,27 +354,42 @@ namespace UHFAPP
                             strsb = strsb.Replace("@odata.context", "dataContext");
                             strsb = strsb.Replace("@odata.etag", "dataTag");
                             Gtin gtinWeb = JsonConvert.DeserializeObject<Gtin>(strsb);
-                            gtin = gtinWeb.value[0].gtin;
+                            if (gtinWeb.value.Length > 0)
+                                gtin = gtinWeb.value[0].gtin;
                         }
                     }
                     catch (Exception e)
                     {
-                        log(e.Message);
-                        caja("Problemas de conexion con la base de datos, contacte con el administrador", "");
+                        log("validaProducto:" + e.Message);
+                        //caja("Problemas de conexion con la base de datos, contacte con el administrador", "");
                     }
                 }
 
-                if (epc.Substring(3, 13).Equals(gtin))
+
+                if (epc.Substring(3, 13).Equals(gtin) || sinValidar)
                 {
-                    tagsOrden.Add(epc, Int32.Parse(tbLinea.Text));
-                    DateTime fecha = DateTime.Now;
-                    desglosaEpc(epc, fecha.ToShortDateString() + " " + fecha.ToLongTimeString());
+                    try
+                    {
+                        tagsOrden.Add(epc, Int32.Parse(tbLinea.Text));
+                        DateTime fecha = DateTime.Now;
+                        desglosaEpc(epc, fecha.ToShortDateString() + " " + fecha.ToLongTimeString(), true);
+                    }
+                    catch (Exception e)
+                    {
+
+                        log("validaProducto:" + e.Message);
+                    }
 
                 }
                 else
                 {
                     caja("Producto no corresponde a la orden\n" + desglosaEpcErroneo(epc), epc);
+                    StopEPC(true);
+                    btnScanEPC.Text = strStart;
+                    btnScanEPC.BackColor = System.Drawing.Color.Green;
+                    btnScanEPC.ForeColor = System.Drawing.Color.White;
                 }
+
             }
         }
 
@@ -415,8 +446,8 @@ namespace UHFAPP
             }
             catch (Exception ex)
             {
-                log(ex.Message);
-                caja("Problemas de conexion con la base de datos, contacte con el administrador", "");
+                log("leerOrden:" + ex.Message);
+                //caja("Problemas de conexion con la base de datos, contacte con el administrador", "");
                 resultado = false;
                 textBox1.Text = "";
             }
@@ -461,18 +492,20 @@ namespace UHFAPP
                             {
                                 epcs.Rows.Clear();
                             }
-
+                            cantidadReal = 0;
                             for (int i = 0; i < grabacionRespuesta.grabaciones.Length; i++)
                             {
+                                if (!tagsOrden.ContainsKey(grabacionRespuesta.grabaciones[i].tag))
+                                    tagsOrden.Add(grabacionRespuesta.grabaciones[i].tag, grabacionRespuesta.grabaciones[i].linea);
 
-                                tagsOrden.Add(grabacionRespuesta.grabaciones[i].tag, grabacionRespuesta.grabaciones[i].linea);
-
-                                desglosaEpc(grabacionRespuesta.grabaciones[i].tag, grabacionRespuesta.grabaciones[grabacionRespuesta.grabaciones.Length - 1].fecha.ToLocalTime().ToString());
-
-
+                                desglosaEpc(grabacionRespuesta.grabaciones[i].tag, grabacionRespuesta.grabaciones[grabacionRespuesta.grabaciones.Length - 1].fecha.ToLocalTime().ToString(), false);
+                                // epcs.Refresh();
+                                cantidadReal++;
+                                lCantidadTotal.Text = "" + cantidadTotal + "/" + cantidadReal;
+                                lCantidadTotal.Refresh();
                             }
                             cantidadReal = cantidadTotal - grabacionRespuesta.grabaciones.Length;
-                            lCantidadTotal.Text = "" + cantidadTotal + "/" + (cantidadTotal - cantidadReal);
+                            lCantidadTotal.Text = "" + cantidadTotal + "/" + cantidadReal;
 
                         }
                     }
@@ -480,7 +513,7 @@ namespace UHFAPP
             }
             catch (Exception ex)
             {
-                log(ex.Message);
+                log("leerTagsOrdenAmipem:" + ex.Message);
             }
         }
 
@@ -549,6 +582,9 @@ namespace UHFAPP
                             pReferencia.Visible = true;
                             idOrdenAmipem = orden.id;
                             btnScanEPC.Enabled = true;
+                            lReferencia.Refresh();
+                            lDescripcion.Refresh();
+                            lCantidadTotal.Refresh();
                             leerTagsOrdenAmipem();
                         }
                     }
@@ -556,7 +592,7 @@ namespace UHFAPP
             }
             catch (Exception ex)
             {
-                log(ex.Message);
+                log("leerOrdenAmipem" + ex.Message);
                 textBox1.Text = "";
             }
         }
@@ -580,7 +616,7 @@ namespace UHFAPP
             }
             catch (Exception e)
             {
-                caja("Problemas de conexion con la base de datos, contacte con el administrador", "");
+                //caja("Problemas de conexion con la base de datos, contacte con el administrador", "");
             }
 
         }
@@ -591,7 +627,7 @@ namespace UHFAPP
             try
             {
                 btnScanEPC.Enabled = false;
-                var url = apiAmipemBase + "Ordenes/grabarOrden";
+                var url = apiAmipemBase + "grabarOrden";
                 var request = (HttpWebRequest)WebRequest.Create(url);
                 request.Method = "POST";
                 request.ContentType = "application/json";
@@ -616,7 +652,7 @@ namespace UHFAPP
             }
             catch (Exception e)
             {
-                log(e.Message);
+                log("grabarOrdenAmipem:" + e.Message);
                 resultado = false;
             }
             return resultado;
@@ -659,7 +695,7 @@ namespace UHFAPP
             }
             catch (Exception e1)
             {
-                log(e1.Message);
+                log("grabarTagContadorAmipem:" + e1.Message);
             }
         }
         private bool grabarTagContadorMozo(string epc, int lote)
@@ -700,7 +736,7 @@ namespace UHFAPP
                 catch (Exception e)
                 {
                     // borraUltimaGrabacion(epc);
-                    log(e.Message);
+                    log("grabarTagContadorMozo:" + e.Message);
                     resultado = false;
                 }
             }
@@ -733,8 +769,8 @@ namespace UHFAPP
             }
             catch (Exception ex)
             {
-                log(ex.Message);
-                //caja("Problemas de conexion con la base de datos, contacte con el administrador", "");
+                log("borraUltimarabacion:" + ex.Message);
+                ////caja("Problemas de conexion con la base de datos, contacte con el administrador", "");
                 textBox1.Text = "";
             }
         }
@@ -762,41 +798,9 @@ namespace UHFAPP
                 while (isRuning)
                 {
                     UHFTAGInfo info = uhf.ReadTagFromBuffer();
-                    if (!ubicación.Equals("casa"))
-                        if (!consulta)
-                        {
-                            if (tagsOrden.Count <= cantidadTotal + 1)
-                            {
-                                if (info != null && !tagsOrden.ContainsKey(info.Epc))
-                                {
-                                    new Thread(new ThreadStart(delegate { validaProducto(info.Epc); })).Start();
-                                }
-                            }
-                        }
-                        else
-                        {
-                            if (info != null && !tagsComprobacion.ContainsKey(info.Epc))
-                            {
-                                tagsComprobacion.Add(info.Epc, 1);
-                                new Thread(new ThreadStart(delegate { desglosaEpc(info.Epc); })).Start();
-                            }
-                        }
-                    else
+                    if (info != null && info.Epc.StartsWith("0108"))
                     {
-                        if (info != null && consulta && !tagsComprobacion.ContainsKey(info.Epc))
-                        {
-                            tagsComprobacion.Add(info.Epc, 1);
-                            if (dataGridView1.InvokeRequired)
-                            {
-                                dataGridView1.Invoke(new Action(() => dataGridView1.Rows.Add(new object[] { "23207930", "25017318", "250173180017", 1, "01/01/2025" })));
-                            }
-                            else
-                            {
-                                dataGridView1.Rows.Add(new object[] { "23207930", "25017318", "250173180017", 1, "01/01/2025" });
-                            }
-                        }
-                        if (info != null && !consulta && !tagsOrden.ContainsKey(info.Epc))
-                        {
+                        if (!ubicación.Equals("casa"))
                             if (!consulta)
                             {
                                 if (tagsOrden.Count <= cantidadTotal + 1)
@@ -807,19 +811,47 @@ namespace UHFAPP
                                     }
                                 }
                             }
+                            else
+                            {
+                                if (info != null && !tagsComprobacion.ContainsKey(info.Epc))
+                                {
+                                    tagsComprobacion.Add(info.Epc, 1);
+                                    new Thread(new ThreadStart(delegate { desglosaEpc(info.Epc); })).Start();
+                                }
+                            }
+                        else
+                        {
+                            if (info != null && consulta && !tagsComprobacion.ContainsKey(info.Epc))
+                            {
+                                tagsComprobacion.Add(info.Epc, 1);
+                                if (dataGridView1.InvokeRequired)
+                                {
+                                    dataGridView1.Invoke(new Action(() => dataGridView1.Rows.Add(new object[] { "23207930", "25017318", "250173180017", 1, "01/01/2025" })));
+                                }
+                                else
+                                {
+                                    dataGridView1.Rows.Add(new object[] { "23207930", "25017318", "250173180017", 1, "01/01/2025" });
+                                }
+                            }
+                            if (info != null && !consulta && !tagsOrden.ContainsKey(info.Epc))
+                            {
 
+                                if (tagsOrden.Count <= cantidadTotal + 1)
+                                {
+                                    if (info != null && !tagsOrden.ContainsKey(info.Epc))
+                                    {
+                                        new Thread(new ThreadStart(delegate { validaProducto(info.Epc); })).Start();
+                                    }
+                                }
 
-
+                            }
                         }
                     }
-
                 }
-
-
             }
             catch (Exception ex)
             {
-                log(ex.Message);
+                log("readEpc:" + ex.Message);
             }
         }
 
@@ -870,12 +902,12 @@ namespace UHFAPP
             catch (Exception e)
             {
 
-                log(e.Message);
-                caja("Problemas de conexion con la base de datos, contacte con el administrador", "");
+                log("desglosaEPC:" + e.Message);
+                //caja("Problemas de conexion con la base de datos, contacte con el administrador", "");
             }
         }
 
-        private int desglosaEpc(string epc, string fecha)
+        private int desglosaEpc(string epc, string fecha, bool grabar)
         {
             int ultimograbado = 0;
             if (ubicación.Equals("casa"))
@@ -930,11 +962,12 @@ namespace UHFAPP
                             epcs.Rows.Add(new object[] { desglose.noProducto, desglose.noLote, desglose.noSerie, Int32.Parse(tbLinea.Text), fecha });
                         }
 
-                        if (ubicación.Equals("mozo"))
-                            new Thread(new ThreadStart(delegate { grabarTagContadorMozo(epc, Int32.Parse(tbLinea.Text)); })).Start();
-                        else
+                        if (grabar)
+                        {
+                            if (ubicación.Equals("mozo"))
+                                new Thread(new ThreadStart(delegate { grabarTagContadorMozo(epc, Int32.Parse(tbLinea.Text)); })).Start();
                             new Thread(new ThreadStart(delegate { grabarTagContadorAmipem(epc, Int32.Parse(tbLinea.Text)); })).Start();
-
+                        }
 
                         if (tagsOrden.Count >= cantidadTotal)
                         {
@@ -953,11 +986,13 @@ namespace UHFAPP
                                 }
                                 epcs.Rows[lastRowIndex].DefaultCellStyle.BackColor = System.Drawing.Color.Red;
                                 epcs.Rows[lastRowIndex].DefaultCellStyle.ForeColor = System.Drawing.Color.White;
+                                caja("Orden finalizada", "");
+
                             }
-                            StopReceiveThread();
                             StopEPC(true);
-                            // uhf.Close();
-                            // button3_Click(null, null);
+                            btnScanEPC.Text = strStart;
+                            btnScanEPC.BackColor = System.Drawing.Color.Green;
+                            btnScanEPC.ForeColor = System.Drawing.Color.White;
                             epcList.Clear();
 
                             btnScanEPC.Invoke(new Action(() => btnScanEPC.Enabled = false));
@@ -969,8 +1004,8 @@ namespace UHFAPP
                 }
                 catch (Exception e)
                 {
-                    log(e.Message);
-                    caja("Problemas de conexion con la base de datos, contacte con el administrador", "");
+                    log("desglosaEpc:" + e.Message);
+                    //caja("Problemas de conexion con la base de datos, contacte con el administrador", "");
                 }
             }
             return ultimograbado;
@@ -1018,8 +1053,8 @@ namespace UHFAPP
                 }
                 catch (Exception e)
                 {
-                    log(e.Message);
-                    caja("Problemas de conexion con la base de datos, contacte con el administrador", "");
+                    log("desglosaEpcErroneo" + e.Message);
+                    //caja("Problemas de conexion con la base de datos, contacte con el administrador", "");
                 }
             }
             return salida;
@@ -1048,6 +1083,7 @@ namespace UHFAPP
             tbLotes.Text = "1";
             gtin = "";
             epcList.Clear();
+            epcs.Refresh();
             loteActual = 1;
             tbLinea.Enabled = true;
             tbLotes.Enabled = true;
@@ -1070,8 +1106,8 @@ namespace UHFAPP
                 }
                 catch (Exception e1)
                 {
-                    log(e1.Message);
-                    caja("Problemas de conexion con la base de datos, contacte con el administrador", "");
+                    log("button2_click:" + e1.Message);
+                    //caja("Problemas de conexion con la base de datos, contacte con el administrador", "");
                 }
             }
             StopEPC(true);
@@ -1080,22 +1116,7 @@ namespace UHFAPP
             btnScanEPC.ForeColor = System.Drawing.Color.White;
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-            if (!tbLotes.Text.Trim().Equals(""))
-            {
-                try
-                {
-                    double parcial = (double)(Double.Parse(lCantidadTotal.Text) / Double.Parse(tbLotes.Text));
-                }
 
-                catch (Exception ex)
-                {
-                    log(ex.Message);
-
-                }
-            }
-        }
         private void MainForm_ResizeEnd(object sender, EventArgs e)
         {
             var bounds = Screen.FromControl(this).Bounds;
@@ -1134,9 +1155,9 @@ namespace UHFAPP
             }
             catch (Exception e1)
             {
-                log(e1.Message);
+                log("botonCaja_Click:" + e1.Message);
             }
-            StopEPC(false);
+            // StopEPC(false);
         }
     }
 }

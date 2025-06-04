@@ -478,7 +478,6 @@
             this.tbLotes.Size = new System.Drawing.Size(67, 29);
             this.tbLotes.TabIndex = 16;
             this.tbLotes.Visible = false;
-            this.tbLotes.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // lDescripcion
             // 

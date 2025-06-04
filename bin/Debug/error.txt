@@ -3086,3 +3086,385 @@ System.ArgumentException: Ya existe una entrada con la misma clave.
    en System.Threading.ThreadHelper.ThreadStart()
 -----------------------end----------------------------
 ExitApp
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-06-03 10:33:52
+IsTerminating : True
+System.ArgumentException: Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 353
+   en UHFAPP.MainForm.<>c__DisplayClass86_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 772
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+ExitApp
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-06-03 11:42:03
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-06-03 11:42:03
+IsTerminating : True
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-06-03 11:42:03
+IsTerminating : True
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-06-03 11:42:21
+IsTerminating : True
+System.ArgumentException: Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 369
+   en UHFAPP.MainForm.<>c__DisplayClass89_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 795
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-06-03 12:06:44
+IsTerminating : True
+System.FormatException: La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Int32.Parse(String s)
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 369
+   en UHFAPP.MainForm.<>c__DisplayClass89_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 798
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+ExitApp
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-06-03 12:07:24
+IsTerminating : True
+System.FormatException: La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Int32.Parse(String s)
+   en UHFAPP.MainForm.validaProducto(String epc)
+   en UHFAPP.MainForm.<>c__DisplayClass89_0.<ReadEPC>b__0()
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-06-03 12:07:24
+IsTerminating : True
+System.FormatException: La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Int32.Parse(String s)
+   en UHFAPP.MainForm.validaProducto(String epc)
+   en UHFAPP.MainForm.<>c__DisplayClass89_0.<ReadEPC>b__0()
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+ExitApp
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-06-03 12:12:50
+IsTerminating : True
+System.FormatException: La cadena de entrada no tiene el formato correcto.
+   en System.Number.StringToNumber(String str, NumberStyles options, NumberBuffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   en System.Number.ParseInt32(String s, NumberStyles style, NumberFormatInfo info)
+   en System.Int32.Parse(String s)
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 369
+   en UHFAPP.MainForm.<>c__DisplayClass89_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 798
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+ExitApp
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-06-03 01:52:37
+IsTerminating : True
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en System.Collections.Generic.SortedSet`1.InsertionBalance(Node current, Node& parent, Node grandParent, Node greatGrandParent)
+   en System.Collections.Generic.SortedSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 370
+   en UHFAPP.MainForm.<>c__DisplayClass89_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 801
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+ExitApp
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-06-04 09:40:22
+IsTerminating : True
+System.ArgumentException: Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 370
+   en UHFAPP.MainForm.<>c__DisplayClass89_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 801
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-06-04 09:40:27
+IsTerminating : True
+System.ArgumentException: Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 370
+   en UHFAPP.MainForm.<>c__DisplayClass89_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 801
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-06-04 09:40:27
+IsTerminating : True
+System.ArgumentException: Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 370
+   en UHFAPP.MainForm.<>c__DisplayClass89_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 801
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-06-04 09:40:27
+IsTerminating : True
+System.ArgumentException: Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 370
+   en UHFAPP.MainForm.<>c__DisplayClass89_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 801
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-06-04 09:40:27
+IsTerminating : True
+System.ArgumentException: Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 370
+   en UHFAPP.MainForm.<>c__DisplayClass89_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 801
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-06-04 09:40:27
+IsTerminating : True
+System.ArgumentException: Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 370
+   en UHFAPP.MainForm.<>c__DisplayClass89_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 801
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-06-04 09:40:27
+CurrentDomain_UnhandledException2025-06-04 09:40:27
+IsTerminating : True
+System.ArgumentException: Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 370
+   en UHFAPP.MainForm.<>c__DisplayClass89_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 801
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+-----------------------begin--------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-06-04 09:40:27
+CurrentDomain_UnhandledException2025-06-04 09:40:27
+IsTerminating : True
+System.ArgumentException: Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 370
+   en UHFAPP.MainForm.<>c__DisplayClass89_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 801
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-06-04 09:40:27
+IsTerminating : True
+System.ArgumentException: Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 370
+   en UHFAPP.MainForm.<>c__DisplayClass89_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 801
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+-----------------------begin--------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-06-04 09:40:27
+CurrentDomain_UnhandledException2025-06-04 09:40:27
+IsTerminating : True
+System.ArgumentException: Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 370
+   en UHFAPP.MainForm.<>c__DisplayClass89_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 801
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-06-04 09:40:27
+IsTerminating : True
+System.ArgumentException: Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 370
+   en UHFAPP.MainForm.<>c__DisplayClass89_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 801
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-06-04 09:40:27
+IsTerminating : True
+System.ArgumentException: Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 370
+   en UHFAPP.MainForm.<>c__DisplayClass89_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 801
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-06-04 09:44:10
+IsTerminating : True
+System.ArgumentException: Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 370
+   en UHFAPP.MainForm.<>c__DisplayClass89_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 801
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-06-04 09:44:10
+IsTerminating : True
+System.ArgumentException: Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 370
+   en UHFAPP.MainForm.<>c__DisplayClass89_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 801
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-06-04 09:44:10
+IsTerminating : True
+-----------------------begin--------------------------
+System.ArgumentException: Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 370
+   en UHFAPP.MainForm.<>c__DisplayClass89_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 801
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-06-04 09:44:10
+CurrentDomain_UnhandledException2025-06-04 09:44:10
+IsTerminating : True
+IsTerminating : True
+System.ArgumentException: Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 370
+   en UHFAPP.MainForm.<>c__DisplayClass89_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 801
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+System.ArgumentException: Ya existe una entrada con la misma clave.
+   en System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   en System.Collections.Generic.TreeSet`1.AddIfNotPresent(T item)
+   en System.Collections.Generic.SortedDictionary`2.Add(TKey key, TValue value)
+   en UHFAPP.MainForm.validaProducto(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 370
+   en UHFAPP.MainForm.<>c__DisplayClass89_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-calidad\MainForm.cs:línea 801
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
