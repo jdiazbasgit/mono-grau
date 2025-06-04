@@ -31,31 +31,28 @@ import lombok.Data;
 @RequestMapping("Ordenes")
 public class GrabacionRestController {
 
-    private final MonoApplication monoApplication;
+	private final MonoApplication monoApplication;
 
 	@Autowired
 	private GrabacionCRUDRepository grabacionCrudRepository;
 
 	@Autowired
 	private OrdenCRUDRepository ordenCrudRepository;
-	
 
 	@Autowired
 	private LogCRUDRepository logCrudRepository;
 
+	GrabacionRestController(MonoApplication monoApplication) {
+		this.monoApplication = monoApplication;
+	}
 
-    GrabacionRestController(MonoApplication monoApplication) {
-        this.monoApplication = monoApplication;
-    }
-    
-    
-    @PostMapping("log")
-    public void log(@RequestBody LogInput logInput) {
-    	
-    	Log log=  new Log(0,logInput.getTexto(),new GregorianCalendar());
-    	getLogCrudRepository().save(log);
-    	
-    }
+	@PostMapping("log")
+	public void log(@RequestBody LogInput logInput) {
+
+		Log log = new Log(0, logInput.getTexto(), new GregorianCalendar());
+		getLogCrudRepository().save(log);
+
+	}
 
 	@PostMapping("leerContador")
 	public Contador getContador(@RequestBody Entrada entrada) {
@@ -66,17 +63,17 @@ public class GrabacionRestController {
 	@PostMapping("leerOrden")
 	public Orden getOrden(@RequestBody Entrada entrada) {
 
-		Orden orden=getOrdenCrudRepository().findByCodigo(entrada.getCodigo());
-		if(orden==null)
+		Orden orden = getOrdenCrudRepository().findByCodigo(entrada.getCodigo());
+		if (orden == null)
 			return new Orden();
 		return orden;
 	}
 
 	@PostMapping("leerTagsOrden")
 	public RespuestaContador getTagsFromOrden(@RequestBody Entrada entrada) {
-		
-		RespuestaContador respuestaContador=  new RespuestaContador();
-		List<Grabacion> grabaciones=getGrabacionCrudRepository().getTagsByOrden(entrada.getCodigo());
+
+		RespuestaContador respuestaContador = new RespuestaContador();
+		List<Grabacion> grabaciones = getGrabacionCrudRepository().getTagsByOrden(entrada.getCodigo());
 		respuestaContador.setGrabaciones(grabaciones);
 		return respuestaContador;
 
@@ -85,7 +82,7 @@ public class GrabacionRestController {
 	@PostMapping("grabarTagContador")
 	public RespuestaContador grabaTag(@RequestBody GrabacionDTO grabacionDTO) {
 		Orden orden = getOrdenCrudRepository().findByCodigo(grabacionDTO.getOrden());
-;
+		;
 		// if(grabaciones.size()>=orden.getCantidad()) {
 		List<Grabacion> grabaciones = getGrabacionCrudRepository().getTagsByOrden(grabacionDTO.getOrden());
 		if (grabaciones.size() < orden.getCantidad()) {
@@ -96,30 +93,34 @@ public class GrabacionRestController {
 			} catch (Exception e) {
 				// TODO: handle exception
 			}
-			
+
 			if (grabacion.getId() > 0)
 				grabaciones.add(grabacion);
 		}
-		RespuestaContador respuestaContador= new RespuestaContador();
+		RespuestaContador respuestaContador = new RespuestaContador();
 		respuestaContador.setGrabaciones(grabaciones);
 		return respuestaContador;
 	}
 
 	@PostMapping("grabarOrden")
 	public Orden grabaOrden(@RequestBody Orden orden) {
-		orden.setId(0);
+		Orden orden1 = getOrdenCrudRepository().findByCodigo(orden.getCodigo());
+		if (orden1 != null)
+			orden.setId(orden1.getId());
+		else
+			orden.setId(0);
 		try {
-			orden=getOrdenCrudRepository().save(orden);
+			orden = getOrdenCrudRepository().save(orden);
 		} catch (Exception e) {
-			// TODO: handle exception
+			e.printStackTrace();
 		}
 		return orden;
 	}
-	
+
 	@PostMapping("borraUltimaGrabacion/{epc}")
 	public void borraUltimaGrabacion(@PathVariable String epc) {
-		
-		Grabacion grabacion=getGrabacionCrudRepository().findByTag(epc);
+
+		Grabacion grabacion = getGrabacionCrudRepository().findByTag(epc);
 		getGrabacionCrudRepository().delete(grabacion);
 	}
 
@@ -127,5 +128,4 @@ public class GrabacionRestController {
 	public String simulacion() {
 		return "";
 	}
-}
-;
+};
