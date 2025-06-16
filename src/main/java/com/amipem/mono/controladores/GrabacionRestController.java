@@ -105,30 +105,25 @@ public class GrabacionRestController {
 	@PostMapping("grabarOrden")
 	public Orden grabaOrden(@RequestBody Orden orden) {
 		Orden orden1 = getOrdenCrudRepository().findByCodigo(orden.getCodigo());
-		if (orden1 == null)
-			orden.setId(0);
-		try {
-			orden = getOrdenCrudRepository().save(orden);
-		} catch (Exception e) {
-			e.printStackTrace();
+		if (orden1 == null) {
+			orden1.setId(0);
+			try {
+				orden1 = getOrdenCrudRepository().save(orden1);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			return orden1;
 		}
 		return orden;
 	}
-	
-	/*@PostMapping("actualiza")
-	public Orden actualiza() {
-		Orden orden1 = getOrdenCrudRepository().findByCodigo(orden.getCodigo());
-		if (orden1 != null)
-			orden.setId(orden1.getId());
-		else
-			orden.setId(0);
-		try {
-			orden = getOrdenCrudRepository().save(orden);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return orden;
-	}*/
+
+	/*
+	 * @PostMapping("actualiza") public Orden actualiza() { Orden orden1 =
+	 * getOrdenCrudRepository().findByCodigo(orden.getCodigo()); if (orden1 != null)
+	 * orden.setId(orden1.getId()); else orden.setId(0); try { orden =
+	 * getOrdenCrudRepository().save(orden); } catch (Exception e) {
+	 * e.printStackTrace(); } return orden; }
+	 */
 
 	@PostMapping("borraUltimaGrabacion/{epc}")
 	public void borraUltimaGrabacion(@PathVariable String epc) {
