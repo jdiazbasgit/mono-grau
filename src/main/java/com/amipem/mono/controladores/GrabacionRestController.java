@@ -105,9 +105,7 @@ public class GrabacionRestController {
 	@PostMapping("grabarOrden")
 	public Orden grabaOrden(@RequestBody Orden orden) {
 		Orden orden1 = getOrdenCrudRepository().findByCodigo(orden.getCodigo());
-		if (orden1 != null)
-			orden.setId(orden1.getId());
-		else
+		if (orden1 == null)
 			orden.setId(0);
 		try {
 			orden = getOrdenCrudRepository().save(orden);

@@ -24,6 +24,7 @@ public class Orden {
 	private String descripcion;
 	private String item;
 	private int cantidad;
+	private int parcial;
 
 	
 	
