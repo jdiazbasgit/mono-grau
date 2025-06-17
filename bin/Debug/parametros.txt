@@ -1,22 +1,27 @@
 #url servidor amipem
 http://82.223.202.137/mozov2/Ordenes/
+#http://localhost:8080/Ordenes/
 #url servidor mozo
-https://webservice.mozo-grau.com:7048/BC200_MG_DESARROLLO/
-#cliente
+https://webservice.mozo-grau.com:7048/BC200_MG/
+#https://webservice.mozo-grau.com:7048/BC200_MG_desarrollo/
+#company
 0c0574f1-f098-ed11-965c-6045bd89ef6b
 #usuario servidor mozo
-WEBSERVICE
+#WEBSERVICE
+WSAMIPEM
 #password servidor mozo
-BLZNChVZ4LAab/kewV3J0v1J/2rYZSwuDUcyyOWEkbY=
+#BLZNChVZ4LAab/kewV3J0v1J/2rYZSwuDUcyyOWEkbY=
++dgV6q4lqOZ/4ARsjz+PsQ7jDRnQvzRKhOJR3J6+ens=
 #ubicacion de la ejecucion  para simulacion (casa,oficina,mozo)
-oficina
+mozo
+#oficina
 #potencia de la antena
 30
 #session de la antena
-01
+00
 #tag focus (1 activado, 0 desactivado)
 1
 #buzer (1 activado, 0 desactivado)
 0
 #simulacion sin validación
-true
+false

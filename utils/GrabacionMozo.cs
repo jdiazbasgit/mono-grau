@@ -12,13 +12,17 @@ namespace UHFAPP.utils
         public string noOrdenProduccion { get; set; }
         public int noLinOrdenProducc { get; set; }
         public int cantidad { get; set; }
+        public bool comprobarErrores { get; set; } = true;
+        public string textoError { get; set; } 
 
-        public GrabacionMozo(string lecturaRFID, string noOrdenProduccion, int noLinOrdenProducc, int cantidad)
+        public GrabacionMozo(string lecturaRFID, string noOrdenProduccion, int noLinOrdenProducc, int cantidad,bool comprobarErrores, string textoError)
         {
             this.lecturaRFID = lecturaRFID;
             this.noOrdenProduccion = noOrdenProduccion;
             this.noLinOrdenProducc = noLinOrdenProducc;
             this.cantidad = cantidad;
+            this.comprobarErrores = comprobarErrores;
+            this.textoError = textoError;
         }
     }
 }

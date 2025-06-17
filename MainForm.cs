@@ -78,6 +78,7 @@ namespace UHFAPP
         private string buzzer;
         private bool sinValidar;
         private string idProducto;
+        private Thread hiloLectura;
         SortedDictionary<string, int> tagsOrden = new SortedDictionary<string, int>();
         SortedDictionary<string, int> tagsComprobacion = new SortedDictionary<string, int>();
         public static FormWindowState currState = FormWindowState.Normal;
@@ -166,17 +167,27 @@ namespace UHFAPP
             UHFClose();
             if (eventOpen != null)
             {
+
                 eventOpen(false);
             }
         }
         private bool UHFClose()
         {
-            if (button1.Text.Trim() == strClose.Trim())
-            {
-                uhf.CloseUsb();
-                return true;
-            }
-            return false;
+            isRuning = false;
+
+            StopReceiveThread();
+            hiloLectura.Interrupt();
+            CancellationTokenSource cts = new CancellationTokenSource();
+            cts.Cancel();
+            hiloLectura.Join();
+            hiloLectura.Abort();
+            uhf.CloseUsb();
+            uhf.Close();
+            System.Windows.Forms.Application.Exit();
+            Environment.Exit(0);
+
+            return true;
+
         }
 
 
@@ -236,6 +247,8 @@ namespace UHFAPP
                         if (btnScanEPC.InvokeRequired)
                         {
                             btnScanEPC.Invoke(new Action(() => btnScanEPC.Text = strStart));
+                            btnScanEPC.Invoke(new Action(() => btnScanEPC.BackColor = System.Drawing.Color.Green));
+                            btnScanEPC.Invoke(new Action(() => btnScanEPC.ForeColor = System.Drawing.Color.White));
                         }
                         else
                         {
@@ -302,6 +315,7 @@ namespace UHFAPP
         {
             isVisible = false;
             isRuning = false;
+
             // Thread.Sleep(100);
         }
 
@@ -313,8 +327,9 @@ namespace UHFAPP
                 isRuning = true;
                 try
                 {
-                    new Thread(new ThreadStart(delegate { ReadEPC(); })).Start();
-
+                    hiloLectura = new Thread(new ThreadStart(delegate { ReadEPC(); }));
+                    hiloLectura.IsBackground = true;
+                    hiloLectura.Start();
                 }
                 catch (Exception e)
                 {
@@ -328,69 +343,11 @@ namespace UHFAPP
 
         private void validaProducto(string epc)
         {
-
-            if (!ubicación.Equals("casa"))
-            {
-                if (gtin.Trim().Length == 0)
-                {
-                    var url = apiMozoBase + "api/mozo/apiArco/v2.0/companies(0c0574f1-f098-ed11-965c-6045bd89ef6b)/productosArco?$filter=no eq '" + producto + "'";
-
-                    var request = (HttpWebRequest)WebRequest.Create(url);
-                    string username = this.usuario;
-
-                    string password = this.password;
-                    string svcCredentials = Convert.ToBase64String(ASCIIEncoding.ASCII.GetBytes(username + ":" + password));
-                    request.Headers.Add("Authorization", "Basic " + svcCredentials);
-                    request.Method = "GET";
-                    request.ContentType = "application/json";
-                    request.Accept = "*/*";
-                    try
-                    {
-                        using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
-                        {
-                            Stream stream1 = response.GetResponseStream();
-                            StreamReader sr = new StreamReader(stream1);
-                            string strsb = sr.ReadToEnd();
-                            strsb = strsb.Replace("@odata.context", "dataContext");
-                            strsb = strsb.Replace("@odata.etag", "dataTag");
-                            Gtin gtinWeb = JsonConvert.DeserializeObject<Gtin>(strsb);
-                            if (gtinWeb.value.Length > 0)
-                                gtin = gtinWeb.value[0].gtin;
-                        }
-                    }
-                    catch (Exception e)
-                    {
-                        log("validaProducto:" + e.Message);
-                        //caja("Problemas de conexion con la base de datos, contacte con el administrador", "");
-                    }
-                }
-
-
-                if (epc.Substring(3, 13).Equals(gtin) || sinValidar)
-                {
-                    try
-                    {
-                        tagsOrden.Add(epc, Int32.Parse(tbLinea.Text));
-                        DateTime fecha = DateTime.Now;
-                        desglosaEpc(epc, fecha.ToShortDateString() + " " + fecha.ToLongTimeString(), true);
-                    }
-                    catch (Exception e)
-                    {
-
-                        log("validaProducto:" + e.Message);
-                    }
-
-                }
-                else
-                {
-                    caja("Producto no corresponde a la orden\n" + desglosaEpcErroneo(epc), epc);
-                    StopEPC(true);
-                    btnScanEPC.Text = strStart;
-                    btnScanEPC.BackColor = System.Drawing.Color.Green;
-                    btnScanEPC.ForeColor = System.Drawing.Color.White;
-                }
-
-            }
+            tagsOrden.Add(epc, Int32.Parse(tbLinea.Text));
+            if (ubicación.Equals("mozo"))
+                grabarTagContadorMozo(epc, Int32.Parse(tbLinea.Text), true);
+            else
+                grabarTagContadorAmipem(epc, Int32.Parse(tbLinea.Text));
         }
 
         private bool leerOrden()
@@ -438,6 +395,11 @@ namespace UHFAPP
                                 lCantidadTotal.Text = getMozo.Value[0].RemainingQtyBase.ToString();
 
                                 pReferencia.Visible = true;
+                            }
+                            else
+                            {
+                                caja("Orden no existe", null);
+                                return false;
                             }
                             resultado = true;
                         }
@@ -497,13 +459,14 @@ namespace UHFAPP
                             {
                                 if (!tagsOrden.ContainsKey(grabacionRespuesta.grabaciones[i].tag))
                                     tagsOrden.Add(grabacionRespuesta.grabaciones[i].tag, grabacionRespuesta.grabaciones[i].linea);
-
-                                desglosaEpc(grabacionRespuesta.grabaciones[i].tag, grabacionRespuesta.grabaciones[grabacionRespuesta.grabaciones.Length - 1].fecha.ToLocalTime().ToString(), false);
+                                new Thread(new ThreadStart(delegate { desglosaEpc(grabacionRespuesta.grabaciones[i].tag, grabacionRespuesta.grabaciones[grabacionRespuesta.grabaciones.Length - 1].fecha.ToLocalTime().ToString(), false); })).Start();
+                               // desglosaEpc(grabacionRespuesta.grabaciones[i].tag, grabacionRespuesta.grabaciones[grabacionRespuesta.grabaciones.Length - 1].fecha.ToLocalTime().ToString(), false);
                                 // epcs.Refresh();
                                 cantidadReal++;
                                 lCantidadTotal.Text = "" + cantidadTotal + "/" + cantidadReal;
                                 lCantidadTotal.Refresh();
                             }
+                            panelCaja.Visible = false;
                             cantidadReal = cantidadTotal - grabacionRespuesta.grabaciones.Length;
                             lCantidadTotal.Text = "" + cantidadTotal + "/" + cantidadReal;
 
@@ -524,8 +487,10 @@ namespace UHFAPP
             try
             {
                 StopEPC(true);
+                uhf.StopInventory();
                 textoCaja.Invoke(new Action(() => textoCaja.Text = texto));
                 panelCaja.Invoke(new Action(() => panelCaja.Visible = true));
+
             }
             catch (Exception e)
             {
@@ -632,7 +597,7 @@ namespace UHFAPP
                 request.Method = "POST";
                 request.ContentType = "application/json";
                 request.Accept = "application/json";
-                Orden orden = new Orden(idOrdenAmipem, textBox1.Text, lDescripcion.Text, lReferencia.Text, Int32.Parse(lCantidadTotal.Text));
+                Orden orden = new Orden(idOrdenAmipem, textBox1.Text, lDescripcion.Text, lReferencia.Text, Int32.Parse(lCantidadTotal.Text), 0);
                 string salida = JsonConvert.SerializeObject(orden);
                 byte[] data = Encoding.UTF8.GetBytes(salida);
                 request.ContentLength = data.Length;
@@ -690,6 +655,9 @@ namespace UHFAPP
                         {
                             lCantidadTotal.Text = "" + cantidadTotal + "/" + (cantidadTotal - grabacionRespuesta.grabaciones.Length);
                         }
+                        new Thread(new ThreadStart(delegate { desglosaEpc(epc, DateTime.Now.ToString(), true); })).Start();
+
+                        //desglosaEpc(epc, DateTime.Now.ToString(), true);
                     }
                 }
             }
@@ -698,7 +666,7 @@ namespace UHFAPP
                 log("grabarTagContadorAmipem:" + e1.Message);
             }
         }
-        private bool grabarTagContadorMozo(string epc, int lote)
+        private bool grabarTagContadorMozo(string epc, int lote, bool comprobarErrores)
         {
             bool resultado = false;
             if (ubicación.Equals("mozo"))
@@ -714,7 +682,7 @@ namespace UHFAPP
                 request.Accept = "*";
                 try
                 {
-                    GrabacionMozo grabacion = new GrabacionMozo(epc, textBox1.Text, 10000, 1);
+                    GrabacionMozo grabacion = new GrabacionMozo(epc, textBox1.Text, 10000, 1, comprobarErrores, "");
                     string salida = JsonConvert.SerializeObject(grabacion);
                     byte[] data = Encoding.UTF8.GetBytes(salida);
                     request.ContentLength = data.Length;
@@ -730,7 +698,25 @@ namespace UHFAPP
                         GrabacionMozo ordenRetorno = JsonConvert.DeserializeObject<GrabacionMozo>(strsb);
                         int lastRowIndex = epcs.Rows.GetLastRow(DataGridViewElementStates.Visible);
                         resultado = true;
-                        new Thread(new ThreadStart(delegate { grabarTagContadorAmipem(epc, Int32.Parse(tbLinea.Text)); })).Start();
+                        if (ordenRetorno.textoError != null && ordenRetorno.textoError.Length > 0 && comprobarErrores)
+                        {
+                            caja(ordenRetorno.textoError + "\n" + desglosaEpcErroneo(epc), epc);
+                            resultado = false;
+                            return resultado;
+                        }
+                        if (ordenRetorno.textoError != null && ordenRetorno.textoError.Length == 0)
+                        {
+                            if (comprobarErrores)
+                                grabarTagContadorMozo(epc, lote, false);
+                            else
+                                grabarTagContadorAmipem(epc, Int32.Parse(tbLinea.Text));
+                            resultado = true;
+                            return resultado;
+
+
+                        }
+
+
                     }
                 }
                 catch (Exception e)
@@ -801,13 +787,15 @@ namespace UHFAPP
                     if (info != null && info.Epc.StartsWith("0108"))
                     {
                         if (!ubicación.Equals("casa"))
+                        {
                             if (!consulta)
                             {
                                 if (tagsOrden.Count <= cantidadTotal + 1)
                                 {
                                     if (info != null && !tagsOrden.ContainsKey(info.Epc))
                                     {
-                                        new Thread(new ThreadStart(delegate { validaProducto(info.Epc); })).Start();
+                                        // new Thread(new ThreadStart(delegate { validaProducto(info.Epc); })).Start();
+                                        validaProducto(info.Epc);
                                     }
                                 }
                             }
@@ -817,8 +805,11 @@ namespace UHFAPP
                                 {
                                     tagsComprobacion.Add(info.Epc, 1);
                                     new Thread(new ThreadStart(delegate { desglosaEpc(info.Epc); })).Start();
+                                   //desglosaEpc(info.Epc);
+
                                 }
                             }
+                        }
                         else
                         {
                             if (info != null && consulta && !tagsComprobacion.ContainsKey(info.Epc))
@@ -840,7 +831,8 @@ namespace UHFAPP
                                 {
                                     if (info != null && !tagsOrden.ContainsKey(info.Epc))
                                     {
-                                        new Thread(new ThreadStart(delegate { validaProducto(info.Epc); })).Start();
+                                        //new Thread(new ThreadStart(delegate { validaProducto(info.Epc); })).Start();
+                                        validaProducto(info.Epc);
                                     }
                                 }
 
@@ -848,6 +840,7 @@ namespace UHFAPP
                         }
                     }
                 }
+                Console.Write("fin");
             }
             catch (Exception ex)
             {
@@ -962,12 +955,15 @@ namespace UHFAPP
                             epcs.Rows.Add(new object[] { desglose.noProducto, desglose.noLote, desglose.noSerie, Int32.Parse(tbLinea.Text), fecha });
                         }
 
-                        if (grabar)
-                        {
-                            if (ubicación.Equals("mozo"))
-                                new Thread(new ThreadStart(delegate { grabarTagContadorMozo(epc, Int32.Parse(tbLinea.Text)); })).Start();
-                            new Thread(new ThreadStart(delegate { grabarTagContadorAmipem(epc, Int32.Parse(tbLinea.Text)); })).Start();
-                        }
+                        /* if (grabar)
+                         {
+                             if (ubicación.Equals("mozo"))
+                                 //new Thread(new ThreadStart(delegate { grabarTagContadorMozo(epc, Int32.Parse(tbLinea.Text),true); })).Start();
+                                 grabarTagContadorMozo(epc, Int32.Parse(tbLinea.Text), true);
+                             //new Thread(new ThreadStart(delegate { grabarTagContadorAmipem(epc, Int32.Parse(tbLinea.Text)); })).Start();
+                             else
+                                 grabarTagContadorAmipem(epc, Int32.Parse(tbLinea.Text));   
+                         }*/
 
                         if (tagsOrden.Count >= cantidadTotal)
                         {
@@ -1148,6 +1144,9 @@ namespace UHFAPP
 
         private void botonCaja_Click(object sender, EventArgs e)
         {
+
+            //StopEPC(false);
+            // uhf.StartInventory();
             panelCaja.Visible = false;
             try
             {

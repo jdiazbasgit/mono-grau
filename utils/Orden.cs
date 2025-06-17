@@ -13,16 +13,17 @@ namespace UHFAPP.utils
         public string descripcion { get; set; }
         public string item { get; set; }
         public int cantidad { get; set; }
+        public int parcial { get; set; }
 
 
 
-        public Orden(int id, string codigo, string descripcion, string item, int cantidad)
+        public Orden(int id, string codigo, string descripcion, string item, int cantidad,int parcial)
         {
             this.id = id;
             this.codigo = codigo;
             this.descripcion = descripcion;
             this.item = item;
-           
+            this.parcial = parcial;
             this.cantidad = cantidad;
         }
         public Orden()
