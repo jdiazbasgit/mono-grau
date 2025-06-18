@@ -106,9 +106,9 @@ public class GrabacionRestController {
 	public Orden grabaOrden(@RequestBody Orden orden) {
 		Orden orden1 = getOrdenCrudRepository().findByCodigo(orden.getCodigo());
 		if (orden1 == null) {
-			orden1.setId(0);
+			orden.setId(0);
 			try {
-				orden1 = getOrdenCrudRepository().save(orden1);
+				orden1 = getOrdenCrudRepository().save(orden);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
