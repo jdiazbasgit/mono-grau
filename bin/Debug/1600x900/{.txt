@@ -1,0 +1,4649 @@
+{
+    "@odata.context": "https://webservice.mozo-grau.com:7048/BC200_MG_DESARROLLO/api/mozo/apiArco/v2.0/$metadata#companies(0c0574f1-f098-ed11-965c-6045bd89ef6b)/linOrdenesProdArco",
+    "value": [
+        {
+            "@odata.etag": "W/\"JzIwOzE2NTUwNjg3NTUyNjExMTk5OTA1MTswMDsn\"",
+            "systemId": "e20d6f3f-bca3-ed11-b641-00155d003715",
+            "prodOrderNo": "OFBC2301172",
+            "lineNo": 10000,
+            "itemNo": "44300012",
+            "description": "Funda BIOCAM para 12 piezas MG TI",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MDQwMDg5NDA1MzA2MjU1MzE4MTswMDsn\"",
+            "systemId": "7d3f375a-3ea9-ed11-b642-00155d003715",
+            "prodOrderNo": "OFBC2301488",
+            "lineNo": 10000,
+            "itemNo": "453162121",
+            "description": "Barra Ti 6 implantes Straumann 12 piezas púrpura",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0ODI0NjM0Mzc0MjE3NDY3MjAyMTswMDsn\"",
+            "systemId": "8a71d805-89c8-ed11-b649-00155d003715",
+            "prodOrderNo": "23008037",
+            "lineNo": 10000,
+            "itemNo": "PRI1411",
+            "description": "DESTORNILLADOR MULTICONVERSOR CUERPO",
+            "remainingQtyBase": 25
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0MTY0NTg5MjE2MTk0NjU2ODcwMTswMDsn\"",
+            "systemId": "4acfef30-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "20015230",
+            "lineNo": 10000,
+            "itemNo": "PRI1218",
+            "description": "PEEK SCANBODY TC4 PC10 CORTO",
+            "remainingQtyBase": 25
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzNzEyMzcxNTMzODI2MzY1NjcyMTswMDsn\"",
+            "systemId": "50d1ef30-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "18020143",
+            "lineNo": 10000,
+            "itemNo": "PR09554",
+            "description": "PASTILLA TI G 4 DIA. 12mm x 1mm EMPAQU Y ESTERILIZ",
+            "remainingQtyBase": 400
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2OTM5NDYxODQ3ODI3MDIyNjM2MTswMDsn\"",
+            "systemId": "e3e9ef30-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "21001148",
+            "lineNo": 10000,
+            "itemNo": "PRI1255-C",
+            "description": "CASQUILLO SCANBODY INHES ESTÁNDAR",
+            "remainingQtyBase": 25
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MjY4NzE0NDc2MDE1OTU5MDEyMTswMDsn\"",
+            "systemId": "c413f230-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "21027918",
+            "lineNo": 10000,
+            "itemNo": "PR1356",
+            "description": "IMPLANTE INHEX STD 4,25x11,5 V4f5",
+            "remainingQtyBase": 25
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzNjM4ODA0NjMyNDg4NDE2MzcyMTswMDsn\"",
+            "systemId": "5526f230-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "OFBC1600070",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "PUENTE BIO CAM 1 PIEZA SOBRE 1 IMPLANTE MG",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2NjQ0NTIwNTczMTI5MzA4NjcxMTswMDsn\"",
+            "systemId": "f72df230-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "OFBC1609611",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1Nzk0Mjc2MTQyMDk2NDAzNzg1MTswMDsn\"",
+            "systemId": "a22ef230-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "OFBC1600520",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "PUENTE BIO CAM 1 PIEZA SOBRE 1 IMPLANTE MG",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNjA2MDgzOTQ2MzQ0MzA4MTcyMTswMDsn\"",
+            "systemId": "1f36f230-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "OFBC1600839",
+            "lineNo": 10000,
+            "itemNo": "44302002",
+            "description": "PUENTE BIO CAM 2 PIEZAS SOBRE 2 IMPLANTES (Ti) MG",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzNDUwODM5Mjg1Njg3ODgzNjQ3MTswMDsn\"",
+            "systemId": "2174f230-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "22012531",
+            "lineNo": 10000,
+            "itemNo": "232133151M",
+            "description": "MEC IMPLANTE INHEX 3315 GRADO IV SIN TRATAR",
+            "remainingQtyBase": 25
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MDQ4NTkyMTgxODc3NjIzNDQyMTswMDsn\"",
+            "systemId": "d292f430-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "OFBC1708072",
+            "lineNo": 10000,
+            "itemNo": "443010010",
+            "description": "Unitario Ti sobre 1 implante MG 1 pieza Gold ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2ODQ4MjIzODgyNzAwMDM4MDQwMTswMDsn\"",
+            "systemId": "fb92f430-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "OFBC1708080",
+            "lineNo": 10000,
+            "itemNo": "443010010",
+            "description": "Unitario Ti sobre 1 implante MG 1 pieza Gold ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE3MDU3ODkzNDM1NDI2MDEzMzM1MTswMDsn\"",
+            "systemId": "eeb2f430-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "OFBC2006486",
+            "lineNo": 10000,
+            "itemNo": "44255007",
+            "description": "Puente CRCO sobre 5 implantes 3i 7 piezas",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE3MTQzMTU0MTg4MzEyMDg1NzczMTswMDsn\"",
+            "systemId": "ebe0f430-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "OFBC1900181",
+            "lineNo": 10000,
+            "itemNo": "45200206",
+            "description": "Barra sobre cofia CRCO MG 6 piezas",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMDY4NTgxNTI1ODEyNDQ2NTMzMTswMDsn\"",
+            "systemId": "37ebf430-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "OFBC2114056",
+            "lineNo": 10000,
+            "itemNo": "44202003",
+            "description": "Puente CRCO sobre 2 implantes MG 3 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMjMzOTA3MzYzMTcxNTYwMjMyMTswMDsn\"",
+            "systemId": "38ebf430-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "OFBC2114057",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMjcwNjQ1MzY2NTUzOTQ4MTY3MTswMDsn\"",
+            "systemId": "3aebf430-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "OFBC2114058",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMjg4OTk4NDA0NDgwNDUzNTg1MTswMDsn\"",
+            "systemId": "3bebf430-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "OFBC2114059",
+            "lineNo": 10000,
+            "itemNo": "44202002",
+            "description": "Puente CRCO sobre 2 implantes MG 2 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMjA0MDQxNjkwODk5NDQ2OTE1MTswMDsn\"",
+            "systemId": "3eebf430-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "OFBC2114061",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzOTc1NTIzODAxMzA3NjMzNzQyMTswMDsn\"",
+            "systemId": "40ebf430-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "OFBC2114062",
+            "lineNo": 10000,
+            "itemNo": "44202002",
+            "description": "Puente CRCO sobre 2 implantes MG 2 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzOTkzODkyODAzMDU4NTA1MDM3MTswMDsn\"",
+            "systemId": "41ebf430-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "OFBC2114063",
+            "lineNo": 10000,
+            "itemNo": "44202002",
+            "description": "Puente CRCO sobre 2 implantes MG 2 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzOTAyMDYzNzU4MTYyOTk2MTI4MTswMDsn\"",
+            "systemId": "44ebf430-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "OFBC2114064",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzOTU3MTcwNzYzNDQ5Mjk1MDAzMTswMDsn\"",
+            "systemId": "47ebf430-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "OFBC2114065",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0MTc3NTk4Nzg0NjI5NDk2NDczMTswMDsn\"",
+            "systemId": "4bebf430-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "OFBC2114067",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0MTA0MTA2NzYwNDA5NTg0NzA0MTswMDsn\"",
+            "systemId": "4febf430-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "OFBC2114069",
+            "lineNo": 10000,
+            "itemNo": "44206012",
+            "description": "Puente CRCO sobre 6 implantes MG 12 piezas",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzNjM2NTc5MjU1MjI1NDA3ODIwMTswMDsn\"",
+            "systemId": "57ebf430-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "OFBC2114073",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzODAxOTAwMjcxMjU1MTA3MTU5MTswMDsn\"",
+            "systemId": "58ebf430-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "OFBC2114074",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0Njg0NDE0MjAxMzgxMjU1MTMxMTswMDsn\"",
+            "systemId": "68ebf430-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "OFBC2114081",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0NjEwOTM4MTk0Mjc1NjU0MDIxMTswMDsn\"",
+            "systemId": "6cebf430-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "OFBC2114083",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0NjQ3Njc2MTk3OTMwNzAwNTE2MTswMDsn\"",
+            "systemId": "6eebf430-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "OFBC2114084",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0MTcwMDgyMTUxOTE1NTE5NDUzMTswMDsn\"",
+            "systemId": "74ebf430-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "OFBC2114087",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1MzU1NDYyOTY4NjEzNTY5MDAyMTswMDsn\"",
+            "systemId": "8aebf430-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "OFBC2114098",
+            "lineNo": 10000,
+            "itemNo": "44301001",
+            "description": "Unitario Ti sobre 1 implante MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1MjYzNjE3OTU5NzU3MzY0OTY5MTswMDsn\"",
+            "systemId": "8debf430-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "OFBC2114099",
+            "lineNo": 10000,
+            "itemNo": "44301001",
+            "description": "Unitario Ti sobre 1 implante MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE3MDAxMTExMjcyODk1MzMxODM1MTswMDsn\"",
+            "systemId": "e3e6f630-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "OFBC1903995",
+            "lineNo": 10000,
+            "itemNo": "45203112",
+            "description": "Híbrida CRCO sobre 3 implantes MG 12 piezas",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2Mjk2MDUxMjU1MjIyMDM1NjE1MTswMDsn\"",
+            "systemId": "c7f7f630-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "OFBC2011120",
+            "lineNo": 10000,
+            "itemNo": "45200206",
+            "description": "Barra sobre cofia CRCO MG, 6 piezas",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNjYxNTU4NzcxMDU1MDI2NzE1MTswMDsn\"",
+            "systemId": "1808f730-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "OFBC2003785",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1OTA0MzE1NjI5MTMwMzA0MzI5MTswMDsn\"",
+            "systemId": "a935f730-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "OFBC2210912",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2NDkyMjU5NjY2MjgyMjg4MDI2MTswMDsn\"",
+            "systemId": "cf3af730-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "OFBC2004184",
+            "lineNo": 10000,
+            "itemNo": "45208212",
+            "description": "Barra CRCO sobre 8 implantes MG 12 piezas",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0NDI1ODczOTI0MTQ5MDc1MDYyMTswMDsn\"",
+            "systemId": "783bf730-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "OFBC2004241",
+            "lineNo": 10000,
+            "itemNo": "44221001",
+            "description": "Unitario CRCO Zimmer 1 pieza",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0MzUyMzk2NzI0MjEwNzY5NjU4MTswMDsn\"",
+            "systemId": "7c3bf730-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "OFBC2004245",
+            "lineNo": 10000,
+            "itemNo": "44202002",
+            "description": "Puente CRCO sobre 2 implantes MG 2 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0NzQ1MTE4NjM2MTcxNTU3MjQ0MTswMDsn\"",
+            "systemId": "6a42f730-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "OFBC2005016",
+            "lineNo": 10000,
+            "itemNo": "45213109",
+            "description": "Híbrida CRCO sobre 3 implantes Straumann 9 piezas",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMDE5OTQ0OTg3MTk1Njc5Mjg0MTswMDsn\"",
+            "systemId": "0b43f730-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "OFBC2005177",
+            "lineNo": 10000,
+            "itemNo": "45302206",
+            "description": "Barra Ti sobre 2 implantes MG 6 piezas",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1OTUzNTUzNjU1NDA2MDQ3MDkwMTswMDsn\"",
+            "systemId": "d54cf730-f498-ed11-965c-6045bd89ef6b",
+            "prodOrderNo": "OFBC2213032",
+            "lineNo": 10000,
+            "itemNo": "453562120",
+            "description": "Barra Ti sobre 6 implantes 3i 12 piezas Gold",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0MTA4MzM4MDk2OTc3NjQ0MTUyMTswMDsn\"",
+            "systemId": "f5152a6b-afbb-ef11-b683-8326c7a5f493",
+            "prodOrderNo": "24006519.007",
+            "lineNo": 10000,
+            "itemNo": "252033111Q",
+            "description": "Q IMPLANTE INHEX QUATTRO 3311 SIN TRATAR",
+            "remainingQtyBase": 101
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2NzM1NzA4MDYyMTExMTA2MTMyMTswMDsn\"",
+            "systemId": "bb64a8fa-52bc-ef11-b683-8326c7a5f493",
+            "prodOrderNo": "24006977",
+            "lineNo": 10000,
+            "itemNo": "23205501",
+            "description": "Análogo implante Inhex Std",
+            "remainingQtyBase": 3
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNjc2NDYyMDU0NDI4MjgxOTIyMTswMDsn\"",
+            "systemId": "5b80a71d-56bc-ef11-b683-8326c7a5f493",
+            "prodOrderNo": "24006974",
+            "lineNo": 10000,
+            "itemNo": "23205501",
+            "description": "Análogo implante Inhex Std",
+            "remainingQtyBase": 3
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MzEyMzU2NTU4NjI2NzQyNTc0MTswMDsn\"",
+            "systemId": "8513f694-57bc-ef11-b683-8326c7a5f493",
+            "prodOrderNo": "24006978",
+            "lineNo": 10000,
+            "itemNo": "23205501",
+            "description": "Análogo implante Inhex Std",
+            "remainingQtyBase": 2
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NTUxMzAzOTEzMjk3Mzg4MDMwMTswMDsn\"",
+            "systemId": "42f4b4fb-eae9-ef11-b683-8326c7a5f493",
+            "prodOrderNo": "24006981",
+            "lineNo": 10000,
+            "itemNo": "23205501",
+            "description": "Análogo implante Inhex Std",
+            "remainingQtyBase": 3
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMjc5NDY1NjU2NTE2NDQwODgxMTswMDsn\"",
+            "systemId": "5a87e2ec-7514-f011-b683-8326c7a5f493",
+            "prodOrderNo": "24006998",
+            "lineNo": 10000,
+            "itemNo": "23403710",
+            "description": "Implante Inhex Std 3,75x10 mm ONE",
+            "remainingQtyBase": 8
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2NTg1NTEwNDgwMDA5MjM4MTM0MTswMDsn\"",
+            "systemId": "f4001a2c-1415-f011-b683-8326c7a5f493",
+            "prodOrderNo": "24006999",
+            "lineNo": 10000,
+            "itemNo": "14613413",
+            "description": "Implante Osseous Std 3,4x13 mm Integral",
+            "remainingQtyBase": 9
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MDY3OTMzMzA2MjE4MDg4OTUyMTswMDsn\"",
+            "systemId": "2b0c82f0-c5cf-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006501",
+            "lineNo": 10000,
+            "itemNo": "F41236402M",
+            "description": "MEC FAB TORNILLO SCANBODY INTRAORAL INHEX STD",
+            "remainingQtyBase": 28
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNjYwODMzNjI3Nzg1NTQwNDkzMTswMDsn\"",
+            "systemId": "f8533566-dfcf-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006509",
+            "lineNo": 10000,
+            "itemNo": "252037136",
+            "description": "TEST DE ESTERILIZACION IMPLANTE 3713\t",
+            "remainingQtyBase": 20
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MjA5MDQ1NjY0OTk5NDE3Nzk5MTswMDsn\"",
+            "systemId": "0531fb09-e1cf-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006512",
+            "lineNo": 10000,
+            "itemNo": "F23207003P",
+            "description": "FAB TRANSPORTADOR  PURPURA",
+            "remainingQtyBase": 500
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2OTc1MjM5NDk0MzcwMDA4Mzc0MTswMDsn\"",
+            "systemId": "30bc3a1b-e1cf-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006514",
+            "lineNo": 10000,
+            "itemNo": "F23207003A",
+            "description": "FAB TRANSPORTADOR  AZUL",
+            "remainingQtyBase": 500
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2NzU5NTU3OTYxOTU4OTc3NjQ0MTswMDsn\"",
+            "systemId": "382dd2be-fbcf-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006520",
+            "lineNo": 10000,
+            "itemNo": "13102037",
+            "description": "Perfiladora Ø3,6 Inhex",
+            "remainingQtyBase": 29
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1MDkyODg0MzUxOTYwMzcyNjczMTswMDsn\"",
+            "systemId": "47614722-fccf-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006521",
+            "lineNo": 10000,
+            "itemNo": "13102042",
+            "description": "Perfiladora Ø4,1 Inhex",
+            "remainingQtyBase": 14
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NTMwOTQ4Mjg3MzEzMjIyNzI3MTswMDsn\"",
+            "systemId": "178103cd-97d0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006683",
+            "lineNo": 10000,
+            "itemNo": "252037151",
+            "description": "IMPLANTE INH QUATTRO 3715 SIN TRATAR",
+            "remainingQtyBase": 77
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2OTkyMTQ5OTUwNjcxMzM5MzQ2MTswMDsn\"",
+            "systemId": "448103cd-97d0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006684",
+            "lineNo": 10000,
+            "itemNo": "252037151",
+            "description": "IMPLANTE INH QUATTRO 3715 SIN TRATAR",
+            "remainingQtyBase": 35
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2Nzk5ODUxNDY4OTA4OTY4MzQ0MTswMDsn\"",
+            "systemId": "5016eff3-97d0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006686",
+            "lineNo": 10000,
+            "itemNo": "232037101",
+            "description": "IMPLANTE INH 3710 SIN TRATAR",
+            "remainingQtyBase": 115
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MDU2NDg3MDIxMjY1MTQ5MDkyMTswMDsn\"",
+            "systemId": "7d16eff3-97d0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006687",
+            "lineNo": 10000,
+            "itemNo": "232037101",
+            "description": "IMPLANTE INH 3710 SIN TRATAR",
+            "remainingQtyBase": 47
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyODAzMDgzMjYwMTY5NDg2NzQyMTswMDsn\"",
+            "systemId": "aa16eff3-97d0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006688",
+            "lineNo": 10000,
+            "itemNo": "232037101",
+            "description": "IMPLANTE INH 3710 SIN TRATAR",
+            "remainingQtyBase": 42
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0MzM3NzYwOTMwNjAwMzA3Nzg5MTswMDsn\"",
+            "systemId": "d716eff3-97d0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006689",
+            "lineNo": 10000,
+            "itemNo": "232037101",
+            "description": "IMPLANTE INH 3710 SIN TRATAR",
+            "remainingQtyBase": 55
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1ODU4NDc5NzkzNDcyMDE1Nzk3MTswMDsn\"",
+            "systemId": "0417eff3-97d0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006690",
+            "lineNo": 10000,
+            "itemNo": "232037101",
+            "description": "IMPLANTE INH 3710 SIN TRATAR",
+            "remainingQtyBase": 86
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1MDQxOTI1MjM3NjE4MzA3MjAxMTswMDsn\"",
+            "systemId": "3117eff3-97d0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006691",
+            "lineNo": 10000,
+            "itemNo": "232037101",
+            "description": "IMPLANTE INH 3710 SIN TRATAR",
+            "remainingQtyBase": 80
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2NTc2MzE3MDA5MTg4OTMwNDI5MTswMDsn\"",
+            "systemId": "5e17eff3-97d0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006692",
+            "lineNo": 10000,
+            "itemNo": "232037101",
+            "description": "IMPLANTE INH 3710 SIN TRATAR",
+            "remainingQtyBase": 90
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzNDA4NTMwMjI3MDUxMzU3NzY4MTswMDsn\"",
+            "systemId": "8b17eff3-97d0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006693",
+            "lineNo": 10000,
+            "itemNo": "232037101",
+            "description": "IMPLANTE INH 3710 SIN TRATAR",
+            "remainingQtyBase": 109
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNTE4NDk5NjY0MTI2MzYxOTM2MTswMDsn\"",
+            "systemId": "b817eff3-97d0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006694",
+            "lineNo": 10000,
+            "itemNo": "232037101",
+            "description": "IMPLANTE INH 3710 SIN TRATAR",
+            "remainingQtyBase": 125
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0MTI2MzY3NDQyNzY2NTUwMDI3MTswMDsn\"",
+            "systemId": "e517eff3-97d0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006695",
+            "lineNo": 10000,
+            "itemNo": "232037101",
+            "description": "IMPLANTE INH 3710 SIN TRATAR",
+            "remainingQtyBase": 44
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NTg3NjQwODYwMDM4NDYxMjA3MTswMDsn\"",
+            "systemId": "1218eff3-97d0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006696",
+            "lineNo": 10000,
+            "itemNo": "232037101",
+            "description": "IMPLANTE INH 3710 SIN TRATAR",
+            "remainingQtyBase": 30
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0ODQ0Mjc2NDEyMzk3OTE4NzU1MTswMDsn\"",
+            "systemId": "3f18eff3-97d0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006697",
+            "lineNo": 10000,
+            "itemNo": "232037101",
+            "description": "IMPLANTE INH 3710 SIN TRATAR",
+            "remainingQtyBase": 107
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NzY3MTMyNTk5NjY2MzMzOTY1MTswMDsn\"",
+            "systemId": "0646b123-98d0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006699",
+            "lineNo": 10000,
+            "itemNo": "166042151",
+            "description": "IMPLANTE OSS QUATTRO 4215 SIN TRATAR",
+            "remainingQtyBase": 44
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0ODQ4NTU0MTU2MjMyMjY1NDU1MTswMDsn\"",
+            "systemId": "3346b123-98d0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006700",
+            "lineNo": 10000,
+            "itemNo": "166042151",
+            "description": "IMPLANTE OSS QUATTRO 4215 SIN TRATAR",
+            "remainingQtyBase": 27
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0OTQ0MzAyMTk4NDQ3MjAwNzU4MTswMDsn\"",
+            "systemId": "3e647980-9dd0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006702",
+            "lineNo": 10000,
+            "itemNo": "252037081",
+            "description": "IMPLANTE INH QUATTRO 3708 SIN TRATAR",
+            "remainingQtyBase": 72
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2NTMyMzU0ODI4NTUwNzE5MjkwMTswMDsn\"",
+            "systemId": "6b647980-9dd0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006703",
+            "lineNo": 10000,
+            "itemNo": "252037081",
+            "description": "IMPLANTE INH QUATTRO 3708 SIN TRATAR",
+            "remainingQtyBase": 95
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMjM3NDMxMTgwODA3MzgwOTQxMTswMDsn\"",
+            "systemId": "98647980-9dd0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006704",
+            "lineNo": 10000,
+            "itemNo": "252037081",
+            "description": "IMPLANTE INH QUATTRO 3708 SIN TRATAR",
+            "remainingQtyBase": 37
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0NTMxNTc5NzgyNjI1OTgzNzQ1MTswMDsn\"",
+            "systemId": "c5647980-9dd0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006705",
+            "lineNo": 10000,
+            "itemNo": "252037081",
+            "description": "IMPLANTE INH QUATTRO 3708 SIN TRATAR",
+            "remainingQtyBase": 71
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzNzM0ODQwMzc1MzExNjk5MzQ0MTswMDsn\"",
+            "systemId": "f2647980-9dd0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006706",
+            "lineNo": 10000,
+            "itemNo": "252037081",
+            "description": "IMPLANTE INH QUATTRO 3708 SIN TRATAR",
+            "remainingQtyBase": 125
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NjE2ODY4Nzg3NjEwODg4OTY1MTswMDsn\"",
+            "systemId": "1f657980-9dd0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006707",
+            "lineNo": 10000,
+            "itemNo": "252037081",
+            "description": "IMPLANTE INH QUATTRO 3708 SIN TRATAR",
+            "remainingQtyBase": 23
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE3MDEyMjY4NjIwNTUzNjM5MzEwMTswMDsn\"",
+            "systemId": "4c657980-9dd0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006708",
+            "lineNo": 10000,
+            "itemNo": "252037081",
+            "description": "IMPLANTE INH QUATTRO 3708 SIN TRATAR",
+            "remainingQtyBase": 109
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0NTA4MDg5MDg1NjY1NDg5MDk2MTswMDsn\"",
+            "systemId": "c4dd8ab2-9dd0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006710",
+            "lineNo": 10000,
+            "itemNo": "252042081",
+            "description": "IMPLANTE INH QUATTRO 4208 SIN TRATAR",
+            "remainingQtyBase": 98
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzNjcxNzE5MzgxMjcxMzY3MTAwMTswMDsn\"",
+            "systemId": "f1dd8ab2-9dd0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006711",
+            "lineNo": 10000,
+            "itemNo": "252042081",
+            "description": "IMPLANTE INH QUATTRO 4208 SIN TRATAR",
+            "remainingQtyBase": 29
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NTIwMTg3OTgyNDQwODcxNjQ3MTswMDsn\"",
+            "systemId": "1ede8ab2-9dd0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006712",
+            "lineNo": 10000,
+            "itemNo": "252042081",
+            "description": "IMPLANTE INH QUATTRO 4208 SIN TRATAR",
+            "remainingQtyBase": 76
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE3MTA4MjQwNjEyNTQzODYxNzE1MTswMDsn\"",
+            "systemId": "4bde8ab2-9dd0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006713",
+            "lineNo": 10000,
+            "itemNo": "252042081",
+            "description": "IMPLANTE INH QUATTRO 4208 SIN TRATAR",
+            "remainingQtyBase": 67
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NzkxMTk0ODU5NTgyMTI0Nzc4MTswMDsn\"",
+            "systemId": "038bb9ce-9dd0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006723",
+            "lineNo": 10000,
+            "itemNo": "232042111",
+            "description": "IMPLANTE INH 4211 SIN TRATAR",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzNTgxNDg4NDYyOTIwMjM1MzI4MTswMDsn\"",
+            "systemId": "8a8bb9ce-9dd0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006726",
+            "lineNo": 10000,
+            "itemNo": "232042111",
+            "description": "IMPLANTE INH 4211 SIN TRATAR",
+            "remainingQtyBase": 80
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNTI0NDA0ODM4NDU0MjA4MTMyMTswMDsn\"",
+            "systemId": "b78bb9ce-9dd0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006727",
+            "lineNo": 10000,
+            "itemNo": "232042111",
+            "description": "IMPLANTE INH 4211 SIN TRATAR",
+            "remainingQtyBase": 119
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzOTE5ODA0NjcxMzk0MDg1MTEzMTswMDsn\"",
+            "systemId": "e48bb9ce-9dd0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006728",
+            "lineNo": 10000,
+            "itemNo": "232042111",
+            "description": "IMPLANTE INH 4211 SIN TRATAR",
+            "remainingQtyBase": 105
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NDM0NzM4OTQ3MTk4OTQ4OTc0MTswMDsn\"",
+            "systemId": "118cb9ce-9dd0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006729",
+            "lineNo": 10000,
+            "itemNo": "232042111",
+            "description": "IMPLANTE INH 4211 SIN TRATAR",
+            "remainingQtyBase": 90
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0OTkxMzQ5MDEzNzY2MzI3NTgxMTswMDsn\"",
+            "systemId": "3e8cb9ce-9dd0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006730",
+            "lineNo": 10000,
+            "itemNo": "232042111",
+            "description": "IMPLANTE INH 4211 SIN TRATAR",
+            "remainingQtyBase": 26
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2NTA2MjExNTM1NjYwNjkwMDAxMTswMDsn\"",
+            "systemId": "6b8cb9ce-9dd0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006731",
+            "lineNo": 10000,
+            "itemNo": "232042111",
+            "description": "IMPLANTE INH 4211 SIN TRATAR",
+            "remainingQtyBase": 123
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMjExMjg3ODg3OTE3MTUyOTkyMTswMDsn\"",
+            "systemId": "988cb9ce-9dd0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006732",
+            "lineNo": 10000,
+            "itemNo": "232042111",
+            "description": "IMPLANTE INH 4211 SIN TRATAR",
+            "remainingQtyBase": 53
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0MjQ4NTkzMDA1NTMwOTgzODM0MTswMDsn\"",
+            "systemId": "e9105e55-a3d0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006734",
+            "lineNo": 10000,
+            "itemNo": "F232070031",
+            "description": "FAB TORNILLO TRANSPORTADOR CORTO",
+            "remainingQtyBase": 415
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1MTM4Njk1MzIyMzY1OTI2MDk1MTswMDsn\"",
+            "systemId": "18115e55-a3d0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006735",
+            "lineNo": 10000,
+            "itemNo": "F232070031",
+            "description": "FAB TORNILLO TRANSPORTADOR CORTO",
+            "remainingQtyBase": 50
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MjE1NTk0MDk1Mzc0Mjg5NzU3MTswMDsn\"",
+            "systemId": "47115e55-a3d0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006736",
+            "lineNo": 10000,
+            "itemNo": "F232070031",
+            "description": "FAB TORNILLO TRANSPORTADOR CORTO",
+            "remainingQtyBase": 426
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE3MTA1NjI0NjU4Mjk3OTQ4MzA2MTswMDsn\"",
+            "systemId": "76115e55-a3d0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006737",
+            "lineNo": 10000,
+            "itemNo": "F232070031",
+            "description": "FAB TORNILLO TRANSPORTADOR CORTO",
+            "remainingQtyBase": 178
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMzIwOTY1OTkyNzA3MDYwNDkxMTswMDsn\"",
+            "systemId": "a5115e55-a3d0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006738",
+            "lineNo": 10000,
+            "itemNo": "F232070031",
+            "description": "FAB TORNILLO TRANSPORTADOR CORTO",
+            "remainingQtyBase": 413
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0MTM3ODA2NDQ3NDE5NDI4OTQzMTswMDsn\"",
+            "systemId": "d4115e55-a3d0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006739",
+            "lineNo": 10000,
+            "itemNo": "F232070031",
+            "description": "FAB TORNILLO TRANSPORTADOR CORTO",
+            "remainingQtyBase": 158
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0OTgwMzE4MzkxNzE1NjgxMTU1MTswMDsn\"",
+            "systemId": "03125e55-a3d0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006740",
+            "lineNo": 10000,
+            "itemNo": "F232070031",
+            "description": "FAB TORNILLO TRANSPORTADOR CORTO",
+            "remainingQtyBase": 18
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1Nzk3MTU4ODQ2NDM0NDcwMDExMTswMDsn\"",
+            "systemId": "32125e55-a3d0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006741",
+            "lineNo": 10000,
+            "itemNo": "F232070031",
+            "description": "FAB TORNILLO TRANSPORTADOR CORTO",
+            "remainingQtyBase": 415
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzNTIxNTA2OTk5NDA3NzcyNjg4MTswMDsn\"",
+            "systemId": "b61b3912-a4d0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006743",
+            "lineNo": 10000,
+            "itemNo": "F23205001",
+            "description": "FAB TORNILLO DE CIERRE",
+            "remainingQtyBase": 197
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0MzQxMjM5NzQ3NjY0MjIxNDA3MTswMDsn\"",
+            "systemId": "e51b3912-a4d0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006744",
+            "lineNo": 10000,
+            "itemNo": "F23205001",
+            "description": "FAB TORNILLO DE CIERRE",
+            "remainingQtyBase": 426
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzNjE5MDkwODE3NzgwMTI1OTk3MTswMDsn\"",
+            "systemId": "b8d747ae-d1d0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006785",
+            "lineNo": 10000,
+            "itemNo": "23403310",
+            "description": "Implante Inhex Mini 3,3x10 mm ONE",
+            "remainingQtyBase": 10
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0NTg1ODQxMDY0MjgzMzA5NDI0MTswMDsn\"",
+            "systemId": "8dd847ae-d1d0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006786",
+            "lineNo": 10000,
+            "itemNo": "23403311",
+            "description": "Implante Inhex Mini 3,3x11,5 mm ONE",
+            "remainingQtyBase": 11
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0OTQzMjM3MzU1MzI5MjIzMTczMTswMDsn\"",
+            "systemId": "7fd947ae-d1d0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006787",
+            "lineNo": 10000,
+            "itemNo": "23403313",
+            "description": "Implante Inhex Mini 3,3x13 mm ONE",
+            "remainingQtyBase": 8
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyOTAzNjMzODU3Njc5MjcxMTE5MTswMDsn\"",
+            "systemId": "e1d947ae-d1d0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006788",
+            "lineNo": 10000,
+            "itemNo": "23403313",
+            "description": "Implante Inhex Mini 3,3x13 mm ONE",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1ODMyOTgxMjY5NjA4NTE0MDUxMTswMDsn\"",
+            "systemId": "43da47ae-d1d0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006789",
+            "lineNo": 10000,
+            "itemNo": "23403313",
+            "description": "Implante Inhex Mini 3,3x13 mm ONE",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2NzEyMjM2Mzk1NzA5NjQ1NDIwMTswMDsn\"",
+            "systemId": "10db47ae-d1d0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006790",
+            "lineNo": 10000,
+            "itemNo": "23405009",
+            "description": "Implante Inhex Maxi 5x9 mm ONE",
+            "remainingQtyBase": 10
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMDEwMzA4NjU2ODQxNzU5OTc3MTswMDsn\"",
+            "systemId": "d9db47ae-d1d0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006791",
+            "lineNo": 10000,
+            "itemNo": "23405013",
+            "description": "Implante Inhex Maxi 5x13 mm ONE",
+            "remainingQtyBase": 10
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2ODczNzU5MzQ1NzE0OTc5MDU4MTswMDsn\"",
+            "systemId": "0b6e4eb4-d1d0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006792",
+            "lineNo": 10000,
+            "itemNo": "23403711",
+            "description": "Implante Inhex Std 3,75x11,5 mm ONE",
+            "remainingQtyBase": 15
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMjQ1MDE4Mzc2NjM4Mjg3OTkyMTswMDsn\"",
+            "systemId": "d46e4eb4-d1d0-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006793",
+            "lineNo": 10000,
+            "itemNo": "23404211",
+            "description": "Implante Inhex Std 4,25x11,5 mm ONE",
+            "remainingQtyBase": 61
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2OTgyNDgwMjQ0MTg3NDQwMzMyMTswMDsn\"",
+            "systemId": "8e6b0187-51d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402140",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NTM4MzExNzYyMjkyNjA4NjQzMTswMDsn\"",
+            "systemId": "d3cdd167-52d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402141",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzODUzMTkwMjYzNDE4MDkyNzA1MTswMDsn\"",
+            "systemId": "378e6ad3-52d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402142",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMDU4NTc0NTgxODI3NjU4NTAzMTswMDsn\"",
+            "systemId": "5accb8f9-52d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402143",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0MjkxMjY3Njg1NTg4MTgzMTM1MTswMDsn\"",
+            "systemId": "1ee9244f-53d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402144",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NzMzMzcxMTM4MDk4OTE2ODQ4MTswMDsn\"",
+            "systemId": "c86b5c61-53d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402145",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyODc1Mzg5NDM2NDc4MzUxNjk4MTswMDsn\"",
+            "systemId": "6df5b1a7-53d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402146",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMzQ0ODYzODA3MTk4OTA5MTYyMTswMDsn\"",
+            "systemId": "4a62d8e7-53d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402147",
+            "lineNo": 10000,
+            "itemNo": "44301001",
+            "description": "Unitario Ti sobre 1 implante MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzOTQ4Mjc3NDAxMzgzMjMzNzIxMTswMDsn\"",
+            "systemId": "2b5d5df6-53d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402148",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzNTM3NjA2ODY3OTU5Njc1Mzc5MTswMDsn\"",
+            "systemId": "46e08fa1-54d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402149",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2NDM3MDUwMDU1MzU5OTE4OTUzMTswMDsn\"",
+            "systemId": "a7404137-55d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402150",
+            "lineNo": 10000,
+            "itemNo": "44202003",
+            "description": "Puente CRCO sobre 2 implantes MG 3 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2OTI0MTc5NTI3MTY5NjkxNDIxMTswMDsn\"",
+            "systemId": "8ac75573-55d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402151",
+            "lineNo": 10000,
+            "itemNo": "44202002",
+            "description": "Puente CRCO sobre 2 implantes MG 2 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1OTA0NDMyOTUxODQ3MTI1Njc3MTswMDsn\"",
+            "systemId": "c242edf5-55d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402152",
+            "lineNo": 10000,
+            "itemNo": "44202002",
+            "description": "Puente CRCO sobre 2 implantes MG 2 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0MDY0NDY5MDI0MzQ2OTk1OTgwMTswMDsn\"",
+            "systemId": "2d087398-5cd1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006810",
+            "lineNo": 10000,
+            "itemNo": "15252125",
+            "description": "Destornillador carraca Ø7mm hexagonal 1,25 L14 mm",
+            "remainingQtyBase": 15
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MjI0MDI1MDc3Nzg5ODU5NDMxMTswMDsn\"",
+            "systemId": "bbcf4244-5dd1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006817",
+            "lineNo": 10000,
+            "itemNo": "139133336",
+            "description": "Fresa Ø3,3 helicoidal RCD L16 mm marca 6 mm",
+            "remainingQtyBase": 91
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MjM1Nzg1MjkzODA1ODAyNjMyMTswMDsn\"",
+            "systemId": "a74d5eb2-5ed1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402153",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNTc3ODY1MDMxMTkxNzczNDI5MTswMDsn\"",
+            "systemId": "7fabff1e-5fd1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402154",
+            "lineNo": 10000,
+            "itemNo": "44202003",
+            "description": "Puente CRCO sobre 2 implantes MG 3 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0NTE0MDU0MDY3NzYxOTIxMjM3MTswMDsn\"",
+            "systemId": "04302192-5fd1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402155",
+            "lineNo": 10000,
+            "itemNo": "44200003",
+            "description": "Puente sobre cofia CRCO MG 3 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzNDU0MjU1ODk3NzM4MDg5Njc2MTswMDsn\"",
+            "systemId": "71fe3918-61d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402156",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MDU5NTIzMjYxNDE1MzYwNzcxMTswMDsn\"",
+            "systemId": "8da472bf-61d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006840",
+            "lineNo": 10000,
+            "itemNo": "236033113",
+            "description": "IMPLANT INHE 3311 HIBRID EMPAQUETADO  SIN ESTERIL",
+            "remainingQtyBase": 50
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0NTYzNDU4OTk2NzI1MDY0MTM3MTswMDsn\"",
+            "systemId": "3da672bf-61d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006841",
+            "lineNo": 10000,
+            "itemNo": "156137103",
+            "description": "IMPLANTE OSS 3710 V20A EMPAQU SIN ESTERILIZAR ",
+            "remainingQtyBase": 42
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NDUxOTU4MzA2MzM3ODk3MzQ3MTswMDsn\"",
+            "systemId": "eda772bf-61d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006842",
+            "lineNo": 10000,
+            "itemNo": "156142103",
+            "description": "IMPLANTE OSS 4210 V20A EMPAQU SIN ESTERILIZAR ",
+            "remainingQtyBase": 42
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE3MDIzMjQ1NjQ3MzAyMzUwMjU5MTswMDsn\"",
+            "systemId": "b0a972bf-61d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006843",
+            "lineNo": 10000,
+            "itemNo": "242033133",
+            "description": "IMPLANTE INH 3313 V20A EMPAQU SIN ESTERILIZAR",
+            "remainingQtyBase": 55
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMzAxNzExNzgwMzI1ODgzMzYwMTswMDsn\"",
+            "systemId": "79aa72bf-61d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006844",
+            "lineNo": 10000,
+            "itemNo": "242033133",
+            "description": "IMPLANTE INH 3313 V20A EMPAQU SIN ESTERILIZAR",
+            "remainingQtyBase": 29
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNjEzNTk1MTc0ODUyNTI1ODAyMTswMDsn\"",
+            "systemId": "41ac72bf-61d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006845",
+            "lineNo": 10000,
+            "itemNo": "242037113",
+            "description": "IMPLANTE INH 3711 V20A EMPAQU SIN ESTERILIZAR",
+            "remainingQtyBase": 200
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzNjg1Nzk3ODU0NzcxNzkzNDM1MTswMDsn\"",
+            "systemId": "0bad72bf-61d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006846",
+            "lineNo": 10000,
+            "itemNo": "242037113",
+            "description": "IMPLANTE INH 3711 V20A EMPAQU SIN ESTERILIZAR",
+            "remainingQtyBase": 147
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1MTEwNDgwNDAyMzY3NjY0Mzg3MTswMDsn\"",
+            "systemId": "daae72bf-61d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006847",
+            "lineNo": 10000,
+            "itemNo": "242042103",
+            "description": "IMPLANTE INH 4210 V20A EMPAQU SIN ESTERILIZAR",
+            "remainingQtyBase": 236
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2NzgyNjMyMTEwNzQzMTg5MDAxMTswMDsn\"",
+            "systemId": "a4af72bf-61d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006848",
+            "lineNo": 10000,
+            "itemNo": "242042103",
+            "description": "IMPLANTE INH 4210 V20A EMPAQU SIN ESTERILIZAR",
+            "remainingQtyBase": 108
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2NDQxNTEyNjAyODYwODI2NTkxMTswMDsn\"",
+            "systemId": "93b172bf-61d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006849",
+            "lineNo": 10000,
+            "itemNo": "242042113",
+            "description": "IMPLANTE INH 4211 V20A EMPAQU SIN ESTERILIZAR",
+            "remainingQtyBase": 64
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyODA2OTEzNTA2Njc2MjQ1NDA2MTswMDsn\"",
+            "systemId": "5cb272bf-61d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006850",
+            "lineNo": 10000,
+            "itemNo": "242042113",
+            "description": "IMPLANTE INH 4211 V20A EMPAQU SIN ESTERILIZAR",
+            "remainingQtyBase": 139
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzNjQzNzEzNTQxNzcyMzE3NDMxMTswMDsn\"",
+            "systemId": "0bb472bf-61d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006851",
+            "lineNo": 10000,
+            "itemNo": "252037133",
+            "description": "IMPLANTE INH QUATTRO 3713 EMPAQU SIN ESTERILIZAR",
+            "remainingQtyBase": 59
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NTgwNjI0NDAyOTA0MzYzODkxMTswMDsn\"",
+            "systemId": "e223d00a-67d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402157",
+            "lineNo": 10000,
+            "itemNo": "44201002",
+            "description": "Puente CRCO sobre 1 implante MG 2 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2OTM3MjYxOTM0NzQ5ODUwMDY3MTswMDsn\"",
+            "systemId": "b81d3ba4-67d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402158",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MjgzMzA5NDA0MDE0NzQzNDY2MTswMDsn\"",
+            "systemId": "90e2ec53-6ad1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402159",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MTk2NDA2NjUxNzgyMjg5MzY1MTswMDsn\"",
+            "systemId": "8c064018-6bd1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402160",
+            "lineNo": 10000,
+            "itemNo": "44204009",
+            "description": "Puente CRCO sobre 4 implantes MG 9 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNTczMDIzNjc4Njg0MDA4ODQ4MTswMDsn\"",
+            "systemId": "4c476959-6cd1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402161",
+            "lineNo": 10000,
+            "itemNo": "44202002",
+            "description": "Puente CRCO sobre 2 implantes MG 2 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MDg5NjEyNDExMTg1MTI1MTI0MTswMDsn\"",
+            "systemId": "90d6bc33-70d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402162",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNzk2MjAwODI2Mzk3MDg5NjAyMTswMDsn\"",
+            "systemId": "4d6d3917-71d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402163",
+            "lineNo": 10000,
+            "itemNo": "44202002",
+            "description": "Puente CRCO sobre 2 implantes MG 2 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2ODU4ODgxOTY1ODk2MTMxNjA3MTswMDsn\"",
+            "systemId": "aa39a1c1-71d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402164",
+            "lineNo": 10000,
+            "itemNo": "44203004",
+            "description": "Puente CRCO sobre 3 implantes MG 4 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNTg1NTA3MTIzODg3MjI3Mzg1MTswMDsn\"",
+            "systemId": "5795a35c-74d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402166",
+            "lineNo": 10000,
+            "itemNo": "44231001",
+            "description": "Unitario CRCO Nobel 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNjMwMDY2Njk3ODUzNjM3Njg3MTswMDsn\"",
+            "systemId": "5d60a707-78d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402167",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0OTI0MDQzNDI1NDk5NDEwMjc5MTswMDsn\"",
+            "systemId": "d7d64c17-78d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006131",
+            "lineNo": 10000,
+            "itemNo": "23403710",
+            "description": "Implante Inhex Std 3,75x10 mm ONE",
+            "remainingQtyBase": 9
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1ODU1MjM3MDg3MjM0MzE3MDI4MTswMDsn\"",
+            "systemId": "ec951cbf-79d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402168",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyODI3Nzg0MTA4MzE3ODAxMzk0MTswMDsn\"",
+            "systemId": "44a526dd-7ad1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402169",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzNzc0NzMzMTI2ODc1MTI5NTcwMTswMDsn\"",
+            "systemId": "1c5fe80e-7cd1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402170",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MzM3NzMwODM2NzY3ODQ1OTk2MTswMDsn\"",
+            "systemId": "81c4a3c2-7dd1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402171",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1MTU3NDc4ODcwMjQ2NTE4MjY0MTswMDsn\"",
+            "systemId": "c30504ae-7ed1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402172",
+            "lineNo": 10000,
+            "itemNo": "44202002",
+            "description": "Puente CRCO sobre 2 implantes MG 2 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MTg5NTY0NzU5NjU0NTgyOTYzMTswMDsn\"",
+            "systemId": "9bd58f4d-7fd1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402173",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2NzE5MDkzMDgzNDIzMzUzMjIwMTswMDsn\"",
+            "systemId": "bf098dc6-7fd1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402174",
+            "lineNo": 10000,
+            "itemNo": "44202002",
+            "description": "Puente CRCO sobre 2 implantes MG 2 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE3MDkxMjc1NDI5MTc1OTE3ODc1MTswMDsn\"",
+            "systemId": "57cabe57-80d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402175",
+            "lineNo": 10000,
+            "itemNo": "44202002",
+            "description": "Puente CRCO sobre 2 implantes MG 2 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzNjcyODY1MDM5NTczNjU0NTM0MTswMDsn\"",
+            "systemId": "ed61afea-81d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006884",
+            "lineNo": 10000,
+            "itemNo": "F23205001",
+            "description": "FAB TORNILLO DE CIERRE",
+            "remainingQtyBase": 635
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NzU4NTQyMTI1OTE2OTcwODk0MTswMDsn\"",
+            "systemId": "1c62afea-81d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006885",
+            "lineNo": 10000,
+            "itemNo": "F23205001",
+            "description": "FAB TORNILLO DE CIERRE",
+            "remainingQtyBase": 204
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2NjI4NzU3NTQwMzA0NjA0OTI3MTswMDsn\"",
+            "systemId": "4b62afea-81d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006886",
+            "lineNo": 10000,
+            "itemNo": "F23205001",
+            "description": "FAB TORNILLO DE CIERRE",
+            "remainingQtyBase": 416
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1Mzg0OTE2OTIxMzI2MTQwNDg1MTswMDsn\"",
+            "systemId": "01e77386-89d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402176",
+            "lineNo": 10000,
+            "itemNo": "44251001",
+            "description": "Unitario CRCO 3i 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2NzY3MzM1MDI1OTU0NjkyNTcxMTswMDsn\"",
+            "systemId": "4a5bfbac-89d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006893",
+            "lineNo": 10000,
+            "itemNo": "F232099021M",
+            "description": "MEC FAB PILAR CON RECTO MULTIUNIT INH STD ALT 2 MM",
+            "remainingQtyBase": 738
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MTgyNDYxMTE2NzU4NTM5OTE0MTswMDsn\"",
+            "systemId": "6e9ed3de-89d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006894",
+            "lineNo": 10000,
+            "itemNo": "F412355012M",
+            "description": "MEC FAB ANALOGO DIGITAL INHEX STD",
+            "remainingQtyBase": 1000
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMDE3MDkwOTYxMTgxODI1MjMxMTswMDsn\"",
+            "systemId": "809ed3de-89d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402177",
+            "lineNo": 10000,
+            "itemNo": "44200006",
+            "description": "Puente sobre cofia CRCO MG 6 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMzYyMjMzODE4ODUxMTQ5OTM1MTswMDsn\"",
+            "systemId": "91eec91c-8ad1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006895",
+            "lineNo": 10000,
+            "itemNo": "F41146406M",
+            "description": "MEC Tornillo Scanbody Pilar Cónico comp multiunit",
+            "remainingQtyBase": 500
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1Njg4NjQ4ODYwNzU3ODQ4ODIwMTswMDsn\"",
+            "systemId": "136e7a01-8bd1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402178",
+            "lineNo": 10000,
+            "itemNo": "44251001",
+            "description": "Unitario CRCO 3i 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0MjYzOTg5NzA2ODI2MzE1NTg3MTswMDsn\"",
+            "systemId": "c6e1274b-8bd1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402179",
+            "lineNo": 10000,
+            "itemNo": "44251001",
+            "description": "Unitario CRCO 3i 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1MjgxMDEwNjQ5ODg3NTk1NTQ3MTswMDsn\"",
+            "systemId": "3e466ea2-8bd1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402180",
+            "lineNo": 10000,
+            "itemNo": "44251001",
+            "description": "Unitario CRCO 3i 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzNjIxNzQzNzg1ODI0Mzg2ODk2MTswMDsn\"",
+            "systemId": "e7933337-8cd1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402181",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2NzMzNzUzODk1MDg0NzY4MTQzMTswMDsn\"",
+            "systemId": "4f7c4136-8dd1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402182",
+            "lineNo": 10000,
+            "itemNo": "44202002",
+            "description": "Puente CRCO sobre 2 implantes MG 2 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1MzQ5MTA3NzQ4MTQxOTc3OTUzMTswMDsn\"",
+            "systemId": "049dbec0-8dd1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402183",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNjgxNzkzNjEwMTM4MzIxMTA1MTswMDsn\"",
+            "systemId": "a8c6d425-8ed1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402184",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0NzAwMTczMDUzMDk4NjcwMTI4MTswMDsn\"",
+            "systemId": "db29708e-8ed1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402185",
+            "lineNo": 10000,
+            "itemNo": "44204007",
+            "description": "Puente CRCO sobre 4 implantes MG 7 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MDEwMDcxMzYwMDU0NTc5MTk2MTswMDsn\"",
+            "systemId": "62960d0d-8fd1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402186",
+            "lineNo": 10000,
+            "itemNo": "44202004",
+            "description": "Puente CRCO sobre 2 implantes MG 4 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzNDY5Mzc1MzA3NjI0MzI5NDMyMTswMDsn\"",
+            "systemId": "9f2698b0-8fd1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402187",
+            "lineNo": 10000,
+            "itemNo": "45203212",
+            "description": "Barra CRCO sobre 3 implantes MG 12 piezas",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzODE1NDgyNzA3NjIzODEwMTk3MTswMDsn\"",
+            "systemId": "f51ecc19-90d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402188",
+            "lineNo": 10000,
+            "itemNo": "44202002",
+            "description": "Puente CRCO sobre 2 implantes MG 2 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1OTU4MjQzNzE1ODgyNjg4MTI5MTswMDsn\"",
+            "systemId": "78a4626a-90d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402189",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MTEyMTMyNDM1Nzk5NTAxNzc0MTswMDsn\"",
+            "systemId": "70b36d09-91d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402190",
+            "lineNo": 10000,
+            "itemNo": "44202002",
+            "description": "Puente CRCO sobre 2 implantes MG 2 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NDYyMjY0MDkxNDgwNTQ0MTg0MTswMDsn\"",
+            "systemId": "1dd09a5a-91d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402191",
+            "lineNo": 10000,
+            "itemNo": "44202003",
+            "description": "Puente CRCO sobre 2 implantes MG 3 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNzQzMDU4Njc5NzY5MTM0MTI3MTswMDsn\"",
+            "systemId": "ab28de80-92d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402192",
+            "lineNo": 10000,
+            "itemNo": "44202003",
+            "description": "Puente CRCO sobre 2 implantes MG 3 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MDAzOTE0Njc5MTUxMzg4OTk2MTswMDsn\"",
+            "systemId": "79aff3db-92d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402193",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMTA5OTk1ODc5NDU4OTA1Mzk2MTswMDsn\"",
+            "systemId": "9f231de3-92d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402194",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMzgxMTUwOTM1MDI1NjA2NjUxMTswMDsn\"",
+            "systemId": "89641762-93d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402195",
+            "lineNo": 10000,
+            "itemNo": "44203003",
+            "description": "Puente CRCO sobre 3 implantes MG 3 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NDgxOTM4ODQ0NDMzMzE4OTI1MTswMDsn\"",
+            "systemId": "1cc249c5-93d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402196",
+            "lineNo": 10000,
+            "itemNo": "44203003",
+            "description": "Puente CRCO sobre 3 implantes MG 3 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2NTY3OTcxNTg0NTY3MzE5MDM5MTswMDsn\"",
+            "systemId": "5ce2bd0e-94d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402197",
+            "lineNo": 10000,
+            "itemNo": "44202002",
+            "description": "Puente CRCO sobre 2 implantes MG 2 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMzE5ODcyNDc5Njk0NjAwMDIyMTswMDsn\"",
+            "systemId": "8d8e08cf-94d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402198",
+            "lineNo": 10000,
+            "itemNo": "44301001",
+            "description": "Unitario Ti sobre 1 implante MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0MTY1ODk2NzQ5MTYxMjI2MzUxMTswMDsn\"",
+            "systemId": "e2bf67e6-95d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402199",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2NjcyODg5Mzc5ODY0ODM3MjQzMTswMDsn\"",
+            "systemId": "57d9714e-96d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402200",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NDc2MDgxMzMwNTM0NzkyOTk1MTswMDsn\"",
+            "systemId": "1930a6c4-96d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402201",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MTUxNjkyMTk0NjIxNzMwMTE5MTswMDsn\"",
+            "systemId": "75791c54-97d1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402202",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NDE1MTc3NTM4OTk5NjAyNzYxMTswMDsn\"",
+            "systemId": "1141595d-9bd1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402203",
+            "lineNo": 10000,
+            "itemNo": "44202002",
+            "description": "Puente CRCO sobre 2 implantes MG 2 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMDcyNzc3NDgxNzIzNzE2NjkwMTswMDsn\"",
+            "systemId": "92da4814-9fd1-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402204",
+            "lineNo": 10000,
+            "itemNo": "44202003",
+            "description": "Puente CRCO sobre 2 implantes MG 3 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2NTk5Njg3NTM4MTYyODQzNzQ5MTswMDsn\"",
+            "systemId": "d4d3b809-19d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24005132.017",
+            "lineNo": 10000,
+            "itemNo": "232037101Q",
+            "description": "Q IMPLANTE INHEX 3710 SIN TRATAR",
+            "remainingQtyBase": 77
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzOTIzNTk4MjM0MTQ5MjE5MDcxMTswMDsn\"",
+            "systemId": "63d4b809-19d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24005132.018",
+            "lineNo": 10000,
+            "itemNo": "232037101Q",
+            "description": "Q IMPLANTE INHEX 3710 SIN TRATAR",
+            "remainingQtyBase": 45
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2NTU4NjgzOTY1MDIwNTQ1MDk2MTswMDsn\"",
+            "systemId": "d1d4b809-19d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24005132.019",
+            "lineNo": 10000,
+            "itemNo": "232037101Q",
+            "description": "Q IMPLANTE INHEX 3710 SIN TRATAR",
+            "remainingQtyBase": 69
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NjY3NzM5NzQ0NDU3NDY2MDE1MTswMDsn\"",
+            "systemId": "80d5b809-19d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006519.004",
+            "lineNo": 10000,
+            "itemNo": "252033111Q",
+            "description": "Q IMPLANTE INHEX QUATTRO 3311 SIN TRATAR",
+            "remainingQtyBase": 56
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNDA3ODkyNjkxNzQwMzYxNDUxMTswMDsn\"",
+            "systemId": "30d6b809-19d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006519.005",
+            "lineNo": 10000,
+            "itemNo": "252033111Q",
+            "description": "Q IMPLANTE INHEX QUATTRO 3311 SIN TRATAR",
+            "remainingQtyBase": 40
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyODE4OTU0ODE1ODQ1MDUzMDIwMTswMDsn\"",
+            "systemId": "26d7b809-19d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006519.006",
+            "lineNo": 10000,
+            "itemNo": "252033111Q",
+            "description": "Q IMPLANTE INHEX QUATTRO 3311 SIN TRATAR",
+            "remainingQtyBase": 85
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMTQ3NzQ5NjI2MzkxMDg5OTk4MTswMDsn\"",
+            "systemId": "16b56819-1ad2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006908",
+            "lineNo": 10000,
+            "itemNo": "139133326",
+            "description": "Fresa Ø3,2 hueso duro helicoidal RCD L16 mm marca 6 mm",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MjM5ODQ4MzAxNDgwMTg5Nzc0MTswMDsn\"",
+            "systemId": "e34bd15f-1ad2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006911",
+            "lineNo": 10000,
+            "itemNo": "14602000",
+            "description": "Extensor para fresas",
+            "remainingQtyBase": 50
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NjQwNzQzODMzMzI3ODY5NTA3MTswMDsn\"",
+            "systemId": "9d0af47f-1bd2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402205",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0MTQzNjI1MzcwNDU0NDc2NjA5MTswMDsn\"",
+            "systemId": "6b859414-1cd2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402206",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1OTAyOTg4NTk2MTcwMDk5OTEzMTswMDsn\"",
+            "systemId": "8acc197c-1dd2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402207",
+            "lineNo": 10000,
+            "itemNo": "45204212",
+            "description": "Barra CRCO sobre 4 implantes MG 12 piezas",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0ODE5MjU4MzUyOTg0MzAwMDc1MTswMDsn\"",
+            "systemId": "b4cd4397-1ed2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402208",
+            "lineNo": 10000,
+            "itemNo": "44206012",
+            "description": "Puente CRCO sobre 6 implantes MG 12 piezas",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNTQ3MzEyMjM1MjM4OTgzNjk0MTswMDsn\"",
+            "systemId": "30f2ab46-1fd2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006912",
+            "lineNo": 10000,
+            "itemNo": "252033101M",
+            "description": "MEC IMPLANTE INHEX QUATTRO 3310 SIN TRATAR",
+            "remainingQtyBase": 600
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMjk5NTgzNzQ5MzEwMzUzMTQzMTswMDsn\"",
+            "systemId": "06b69795-1fd2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402209",
+            "lineNo": 10000,
+            "itemNo": "44301001",
+            "description": "Unitario Ti sobre 1 implante MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMjc4NTc3OTc2MTk3MDM5MzQ4MTswMDsn\"",
+            "systemId": "241eea3f-20d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402210",
+            "lineNo": 10000,
+            "itemNo": "44202002",
+            "description": "Puente CRCO sobre 2 implantes MG 2 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMDQ0MzE5NjcwMTQxMTY2NTgzMTswMDsn\"",
+            "systemId": "29d9e220-21d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402211",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NDU3OTM2MzE5MjQ3NDAzMDkxMTswMDsn\"",
+            "systemId": "afa29621-22d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402212",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNTQyNzc0OTA1NDc3NzI4NjAxMTswMDsn\"",
+            "systemId": "0f6f8b82-23d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402213",
+            "lineNo": 10000,
+            "itemNo": "44252002",
+            "description": "Puente CRCO sobre 2 implantes 3i 2 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2NDkzNTcxNDA5MTMyNjY1Mzc3MTswMDsn\"",
+            "systemId": "d3dbb698-24d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006914",
+            "lineNo": 10000,
+            "itemNo": "154040032",
+            "description": "Bandeja Osseous Inhex",
+            "remainingQtyBase": 11
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1ODgyNjI2MTc2Mzg1NzYxNTEwMTswMDsn\"",
+            "systemId": "b65dc2c6-24d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402214",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2NzY1ODkwNjIwNjUzODU4MzcxMTswMDsn\"",
+            "systemId": "e47620a8-26d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402215",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2NTE1NTg1ODQ5ODU1NjU0NzgyMTswMDsn\"",
+            "systemId": "d0d64879-27d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402216",
+            "lineNo": 10000,
+            "itemNo": "44202002",
+            "description": "Puente CRCO sobre 2 implantes MG 2 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1Njg4MDYwNjM3NjgyMTk4NzAzMTswMDsn\"",
+            "systemId": "b225743b-2bd2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402217",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0NTg0Mzg5NjQ3NTA1MjgyMDE2MTswMDsn\"",
+            "systemId": "723090c4-2fd2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402218",
+            "lineNo": 10000,
+            "itemNo": "44202002",
+            "description": "Puente CRCO sobre 2 implantes MG 2 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0MjM5MTUyNjQyNDYwMTQ2NDQ4MTswMDsn\"",
+            "systemId": "7bc5f80a-30d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402219",
+            "lineNo": 10000,
+            "itemNo": "44202002",
+            "description": "Puente CRCO sobre 2 implantes MG 2 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MDMwNjcxNzMwOTU1MzUwNDQ0MTswMDsn\"",
+            "systemId": "da2c8797-30d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402220",
+            "lineNo": 10000,
+            "itemNo": "44202002",
+            "description": "Puente CRCO sobre 2 implantes MG 2 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MDA3OTQwNDkyMzA5NjQzODAwMTswMDsn\"",
+            "systemId": "d9138a38-32d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402221",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0NDE4ODAwNTk5NjM1NjIzNjIxMTswMDsn\"",
+            "systemId": "76eca14c-33d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402222",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNzg0NzI4ODcxMzYyNzgyMzA3MTswMDsn\"",
+            "systemId": "0f9bf739-35d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402223",
+            "lineNo": 10000,
+            "itemNo": "44202003",
+            "description": "Puente CRCO sobre 2 implantes MG 3 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzNzM2NDA2OTg2MDgxMjQyMTU1MTswMDsn\"",
+            "systemId": "58caf0d5-36d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402224",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1ODMyMDAwMzQ1MTIwNzk4MjcyMTswMDsn\"",
+            "systemId": "a9ff8851-39d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402225",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNDMxMTAxMzQyMDMxOTc2ODQ2MTswMDsn\"",
+            "systemId": "12da5ced-3bd2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402226",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNDg5MTk0MzU2NDA2ODk1MjE3MTswMDsn\"",
+            "systemId": "16e0ba67-3cd2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402227",
+            "lineNo": 10000,
+            "itemNo": "44231001",
+            "description": "Unitario CRCO Nobel 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0NzEwODM4MjIxNDk0Mjg4ODY3MTswMDsn\"",
+            "systemId": "68f6bf0a-3dd2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402228",
+            "lineNo": 10000,
+            "itemNo": "44231001",
+            "description": "Unitario CRCO Nobel 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1Mjc5NDE3NDcwNzE0NDM4NjUxMTswMDsn\"",
+            "systemId": "8ccabfff-3ed2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402229",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzODE4OTQ5NDczNjU5Mjc4NTY3MTswMDsn\"",
+            "systemId": "23f02d71-40d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402230",
+            "lineNo": 10000,
+            "itemNo": "44202002",
+            "description": "Puente CRCO sobre 2 implantes MG 2 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2NzAzNDcwMjMyMDEyNTc0NDUwMTswMDsn\"",
+            "systemId": "8cf81d75-42d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402231",
+            "lineNo": 10000,
+            "itemNo": "44202002",
+            "description": "Puente CRCO sobre 2 implantes MG 2 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NzQzMzgyNzc5MTE2NjYyMDU5MTswMDsn\"",
+            "systemId": "de349c2b-45d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402232",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1MDM2OTQzOTI5NTUzMTI3MzI5MTswMDsn\"",
+            "systemId": "e0a3c8d2-45d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402233",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NjQxMzg3NjU1MDc2NTM0MTQ4MTswMDsn\"",
+            "systemId": "c28a133d-46d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402234",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0MzU0MDIzODI4NjY4MTgyMzQ1MTswMDsn\"",
+            "systemId": "089170db-46d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402235",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2OTM3ODY1OTQ0MTY3OTQxMTUzMTswMDsn\"",
+            "systemId": "9d3f8d3e-47d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402236",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0Njk2MTQ5MzkzMDI3NDEwNTY2MTswMDsn\"",
+            "systemId": "17310fb6-47d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402237",
+            "lineNo": 10000,
+            "itemNo": "44202002",
+            "description": "Puente CRCO sobre 2 implantes MG 2 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMzE4MjAxOTEwMjE1MTE2MDkyMTswMDsn\"",
+            "systemId": "4f0d0324-48d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402238",
+            "lineNo": 10000,
+            "itemNo": "44202003",
+            "description": "Puente CRCO sobre 2 implantes MG 3 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMTQyMTQ3Njc3MjA3MDU3ODM0MTswMDsn\"",
+            "systemId": "4598b98c-49d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402239",
+            "lineNo": 10000,
+            "itemNo": "44211001",
+            "description": "Unitario CRCO Straumann 1 pieza",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1MzY1ODMwODU5MDY0NzY5NTk2MTswMDsn\"",
+            "systemId": "fd6a99d4-4ad2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402240",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0NzE5MDQxMDU0MTMyNDkzNDYyMTswMDsn\"",
+            "systemId": "19509833-4bd2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402241",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzNjU1MDE5NzU2NzkyNTA4NDk4MTswMDsn\"",
+            "systemId": "23475b95-4bd2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402242",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzODc5ODg1NzM2Njg2MjM1ODczMTswMDsn\"",
+            "systemId": "3c012968-58d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402243",
+            "lineNo": 10000,
+            "itemNo": "44202002",
+            "description": "Puente CRCO sobre 2 implantes MG 2 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNjI0ODQ2NTI1OTAxNzEyNjIwMTswMDsn\"",
+            "systemId": "785208d5-58d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402244",
+            "lineNo": 10000,
+            "itemNo": "44202002",
+            "description": "Puente CRCO sobre 2 implantes MG 2 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2NTQ5NTIyNjI3OTgxNjUxODAxMTswMDsn\"",
+            "systemId": "affbec3b-59d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402245",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NDU0NDAxNTM2MjMxODE5NjE4MTswMDsn\"",
+            "systemId": "d3583bd5-59d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402246",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MTc3NjY3ODUxMDgyNzE1MDc1MTswMDsn\"",
+            "systemId": "b93848fd-5ad2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402247",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMTM1NjcwMzgzNDk0NjgwMjkzMTswMDsn\"",
+            "systemId": "579d2663-5bd2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402248",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0Nzc2NjM3MDY4MDY1MTMxMzYzMTswMDsn\"",
+            "systemId": "0c77c9d8-5bd2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402249",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMTE0NTcwMDQ5MTE5NTc2NDAzMTswMDsn\"",
+            "systemId": "5360e866-5cd2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402250",
+            "lineNo": 10000,
+            "itemNo": "44202002",
+            "description": "Puente CRCO sobre 2 implantes MG 2 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMTIwMDIxNzA5MTA1MDI2MjI2MTswMDsn\"",
+            "systemId": "522f2932-5dd2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402251",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2ODc1MzQxMTk3NzQ4MDI1MjMzMTswMDsn\"",
+            "systemId": "84bf3114-5ed2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402252",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNDg0NDkzNTUyNjg3MDA4OTQyMTswMDsn\"",
+            "systemId": "73b639a1-5ed2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402253",
+            "lineNo": 10000,
+            "itemNo": "443010010",
+            "description": "Unitario Ti sobre 1 implante MG 1 pieza Gold ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NjIwNzg0MTIzMzc2Njk0NjA3MTswMDsn\"",
+            "systemId": "d9f32989-5fd2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402254",
+            "lineNo": 10000,
+            "itemNo": "44202003",
+            "description": "Puente CRCO sobre 2 implantes MG 3 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE3MDk3ODg4NDAzMjA0MDI1Mzk5MTswMDsn\"",
+            "systemId": "b7594f49-61d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402255",
+            "lineNo": 10000,
+            "itemNo": "44206012",
+            "description": "Puente CRCO sobre 6 implantes MG 12 piezas",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0NzMwNTUwMzU2Mzk5NzUzODE3MTswMDsn\"",
+            "systemId": "3579ec2d-62d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402256",
+            "lineNo": 10000,
+            "itemNo": "44211001",
+            "description": "Unitario CRCO Straumann 1 pieza",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MzAyNTUzOTQ1NzAzNjk4NjI2MTswMDsn\"",
+            "systemId": "9feda9b8-62d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402257",
+            "lineNo": 10000,
+            "itemNo": "44202003",
+            "description": "Puente CRCO sobre 2 implantes MG 3 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MTUwNDY2NTA3MjE4MTQwNjAwMTswMDsn\"",
+            "systemId": "81254a84-63d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402258",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2ODkzMTQwMzIxMzAxMDU3OTU4MTswMDsn\"",
+            "systemId": "b9b71111-64d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402259",
+            "lineNo": 10000,
+            "itemNo": "44202003",
+            "description": "Puente CRCO sobre 2 implantes MG 3 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNDgzNjQzMTMwMTY2MjUwNDIxMTswMDsn\"",
+            "systemId": "486a202f-65d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402260",
+            "lineNo": 10000,
+            "itemNo": "44204010",
+            "description": "Puente CRCO sobre 4 implantes MG 10 piezas",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzNjg1NjA4NDE5ODg2NjkwMDY3MTswMDsn\"",
+            "systemId": "0af530a5-65d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402261",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1ODIyNjY0MzMxMzYyNTE1MzU4MTswMDsn\"",
+            "systemId": "f5ac102f-66d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402262",
+            "lineNo": 10000,
+            "itemNo": "44201001",
+            "description": "Unitario CRCO MG 1 pieza ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1OTE2NDE3NjU0ODI4OTQ1OTI0MTswMDsn\"",
+            "systemId": "f04b3e87-66d2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "OFBC2402263",
+            "lineNo": 10000,
+            "itemNo": "44202002",
+            "description": "Puente CRCO sobre 2 implantes MG 2 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0OTEwOTQ4NTUzMTE3MzY1NDQwMTswMDsn\"",
+            "systemId": "d19fb382-7ef2-ee11-b672-a9760c7659c7",
+            "prodOrderNo": "24006935",
+            "lineNo": 10000,
+            "itemNo": "14624211",
+            "description": "Implante Osseous Std 4,25x11,5 mm ONE",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1ODU2MjIxNzU1ODU5NzI4Mjc2MTswMDsn\"",
+            "systemId": "0ec03ec0-8276-ef11-b67a-b75ad94477ef",
+            "prodOrderNo": "24006941",
+            "lineNo": 10000,
+            "itemNo": "13207151",
+            "description": "Ucla calcinable no hexagonal Osseous Std con tornillo",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzNjg5NzQ4MDIyNDE2OTkxMTkzMTswMDsn\"",
+            "systemId": "502a2572-237b-ef11-b67a-b75ad94477ef",
+            "prodOrderNo": "24006942",
+            "lineNo": 10000,
+            "itemNo": "13102049",
+            "description": "Perfiladora Ø4,85 Inhex",
+            "remainingQtyBase": 4
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNzE3MzM4NzQyMDU1MjY4MTUyMTswMDsn\"",
+            "systemId": "1e963497-247b-ef11-b67a-b75ad94477ef",
+            "prodOrderNo": "24006943",
+            "lineNo": 10000,
+            "itemNo": "13102049",
+            "description": "Perfiladora Ø4,85 Inhex",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE3MTA5MjIzMzkwMTk3NjU2NzI4MTswMDsn\"",
+            "systemId": "ecf665d9-247b-ef11-b67a-b75ad94477ef",
+            "prodOrderNo": "24006944",
+            "lineNo": 10000,
+            "itemNo": "13102049",
+            "description": "Perfiladora Ø4,85 Inhex",
+            "remainingQtyBase": 3
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NDg2Mzk0MDIxOTQ1NjQ5MjU2MTswMDsn\"",
+            "systemId": "b7bb1d6c-257b-ef11-b67a-b75ad94477ef",
+            "prodOrderNo": "24006945",
+            "lineNo": 10000,
+            "itemNo": "33700024",
+            "description": "LLAVE DINAMOMETRICA K4",
+            "remainingQtyBase": 3
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNjgwOTI5MjI0NjA3MTcwMDYzMTswMDsn\"",
+            "systemId": "3ef244a5-067c-ef11-b67a-b75ad94477ef",
+            "prodOrderNo": "24006946",
+            "lineNo": 10000,
+            "itemNo": "F152021254",
+            "description": "FAB ANILLO SUPERIOR DESTORNILLADOR",
+            "remainingQtyBase": 2
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NjAyMzIyNjYzODI1MDQyMDA2MTswMDsn\"",
+            "systemId": "b79bb0e1-2d7f-ef11-b67a-b75ad94477ef",
+            "prodOrderNo": "24006951",
+            "lineNo": 10000,
+            "itemNo": "25204208",
+            "description": "Implante Inhex Quattro Std 4,25x8 mm Integral",
+            "remainingQtyBase": 10
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MjExNzg4MDEzNDk3NDIwOTYwMTswMDsn\"",
+            "systemId": "3e32ade1-b7ac-ef11-b682-c41697e6934e",
+            "prodOrderNo": "24006962",
+            "lineNo": 10000,
+            "itemNo": "13201002",
+            "description": "Pilar cónico 10º Osseous Std H2 mm",
+            "remainingQtyBase": 20
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0MTI1NDI3NDg5MjA5MzA4NzEzMTswMDsn\"",
+            "systemId": "a93926e8-b7ac-ef11-b682-c41697e6934e",
+            "prodOrderNo": "24006963",
+            "lineNo": 10000,
+            "itemNo": "13201000",
+            "description": "Tornillo cicatrización pilar cónico 10º Osseous Std-Inhex Std-Inhex Maxi",
+            "remainingQtyBase": 15
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1MDg0NjcyNzU3NDkwMzAxODY4MTswMDsn\"",
+            "systemId": "64da908e-b2b0-ef11-b682-c41697e6934e",
+            "prodOrderNo": "24006966",
+            "lineNo": 10000,
+            "itemNo": "15404000021",
+            "description": "CAJA COMPACT VERIFICADA",
+            "remainingQtyBase": 2
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MjI4NzA0MzQ3MDE4MTk0OTA2MTswMDsn\"",
+            "systemId": "3d91f8a0-b4b0-ef11-b682-c41697e6934e",
+            "prodOrderNo": "24006968",
+            "lineNo": 10000,
+            "itemNo": "AC0401",
+            "description": "CAJA BIOCAM MONTADA",
+            "remainingQtyBase": 5
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MDI1MjkwNjAwMzIxMTU4ODYyMTswMDsn\"",
+            "systemId": "94871e66-09b5-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24002472",
+            "lineNo": 10000,
+            "itemNo": "F14600030M",
+            "description": "MEC FAB ANILLO TI VIAL V20A",
+            "remainingQtyBase": 1000
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2NzE5MzY3NDU3MjQwMDkxNjI5MTswMDsn\"",
+            "systemId": "516186b0-e1b9-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24003123",
+            "lineNo": 10000,
+            "itemNo": "146034132",
+            "description": "IMPLANTE 3413 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 50
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMDI2NzUxMzc0NzM1MzUzODk4MTswMDsn\"",
+            "systemId": "a6ab67d4-e1b9-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24003129",
+            "lineNo": 10000,
+            "itemNo": "166037082",
+            "description": "IMPLANTE QUATTRO 3708 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 80
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0NTIyNTMxMzYzOTg1NzE5NjcxMTswMDsn\"",
+            "systemId": "c9920ce0-e1b9-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24003131",
+            "lineNo": 10000,
+            "itemNo": "166037102",
+            "description": "IMPLANTE QUATTRO 3710 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 100
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0MDQ5NTYyNTYyNzEwNDIzNjExMTswMDsn\"",
+            "systemId": "ee3994f7-e1b9-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24003133",
+            "lineNo": 10000,
+            "itemNo": "166037132",
+            "description": "IMPLANTE QUATTRO 3713 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 78
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2OTg2MTk0MTI3NzQ2MTM2Mzg2MTswMDsn\"",
+            "systemId": "42cae704-e2b9-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24003135",
+            "lineNo": 10000,
+            "itemNo": "232037082",
+            "description": "IMPLANTE INHEX 3,75X8 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 50
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzNDg2MDMzMjY4MTU2ODA0NzQ2MTswMDsn\"",
+            "systemId": "82cae704-e2b9-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24003136",
+            "lineNo": 10000,
+            "itemNo": "232037082",
+            "description": "IMPLANTE INHEX 3,75X8 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 71
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2NzkxNjM2NzMwODc1MDMwMTI1MTswMDsn\"",
+            "systemId": "57c5e618-e2b9-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24003138",
+            "lineNo": 10000,
+            "itemNo": "232037102",
+            "description": "IMPLANTE INHEX 3,75X10 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 125
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMjkxNDc1ODcxMjg0NjQ3ODU3MTswMDsn\"",
+            "systemId": "97c5e618-e2b9-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24003139",
+            "lineNo": 10000,
+            "itemNo": "232037102",
+            "description": "IMPLANTE INHEX 3,75X10 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 112
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0NDQ2NDc0OTkwNDE0MzIyNzU1MTswMDsn\"",
+            "systemId": "d7c5e618-e2b9-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24003140",
+            "lineNo": 10000,
+            "itemNo": "232037102",
+            "description": "IMPLANTE INHEX 3,75X10 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 113
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNDQ1NTc4Mzg2NzkyODExMzYxMTswMDsn\"",
+            "systemId": "bb1b6121-e2b9-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "",
+            "lineNo": 10000,
+            "itemNo": "232037132",
+            "description": "IMPLANTE INHEX 3713 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 100
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0MjAwNjMzNDgwODM1MTg0ODkwMTswMDsn\"",
+            "systemId": "d8f81634-e2b9-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24003144",
+            "lineNo": 10000,
+            "itemNo": "232042112",
+            "description": "IMPLANTE INHEX 4211 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 73
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1MDY2MjQ4MDE3MzcwODEzMjI1MTswMDsn\"",
+            "systemId": "34c00e3b-e2b9-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24003146",
+            "lineNo": 10000,
+            "itemNo": "232042152",
+            "description": "IMPLANTE INHEX 4,25X15 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 98
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0MzY5NzA0OTUzODAwMjM5NTQ5MTswMDsn\"",
+            "systemId": "d31b7c4d-e2b9-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24003148",
+            "lineNo": 10000,
+            "itemNo": "236037112",
+            "description": "IMPLANTE INHEX 3,75X11,5 TRATAMIENTO RBM HIBRIDO",
+            "remainingQtyBase": 50
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NzA2MzE1NDA3MzkzOTMzMTQ3MTswMDsn\"",
+            "systemId": "08a8505a-e2b9-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24003150",
+            "lineNo": 10000,
+            "itemNo": "236042082",
+            "description": "IMPLANTE INHEX 4208 CON TRATAMIENTO RBM HIBRIDO",
+            "remainingQtyBase": 100
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNDE5NzA1NjU5MTg3MzcxNzY4MTswMDsn\"",
+            "systemId": "ba801963-e2b9-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24003152",
+            "lineNo": 10000,
+            "itemNo": "236042102",
+            "description": "IMPLANTE INHEX 4210 CON TRATAMIENTO RBM HIBRIDO",
+            "remainingQtyBase": 96
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzOTk0MzQ2MzQxNTcyMTAxODU1MTswMDsn\"",
+            "systemId": "edbee570-e2b9-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24003154",
+            "lineNo": 10000,
+            "itemNo": "236042112",
+            "description": "IMPLANTE INHEX 4211 CON  TRATAMIENTO RBM HIBRIDO",
+            "remainingQtyBase": 50
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzNzk5MjU5OTI5NDg0NDA2OTM3MTswMDsn\"",
+            "systemId": "f3398079-e2b9-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24003156",
+            "lineNo": 10000,
+            "itemNo": "252033102",
+            "description": "IMPLANTE QUATTRO INHEX 3310 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 81
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyOTQxMjQxMTgwMjM1MjEwNTc1MTswMDsn\"",
+            "systemId": "a1672889-e2b9-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24003158",
+            "lineNo": 10000,
+            "itemNo": "252037082",
+            "description": "IMPLANTE QUATTRO INHEX 3708 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 71
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1MjEwODU3NzU0NzAyOTU4MjczMTswMDsn\"",
+            "systemId": "2c011edf-e2b9-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24003163",
+            "lineNo": 10000,
+            "itemNo": "252037102",
+            "description": "IMPLANTE QUATTRO INHEX 3710 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 151
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MzM5OTcxMjM5NDY4NzIxMDk3MTswMDsn\"",
+            "systemId": "6c011edf-e2b9-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24003164",
+            "lineNo": 10000,
+            "itemNo": "252037102",
+            "description": "IMPLANTE QUATTRO INHEX 3710 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 50
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzODY4Mjc5MDU4MzU0MTQyNTU4MTswMDsn\"",
+            "systemId": "f7fb8ef3-e2b9-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24003166",
+            "lineNo": 10000,
+            "itemNo": "252037112",
+            "description": "IMPLANTE QUATTRO INHEX 3711 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 121
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2Mzc4MTIzMzY3MjI1OTY5NDMwMTswMDsn\"",
+            "systemId": "6d1dbe0e-e3b9-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24003170",
+            "lineNo": 10000,
+            "itemNo": "252042082",
+            "description": "IMPLANTE QUATTRO INHEX 4208 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 149
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0MzcyMTM4MjI1NDc1Mzk4MDIxMTswMDsn\"",
+            "systemId": "d13a1017-e3b9-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24003172",
+            "lineNo": 10000,
+            "itemNo": "252042102",
+            "description": "IMPLANTE QUATTRO INHEX 4210 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 150
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1OTg2Mjg3MDc4OTIyMjU0MzczMTswMDsn\"",
+            "systemId": "79ba102e-e3b9-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24003175",
+            "lineNo": 10000,
+            "itemNo": "252042112",
+            "description": "IMPLANTE QUATTRO INHEX 4211 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 52
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNDg2MTI2MjE5MzMzNjg2NTUzMTswMDsn\"",
+            "systemId": "b9ba102e-e3b9-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24003176",
+            "lineNo": 10000,
+            "itemNo": "252042112",
+            "description": "IMPLANTE QUATTRO INHEX 4211 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 148
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzNzgzMDkwNjAxOTIzODA3MjgwMTswMDsn\"",
+            "systemId": "f386bda0-e3b9-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24003179",
+            "lineNo": 10000,
+            "itemNo": "252042132",
+            "description": "IMPLANTE QUATTRO INHEX 4213 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 69
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1MzYyMzI1NjYyMTMzMjQyMjMxMTswMDsn\"",
+            "systemId": "265a56ec-e3b9-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24003181",
+            "lineNo": 10000,
+            "itemNo": "256037102",
+            "description": "IMPLANTE QUATTRO INHEX 3710TRATAMIENTO RBM HIBRIDO",
+            "remainingQtyBase": 100
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyODc1MDYxODAzNjM2ODQ3MjM5MTswMDsn\"",
+            "systemId": "ac29c6f9-e3b9-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24003183",
+            "lineNo": 10000,
+            "itemNo": "256037112",
+            "description": "IMPLANTE QUATTRO INHEX 3711TRATAMIENTO RBM HIBRIDO",
+            "remainingQtyBase": 120
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0MDE1NjAxNzc0MDM0MDU1OTcyMTswMDsn\"",
+            "systemId": "ea02b501-e4b9-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24003185",
+            "lineNo": 10000,
+            "itemNo": "256042082",
+            "description": "IMPLANTE QUATTRO INHEX 4208TRATAMIENTO RBM HIBRIDO",
+            "remainingQtyBase": 50
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1ODg3OTQyNjYzNDQ0NDI5NjQ2MTswMDsn\"",
+            "systemId": "00f0952c-e4b9-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24003188",
+            "lineNo": 10000,
+            "itemNo": "256042102",
+            "description": "IMPLANTE QUATTRO INHEX 4210TRATAMIENTO RBM HIBRIDO",
+            "remainingQtyBase": 104
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMDY0NzY2NDQwMjE2NjA4NTg2MTswMDsn\"",
+            "systemId": "f7b11d01-8cbe-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24003693",
+            "lineNo": 10000,
+            "itemNo": "F232017201",
+            "description": "FAB PILAR CONICO ANGULADO 17º ALT 2 mm",
+            "remainingQtyBase": 53
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0NzAxNTkyNDA2ODQ3MTc4MTg5MTswMDsn\"",
+            "systemId": "2aa17966-08c0-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24004069",
+            "lineNo": 10000,
+            "itemNo": "F41236202M",
+            "description": "MEC FAB SCANBODY INTRAORAL INHEX STD",
+            "remainingQtyBase": 4
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1MzEwNTk1NTE0MDUwMDA0ODg4MTswMDsn\"",
+            "systemId": "fe0b2573-38c0-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24004391",
+            "lineNo": 10000,
+            "itemNo": "23203710",
+            "description": "Implante Inhex Std 3,75x10 mm Integral",
+            "remainingQtyBase": 2
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NDY0MjExMTE5NTI3NTQ2ODcxMTswMDsn\"",
+            "systemId": "c39f2b79-38c0-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24004409",
+            "lineNo": 10000,
+            "itemNo": "23204211",
+            "description": "Implante Inhex Std 4,25x11,5 mm Integral",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1OTE0MjQzNTcwMTgxNjMzMDIwMTswMDsn\"",
+            "systemId": "1bb4e0cd-fcc3-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24004779",
+            "lineNo": 10000,
+            "itemNo": "13202528",
+            "description": "Tornillo de prótesis pilar cónico hexágono 1,25 Osseous-Inhex",
+            "remainingQtyBase": 66
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MTc3NTUxMzI0OTYyNzkxMzAyMTswMDsn\"",
+            "systemId": "690f2ad4-fcc3-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24004789",
+            "lineNo": 10000,
+            "itemNo": "13207010",
+            "description": "Pilar fijo hexagonal Osseous Std H2 mm con tornillo",
+            "remainingQtyBase": 16
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyOTQxMzk1NzcwMDA0Mzk4MDU0MTswMDsn\"",
+            "systemId": "be35c5ec-fcc3-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24004816",
+            "lineNo": 10000,
+            "itemNo": "23207920",
+            "description": "Interfase hexagonal Inhex Std H2 mm con tornillo",
+            "remainingQtyBase": 2
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MDY0MzMxNjY1NjQxMDAxMDgwMTswMDsn\"",
+            "systemId": "61a7fcfe-fcc3-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24004838",
+            "lineNo": 10000,
+            "itemNo": "41003511",
+            "description": "Análogo digital pilar cónico 30º Osseous Std-Inhex Std-Inhex Maxi con tornillo",
+            "remainingQtyBase": 124
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyODkxODgzNjc0NjExOTIxOTEzMTswMDsn\"",
+            "systemId": "bcc02b05-fdc3-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24004840",
+            "lineNo": 10000,
+            "itemNo": "41235501",
+            "description": "Análogo digital InHex Std con tornillo",
+            "remainingQtyBase": 251
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyOTk2MDE5Njk2NTgwMDU3MjUxMTswMDsn\"",
+            "systemId": "b82c4a0b-fdc3-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24004846",
+            "lineNo": 10000,
+            "itemNo": "44302047",
+            "description": "Tornillo para chimeneas anguladas M2 L4,7",
+            "remainingQtyBase": 230
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0NDc2MTYyNjU2NDg4ODYyMTAwMTswMDsn\"",
+            "systemId": "cb2d4a0b-fdc3-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24004848",
+            "lineNo": 10000,
+            "itemNo": "13114033",
+            "description": "Perfiladora Ø3,3 Quattro RCD",
+            "remainingQtyBase": 30
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1OTkyNDA5MjI1MjM0NzY0MjIxMTswMDsn\"",
+            "systemId": "672e4a0b-fdc3-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24004849",
+            "lineNo": 10000,
+            "itemNo": "13114037",
+            "description": "Perfiladora Ø3,75 Quattro RCD",
+            "remainingQtyBase": 9
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNzA2NjA1OTAwODk5ODk4NjM2MTswMDsn\"",
+            "systemId": "ab2e4a0b-fdc3-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24004850",
+            "lineNo": 10000,
+            "itemNo": "13114037",
+            "description": "Perfiladora Ø3,75 Quattro RCD",
+            "remainingQtyBase": 21
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0NDEzNDAyMDMxMTc1MTUyNjU5MTswMDsn\"",
+            "systemId": "c92f4a0b-fdc3-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24004852",
+            "lineNo": 10000,
+            "itemNo": "13114042",
+            "description": "Perfiladora Ø4,25 Quattro RCD",
+            "remainingQtyBase": 21
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0NDU2NTgyOTg5NTc1MTg5MzYxMTswMDsn\"",
+            "systemId": "d5994911-fdc3-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24004854",
+            "lineNo": 10000,
+            "itemNo": "13203511",
+            "description": "Análogo pilar cónico 30º Osseous Std-Inhex Std-Inhex Maxi",
+            "remainingQtyBase": 359
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzODEyMjE5Mjc5MzM1MDg3MjY1MTswMDsn\"",
+            "systemId": "ef7db330-fdc3-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24004885",
+            "lineNo": 10000,
+            "itemNo": "23204840",
+            "description": "Tornillo cicatrización Inhex Std H4 mm",
+            "remainingQtyBase": 162
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2NTU1OTk5ODgyNjE4NTMwNzIwMTswMDsn\"",
+            "systemId": "7a7eb330-fdc3-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24004886",
+            "lineNo": 10000,
+            "itemNo": "23205501",
+            "description": "Análogo implante Inhex Std",
+            "remainingQtyBase": 400
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyODM4Nzg1MDA0NjgxMDY4OTIzMTswMDsn\"",
+            "systemId": "ac1305ae-e0c5-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005129",
+            "lineNo": 10000,
+            "itemNo": "25603711",
+            "description": "Implante Inhex Quattro híbrido Std 3,75x11,5 mm Integral",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1MzI2MTg1OTA2NjI3MDg2MDc5MTswMDsn\"",
+            "systemId": "2329e7d4-e0c5-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005131",
+            "lineNo": 10000,
+            "itemNo": "25603711",
+            "description": "Implante Inhex Quattro híbrido Std 3,75x11,5 mm Integral",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NjU2NTEwMzYxMTEyNDMwNTg0MTswMDsn\"",
+            "systemId": "c0bd73d7-36c7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005264",
+            "lineNo": 10000,
+            "itemNo": "156137117",
+            "description": "TEST BIOBURDEN IMPLANTE 3711",
+            "remainingQtyBase": 10
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNzA4OTAwNDY0NDEyMDMzNDc5MTswMDsn\"",
+            "systemId": "70eca433-38c7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005268",
+            "lineNo": 10000,
+            "itemNo": "242037137",
+            "description": "TEST BIOBURDEN IMPLANTE 3713",
+            "remainingQtyBase": 10
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MjA3ODE4NDA2MDA1MzM0NDMzMTswMDsn\"",
+            "systemId": "a80298be-3fc7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005271",
+            "lineNo": 10000,
+            "itemNo": "252037137",
+            "description": "TEST BIOBURDEN IMPLANTE 25203713",
+            "remainingQtyBase": 10
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1Nzc3Mjk3ODMwMzQ0ODUxMjY2MTswMDsn\"",
+            "systemId": "ad0a841f-40c7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005272",
+            "lineNo": 10000,
+            "itemNo": "252037137",
+            "description": "TEST BIOBURDEN IMPLANTE 25203713",
+            "remainingQtyBase": 3
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0NjY2MzMyNTc1MTM3MjkzMTQxMTswMDsn\"",
+            "systemId": "6954ec62-49c7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005274",
+            "lineNo": 10000,
+            "itemNo": "236037102",
+            "description": "IMPLANTE INHEX 3,75X10 CON TRATAMIENTO RBM HIBRIDO",
+            "remainingQtyBase": 50
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0ODA0OTgwNDc1NjU4OTg5ODIwMTswMDsn\"",
+            "systemId": "9054ec62-49c7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005275",
+            "lineNo": 10000,
+            "itemNo": "236042112",
+            "description": "IMPLANTE INHEX 4211 CON  TRATAMIENTO RBM HIBRIDO",
+            "remainingQtyBase": 50
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NDU3OTM0NDc0NTgwNTA3NzI1MTswMDsn\"",
+            "systemId": "b754ec62-49c7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005276",
+            "lineNo": 10000,
+            "itemNo": "252033112",
+            "description": "IMPLANTE QUATTRO INHEX 3311 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 74
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MjU3NTY1OTkxNTU4Mjg3MTM5MTswMDsn\"",
+            "systemId": "de54ec62-49c7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005277",
+            "lineNo": 10000,
+            "itemNo": "256033112",
+            "description": "IMPLANTE QUATTRO INHEX 3311 HIBRIDO CON TRAT. RBM",
+            "remainingQtyBase": 50
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNzg5NzQwMzIxNjEwNjQxMjg2MTswMDsn\"",
+            "systemId": "0555ec62-49c7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005278",
+            "lineNo": 10000,
+            "itemNo": "256037082",
+            "description": "IMPLANTE QUATTRO INHEX 3708TRATAMIENTO RBM HIBRIDO",
+            "remainingQtyBase": 80
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzNjQwNzc5OTQzODAyNzIxNTQ5MTswMDsn\"",
+            "systemId": "5355ec62-49c7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005280",
+            "lineNo": 10000,
+            "itemNo": "256037112",
+            "description": "IMPLANTE QUATTRO INHEX 3711TRATAMIENTO RBM HIBRIDO",
+            "remainingQtyBase": 50
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0MzY3MjI2MjQ5NTg4MTQzMDIxMTswMDsn\"",
+            "systemId": "7a55ec62-49c7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005281",
+            "lineNo": 10000,
+            "itemNo": "256037132",
+            "description": "IMPLANTE QUATTRO INHEX 3713TRATAMIENTO RBM HIBRIDO",
+            "remainingQtyBase": 71
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NjgxMTkzMzI3MzY1MTA5NjQ1MTswMDsn\"",
+            "systemId": "a155ec62-49c7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005282",
+            "lineNo": 10000,
+            "itemNo": "256042082",
+            "description": "IMPLANTE QUATTRO INHEX 4208TRATAMIENTO RBM HIBRIDO",
+            "remainingQtyBase": 50
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzOTU4MzcyMDI5Nzg4Nzk1NjIyMTswMDsn\"",
+            "systemId": "46e98c4f-4bc7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005371",
+            "lineNo": 10000,
+            "itemNo": "146034102",
+            "description": "IMPLANTE 3410 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 50
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1MDE2NjA5MjMxMDg0NDQ5MDU0MTswMDsn\"",
+            "systemId": "98e98c4f-4bc7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005372",
+            "lineNo": 10000,
+            "itemNo": "146034112",
+            "description": "IMPLANTE 3411 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 50
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2OTkwNjkyMDI4MzI0NzIzNDU4MTswMDsn\"",
+            "systemId": "eae98c4f-4bc7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005373",
+            "lineNo": 10000,
+            "itemNo": "146034132",
+            "description": "IMPLANTE 3413 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 67
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMjY3MTM1Nzg3MDk3OTY3MjcyMTswMDsn\"",
+            "systemId": "3cea8c4f-4bc7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005374",
+            "lineNo": 10000,
+            "itemNo": "146034152",
+            "description": "IMPLANTE 3415 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 58
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1MzE0NDE2ODI5NjA4NjM5NDQ3MTswMDsn\"",
+            "systemId": "8eea8c4f-4bc7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005375",
+            "lineNo": 10000,
+            "itemNo": "146037102",
+            "description": "IMPLANTE 3710 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 74
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzNTI3MDUyNDYwMjI5NjU1MDEyMTswMDsn\"",
+            "systemId": "28ec8c4f-4bc7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005380",
+            "lineNo": 10000,
+            "itemNo": "146037152",
+            "description": "IMPLANTE 3715 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 50
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0MzI1NTM0MTkyODg5NjQ5NjIwMTswMDsn\"",
+            "systemId": "7aec8c4f-4bc7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005381",
+            "lineNo": 10000,
+            "itemNo": "146042082",
+            "description": "IMPLANTE 4208 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 91
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNjU1MzI0MzU5MjE3NjIyOTc1MTswMDsn\"",
+            "systemId": "1eed8c4f-4bc7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005383",
+            "lineNo": 10000,
+            "itemNo": "146042112",
+            "description": "IMPLANTE 4211 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 95
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNTUxOTA3NTg3NjU5NDY3NjkwMTswMDsn\"",
+            "systemId": "14ee8c4f-4bc7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005386",
+            "lineNo": 10000,
+            "itemNo": "166042102",
+            "description": "IMPLANTE QUATTRO 4210 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 72
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0NTk5MTg1MjYxOTU4MTYyNTkwMTswMDsn\"",
+            "systemId": "66ee8c4f-4bc7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005387",
+            "lineNo": 10000,
+            "itemNo": "166042102",
+            "description": "IMPLANTE QUATTRO 4210 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 50
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NTc4MTc5OTE1MjgyODEyNDgyMTswMDsn\"",
+            "systemId": "b8ee8c4f-4bc7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005388",
+            "lineNo": 10000,
+            "itemNo": "166042112",
+            "description": "IMPLANTE QUATTRO 4211 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 82
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyOTIyOTIxMzgzMTAwMjgzNjU0MTswMDsn\"",
+            "systemId": "0aef8c4f-4bc7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005389",
+            "lineNo": 10000,
+            "itemNo": "166042112",
+            "description": "IMPLANTE QUATTRO 4211 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 75
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1ODY4MzE3NjI1NDIwNTUwMjMzMTswMDsn\"",
+            "systemId": "aeef8c4f-4bc7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005391",
+            "lineNo": 10000,
+            "itemNo": "232037082",
+            "description": "IMPLANTE INHEX 3,75X8 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 155
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyODEyOTgxNDEwNDk3MTM1Nzg0MTswMDsn\"",
+            "systemId": "00f08c4f-4bc7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005392",
+            "lineNo": 10000,
+            "itemNo": "232037082",
+            "description": "IMPLANTE INHEX 3,75X8 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 121
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzNjExNDM2NjU0MTY4NDg4MzYxMTswMDsn\"",
+            "systemId": "52f08c4f-4bc7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005393",
+            "lineNo": 10000,
+            "itemNo": "232037102",
+            "description": "IMPLANTE INHEX 3,75X10 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 101
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NzY2MDM2MDQ1NTM0NjM0ODE5MTswMDsn\"",
+            "systemId": "a4f08c4f-4bc7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005394",
+            "lineNo": 10000,
+            "itemNo": "232037102",
+            "description": "IMPLANTE INHEX 3,75X10 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 226
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2NjM3Njk3NjA2NjkyMDM0NjM1MTswMDsn\"",
+            "systemId": "f6f08c4f-4bc7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005395",
+            "lineNo": 10000,
+            "itemNo": "232037102",
+            "description": "IMPLANTE INHEX 3,75X10 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 224
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0MDk1ODMxMjc3NTE4MzUwNTU0MTswMDsn\"",
+            "systemId": "48f18c4f-4bc7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005396",
+            "lineNo": 10000,
+            "itemNo": "232037102",
+            "description": "IMPLANTE INHEX 3,75X10 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 224
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0OTY3NDk5MTE0MjA4NzE3NjAyMTswMDsn\"",
+            "systemId": "9af18c4f-4bc7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005397",
+            "lineNo": 10000,
+            "itemNo": "232037132",
+            "description": "IMPLANTE INHEX 3713 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 82
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE3MTIyMDkzNjcwNDY2MjMzNjAwMTswMDsn\"",
+            "systemId": "ecf18c4f-4bc7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005398",
+            "lineNo": 10000,
+            "itemNo": "232037152",
+            "description": "IMPLANTE INHEX 3,75X15 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 59
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMjkxMjIzNjQ0MDM5ODUyODIxMTswMDsn\"",
+            "systemId": "3ef28c4f-4bc7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005399",
+            "lineNo": 10000,
+            "itemNo": "232042152",
+            "description": "IMPLANTE INHEX 4,25X15 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 52
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0ODMyOTM2NDQyNDE3OTYyNTA4MTswMDsn\"",
+            "systemId": "90f28c4f-4bc7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005400",
+            "lineNo": 10000,
+            "itemNo": "252037102",
+            "description": "IMPLANTE QUATTRO INHEX 3710 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 80
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2ODI2ODM5MTU3MDQ0Mzc5ODYzMTswMDsn\"",
+            "systemId": "e2f28c4f-4bc7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005401",
+            "lineNo": 10000,
+            "itemNo": "252037102",
+            "description": "IMPLANTE QUATTRO INHEX 3710 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 60
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMTIzMDk5NjIxNzEzMTAyNzIyMTswMDsn\"",
+            "systemId": "34f38c4f-4bc7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005402",
+            "lineNo": 10000,
+            "itemNo": "252037132",
+            "description": "IMPLANTE QUATTRO INHEX 3713 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 50
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1MTkwMTk1NzI2NDU3MzY1MjE0MTswMDsn\"",
+            "systemId": "86f38c4f-4bc7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005403",
+            "lineNo": 10000,
+            "itemNo": "252042082",
+            "description": "IMPLANTE QUATTRO INHEX 4208 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 81
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE3MDc2Nzc4MDU3OTk3NTA0Mjg2MTswMDsn\"",
+            "systemId": "e8f38c4f-4bc7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005404",
+            "lineNo": 10000,
+            "itemNo": "252042102",
+            "description": "IMPLANTE QUATTRO INHEX 4210 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 61
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0NDUwNjU4MDE3ODU2Mzg3ODczMTswMDsn\"",
+            "systemId": "7ff58c4f-4bc7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005409",
+            "lineNo": 10000,
+            "itemNo": "252042112",
+            "description": "IMPLANTE QUATTRO INHEX 4211 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 54
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0NTc0MDMzNzU5NTE2ODU5Mjc2MTswMDsn\"",
+            "systemId": "65f68c4f-4bc7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005412",
+            "lineNo": 10000,
+            "itemNo": "252042132",
+            "description": "IMPLANTE QUATTRO INHEX 4213 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 50
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NTc1NzE5MzU3NzY5ODY3NTkzMTswMDsn\"",
+            "systemId": "b9f68c4f-4bc7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005413",
+            "lineNo": 10000,
+            "itemNo": "146033102",
+            "description": "IMPLANTE 3310 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 61
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMTk1NjU1MTAyNDg3NDYyNTIxMTswMDsn\"",
+            "systemId": "2d991747-5cc7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005415",
+            "lineNo": 10000,
+            "itemNo": "166037102",
+            "description": "IMPLANTE QUATTRO 3710 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 107
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0Mzc4MTQzNTQ2OTI2MjMxOTc4MTswMDsn\"",
+            "systemId": "6d991747-5cc7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005416",
+            "lineNo": 10000,
+            "itemNo": "166037102",
+            "description": "IMPLANTE QUATTRO 3710 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 50
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzODU1NjEyNzUzMzQ0NzY3Mzk2MTswMDsn\"",
+            "systemId": "4ad2ef4b-5dc7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005422",
+            "lineNo": 10000,
+            "itemNo": "252042102",
+            "description": "IMPLANTE QUATTRO INHEX 4210 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 125
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNzAzMDU0NzU0ODEyOTQzNzYxMTswMDsn\"",
+            "systemId": "0809ab63-5dc7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005423",
+            "lineNo": 10000,
+            "itemNo": "252042102",
+            "description": "IMPLANTE QUATTRO INHEX 4210 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 84
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNzA4MDI0NzUwMDYzNDc4ODAwMTswMDsn\"",
+            "systemId": "0898c6b5-5dc7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005424",
+            "lineNo": 10000,
+            "itemNo": "256042102",
+            "description": "IMPLANTE QUATTRO INHEX 4210TRATAMIENTO RBM HIBRIDO",
+            "remainingQtyBase": 148
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NDU1NTE4ODQzNDQ0MTE1OTg2MTswMDsn\"",
+            "systemId": "a2a22f56-5ec7-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005425",
+            "lineNo": 10000,
+            "itemNo": "252042112",
+            "description": "IMPLANTE QUATTRO INHEX 4211 CON TRATAMIENTO RBM",
+            "remainingQtyBase": 59
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0NDA1MjU4NjA5NDM0NjIxNzQwMTswMDsn\"",
+            "systemId": "48024f02-7bc9-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005562",
+            "lineNo": 10000,
+            "itemNo": "25404208",
+            "description": "Implante Inhex Quattro Std 4,25x8 mm ONE",
+            "remainingQtyBase": 29
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1MzgxNTk4NTk5MzMxNjIyMDU0MTswMDsn\"",
+            "systemId": "5b265a3b-9cc9-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005798",
+            "lineNo": 10000,
+            "itemNo": "F23257011T",
+            "description": "FAB REMOVER LARGO INHEX MINI TEMPLADO",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2ODkzNjkyOTQ0MjU1MTg5NDA2MTswMDsn\"",
+            "systemId": "3616c7bd-9cc9-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005810",
+            "lineNo": 10000,
+            "itemNo": "F15202125T",
+            "description": "FAB VASTAGO DESTORNILLADOR MANUAL LARGO TRATADO",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1MDE4NjA4MTkyMjI0NDc0NzI3MTswMDsn\"",
+            "systemId": "4a3ad5e5-9cc9-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005814",
+            "lineNo": 10000,
+            "itemNo": "F23209021T",
+            "description": "FAB ADAPTADOR DE C/A HEX TRATADOS",
+            "remainingQtyBase": 41
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0NTgxOTQ3OTM3NDM0ODQxMzU3MTswMDsn\"",
+            "systemId": "b3793966-9fc9-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005828",
+            "lineNo": 10000,
+            "itemNo": "F232070012",
+            "description": "FAB TRANSPORTADOR LARGO SIN ANOD",
+            "remainingQtyBase": 20
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyOTM4Nzg4MzAyMDMxMTY0Mzc2MTswMDsn\"",
+            "systemId": "db793966-9fc9-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005829",
+            "lineNo": 10000,
+            "itemNo": "F232070012",
+            "description": "FAB TRANSPORTADOR LARGO SIN ANOD",
+            "remainingQtyBase": 142
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNjgwMTM0NTMzOTYwMjQ5ODI4MTswMDsn\"",
+            "systemId": "ec6d15de-bbc9-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005834",
+            "lineNo": 10000,
+            "itemNo": "256037152",
+            "description": "IMPLANTE QUATTRO INHEX 3715TRATAMIENTO RBM HIBRIDO",
+            "remainingQtyBase": 55
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NTIwNjg4Nzk0MjUzNTI1MTQ0MTswMDsn\"",
+            "systemId": "25412a87-dbcb-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005983",
+            "lineNo": 10000,
+            "itemNo": "F232530301",
+            "description": "FAB PILAR CÓNICO ANG 30º INH MAXI ALT. 3 mm ",
+            "remainingQtyBase": 5
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2Njc3MDYyMDg3MjMwNTE5NTYxMTswMDsn\"",
+            "systemId": "66422a87-dbcb-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005988",
+            "lineNo": 10000,
+            "itemNo": "F23602526",
+            "description": "FAB TORNILLO RET INH STD HEX 1,25MM alt3-4mm TCP",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzNDUzNjc1NTkzNzkyNzI3OTYyMTswMDsn\"",
+            "systemId": "b1dc36b8-decb-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005995",
+            "lineNo": 10000,
+            "itemNo": "F13201300",
+            "description": "FAB TORNILLO CICATRIZACION PILAR CONICO 30º",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0MjcwNTE2MDQ4NTE0NTA5MDA2MTswMDsn\"",
+            "systemId": "e0dc36b8-decb-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005996",
+            "lineNo": 10000,
+            "itemNo": "F13201300",
+            "description": "FAB TORNILLO CICATRIZACION PILAR CONICO 30º",
+            "remainingQtyBase": 205
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0OTQwMDQ2ODM2MzExOTkzNzM0MTswMDsn\"",
+            "systemId": "0fdd36b8-decb-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24005997",
+            "lineNo": 10000,
+            "itemNo": "F13201300",
+            "description": "FAB TORNILLO CICATRIZACION PILAR CONICO 30º",
+            "remainingQtyBase": 148
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2ODkzMzcxODM1NTI3MzY4MjMwMTswMDsn\"",
+            "systemId": "5e50aec5-f2cb-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006017",
+            "lineNo": 10000,
+            "itemNo": "F13205010",
+            "description": "FAB TORNILLO DE CIERRE",
+            "remainingQtyBase": 243
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMTM0NTk4ODA0NDE2Nzk4MTAzMTswMDsn\"",
+            "systemId": "8d50aec5-f2cb-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006018",
+            "lineNo": 10000,
+            "itemNo": "F13205010",
+            "description": "FAB TORNILLO DE CIERRE",
+            "remainingQtyBase": 248
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyODY4ODI4NDAyNzM3OTY5MjQ3MTswMDsn\"",
+            "systemId": "bc50aec5-f2cb-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006019",
+            "lineNo": 10000,
+            "itemNo": "F13205010",
+            "description": "FAB TORNILLO DE CIERRE",
+            "remainingQtyBase": 232
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzNjE4MjYzMzM2Mzc0NzAxNDU1MTswMDsn\"",
+            "systemId": "eb50aec5-f2cb-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006020",
+            "lineNo": 10000,
+            "itemNo": "F13205010",
+            "description": "FAB TORNILLO DE CIERRE",
+            "remainingQtyBase": 232
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyOTYwNTE3NjcyMTM1NjA2MDA5MTswMDsn\"",
+            "systemId": "82340c25-c1cc-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006074",
+            "lineNo": 10000,
+            "itemNo": "F23205001M",
+            "description": "MEC FAB TORNILLO DE CIERRE INHEX STD",
+            "remainingQtyBase": 2484
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyODY0MTQ3MDkyMjY0MDEwNjQ3MTswMDsn\"",
+            "systemId": "91e0303c-dfcc-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "OFBC2401901",
+            "lineNo": 10000,
+            "itemNo": "44200000",
+            "description": "PRUEBAS BIOCAM MG",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2NjczNjQ2NDAyMzYxNjMxMzY3MTswMDsn\"",
+            "systemId": "47a1a9fb-f8ce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006115",
+            "lineNo": 10000,
+            "itemNo": "16624208",
+            "description": "Implante Osseous Quattro Std 4,25x8 mm ONE",
+            "remainingQtyBase": 10
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NzI2NTYyODM4MDc3NjgyMjYzMTswMDsn\"",
+            "systemId": "12a2a9fb-f8ce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006116",
+            "lineNo": 10000,
+            "itemNo": "16624210",
+            "description": "Implante Osseous Quattro Std 4,25x10 mm ONE",
+            "remainingQtyBase": 10
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzODUzNDIxMjcyNjQ3OTg4OTgzMTswMDsn\"",
+            "systemId": "ef35b001-f9ce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006117",
+            "lineNo": 10000,
+            "itemNo": "16624211",
+            "description": "Implante Osseous Quattro Std 4,25x11,5 mm ONE",
+            "remainingQtyBase": 10
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyOTA2MzQwMTY0NzIxMjQ4MjM2MTswMDsn\"",
+            "systemId": "b836b001-f9ce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006118",
+            "lineNo": 10000,
+            "itemNo": "23603310",
+            "description": "Implante Inhex híbrido Mini 3,3x10mm Integral",
+            "remainingQtyBase": 10
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MDM3NDYxMDQzMzU4MTI4NTUyMTswMDsn\"",
+            "systemId": "6337b001-f9ce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006119",
+            "lineNo": 10000,
+            "itemNo": "25203311",
+            "description": "Implante Inhex Quattro Mini 3.3x11,5 mm Integral",
+            "remainingQtyBase": 10
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1OTA2NDE0OTE2MTQxNjY0OTkzMTswMDsn\"",
+            "systemId": "1d38b001-f9ce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006120",
+            "lineNo": 10000,
+            "itemNo": "25403311",
+            "description": "Implante Inhex Quattro Mini 3.3x11,5 mm ONE",
+            "remainingQtyBase": 10
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzODIwNjYxMjM5MTQyNTY5MzM0MTswMDsn\"",
+            "systemId": "e838b001-f9ce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006121",
+            "lineNo": 10000,
+            "itemNo": "25403715",
+            "description": "Implante Inhex Quattro Std 3,75x15 mm ONE",
+            "remainingQtyBase": 10
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MzIyNTYwNjA0NzgyODI2MTAzMTswMDsn\"",
+            "systemId": "757ca807-f9ce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006122",
+            "lineNo": 10000,
+            "itemNo": "25604215",
+            "description": "Implante Inhex Quattro híbrido Std 4,25x15 mm Integral",
+            "remainingQtyBase": 3
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1MjgzOTE4NTY5MTgyMDU5NzEyMTswMDsn\"",
+            "systemId": "3b7da807-f9ce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006123",
+            "lineNo": 10000,
+            "itemNo": "25623710",
+            "description": "Implante Inhex Quattro híbrido Std 3,75x10 mm ONE",
+            "remainingQtyBase": 10
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1ODI1MDEwMzU4ODM5NDIzNDEwMTswMDsn\"",
+            "systemId": "1b7ea807-f9ce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006124",
+            "lineNo": 10000,
+            "itemNo": "25624208",
+            "description": "Implante Inhex Quattro híbrido Std 4,25x8 mm ONE",
+            "remainingQtyBase": 2
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2NDc2MjQzODk4NzgyNjg0ODQyMTswMDsn\"",
+            "systemId": "7d7ea807-f9ce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006125",
+            "lineNo": 10000,
+            "itemNo": "25624208",
+            "description": "Implante Inhex Quattro híbrido Std 4,25x8 mm ONE",
+            "remainingQtyBase": 2
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzNTgyMzMzNzM1NDA5MjMxMTkzMTswMDsn\"",
+            "systemId": "9c7fa807-f9ce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006126",
+            "lineNo": 10000,
+            "itemNo": "14614210",
+            "description": "Implante Osseous Std 4,25x10 mm Integral",
+            "remainingQtyBase": 10
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzNjU3MzE3MDIxNjE0MzYxMzE2MTswMDsn\"",
+            "systemId": "e580a807-f9ce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006127",
+            "lineNo": 10000,
+            "itemNo": "16614208",
+            "description": "Implante Osseous Quattro Std 4,25x8 mm Integral",
+            "remainingQtyBase": 10
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE3MDk3NjE3NTUwNjQ4NDEyMDMxMTswMDsn\"",
+            "systemId": "5feaa70d-f9ce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006128",
+            "lineNo": 10000,
+            "itemNo": "23203311",
+            "description": "Implante Inhex Mini 3,3x11,5 mm Integral",
+            "remainingQtyBase": 10
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NTk5NzUwMTU5ODc2NTg3NDQzMTswMDsn\"",
+            "systemId": "0aeba70d-f9ce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006129",
+            "lineNo": 10000,
+            "itemNo": "23204211",
+            "description": "Implante Inhex Std 4,25x11,5 mm Integral",
+            "remainingQtyBase": 66
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyODYwNTIwNjMwMTc2MDI5MjA3MTswMDsn\"",
+            "systemId": "b6eba70d-f9ce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006130",
+            "lineNo": 10000,
+            "itemNo": "23205009",
+            "description": "Implante Inhex Maxi 5x9 mm Integral",
+            "remainingQtyBase": 10
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0NzIyNjY0NTk2Mzc1MzY3MzcyMTswMDsn\"",
+            "systemId": "dc57a713-f9ce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006132",
+            "lineNo": 10000,
+            "itemNo": "23403711",
+            "description": "Implante Inhex Std 3,75x11,5 mm ONE",
+            "remainingQtyBase": 10
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyODM4NzczMjI3Nzk5OTcyMzM0MTswMDsn\"",
+            "systemId": "b458a713-f9ce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006133",
+            "lineNo": 10000,
+            "itemNo": "23404208",
+            "description": "Implante Inhex Std 4,25x8 mm ONE",
+            "remainingQtyBase": 10
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMTk2NDYxOTA4NDI1Mzg0MTQ2MTswMDsn\"",
+            "systemId": "8a59a713-f9ce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006134",
+            "lineNo": 10000,
+            "itemNo": "23404210",
+            "description": "Implante Inhex Std 4,25x10 mm ONE",
+            "remainingQtyBase": 19
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2OTE1MTAzNDgxODU4NDU4OTU1MTswMDsn\"",
+            "systemId": "555aa713-f9ce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006135",
+            "lineNo": 10000,
+            "itemNo": "23404210",
+            "description": "Implante Inhex Std 4,25x10 mm ONE",
+            "remainingQtyBase": 10
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0Mzc4Nzk1NjM0NTQ1NTcyMjk2MTswMDsn\"",
+            "systemId": "ca5ba713-f9ce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006137",
+            "lineNo": 10000,
+            "itemNo": "23404211",
+            "description": "Implante Inhex Std 4,25x11,5 mm ONE",
+            "remainingQtyBase": 4
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1MDI5ODEzOTEyNzQ3MDA1NTAwMTswMDsn\"",
+            "systemId": "2c5ca713-f9ce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006138",
+            "lineNo": 10000,
+            "itemNo": "23404211",
+            "description": "Implante Inhex Std 4,25x11,5 mm ONE",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMzI5ODE1MjI2NDEwNzc3Mzk2MTswMDsn\"",
+            "systemId": "8e5ca713-f9ce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006139",
+            "lineNo": 10000,
+            "itemNo": "23404211",
+            "description": "Implante Inhex Std 4,25x11,5 mm ONE",
+            "remainingQtyBase": 25
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0MjYyOTMzNDQzNDk4ODY5MDYyMTswMDsn\"",
+            "systemId": "c3c4c519-f9ce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006141",
+            "lineNo": 10000,
+            "itemNo": "25203708",
+            "description": "Implante Inhex Quattro Std 3,75x8 mm Integral",
+            "remainingQtyBase": 3
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzODE5MDU0Mzg1NjEzNjg0MzU4MTswMDsn\"",
+            "systemId": "edc6c519-f9ce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006145",
+            "lineNo": 10000,
+            "itemNo": "25203711",
+            "description": "Implante Inhex Quattro Std 3,75x11,5 mm Integral",
+            "remainingQtyBase": 2
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0MDc0ODMzMDQ1MDU2MjM0Mjc1MTswMDsn\"",
+            "systemId": "fac7c519-f9ce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006147",
+            "lineNo": 10000,
+            "itemNo": "25203713",
+            "description": "Implante Inhex Quattro Std 3,75x13 mm Integral",
+            "remainingQtyBase": 14
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0NTk5NDQ1ODU1Nzk2NDk2NTYxMTswMDsn\"",
+            "systemId": "d741e6d5-fbce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006279",
+            "lineNo": 10000,
+            "itemNo": "13201017",
+            "description": "Tornillo cicatrización pilar cónico Multiunit Osseous Std-Inhex Std-Inhex Maxi",
+            "remainingQtyBase": 33
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1OTkxNTgzMTU5NTE2NzMwNzgyMTswMDsn\"",
+            "systemId": "6142e6d5-fbce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006280",
+            "lineNo": 10000,
+            "itemNo": "13201727",
+            "description": "Tornillo prótesis pilar cónico Multiunit Osseous-Inhex",
+            "remainingQtyBase": 99
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzNzQyMjQ5MjkwMzYxNjczNTE1MTswMDsn\"",
+            "systemId": "ea42e6d5-fbce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006281",
+            "lineNo": 10000,
+            "itemNo": "13202528",
+            "description": "Tornillo de prótesis pilar cónico hexágono 1,25 Osseous-Inhex",
+            "remainingQtyBase": 105
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNTkwNzUwMTM4NjkwMTUzODAxMTswMDsn\"",
+            "systemId": "ab9af1db-fbce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006282",
+            "lineNo": 10000,
+            "itemNo": "13205551",
+            "description": "Análogo pilar cónico 10º Osseous Mini-Inhex Mini",
+            "remainingQtyBase": 10
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2NjQyMDUxNTk4NjA4OTMwNjMwMTswMDsn\"",
+            "systemId": "459bf1db-fbce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006283",
+            "lineNo": 10000,
+            "itemNo": "13207905",
+            "description": "Interfase hexagonal Osseous Std H0,5 mm con tornillo",
+            "remainingQtyBase": 33
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzODUzNjcwNTY0Njg4Mjg4MDgyMTswMDsn\"",
+            "systemId": "ef9bf1db-fbce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006284",
+            "lineNo": 10000,
+            "itemNo": "13207953",
+            "description": "Interfase pilar cónico 30º rotatorio Osseous Std-Inhex Std-Inhex Maxi con tornillo",
+            "remainingQtyBase": 160
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMzEyNDI3MDgwOTQxMjgxODUyMTswMDsn\"",
+            "systemId": "939cf1db-fbce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006285",
+            "lineNo": 10000,
+            "itemNo": "14750113",
+            "description": "Goma suero desechable NSK",
+            "remainingQtyBase": 56
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0NjQwNTAxODg3MjQzODE4NzY0MTswMDsn\"",
+            "systemId": "da9df1db-fbce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006288",
+            "lineNo": 10000,
+            "itemNo": "16003040",
+            "description": "Membrana de colágeno reabsorbible 30x40",
+            "remainingQtyBase": 84
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2Njg5MDA2NTE1MjQ2ODE0MzM4MTswMDsn\"",
+            "systemId": "459ef1db-fbce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006289",
+            "lineNo": 10000,
+            "itemNo": "19102005",
+            "description": "Swissbone Microchips 1-2mm (0.5 gramos)",
+            "remainingQtyBase": 43
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMjMxOTQwOTE3OTY5MDIzNDY2MTswMDsn\"",
+            "systemId": "8f9ef1db-fbce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006290",
+            "lineNo": 10000,
+            "itemNo": "19251005",
+            "description": "Swissbone Microchips 0.25-1mm (0.5 gramos)",
+            "remainingQtyBase": 95
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMzczMzQ2ODYzNDM1NjcyMTk5MTswMDsn\"",
+            "systemId": "96b801e2-fbce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006291",
+            "lineNo": 10000,
+            "itemNo": "23201000",
+            "description": "Pilar cónico 10º Inhex Std H0 mm",
+            "remainingQtyBase": 10
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1MDM2MzkzMzc1MzI1MjM5NzY4MTswMDsn\"",
+            "systemId": "2eb901e2-fbce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006292",
+            "lineNo": 10000,
+            "itemNo": "23201020",
+            "description": "Pilar angulado 20º Inhex Std H1 mm con tornillo",
+            "remainingQtyBase": 10
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0MzY2Nzk3NTA1MjExMDQ2NDgyMTswMDsn\"",
+            "systemId": "c9b901e2-fbce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006293",
+            "lineNo": 10000,
+            "itemNo": "23201031",
+            "description": "Pilar cónico 10º Inhex Mini H1 mm",
+            "remainingQtyBase": 14
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2ODY4NDY1MzUwNzg5ODk1NjE0MTswMDsn\"",
+            "systemId": "53ba01e2-fbce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006294",
+            "lineNo": 10000,
+            "itemNo": "23201033",
+            "description": "Pilar cónico 10º Inhex Mini H3 mm",
+            "remainingQtyBase": 16
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzODY1OTk3MTc2ODM2MTM2OTM4MTswMDsn\"",
+            "systemId": "edba01e2-fbce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006295",
+            "lineNo": 10000,
+            "itemNo": "23201730",
+            "description": "Pilar cónico Multiunit angulado 17º Inhex Std H3 mm con tornillo",
+            "remainingQtyBase": 10
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMjg4MzEyMTU5NTQ3Mjg5ODI4MTswMDsn\"",
+            "systemId": "93bb01e2-fbce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006296",
+            "lineNo": 10000,
+            "itemNo": "23203004",
+            "description": "Pilar cónico 30º Inhex Std H4 mm",
+            "remainingQtyBase": 52
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1OTI0NjM1MDg1NzQ0NDgwNDUwMTswMDsn\"",
+            "systemId": "1ebc01e2-fbce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006297",
+            "lineNo": 10000,
+            "itemNo": "23205025",
+            "description": "Tornillo de retención hexagonal 1,25 Inhex Maxi",
+            "remainingQtyBase": 22
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNzg3NDk5OTMyNzkyODU4OTY1MTswMDsn\"",
+            "systemId": "b7bc01e2-fbce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006298",
+            "lineNo": 10000,
+            "itemNo": "23207010",
+            "description": "Pilar fijo hexagonal Inhex Std H1 mm con tornillo",
+            "remainingQtyBase": 31
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMjMzNDAwODA2ODQ1MTMzNDE1MTswMDsn\"",
+            "systemId": "89fff9e7-fbce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006299",
+            "lineNo": 10000,
+            "itemNo": "23207012",
+            "description": "Pilar fijo hexagonal Inhex Std H2 mm con tornillo",
+            "remainingQtyBase": 15
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1MTE4NDY3NTg1MjU4NzQ0MTI3MTswMDsn\"",
+            "systemId": "3200fae7-fbce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006300",
+            "lineNo": 10000,
+            "itemNo": "23207013",
+            "description": "Pilar fijo hexagonal Inhex Std H3 mm con tornillo",
+            "remainingQtyBase": 11
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0NjEyNzMxMTAwNDY5Njg1Mjg1MTswMDsn\"",
+            "systemId": "db00fae7-fbce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006301",
+            "lineNo": 10000,
+            "itemNo": "23207905",
+            "description": "Interfase hexagonal Inhex Std H0.5 mm con tornillo",
+            "remainingQtyBase": 95
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMTcyODc3MDMzMjQ4MzE3Nzg0MTswMDsn\"",
+            "systemId": "8501fae7-fbce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006302",
+            "lineNo": 10000,
+            "itemNo": "23207910",
+            "description": "Interfase hexagonal Inhex Std H1 mm con tornillo",
+            "remainingQtyBase": 48
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0OTk5Nzk3MTc3NTc4ODUyMTkyMTswMDsn\"",
+            "systemId": "2f02fae7-fbce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006303",
+            "lineNo": 10000,
+            "itemNo": "23207920",
+            "description": "Interfase hexagonal Inhex Std H2 mm con tornillo",
+            "remainingQtyBase": 45
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2ODk0MjA2NjE2MTE5OTMwMDUwMTswMDsn\"",
+            "systemId": "576cf9ed-fbce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006304",
+            "lineNo": 10000,
+            "itemNo": "23208151",
+            "description": "Ucla calcinable hexagonal Inhex Std con tornillo",
+            "remainingQtyBase": 33
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NDMzMDg2NDIzMjcyNjYxNDUwMTswMDsn\"",
+            "systemId": "006df9ed-fbce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006305",
+            "lineNo": 10000,
+            "itemNo": "23208155",
+            "description": "Ucla calcinable hexagonal Inhex Maxi con tornillo",
+            "remainingQtyBase": 10
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1MTQwNDA5MDE1NjI0OTA2Nzg5MTswMDsn\"",
+            "systemId": "316ef9ed-fbce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006307",
+            "lineNo": 10000,
+            "itemNo": "23603003",
+            "description": "Pilar cónico 30º Inhex Std H3 mm TCP",
+            "remainingQtyBase": 16
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0Mzc0MzI1ODQ2NzkxNzY5MTIyMTswMDsn\"",
+            "systemId": "ca6ef9ed-fbce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006308",
+            "lineNo": 10000,
+            "itemNo": "23603303",
+            "description": "Poste impresión hexagonal Inhex Mini TCP con tornillo",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MTA5NDA2ODg5NzIzNTI0ODEyMTswMDsn\"",
+            "systemId": "656ff9ed-fbce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006309",
+            "lineNo": 10000,
+            "itemNo": "23604820",
+            "description": "Tornillo cicatrización Inhex Std H2 mm TCP",
+            "remainingQtyBase": 9
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0MDY4MTk5NzAxMzU0NTQ5Mzc1MTswMDsn\"",
+            "systemId": "fb6ff9ed-fbce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006310",
+            "lineNo": 10000,
+            "itemNo": "23604830",
+            "description": "Tornillo cicatrización Inhex Std H3 mm TCP",
+            "remainingQtyBase": 37
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0Njk4Njk3NDY2MjA2Mzk4OTY0MTswMDsn\"",
+            "systemId": "deb2f1f3-fbce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006311",
+            "lineNo": 10000,
+            "itemNo": "23604840",
+            "description": "Tornillo cicatrización Inhex Std H4 mm TCP",
+            "remainingQtyBase": 30
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzNDk3NjI1ODk4ODcwNTM0NzE3MTswMDsn\"",
+            "systemId": "9bb3f1f3-fbce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006312",
+            "lineNo": 10000,
+            "itemNo": "23607012",
+            "description": "Pilar fijo hexagonal Inhex Std H2 mm TCP con tornillo",
+            "remainingQtyBase": 19
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE3MTA2MzM5MzgyNzAxOTkwMzgyMTswMDsn\"",
+            "systemId": "5cb4f1f3-fbce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006313",
+            "lineNo": 10000,
+            "itemNo": "23607052",
+            "description": "Pilar fijo hexagonal Inhex Maxi H2 mm TCP con tornillo",
+            "remainingQtyBase": 10
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NDU4NjM5MzYyOTgwNTQyNzQ5MTswMDsn\"",
+            "systemId": "05b5f1f3-fbce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006314",
+            "lineNo": 10000,
+            "itemNo": "23607920",
+            "description": "Interfase hexagonal Inhex Std H2 mm TCP con tornillo",
+            "remainingQtyBase": 65
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNzY2NzE0NjQzMjE0MTQ0MTI2MTswMDsn\"",
+            "systemId": "b1b5f1f3-fbce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006315",
+            "lineNo": 10000,
+            "itemNo": "23607940",
+            "description": "Interfase hexagonal Inhex Std H4 mm TCP con tornillo",
+            "remainingQtyBase": 11
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE3MDAyODYyODAxODk2MTMyNDU3MTswMDsn\"",
+            "systemId": "5ab6f1f3-fbce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006316",
+            "lineNo": 10000,
+            "itemNo": "23657930",
+            "description": "Interfase hexagonal Inhex Maxi H3 mm TCP con tornillo",
+            "remainingQtyBase": 10
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NTc4NDY3MjM0ODcwNjg0Njg5MTswMDsn\"",
+            "systemId": "09b7f1f3-fbce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006317",
+            "lineNo": 10000,
+            "itemNo": "41145501",
+            "description": "Análogo digital Osseous Std con tornillo",
+            "remainingQtyBase": 29
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMjY0MDA4OTY0MzQzMzcwMjQ4MTswMDsn\"",
+            "systemId": "8ee314fa-fbce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006318",
+            "lineNo": 10000,
+            "itemNo": "41235501",
+            "description": "Análogo digital InHex Std con tornillo",
+            "remainingQtyBase": 25
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MDY0MjA2NDI5NTUwODA2MDIxMTswMDsn\"",
+            "systemId": "67e414fa-fbce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006319",
+            "lineNo": 10000,
+            "itemNo": "44301439",
+            "description": "Tornillo para chimeneas anguladas M1,4 L3,9",
+            "remainingQtyBase": 10
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0ODMxMjkxNzU1NzY1NTI5NTQ0MTswMDsn\"",
+            "systemId": "21e514fa-fbce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006320",
+            "lineNo": 10000,
+            "itemNo": "44302047",
+            "description": "Tornillo para chimeneas anguladas M2 L4,7",
+            "remainingQtyBase": 19
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1Mzk5Mjg5NjM4NzQ5ODcwMzU4MTswMDsn\"",
+            "systemId": "07511400-fcce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006321",
+            "lineNo": 10000,
+            "itemNo": "13114033",
+            "description": "Perfiladora Ø3,3 Quattro RCD",
+            "remainingQtyBase": 10
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzNDI2NjU3ODczNDMwNDM5NzQ2MTswMDsn\"",
+            "systemId": "90511400-fcce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006322",
+            "lineNo": 10000,
+            "itemNo": "13114037",
+            "description": "Perfiladora Ø3,75 Quattro RCD",
+            "remainingQtyBase": 10
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0OTc1Mzk2NTk4NTM3ODc5Njk1MTswMDsn\"",
+            "systemId": "2fb6cd06-fcce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006323",
+            "lineNo": 10000,
+            "itemNo": "13114042",
+            "description": "Perfiladora Ø4,25 Quattro RCD",
+            "remainingQtyBase": 10
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyOTIzNDkxNjE0MjM1ODQzNDEyMTswMDsn\"",
+            "systemId": "b8b6cd06-fcce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006324",
+            "lineNo": 10000,
+            "itemNo": "13202526",
+            "description": "Tornillo de retención hexágono 1,25 Osseous Mini-Osseous Std",
+            "remainingQtyBase": 101
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2NjYwNzg3NTM0NzE2Njg1NDk1MTswMDsn\"",
+            "systemId": "42b7cd06-fcce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006325",
+            "lineNo": 10000,
+            "itemNo": "13203511",
+            "description": "Análogo pilar cónico 30º Osseous Std-Inhex Std-Inhex Maxi",
+            "remainingQtyBase": 90
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0NzYxOTE0NTkzOTUyNjQwMjQ5MTswMDsn\"",
+            "systemId": "dbb7cd06-fcce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006326",
+            "lineNo": 10000,
+            "itemNo": "13205217",
+            "description": "Poste impresión pilar cónico Multiunit Osseous Std-Inhex Std-Inhex Maxi con tornillo",
+            "remainingQtyBase": 13
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0OTU5MjA0NDU4NTQzNzUzNzM2MTswMDsn\"",
+            "systemId": "2db9cd06-fcce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006328",
+            "lineNo": 10000,
+            "itemNo": "13206710",
+            "description": "Pilar titanio temporal pilar cónico Multiunit Osseous Std-Inhex Std-Inhex Maxi con tornillo",
+            "remainingQtyBase": 23
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNjU0NzI0NzM2NzQ4NDEzMjI0MTswMDsn\"",
+            "systemId": "af60c80c-fcce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006330",
+            "lineNo": 10000,
+            "itemNo": "16001520",
+            "description": "Membrana de colágeno reabsorbible 15x20",
+            "remainingQtyBase": 51
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MDgzNzU4NTAxNDQ4NjI1MzU4MTswMDsn\"",
+            "systemId": "6c2de912-fcce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006331",
+            "lineNo": 10000,
+            "itemNo": "23201001",
+            "description": "Pilar cónico 10º Inhex Std H1 mm",
+            "remainingQtyBase": 16
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzOTgyNTMyNDA0OTczNTM2NDgxMTswMDsn\"",
+            "systemId": "f62de912-fcce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006332",
+            "lineNo": 10000,
+            "itemNo": "23201002",
+            "description": "Pilar cónico 10º Inhex Std H2 mm",
+            "remainingQtyBase": 33
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMjE5NDM0OTEzNTA1NjU0Mzg3MTswMDsn\"",
+            "systemId": "8f2ee912-fcce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006333",
+            "lineNo": 10000,
+            "itemNo": "23201015",
+            "description": "Pilar angulado 15º Inhex Std H1 mm con tornillo",
+            "remainingQtyBase": 18
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzNTM3MjAxOTczNTE1MzU2MDIzMTswMDsn\"",
+            "systemId": "992fe912-fcce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006334",
+            "lineNo": 10000,
+            "itemNo": "23202110",
+            "description": "Pilar tallable hexagonal Inhex Std H2 mm con tornillo",
+            "remainingQtyBase": 10
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2NTk2ODQ4NTg0MDUzNjIyNTkwMTswMDsn\"",
+            "systemId": "4630e912-fcce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006335",
+            "lineNo": 10000,
+            "itemNo": "23202526",
+            "description": "Tornillo de retención hexagonal 1,25 Inhex Std",
+            "remainingQtyBase": 585
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0MDE4MzE1NTk3OTcyNTgzODcwMTswMDsn\"",
+            "systemId": "f230e912-fcce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006336",
+            "lineNo": 10000,
+            "itemNo": "23203002",
+            "description": "Pilar cónico 30º Inhex Std H2 mm",
+            "remainingQtyBase": 280
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1MTQ3MjE0OTM3NzkyNjAwODg2MTswMDsn\"",
+            "systemId": "3631e912-fcce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006337",
+            "lineNo": 10000,
+            "itemNo": "23203002",
+            "description": "Pilar cónico 30º Inhex Std H2 mm",
+            "remainingQtyBase": 220
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0MjAzMTE2MDA3NDc3ODUyMTE4MTswMDsn\"",
+            "systemId": "c4833219-fcce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006338",
+            "lineNo": 10000,
+            "itemNo": "23203003",
+            "description": "Pilar cónico 30º Inhex Std H3 mm",
+            "remainingQtyBase": 178
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzODA3MDkzMzU1MDc0NjY0MTAyMTswMDsn\"",
+            "systemId": "ed843219-fcce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006339",
+            "lineNo": 10000,
+            "itemNo": "23205501",
+            "description": "Análogo implante Inhex Std",
+            "remainingQtyBase": 544
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2NDg2NzkxMzk4NTY4Mzk2Mjk1MTswMDsn\"",
+            "systemId": "78853219-fcce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006340",
+            "lineNo": 10000,
+            "itemNo": "23205541",
+            "description": "Análogo implante Inhex Mini",
+            "remainingQtyBase": 82
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NDI5Nzg2MDU1NzY3NTA2OTA2MTswMDsn\"",
+            "systemId": "01863219-fcce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006341",
+            "lineNo": 10000,
+            "itemNo": "23205605",
+            "description": "Análogo implante Inhex Maxi",
+            "remainingQtyBase": 40
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2NjExNjEzMjU2NTAyMDU4NjYzMTswMDsn\"",
+            "systemId": "41f1501f-fcce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006344",
+            "lineNo": 10000,
+            "itemNo": "23209902",
+            "description": "Pilar cónico MultiUnit recto Inhex Std H2 mm",
+            "remainingQtyBase": 38
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0NTQ1NDc4MjMwNTkyNDk4OTEwMTswMDsn\"",
+            "systemId": "d6f2501f-fcce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006347",
+            "lineNo": 10000,
+            "itemNo": "23607930",
+            "description": "Interfase hexagonal Inhex Std H3 mm TCP con tornillo",
+            "remainingQtyBase": 38
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzNDgzMTg0MzU0MDU0ODMzNjA4MTswMDsn\"",
+            "systemId": "9dd26525-fcce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006348",
+            "lineNo": 10000,
+            "itemNo": "41146004",
+            "description": "Scanbody pilar cónico 10º TC4 Osseous Std-Inhex Std-Inhex Maxi",
+            "remainingQtyBase": 17
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2Nzk4MDAxNDAxNzk3NzAzMDkxMTswMDsn\"",
+            "systemId": "48d36525-fcce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006349",
+            "lineNo": 10000,
+            "itemNo": "41146005",
+            "description": "Scanbody pilar cónico 30º TC5 Osseous Std-Inhex Std-Inhex Maxi",
+            "remainingQtyBase": 30
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0MDc3MTMwMDY3OTg4MzM1MTE3MTswMDsn\"",
+            "systemId": "fdd36525-fcce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006350",
+            "lineNo": 10000,
+            "itemNo": "41146006",
+            "description": "Scanbody pilar cónico Multiunit TC6 Osseous Std-Inhex Std-Inhex Maxi",
+            "remainingQtyBase": 40
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzNDk3NzA2OTY0MDE3NDgxMTk4MTswMDsn\"",
+            "systemId": "98d46525-fcce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006351",
+            "lineNo": 10000,
+            "itemNo": "41236002",
+            "description": "Scanbody directo TC11 Inhex Std",
+            "remainingQtyBase": 92
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0MDcwNTM0NDIyMDk3MjI5OTU0MTswMDsn\"",
+            "systemId": "fd1b5e2b-fcce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006356",
+            "lineNo": 10000,
+            "itemNo": "13109003",
+            "description": "Indicador de profundidad Mini marca 6 mm",
+            "remainingQtyBase": 33
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2NjY4NjY2ODg3Njg4OTg1Nzg2MTswMDsn\"",
+            "systemId": "411c5e2b-fcce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006357",
+            "lineNo": 10000,
+            "itemNo": "13109003",
+            "description": "Indicador de profundidad Mini marca 6 mm",
+            "remainingQtyBase": 3
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0MjE5NzIwNzkwODM2MzQ3NTc1MTswMDsn\"",
+            "systemId": "fb0fab3d-fcce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006359",
+            "lineNo": 10000,
+            "itemNo": "14658009",
+            "description": "Extensor carraca Ø7mm corto",
+            "remainingQtyBase": 18
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1OTgyOTcyNzkzOTIxNDAyNTQzMTswMDsn\"",
+            "systemId": "6410ab3d-fcce-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006360",
+            "lineNo": 10000,
+            "itemNo": "14658010",
+            "description": "Llave carraca Ø7mm",
+            "remainingQtyBase": 16
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0MzgzNzAwMTYyNjY4NDI4OTA4MTswMDsn\"",
+            "systemId": "cc2cf324-fece-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006376",
+            "lineNo": 10000,
+            "itemNo": "F132079521G",
+            "description": "INTERF.TI.PIL.CÓN.10ºNO ROT.OSSSTD/INH.STD-MX GOLD",
+            "remainingQtyBase": 90
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzNjk2Mzk1MDIzMTk4ODY1OTQ4MTswMDsn\"",
+            "systemId": "e2adb43a-fece-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006380",
+            "lineNo": 10000,
+            "itemNo": "F141013091D",
+            "description": "A FAB TOR SET INJERTO D 1,3 x 9 mm ANODIZ DORADO",
+            "remainingQtyBase": 41
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyODI0NTEwNzg2Nzk2MTE0NTExMTswMDsn\"",
+            "systemId": "b0aeb43a-fece-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006383",
+            "lineNo": 10000,
+            "itemNo": "F23232526D",
+            "description": "A FAB TOR RET HEX 1,25 MM INH MINI ANODIZ DORADO",
+            "remainingQtyBase": 263
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0OTMyNDA2MjQ0OTU4NTI2NjE2MTswMDsn\"",
+            "systemId": "2eafb43a-fece-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006385",
+            "lineNo": 10000,
+            "itemNo": "F152021254A",
+            "description": "ANILLO SUPERIOR DESTORNILLADOR AZUL",
+            "remainingQtyBase": 50
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MTAxMTQ5OTMyNTE0OTIyNjAzMTswMDsn\"",
+            "systemId": "6eafb43a-fece-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006386",
+            "lineNo": 10000,
+            "itemNo": "F152021254V",
+            "description": "ANILLO SUPERIOR DESTORNILLADOR VERDE",
+            "remainingQtyBase": 50
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyODc4NjI5MjQzNTAzMzc2NjAwMTswMDsn\"",
+            "systemId": "43fefb0f-02cf-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006407",
+            "lineNo": 10000,
+            "itemNo": "F13204820L",
+            "description": "L FAB TOR CICAT ALT 2 mm OSSEOUS STD LASER",
+            "remainingQtyBase": 50
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2NDYxNDAwNzI0MDgzNTUxNzE3MTswMDsn\"",
+            "systemId": "86fefb0f-02cf-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006408",
+            "lineNo": 10000,
+            "itemNo": "F23204810L",
+            "description": "L FAB TOR CIC ALT 1MM INHEX STD LASER",
+            "remainingQtyBase": 41
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNzg1MjY5MzI4MTMyODM1NjY2MTswMDsn\"",
+            "systemId": "4ffffb0f-02cf-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006411",
+            "lineNo": 10000,
+            "itemNo": "F23604820L",
+            "description": "L FAB TOR CICAT ALT 2MM INHEX STD L FAB TCP LASER",
+            "remainingQtyBase": 35
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1MDA2MTg3NDIwNjM3NDk0OTUyMTswMDsn\"",
+            "systemId": "d1fffb0f-02cf-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006413",
+            "lineNo": 10000,
+            "itemNo": "F23604840L",
+            "description": "L FAB TOR CICAT ALT 4MM INHEX STD L FAB TCP LASER ",
+            "remainingQtyBase": 50
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzOTEwMDI4NTk1NTIyMTU3NTQ1MTswMDsn\"",
+            "systemId": "1400fc0f-02cf-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006414",
+            "lineNo": 10000,
+            "itemNo": "F23604850L",
+            "description": "L FAB TOR CICAT ALT 5MM INHEX STD L FAB TCP LASER ",
+            "remainingQtyBase": 27
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEyNjg5MzYwNjcxMjIzMTc5NTc5MTswMDsn\"",
+            "systemId": "5700fc0f-02cf-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006415",
+            "lineNo": 10000,
+            "itemNo": "F410035112L",
+            "description": "L FAB Anál Dig.P.C. 30º Os St-Mx PS/In St-Mx LAS",
+            "remainingQtyBase": 125
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1OTg0Mjc3NDc4Mjc5NTY3OTI4MTswMDsn\"",
+            "systemId": "9a00fc0f-02cf-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006416",
+            "lineNo": 10000,
+            "itemNo": "F410055112L",
+            "description": "L FAB Anál Dig.P.C.10º Os St-Mx PS/In St-Mx LAS",
+            "remainingQtyBase": 50
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NTczMTU2NzcxMjUzMTk2MzMzMTswMDsn\"",
+            "systemId": "f002fc0f-02cf-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006425",
+            "lineNo": 10000,
+            "itemNo": "F41146200L",
+            "description": "Scanb Pilar Cónico 10º OSS Mn/In Mn LAS",
+            "remainingQtyBase": 50
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0NjI0NzY5MjYzMjQxODc0NjAwMTswMDsn\"",
+            "systemId": "2c03fc0f-02cf-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006426",
+            "lineNo": 10000,
+            "itemNo": "F41146205L",
+            "description": "Scan P Cón 30º Os St/Mx PS-In St/Mx LAS",
+            "remainingQtyBase": 123
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0NTkzNDM4MDUwOTU4NDMzMzg0MTswMDsn\"",
+            "systemId": "2bf02c15-04cf-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006442",
+            "lineNo": 10000,
+            "itemNo": "F23203050",
+            "description": "Conj.  Pilar cónico ang. 30º Inh. Std. Alt. 5 mm ",
+            "remainingQtyBase": 11
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0NzEwNTMyOTM3NjA0NzE2Mjc4MTswMDsn\"",
+            "systemId": "27b8844a-04cf-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006456",
+            "lineNo": 10000,
+            "itemNo": "1540400022",
+            "description": "Bandeja vacía 1/4 con grommets montados",
+            "remainingQtyBase": 36
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2NTM5MTE0NzE2NzY2NDA5ODY4MTswMDsn\"",
+            "systemId": "bcb8844a-04cf-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006457",
+            "lineNo": 10000,
+            "itemNo": "1540400042",
+            "description": "BANDEJA QUATTRO 1/4 CON GROMMETS MONTADOS",
+            "remainingQtyBase": 23
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzMjMzNDMwOTAxNDkwNzY0MTAzMTswMDsn\"",
+            "systemId": "70b9844a-04cf-ee11-b671-d8382e06cfe4",
+            "prodOrderNo": "24006458",
+            "lineNo": 10000,
+            "itemNo": "1540400122",
+            "description": "BANDEJA EXPANSORES CON GROMMETS MONTADOS",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0ODE4Mzk5MzcwNDQyODIxMDIxMTswMDsn\"",
+            "systemId": "6b535e05-8f97-ef11-b67f-e624ee103ad1",
+            "prodOrderNo": "24006953.001",
+            "lineNo": 10000,
+            "itemNo": "23205501",
+            "description": "Análogo implante Inhex Std",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2MDE1MzI4NDE5NTI2NDA5OTc3MTswMDsn\"",
+            "systemId": "aba0b040-09a0-ef11-b67f-e624ee103ad1",
+            "prodOrderNo": "24006954",
+            "lineNo": 10000,
+            "itemNo": "252037133",
+            "description": "IMPLANTE INH QUATTRO 3713 EMPAQU SIN ESTERILIZAR",
+            "remainingQtyBase": 2
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzEzNzcwMTc5Mzk3MTY1NjI2Mzg4MTswMDsn\"",
+            "systemId": "59607c62-75a2-ef11-b67f-e624ee103ad1",
+            "prodOrderNo": "OFBC2402265",
+            "lineNo": 10000,
+            "itemNo": "45203212",
+            "description": "Barra CRCO sobre 3 implantes MG 12 piezas",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0ODUwNzE4MjMwNjExODA3MjMxMTswMDsn\"",
+            "systemId": "9937444c-7aa2-ef11-b67f-e624ee103ad1",
+            "prodOrderNo": "OFBC2402266",
+            "lineNo": 10000,
+            "itemNo": "44202002",
+            "description": "Puente CRCO sobre 2 implantes MG 2 piezas ",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1MDA2NjU0NjI4MTkzNzgzNjMwMTswMDsn\"",
+            "systemId": "1685d2f1-fda7-ef11-b67f-e624ee103ad1",
+            "prodOrderNo": "24006959",
+            "lineNo": 10000,
+            "itemNo": "23205501",
+            "description": "Análogo implante Inhex Std",
+            "remainingQtyBase": 5
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NzQ3MDQ2OTIzMjU3MDYwNzAwMTswMDsn\"",
+            "systemId": "2a4ad2c4-fea7-ef11-b67f-e624ee103ad1",
+            "prodOrderNo": "22012531.001",
+            "lineNo": 10000,
+            "itemNo": "232133151Q",
+            "description": "Q IMPLANTE INHEX 3315 GRADO IV SIN TRATAR",
+            "remainingQtyBase": 100
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1NjYwMjA3NjY3NTA1MjE5NDY3MTswMDsn\"",
+            "systemId": "b7f864ea-614e-ef11-b678-e6ebead473d1",
+            "prodOrderNo": "24006939",
+            "lineNo": 10000,
+            "itemNo": "13201020",
+            "description": "Pilar angulado 20º Osseous Std con tornillo",
+            "remainingQtyBase": 2
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2OTI1ODc2NTMwNjg4NTg2Njc5MTswMDsn\"",
+            "systemId": "9425fa42-174f-ef11-b679-f0b959490a41",
+            "prodOrderNo": "24006940",
+            "lineNo": 10000,
+            "itemNo": "13201020",
+            "description": "Pilar angulado 20º Osseous Std con tornillo",
+            "remainingQtyBase": 4
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE0ODI2MTkwNDgzNzg5NDkzNzkxMTswMDsn\"",
+            "systemId": "f905fd69-01aa-ee11-b670-f814138cab1b",
+            "prodOrderNo": "24000424",
+            "lineNo": 10000,
+            "itemNo": "13205003",
+            "description": "Poste impresión hexagonal Osseous Maxi con tornillo",
+            "remainingQtyBase": 1
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE2NTQ1NDY3MzU5NjgwOTI1MjY3MTswMDsn\"",
+            "systemId": "a625f5b2-01aa-ee11-b670-f814138cab1b",
+            "prodOrderNo": "24000508",
+            "lineNo": 10000,
+            "itemNo": "13973310",
+            "description": "Tope para fresas 3,3-3,4 L10 mm",
+            "remainingQtyBase": 6
+        },
+        {
+            "@odata.etag": "W/\"JzIwOzE1MDM2NDkwODc5NTQ3NTUxODAwMTswMDsn\"",
+            "systemId": "7373292b-854a-ef11-b677-fa9a21483dc8",
+            "prodOrderNo": "24006938",
+            "lineNo": 10000,
+            "itemNo": "13103437",
+            "description": "Perfiladora Subcrestal Prótesis 3.4-3.7 mm",
+            "remainingQtyBase": 20
+        }
+    ]
+}

@@ -1362,8 +1362,18 @@ namespace UHFAPP
         /// <returns>true:success false:fail</returns>
         public bool SetPower(byte save, byte uPower)
         {
-            if (UHFSetPower(save, uPower) == 0)
-                return true;
+            try
+            {
+                if (UHFSetPower(save, uPower) == 0)
+                    return true;
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine("SetPower error:" + e.Message);
+                return false;
+            }
+            
+            
             return false;
         }
         /// <summary>

@@ -3468,3 +3468,9 @@ System.ArgumentException: Ya existe una entrada con la misma clave.
    en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
    en System.Threading.ThreadHelper.ThreadStart()
 -----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Error al crear identificador de ventana.
+-----------------------begin--------------------------
+Application_ThreadException:Error al crear identificador de ventana.
+-----------------------begin--------------------------
+Application_ThreadException:Error al crear identificador de ventana.

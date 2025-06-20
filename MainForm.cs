@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading;
 using System.Windows;
 using System.Windows.Forms;
-using System.Windows.Shapes;
+//using System.Drawing;
 using ApodemiaC;
 using BLEDeviceAPI;
 using Newtonsoft.Json;
@@ -79,6 +79,8 @@ namespace UHFAPP
         private bool sinValidar;
         private string idProducto;
         private Thread hiloLectura;
+        private bool biocam;
+        private UHFAPP.UHFAPI.OnDataReceived onDataReceived = DataReceived;
         SortedDictionary<string, int> tagsOrden = new SortedDictionary<string, int>();
         SortedDictionary<string, int> tagsComprobacion = new SortedDictionary<string, int>();
         public static FormWindowState currState = FormWindowState.Normal;
@@ -86,7 +88,48 @@ namespace UHFAPP
         public bool isSearch = false;
         UHFAPP.UHFAPI.OnDisconnectCallback DisconnectCallback = null;
         private string epcErroneo;
+        bool result = false;
         #region  OnDisconnect
+
+        private static void DataReceived(IntPtr pdata, short len)
+        {
+            Console.WriteLine(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss:fff") + " DataReceived begin");
+            short contentLen;
+            short index = 0;
+            byte type;
+
+            byte[] cellData = new byte[len];
+            Marshal.Copy(pdata, cellData, 0, len);
+            // cellData= Utils.CopyArray(pdata,0,len);
+
+            byte[] pcontent;
+            // printf("OnReceivedData:");
+            for (int i = 0; i < len; i++)
+            {
+                // Console.WriteLine("%02X", cellData[i]);
+            }
+            byte[] temp = null;
+            string str;
+            //  printf("\n");
+            while (index < len)
+            {
+                type = cellData[index++];
+                if ((cellData[index] & 0x80) == 0x80)
+                {
+                    contentLen = (short)(((cellData[index] & 0x7F) << 7) | (cellData[index + 1] & 0x7F));
+                    index += 2;
+                }
+                else
+                {
+                    contentLen = cellData[index++];
+                }
+
+                pcontent = Utils.CopyArray(cellData, index, contentLen);
+              
+                index += contentLen;
+            }
+        }
+
         private void OnDisconnectCallback(int id)
         {
             try
@@ -125,7 +168,16 @@ namespace UHFAPP
             button1.Text = strOpen;
             button1.BackColor = System.Drawing.Color.Red;
             DisconnectCallback = OnDisconnectCallback;
-            toolStripButton1_Click();
+            Screen primaryScreen = Screen.PrimaryScreen;
+            System.Drawing.Rectangle bounds = primaryScreen.Bounds;
+            this.Size = new System.Drawing.Size(bounds.Width, bounds.Height);
+            panel9.Size = new System.Drawing.Size(bounds.Width, bounds.Height);
+            dataGridView1.Size = new System.Drawing.Size(bounds.Width / 2, (bounds.Height * 2 / 3) - 200);
+            epcs.Size = new System.Drawing.Size(bounds.Width / 2, (bounds.Height * 2 / 3) - 200);
+            epcs.Location = new System.Drawing.Point(bounds.Width / 2, 321);
+            btnScanEPC.Location = new System.Drawing.Point(((bounds.Width / 4)*2)+50, bounds.Height - 120);
+            buttonConsulta.Location = new System.Drawing.Point((50) , bounds.Height - 120);
+
         }
         public void cargarDatos(string archivo)
         {
@@ -176,13 +228,28 @@ namespace UHFAPP
             isRuning = false;
 
             StopReceiveThread();
-            hiloLectura.Interrupt();
-            CancellationTokenSource cts = new CancellationTokenSource();
-            cts.Cancel();
-            hiloLectura.Join();
-            hiloLectura.Abort();
-            uhf.CloseUsb();
-            uhf.Close();
+            try
+            {
+                if (hiloLectura != null && hiloLectura.IsAlive)
+                {
+                    hiloLectura.Abort();
+                    hiloLectura.Interrupt();
+                    CancellationTokenSource cts = new CancellationTokenSource();
+                    cts.Cancel();
+                    hiloLectura.Join();
+                    hiloLectura.Abort();
+
+                    uhf.CloseUsb();
+                    uhf.Close();
+                }
+               
+               
+            }
+            catch (Exception e)
+            {
+                log("UHFClose:" + e.Message);
+            }
+           
             System.Windows.Forms.Application.Exit();
             Environment.Exit(0);
 
@@ -196,18 +263,46 @@ namespace UHFAPP
             btnScanEPC.BackColor = System.Drawing.Color.White;
             btnScanEPC.Enabled = false;
             btnScanEPC.Visible = true;
-            bool result = false;
-            result = uhf.OpenUsb();
+           
+            try
+            {
+               
+                result = uhf.OpenUsb();
+                if (!result)
+                {
+                    caja("No se pudo conectar al lector, compruebe que este conectado", null,false);
+                    panelCaja.Refresh();
+                    StopReceiveThread();
+                    StopEPC(true);
+                    Thread.Sleep(3000);
+                    UHFClose();
+
+
+                }
+                else
+                {
+                    uhf.SetPower(1, Byte.Parse(potencia));
+                    uhf.SetTagfocus(Byte.Parse(tagFocus));
+                    uhf.SetGen2(0, 0, 0, 1, 4, 0, 15, 1, 2, 1, 1, 1, 0, 3);
+                    uhf.UHFSetBuzzer(Byte.Parse(buzzer));
+                }
+                // UHFAPI.setOnDataReceived(onDataReceived);
+
+            }
+            catch (Exception e)
+            {
+                log("toolStripButton1_Click:" + e.Message);
+
+            }
+
+           
             UHFAPI.SetDisconnectCallback(DisconnectCallback);
             button1.BackColor = System.Drawing.Color.GreenYellow;
             button1.Text = strClose;
             btnScanEPC.Visible = true;
             btnScanEPC.BackColor = System.Drawing.Color.Green;
             btnScanEPC.Text = strStart;
-            uhf.SetPower(1, Byte.Parse(potencia));
-            uhf.SetTagfocus(Byte.Parse(tagFocus));
-            uhf.SetGen2(0, 0, 0, 1, 4, 0, 15, 1, 2, 1, 1, 1, 0, 3);
-            uhf.UHFSetBuzzer(Byte.Parse(buzzer));
+            
 
         }
 
@@ -398,7 +493,8 @@ namespace UHFAPP
                             }
                             else
                             {
-                                caja("Orden no existe", null);
+                                if(result)
+                                caja("Orden no existe", null,true);
                                 return false;
                             }
                             resultado = true;
@@ -460,7 +556,7 @@ namespace UHFAPP
                                 if (!tagsOrden.ContainsKey(grabacionRespuesta.grabaciones[i].tag))
                                     tagsOrden.Add(grabacionRespuesta.grabaciones[i].tag, grabacionRespuesta.grabaciones[i].linea);
                                 new Thread(new ThreadStart(delegate { desglosaEpc(grabacionRespuesta.grabaciones[i].tag, grabacionRespuesta.grabaciones[grabacionRespuesta.grabaciones.Length - 1].fecha.ToLocalTime().ToString(), false); })).Start();
-                               // desglosaEpc(grabacionRespuesta.grabaciones[i].tag, grabacionRespuesta.grabaciones[grabacionRespuesta.grabaciones.Length - 1].fecha.ToLocalTime().ToString(), false);
+                                // desglosaEpc(grabacionRespuesta.grabaciones[i].tag, grabacionRespuesta.grabaciones[grabacionRespuesta.grabaciones.Length - 1].fecha.ToLocalTime().ToString(), false);
                                 // epcs.Refresh();
                                 cantidadReal++;
                                 lCantidadTotal.Text = "" + cantidadTotal + "/" + cantidadReal;
@@ -482,12 +578,18 @@ namespace UHFAPP
 
 
 
-        private void caja(string texto, string epc)
+        private void caja(string texto, string epc, bool boton)
         {
             try
             {
+                if(boton)
+                    botonCaja.Visible = true;
+                else
+                    botonCaja.Visible = false;
+
                 StopEPC(true);
                 uhf.StopInventory();
+                epcErroneo = epc;
                 textoCaja.Invoke(new Action(() => textoCaja.Text = texto));
                 panelCaja.Invoke(new Action(() => panelCaja.Visible = true));
 
@@ -504,7 +606,8 @@ namespace UHFAPP
             {
                 if (textBox1.Text.Trim().Equals(""))
                 {
-                    caja("Orden no puede estar vacia", "");
+                    if (result)
+                        caja("Orden no puede estar vacia", "",true);
 
                     return;
                 }
@@ -535,7 +638,8 @@ namespace UHFAPP
                             Orden orden = JsonConvert.DeserializeObject<Orden>(responseBody);
                             if (orden.id == 0)
                             {
-                                caja("Orden no existe", "");
+                                if (result)
+                                    caja("Orden no existe", "",true);
                                 textBox1.Text = "";
                                 return;
                             }
@@ -700,7 +804,8 @@ namespace UHFAPP
                         resultado = true;
                         if (ordenRetorno.textoError != null && ordenRetorno.textoError.Length > 0 && comprobarErrores)
                         {
-                            caja(ordenRetorno.textoError + "\n" + desglosaEpcErroneo(epc), epc);
+                            if (result)
+                                caja(ordenRetorno.textoError + "\n" + desglosaEpcErroneo(epc), epc,true);
                             resultado = false;
                             return resultado;
                         }
@@ -765,14 +870,14 @@ namespace UHFAPP
         {
             //setTextCallback = new SetTextCallback(UpdataEPC);
 
-            var bounds = Screen.FromControl(this).Bounds;
+            /*var bounds = Screen.FromControl(this).Bounds;
             this.Width = bounds.Width - 50;
             this.Height = bounds.Height - 50;
             panel9.Width = this.Width;
             panel9.Height = this.Height;
             epcs.Width = panel9.Width - epcs.Location.X;
-            epcs.Height = panel9.Height - epcs.Location.Y - 100;
-            this.MaximumSize = SystemInformation.PrimaryMonitorMaximizedWindowSize;
+            epcs.Height = panel9.Height - epcs.Location.Y - 100;*/
+           // this.MaximumSize = SystemInformation.PrimaryMonitorMaximizedWindowSize;
             this.WindowState = FormWindowState.Maximized;
         }
         private void ReadEPC()
@@ -805,7 +910,7 @@ namespace UHFAPP
                                 {
                                     tagsComprobacion.Add(info.Epc, 1);
                                     new Thread(new ThreadStart(delegate { desglosaEpc(info.Epc); })).Start();
-                                   //desglosaEpc(info.Epc);
+                                    //desglosaEpc(info.Epc);
 
                                 }
                             }
@@ -955,16 +1060,10 @@ namespace UHFAPP
                             epcs.Rows.Add(new object[] { desglose.noProducto, desglose.noLote, desglose.noSerie, Int32.Parse(tbLinea.Text), fecha });
                         }
 
-                        /* if (grabar)
-                         {
-                             if (ubicación.Equals("mozo"))
-                                 //new Thread(new ThreadStart(delegate { grabarTagContadorMozo(epc, Int32.Parse(tbLinea.Text),true); })).Start();
-                                 grabarTagContadorMozo(epc, Int32.Parse(tbLinea.Text), true);
-                             //new Thread(new ThreadStart(delegate { grabarTagContadorAmipem(epc, Int32.Parse(tbLinea.Text)); })).Start();
-                             else
-                                 grabarTagContadorAmipem(epc, Int32.Parse(tbLinea.Text));   
-                         }*/
-
+                        if (biocam)
+                        {
+                            cargarDatos(desglose.noLote);
+                        }
                         if (tagsOrden.Count >= cantidadTotal)
                         {
 
@@ -972,17 +1071,18 @@ namespace UHFAPP
                             if (!finOrden)
                             {
                                 finOrden = true;
-                                if (epcs.InvokeRequired)
+                                /*f (epcs.InvokeRequired)
                                 {
                                     epcs.Invoke(new Action(() => epcs.Rows.Add(new object[] { "", "", "Orden finalizada", "", "" })));
                                 }
                                 else
                                 {
                                     epcs.Rows.Add(new object[] { "", "", "Orden finalizada", "", "" });
-                                }
-                                epcs.Rows[lastRowIndex].DefaultCellStyle.BackColor = System.Drawing.Color.Red;
-                                epcs.Rows[lastRowIndex].DefaultCellStyle.ForeColor = System.Drawing.Color.White;
-                                caja("Orden finalizada", "");
+                                }*/
+                                /* epcs.Rows[lastRowIndex].DefaultCellStyle.BackColor = System.Drawing.Color.Red;
+                                 epcs.Rows[lastRowIndex].DefaultCellStyle.ForeColor = System.Drawing.Color.White;*/
+                                if (result && !biocam)
+                                    caja("Orden finalizada", "", true);
 
                             }
                             StopEPC(true);
@@ -1073,6 +1173,11 @@ namespace UHFAPP
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if(!result)
+            toolStripButton1_Click();
+            biocam = false;
+            if (textBox1.Text.StartsWith("BC"))
+                biocam = true;
             finOrden = false;
             epcs.Rows.Clear();
             tagsOrden.Clear();
@@ -1115,16 +1220,18 @@ namespace UHFAPP
 
         private void MainForm_ResizeEnd(object sender, EventArgs e)
         {
-            var bounds = Screen.FromControl(this).Bounds;
-            this.Width = bounds.Width;
-            this.Height = bounds.Height;
-            panel9.Width = this.Width;
-            panel9.Height = this.Height;
-            epcs.Width = this.Width - epcs.Location.X;
-            epcs.Height = this.Height - epcs.Location.Y - 100;
+            Screen primaryScreen = Screen.PrimaryScreen;
+            System.Drawing.Rectangle bounds = primaryScreen.Bounds;
+            this.Size = new System.Drawing.Size(bounds.Width, bounds.Height);
+            panel9.Size = new System.Drawing.Size(bounds.Width, bounds.Height);
+            dataGridView1.Size = new System.Drawing.Size(bounds.Width / 2, (bounds.Height * 2 / 3) - 100);
+            epcs.Size = new System.Drawing.Size(bounds.Width / 2, (bounds.Height * 2 / 3) - 100);
+            epcs.Refresh();
         }
         private void buttonConsulta_Click(object sender, EventArgs e)
         {
+            if(!result)
+            toolStripButton1_Click();
             consulta = true;
             if (buttonConsulta.Text == strStopConsulta)
             {
@@ -1157,6 +1264,21 @@ namespace UHFAPP
                 log("botonCaja_Click:" + e1.Message);
             }
             // StopEPC(false);
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel9_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void epcs_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
