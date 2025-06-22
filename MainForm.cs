@@ -452,12 +452,20 @@ namespace UHFAPP
                 leerOrdenAmipem();
                 return true;
             }
+            if (textBox1.Text.Trim().Equals(""))
+            {
+                if (result)
+                    caja("Orden no puede estar vacia", "", true);
+
+                return false;
+            }
+
             btnScanEPC.Enabled = false;
             bool resultado = false;
             SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\chimes.wav");
             simpleSound.Play();
 
-            var url = apiMozoBase + "api/mozo/apiArco/v2.0/companies(" + cliente + ")/linOrdenesProdArco?$filter=prodOrderNo eq '" + textBox1.Text + "'";
+            var url = apiMozoBase + "api/mozo/apiArco/v2.0/companies(" + cliente + ")/linOrdenesProdArco?$filter=prodOrderNo eq '" + textBox1.Text.Trim() + "'";
             cantidadReal = 0;
             var request = (HttpWebRequest)WebRequest.Create(url);
             string username = usuario;
@@ -604,13 +612,7 @@ namespace UHFAPP
         {
             try
             {
-                if (textBox1.Text.Trim().Equals(""))
-                {
-                    if (result)
-                        caja("Orden no puede estar vacia", "",true);
-
-                    return;
-                }
+               
                 var url = apiAmipemBase + "leerOrden";
 
                 var request = (HttpWebRequest)WebRequest.Create(url);
@@ -1005,7 +1007,7 @@ namespace UHFAPP
             }
         }
 
-        private int desglosaEpc(string epc, string fecha, bool grabar)
+        private void desglosaEpc(string epc, string fecha, bool grabar)
         {
             int ultimograbado = 0;
             if (ubicación.Equals("casa"))
@@ -1071,16 +1073,7 @@ namespace UHFAPP
                             if (!finOrden)
                             {
                                 finOrden = true;
-                                /*f (epcs.InvokeRequired)
-                                {
-                                    epcs.Invoke(new Action(() => epcs.Rows.Add(new object[] { "", "", "Orden finalizada", "", "" })));
-                                }
-                                else
-                                {
-                                    epcs.Rows.Add(new object[] { "", "", "Orden finalizada", "", "" });
-                                }*/
-                                /* epcs.Rows[lastRowIndex].DefaultCellStyle.BackColor = System.Drawing.Color.Red;
-                                 epcs.Rows[lastRowIndex].DefaultCellStyle.ForeColor = System.Drawing.Color.White;*/
+                               
                                 if (result && !biocam)
                                     caja("Orden finalizada", "", true);
 
@@ -1097,14 +1090,73 @@ namespace UHFAPP
                         }
 
                     }
+                    if (biocam)
+                    {
+                        var url1 = apiMozoBase + "api/mozo/apiArco/v2.0/companies(0c0574f1-f098-ed11-965c-6045bd89ef6b)/pedidosVentaArco?$expand=linPedidosVentaArco($expand=vinculosEnsamblarPedidoArco($expand=linPedidosEnsambladoArco))&$filter=no eq "+textBox1.Text.Trim();
+                        var request1 = (HttpWebRequest)WebRequest.Create(url);
+                        
+                        string svcCredentials1 = Convert.ToBase64String(ASCIIEncoding.ASCII.GetBytes(username + ":" + password));
+                        request.Headers.Add("Authorization", "Basic " + svcCredentials);
+                        request.Method = "GET";
+                        request.ContentType = "application/json";
+                        request.Accept = "*/*";
+
+                        try
+                        {
+                            using (WebResponse response = request.GetResponse())
+                            {
+                                using (Stream strReader = response.GetResponseStream())
+                                {
+                                    if (strReader == null)
+                                        return ;
+                                    using (StreamReader objReader = new StreamReader(strReader))
+                                    {
+                                        string responseBody = objReader.ReadToEnd();
+                                        string responseBodyFormater = responseBody.Replace("@odata.context", "dataContext");
+                                        responseBodyFormater = responseBodyFormater.Replace("@odata.etag", "odataETag");
+
+                                        Biocam biocam = JsonConvert.DeserializeObject<Biocam>(responseBodyFormater);
+                                        if (biocam!=null)
+                                        {
+                                            LinPedidosVentaArco[] linPedidosVentaArcos = biocam.linPedidosVentaArco;
+                                            StringBuilder resultadoBiocam= new StringBuilder();
+                                            for (int i = 0; i < linPedidosVentaArcos.Length; i++)
+                                            {
+                                                if (linPedidosVentaArcos[i].description.StartsWith("Tornillo"))
+                                                {
+                                                    resultadoBiocam.Append("Tornillo: " + linPedidosVentaArcos[i].description +"("+ linPedidosVentaArcos[i].outstandingQuantity + ")\r\n");
+                                                }
+                                            }
+                                            caja(resultadoBiocam.ToString(), null, true);
+                                        }
+                                        else
+                                        {
+                                            if (result)
+                                                caja("Orden no existe", null, true);
+                                            return ;
+                                        }
+                                       
+                                    }
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            log("leerOrden:" + ex.Message);
+                            //caja("Problemas de conexion con la base de datos, contacte con el administrador", "");
+                            
+                            textBox1.Text = "";
+                        }
+                    }
                 }
                 catch (Exception e)
                 {
                     log("desglosaEpc:" + e.Message);
                     //caja("Problemas de conexion con la base de datos, contacte con el administrador", "");
                 }
+                
             }
-            return ultimograbado;
+           
         }
         private string desglosaEpcErroneo(string epc)
         {
