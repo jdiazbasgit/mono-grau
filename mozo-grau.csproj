@@ -164,6 +164,7 @@
     <Compile Include="RFID-HF\ISO15693Entity.cs" />
     <Compile Include="RFID-HF\PSAMAPI.cs" />
     <Compile Include="utils\Biocam.cs" />
+    <Compile Include="utils\biocam\Value.cs" />
     <Compile Include="utils\CheckUtils.cs" />
     <Compile Include="utils\Desglose.cs" />
     <Compile Include="utils\GrabacionDTO.cs" />
@@ -174,6 +175,7 @@
     <Compile Include="utils\LinPedidosVentaArco.cs" />
     <Compile Include="utils\ObjectSend.cs" />
     <Compile Include="utils\Orden.cs" />
+    <Compile Include="utils\OrigenOrden.cs" />
     <Compile Include="utils\Peticion.cs" />
     <Compile Include="utils\Grabacion.cs" />
     <Compile Include="utils\Common.cs" />
@@ -190,6 +192,7 @@
     <Compile Include="utils\MessageBoxEx.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="utils\pedido\Value.cs" />
     <Compile Include="utils\Tag.cs" />
     <Compile Include="utils\Validacion.cs" />
     <Compile Include="utils\Value.cs" />

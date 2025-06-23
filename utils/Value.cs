@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UHFAPP.utils
 {
-    internal class Value
+    public class Value
     {
         public string dataTag { get; set; }
         public string systemId { get; set; }

@@ -4,18 +4,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace UHFAPP.utils
 {
-    public class Biocam
+    public class OrigenOrden
     {
-        public string dataContext { get; set; }
 
-        public utils.biocam.Value[] value { get; set; }
-        public Biocam(string dataContext, utils.biocam.Value[] value)
+        public string dataContext { get; set; }
+        public UHFAPP.utils.segundos.Value[] value { get; set; }
+
+        public OrigenOrden(string dataContext, UHFAPP.utils.segundos.Value[] value)
         {
             this.dataContext = dataContext;
             this.value = value;
         }
+
 
     }
 }
