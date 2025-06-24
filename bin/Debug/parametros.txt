@@ -16,7 +16,7 @@ BLZNChVZ4LAab/kewV3J0v1J/2rYZSwuDUcyyOWEkbY=
 mozo
 #oficina
 #potencia de la antena
-30
+15
 #session de la antena
 00
 #tag focus (1 activado, 0 desactivado)
