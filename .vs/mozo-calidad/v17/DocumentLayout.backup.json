@@ -193,7 +193,7 @@
               "RelativeDocumentMoniker": "MainForm.cs",
               "ToolTip": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-calidad\\MainForm.cs",
               "RelativeToolTip": "MainForm.cs",
-              "ViewState": "AgIAAEkCAAAAAAAAAADgv1ACAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAM4BAAAAAAAAAAAUwNMBAAB7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-16T08:42:39.461Z",
               "EditorCaption": ""
@@ -398,7 +398,8 @@
               "RelativeToolTip": "UHFAPI.cs",
               "ViewState": "AgIAABwFAAAAAAAAAAASwFYFAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-11T01:40:35.8Z"
+              "WhenOpened": "2025-05-11T01:40:35.8Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
