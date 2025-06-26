@@ -528,6 +528,45 @@ namespace UHFAPP
             }
         }
 
+        private void grabaBajaAmipem(string epc,string descripcion)
+        {
+            try
+            {
+                if (tagsOrden.ContainsKey(epc))
+                {
+                    var url = apiAmipemBase + "grabarBaja";
+                    var request = (HttpWebRequest)WebRequest.Create(url);
+                    request.Method = "POST";
+                    request.ContentType = "application/json";
+                    request.Accept = "application/json";
+                    DateTime fecha = DateTime.Now;
+                    BajaAmipemOut bajaAmipemOut = new BajaAmipemOut(0, epc, descripcion);
+                    string salida = JsonConvert.SerializeObject(bajaAmipemOut);
+                    byte[] data = Encoding.UTF8.GetBytes(salida);
+                    request.ContentLength = data.Length;
+                    Stream stream = request.GetRequestStream();
+                    stream.Write(data, 0, data.Length);
+                    stream.Close();
+                    using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
+                    {
+                        Stream stream1 = response.GetResponseStream();
+                        StreamReader sr = new StreamReader(stream1);
+                        string strsb = sr.ReadToEnd();
+                        BajaAmipemIn bajaAmipemIn = JsonConvert.DeserializeObject<BajaAmipemIn>(strsb);
+                       
+                        new Thread(new ThreadStart(delegate { desglosaEpc(epc, DateTime.Now.ToString(), true); })).Start();
+
+                        //desglosaEpc(epc, DateTime.Now.ToString(), true);
+                    }
+                }
+            }
+            catch (Exception e1)
+            {
+                log("grabarTagContadorAmipem:" + e1.Message);
+            }
+
+        }
+
         private bool grabaBaja(string epc, bool comprobarErrores)
         {
             bool resultado = false;
@@ -576,6 +615,7 @@ namespace UHFAPP
                             else
                             {
                               desglosaEpc(epc, DateTime.Now.ToString(), true);
+                                //grabaBajaAmipem(epc, tDescripcion.Text);
                             }
                             resultado = true;
                         }

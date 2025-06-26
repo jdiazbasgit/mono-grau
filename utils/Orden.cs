@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UHFAPP.utils
 {
-    internal class Orden
+    public class Orden
     {
         public int id { get; set; }
         public string codigo { get; set; }
