@@ -163,6 +163,8 @@
     </Compile>
     <Compile Include="RFID-HF\ISO15693Entity.cs" />
     <Compile Include="RFID-HF\PSAMAPI.cs" />
+    <Compile Include="utils\BajaIn.cs" />
+    <Compile Include="utils\BajaOut.cs" />
     <Compile Include="utils\Biocam.cs" />
     <Compile Include="utils\biocam\Value.cs" />
     <Compile Include="utils\CheckUtils.cs" />

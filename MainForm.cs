@@ -50,8 +50,8 @@ namespace UHFAPP
         string strClose = "  Desconectar lector  ";
         string strStart = "  Iniciar lectura  ";
         string strStop = "  Detener lectura  ";
-        string strStartConsulta = "  Iniciar comprobacion  ";
-        string strStopConsulta = "  Detener comprobacion  ";
+        string strStartConsulta = "  Iniciar bajas  ";
+        string strStopConsulta = "  Detener bajas  ";
         private List<string> tags = new List<string>();
         private List<int> tagsCantidad = new List<int>();
         private string currentFormName = "";
@@ -172,11 +172,10 @@ namespace UHFAPP
             System.Drawing.Rectangle bounds = primaryScreen.Bounds;
             this.Size = new System.Drawing.Size(bounds.Width, bounds.Height);
             panel9.Size = new System.Drawing.Size(bounds.Width, bounds.Height);
-            dataGridView1.Size = new System.Drawing.Size(bounds.Width / 2, (bounds.Height * 2 / 3) - 200);
-            epcs.Size = new System.Drawing.Size(bounds.Width / 2, (bounds.Height * 2 / 3) - 200);
-            epcs.Location = new System.Drawing.Point(bounds.Width / 2, 321);
-            btnScanEPC.Location = new System.Drawing.Point(((bounds.Width / 4) * 2) + 50, bounds.Height - 120);
-            buttonConsulta.Location = new System.Drawing.Point((50), bounds.Height - 120);
+            epcs.Size = new System.Drawing.Size((bounds.Width / 4)*3, (bounds.Height * 2 / 3));
+            epcs.Location = new System.Drawing.Point(bounds.Width / 8, 200);
+           // btnScanEPC.Location = new System.Drawing.Point(((bounds.Width / 4) * 2) + 50, bounds.Height - 120);
+            buttonConsulta.Location = new System.Drawing.Point(((bounds.Width / 4) ), bounds.Height - 150);
 
         }
         public void cargarDatos(string archivo)
@@ -260,31 +259,31 @@ namespace UHFAPP
 
         private void toolStripButton1_Click()
         {
-            btnScanEPC.BackColor = System.Drawing.Color.White;
-            btnScanEPC.Enabled = false;
-            btnScanEPC.Visible = true;
+
 
             try
             {
-
-                result = uhf.OpenUsb();
                 if (!result)
                 {
-                    caja("No se pudo conectar al lector, compruebe que este conectado", null, false);
-                    panelCaja.Refresh();
-                    StopReceiveThread();
-                    StopEPC(true);
-                    Thread.Sleep(3000);
-                    UHFClose();
+                    result = uhf.OpenUsb();
+                    if (!result)
+                    {
+                        caja("No se pudo conectar al lector, compruebe que este conectado", null, false);
+                        panelCaja.Refresh();
+                        StopReceiveThread();
+                        StopEPC(true);
+                        Thread.Sleep(3000);
+                        UHFClose();
 
 
-                }
-                else
-                {
-                    uhf.SetPower(1, Byte.Parse(potencia));
-                    uhf.SetTagfocus(Byte.Parse(tagFocus));
-                    uhf.SetGen2(0, 0, 0, 1, 4, 0, 15, 1, 2, 1, 1, 1, 0, 3);
-                    uhf.UHFSetBuzzer(Byte.Parse(buzzer));
+                    }
+                    else
+                    {
+                        uhf.SetPower(1, Byte.Parse(potencia));
+                        uhf.SetTagfocus(Byte.Parse(tagFocus));
+                        uhf.SetGen2(0, 0, 0, 1, 4, 0, 15, 1, 2, 1, 1, 1, 0, 3);
+                        uhf.UHFSetBuzzer(Byte.Parse(buzzer));
+                    }
                 }
                 // UHFAPI.setOnDataReceived(onDataReceived);
 
@@ -327,10 +326,7 @@ namespace UHFAPP
         #endregion
 
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            toolStripButton1_Click();
-        }
+
 
         private void StopEPC(bool isStop)
         {
@@ -436,236 +432,30 @@ namespace UHFAPP
 
 
 
-        private void validaProducto(string epc)
-        {
-            tagsOrden.Add(epc, Int32.Parse(tbLinea.Text));
-            if (ubicación.Equals("mozo"))
-                grabarTagContadorMozo(epc, Int32.Parse(tbLinea.Text), true);
-            else
-                grabarTagContadorAmipem(epc, Int32.Parse(tbLinea.Text));
-        }
-
-        private bool leerOrden()
-        {
-            if (ubicación.Equals("casa"))
-            {
-                leerOrdenAmipem();
-                return true;
-            }
-            if (textBox1.Text.Trim().Equals(""))
-            {
-                if (result)
-                    caja("Orden no puede estar vacia", "", true);
-
-                return false;
-            }
-
-            btnScanEPC.Enabled = false;
-            bool resultado = false;
-            SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\chimes.wav");
-            simpleSound.Play();
-
-            var url = apiMozoBase + "api/mozo/apiArco/v2.0/companies(" + cliente + ")/linOrdenesProdArco?$filter=prodOrderNo eq '" + textBox1.Text.Trim() + "'";
-            cantidadReal = 0;
-            var request = (HttpWebRequest)WebRequest.Create(url);
-            string username = usuario;
-            string password = this.password;
-            string svcCredentials = Convert.ToBase64String(ASCIIEncoding.ASCII.GetBytes(username + ":" + password));
-            request.Headers.Add("Authorization", "Basic " + svcCredentials);
-            request.Method = "GET";
-            request.ContentType = "application/json";
-            request.Accept = "application/json";
-            try
-            {
-                using (WebResponse response = request.GetResponse())
-                {
-                    using (Stream strReader = response.GetResponseStream())
-                    {
-                        if (strReader == null)
-                            return resultado;
-                        using (StreamReader objReader = new StreamReader(strReader))
-                        {
-                            string responseBody = objReader.ReadToEnd();
-                            string responseBodyFormater = responseBody.Replace("@odata.context", "dataContext");
-                            responseBodyFormater = responseBodyFormater.Replace("@odata.etag", "odataETag");
-                            getMozo = JsonConvert.DeserializeObject<GetMozo>(responseBodyFormater);
-                            if (getMozo.Value.Length > 0)
-                            {
-                                lReferencia.Text = getMozo.Value[0].ItemNo;
-                                producto = getMozo.Value[0].ItemNo;
-                                cantidadReal = getMozo.Value[0].RemainingQtyBase;
-                                lDescripcion.Text = getMozo.Value[0].Description;
-                                lCantidadTotal.Text = getMozo.Value[0].RemainingQtyBase.ToString();
-
-                                pReferencia.Visible = true;
-                            }
-                            else
-                            {
-                                if (result)
-                                    caja("Orden no existe", null, true);
-                                return false;
-                            }
-                            resultado = true;
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                log("leerOrden:" + ex.Message);
-                //caja("Problemas de conexion con la base de datos, contacte con el administrador", "");
-                resultado = false;
-                textBox1.Text = "";
-            }
-            return resultado;
-        }
-
-        private void leerTagsOrdenAmipem()
-        {
-            var url = apiAmipemBase + "leerTagsOrden";
-            var request = (HttpWebRequest)WebRequest.Create(url);
-            request.Method = "POST";
-            request.ContentType = "application/json";
-            request.Accept = "application/json";
-            string salida = "{\"codigo\":\"" + textBox1.Text + "\"}";
-            byte[] data = Encoding.UTF8.GetBytes(salida);
-            request.ContentLength = data.Length;
-            Stream stream = request.GetRequestStream();
-            stream.Write(data, 0, data.Length);
-            stream.Close();
-
-            try
-            {
-                using (WebResponse response = request.GetResponse())
-                {
-                    using (Stream strReader = response.GetResponseStream())
-                    {
-                        if (strReader == null) return;
-                        using (StreamReader objReader = new StreamReader(strReader))
-                        {
-
-                            Stream stream1 = response.GetResponseStream();
-                            StreamReader sr = new StreamReader(stream1);
-                            string responseBody = sr.ReadToEnd();
-                            // string respuestaCambiada = responseBody.Replace("+02:00", ".00");
-                            GrabacionRespuesta grabacionRespuesta = JsonConvert.DeserializeObject<GrabacionRespuesta>(responseBody);
-                            epcList.Clear();
-                            if (epcs.InvokeRequired)
-                            {
-                                epcs.Invoke(new Action(() => epcs.Rows.Clear()));
-                            }
-                            else
-                            {
-                                epcs.Rows.Clear();
-                            }
-                            cantidadReal = 0;
-                            for (int i = 0; i < grabacionRespuesta.grabaciones.Length; i++)
-                            {
-                                if (!tagsOrden.ContainsKey(grabacionRespuesta.grabaciones[i].tag))
-                                    tagsOrden.Add(grabacionRespuesta.grabaciones[i].tag, grabacionRespuesta.grabaciones[i].linea);
-                                //new Thread(new ThreadStart(delegate { desglosaEpc(grabacionRespuesta.grabaciones[i].tag, grabacionRespuesta.grabaciones[grabacionRespuesta.grabaciones.Length - 1].fecha.ToLocalTime().ToString(), false); })).Start();
-                                desglosaEpc(grabacionRespuesta.grabaciones[i].tag, grabacionRespuesta.grabaciones[grabacionRespuesta.grabaciones.Length - 1].fecha.ToLocalTime().ToString(), false);
-                                // epcs.Refresh();
-                                cantidadReal++;
-                                lCantidadTotal.Text = "" + cantidadTotal + "/" + cantidadReal;
-                                lCantidadTotal.Refresh();
-                            }
-                            // panelCaja.Visible = false;
-                            cantidadReal = cantidadTotal - grabacionRespuesta.grabaciones.Length;
-                            lCantidadTotal.Text = "" + cantidadTotal + "/" + cantidadReal;
-
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                log("leerTagsOrdenAmipem:" + ex.Message);
-            }
-        }
-
 
 
         private void caja(string texto, string epc, bool boton)
         {
             try
             {
-                if (boton)
-                    textoCaja.Invoke(new Action(() => botonCaja.Visible = true));
-                else
-                    textoCaja.Invoke(new Action(() => botonCaja.Visible = false));
+               
 
                 StopEPC(true);
                 uhf.StopInventory();
                 epcErroneo = epc;
                 textoCaja.Invoke(new Action(() => textoCaja.Text = texto));
                 panelCaja.Invoke(new Action(() => panelCaja.Visible = true));
-                int i = 0;
+                if (boton)
+                    textoCaja.Invoke(new Action(() => botonCaja.Visible = true));
+                else
+                    textoCaja.Invoke(new Action(() => botonCaja.Visible = false));
+            
 
             }
             catch (Exception e)
             {
 
                 log("caja:" + e.Message);
-            }
-        }
-        private void leerOrdenAmipem()
-        {
-            try
-            {
-
-                var url = apiAmipemBase + "leerOrden";
-
-                var request = (HttpWebRequest)WebRequest.Create(url);
-
-                request.Method = "POST";
-                request.ContentType = "application/json";
-                request.Accept = "application/json";
-                //Orden orden = new Orden(idOrdenAmipem, textBox1.Text, lDescripcion.Text, lReferencia.Text, Int32.Parse(lCantidadTotal.Text));
-                string salida = "{\"codigo\":\"" + textBox1.Text + "\"}";
-                byte[] data = Encoding.UTF8.GetBytes(salida);
-                request.ContentLength = data.Length;
-                Stream stream = request.GetRequestStream();
-                stream.Write(data, 0, data.Length);
-                stream.Close();
-
-                using (WebResponse response = request.GetResponse())
-                {
-                    using (Stream strReader = response.GetResponseStream())
-                    {
-                        if (strReader == null) return;
-                        using (StreamReader objReader = new StreamReader(strReader))
-                        {
-
-                            string responseBody = objReader.ReadToEnd();
-                            Orden orden = JsonConvert.DeserializeObject<Orden>(responseBody);
-                            if (orden.id == 0)
-                            {
-                                if (result)
-                                    caja("Orden no existe", "", true);
-                                textBox1.Text = "";
-                                return;
-                            }
-                            lReferencia.Text = orden.item;
-                            producto = orden.item;
-                            lDescripcion.Text = orden.descripcion;
-                            cantidadTotal = orden.cantidad;
-                            lCantidadTotal.Text = "" + cantidadTotal + "/0";
-                            pReferencia.Visible = true;
-                            idOrdenAmipem = orden.id;
-                            btnScanEPC.Enabled = true;
-                            lReferencia.Refresh();
-                            lDescripcion.Refresh();
-                            lCantidadTotal.Refresh();
-                            leerTagsOrdenAmipem();
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                log("leerOrdenAmipem" + ex.Message);
-                textBox1.Text = "";
             }
         }
 
@@ -694,181 +484,6 @@ namespace UHFAPP
 
         }
 
-        private bool grabarOrdenAmipem()
-        {
-            bool resultado = false;
-            try
-            {
-                btnScanEPC.Enabled = false;
-                var url = apiAmipemBase + "grabarOrden";
-                var request = (HttpWebRequest)WebRequest.Create(url);
-                request.Method = "POST";
-                request.ContentType = "application/json";
-                request.Accept = "application/json";
-                Orden orden = new Orden(idOrdenAmipem, textBox1.Text, lDescripcion.Text, lReferencia.Text, Int32.Parse(lCantidadTotal.Text), 0);
-                string salida = JsonConvert.SerializeObject(orden);
-                byte[] data = Encoding.UTF8.GetBytes(salida);
-                request.ContentLength = data.Length;
-                Stream stream = request.GetRequestStream();
-                stream.Write(data, 0, data.Length);
-                stream.Close();
-                using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
-                {
-                    //Leer el resultado de la llamada
-                    Stream stream1 = response.GetResponseStream();
-                    StreamReader sr = new StreamReader(stream1);
-                    string strsb = sr.ReadToEnd();
-                    Orden ordenRetorno = JsonConvert.DeserializeObject<Orden>(strsb);
-                    btnScanEPC.Enabled = true;
-                    resultado = true;
-                }
-            }
-            catch (Exception e)
-            {
-                log("grabarOrdenAmipem:" + e.Message);
-                resultado = false;
-            }
-            return resultado;
-        }
-        private void grabarTagContadorAmipem(string epc, int lote)
-        {
-            try
-            {
-                if (tagsOrden.ContainsKey(epc))
-                {
-                    var url = apiAmipemBase + "grabarTagContador";
-                    var request = (HttpWebRequest)WebRequest.Create(url);
-                    request.Method = "POST";
-                    request.ContentType = "application/json";
-                    request.Accept = "application/json";
-                    DateTime fecha = DateTime.Now;
-                    GrabacionDTO grabacionDTO = new GrabacionDTO(textBox1.Text, epc, Int32.Parse(tbLinea.Text.ToString()));
-                    string salida = JsonConvert.SerializeObject(grabacionDTO);
-                    byte[] data = Encoding.UTF8.GetBytes(salida);
-                    request.ContentLength = data.Length;
-                    Stream stream = request.GetRequestStream();
-                    stream.Write(data, 0, data.Length);
-                    stream.Close();
-                    using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
-                    {
-                        Stream stream1 = response.GetResponseStream();
-                        StreamReader sr = new StreamReader(stream1);
-                        string strsb = sr.ReadToEnd();
-                        GrabacionRespuesta grabacionRespuesta = JsonConvert.DeserializeObject<GrabacionRespuesta>(strsb);
-                        if (lCantidadTotal.InvokeRequired)
-                        {
-                            lCantidadTotal.Invoke(new Action(() => lCantidadTotal.Text = "" + cantidadTotal + "/" + (cantidadTotal - grabacionRespuesta.grabaciones.Length)));
-                        }
-                        else
-                        {
-                            lCantidadTotal.Text = "" + cantidadTotal + "/" + (cantidadTotal - grabacionRespuesta.grabaciones.Length);
-                        }
-                        new Thread(new ThreadStart(delegate { desglosaEpc(epc, DateTime.Now.ToString(), true); })).Start();
-
-                        //desglosaEpc(epc, DateTime.Now.ToString(), true);
-                    }
-                }
-            }
-            catch (Exception e1)
-            {
-                log("grabarTagContadorAmipem:" + e1.Message);
-            }
-        }
-        private bool grabarTagContadorMozo(string epc, int lote, bool comprobarErrores)
-        {
-            bool resultado = false;
-            if (ubicación.Equals("mozo"))
-            {
-                var url = apiMozoBase + "api/mozo/apiArco/v2.0/companies(" + cliente + ")/registrarSalidasRFID?";
-                var request = (HttpWebRequest)WebRequest.Create(url);
-                string username = this.usuario;
-                string password = this.password;
-                string svcCredentials = Convert.ToBase64String(ASCIIEncoding.ASCII.GetBytes(username + ":" + password));
-                request.Headers.Add("Authorization", "Basic " + svcCredentials);
-                request.Method = "POST";
-                request.ContentType = "application/json";
-                request.Accept = "*";
-                try
-                {
-                    GrabacionMozo grabacion = new GrabacionMozo(epc, textBox1.Text, 10000, 1, comprobarErrores, "");
-                    string salida = JsonConvert.SerializeObject(grabacion);
-                    byte[] data = Encoding.UTF8.GetBytes(salida);
-                    request.ContentLength = data.Length;
-                    Stream stream = request.GetRequestStream();
-                    stream.Write(data, 0, data.Length);
-                    stream.Flush();
-                    stream.Close();
-                    using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
-                    {
-                        Stream stream1 = response.GetResponseStream();
-                        StreamReader sr = new StreamReader(stream1);
-                        string strsb = sr.ReadToEnd();
-                        GrabacionMozo ordenRetorno = JsonConvert.DeserializeObject<GrabacionMozo>(strsb);
-                        int lastRowIndex = epcs.Rows.GetLastRow(DataGridViewElementStates.Visible);
-                        resultado = true;
-                        if (ordenRetorno.textoError != null && ordenRetorno.textoError.Length > 0 && comprobarErrores)
-                        {
-                            if (result)
-                                caja(ordenRetorno.textoError + "\n" + desglosaEpcErroneo(epc), epc, true);
-                            resultado = false;
-                            return resultado;
-                        }
-                        if (ordenRetorno.textoError != null && ordenRetorno.textoError.Length == 0)
-                        {
-                            if (comprobarErrores)
-                                grabarTagContadorMozo(epc, lote, false);
-                            else
-                                grabarTagContadorAmipem(epc, Int32.Parse(tbLinea.Text));
-                            resultado = true;
-                            return resultado;
-
-
-                        }
-
-
-                    }
-                }
-                catch (Exception e)
-                {
-                    // borraUltimaGrabacion(epc);
-                    log("grabarTagContadorMozo:" + e.Message);
-                    resultado = false;
-                }
-            }
-            return resultado;
-        }
-
-        private void borraUltimaGrabacion(string epc)
-        {
-            var url = apiAmipemBase + "borraUltimaGrabacion/" + epc;
-
-            var request = (HttpWebRequest)WebRequest.Create(url);
-
-            request.Method = "POST";
-            request.ContentType = "application/json";
-            request.Accept = "application/json";
-            try
-            {
-                using (WebResponse response = request.GetResponse())
-                {
-                    using (Stream strReader = response.GetResponseStream())
-                    {
-                        if (strReader == null) return;
-                        using (StreamReader objReader = new StreamReader(strReader))
-                        {
-
-                            epcs.Rows.RemoveAt(epcs.Rows.Count - 1);
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                log("borraUltimarabacion:" + ex.Message);
-                ////caja("Problemas de conexion con la base de datos, contacte con el administrador", "");
-                textBox1.Text = "";
-            }
-        }
 
         private void ScanEPCForm_Load(object sender, EventArgs e)
         {
@@ -895,57 +510,13 @@ namespace UHFAPP
                     UHFTAGInfo info = uhf.ReadTagFromBuffer();
                     if (info != null && info.Epc.StartsWith("0108"))
                     {
-                        if (!ubicación.Equals("casa"))
+
+
+                        if (info != null && !tagsOrden.ContainsKey(info.Epc))
                         {
-                            if (!consulta)
-                            {
-                                if (tagsOrden.Count <= cantidadTotal + 1)
-                                {
-                                    if (info != null && !tagsOrden.ContainsKey(info.Epc))
-                                    {
-                                        // new Thread(new ThreadStart(delegate { validaProducto(info.Epc); })).Start();
-                                        validaProducto(info.Epc);
-                                    }
-                                }
-                            }
-                            else
-                            {
-                                if (info != null && !tagsComprobacion.ContainsKey(info.Epc))
-                                {
-                                    tagsComprobacion.Add(info.Epc, 1);
-                                    new Thread(new ThreadStart(delegate { desglosaEpc(info.Epc); })).Start();
-                                    //desglosaEpc(info.Epc);
+                            tagsOrden.Add(info.Epc,1);
 
-                                }
-                            }
-                        }
-                        else
-                        {
-                            if (info != null && consulta && !tagsComprobacion.ContainsKey(info.Epc))
-                            {
-                                tagsComprobacion.Add(info.Epc, 1);
-                                if (dataGridView1.InvokeRequired)
-                                {
-                                    dataGridView1.Invoke(new Action(() => dataGridView1.Rows.Add(new object[] { "23207930", "25017318", "250173180017", 1, "01/01/2025" })));
-                                }
-                                else
-                                {
-                                    dataGridView1.Rows.Add(new object[] { "23207930", "25017318", "250173180017", 1, "01/01/2025" });
-                                }
-                            }
-                            if (info != null && !consulta && !tagsOrden.ContainsKey(info.Epc))
-                            {
-
-                                if (tagsOrden.Count <= cantidadTotal + 1)
-                                {
-                                    if (info != null && !tagsOrden.ContainsKey(info.Epc))
-                                    {
-                                        //new Thread(new ThreadStart(delegate { validaProducto(info.Epc); })).Start();
-                                        validaProducto(info.Epc);
-                                    }
-                                }
-
-                            }
+                            grabaBaja(info.Epc, true);
                         }
                     }
                 }
@@ -957,18 +528,76 @@ namespace UHFAPP
             }
         }
 
-        private void desglosaEpc(string epc)
+        private bool grabaBaja(string epc, bool comprobarErrores)
         {
-            int i = 0;
+            bool resultado = false;
+            if (ubicación.Equals("mozo"))
+            {
+                var url = apiMozoBase + "api/mozo/apiArco/v2.0/companies(" + cliente + ")/registrarAjustesNegRFID";
+                var request = (HttpWebRequest)WebRequest.Create(url);
+                string username = this.usuario;
+                string password = this.password;
+                string svcCredentials = Convert.ToBase64String(ASCIIEncoding.ASCII.GetBytes(username + ":" + password));
+                request.Headers.Add("Authorization", "Basic " + svcCredentials);
+                request.Method = "POST";
+                request.ContentType = "application/json";
+                request.Accept = "*";
+                try
+                {
+                    BajaOut baja = new BajaOut(epc, tDescripcion.Text, comprobarErrores, "");
+                    string salida = JsonConvert.SerializeObject(baja);
+                    byte[] data = Encoding.UTF8.GetBytes(salida);
+                    request.ContentLength = data.Length;
+                    Stream stream = request.GetRequestStream();
+                    stream.Write(data, 0, data.Length);
+                    stream.Flush();
+                    stream.Close();
+                    using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
+                    {
+                        Stream stream1 = response.GetResponseStream();
+                        StreamReader sr = new StreamReader(stream1);
+                        string strsb = sr.ReadToEnd();
+                        strsb = strsb.Replace("@odata.context", "dataContext");
+                        strsb = strsb.Replace("@odata.etag", "dataTag");
+                        BajaIn bajaIn = JsonConvert.DeserializeObject<BajaIn>(strsb);
+                        int lastRowIndex = epcs.Rows.GetLastRow(DataGridViewElementStates.Visible);
+                        resultado = true;
+                        if (bajaIn.textoError != null && bajaIn.textoError.Length > 0 && comprobarErrores)
+                        {
+
+                            caja(bajaIn.textoError + "\n" + desglosaEpcErroneo(epc), epc, true);
+                            resultado = false;
+                            return resultado;
+                        }
+                        if (bajaIn.textoError != null && bajaIn.textoError.Length == 0)
+                        {
+                            if (comprobarErrores)
+                                grabaBaja(epc, false);
+                            else
+                            {
+                              desglosaEpc(epc, DateTime.Now.ToString(), true);
+                            }
+                            resultado = true;
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
+                    log("grabarTagContadorMozo:" + e.Message);
+                    resultado = false;
+                }
+            }
+            return resultado;
+        }
+
+        private void desglosaEpc(string epc, string fecha, bool grabar)
+        {
+
             try
             {
                 var url = apiMozoBase + "api/mozo/apiArco/v2.0/companies(0c0574f1-f098-ed11-965c-6045bd89ef6b)/desglosarRFIDs";
-
-
-
                 var request = (HttpWebRequest)WebRequest.Create(url);
                 string username = this.usuario;
-
                 string password = this.password;
                 string svcCredentials = Convert.ToBase64String(ASCIIEncoding.ASCII.GetBytes(username + ":" + password));
                 request.Headers.Add("Authorization", "Basic " + svcCredentials);
@@ -981,7 +610,6 @@ namespace UHFAPP
                 Stream stream = request.GetRequestStream();
                 stream.Write(data, 0, data.Length);
                 stream.Close();
-
                 using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
                 {
                     Stream stream1 = response.GetResponseStream();
@@ -990,234 +618,26 @@ namespace UHFAPP
                     strsb = strsb.Replace("@odata.context", "dataContext");
                     strsb = strsb.Replace("@odata.etag", "dataTag");
                     Desglose desglose = JsonConvert.DeserializeObject<Desglose>(strsb);
-                    if (dataGridView1.InvokeRequired)
+                    if (epcs.InvokeRequired)
                     {
-                        dataGridView1.Invoke(new Action(() => dataGridView1.Rows.Add(new object[] { desglose.noProducto, desglose.noLote, desglose.noSerie })));
+                        epcs.Invoke(new Action(() => epcs.Rows.Add(new object[] { desglose.noProducto, desglose.noLote, desglose.noSerie, tDescripcion.Text, fecha })));
                     }
                     else
                     {
-                        dataGridView1.Rows.Add(new object[] { desglose.noProducto, desglose.noLote, desglose.noSerie });
+                        epcs.Rows.Add(new object[] { desglose.noProducto, desglose.noLote, desglose.noSerie, tDescripcion.Text, fecha });
                     }
-                    cantidadComprobacion.Invoke(new Action(() => cantidadComprobacion.Text = "Cantidad: " + tagsComprobacion.Count));
+
+
                 }
             }
             catch (Exception e)
             {
-
-                log("desglosaEPC:" + e.Message);
+                log("desglosaEpc:" + e.Message);
                 //caja("Problemas de conexion con la base de datos, contacte con el administrador", "");
             }
         }
-
-        private void desglosaEpc(string epc, string fecha, bool grabar)
-        {
-            int ultimograbado = 0;
-            if (ubicación.Equals("casa"))
-            {
-
-                if (epcs.InvokeRequired)
-                {
-
-                    epcs.Invoke(new Action(() => epcs.Rows.Add(new object[] { "23207930", "25017318", "250173180017", 1, "01/01/2025" })));
-                    ultimograbado = epcs.Rows.GetLastRow(DataGridViewElementStates.Visible);
-                }
-                else
-                {
-                    epcs.Rows.Add(new object[] { "23207930", "25017318", "250173180017", 1, "01/01/2025" });
-                    ultimograbado = epcs.Rows.GetLastRow(DataGridViewElementStates.Visible);
-                }
-                // epcs.Rows[ultimograbado - 1].DefaultCellStyle.BackColor = System.Drawing.Color.Red;
-            }
-            else
-            {
-                try
-                {
-                    var url = apiMozoBase + "api/mozo/apiArco/v2.0/companies(0c0574f1-f098-ed11-965c-6045bd89ef6b)/desglosarRFIDs";
-                    var request = (HttpWebRequest)WebRequest.Create(url);
-                    string username = this.usuario;
-                    string password = this.password;
-                    string svcCredentials = Convert.ToBase64String(ASCIIEncoding.ASCII.GetBytes(username + ":" + password));
-                    request.Headers.Add("Authorization", "Basic " + svcCredentials);
-                    request.Method = "POST";
-                    request.ContentType = "application/json";
-                    request.Accept = "*/*";
-                    string salida = "{'lecturaRfid':'" + epc + "'}";
-                    byte[] data = Encoding.UTF8.GetBytes(salida);
-                    request.ContentLength = data.Length;
-                    Stream stream = request.GetRequestStream();
-                    stream.Write(data, 0, data.Length);
-                    stream.Close();
-                    using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
-                    {
-                        Stream stream1 = response.GetResponseStream();
-                        StreamReader sr = new StreamReader(stream1);
-                        string strsb = sr.ReadToEnd();
-                        strsb = strsb.Replace("@odata.context", "dataContext");
-                        strsb = strsb.Replace("@odata.etag", "dataTag");
-                        Desglose desglose = JsonConvert.DeserializeObject<Desglose>(strsb);
-                        if (epcs.InvokeRequired)
-                        {
-                            epcs.Invoke(new Action(() => epcs.Rows.Add(new object[] { desglose.noProducto, desglose.noLote, desglose.noSerie, Int32.Parse(tbLinea.Text), fecha })));
-                        }
-                        else
-                        {
-                            epcs.Rows.Add(new object[] { desglose.noProducto, desglose.noLote, desglose.noSerie, Int32.Parse(tbLinea.Text), fecha });
-                        }
-
-                        /*if (biocam)
-                        {
-                            cargarDatos(desglose.noLote);
-                        }*/
-                        if (tagsOrden.Count >= cantidadTotal)
-                        {
-
-                            int lastRowIndex = epcs.Rows.GetLastRow(DataGridViewElementStates.Visible);
-                            if (!finOrden)
-                            {
-                                finOrden = true;
-
-                                if (result && !biocam)
-                                    caja("Orden finalizada", "", true);
-
-                            }
-                            StopEPC(true);
-                            btnScanEPC.Text = strStart;
-                            btnScanEPC.BackColor = System.Drawing.Color.Green;
-                            btnScanEPC.ForeColor = System.Drawing.Color.White;
-                            epcList.Clear();
-
-                            btnScanEPC.Invoke(new Action(() => btnScanEPC.Enabled = false));
-                            btnScanEPC.Invoke(new Action(() => btnScanEPC.Text = strStart));
-
-                        }
-
-                    }
-                    if (biocam)
-                    {
-
-                        //recuperar orden para consultar pieza biocam
-                        var urlPedido = apiMozoBase + "api/mozo/apiArco/v2.0/companies(0c0574f1-f098-ed11-965c-6045bd89ef6b)/codProcedenciaOrdenesProdArco?$filter=no eq '" + textBox1.Text.Trim() + "'";
-                        var requestPedido = (HttpWebRequest)WebRequest.Create(urlPedido);
-
-                        string svcCredentialsPedido = Convert.ToBase64String(ASCIIEncoding.ASCII.GetBytes(username + ":" + password));
-                        requestPedido.Headers.Add("Authorization", "Basic " + svcCredentialsPedido);
-                        requestPedido.Method = "GET";
-                        requestPedido.ContentType = "application/json";
-                        requestPedido.Accept = "*/*";
-
-                        try
-                        {
-                            using (WebResponse response = requestPedido.GetResponse())
-                            {
-                                using (Stream strReader = response.GetResponseStream())
-                                {
-                                    if (strReader == null)
-                                        return;
-                                    using (StreamReader objReader = new StreamReader(strReader))
-                                    {
-                                        string responseBody = objReader.ReadToEnd();
-                                        string responseBodyFormater = responseBody.Replace("@odata.context", "dataContext");
-                                        responseBodyFormater = responseBodyFormater.Replace("@odata.etag", "odataETag");
-
-                                        OrigenOrden origenOrden = JsonConvert.DeserializeObject<OrigenOrden>(responseBodyFormater);
-                                        response.Close();
-                                        if (origenOrden != null)
-                                        {
-                                            //recuperar información pieza biocam
-                                            var url1 = apiMozoBase + "api/mozo/apiArco/v2.0/companies(0c0574f1-f098-ed11-965c-6045bd89ef6b)/pedidosVentaArco?$expand=linPedidosVentaArco($expand=vinculosEnsamblarPedidoArco($expand=linPedidosEnsambladoArco))&$filter=no eq '" + origenOrden.value[0].sourceNo + "'";
-                                            var request1 = (HttpWebRequest)WebRequest.Create(url1);
-
-                                            string svcCredentials1 = Convert.ToBase64String(ASCIIEncoding.ASCII.GetBytes(username + ":" + password));
-                                            request1.Headers.Add("Authorization", "Basic " + svcCredentials1);
-                                            request1.Method = "GET";
-                                            request1.ContentType = "application/json";
-                                            request1.Accept = "*/*";
-
-                                            try
-                                            {
-                                                using (WebResponse responseBiocam = request1.GetResponse())
-                                                {
-                                                    using (Stream strReaderBiocam = responseBiocam.GetResponseStream())
-                                                    {
-                                                        if (strReaderBiocam == null)
-                                                            return;
-                                                        using (StreamReader objReaderBiocam = new StreamReader(strReaderBiocam))
-                                                        {
-                                                            string responseBodyBiocam = objReaderBiocam.ReadToEnd();
-                                                            string responseBodyFormaterBiocam = responseBodyBiocam.Replace("@odata.context", "dataContext");
-                                                            responseBodyFormaterBiocam = responseBodyFormaterBiocam.Replace("@odata.etag", "odataETag");
-
-                                                            Biocam biocam = JsonConvert.DeserializeObject<Biocam>(responseBodyFormaterBiocam);
-                                                            if (biocam != null)
-                                                            {
-                                                                LinPedidosVentaArco[] linPedidosVentaArcos = biocam.value[0].linPedidosVentaArco;
-                                                                StringBuilder resultadoBiocam = new StringBuilder();
-                                                                for (int i = 0; i < linPedidosVentaArcos.Length; i++)
-                                                                {
-                                                                    if (linPedidosVentaArcos[i].description.StartsWith("Tornillo"))
-                                                                    {
-                                                                        resultadoBiocam.Append(linPedidosVentaArcos[i].description + "(" + linPedidosVentaArcos[i].outstandingQuantity + ")\r\n");
-                                                                    }
-                                                                }
-                                                                caja(resultadoBiocam.ToString(), "", true);
-                                                            }
-                                                            else
-                                                            {
-                                                                if (result)
-                                                                    caja("Orden no existe", null, true);
-                                                                return;
-                                                            }
-
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                            catch (Exception ex)
-                                            {
-                                                log("desglosaEPC:" + ex.Message);
-                                                //caja("Problemas de conexion con la base de datos, contacte con el administrador", "");
-
-                                                textBox1.Text = "";
-                                            }
-
-                                        }
-                                        else
-                                        {
-                                            if (result)
-                                                caja("Orden no existe", null, true);
-                                            return;
-                                        }
-
-                                    }
-                                }
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            log("leerOrden:" + ex.Message);
-                            //caja("Problemas de conexion con la base de datos, contacte con el administrador", "");
-
-                            textBox1.Text = "";
-                        }
-
-
-
-                    }
-                }
-                catch (Exception e)
-                {
-                    log("desglosaEpc:" + e.Message);
-                    //caja("Problemas de conexion con la base de datos, contacte con el administrador", "");
-                }
-
-            }
-
-        }
         private string desglosaEpcErroneo(string epc)
         {
-            //tagsOrden.Add(epc, Int32.Parse(tbLinea.Text));
-
-
             string salida = "";
             if (ubicación.Equals("casa"))
             {
@@ -1278,51 +698,7 @@ namespace UHFAPP
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            if (!result)
-                toolStripButton1_Click();
-            biocam = false;
-            if (textBox1.Text.ToUpper().StartsWith("OFBC"))
-                biocam = true;
-            finOrden = false;
-            epcs.Rows.Clear();
-            tagsOrden.Clear();
-            tbLotes.Text = "1";
-            gtin = "";
-            epcList.Clear();
-            epcs.Refresh();
-            loteActual = 1;
-            tbLinea.Enabled = true;
-            tbLotes.Enabled = true;
-            consulta = false;
-            if (ubicación.Equals("casa"))
-            {
-                leerOrdenAmipem();
-            }
-            else
-            {
-                try
-                {
-                    if (leerOrden())
-                        grabarOrdenAmipem();
-                    leerOrdenAmipem();
-                    if (tagsOrden.Count == cantidadTotal)
-                        btnScanEPC.Enabled = false;
-                    else
-                        btnScanEPC.Enabled = true;
-                }
-                catch (Exception e1)
-                {
-                    log("button2_click:" + e1.Message);
-                    //caja("Problemas de conexion con la base de datos, contacte con el administrador", "");
-                }
-            }
-            StopEPC(true);
-            btnScanEPC.Text = strStart;
-            btnScanEPC.BackColor = System.Drawing.Color.Green;
-            btnScanEPC.ForeColor = System.Drawing.Color.White;
-        }
+
 
 
         private void MainForm_ResizeEnd(object sender, EventArgs e)
@@ -1331,30 +707,11 @@ namespace UHFAPP
             System.Drawing.Rectangle bounds = primaryScreen.Bounds;
             this.Size = new System.Drawing.Size(bounds.Width, bounds.Height);
             panel9.Size = new System.Drawing.Size(bounds.Width, bounds.Height);
-            dataGridView1.Size = new System.Drawing.Size(bounds.Width / 2, (bounds.Height * 2 / 3) - 100);
-            epcs.Size = new System.Drawing.Size(bounds.Width / 2, (bounds.Height * 2 / 3) - 100);
+            epcs.Size = new System.Drawing.Size((bounds.Width / 4) * 3, (bounds.Height * 2 / 3));
+            epcs.Location = new System.Drawing.Point(bounds.Width / 8, 200);
             epcs.Refresh();
         }
-        private void buttonConsulta_Click(object sender, EventArgs e)
-        {
-            if (!result)
-                toolStripButton1_Click();
-            consulta = true;
-            if (buttonConsulta.Text == strStopConsulta)
-            {
-                StopReceiveThread();
-                StopEPC(true);
-            }
-            else
-            {
-                cantidadComprobacion.Text = "Cantidad: 0";
-                dataGridView1.Rows.Clear();
-                tagsComprobacion.Clear();
-                StartReceiveThread();
-                StopEPC(false);
-            }
 
-        }
 
         private void botonCaja_Click(object sender, EventArgs e)
         {
@@ -1373,19 +730,57 @@ namespace UHFAPP
             // StopEPC(false);
         }
 
-        private void panel4_Paint(object sender, PaintEventArgs e)
+        private void buttonConsulta_Click(object sender, EventArgs e)
         {
+            if(tDescripcion.Text.Trim().Length == 0)
+            {
+                caja("Debe introducir una descripcion", null, true);
+                return;
+            }
+            if (buttonConsulta.Text == strStartConsulta)
+            {
+                tagsOrden.Clear();
+                epcs.Rows.Clear();
+            }
+               
+            if (!result)
+                result = uhf.OpenUsb();
+            if (!result)
+            {
+                caja("No se pudo conectar al lector, compruebe que este conectado", null, false);
+                panelCaja.Refresh();
+                StopReceiveThread();
+                StopEPC(true);
+                Thread.Sleep(3000);
+                UHFClose();
 
-        }
 
-        private void panel9_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void epcs_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            }
+            else
+            {
+                uhf.SetPower(1, Byte.Parse(potencia));
+                uhf.SetTagfocus(Byte.Parse(tagFocus));
+                uhf.SetGen2(0, 0, 0, 1, 4, 0, 15, 1, 2, 1, 1, 1, 0, 3);
+                uhf.UHFSetBuzzer(Byte.Parse(buzzer));
+            }
+            if (buttonConsulta.Text == strStopConsulta)
+            {
+                StopReceiveThread();
+                StopEPC(true);
+                consulta = false;
+                buttonConsulta.Text = strStartConsulta;
+                buttonConsulta.BackColor = System.Drawing.Color.Green;
+                buttonConsulta.ForeColor = System.Drawing.Color.White;
+            }
+            else
+            {
+                consulta = true;
+                StartReceiveThread();
+                StopEPC(false);
+                buttonConsulta.Text = strStopConsulta;
+                buttonConsulta.BackColor = System.Drawing.Color.Red;
+                buttonConsulta.ForeColor = System.Drawing.Color.White;
+            }
         }
     }
 }
