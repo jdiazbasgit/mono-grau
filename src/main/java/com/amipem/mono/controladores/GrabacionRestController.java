@@ -17,9 +17,11 @@ import com.amipem.mono.clases.Contador;
 import com.amipem.mono.clases.GrabacionDTO;
 import com.amipem.mono.clases.LogInput;
 import com.amipem.mono.clases.RespuestaContador;
+import com.amipem.mono.entidades.Baja;
 import com.amipem.mono.entidades.Grabacion;
 import com.amipem.mono.entidades.Log;
 import com.amipem.mono.entidades.Orden;
+import com.amipem.mono.repositorios.BajaCRUDRepository;
 import com.amipem.mono.repositorios.GrabacionCRUDRepository;
 import com.amipem.mono.repositorios.LogCRUDRepository;
 import com.amipem.mono.repositorios.OrdenCRUDRepository;
@@ -41,6 +43,9 @@ public class GrabacionRestController {
 
 	@Autowired
 	private LogCRUDRepository logCrudRepository;
+
+	@Autowired
+	private BajaCRUDRepository bajaCRUDRepository;
 
 	GrabacionRestController(MonoApplication monoApplication) {
 		this.monoApplication = monoApplication;
@@ -100,6 +105,14 @@ public class GrabacionRestController {
 		RespuestaContador respuestaContador = new RespuestaContador();
 		respuestaContador.setGrabaciones(grabaciones);
 		return respuestaContador;
+	}
+
+	@PostMapping("grabarBaja")
+	public Baja grabarBaja(@RequestBody Baja baja) {
+
+		baja = getBajaCRUDRepository().save(baja);
+		return baja;
+
 	}
 
 	@PostMapping("grabarOrden")
