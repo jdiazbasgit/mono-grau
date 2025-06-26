@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.amipem.mono.MonoApplication;
+import com.amipem.mono.clases.BajaAmipemOut;
 import com.amipem.mono.clases.Contador;
 import com.amipem.mono.clases.GrabacionDTO;
 import com.amipem.mono.clases.LogInput;
@@ -108,11 +109,12 @@ public class GrabacionRestController {
 	}
 
 	@PostMapping("grabarBaja")
-	public Baja grabarBaja(@RequestBody Baja baja) {
+	public Baja grabarBaja(@RequestBody BajaAmipemOut bajaAmipemOut) {
 
+		Grabacion grabacion= getGrabacionCrudRepository().findByTag(bajaAmipemOut.getTag());
+		Baja baja= new Baja(0, bajaAmipemOut.getDescripcion(),	new GregorianCalendar(),grabacion);
 		baja = getBajaCRUDRepository().save(baja);
 		return baja;
-
 	}
 
 	@PostMapping("grabarOrden")
