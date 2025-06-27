@@ -19,13 +19,13 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "bajas")
-public class Baja {
+@Table(name = "ordenes_inversas")
+public class OrdenInversa {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	private String descripcion;
+	
 	
 	private GregorianCalendar fecha;
 	@ManyToOne

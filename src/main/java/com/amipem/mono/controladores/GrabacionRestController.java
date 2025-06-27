@@ -13,19 +13,22 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.amipem.mono.MonoApplication;
-import com.amipem.mono.clases.BajaAmipemOut;
+import com.amipem.mono.clases.BajaAmipem;
 import com.amipem.mono.clases.Contador;
 import com.amipem.mono.clases.GrabacionDTO;
 import com.amipem.mono.clases.LogInput;
 import com.amipem.mono.clases.RespuestaContador;
+import com.amipem.mono.clases.Tag;
 import com.amipem.mono.entidades.Baja;
 import com.amipem.mono.entidades.Grabacion;
 import com.amipem.mono.entidades.Log;
 import com.amipem.mono.entidades.Orden;
+import com.amipem.mono.entidades.OrdenInversa;
 import com.amipem.mono.repositorios.BajaCRUDRepository;
 import com.amipem.mono.repositorios.GrabacionCRUDRepository;
 import com.amipem.mono.repositorios.LogCRUDRepository;
 import com.amipem.mono.repositorios.OrdenCRUDRepository;
+import com.amipem.mono.repositorios.OrdenInversaCRUDRepository;
 
 import lombok.Data;
 
@@ -47,6 +50,10 @@ public class GrabacionRestController {
 
 	@Autowired
 	private BajaCRUDRepository bajaCRUDRepository;
+	
+	@Autowired
+	private OrdenInversaCRUDRepository ordenInversaCRUDRepository;
+
 
 	GrabacionRestController(MonoApplication monoApplication) {
 		this.monoApplication = monoApplication;
@@ -109,13 +116,23 @@ public class GrabacionRestController {
 	}
 
 	@PostMapping("grabarBaja")
-	public Baja grabarBaja(@RequestBody BajaAmipemOut bajaAmipemOut) {
+	public Baja grabarBaja(@RequestBody BajaAmipem bajaAmipemOut) {
 
 		Grabacion grabacion= getGrabacionCrudRepository().findByTag(bajaAmipemOut.getTag());
 		Baja baja= new Baja(0, bajaAmipemOut.getDescripcion(),	new GregorianCalendar(),grabacion);
 		baja = getBajaCRUDRepository().save(baja);
 		return baja;
 	}
+	
+	@PostMapping("ordenInversa")
+	public OrdenInversa ordenInversa(@RequestBody Tag tag) {
+
+		Grabacion grabacion= getGrabacionCrudRepository().findByTag(tag.getLecturaRFID());
+		OrdenInversa ordenInversa= new OrdenInversa(0, 	new GregorianCalendar(),grabacion);
+		ordenInversa = getOrdenInversaCRUDRepository().save(ordenInversa);
+		return ordenInversa;
+	}
+
 
 	@PostMapping("grabarOrden")
 	public Orden grabaOrden(@RequestBody Orden orden) {

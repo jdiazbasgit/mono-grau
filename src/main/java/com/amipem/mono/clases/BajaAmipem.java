@@ -3,9 +3,9 @@ package com.amipem.mono.clases;
 import lombok.Data;
 
 @Data
-public class BajaAmipemOut {
+public class BajaAmipem {
 
-	private int id;
+
 	private String tag;
 	private String descripcion;
 }
