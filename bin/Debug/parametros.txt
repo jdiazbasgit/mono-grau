@@ -25,3 +25,7 @@ oficina
 0
 #simulacion sin validación
 false
+#ip antena
+10.0.1.102
+#puerto antena
+8888
