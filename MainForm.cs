@@ -172,10 +172,10 @@ namespace UHFAPP
             System.Drawing.Rectangle bounds = primaryScreen.Bounds;
             this.Size = new System.Drawing.Size(bounds.Width, bounds.Height);
             panel9.Size = new System.Drawing.Size(bounds.Width, bounds.Height);
-            epcs.Size = new System.Drawing.Size((bounds.Width / 4)*3, (bounds.Height * 2 / 3));
+            epcs.Size = new System.Drawing.Size((bounds.Width / 4) * 3, (bounds.Height * 2 / 3));
             epcs.Location = new System.Drawing.Point(bounds.Width / 8, 200);
-           // btnScanEPC.Location = new System.Drawing.Point(((bounds.Width / 4) * 2) + 50, bounds.Height - 120);
-            buttonConsulta.Location = new System.Drawing.Point(((bounds.Width / 4) ), bounds.Height - 150);
+            // btnScanEPC.Location = new System.Drawing.Point(((bounds.Width / 4) * 2) + 50, bounds.Height - 120);
+            buttonConsulta.Location = new System.Drawing.Point(((bounds.Width / 4)), bounds.Height - 150);
 
         }
         public void cargarDatos(string archivo)
@@ -438,7 +438,7 @@ namespace UHFAPP
         {
             try
             {
-               
+
 
                 StopEPC(true);
                 uhf.StopInventory();
@@ -449,7 +449,7 @@ namespace UHFAPP
                     textoCaja.Invoke(new Action(() => botonCaja.Visible = true));
                 else
                     textoCaja.Invoke(new Action(() => botonCaja.Visible = false));
-            
+
 
             }
             catch (Exception e)
@@ -514,9 +514,11 @@ namespace UHFAPP
 
                         if (info != null && !tagsOrden.ContainsKey(info.Epc))
                         {
-                            tagsOrden.Add(info.Epc,1);
-
-                            grabaBaja(info.Epc, true);
+                            tagsOrden.Add(info.Epc, 1);
+                            if (ubicación.Equals("mozo"))
+                                grabaBaja(info.Epc, true);
+                            else
+                                grabaBajaAmipem(info.Epc, tDescripcion.Text);
                         }
                     }
                 }
@@ -528,7 +530,7 @@ namespace UHFAPP
             }
         }
 
-        private void grabaBajaAmipem(string epc,string descripcion)
+        private void grabaBajaAmipem(string epc, string descripcion)
         {
             try
             {
@@ -553,7 +555,7 @@ namespace UHFAPP
                         StreamReader sr = new StreamReader(stream1);
                         string strsb = sr.ReadToEnd();
                         BajaAmipemIn bajaAmipemIn = JsonConvert.DeserializeObject<BajaAmipemIn>(strsb);
-                       
+
                         new Thread(new ThreadStart(delegate { desglosaEpc(epc, DateTime.Now.ToString(), true); })).Start();
 
                         //desglosaEpc(epc, DateTime.Now.ToString(), true);
@@ -614,8 +616,8 @@ namespace UHFAPP
                                 grabaBaja(epc, false);
                             else
                             {
-                              desglosaEpc(epc, DateTime.Now.ToString(), true);
-                                //grabaBajaAmipem(epc, tDescripcion.Text);
+                                desglosaEpc(epc, DateTime.Now.ToString(), true);
+                                grabaBajaAmipem(epc, tDescripcion.Text);
                             }
                             resultado = true;
                         }
@@ -772,7 +774,7 @@ namespace UHFAPP
 
         private void buttonConsulta_Click(object sender, EventArgs e)
         {
-            if(tDescripcion.Text.Trim().Length == 0)
+            if (tDescripcion.Text.Trim().Length == 0)
             {
                 caja("Debe introducir una descripcion", null, true);
                 return;
@@ -782,7 +784,7 @@ namespace UHFAPP
                 tagsOrden.Clear();
                 epcs.Rows.Clear();
             }
-               
+
             if (!result)
                 result = uhf.OpenUsb();
             if (!result)

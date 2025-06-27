@@ -3,7 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-calidad\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-calidad\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|c:\\users\\pc\\source\\repos\\mozo-grau\\mozo-calidad\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -15,15 +15,15 @@
       "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|solutionrelative:utils\\orden.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|c:\\users\\pc\\source\\repos\\mozo-grau\\mozo-calidad\\utils\\bajaamipemout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-calidad\\utils\\bajaamipemout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|solutionrelative:utils\\bajaamipemout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|c:\\users\\pc\\source\\repos\\mozo-grau\\mozo-calidad\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-calidad\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|c:\\users\\pc\\source\\repos\\mozo-grau\\mozo-calidad\\utils\\bajaamipemin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-calidad\\utils\\bajaamipemin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|solutionrelative:utils\\bajaamipemin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -211,8 +211,7 @@
               "RelativeToolTip": "utils\\BajaAmipemIn.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T14:18:54.69Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-26T14:18:54.69Z"
             },
             {
               "$type": "Document",
@@ -224,20 +223,19 @@
               "RelativeToolTip": "utils\\BajaAmipemOut.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-26T14:06:06.106Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-26T14:06:06.106Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "MainForm.cs [Dise\u00F1o]",
+              "Title": "MainForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-calidad\\MainForm.cs",
               "RelativeDocumentMoniker": "MainForm.cs",
-              "ToolTip": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-calidad\\MainForm.cs [Dise\u00F1o]",
-              "RelativeToolTip": "MainForm.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-calidad\\MainForm.cs [Design]",
+              "RelativeToolTip": "MainForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-16T09:05:15.862Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -259,7 +257,7 @@
               "RelativeDocumentMoniker": "MainForm.cs",
               "ToolTip": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-calidad\\MainForm.cs",
               "RelativeToolTip": "MainForm.cs",
-              "ViewState": "AgIAAGUCAAAAAAAAAAAuwGkCAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAABkCAAAAAAAAAAASwCkCAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-16T08:42:39.461Z",
               "EditorCaption": ""
@@ -310,8 +308,7 @@
               "RelativeToolTip": "utils\\Grabacion.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAYwBUAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T11:30:47.352Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-08T11:30:47.352Z"
             },
             {
               "$type": "Document",
@@ -323,8 +320,7 @@
               "RelativeToolTip": "utils\\Orden.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAIwAgAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-08T11:07:28.246Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-08T11:07:28.246Z"
             },
             {
               "$type": "Document",
@@ -682,8 +678,7 @@
               "ToolTip": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-calidad\\Properties\\Resources.resx",
               "RelativeToolTip": "Properties\\Resources.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-04-30T19:05:27.091Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-30T19:05:27.091Z"
             }
           ]
         }
