@@ -76,6 +76,8 @@ namespace UHFAPP
         private string potencia;
         private string tagFocus;
         private string buzzer;
+        private string ipAntena;
+        private string puertoAntena;
         private bool sinValidar;
         private string idProducto;
         private Thread hiloLectura;
@@ -195,6 +197,8 @@ namespace UHFAPP
             tagFocus = leerParametro(sr);
             buzzer = leerParametro(sr);
             sinValidar = Boolean.Parse(leerParametro(sr));
+            ipAntena = leerParametro(sr);
+            puertoAntena = leerParametro(sr);
             sr.Close();
             Console.ReadLine();
             //loteActual++;
@@ -268,6 +272,10 @@ namespace UHFAPP
             {
 
                 result = uhf.OpenUsb();
+                if (!result)
+                {
+                    result = uhf.TcpConnect(ipAntena, UInt32.Parse(puertoAntena));
+                }
                 if (!result)
                 {
                     caja("No se pudo conectar al lector, compruebe que este conectado", null, false);
