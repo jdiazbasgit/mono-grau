@@ -37,8 +37,6 @@ namespace UHFAPP
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.tDescripcion = new System.Windows.Forms.TextBox();
-            this.descripcion = new System.Windows.Forms.Label();
             this.buttonConsulta = new System.Windows.Forms.Button();
             this.panelCaja = new System.Windows.Forms.Panel();
             this.botonCaja = new System.Windows.Forms.Button();
@@ -193,8 +191,6 @@ namespace UHFAPP
             // 
             this.panel9.BackColor = System.Drawing.Color.Transparent;
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel9.Controls.Add(this.tDescripcion);
-            this.panel9.Controls.Add(this.descripcion);
             this.panel9.Controls.Add(this.btnScanEPC);
             this.panel9.Controls.Add(this.buttonConsulta);
             this.panel9.Controls.Add(this.panelCaja);
@@ -207,24 +203,6 @@ namespace UHFAPP
             this.panel9.Size = new System.Drawing.Size(1360, 768);
             this.panel9.TabIndex = 37;
             // 
-            // tDescripcion
-            // 
-            this.tDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tDescripcion.Location = new System.Drawing.Point(693, 123);
-            this.tDescripcion.Name = "tDescripcion";
-            this.tDescripcion.Size = new System.Drawing.Size(544, 30);
-            this.tDescripcion.TabIndex = 52;
-            // 
-            // descripcion
-            // 
-            this.descripcion.AutoSize = true;
-            this.descripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.descripcion.Location = new System.Drawing.Point(480, 118);
-            this.descripcion.Name = "descripcion";
-            this.descripcion.Size = new System.Drawing.Size(167, 25);
-            this.descripcion.TabIndex = 51;
-            this.descripcion.Text = "DESCRIPCION:";
-            // 
             // buttonConsulta
             // 
             this.buttonConsulta.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold);
@@ -232,7 +210,7 @@ namespace UHFAPP
             this.buttonConsulta.Name = "buttonConsulta";
             this.buttonConsulta.Size = new System.Drawing.Size(180, 44);
             this.buttonConsulta.TabIndex = 38;
-            this.buttonConsulta.Text = "Iniciar bajas";
+            this.buttonConsulta.Text = "Iniciar Orden Inversa";
             this.buttonConsulta.UseCompatibleTextRendering = true;
             this.buttonConsulta.UseVisualStyleBackColor = false;
             this.buttonConsulta.Click += new System.EventHandler(this.buttonConsulta_Click);
@@ -357,7 +335,6 @@ namespace UHFAPP
             this.SizeChanged += new System.EventHandler(this.MainForm_SizeChanged);
             ((System.ComponentModel.ISupportInitialize)(this.epcs)).EndInit();
             this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
             this.panelCaja.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -385,7 +362,5 @@ namespace UHFAPP
         private System.Windows.Forms.Label textoCaja;
         private System.Windows.Forms.Panel panel9;
         public DataGridView epcs;
-        private TextBox tDescripcion;
-        private Label descripcion;
     }
 }

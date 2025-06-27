@@ -179,6 +179,9 @@
     <Compile Include="utils\LinPedidosVentaArco.cs" />
     <Compile Include="utils\ObjectSend.cs" />
     <Compile Include="utils\Orden.cs" />
+    <Compile Include="utils\OrdenInversa.cs" />
+    <Compile Include="utils\OrdenInversaIn.cs" />
+    <Compile Include="utils\OrdenInversaOut.cs" />
     <Compile Include="utils\OrigenOrden.cs" />
     <Compile Include="utils\Peticion.cs" />
     <Compile Include="utils\Grabacion.cs" />

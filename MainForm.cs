@@ -50,8 +50,8 @@ namespace UHFAPP
         string strClose = "  Desconectar lector  ";
         string strStart = "  Iniciar lectura  ";
         string strStop = "  Detener lectura  ";
-        string strStartConsulta = "  Iniciar bajas  ";
-        string strStopConsulta = "  Detener bajas  ";
+        string strStartConsulta = "  Iniciar Orden Inversa  ";
+        string strStopConsulta = "  Detener Orden Inversa  ";
         private List<string> tags = new List<string>();
         private List<int> tagsCantidad = new List<int>();
         private string currentFormName = "";
@@ -515,8 +515,10 @@ namespace UHFAPP
                         if (info != null && !tagsOrden.ContainsKey(info.Epc))
                         {
                             tagsOrden.Add(info.Epc,1);
-
-                            grabaBaja(info.Epc, true);
+                            if(ubicación.Equals("mozo"))
+                            grabaOrdenInversa(info.Epc, true);
+                            else
+                                grabaOrdenInversaAmipem(info.Epc);
                         }
                     }
                 }
@@ -528,51 +530,41 @@ namespace UHFAPP
             }
         }
 
-        private void grabaBajaAmipem(string epc,string descripcion)
+        private void grabaOrdenInversaAmipem(string epc)
         {
             try
             {
                 if (tagsOrden.ContainsKey(epc))
                 {
-                    var url = apiAmipemBase + "grabarBaja";
+                    var url = apiAmipemBase + "ordenInversa";
                     var request = (HttpWebRequest)WebRequest.Create(url);
                     request.Method = "POST";
                     request.ContentType = "application/json";
                     request.Accept = "application/json";
                     DateTime fecha = DateTime.Now;
-                    BajaAmipemOut bajaAmipemOut = new BajaAmipemOut(0, epc, descripcion);
-                    string salida = JsonConvert.SerializeObject(bajaAmipemOut);
+                    //BajaAmipemOut bajaAmipemOut = new BajaAmipemOut(0, epc, descripcion);
+                    string salida = "{\"lecturaRFID\":\"" + epc + "\"}";
                     byte[] data = Encoding.UTF8.GetBytes(salida);
                     request.ContentLength = data.Length;
                     Stream stream = request.GetRequestStream();
                     stream.Write(data, 0, data.Length);
                     stream.Close();
-                    using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
-                    {
-                        Stream stream1 = response.GetResponseStream();
-                        StreamReader sr = new StreamReader(stream1);
-                        string strsb = sr.ReadToEnd();
-                        BajaAmipemIn bajaAmipemIn = JsonConvert.DeserializeObject<BajaAmipemIn>(strsb);
-                       
-                        new Thread(new ThreadStart(delegate { desglosaEpc(epc, DateTime.Now.ToString(), true); })).Start();
-
-                        //desglosaEpc(epc, DateTime.Now.ToString(), true);
-                    }
+                  
                 }
             }
             catch (Exception e1)
             {
-                log("grabarTagContadorAmipem:" + e1.Message);
+                log("grabaOrdenInversaAmipem:" + e1.Message);
             }
 
         }
 
-        private bool grabaBaja(string epc, bool comprobarErrores)
+        private bool grabaOrdenInversa(string epc, bool comprobarErrores)
         {
             bool resultado = false;
             if (ubicación.Equals("mozo"))
             {
-                var url = apiMozoBase + "api/mozo/apiArco/v2.0/companies(" + cliente + ")/registrarAjustesNegRFID";
+                var url = apiMozoBase + "api/mozo/apiArco/v2.0/companies(" + cliente + ")/registrarOrdenesInversas";
                 var request = (HttpWebRequest)WebRequest.Create(url);
                 string username = this.usuario;
                 string password = this.password;
@@ -583,8 +575,8 @@ namespace UHFAPP
                 request.Accept = "*";
                 try
                 {
-                    BajaOut baja = new BajaOut(epc, tDescripcion.Text, comprobarErrores, "");
-                    string salida = JsonConvert.SerializeObject(baja);
+                    OrdenInversaOut ordenInversaOut = new OrdenInversaOut(epc, comprobarErrores, "");
+                    string salida = JsonConvert.SerializeObject(ordenInversaOut);
                     byte[] data = Encoding.UTF8.GetBytes(salida);
                     request.ContentLength = data.Length;
                     Stream stream = request.GetRequestStream();
@@ -598,24 +590,24 @@ namespace UHFAPP
                         string strsb = sr.ReadToEnd();
                         strsb = strsb.Replace("@odata.context", "dataContext");
                         strsb = strsb.Replace("@odata.etag", "dataTag");
-                        BajaIn bajaIn = JsonConvert.DeserializeObject<BajaIn>(strsb);
+                        OrdenInversaIn ordenInversaIn = JsonConvert.DeserializeObject<OrdenInversaIn>(strsb);
                         int lastRowIndex = epcs.Rows.GetLastRow(DataGridViewElementStates.Visible);
                         resultado = true;
-                        if (bajaIn.textoError != null && bajaIn.textoError.Length > 0 && comprobarErrores)
+                        if (ordenInversaIn.textoError != null && ordenInversaIn.textoError.Length > 0 && comprobarErrores)
                         {
 
-                            caja(bajaIn.textoError + "\n" + desglosaEpcErroneo(epc), epc, true);
+                            caja(ordenInversaIn.textoError + "\n" + desglosaEpcErroneo(epc), epc, true);
                             resultado = false;
                             return resultado;
                         }
-                        if (bajaIn.textoError != null && bajaIn.textoError.Length == 0)
+                        if (ordenInversaIn.textoError != null && ordenInversaIn.textoError.Length == 0)
                         {
                             if (comprobarErrores)
-                                grabaBaja(epc, false);
+                                grabaOrdenInversa(epc, false);
                             else
                             {
                               desglosaEpc(epc, DateTime.Now.ToString(), true);
-                                //grabaBajaAmipem(epc, tDescripcion.Text);
+                                grabaOrdenInversaAmipem(epc);
                             }
                             resultado = true;
                         }
@@ -623,7 +615,7 @@ namespace UHFAPP
                 }
                 catch (Exception e)
                 {
-                    log("grabarTagContadorMozo:" + e.Message);
+                    log("grabaOrdenInversa:" + e.Message);
                     resultado = false;
                 }
             }
@@ -660,11 +652,11 @@ namespace UHFAPP
                     Desglose desglose = JsonConvert.DeserializeObject<Desglose>(strsb);
                     if (epcs.InvokeRequired)
                     {
-                        epcs.Invoke(new Action(() => epcs.Rows.Add(new object[] { desglose.noProducto, desglose.noLote, desglose.noSerie, tDescripcion.Text, fecha })));
+                        epcs.Invoke(new Action(() => epcs.Rows.Add(new object[] { desglose.noProducto, desglose.noLote, desglose.noSerie, "Orden Inversa", fecha })));
                     }
                     else
                     {
-                        epcs.Rows.Add(new object[] { desglose.noProducto, desglose.noLote, desglose.noSerie, tDescripcion.Text, fecha });
+                        epcs.Rows.Add(new object[] { desglose.noProducto, desglose.noLote, desglose.noSerie, "Orden Inversa", fecha });
                     }
 
 
@@ -772,11 +764,7 @@ namespace UHFAPP
 
         private void buttonConsulta_Click(object sender, EventArgs e)
         {
-            if(tDescripcion.Text.Trim().Length == 0)
-            {
-                caja("Debe introducir una descripcion", null, true);
-                return;
-            }
+            
             if (buttonConsulta.Text == strStartConsulta)
             {
                 tagsOrden.Clear();
