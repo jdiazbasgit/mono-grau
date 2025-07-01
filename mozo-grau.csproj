@@ -140,6 +140,17 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bajas\MainFormBajas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bajas\MainFormBajas.Designer.cs">
+      <DependentUpon>MainFormBajas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bajas\utils\BajaAmipemIn.cs" />
+    <Compile Include="bajas\utils\BajaAmipemOut.cs" />
+    <Compile Include="bajas\utils\BajaIn.cs" />
+    <Compile Include="bajas\utils\BajaOut.cs" />
+    <Compile Include="bajas\utils\Peticion.cs" />
     <Compile Include="BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,9 +161,15 @@
     <Compile Include="Datos.cs" />
     <Compile Include="DeviceInfo.cs" />
     <Compile Include="GetMozo.cs" />
-    <Compile Include="interfaces\IAutoReceive.cs" />
-    <Compile Include="Receive\SerialPortReceive.cs" />
-    <Compile Include="Receive\UdpReceive.cs" />
+    <Compile Include="inversas\MainFormOrdenInversa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inversas\MainFormOrdenInversa.Designer.cs">
+      <DependentUpon>MainFormOrdenInversa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="inversas\utils\OrdenInversa.cs" />
+    <Compile Include="inversas\utils\OrdenInversaIn.cs" />
+    <Compile Include="inversas\utils\OrdenInversaOut.cs" />
     <Compile Include="RFID-HF\HF15693API.cs" />
     <Compile Include="RFID-HF\HF14443API.cs" />
     <Compile Include="RFID-HF\HFMainForm.cs">
@@ -176,13 +193,10 @@
     <Compile Include="utils\ObjectSend.cs" />
     <Compile Include="utils\Orden.cs" />
     <Compile Include="utils\OrigenOrden.cs" />
-    <Compile Include="utils\Peticion.cs" />
     <Compile Include="utils\Grabacion.cs" />
     <Compile Include="utils\Common.cs" />
     <Compile Include="utils\DataConvert.cs" />
     <Compile Include="utils\EpcInfo.cs" />
-    <Compile Include="interfaces\IUHF.cs" />
-    <Compile Include="interfaces\IUHFProtocolParse.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,9 +210,15 @@
     <Compile Include="utils\Tag.cs" />
     <Compile Include="utils\Validacion.cs" />
     <Compile Include="utils\Value.cs" />
+    <EmbeddedResource Include="bajas\MainFormBajas.resx">
+      <DependentUpon>MainFormBajas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inversas\MainFormOrdenInversa.resx">
+      <DependentUpon>MainFormOrdenInversa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -236,10 +256,29 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="aplausos.wav" />
+    <Content Include="bajas\chimes.wav" />
+    <Content Include="bajas\img\button_green_32px_500051_easyicon.net.png" />
+    <Content Include="bajas\img\button_light_blue_32px_500052_easyicon.net.png" />
+    <Content Include="bajas\img\finLote.png" />
+    <Content Include="bajas\img\finLote.svg" />
+    <Content Include="bajas\img\Imagen14.png" />
+    <Content Include="bajas\img\Imagen6.png" />
+    <Content Include="bajas\img\Imagen7.png" />
+    <Content Include="bajas\img\logo.png" />
     <Content Include="chimes.wav" />
     <Content Include="error.mp3" />
     <Content Include="img\button_green_32px_500051_easyicon.net.png" />
     <Content Include="img\button_light_blue_32px_500052_easyicon.net.png" />
+    <Content Include="inversas\chimes.wav" />
+    <Content Include="inversas\error.mp3" />
+    <Content Include="inversas\img\button_green_32px_500051_easyicon.net.png" />
+    <Content Include="inversas\img\button_light_blue_32px_500052_easyicon.net.png" />
+    <Content Include="inversas\img\finLote.png" />
+    <Content Include="inversas\img\finLote.svg" />
+    <Content Include="inversas\img\Imagen14.png" />
+    <Content Include="inversas\img\Imagen6.png" />
+    <Content Include="inversas\img\Imagen7.png" />
+    <Content Include="inversas\img\logo.png" />
     <Content Include="parametros.txt" />
     <Content Include="sirena.mp3" />
     <Content Include="修改说明.txt" />
@@ -281,6 +320,9 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="interfaces\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

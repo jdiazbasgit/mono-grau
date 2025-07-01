@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace UHFAPP.utils
 {
-    internal class Grabacion
+    public class Grabacion
     {
         public int id { get; set; }
         public Orden orden { get; set; }

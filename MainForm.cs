@@ -1395,5 +1395,70 @@ namespace UHFAPP
         {
 
         }
+
+       
+
+        public Form ShowForm(Form nextForm, bool isCache)
+        {
+            isCache = false;
+
+            //toolStripStatusLabel1.Visible = false;
+            Form currForm = this.ActiveMdiChild;
+            Form from = nextForm;
+            if (currForm != null)
+            {
+                if (currForm.Name == from.Name)
+                {
+                    return null;
+                }
+
+                if (currForm.Name != "ReadEPCForm")// (currForm.Name == "ReadEPCForm" || currForm.Name == "ConfigForm")
+                {
+                    //Common.SaveForm(currForm);
+                    currForm.Close();
+                }
+                else
+                {
+                    currForm.Hide();
+                    // from = Common.GetForm(nextForm.GetType().Namespace, nextForm.Name, this);
+                }
+            }
+
+            from.WindowState = FormWindowState.Maximized;
+            from.MdiParent = this;//设置当前窗体为子窗体的父窗体
+            from.AutoScaleMode = AutoScaleMode.Inherit;
+            if (from.Name != "ReadEPCForm")// (currForm.Name == "ReadEPCForm" || currForm.Name == "ConfigForm")
+            {
+                from.Left = 303;
+            }
+            else
+            {
+                if (from.Left != -8)
+                {
+                    from.Left = 303;
+                }
+            }
+
+            from.Show();//显示窗体
+            return from;
+        }
+
+        
+       
+
+        private void buttonBajas_Click_1(object sender, EventArgs e)
+        {
+
+            this.Hide();
+            Form form = new MainFormBajas();
+            form.Show();
+        }
+
+        private void buttonInversa_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form form = new MainFormOrdenInversa();
+            form.Show();
+        }
     }
 }
