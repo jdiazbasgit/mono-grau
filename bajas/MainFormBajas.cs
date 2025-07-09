@@ -216,7 +216,7 @@ namespace UHFAPP
         }
 
 
-        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        private void MainFormBajas_FormClosing(object sender, FormClosingEventArgs e)
         {
             isSearch = false;
             UHFClose();
@@ -225,6 +225,8 @@ namespace UHFAPP
 
                 eventOpen(false);
             }
+            System.Windows.Forms.Application.Exit();
+            Environment.Exit(0);
         }
         private bool UHFClose()
         {
@@ -861,6 +863,11 @@ namespace UHFAPP
             this.Hide();
             Form form = new MainFormOrdenInversa();
             form.Show();
+        }
+
+        private void MainFormBajas_FormClosing_1(object sender, FormClosingEventArgs e)
+        {
+            MainFormBajas_FormClosing(sender, e);
         }
     }
 }

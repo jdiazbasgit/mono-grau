@@ -832,28 +832,28 @@ namespace UHFAPP
         {
             StopReceiveThread();
             isSearch = false;
-            UHFClose();
-            if (eventOpen != null)
-            {
+            
+            this.Close();
+            Form form = new MainForm();
+            form.Show();
 
-                eventOpen(false);
-            }
-            this.Hide();
-           
         }
 
         private void buttonBajas_Click(object sender, EventArgs e)
         {
             StopReceiveThread();
             isSearch = false;
-            UHFClose();
-            if (eventOpen != null)
-            {
-
-                eventOpen(false);
-            }
-            this.Hide();
             
+            this.Close();
+            Form form = new MainFormBajas();
+            form.Show();
+
+        }
+
+        private void MainFormOrdenInversa_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Form form = new MainForm();
+            form.Show();
         }
     }
 }

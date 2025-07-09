@@ -13,12 +13,12 @@ WEBSERVICE
 BLZNChVZ4LAab/kewV3J0v1J/2rYZSwuDUcyyOWEkbY=
 #+dgV6q4lqOZ/4ARsjz+PsQ7jDRnQvzRKhOJR3J6+ens=
 #ubicacion de la ejecucion  para simulacion (casa,oficina,mozo)
-mozo
-#oficina
+#mozo
+oficina
 #potencia de la antena
-15
+30
 #session de la antena
-00
+01
 #tag focus (1 activado, 0 desactivado)
 1
 #buzer (1 activado, 0 desactivado)
@@ -29,3 +29,7 @@ false
 10.0.1.102
 #puerto antena
 8888
+#OFBC2509618
+#010843548261926610BC25009751240000000002100101108072025170000000
+#BC25009751
+#OFBC2509618

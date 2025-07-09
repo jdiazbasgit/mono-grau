@@ -5,8 +5,7 @@ using System.IO;
 using System.Media;
 using System.Net;
 using System.Runtime.InteropServices;
-using System.Security.Cryptography;
-using System.Security.Policy;
+
 using System.Text;
 using System.Threading;
 using System.Windows;
@@ -14,18 +13,23 @@ using System.Windows.Forms;
 //using System.Drawing;
 using ApodemiaC;
 using BLEDeviceAPI;
+using DocumentFormat.OpenXml.Spreadsheet;
+using Microsoft.Graph;
+using Microsoft.Office.Interop.Excel;
 using Newtonsoft.Json;
 
 
 
 //using UHFAPP.barcode;
 using UHFAPP.utils;
-
+using UHFAPP.utils.procedencia;
 using WMPLib;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using static ICSharpCode.SharpZipLib.Zip.ExtendedUnixData;
 using static Lucene.Net.Documents.Field;
 using static UHFAPP.UHFAPI;
 using static UHFAPP.utils.EpcInfo;
+using Action = System.Action;
 
 
 
@@ -52,6 +56,8 @@ namespace UHFAPP
         string strStop = "  Detener lectura  ";
         string strStartConsulta = "  Iniciar comprobacion  ";
         string strStopConsulta = "  Detener comprobacion  ";
+        string biocamStop = "  Detener Biocam  ";
+        string biocamStart = "  Iniciar Biocam  ";
         private List<string> tags = new List<string>();
         private List<int> tagsCantidad = new List<int>();
         private string currentFormName = "";
@@ -91,6 +97,7 @@ namespace UHFAPP
         UHFAPP.UHFAPI.OnDisconnectCallback DisconnectCallback = null;
         private string epcErroneo;
         bool result = false;
+        private string ordenBiocam;
         #region  OnDisconnect
 
         private static void DataReceived(IntPtr pdata, short len)
@@ -179,6 +186,7 @@ namespace UHFAPP
             epcs.Location = new System.Drawing.Point(bounds.Width / 2, 321);
             btnScanEPC.Location = new System.Drawing.Point(((bounds.Width / 4) * 2) + 50, bounds.Height - 120);
             buttonConsulta.Location = new System.Drawing.Point((50), bounds.Height - 120);
+            buttonBiocam.Location = new System.Drawing.Point(((bounds.Width / 4) * 3) + 50, bounds.Height - 120);
 
         }
         public void cargarDatos(string archivo)
@@ -270,8 +278,8 @@ namespace UHFAPP
 
             try
             {
-
-                result = uhf.OpenUsb();
+                if (!result)
+                    result = uhf.OpenUsb();
                 if (!result)
                 {
                     result = uhf.TcpConnect(ipAntena, UInt32.Parse(puertoAntena));
@@ -320,6 +328,7 @@ namespace UHFAPP
 
         public int cantidadTotal { get; private set; }
         public bool finOrden { get; private set; }
+        public bool lecturaDirecta { get; private set; }
         #endregion
 
 
@@ -347,17 +356,31 @@ namespace UHFAPP
                 if (uhf.StopInventory())
                 {
                     if (!consulta)
-                        if (btnScanEPC.InvokeRequired)
+                        if (!lecturaDirecta)
+                            if (btnScanEPC.InvokeRequired)
+                            {
+                                btnScanEPC.Invoke(new Action(() => btnScanEPC.Text = strStart));
+                                btnScanEPC.Invoke(new Action(() => btnScanEPC.BackColor = System.Drawing.Color.Green));
+                                btnScanEPC.Invoke(new Action(() => btnScanEPC.ForeColor = System.Drawing.Color.White));
+                            }
+                            else
+                            {
+                                btnScanEPC.Text = strStart;
+                                btnScanEPC.BackColor = System.Drawing.Color.Green;
+                                btnScanEPC.ForeColor = System.Drawing.Color.White;
+                            }
+                        else
+                        if (buttonBiocam.InvokeRequired)
                         {
-                            btnScanEPC.Invoke(new Action(() => btnScanEPC.Text = strStart));
-                            btnScanEPC.Invoke(new Action(() => btnScanEPC.BackColor = System.Drawing.Color.Green));
-                            btnScanEPC.Invoke(new Action(() => btnScanEPC.ForeColor = System.Drawing.Color.White));
+                            buttonBiocam.Invoke(new Action(() => buttonBiocam.Text = biocamStart));
+                            buttonBiocam.Invoke(new Action(() => buttonBiocam.BackColor = System.Drawing.Color.Green));
+                            buttonBiocam.Invoke(new Action(() => buttonBiocam.ForeColor = System.Drawing.Color.White));
                         }
                         else
                         {
-                            btnScanEPC.Text = strStart;
-                            btnScanEPC.BackColor = System.Drawing.Color.Green;
-                            btnScanEPC.ForeColor = System.Drawing.Color.White;
+                            buttonBiocam.Text = biocamStart;
+                            buttonBiocam.BackColor = System.Drawing.Color.Green;
+                            buttonBiocam.ForeColor = System.Drawing.Color.White;
                         }
                     else if (buttonConsulta.InvokeRequired)
                     {
@@ -380,18 +403,38 @@ namespace UHFAPP
                 if (uhf.StartInventory())
                 {
                     if (!consulta)
-                        if (buttonConsulta.InvokeRequired)
+                        if (!lecturaDirecta)
+                            if (buttonConsulta.InvokeRequired)
+                            {
+                                btnScanEPC.Invoke(new Action(() => btnScanEPC.Text = strStop));
+                                btnScanEPC.Invoke(new Action(() => btnScanEPC.BackColor = System.Drawing.Color.Red));
+                                btnScanEPC.Invoke(new Action(() => btnScanEPC.ForeColor = System.Drawing.Color.White));
+                            }
+                            else
+                            {
+                                btnScanEPC.Text = strStop;
+                                btnScanEPC.BackColor = System.Drawing.Color.Red;
+                                btnScanEPC.ForeColor = System.Drawing.Color.White;
+                            }
+                        else
+                        if (buttonBiocam.InvokeRequired)
                         {
-                            btnScanEPC.Invoke(new Action(() => btnScanEPC.Text = strStop));
-                            btnScanEPC.Invoke(new Action(() => btnScanEPC.BackColor = System.Drawing.Color.Red));
-                            btnScanEPC.Invoke(new Action(() => btnScanEPC.ForeColor = System.Drawing.Color.White));
+                            buttonBiocam.Invoke(new Action(() => buttonBiocam.Text = biocamStop));
+                            buttonBiocam.Invoke(new Action(() => buttonBiocam.BackColor = System.Drawing.Color.Red));
+                            buttonBiocam.Invoke(new Action(() => buttonBiocam.ForeColor = System.Drawing.Color.White));
                         }
                         else
                         {
-                            btnScanEPC.Text = strStop;
-                            btnScanEPC.BackColor = System.Drawing.Color.Red;
-                            btnScanEPC.ForeColor = System.Drawing.Color.White;
+                            buttonBiocam.Text = biocamStop;
+                            buttonBiocam.BackColor = System.Drawing.Color.Red;
+                            buttonBiocam.ForeColor = System.Drawing.Color.White;
                         }
+                    else if (buttonConsulta.InvokeRequired)
+                    {
+                        buttonConsulta.Invoke(new Action(() => buttonConsulta.Text = strStopConsulta));
+                        buttonConsulta.Invoke(new Action(() => buttonConsulta.BackColor = System.Drawing.Color.Red));
+                        buttonConsulta.Invoke(new Action(() => buttonConsulta.ForeColor = System.Drawing.Color.White));
+                    }
                     else
                     {
                         if (buttonConsulta.InvokeRequired)
@@ -446,11 +489,80 @@ namespace UHFAPP
 
         private void validaProducto(string epc)
         {
-            tagsOrden.Add(epc, Int32.Parse(tbLinea.Text));
+            if (!tagsOrden.ContainsKey(epc))
+                tagsOrden.Add(epc, Int32.Parse(tbLinea.Text));
+
             if (ubicación.Equals("mozo"))
+            {
                 grabarTagContadorMozo(epc, Int32.Parse(tbLinea.Text), true);
+
+            }
             else
                 grabarTagContadorAmipem(epc, Int32.Parse(tbLinea.Text));
+
+        }
+
+        private void recuperaInfoBiocam(string epc)
+        {
+            string lote = desglosaEpc(epc);
+            string orden = dameOrdenFromLote(lote);
+            ordenBiocam = orden;
+            //textBox1.Text = orden;
+            epcs.Invoke(new Action(() => textBox1.Text = orden));
+
+            if (leerOrden())
+            {
+                grabarOrdenAmipem();
+                // leerOrdenAmipem();
+                int lotes = 1;
+                if (!tbLotes.Text.Trim().Equals(""))
+                    lotes = Int32.Parse(tbLotes.Text);
+                /** grabarTagContadorAmipem(epc,lotes );
+                 if (ubicación.Equals("mozo"))
+                     grabarTagContadorMozo(epc, lotes, true);*/
+
+            }
+
+        }
+
+        private string dameOrdenFromLote(string lote)
+        {
+            string salidaOrden = "";
+            var url = apiMozoBase + "api/mozo/apiArco/v2.0/companies(" + cliente + ")/codProcedenciaOrdenesProdArco?$filter=sourceNo eq '" + lote + "'";
+            cantidadReal = 0;
+            var request = (HttpWebRequest)WebRequest.Create(url);
+            string username = usuario;
+            string password = this.password;
+            string svcCredentials = Convert.ToBase64String(ASCIIEncoding.ASCII.GetBytes(username + ":" + password));
+            request.Headers.Add("Authorization", "Basic " + svcCredentials);
+            request.Method = "GET";
+            request.ContentType = "application/json";
+            request.Accept = "application/json";
+            try
+            {
+                using (WebResponse response = request.GetResponse())
+                {
+                    using (Stream strReader = response.GetResponseStream())
+                    {
+
+                        using (StreamReader objReader = new StreamReader(strReader))
+                        {
+                            string responseBody = objReader.ReadToEnd();
+                            string responseBodyFormater = responseBody.Replace("@odata.context", "dataContext");
+                            responseBodyFormater = responseBodyFormater.Replace("@odata.etag", "odataETag");
+                            Procedencia procedencia = JsonConvert.DeserializeObject<Procedencia>(responseBodyFormater);
+                            salidaOrden = procedencia.value[0].no;
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                log("leerOrden:" + ex.Message);
+                salidaOrden = "";
+                textBox1.Text = "";
+            }
+            return salidaOrden;
         }
 
         private bool leerOrden()
@@ -460,20 +572,25 @@ namespace UHFAPP
                 leerOrdenAmipem();
                 return true;
             }
-            if (textBox1.Text.Trim().Equals(""))
+            string orden = "";
+            if (ordenBiocam != null)
+                orden = ordenBiocam;
+            else
             {
-                if (result)
-                    caja("Orden no puede estar vacia", "", true);
+                if (textBox1.Text.Trim().Equals("") && ordenBiocam == null)
+                {
+                    if (result)
+                        caja("Orden no puede estar vacia", "", true);
 
-                return false;
+                    return false;
+                }
+                orden = textBox1.Text.Trim();
             }
 
-            btnScanEPC.Enabled = false;
+            // btnScanEPC.Enabled = false;
             bool resultado = false;
-            SoundPlayer simpleSound = new SoundPlayer(@"c:\Windows\Media\chimes.wav");
-            simpleSound.Play();
-
-            var url = apiMozoBase + "api/mozo/apiArco/v2.0/companies(" + cliente + ")/linOrdenesProdArco?$filter=prodOrderNo eq '" + textBox1.Text.Trim() + "'";
+            btnScanEPC.Invoke(new Action(() => btnScanEPC.Enabled = false));
+            var url = apiMozoBase + "api/mozo/apiArco/v2.0/companies(" + cliente + ")/linOrdenesProdArco?$filter=prodOrderNo eq '" + orden + "'";
             cantidadReal = 0;
             var request = (HttpWebRequest)WebRequest.Create(url);
             string username = usuario;
@@ -499,13 +616,19 @@ namespace UHFAPP
                             getMozo = JsonConvert.DeserializeObject<GetMozo>(responseBodyFormater);
                             if (getMozo.Value.Length > 0)
                             {
-                                lReferencia.Text = getMozo.Value[0].ItemNo;
-                                producto = getMozo.Value[0].ItemNo;
-                                cantidadReal = getMozo.Value[0].RemainingQtyBase;
-                                lDescripcion.Text = getMozo.Value[0].Description;
-                                lCantidadTotal.Text = getMozo.Value[0].RemainingQtyBase.ToString();
+                                //lReferencia.Text = getMozo.Value[0].ItemNo;
+                                epcs.Invoke(new Action(() => lReferencia.Text = getMozo.Value[0].ItemNo));
+                                //producto = getMozo.Value[0].ItemNo;
+                                epcs.Invoke(new Action(() => producto = getMozo.Value[0].ItemNo));
+                                //cantidadReal = getMozo.Value[0].RemainingQtyBase;
+                                epcs.Invoke(new Action(() => cantidadReal = getMozo.Value[0].RemainingQtyBase));
+                                //lDescripcion.Text = getMozo.Value[0].Description;
+                                epcs.Invoke(new Action(() => lDescripcion.Text = getMozo.Value[0].Description));
+                                //lCantidadTotal.Text = getMozo.Value[0].RemainingQtyBase.ToString();
+                                epcs.Invoke(new Action(() => lCantidadTotal.Text = getMozo.Value[0].RemainingQtyBase.ToString()));
 
-                                pReferencia.Visible = true;
+                                //pReferencia.Visible = true;
+                                epcs.Invoke(new Action(() => pReferencia.Visible = true));
                             }
                             else
                             {
@@ -523,7 +646,9 @@ namespace UHFAPP
                 log("leerOrden:" + ex.Message);
                 //caja("Problemas de conexion con la base de datos, contacte con el administrador", "");
                 resultado = false;
-                textBox1.Text = "";
+                //textBox1.Text = "";
+                epcs.Invoke(new Action(() => textBox1.Text = ""));
+
             }
             return resultado;
         }
@@ -575,13 +700,15 @@ namespace UHFAPP
                                 desglosaEpc(grabacionRespuesta.grabaciones[i].tag, grabacionRespuesta.grabaciones[grabacionRespuesta.grabaciones.Length - 1].fecha.ToLocalTime().ToString(), false);
                                 // epcs.Refresh();
                                 cantidadReal++;
-                                lCantidadTotal.Text = "" + cantidadTotal + "/" + cantidadReal;
-                                lCantidadTotal.Refresh();
+                                //lCantidadTotal.Text = "" + cantidadTotal + "/" + cantidadReal;
+                                lCantidadTotal.Invoke(new Action(() => lCantidadTotal.Text = "" + cantidadTotal + "/" + cantidadReal));
+                                //lCantidadTotal.Refresh();
+                                lCantidadTotal.Invoke(new Action(() => lCantidadTotal.Refresh()));
                             }
                             // panelCaja.Visible = false;
                             cantidadReal = cantidadTotal - grabacionRespuesta.grabaciones.Length;
-                            lCantidadTotal.Text = "" + cantidadTotal + "/" + cantidadReal;
-
+                            //lCantidadTotal.Text = "" + cantidadTotal + "/" + cantidadReal;
+                            lCantidadTotal.Invoke(new Action(() => lCantidadTotal.Text = "" + cantidadTotal + "/" + cantidadReal));
                         }
                     }
                 }
@@ -630,7 +757,12 @@ namespace UHFAPP
                 request.ContentType = "application/json";
                 request.Accept = "application/json";
                 //Orden orden = new Orden(idOrdenAmipem, textBox1.Text, lDescripcion.Text, lReferencia.Text, Int32.Parse(lCantidadTotal.Text));
-                string salida = "{\"codigo\":\"" + textBox1.Text + "\"}";
+                string numorden = "";
+                if (textBox1.Text.Trim().Equals(""))
+                    numorden = ordenBiocam;
+                else
+                    numorden = textBox1.Text.Trim();
+                string salida = "{\"codigo\":\"" + numorden + "\"}";
                 byte[] data = Encoding.UTF8.GetBytes(salida);
                 request.ContentLength = data.Length;
                 Stream stream = request.GetRequestStream();
@@ -654,17 +786,25 @@ namespace UHFAPP
                                 textBox1.Text = "";
                                 return;
                             }
-                            lReferencia.Text = orden.item;
+                            //lReferencia.Text = orden.item;
+                            lReferencia.Invoke(new Action(() => lReferencia.Text = orden.item));
                             producto = orden.item;
-                            lDescripcion.Text = orden.descripcion;
-                            cantidadTotal = orden.cantidad;
-                            lCantidadTotal.Text = "" + cantidadTotal + "/0";
-                            pReferencia.Visible = true;
+                            //lDescripcion.Text = orden.descripcion;
+                            lDescripcion.Invoke(new Action(() => lDescripcion.Text = orden.descripcion));
+                            if (biocam)
+                                cantidadTotal = 1;
+                            else
+                                cantidadTotal = orden.cantidad;
+                            //lCantidadTotal.Text = "" + cantidadTotal + "/0";
+                            lCantidadTotal.Invoke(new Action(() => lCantidadTotal.Text = "" + cantidadTotal + "/0"));
+
+                            pReferencia.Invoke(new Action(() => pReferencia.Visible = true));
                             idOrdenAmipem = orden.id;
-                            btnScanEPC.Enabled = true;
-                            lReferencia.Refresh();
+
+                            btnScanEPC.Invoke(new Action(() => btnScanEPC.Enabled = true));
+                            /*lReferencia.Refresh();
                             lDescripcion.Refresh();
-                            lCantidadTotal.Refresh();
+                            lCantidadTotal.Refresh();*/
                             leerTagsOrdenAmipem();
                         }
                     }
@@ -713,7 +853,12 @@ namespace UHFAPP
                 request.Method = "POST";
                 request.ContentType = "application/json";
                 request.Accept = "application/json";
-                Orden orden = new Orden(idOrdenAmipem, textBox1.Text, lDescripcion.Text, lReferencia.Text, Int32.Parse(lCantidadTotal.Text), 0);
+                string ordenUrl = "";
+                if (ordenBiocam != null)
+                    ordenUrl = ordenBiocam;
+                else
+                    ordenUrl = textBox1.Text.Trim();
+                Orden orden = new Orden(idOrdenAmipem, ordenUrl, lDescripcion.Text, lReferencia.Text, Int32.Parse(lCantidadTotal.Text), 0);
                 string salida = JsonConvert.SerializeObject(orden);
                 byte[] data = Encoding.UTF8.GetBytes(salida);
                 request.ContentLength = data.Length;
@@ -727,7 +872,9 @@ namespace UHFAPP
                     StreamReader sr = new StreamReader(stream1);
                     string strsb = sr.ReadToEnd();
                     Orden ordenRetorno = JsonConvert.DeserializeObject<Orden>(strsb);
-                    btnScanEPC.Enabled = true;
+                    //btnScanEPC.Enabled = true;
+                    btnScanEPC.Invoke(new Action(() => btnScanEPC.Enabled = true));
+
                     resultado = true;
                 }
             }
@@ -824,9 +971,10 @@ namespace UHFAPP
                         if (ordenRetorno.textoError != null && ordenRetorno.textoError.Length == 0)
                         {
                             if (comprobarErrores)
-                                grabarTagContadorMozo(epc, lote, false);
-                            else
-                                grabarTagContadorAmipem(epc, Int32.Parse(tbLinea.Text));
+                            {
+                                if (grabarTagContadorMozo(epc, lote, false))
+                                    grabarTagContadorAmipem(epc, Int32.Parse(tbLinea.Text));
+                            }
                             resultado = true;
                             return resultado;
 
@@ -907,22 +1055,28 @@ namespace UHFAPP
                         {
                             if (!consulta)
                             {
+
                                 if (tagsOrden.Count <= cantidadTotal + 1)
                                 {
                                     if (info != null && !tagsOrden.ContainsKey(info.Epc))
                                     {
                                         // new Thread(new ThreadStart(delegate { validaProducto(info.Epc); })).Start();
+                                        if (biocam)
+                                        {
+                                            recuperaInfoBiocam(info.Epc);
+                                        }
                                         validaProducto(info.Epc);
                                     }
                                 }
+
                             }
                             else
                             {
                                 if (info != null && !tagsComprobacion.ContainsKey(info.Epc))
                                 {
                                     tagsComprobacion.Add(info.Epc, 1);
-                                    new Thread(new ThreadStart(delegate { desglosaEpc(info.Epc); })).Start();
-                                    //desglosaEpc(info.Epc);
+                                    //new Thread(new ThreadStart(delegate { desglosaEpc(info.Epc); })).Start();
+                                    desglosaEpc(info.Epc);
 
                                 }
                             }
@@ -948,6 +1102,8 @@ namespace UHFAPP
                                 {
                                     if (info != null && !tagsOrden.ContainsKey(info.Epc))
                                     {
+
+
                                         //new Thread(new ThreadStart(delegate { validaProducto(info.Epc); })).Start();
                                         validaProducto(info.Epc);
                                     }
@@ -965,8 +1121,9 @@ namespace UHFAPP
             }
         }
 
-        private void desglosaEpc(string epc)
+        private string desglosaEpc(string epc)
         {
+            string salidaLote = "";
             int i = 0;
             try
             {
@@ -998,15 +1155,19 @@ namespace UHFAPP
                     strsb = strsb.Replace("@odata.context", "dataContext");
                     strsb = strsb.Replace("@odata.etag", "dataTag");
                     Desglose desglose = JsonConvert.DeserializeObject<Desglose>(strsb);
-                    if (dataGridView1.InvokeRequired)
+                    salidaLote = desglose.noLote;
+                    if (!biocam)
                     {
-                        dataGridView1.Invoke(new Action(() => dataGridView1.Rows.Add(new object[] { desglose.noProducto, desglose.noLote, desglose.noSerie })));
+                        if (dataGridView1.InvokeRequired)
+                        {
+                            dataGridView1.Invoke(new Action(() => dataGridView1.Rows.Add(new object[] { desglose.noProducto, desglose.noLote, desglose.noSerie })));
+                        }
+                        else
+                        {
+                            dataGridView1.Rows.Add(new object[] { desglose.noProducto, desglose.noLote, desglose.noSerie });
+                        }
+                        cantidadComprobacion.Invoke(new Action(() => cantidadComprobacion.Text = "Cantidad: " + tagsComprobacion.Count));
                     }
-                    else
-                    {
-                        dataGridView1.Rows.Add(new object[] { desglose.noProducto, desglose.noLote, desglose.noSerie });
-                    }
-                    cantidadComprobacion.Invoke(new Action(() => cantidadComprobacion.Text = "Cantidad: " + tagsComprobacion.Count));
                 }
             }
             catch (Exception e)
@@ -1015,6 +1176,7 @@ namespace UHFAPP
                 log("desglosaEPC:" + e.Message);
                 //caja("Problemas de conexion con la base de datos, contacte con el administrador", "");
             }
+            return salidaLote;
         }
 
         private void desglosaEpc(string epc, string fecha, bool grabar)
@@ -1132,61 +1294,7 @@ namespace UHFAPP
                                         if (origenOrden != null)
                                         {
                                             //recuperar información pieza biocam
-                                            var url1 = apiMozoBase + "api/mozo/apiArco/v2.0/companies(0c0574f1-f098-ed11-965c-6045bd89ef6b)/pedidosVentaArco?$expand=linPedidosVentaArco($expand=vinculosEnsamblarPedidoArco($expand=linPedidosEnsambladoArco))&$filter=no eq '" + origenOrden.value[0].sourceNo + "'";
-                                            var request1 = (HttpWebRequest)WebRequest.Create(url1);
-
-                                            string svcCredentials1 = Convert.ToBase64String(ASCIIEncoding.ASCII.GetBytes(username + ":" + password));
-                                            request1.Headers.Add("Authorization", "Basic " + svcCredentials1);
-                                            request1.Method = "GET";
-                                            request1.ContentType = "application/json";
-                                            request1.Accept = "*/*";
-
-                                            try
-                                            {
-                                                using (WebResponse responseBiocam = request1.GetResponse())
-                                                {
-                                                    using (Stream strReaderBiocam = responseBiocam.GetResponseStream())
-                                                    {
-                                                        if (strReaderBiocam == null)
-                                                            return;
-                                                        using (StreamReader objReaderBiocam = new StreamReader(strReaderBiocam))
-                                                        {
-                                                            string responseBodyBiocam = objReaderBiocam.ReadToEnd();
-                                                            string responseBodyFormaterBiocam = responseBodyBiocam.Replace("@odata.context", "dataContext");
-                                                            responseBodyFormaterBiocam = responseBodyFormaterBiocam.Replace("@odata.etag", "odataETag");
-
-                                                            Biocam biocam = JsonConvert.DeserializeObject<Biocam>(responseBodyFormaterBiocam);
-                                                            if (biocam != null)
-                                                            {
-                                                                LinPedidosVentaArco[] linPedidosVentaArcos = biocam.value[0].linPedidosVentaArco;
-                                                                StringBuilder resultadoBiocam = new StringBuilder();
-                                                                for (int i = 0; i < linPedidosVentaArcos.Length; i++)
-                                                                {
-                                                                    if (linPedidosVentaArcos[i].description.StartsWith("Tornillo"))
-                                                                    {
-                                                                        resultadoBiocam.Append(linPedidosVentaArcos[i].description + "(" + linPedidosVentaArcos[i].outstandingQuantity + ")\r\n");
-                                                                    }
-                                                                }
-                                                                caja(resultadoBiocam.ToString(), "", true);
-                                                            }
-                                                            else
-                                                            {
-                                                                if (result)
-                                                                    caja("Orden no existe", null, true);
-                                                                return;
-                                                            }
-
-                                                        }
-                                                    }
-                                                }
-                                            }
-                                            catch (Exception ex)
-                                            {
-                                                log("desglosaEPC:" + ex.Message);
-                                                //caja("Problemas de conexion con la base de datos, contacte con el administrador", "");
-
-                                                textBox1.Text = "";
-                                            }
+                                            leerBiocam(origenOrden.value[0].sourceNo);
 
                                         }
                                         else
@@ -1211,6 +1319,10 @@ namespace UHFAPP
 
 
                     }
+                    if (lecturaDirecta)
+                    {
+
+                    }
                 }
                 catch (Exception e)
                 {
@@ -1220,6 +1332,71 @@ namespace UHFAPP
 
             }
 
+        }
+
+        private void leerBiocam(String pedido)
+        {
+
+            var url1 = apiMozoBase + "api/mozo/apiArco/v2.0/companies(0c0574f1-f098-ed11-965c-6045bd89ef6b)/pedidosVentaArco?$expand=linPedidosVentaArco($expand=vinculosEnsamblarPedidoArco($expand=linPedidosEnsambladoArco))&$filter=no eq '" + pedido + "'";
+            var request1 = (HttpWebRequest)WebRequest.Create(url1);
+
+            string svcCredentials1 = Convert.ToBase64String(ASCIIEncoding.ASCII.GetBytes(usuario + ":" + password));
+            request1.Headers.Add("Authorization", "Basic " + svcCredentials1);
+            request1.Method = "GET";
+            request1.ContentType = "application/json";
+            request1.Accept = "*/*";
+
+            try
+            {
+                using (WebResponse responseBiocam = request1.GetResponse())
+                {
+                    using (Stream strReaderBiocam = responseBiocam.GetResponseStream())
+                    {
+                        if (strReaderBiocam == null)
+                            return;
+                        using (StreamReader objReaderBiocam = new StreamReader(strReaderBiocam))
+                        {
+                            string responseBodyBiocam = objReaderBiocam.ReadToEnd();
+                            string responseBodyFormaterBiocam = responseBodyBiocam.Replace("@odata.context", "dataContext");
+                            responseBodyFormaterBiocam = responseBodyFormaterBiocam.Replace("@odata.etag", "odataETag");
+
+                            Biocam biocam = JsonConvert.DeserializeObject<Biocam>(responseBodyFormaterBiocam);
+                            if (biocam != null)
+                            {
+                                LinPedidosVentaArco[] linPedidosVentaArcos = biocam.value[0].linPedidosVentaArco;
+                                StringBuilder resultadoBiocam = new StringBuilder();
+                                bool contornillos = false;
+                                for (int i = 0; i < linPedidosVentaArcos.Length; i++)
+                                {
+                                    if (linPedidosVentaArcos[i].description.StartsWith("Tornillo"))
+                                    {
+                                        contornillos = true;
+                                        resultadoBiocam.Append(linPedidosVentaArcos[i].no+ "\r\n" + linPedidosVentaArcos[i].description + " (" + linPedidosVentaArcos[i].outstandingQuantity + ")\r\n");
+                                    }
+                                }
+                                if (!contornillos)
+                                    caja("No hay tornillos en la orden", "", true);
+                                else
+                                    caja(resultadoBiocam.ToString(), "", true);
+                            }
+                            else
+                            {
+                                if (result)
+                                    caja("Orden no existe", null, true);
+                                return;
+                            }
+
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                log("desglosaEPC:" + ex.Message);
+                //caja("Problemas de conexion con la base de datos, contacte con el administrador", "");
+
+                textBox1.Text = "";
+            }
         }
         private string desglosaEpcErroneo(string epc)
         {
@@ -1273,6 +1450,8 @@ namespace UHFAPP
         private void button3_Click(object sender, EventArgs e)
         {
             consulta = false;
+            biocam = false;
+            lecturaDirecta = false;
 
             if (btnScanEPC.Text == strStop)
             {
@@ -1288,6 +1467,7 @@ namespace UHFAPP
 
         private void button2_Click(object sender, EventArgs e)
         {
+            ordenBiocam = null;
             if (!result)
                 toolStripButton1_Click();
             biocam = false;
@@ -1345,23 +1525,35 @@ namespace UHFAPP
         }
         private void buttonConsulta_Click(object sender, EventArgs e)
         {
-            if (!result)
-                toolStripButton1_Click();
-            consulta = true;
-            if (buttonConsulta.Text == strStopConsulta)
+            try
             {
-                StopReceiveThread();
-                StopEPC(true);
+                lecturaDirecta = false;
+                biocam = false;
+                // dataGridView1.Rows.Clear();
+                // tagsComprobacion.Clear();
+                if (!result)
+                    result = uhf.OpenUsb();
+                consulta = true;
+                if (buttonConsulta.Text == strStopConsulta)
+                {
+                    StopReceiveThread();
+                    StopEPC(true);
+                }
+                else
+                {
+                    cantidadComprobacion.Text = "Cantidad: 0";
+                    dataGridView1.Rows.Clear();
+                    tagsComprobacion.Clear();
+                    StartReceiveThread();
+                    StopEPC(false);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                cantidadComprobacion.Text = "Cantidad: 0";
-                dataGridView1.Rows.Clear();
-                tagsComprobacion.Clear();
-                StartReceiveThread();
-                StopEPC(false);
-            }
+                log("buttonConsulta_Click:" + ex.Message);
+                //caja("Problemas de conexion con la base de datos, contacte con el administrador", "");
 
+            }
         }
 
         private void botonCaja_Click(object sender, EventArgs e)
@@ -1396,7 +1588,7 @@ namespace UHFAPP
 
         }
 
-       
+
 
         public Form ShowForm(Form nextForm, bool isCache)
         {
@@ -1443,8 +1635,8 @@ namespace UHFAPP
             return from;
         }
 
-        
-       
+
+
 
         private void buttonBajas_Click_1(object sender, EventArgs e)
         {
@@ -1460,5 +1652,118 @@ namespace UHFAPP
             Form form = new MainFormOrdenInversa();
             form.Show();
         }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            //aqui lectura biocam
+            try
+            {
+                epcs.Rows.Clear();
+                tagsOrden.Clear();
+                //if(uhf.Close())
+                // result= uhf.OpenUsb();
+                if (!result)
+                    result = uhf.OpenUsb();
+                lecturaDirecta = true;
+                biocam = true;
+                consulta = false;
+                if (buttonBiocam.Text == biocamStop)
+                {
+                    StopReceiveThread();
+                    StopEPC(true);
+                }
+                else
+                {
+                    StartReceiveThread();
+                    StopEPC(false);
+                }
+
+            }
+            catch (System.ArgumentException e1)
+            {
+                log("button3_Click_1:" + e1.Message);
+            }
+
+
+
+        }
+
+        private void button3_Click_2(object sender, EventArgs e)
+        {
+            try
+            {
+                // Crea un StreamWriter para escribir en el archivo
+                using (StreamWriter writer = new StreamWriter(textBox1.Text.Trim() + ".txt"))
+                {
+                    writer.WriteLine("producto - lote - numero de serie - linea - fecha");
+                    for (int i = 0; i < epcs.Rows.Count; i++)
+                    {
+                        string contenido = "";
+                        for (int j = 0; j < epcs.Columns.Count; j++)
+                        {
+                            //if (j > 0)
+                            if (epcs.Rows[i].Cells[j].Value != null)
+                            {
+
+                                contenido += epcs.Rows[i].Cells[j].Value.ToString();
+                                if (j < epcs.Columns.Count - 1)
+                                    contenido += " - ";
+                            }
+
+                        }
+                        writer.WriteLine(contenido);
+                    }
+
+                }
+
+                caja("Archivo guardado exitosamente en: " + textBox1.Text.Trim() + ".txt", "", true);
+            }
+            catch (Exception e1)
+            {
+                log("Error al guardar el archivo: " + e1.Message);
+            }
+        }
+
+        private void buttonExcel_Click(object sender, EventArgs e)
+        {
+
+
+            Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
+            excel.Application.Workbooks.Add(true);
+
+            string[,] datos = new string[epcs.Rows.Count + 2, epcs.Columns.Count]; // +1 por la cabecera
+            for (int j = 0; j < epcs.Columns.Count; j++) //cabeceras
+            {
+                datos[1, j] = epcs.Columns[j].HeaderText;
+            }
+            datos[0, 0] = "ORDEN:";
+            datos[0, 1] = textBox1.Text.Trim();
+            datos[0, 2] = " ";
+            datos[0, 3] = " ";
+            datos[0, 4] = " ";
+
+            for (int i = 0; i < epcs.Rows.Count; i++)
+            {
+                for (int j = 0; j < epcs.Columns.Count; j++)
+                {
+                    if (epcs.Rows[i].Cells[j].Value != null)
+                        datos[i + 2, j] = epcs.Rows[i].Cells[j].Value.ToString() + " ";
+                }
+
+            }
+
+            excel.Range[excel.Cells[1, 1], excel.Cells[datos.GetLength(0), datos.GetLength(1)]].Value = datos;
+            excel.Visible = true;
+            Microsoft.Office.Interop.Excel.Worksheet worksheet = (Microsoft.Office.Interop.Excel.Worksheet)excel.ActiveSheet;
+            worksheet.Activate();
+            worksheet.SaveAs(".\\excel\\" + textBox1.Text.Trim() + ".xlsx");
+            caja("Excel grabado correctamente", "", true);
+
+        }
+
+        private void MainForm_FormClosing_1(object sender, FormClosingEventArgs e)
+        {
+            MainForm_FormClosing(sender, e);
+        }
     }
-}
+};
