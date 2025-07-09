@@ -95,7 +95,7 @@ public class GrabacionRestController {
 	@PostMapping("grabarTagContador")
 	public RespuestaContador grabaTag(@RequestBody GrabacionDTO grabacionDTO) {
 		Orden orden = getOrdenCrudRepository().findByCodigo(grabacionDTO.getOrden());
-		;
+		
 		// if(grabaciones.size()>=orden.getCantidad()) {
 		List<Grabacion> grabaciones = getGrabacionCrudRepository().getTagsByOrden(grabacionDTO.getOrden());
 		if (grabaciones.size() < orden.getCantidad()) {
