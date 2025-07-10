@@ -185,9 +185,10 @@ namespace UHFAPP
             epcs.Size = new System.Drawing.Size(bounds.Width / 2, (bounds.Height * 2 / 3) - 200);
             epcs.Location = new System.Drawing.Point(bounds.Width / 2, 321);
             btnScanEPC.Location = new System.Drawing.Point(((bounds.Width / 4) * 2) + 50, bounds.Height - 120);
+            buttonExcel.Location = new System.Drawing.Point(((bounds.Width / 8) * 5) + 50, bounds.Height - 120);
             buttonConsulta.Location = new System.Drawing.Point((50), bounds.Height - 120);
             buttonBiocam.Location = new System.Drawing.Point(((bounds.Width / 4) * 3) + 50, bounds.Height - 120);
-
+            button3.Location = new System.Drawing.Point(((bounds.Width / 8) * 2) + 50, bounds.Height - 120);
         }
         public void cargarDatos(string archivo)
         {
@@ -558,6 +559,7 @@ namespace UHFAPP
             }
             catch (Exception ex)
             {
+                caja("producto no es biocam", "", true);
                 log("leerOrden:" + ex.Message);
                 salidaOrden = "";
                 textBox1.Text = "";
@@ -1764,6 +1766,41 @@ namespace UHFAPP
         private void MainForm_FormClosing_1(object sender, FormClosingEventArgs e)
         {
             MainForm_FormClosing(sender, e);
+        }
+
+        private void button3_Click_3(object sender, EventArgs e)
+        {
+
+
+            Microsoft.Office.Interop.Excel.Application excel = new Microsoft.Office.Interop.Excel.Application();
+            excel.Application.Workbooks.Add(true);
+
+            string[,] datos = new string[dataGridView1.Rows.Count + 2, dataGridView1.Columns.Count]; // +1 por la cabecera
+            for (int j = 0; j < dataGridView1.Columns.Count; j++) //cabeceras
+            {
+                datos[1, j] = dataGridView1.Columns[j].HeaderText;
+            }
+            datos[0, 0] = "LISTADO DE COMPROBACION ORDEN:";
+            datos[0, 1] = textBox1.Text.Trim();
+            datos[0, 2] = " ";
+            
+
+            for (int i = 0; i < dataGridView1.Rows.Count; i++)
+            {
+                for (int j = 0; j < dataGridView1.Columns.Count; j++)
+                {
+                    if (dataGridView1.Rows[i].Cells[j].Value != null)
+                        datos[i + 2, j] = dataGridView1.Rows[i].Cells[j].Value.ToString() + " ";
+                }
+
+            }
+
+            excel.Range[excel.Cells[1, 1], excel.Cells[datos.GetLength(0), datos.GetLength(1)]].Value = datos;
+            excel.Visible = true;
+            Microsoft.Office.Interop.Excel.Worksheet worksheet = (Microsoft.Office.Interop.Excel.Worksheet)excel.ActiveSheet;
+            worksheet.Activate();
+           // worksheet.SaveAs(".\\excel\\" + textBox1.Text.Trim() + ".xlsx");
+           // caja("Excel grabado correctamente", "", true);
         }
     }
 };
