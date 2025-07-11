@@ -189,6 +189,7 @@ namespace UHFAPP
             buttonConsulta.Location = new System.Drawing.Point((50), bounds.Height - 120);
             buttonBiocam.Location = new System.Drawing.Point(((bounds.Width / 4) * 3) + 50, bounds.Height - 120);
             button3.Location = new System.Drawing.Point(((bounds.Width / 8) * 2) + 50, bounds.Height - 120);
+            panelCaja.Location = new System.Drawing.Point(((bounds.Width / 8) * 2) + 50, (bounds.Height / 3));
         }
         public void cargarDatos(string archivo)
         {
@@ -1373,7 +1374,7 @@ namespace UHFAPP
                                     if (linPedidosVentaArcos[i].description.StartsWith("Tornillo"))
                                     {
                                         contornillos = true;
-                                        resultadoBiocam.Append(linPedidosVentaArcos[i].no+ "\r\n" + linPedidosVentaArcos[i].description + " (" + linPedidosVentaArcos[i].outstandingQuantity + ")\r\n");
+                                        resultadoBiocam.Append(linPedidosVentaArcos[i].no + " - " + linPedidosVentaArcos[i].description + " (" + linPedidosVentaArcos[i].outstandingQuantity + ")\r\n");
                                     }
                                 }
                                 if (!contornillos)
@@ -1395,7 +1396,7 @@ namespace UHFAPP
             catch (Exception ex)
             {
                 log("desglosaEPC:" + ex.Message);
-                //caja("Problemas de conexion con la base de datos, contacte con el administrador", "");
+                caja("BIOCAM YA PROCESADO", "",true);
 
                 textBox1.Text = "";
             }
@@ -1642,7 +1643,7 @@ namespace UHFAPP
 
         private void buttonBajas_Click_1(object sender, EventArgs e)
         {
-
+            uhf.CloseUsb();
             this.Hide();
             Form form = new MainFormBajas();
             form.Show();
@@ -1650,6 +1651,7 @@ namespace UHFAPP
 
         private void buttonInversa_Click(object sender, EventArgs e)
         {
+            uhf.CloseUsb();
             this.Hide();
             Form form = new MainFormOrdenInversa();
             form.Show();
@@ -1783,7 +1785,7 @@ namespace UHFAPP
             datos[0, 0] = "LISTADO DE COMPROBACION ORDEN:";
             datos[0, 1] = textBox1.Text.Trim();
             datos[0, 2] = " ";
-            
+
 
             for (int i = 0; i < dataGridView1.Rows.Count; i++)
             {
@@ -1799,8 +1801,8 @@ namespace UHFAPP
             excel.Visible = true;
             Microsoft.Office.Interop.Excel.Worksheet worksheet = (Microsoft.Office.Interop.Excel.Worksheet)excel.ActiveSheet;
             worksheet.Activate();
-           // worksheet.SaveAs(".\\excel\\" + textBox1.Text.Trim() + ".xlsx");
-           // caja("Excel grabado correctamente", "", true);
+            // worksheet.SaveAs(".\\excel\\" + textBox1.Text.Trim() + ".xlsx");
+            // caja("Excel grabado correctamente", "", true);
         }
     }
 };

@@ -176,10 +176,10 @@ namespace UHFAPP
             System.Drawing.Rectangle bounds = primaryScreen.Bounds;
             this.Size = new System.Drawing.Size(bounds.Width, bounds.Height);
             panel9.Size = new System.Drawing.Size(bounds.Width, bounds.Height);
-            epcs.Size = new System.Drawing.Size((bounds.Width / 4)*3, (bounds.Height * 2 / 3));
+            epcs.Size = new System.Drawing.Size((bounds.Width / 4) * 3, (bounds.Height / 5) * 3);
             epcs.Location = new System.Drawing.Point(bounds.Width / 8, 200);
-           // btnScanEPC.Location = new System.Drawing.Point(((bounds.Width / 4) * 2) + 50, bounds.Height - 120);
-            buttonConsulta.Location = new System.Drawing.Point(((bounds.Width / 4) ), bounds.Height - 150);
+            // btnScanEPC.Location = new System.Drawing.Point(((bounds.Width / 4) * 2) + 50, bounds.Height - 120);
+            buttonConsulta.Location = new System.Drawing.Point(((bounds.Width / 4) * 2), bounds.Height - 125);
 
         }
         public void cargarDatos(string archivo)
@@ -444,7 +444,7 @@ namespace UHFAPP
         {
             try
             {
-               
+
 
                 StopEPC(true);
                 uhf.StopInventory();
@@ -455,7 +455,7 @@ namespace UHFAPP
                     textoCaja.Invoke(new Action(() => botonCaja.Visible = true));
                 else
                     textoCaja.Invoke(new Action(() => botonCaja.Visible = false));
-            
+
 
             }
             catch (Exception e)
@@ -520,9 +520,9 @@ namespace UHFAPP
 
                         if (info != null && !tagsOrden.ContainsKey(info.Epc))
                         {
-                            tagsOrden.Add(info.Epc,1);
-                            if(ubicación.Equals("mozo"))
-                            grabaOrdenInversa(info.Epc, true);
+                            tagsOrden.Add(info.Epc, 1);
+                            if (ubicación.Equals("mozo"))
+                                grabaOrdenInversa(info.Epc, true);
                             else
                                 grabaOrdenInversaAmipem(info.Epc);
                         }
@@ -555,7 +555,7 @@ namespace UHFAPP
                     Stream stream = request.GetRequestStream();
                     stream.Write(data, 0, data.Length);
                     stream.Close();
-                  
+
                 }
             }
             catch (Exception e1)
@@ -612,7 +612,7 @@ namespace UHFAPP
                                 grabaOrdenInversa(epc, false);
                             else
                             {
-                              desglosaEpc(epc, DateTime.Now.ToString(), true);
+                                desglosaEpc(epc, DateTime.Now.ToString(), true);
                                 grabaOrdenInversaAmipem(epc);
                             }
                             resultado = true;
@@ -770,11 +770,11 @@ namespace UHFAPP
 
         private void buttonConsulta_Click(object sender, EventArgs e)
         {
-            
-                            tagsOrden.Clear();
-                epcs.Rows.Clear();
-           
-               result = false;
+
+            tagsOrden.Clear();
+            epcs.Rows.Clear();
+
+
             if (!result)
                 result = uhf.OpenUsb();
             if (!result)
@@ -783,11 +783,11 @@ namespace UHFAPP
                 {
                     result = uhf.TcpConnect(ipAntena, UInt32.Parse(puertoAntena));
                 }
-                catch(Exception e1)
+                catch (Exception e1)
                 {
                     log("buttonConsulta_Click:" + e1.Message);
                 }
-             
+
             }
 
             if (!result)
@@ -830,10 +830,10 @@ namespace UHFAPP
 
         private void buttonCalidad_Click(object sender, EventArgs e)
         {
-            StopReceiveThread();
+            uhf.CloseUsb();
             isSearch = false;
-            
-            this.Close();
+
+
             Form form = new MainForm();
             form.Show();
 
@@ -841,10 +841,8 @@ namespace UHFAPP
 
         private void buttonBajas_Click(object sender, EventArgs e)
         {
-            StopReceiveThread();
-            isSearch = false;
-            
-            this.Close();
+            uhf.CloseUsb();
+
             Form form = new MainFormBajas();
             form.Show();
 
@@ -852,8 +850,13 @@ namespace UHFAPP
 
         private void MainFormOrdenInversa_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Form form = new MainForm();
-            form.Show();
+            isSearch = false;
+            UHFClose();
+            if (eventOpen != null)
+            {
+
+                eventOpen(false);
+            }
         }
     }
 }

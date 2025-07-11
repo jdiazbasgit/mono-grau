@@ -4,39 +4,54 @@ using System.Linq;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.Threading;
+using System.Diagnostics;
 using System.IO;
 using System.Text;
+using Microsoft.Graph.Models;
+using System.Windows;
 
 namespace UHFAPP
 {
     static class Program
     {
-        /// <summary>
-        /// 应用程序的主入口点。
-        /// </summary>
+
         [STAThread]
         static void Main()
         {
+
+
+
             try
             {
 
-                //Application.EnableVisualStyles();
-                //Application.SetCompatibleTextRenderingDefault(false);
-                //Application.Run(new MainForm());
-                //处理未捕获的异常
-                Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
-                //处理UI线程异常
-                Application.ThreadException += new System.Threading.ThreadExceptionEventHandler(Application_ThreadException);
-                //处理非线程异常
+
+                System.Windows.Forms.Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
+
+                System.Windows.Forms.Application.ThreadException += new System.Threading.ThreadExceptionEventHandler(Application_ThreadException);
+
                 AppDomain.CurrentDomain.UnhandledException += new UnhandledExceptionEventHandler(CurrentDomain_UnhandledException);
-                Application.EnableVisualStyles();
-                Application.SetCompatibleTextRenderingDefault(false);
-                Application.Run(new MainForm());
-                glExitApp = true;//标志应用程序可以退出
+                System.Windows.Forms.Application.EnableVisualStyles();
+                System.Windows.Forms.Application.SetCompatibleTextRenderingDefault(false);
+
+
+
+
+                if (System.Diagnostics.Process.GetProcessesByName(System.Diagnostics.Process.GetCurrentProcess().ProcessName).GetUpperBound(0) > 0)
+
+                {
+
+                    //frmMessage.Mostrar("PEL_PPC", "Aplicación PEL_PPC ya iniciada", "", Shared.gkVisto);
+                    MessageBoxResult result = System.Windows.MessageBox.Show("La aplicación ya se está ejecutando", "ERROR!!!", MessageBoxButton.OKCancel);
+                    System.Windows.Forms.Application.Exit();
+
+                }
+
+                System.Windows.Forms.Application.Run(new MainForm());
+                glExitApp = true;
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                System.Windows.Forms.MessageBox.Show(ex.Message);
             }
         }
 
@@ -67,7 +82,8 @@ namespace UHFAPP
                     return;
                 }
                 System.Threading.Thread.Sleep(2 * 1000);
-            };
+            }
+            ;
         }
 
         /// <summary>

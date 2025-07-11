@@ -174,10 +174,10 @@ namespace UHFAPP
             System.Drawing.Rectangle bounds = primaryScreen.Bounds;
             this.Size = new System.Drawing.Size(bounds.Width, bounds.Height);
             panel9.Size = new System.Drawing.Size(bounds.Width, bounds.Height);
-            epcs.Size = new System.Drawing.Size((bounds.Width / 4) * 3, (bounds.Height * 2 / 3));
+            epcs.Size = new System.Drawing.Size((bounds.Width / 4) * 3, (bounds.Height / 5) * 3);
             epcs.Location = new System.Drawing.Point(bounds.Width / 8, 200);
             // btnScanEPC.Location = new System.Drawing.Point(((bounds.Width / 4) * 2) + 50, bounds.Height - 120);
-            buttonConsulta.Location = new System.Drawing.Point(((bounds.Width / 4)), bounds.Height - 150);
+            buttonConsulta.Location = new System.Drawing.Point(((bounds.Width / 4) * 2), bounds.Height - 125);
 
         }
         public void cargarDatos(string archivo)
@@ -836,8 +836,8 @@ namespace UHFAPP
 
         private void button2_Click(object sender, EventArgs e)
         {
-            StopReceiveThread();
-
+            
+            uhf.CloseUsb();
             isSearch = false;
             UHFClose();
             if (eventOpen != null)
@@ -852,7 +852,7 @@ namespace UHFAPP
 
         private void buttonInversas_Click(object sender, EventArgs e)
         {
-            StopReceiveThread();
+            uhf.CloseUsb();
             isSearch = false;
             UHFClose();
             if (eventOpen != null)
