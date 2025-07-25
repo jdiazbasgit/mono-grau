@@ -1,0 +1,11 @@
+ if (!result)
+ {
+     result = uhf.TcpConnect(ipAntena, UInt32.Parse(puertoAntena));
+ }
+
+
+ private string ipAntena;
+private string puertoAntena;
+
+ ipAntena = leerParametro(sr);
+ puertoAntena = leerParametro(sr);

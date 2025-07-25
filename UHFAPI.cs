@@ -2044,7 +2044,7 @@ namespace UHFAPP
                     rssi_data = rssi_data + ".0";
                 }
                 ant_data = Convert.ToInt32((strData.Substring(ant_index * 2, 2)), 16).ToString();
-
+                
                 UHFTAGInfo info = new UHFTAGInfo();
                 info.Epc = epc_data;
                 info.Tid = tid_data;

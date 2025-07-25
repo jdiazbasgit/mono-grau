@@ -57,7 +57,6 @@ namespace UHFAPP
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel11 = new System.Windows.Forms.Panel();
             this.buttonInversa = new System.Windows.Forms.Button();
-            this.buttonBajas = new System.Windows.Forms.Button();
             this.pPelPda = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pLinea = new System.Windows.Forms.Panel();
@@ -71,7 +70,6 @@ namespace UHFAPP
             this.lCantidadTotal = new System.Windows.Forms.Label();
             this.lReferencia = new System.Windows.Forms.Label();
             this.tbLinea = new System.Windows.Forms.TextBox();
-            this.buttonExportar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.epcs)).BeginInit();
             this.panel9.SuspendLayout();
             this.panelCaja.SuspendLayout();
@@ -209,7 +207,7 @@ namespace UHFAPP
             this.btnScanEPC.Name = "btnScanEPC";
             this.btnScanEPC.Size = new System.Drawing.Size(180, 44);
             this.btnScanEPC.TabIndex = 34;
-            this.btnScanEPC.Text = "  Iniciar lectura  ";
+            this.btnScanEPC.Text = "  Iniciar Altas ";
             this.btnScanEPC.UseCompatibleTextRendering = true;
             this.btnScanEPC.UseVisualStyleBackColor = false;
             this.btnScanEPC.Click += new System.EventHandler(this.button3_Click);
@@ -308,7 +306,7 @@ namespace UHFAPP
             this.buttonConsulta.Name = "buttonConsulta";
             this.buttonConsulta.Size = new System.Drawing.Size(180, 44);
             this.buttonConsulta.TabIndex = 38;
-            this.buttonConsulta.Text = "Iniciar comprobacion";
+            this.buttonConsulta.Text = "Iniciar lectura";
             this.buttonConsulta.UseCompatibleTextRendering = true;
             this.buttonConsulta.UseVisualStyleBackColor = false;
             this.buttonConsulta.Click += new System.EventHandler(this.buttonConsulta_Click);
@@ -339,7 +337,7 @@ namespace UHFAPP
             // 
             this.textoCaja.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.textoCaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textoCaja.Location = new System.Drawing.Point(28, 15);
+            this.textoCaja.Location = new System.Drawing.Point(25, 20);
             this.textoCaja.Name = "textoCaja";
             this.textoCaja.Size = new System.Drawing.Size(643, 398);
             this.textoCaja.TabIndex = 0;
@@ -436,7 +434,6 @@ namespace UHFAPP
             // 
             this.panel11.BackColor = System.Drawing.Color.LightGray;
             this.panel11.Controls.Add(this.buttonInversa);
-            this.panel11.Controls.Add(this.buttonBajas);
             this.panel11.Controls.Add(this.pPelPda);
             this.panel11.Controls.Add(this.panel2);
             this.panel11.Controls.Add(this.button1);
@@ -450,7 +447,7 @@ namespace UHFAPP
             // buttonInversa
             // 
             this.buttonInversa.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold);
-            this.buttonInversa.Location = new System.Drawing.Point(959, 31);
+            this.buttonInversa.Location = new System.Drawing.Point(770, 31);
             this.buttonInversa.Name = "buttonInversa";
             this.buttonInversa.Size = new System.Drawing.Size(180, 44);
             this.buttonInversa.TabIndex = 54;
@@ -458,18 +455,6 @@ namespace UHFAPP
             this.buttonInversa.UseCompatibleTextRendering = true;
             this.buttonInversa.UseVisualStyleBackColor = false;
             this.buttonInversa.Click += new System.EventHandler(this.buttonInversa_Click);
-            // 
-            // buttonBajas
-            // 
-            this.buttonBajas.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold);
-            this.buttonBajas.Location = new System.Drawing.Point(747, 31);
-            this.buttonBajas.Name = "buttonBajas";
-            this.buttonBajas.Size = new System.Drawing.Size(180, 44);
-            this.buttonBajas.TabIndex = 53;
-            this.buttonBajas.Text = "Bajas";
-            this.buttonBajas.UseCompatibleTextRendering = true;
-            this.buttonBajas.UseVisualStyleBackColor = false;
-            this.buttonBajas.Click += new System.EventHandler(this.buttonBajas_Click_1);
             // 
             // pPelPda
             // 
@@ -617,19 +602,6 @@ namespace UHFAPP
             this.tbLinea.TabIndex = 41;
             this.tbLinea.Text = "1";
             // 
-            // buttonExportar
-            // 
-            this.buttonExportar.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold);
-            this.buttonExportar.Location = new System.Drawing.Point(1343, 108);
-            this.buttonExportar.Name = "buttonExportar";
-            this.buttonExportar.Size = new System.Drawing.Size(180, 44);
-            this.buttonExportar.TabIndex = 52;
-            this.buttonExportar.Text = "Exportar TXT";
-            this.buttonExportar.UseCompatibleTextRendering = true;
-            this.buttonExportar.UseVisualStyleBackColor = false;
-            this.buttonExportar.Visible = false;
-            this.buttonExportar.Click += new System.EventHandler(this.button3_Click_2);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -638,7 +610,6 @@ namespace UHFAPP
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1530, 735);
-            this.Controls.Add(this.buttonExportar);
             this.Controls.Add(this.panel9);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
@@ -696,9 +667,7 @@ namespace UHFAPP
         public DataGridView epcs;
         public DataGridView dataGridView1;
         private Button buttonInversa;
-        private Button buttonBajas;
         private Button buttonBiocam;
-        private Button buttonExportar;
         private Button buttonExcel;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;

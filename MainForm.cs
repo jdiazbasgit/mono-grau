@@ -13,6 +13,7 @@ using System.Windows.Forms;
 //using System.Drawing;
 using ApodemiaC;
 using BLEDeviceAPI;
+using DocumentFormat.OpenXml.EMMA;
 using DocumentFormat.OpenXml.Spreadsheet;
 using Microsoft.Graph;
 using Microsoft.Office.Interop.Excel;
@@ -52,10 +53,10 @@ namespace UHFAPP
         int cantidadReal = 0;
         string strOpen = "  Conectar lector  ";
         string strClose = "  Desconectar lector  ";
-        string strStart = "  Iniciar lectura  ";
-        string strStop = "  Detener lectura  ";
-        string strStartConsulta = "  Iniciar comprobacion  ";
-        string strStopConsulta = "  Detener comprobacion  ";
+        string strStart = "  Iniciar Altas  ";
+        string strStop = "  Detener Altas  ";
+        string strStartConsulta = "  Iniciar lectura  ";
+        string strStopConsulta = "  Detener lectura  ";
         string biocamStop = "  Detener Biocam  ";
         string biocamStart = "  Iniciar Biocam  ";
         private List<string> tags = new List<string>();
@@ -90,6 +91,7 @@ namespace UHFAPP
         private bool biocam;
         private UHFAPP.UHFAPI.OnDataReceived onDataReceived = DataReceived;
         SortedDictionary<string, int> tagsOrden = new SortedDictionary<string, int>();
+        SortedDictionary<string, int> tagsTotales = new SortedDictionary<string, int>();
         SortedDictionary<string, int> tagsComprobacion = new SortedDictionary<string, int>();
         public static FormWindowState currState = FormWindowState.Normal;
         List<EpcInfo> epcList = new List<EpcInfo>();
@@ -98,6 +100,7 @@ namespace UHFAPP
         private string epcErroneo;
         bool result = false;
         private string ordenBiocam;
+        private int antena;
         #region  OnDisconnect
 
         private static void DataReceived(IntPtr pdata, short len)
@@ -209,6 +212,7 @@ namespace UHFAPP
             sinValidar = Boolean.Parse(leerParametro(sr));
             ipAntena = leerParametro(sr);
             puertoAntena = leerParametro(sr);
+            antena = Int32.Parse(leerParametro(sr));
             sr.Close();
             Console.ReadLine();
             //loteActual++;
@@ -270,7 +274,60 @@ namespace UHFAPP
             return true;
 
         }
+        /* private void btnGetANT_Click(object sender, EventArgs e)
+         {
 
+             string msg = !IsChineseSimple() ? "Failure!" : "失败!";
+             byte[] ant = new byte[4];
+             if (uhf.GetANTTo32(ant))
+             {
+                 cmbAnt16.Checked = (ant[0] & 128) == 128 ? true : false;
+                 cmbAnt15.Checked = (ant[0] & 64) == 64 ? true : false;
+                 cmbAnt14.Checked = (ant[0] & 32) == 32 ? true : false;
+                 cmbAnt13.Checked = (ant[0] & 16) == 16 ? true : false;
+                 cmbAnt12.Checked = (ant[0] & 8) == 8 ? true : false;
+                 cmbAnt11.Checked = (ant[0] & 4) == 4 ? true : false;
+                 cmbAnt10.Checked = (ant[0] & 2) == 2 ? true : false;
+                 cmbAnt9.Checked = (ant[0] & 1) == 1 ? true : false;
+
+                 cmbAnt8.Checked = (ant[1] & 128) == 128 ? true : false;
+                 cmbAnt7.Checked = (ant[1] & 64) == 64 ? true : false;
+                 cmbAnt6.Checked = (ant[1] & 32) == 32 ? true : false;
+                 cmbAnt5.Checked = (ant[1] & 16) == 16 ? true : false;
+                 cmbAnt4.Checked = (ant[1] & 8) == 8 ? true : false;
+                 cmbAnt3.Checked = (ant[1] & 4) == 4 ? true : false;
+                 cmbAnt2.Checked = (ant[1] & 2) == 2 ? true : false;
+                 cmbAnt1.Checked = (ant[1] & 1) == 1 ? true : false;
+
+                 if (ant.Length == 4)
+                 {
+                     cbANT32.Checked = (ant[2] & 128) == 128 ? true : false;
+                     cbANT31.Checked = (ant[2] & 64) == 64 ? true : false;
+                     cbANT30.Checked = (ant[2] & 32) == 32 ? true : false;
+                     cbANT29.Checked = (ant[2] & 16) == 16 ? true : false;
+                     cbANT28.Checked = (ant[2] & 8) == 8 ? true : false;
+                     cbANT27.Checked = (ant[2] & 4) == 4 ? true : false;
+                     cbANT26.Checked = (ant[2] & 2) == 2 ? true : false;
+                     cbANT25.Checked = (ant[2] & 1) == 1 ? true : false;
+
+                     cbANT24.Checked = (ant[3] & 128) == 128 ? true : false;
+                     cbANT23.Checked = (ant[3] & 64) == 64 ? true : false;
+                     cbANT22.Checked = (ant[3] & 32) == 32 ? true : false;
+                     cbANT21.Checked = (ant[3] & 16) == 16 ? true : false;
+                     cbANT20.Checked = (ant[3] & 8) == 8 ? true : false;
+                     cbANT19.Checked = (ant[3] & 4) == 4 ? true : false;
+                     cbANT18.Checked = (ant[3] & 2) == 2 ? true : false;
+                     cbANT17.Checked = (ant[3] & 1) == 1 ? true : false;
+                 }
+
+
+
+                 msg = !IsChineseSimple() ? "Success" : "成功!";
+                 //  msg = Common.isEnglish?"success":"获取天线成功!("+ DataConvert.ByteArrayToHexString(ant)+")";
+             }
+
+
+         }*/
 
         private void toolStripButton1_Click()
         {
@@ -281,10 +338,16 @@ namespace UHFAPP
             try
             {
                 if (!result)
+                {
                     result = uhf.OpenUsb();
+                    if (result)
+                        bt = true;
+                }
                 if (!result)
                 {
                     result = uhf.TcpConnect(ipAntena, UInt32.Parse(puertoAntena));
+                    if (result)
+                        tcp = true;
                 }
                 if (!result)
                 {
@@ -331,6 +394,8 @@ namespace UHFAPP
         public int cantidadTotal { get; private set; }
         public bool finOrden { get; private set; }
         public bool lecturaDirecta { get; private set; }
+        public bool tcp { get; private set; }
+        public bool bt { get; private set; }
         #endregion
 
 
@@ -511,10 +576,29 @@ namespace UHFAPP
             ordenBiocam = orden;
             //textBox1.Text = orden;
             epcs.Invoke(new Action(() => textBox1.Text = orden));
-
+            try
+            {
+                hiloLectura = new Thread(new ThreadStart(delegate { validaProducto(epc); }));
+                hiloLectura.IsBackground = true;
+                hiloLectura.Start();
+            }
+            catch (Exception e)
+            {
+                log("StartReceiveThread:" + e.Message);
+            }
             if (leerOrden())
             {
-                grabarOrdenAmipem();
+                try
+                {
+                    hiloLectura = new Thread(new ThreadStart(delegate { grabarOrdenAmipem(); }));
+                    hiloLectura.IsBackground = true;
+                    hiloLectura.Start();
+                }
+                catch (Exception e)
+                {
+                    log("StartReceiveThread:" + e.Message);
+                }
+
                 // leerOrdenAmipem();
                 int lotes = 1;
                 if (!tbLotes.Text.Trim().Equals(""))
@@ -646,11 +730,14 @@ namespace UHFAPP
             }
             catch (Exception ex)
             {
-                log("leerOrden:" + ex.Message);
-                //caja("Problemas de conexion con la base de datos, contacte con el administrador", "");
+
+                caja("Problemas de conexion ", "", true);
                 resultado = false;
+
                 //textBox1.Text = "";
                 epcs.Invoke(new Action(() => textBox1.Text = ""));
+                return false;
+                //log("leerOrden:" + ex.Message);
 
             }
             return resultado;
@@ -840,7 +927,7 @@ namespace UHFAPP
             catch (Exception e)
             {
                 log(e.Message);
-                //caja("Problemas de conexion con la base de datos, contacte con el administrador", "");
+                caja("Problemas de conexion con la base de datos", "", true);
             }
 
         }
@@ -1045,83 +1132,115 @@ namespace UHFAPP
         }
         private void ReadEPC()
         {
-            try
+
+
+            int i = 0;
+            while (isRuning)
             {
-
-                int i = 0;
-                while (isRuning)
+                try
                 {
+
                     UHFTAGInfo info = uhf.ReadTagFromBuffer();
-                    if (info != null && info.Epc.StartsWith("0108"))
-                    {
-                        if (!ubicación.Equals("casa"))
+                    if (tcp && Int32.Parse(info.Ant) == antena || bt)
+                        if (info != null && !tagsTotales.ContainsKey(info.Epc))
                         {
-                            if (!consulta)
+                            tagsTotales.Add(info.Epc, 0);
+                            if (info != null && info.Epc.StartsWith("0108"))
                             {
-
-                                if (tagsOrden.Count <= cantidadTotal + 1)
+                                if (!ubicación.Equals("casa"))
                                 {
-                                    if (info != null && !tagsOrden.ContainsKey(info.Epc))
+                                    if (!consulta)
                                     {
-                                        // new Thread(new ThreadStart(delegate { validaProducto(info.Epc); })).Start();
-                                        if (biocam)
+
+                                        if (tagsOrden.Count <= cantidadTotal + 1)
                                         {
-                                            recuperaInfoBiocam(info.Epc);
+                                            if (info != null && !tagsOrden.ContainsKey(info.Epc))
+                                            {
+                                                // new Thread(new ThreadStart(delegate { validaProducto(info.Epc); })).Start();
+                                                if (biocam)
+                                                {
+                                                    try
+                                                    {
+                                                        hiloLectura = new Thread(new ThreadStart(delegate { recuperaInfoBiocam(info.Epc); }));
+                                                        hiloLectura.IsBackground = true;
+                                                        hiloLectura.Start();
+                                                    }
+                                                    catch (Exception e)
+                                                    {
+                                                        log("StartReceiveThread:" + e.Message);
+                                                    }
+
+                                                }
+
+
+                                            }
                                         }
-                                        validaProducto(info.Epc);
+
                                     }
-                                }
+                                    else
+                                    {
+                                        if (info != null && !tagsComprobacion.ContainsKey(info.Epc))
+                                        {
+                                            tagsComprobacion.Add(info.Epc, 1);
+                                            //new Thread(new ThreadStart(delegate { desglosaEpc(info.Epc); })).Start();
+                                            try
+                                            {
+                                                hiloLectura = new Thread(new ThreadStart(delegate { desglosaEpc(info.Epc); }));
+                                                hiloLectura.IsBackground = true;
+                                                hiloLectura.Start();
+                                            }
+                                            catch (Exception e)
+                                            {
+                                                log("StartReceiveThread:" + e.Message);
+                                            }
 
-                            }
-                            else
-                            {
-                                if (info != null && !tagsComprobacion.ContainsKey(info.Epc))
-                                {
-                                    tagsComprobacion.Add(info.Epc, 1);
-                                    //new Thread(new ThreadStart(delegate { desglosaEpc(info.Epc); })).Start();
-                                    desglosaEpc(info.Epc);
 
-                                }
-                            }
-                        }
-                        else
-                        {
-                            if (info != null && consulta && !tagsComprobacion.ContainsKey(info.Epc))
-                            {
-                                tagsComprobacion.Add(info.Epc, 1);
-                                if (dataGridView1.InvokeRequired)
-                                {
-                                    dataGridView1.Invoke(new Action(() => dataGridView1.Rows.Add(new object[] { "23207930", "25017318", "250173180017", 1, "01/01/2025" })));
+                                        }
+                                    }
                                 }
                                 else
                                 {
-                                    dataGridView1.Rows.Add(new object[] { "23207930", "25017318", "250173180017", 1, "01/01/2025" });
-                                }
-                            }
-                            if (info != null && !consulta && !tagsOrden.ContainsKey(info.Epc))
-                            {
-
-                                if (tagsOrden.Count <= cantidadTotal + 1)
-                                {
-                                    if (info != null && !tagsOrden.ContainsKey(info.Epc))
+                                    if (info != null && consulta && !tagsComprobacion.ContainsKey(info.Epc))
+                                    {
+                                        tagsComprobacion.Add(info.Epc, 1);
+                                        if (dataGridView1.InvokeRequired)
+                                        {
+                                            dataGridView1.Invoke(new Action(() => dataGridView1.Rows.Add(new object[] { "23207930", "25017318", "250173180017", 1, "01/01/2025" })));
+                                        }
+                                        else
+                                        {
+                                            dataGridView1.Rows.Add(new object[] { "23207930", "25017318", "250173180017", 1, "01/01/2025" });
+                                        }
+                                    }
+                                    if (info != null && !consulta && !tagsOrden.ContainsKey(info.Epc))
                                     {
 
+                                        if (tagsOrden.Count <= cantidadTotal + 1)
+                                        {
+                                            if (info != null && !tagsOrden.ContainsKey(info.Epc))
+                                            {
 
-                                        //new Thread(new ThreadStart(delegate { validaProducto(info.Epc); })).Start();
-                                        validaProducto(info.Epc);
+
+                                                //new Thread(new ThreadStart(delegate { validaProducto(info.Epc); })).Start();
+                                                validaProducto(info.Epc);
+                                            }
+                                        }
+
                                     }
                                 }
-
                             }
+                            if (info != null && !info.Epc.StartsWith("0108"))
+                                caja("PRODUCTO ERRONEO", "", true);
                         }
-                    }
                 }
-                Console.Write("fin");
+                catch (Exception ex)
+                {
+                    caja("Problemas de conexion ", "", true);
+                    log("readEpc:" + ex.Message);
+                }
             }
-            catch (Exception ex)
-            {
-                log("readEpc:" + ex.Message);
-            }
+
+
         }
 
         private string desglosaEpc(string epc)
@@ -1177,6 +1296,7 @@ namespace UHFAPP
             {
 
                 log("desglosaEPC:" + e.Message);
+
                 //caja("Problemas de conexion con la base de datos, contacte con el administrador", "");
             }
             return salidaLote;
@@ -1396,7 +1516,7 @@ namespace UHFAPP
             catch (Exception ex)
             {
                 log("desglosaEPC:" + ex.Message);
-                caja("BIOCAM YA PROCESADO", "",true);
+                caja("BIOCAM YA PROCESADO", "", true);
 
                 textBox1.Text = "";
             }
@@ -1452,6 +1572,13 @@ namespace UHFAPP
         }
         private void button3_Click(object sender, EventArgs e)
         {
+            if (textBox1.Text.Trim().Equals("") && ordenBiocam == null)
+            {
+
+                caja("Orden no puede estar vacia", "", true);
+
+                return;
+            }
             consulta = false;
             biocam = false;
             lecturaDirecta = false;
@@ -1470,6 +1597,7 @@ namespace UHFAPP
 
         private void button2_Click(object sender, EventArgs e)
         {
+
             ordenBiocam = null;
             if (!result)
                 toolStripButton1_Click();
@@ -1496,8 +1624,10 @@ namespace UHFAPP
                 try
                 {
                     if (leerOrden())
+                    {
                         grabarOrdenAmipem();
-                    leerOrdenAmipem();
+                        leerOrdenAmipem();
+                    }
                     if (tagsOrden.Count == cantidadTotal)
                         btnScanEPC.Enabled = false;
                     else
@@ -1528,6 +1658,9 @@ namespace UHFAPP
         }
         private void buttonConsulta_Click(object sender, EventArgs e)
         {
+            if (!result)
+                toolStripButton1_Click();
+            tagsTotales.Clear();
             try
             {
                 lecturaDirecta = false;
@@ -1660,14 +1793,13 @@ namespace UHFAPP
         private void button3_Click_1(object sender, EventArgs e)
         {
             //aqui lectura biocam
+            tagsTotales.Clear();
             try
             {
                 epcs.Rows.Clear();
                 tagsOrden.Clear();
-                //if(uhf.Close())
-                // result= uhf.OpenUsb();
                 if (!result)
-                    result = uhf.OpenUsb();
+                    toolStripButton1_Click();
                 lecturaDirecta = true;
                 biocam = true;
                 consulta = false;

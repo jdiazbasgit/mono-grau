@@ -42,7 +42,6 @@ namespace UHFAPP
             this.botonCaja = new System.Windows.Forms.Button();
             this.textoCaja = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.buttonBajas = new System.Windows.Forms.Button();
             this.buttonCalidad = new System.Windows.Forms.Button();
             this.pPelPda = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -252,7 +251,6 @@ namespace UHFAPP
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.LightGray;
-            this.panel11.Controls.Add(this.buttonBajas);
             this.panel11.Controls.Add(this.buttonCalidad);
             this.panel11.Controls.Add(this.pPelPda);
             this.panel11.Controls.Add(this.panel2);
@@ -263,18 +261,6 @@ namespace UHFAPP
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(1766, 89);
             this.panel11.TabIndex = 47;
-            // 
-            // buttonBajas
-            // 
-            this.buttonBajas.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold);
-            this.buttonBajas.Location = new System.Drawing.Point(942, 31);
-            this.buttonBajas.Name = "buttonBajas";
-            this.buttonBajas.Size = new System.Drawing.Size(180, 44);
-            this.buttonBajas.TabIndex = 51;
-            this.buttonBajas.Text = "Bajas";
-            this.buttonBajas.UseCompatibleTextRendering = true;
-            this.buttonBajas.UseVisualStyleBackColor = false;
-            this.buttonBajas.Click += new System.EventHandler(this.buttonBajas_Click);
             // 
             // buttonCalidad
             // 
@@ -386,7 +372,6 @@ namespace UHFAPP
         private System.Windows.Forms.Label textoCaja;
         private System.Windows.Forms.Panel panel9;
         public DataGridView epcs;
-        private Button buttonBajas;
         private Button buttonCalidad;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
