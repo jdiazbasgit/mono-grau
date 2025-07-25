@@ -1,0 +1,413 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+ <html xmlns:msxsl="urn:schemas-microsoft-com:xslt"><head><meta content="en-us" http-equiv="Content-Language" /><meta content="text/html; charset=utf-16" http-equiv="Content-Type" /><title _locID="ConversionReport0">
+          迁移报告
+        </title><style> 
+                    /* Body style, for the entire document */
+                    body
+                    {
+                        background: #F3F3F4;
+                        color: #1E1E1F;
+                        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                        padding: 0;
+                        margin: 0;
+                    }
+
+                    /* Header1 style, used for the main title */
+                    h1
+                    {
+                        padding: 10px 0px 10px 10px;
+                        font-size: 21pt;
+                        background-color: #E2E2E2;
+                        border-bottom: 1px #C1C1C2 solid; 
+                        color: #201F20;
+                        margin: 0;
+                        font-weight: normal;
+                    }
+
+                    /* Header2 style, used for "Overview" and other sections */
+                    h2
+                    {
+                        font-size: 18pt;
+                        font-weight: normal;
+                        padding: 15px 0 5px 0;
+                        margin: 0;
+                    }
+
+                    /* Header3 style, used for sub-sections, such as project name */
+                    h3
+                    {
+                        font-weight: normal;
+                        font-size: 15pt;
+                        margin: 0;
+                        padding: 15px 0 5px 0;
+                        background-color: transparent;
+                    }
+
+                    /* Color all hyperlinks one color */
+                    a
+                    {
+                        color: #1382CE;
+                    }
+
+                    /* Table styles */ 
+                    table
+                    {
+                        border-spacing: 0 0;
+                        border-collapse: collapse;
+                        font-size: 10pt;
+                    }
+
+                    table th
+                    {
+                        background: #E7E7E8;
+                        text-align: left;
+                        text-decoration: none;
+                        font-weight: normal;
+                        padding: 3px 6px 3px 6px;
+                    }
+
+                    table td
+                    {
+                        vertical-align: top;
+                        padding: 3px 6px 5px 5px;
+                        margin: 0px;
+                        border: 1px solid #E7E7E8;
+                        background: #F7F7F8;
+                    }
+
+                    /* Local link is a style for hyperlinks that link to file:/// content, there are lots so color them as 'normal' text until the user mouse overs */
+                    .localLink
+                    {
+                        color: #1E1E1F;
+                        background: #EEEEED;
+                        text-decoration: none;
+                    }
+
+                    .localLink:hover
+                    {
+                        color: #1382CE;
+                        background: #FFFF99;
+                        text-decoration: none;
+                    }
+
+                    /* Center text, used in the over views cells that contain message level counts */ 
+                    .textCentered
+                    {
+                        text-align: center;
+                    }
+
+                    /* The message cells in message tables should take up all avaliable space */
+                    .messageCell
+                    {
+                        width: 100%;
+                    }
+
+                    /* Padding around the content after the h1 */ 
+                    #content 
+                    {
+	                    padding: 0px 12px 12px 12px; 
+                    }
+
+                    /* The overview table expands to width, with a max width of 97% */ 
+                    #overview table
+                    {
+                        width: auto;
+                        max-width: 75%; 
+                    }
+
+                    /* The messages tables are always 97% width */
+                    #messages table
+                    {
+                        width: 97%;
+                    }
+
+                    /* All Icons */
+                    .IconSuccessEncoded, .IconInfoEncoded, .IconWarningEncoded, .IconErrorEncoded
+                    {
+                        min-width:18px;
+                        min-height:18px; 
+                        background-repeat:no-repeat;
+                        background-position:center;
+                    }
+
+                    /* Success icon encoded */
+                    .IconSuccessEncoded
+                    {
+                        /* Note: Do not delete the comment below. It is used to verify the correctness of the encoded image resource below before the product is released */
+                        /* [---XsltValidateInternal-Base64EncodedImage:IconSuccess#Begin#background-image: url(data:image/png;base64,#Separator#);#End#] */
+                        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABcElEQVR4Xq2TsUsCURzHv15g8ZJcBWlyiYYgCIWcb9DFRRwMW5TA2c0/QEFwFkxxUQdxVlBwCYWOi6IhWgQhBLHJUCkhLr/BW8S7gvrAg+N+v8/v+x68Z8MGy+XSCyABQAXgBgHGALoASkIIDWSLeLBetdHryMjd5IxQPWT4rn1c/P7+xxp72Cs9m5SZ0Bq2vPnbPFafK2zDvmNHypdC0BPkLlQhxJsCAhQoZwdZU5mwxh720qGo8MzTxTTKZDPCx2HoVzp6lz0Q9tKhyx0kGs8Ny+TkWRKk8lCROwEduhyg9l/6lunOPSfmH3NUH6uQ0KHLAe7JYvJjevm+DAMGJHToKtigE+vwvIidxLamb8IBY9e+C5LiXREkfho3TSd06HJA13/oh6T51MTsfQbHrsMynQ5dDihFjiK8JJAU9AKIWTp76dCVN7HWHrajmUEGvyF9nkbAE6gLIS7kTUyuf2gscLoJrElZo/Mvj+nPz/kLTmfnEwP3tB0AAAAASUVORK5CYII=);
+                    }
+
+                    /* Information icon encoded */
+                    .IconInfoEncoded
+                    {
+                        /* Note: Do not delete the comment below. It is used to verify the correctness of the encoded image resource below before the product is released */
+                        /* [---XsltValidateInternal-Base64EncodedImage:IconInformation#Begin#background-image: url(data:image/png;base64,#Separator#);#End#] */
+                        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHElEQVR4Xs2TsUoDQRRF7wwoziokjZUKadInhdhukR9YP8DMX1hYW+QvdsXa/QHBbcXC7W0CamWTQnclFutceIQJwwaWNLlwm5k5d94M76mmaeCrrmsLYOocY12FcxZFUeozCqKqqgYA8uevv1H6VuPxcwlfk5N92KHBxfFeCSAxxswlYAW/Xr989x/mv9gkhtyMDhcAxgzRsp7flj8B/HF1RsMXq+NZMkopaHe7lbKxQUEIGbKsYNoGn969060hZBkQex/W8oRQwsQaW2o3Ago2SVcJUzAgY3N0lTCZZm+zPS8HB51gMmS1DEYyOz9acKO1D8JWTlafKIMxdhvlfdyT94Vv5h7P8Ky7nQzACmhvKq3zk3PjW9asz9D/1oigecsioooAAAAASUVORK5CYII=);
+                    }
+
+                    /* Warning icon encoded */
+                    .IconWarningEncoded
+                    {
+                        /* Note: Do not delete the comment below. It is used to verify the correctness of the encoded image resource below before the product is released */
+                        /* [---XsltValidateInternal-Base64EncodedImage:IconWarning#Begin#background-image: url(data:image/png;base64,#Separator#);#End#] */
+                        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAx0lEQVR4XpWSMQ7CMAxFf4xAyBMLCxMrO8dhaBcuwdCJS3RJBw7SA/QGTCxdWJgiQYWKXJWKIXHIlyw5lqr34tQgEOdcBsCOx5yZK3hCCKdYXneQkh4pEfqzLfu+wVDSyyzFoJjfz9NB+pAF+eizx2Vruts0k15mPgvS6GYvpVtQhB61IB/dk6AF6fS4Ben0uIX5odtFe8Q/eW1KvFeH4e8khT6+gm5B+t3juyDt7n0jpe+CANTd+oTUjN/U3yVaABnSUjFz/gFq44JaVSCXeQAAAABJRU5ErkJggg==);
+                    }
+
+                    /* Error icon encoded */
+                    .IconErrorEncoded
+                    {
+                        /* Note: Do not delete the comment below. It is used to verify the correctness of the encoded image resource below before the product is released */
+                        /* [---XsltValidateInternal-Base64EncodedImage:IconError#Begin#background-image: url(data:image/png;base64,#Separator#);#End#] */
+                        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABQElEQVR4XqWTvUoEQRCE6wYPZUA80AfwAQz23uCMjA7MDRQEIzPBVEyNTQUFIw00vcQTTMzuAh/AxEQQT8HF/3G/oGGnEUGuoNnd6qoZuqltyKEsyzVJq5I6rnUp6SjGeGhESikzzlc1eL7opfuVbrqbU1Zw9NCgtQMaZpY0eNnaaL2fHusvTK5vKu7sjSS1Y4y3QUA6K3e3Mau5UFDyMP7tYF9o8cAHZv68vipoIJg971PZIZ5HiwdvYGGvFVFHmGmZ2MxwmQYPXubPl9Up0tfoMQGetXd6mRbvhBw+boZ6WF7Mbv1+GsHRk0fQmPAH1GfmZirbCfDJ61tw3Px8/8pZsPAG4jlVhcPgZ7adwNWBB68lkRQWFiTgFlbnLY3DGGM7izIJIyT/jjIvEJw6fdJTc6krDzh6aMwMP9bvDH4ADSsa9uSWVJkAAAAASUVORK5CYII=);
+                    }
+                 </style><script type="text/javascript" language="javascript"> 
+          
+            // Startup 
+            // Hook up the the loaded event for the document/window, to linkify the document content
+            var startupFunction = function() { linkifyElement("messages"); };
+            
+            if(window.attachEvent)
+            {
+              window.attachEvent('onload', startupFunction);
+            }
+            else if (window.addEventListener) 
+            {
+              window.addEventListener('load', startupFunction, false);
+            }
+            else 
+            {
+              document.addEventListener('load', startupFunction, false);
+            } 
+            
+            // Toggles the visibility of table rows with the specified name 
+            function toggleTableRowsByName(name)
+            {
+               var allRows = document.getElementsByTagName('tr');
+               for (i=0; i < allRows.length; i++)
+               {
+                  var currentName = allRows[i].getAttribute('name');
+                  if(!!currentName && currentName.indexOf(name) == 0)
+                  {
+                      var isVisible = allRows[i].style.display == ''; 
+                      isVisible ? allRows[i].style.display = 'none' : allRows[i].style.display = '';
+                  }
+               }
+            }
+            
+            function scrollToFirstVisibleRow(name) 
+            {
+               var allRows = document.getElementsByTagName('tr');
+               for (i=0; i < allRows.length; i++)
+               {
+                  var currentName = allRows[i].getAttribute('name');
+                  var isVisible = allRows[i].style.display == ''; 
+                  if(!!currentName && currentName.indexOf(name) == 0 && isVisible)
+                  {
+                     allRows[i].scrollIntoView(true); 
+                     return true; 
+                  }
+               }
+               
+               return false;
+            }
+            
+            // Linkifies the specified text content, replaces candidate links with html links 
+            function linkify(text)
+            {
+                 if(!text || 0 === text.length)
+                 {
+                     return text; 
+                 }
+
+                 // Find http, https and ftp links and replace them with hyper links 
+                 var urlLink = /(http|https|ftp)\:\/\/[a-zA-Z0-9\-\.]+(:[a-zA-Z0-9]*)?\/?([a-zA-Z0-9\-\._\?\,\/\\\+&%\$#\=~;\{\}])*/gi;
+                 
+                 return text.replace(urlLink, '<a href="$&">$&</a>') ;
+            }
+            
+            // Linkifies the specified element by ID
+            function linkifyElement(id)
+            {
+                var element = document.getElementById(id);
+                if(!!element)
+                {
+                  element.innerHTML = linkify(element.innerHTML); 
+                }
+            }
+            
+            function ToggleMessageVisibility(projectName)
+            {
+              if(!projectName || 0 === projectName.length)
+              {
+                return; 
+              }
+              
+              toggleTableRowsByName("MessageRowClass" + projectName);
+              toggleTableRowsByName('MessageRowHeaderShow' + projectName);
+              toggleTableRowsByName('MessageRowHeaderHide' + projectName); 
+            }
+            
+            function ScrollToFirstVisibleMessage(projectName)
+            {
+              if(!projectName || 0 === projectName.length)
+              {
+                return; 
+              }
+              
+              // First try the 'Show messages' row
+              if(!scrollToFirstVisibleRow('MessageRowHeaderShow' + projectName))
+              {
+                // Failed to find a visible row for 'Show messages', try an actual message row 
+                scrollToFirstVisibleRow('MessageRowClass' + projectName); 
+              }
+            }
+           </script></head><body><h1 _locID="ConversionReport">
+          迁移报告 - </h1><div id="content"><h2 _locID="OverviewTitle">概述</h2><div id="overview"><table><tr><th></th><th _locID="ProjectTableHeader">项目</th><th _locID="PathTableHeader">路径</th><th _locID="ErrorsTableHeader">错误</th><th _locID="WarningsTableHeader">警告</th><th _locID="MessagesTableHeader">消息</th></tr><tr><td class="IconErrorEncoded" /><td><strong><a href="#UHFAPP">UHFAPP</a></strong></td><td>UHFAPP.csproj</td><td class="textCentered"><a href="#UHFAPPError">1</a></td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#" onclick="ScrollToFirstVisibleMessage('UHFAPP'); return false;">134</a></td></tr><tr><td class="IconWarningEncoded" /><td><strong><a href="#Solution"><span _locID="OverviewSolutionSpan">解决方案</span></a></strong></td><td>UHFAPP.sln</td><td class="textCentered"><a>0</a></td><td class="textCentered"><a href="#SolutionWarning">1</a></td><td class="textCentered"><a href="#" onclick="ScrollToFirstVisibleMessage('Solution'); return false;">2</a></td></tr></table></div><h2 _locID="SolutionAndProjectsTitle">解决方案和项目</h2><div id="messages"><a name="UHFAPP" /><h3>UHFAPP</h3><table><tr id="UHFAPPHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">消息</th></tr><tr name="ErrorRowClassUHFAPP"><td class="IconErrorEncoded"><a name="UHFAPPError" /></td><td class="messageCell"><strong>修改说明.txt:
+        </strong><span>未能将文件备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\修改说明.txt</span></td></tr><tr name="MessageRowHeaderShowUHFAPP"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="ShowAdditionalMessages" href="#" name="UHFAPPMessage" onclick="ToggleMessageVisibility('UHFAPP'); return false;">
+          显示 134 其他消息
+        </a></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>UHFAPP.csproj:
+        </strong><span>项目文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\UHFAPP.csproj</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>UHFAPP.csproj.user:
+        </strong><span>项目用户文件成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\UHFAPP.csproj.user</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>barcode\HidInputForm.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\barcode\HidInputForm.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>barcode\HidInputForm.Designer.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\barcode\HidInputForm.Designer.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>BaseForm.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\BaseForm.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>BaseForm.Designer.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\BaseForm.Designer.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>ChoiceNumberForm.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\ChoiceNumberForm.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>ChoiceNumberForm.Designer.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\ChoiceNumberForm.Designer.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\authenticate\AuthenticateForm.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\authenticate\AuthenticateForm.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\authenticate\AuthenticateForm.Designer.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\authenticate\AuthenticateForm.Designer.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\authenticate\AuthenticateAPI.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\authenticate\AuthenticateAPI.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\CryptoTransmitForm.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\CryptoTransmitForm.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\CryptoTransmitForm.Designer.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\CryptoTransmitForm.Designer.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\m775Authenticate\M775AuthenticateAPI.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\m775Authenticate\M775AuthenticateAPI.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\m775Authenticate\M775AuthenticateForm.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\m775Authenticate\M775AuthenticateForm.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\m775Authenticate\M775AuthenticateForm.Designer.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\m775Authenticate\M775AuthenticateForm.Designer.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\R5ModifyParametersForm.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\R5ModifyParametersForm.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\R5ModifyParametersForm.Designer.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\R5ModifyParametersForm.Designer.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\SetR3Form.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\SetR3Form.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\SetR3Form.Designer.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\SetR3Form.Designer.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\TempertureTag2\ReadEPCFormT2.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\TempertureTag2\ReadEPCFormT2.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\TempertureTag2\ReadEPCFormT2.Designer.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\TempertureTag2\ReadEPCFormT2.Designer.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\TempertureTag2\TempertureInfo.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\TempertureTag2\TempertureInfo.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\TempertureTag2\TempertureTag2MainForm.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\TempertureTag2\TempertureTag2MainForm.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\TempertureTag2\TempertureTag2MainForm.Designer.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\TempertureTag2\TempertureTag2MainForm.Designer.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\TempertureTag2\TempertureTag2ReadEPCForm.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\TempertureTag2\TempertureTag2ReadEPCForm.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\TempertureTag2\TempertureTag2ReadEPCForm.Designer.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\TempertureTag2\TempertureTag2ReadEPCForm.Designer.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\TempertureTag2\UHFAPI_Temperture.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\TempertureTag2\UHFAPI_Temperture.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\TempertureTag\TempertureTagForm.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\TempertureTag\TempertureTagForm.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\TempertureTag\TempertureTagForm.Designer.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\TempertureTag\TempertureTagForm.Designer.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\TempertureTag\MainForm2.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\TempertureTag\MainForm2.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\TempertureTag\MainForm2.Designer.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\TempertureTag\MainForm2.Designer.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\TempertureTag\ReadEPCForm2.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\TempertureTag\ReadEPCForm2.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\TempertureTag\ReadEPCForm2.Designer.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\TempertureTag\ReadEPCForm2.Designer.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\TempertureTag\UHFAPI_RFMicronMagnus_S3.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\TempertureTag\UHFAPI_RFMicronMagnus_S3.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\WriteEPCSimpleDemo.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\WriteEPCSimpleDemo.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\WriteEPCSimpleDemo.Designer.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\WriteEPCSimpleDemo.Designer.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>DeviceInfo.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\DeviceInfo.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>Entity\ReaderDeviceInfo.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\Entity\ReaderDeviceInfo.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>excel\ExcelUtils.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\excel\ExcelUtils.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>interfaces\IAutoReceive.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\interfaces\IAutoReceive.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>multidevice\DeviceListForm.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\multidevice\DeviceListForm.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>multidevice\DeviceListForm.Designer.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\multidevice\DeviceListForm.Designer.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>multidevice\MainForm.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\multidevice\MainForm.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>multidevice\MainForm.Designer.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\multidevice\MainForm.Designer.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>multidevice\TagInfo.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\multidevice\TagInfo.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>Receive\SerialPortReceive.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\Receive\SerialPortReceive.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>Receive\UdpReceive.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\Receive\UdpReceive.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>RFID-HF\HF15693API.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\RFID-HF\HF15693API.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>RFID-HF\HF14443API.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\RFID-HF\HF14443API.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>RFID-HF\HFMainForm.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\RFID-HF\HFMainForm.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>RFID-HF\HFMainForm.Designer.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\RFID-HF\HFMainForm.Designer.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>RFID-HF\ISO15693Entity.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\RFID-HF\ISO15693Entity.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>RFID-HF\PSAMAPI.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\RFID-HF\PSAMAPI.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>UHFUpgradeForm.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\UHFUpgradeForm.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>UHFUpgradeForm.Designer.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\UHFUpgradeForm.Designer.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>utils\CheckUtils.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\utils\CheckUtils.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>utils\Common.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\utils\Common.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>ConfigForm.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\ConfigForm.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>ConfigForm.Designer.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\ConfigForm.Designer.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>utils\DataConvert.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\utils\DataConvert.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>utils\EpcInfo.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\utils\EpcInfo.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>utils\FileManage.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\utils\FileManage.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>frmWaitingBox.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\frmWaitingBox.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>frmWaitingBox.designer.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\frmWaitingBox.designer.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>interfaces\IUHF.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\interfaces\IUHF.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>interfaces\IUHFProtocolParse.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\interfaces\IUHFProtocolParse.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>utils\IPConfig.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\utils\IPConfig.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>Kill_LockForm.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\Kill_LockForm.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>Kill_LockForm.Designer.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\Kill_LockForm.Designer.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>MainForm.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\MainForm.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>MainForm.Designer.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\MainForm.Designer.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>utils\MessageBoxEx.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\utils\MessageBoxEx.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>Program.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\Program.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>Properties\AssemblyInfo.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\Properties\AssemblyInfo.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>Properties\Resources.Designer.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\Properties\Resources.Designer.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>Properties\Settings.Designer.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\Properties\Settings.Designer.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>ReadEPCFormData.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\ReadEPCFormData.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>ReadWriteTagForm.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\ReadWriteTagForm.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>ReadWriteTagForm.Designer.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\ReadWriteTagForm.Designer.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>ReadEPCForm.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\ReadEPCForm.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>ReadEPCForm.Designer.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\ReadEPCForm.Designer.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>ReceiveEPC.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\ReceiveEPC.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>ReceiveEPC.Designer.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\ReceiveEPC.Designer.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>utils\StringUtils.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\utils\StringUtils.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>TestForm.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\TestForm.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>TestForm.Designer.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\TestForm.Designer.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>TipForm.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\TipForm.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>TipForm.Designer.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\TipForm.Designer.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>UHFAPI.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\UHFAPI.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>utils\Debug.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\utils\Debug.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>UHFTAGInfo.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\UHFTAGInfo.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>utils\Utils.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\utils\Utils.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>WaitForm.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\WaitForm.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>WaitForm.Designer.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\WaitForm.Designer.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>UHFUpgradeFormEx.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\UHFUpgradeFormEx.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>UHFUpgradeFormEx.Designer.cs:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\UHFUpgradeFormEx.Designer.cs</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>app.config:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\app.config</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>Properties\Settings.settings:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\Properties\Settings.settings</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>img\button_green_32px_500051_easyicon.net.png:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\img\button_green_32px_500051_easyicon.net.png</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>img\button_light_blue_32px_500052_easyicon.net.png:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\img\button_light_blue_32px_500052_easyicon.net.png</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>barcode\HidInputForm.resx:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\barcode\HidInputForm.resx</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>BaseForm.resx:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\BaseForm.resx</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>ChoiceNumberForm.resx:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\ChoiceNumberForm.resx</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>ConfigForm.resx:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\ConfigForm.resx</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\authenticate\AuthenticateForm.resx:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\authenticate\AuthenticateForm.resx</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\CryptoTransmitForm.resx:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\CryptoTransmitForm.resx</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\m775Authenticate\M775AuthenticateForm.resx:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\m775Authenticate\M775AuthenticateForm.resx</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\R5ModifyParametersForm.resx:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\R5ModifyParametersForm.resx</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\SetR3Form.resx:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\SetR3Form.resx</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\TempertureTag2\ReadEPCFormT2.resx:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\TempertureTag2\ReadEPCFormT2.resx</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\TempertureTag2\TempertureTag2MainForm.resx:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\TempertureTag2\TempertureTag2MainForm.resx</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\TempertureTag2\TempertureTag2ReadEPCForm.resx:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\TempertureTag2\TempertureTag2ReadEPCForm.resx</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\TempertureTag\TempertureTagForm.resx:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\TempertureTag\TempertureTagForm.resx</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\TempertureTag\MainForm2.resx:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\TempertureTag\MainForm2.resx</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\TempertureTag\ReadEPCForm2.resx:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\TempertureTag\ReadEPCForm2.resx</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>custom\WriteEPCSimpleDemo.resx:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\custom\WriteEPCSimpleDemo.resx</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>frmWaitingBox.resx:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\frmWaitingBox.resx</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>Kill_LockForm.resx:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\Kill_LockForm.resx</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>MainForm.resx:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\MainForm.resx</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>multidevice\DeviceListForm.resx:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\multidevice\DeviceListForm.resx</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>multidevice\MainForm.resx:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\multidevice\MainForm.resx</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>Properties\Resources.resx:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\Properties\Resources.resx</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>ReadWriteTagForm.resx:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\ReadWriteTagForm.resx</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>ReadEPCForm.resx:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\ReadEPCForm.resx</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>ReceiveEPC.resx:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\ReceiveEPC.resx</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>RFID-HF\HFMainForm.resx:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\RFID-HF\HFMainForm.resx</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>TestForm.resx:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\TestForm.resx</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>TipForm.resx:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\TipForm.resx</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>UHFUpgradeForm.resx:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\UHFUpgradeForm.resx</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>WaitForm.resx:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\WaitForm.resx</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>UHFUpgradeFormEx.resx:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\UHFUpgradeFormEx.resx</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>UHFAPP.csproj:
+        </strong><span>项目已成功迁移</span></td></tr><tr name="MessageRowClassUHFAPP" style="display: none"><td class="IconInfoEncoded"><a name="UHFAPPMessage" /></td><td class="messageCell"><strong>UHFAPP.csproj:
+        </strong><span>扫描完成: 项目文件不需要迁移。</span></td></tr><tr style="display: none" name="MessageRowHeaderHideUHFAPP"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="HideAdditionalMessages" href="#" name="UHFAPPMessage" onclick="ToggleMessageVisibility('UHFAPP'); return false;">
+          隐藏 134 其他消息
+        </a></td></tr></table><a name="Solution" /><h3 _locID="ProjectDisplayNameHeader">解决方案</h3><table><tr id="SolutionHeaderRow"><th></th><th class="messageCell" _locID="MessageTableHeader">消息</th></tr><tr name="WarningRowClassSolution"><td class="IconWarningEncoded"><a name="SolutionWarning" /></td><td class="messageCell"><strong>UHFAPP.sln:
+        </strong><span>Visual Studio 需对此项目要进行非功能性更改，以使该项目能在比 Visual Studio 2010 SP1 新的 Visual Studio 发布版本中打开，而不影响项目的行为。</span></td></tr><tr name="MessageRowHeaderShowSolution"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="ShowAdditionalMessages" href="#" name="SolutionMessage" onclick="ToggleMessageVisibility('Solution'); return false;">
+          显示 2 其他消息
+        </a></td></tr><tr name="MessageRowClassSolution" style="display: none"><td class="IconInfoEncoded"><a name="SolutionMessage" /></td><td class="messageCell"><strong>UHFAPP.sln:
+        </strong><span>文件已成功备份为 D:\C#\UR4_A4\UHFAPP\UHFAPP\Backup\UHFAPP.sln</span></td></tr><tr name="MessageRowClassSolution" style="display: none"><td class="IconInfoEncoded"><a name="SolutionMessage" /></td><td class="messageCell"><strong>UHFAPP.sln:
+        </strong><span>已成功迁移解决方案</span></td></tr><tr style="display: none" name="MessageRowHeaderHideSolution"><td class="IconInfoEncoded" /><td class="messageCell"><a _locID="HideAdditionalMessages" href="#" name="SolutionMessage" onclick="ToggleMessageVisibility('Solution'); return false;">
+          隐藏 2 其他消息
+        </a></td></tr></table></div></div></body></html>

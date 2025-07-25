@@ -1,0 +1,215 @@
+C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\bin\Debug\UHFAPP.exe.config
+C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\bin\Debug\UHFAPP.exe
+C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\bin\Debug\UHFAPP.pdb
+C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\bin\Debug\Lucene.Net.dll
+C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\bin\Debug\Microsoft.Office.Interop.Excel.dll
+C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\bin\Debug\Microsoft.Vbe.Interop.dll
+C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\bin\Debug\Newtonsoft.Json.dll
+C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\bin\Debug\office.dll
+C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\bin\Debug\UHFControl.dll
+C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\bin\Debug\stdole.dll
+C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\bin\Debug\Lucene.Net.pdb
+C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\bin\Debug\Lucene.Net.xml
+C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\obj\Debug\mozo-grau.csproj.AssemblyReference.cache
+C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\obj\Debug\UHFAPP.BaseForm.resources
+C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\obj\Debug\WinForm_Test.frmWaitingBox.resources
+C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\obj\Debug\UHFAPP.MainForm.resources
+C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\obj\Debug\UHFAPP.multidevice.DeviceListForm.resources
+C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\obj\Debug\UHFAPP.MultiDevice.NetWork.API.MainForm.resources
+C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\obj\Debug\UHFAPP.USB.multidevice.DeviceListForm.resources
+C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\obj\Debug\UHFAPP.USB.multidevice.UsbMainForm.resources
+C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\obj\Debug\UHFAPP.Properties.Resources.resources
+C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\obj\Debug\UHFAPP.RFID.RFIDMainForm.resources
+C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\obj\Debug\mozo-grau.csproj.GenerateResource.cache
+C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\obj\Debug\mozo-grau.csproj.CoreCompileInputs.cache
+C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\obj\Debug\mozo-grau.csproj.Up2Date
+C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\obj\Debug\UHFAPP.exe
+C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\obj\Debug\UHFAPP.pdb
+C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\obj\Debug\Interop.WMPLib.dll
+C:\Users\PC\source\repos\mono-grau\demo source code\UR4Demo\UR4Demo\obj\Debug\mozo-grau.csproj.ResolveComReference.cache
+C:\Users\PC\source\repos\mono-grau\UR4Demo\bin\Debug\UHFAPP.exe.config
+C:\Users\PC\source\repos\mono-grau\UR4Demo\bin\Debug\UHFAPP.exe
+C:\Users\PC\source\repos\mono-grau\UR4Demo\bin\Debug\UHFAPP.pdb
+C:\Users\PC\source\repos\mono-grau\UR4Demo\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\PC\source\repos\mono-grau\UR4Demo\bin\Debug\Lucene.Net.dll
+C:\Users\PC\source\repos\mono-grau\UR4Demo\bin\Debug\Microsoft.Office.Interop.Excel.dll
+C:\Users\PC\source\repos\mono-grau\UR4Demo\bin\Debug\Microsoft.Vbe.Interop.dll
+C:\Users\PC\source\repos\mono-grau\UR4Demo\bin\Debug\Newtonsoft.Json.dll
+C:\Users\PC\source\repos\mono-grau\UR4Demo\bin\Debug\office.dll
+C:\Users\PC\source\repos\mono-grau\UR4Demo\bin\Debug\UHFControl.dll
+C:\Users\PC\source\repos\mono-grau\UR4Demo\bin\Debug\stdole.dll
+C:\Users\PC\source\repos\mono-grau\UR4Demo\bin\Debug\Lucene.Net.pdb
+C:\Users\PC\source\repos\mono-grau\UR4Demo\bin\Debug\Lucene.Net.xml
+C:\Users\PC\source\repos\mono-grau\UR4Demo\obj\Debug\mozo-grau.csproj.AssemblyReference.cache
+C:\Users\PC\source\repos\mono-grau\UR4Demo\obj\Debug\Interop.WMPLib.dll
+C:\Users\PC\source\repos\mono-grau\UR4Demo\obj\Debug\mozo-grau.csproj.ResolveComReference.cache
+C:\Users\PC\source\repos\mono-grau\UR4Demo\obj\Debug\UHFAPP.BaseForm.resources
+C:\Users\PC\source\repos\mono-grau\UR4Demo\obj\Debug\WinForm_Test.frmWaitingBox.resources
+C:\Users\PC\source\repos\mono-grau\UR4Demo\obj\Debug\UHFAPP.MainForm.resources
+C:\Users\PC\source\repos\mono-grau\UR4Demo\obj\Debug\UHFAPP.multidevice.DeviceListForm.resources
+C:\Users\PC\source\repos\mono-grau\UR4Demo\obj\Debug\UHFAPP.MultiDevice.NetWork.API.MainForm.resources
+C:\Users\PC\source\repos\mono-grau\UR4Demo\obj\Debug\UHFAPP.USB.multidevice.DeviceListForm.resources
+C:\Users\PC\source\repos\mono-grau\UR4Demo\obj\Debug\UHFAPP.USB.multidevice.UsbMainForm.resources
+C:\Users\PC\source\repos\mono-grau\UR4Demo\obj\Debug\UHFAPP.Properties.Resources.resources
+C:\Users\PC\source\repos\mono-grau\UR4Demo\obj\Debug\UHFAPP.RFID.RFIDMainForm.resources
+C:\Users\PC\source\repos\mono-grau\UR4Demo\obj\Debug\mozo-grau.csproj.GenerateResource.cache
+C:\Users\PC\source\repos\mono-grau\UR4Demo\obj\Debug\mozo-grau.csproj.CoreCompileInputs.cache
+C:\Users\PC\source\repos\mono-grau\UR4Demo\obj\Debug\mozo-grau.csproj.Up2Date
+C:\Users\PC\source\repos\mono-grau\UR4Demo\obj\Debug\UHFAPP.exe
+C:\Users\PC\source\repos\mono-grau\UR4Demo\obj\Debug\UHFAPP.pdb
+C:\Users\PC\source\repos\mozo-grau\UR4Demo\bin\Debug\UHFAPP.exe.config
+C:\Users\PC\source\repos\mozo-grau\UR4Demo\bin\Debug\UHFAPP.exe
+C:\Users\PC\source\repos\mozo-grau\UR4Demo\bin\Debug\UHFAPP.pdb
+C:\Users\PC\source\repos\mozo-grau\UR4Demo\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\PC\source\repos\mozo-grau\UR4Demo\bin\Debug\Lucene.Net.dll
+C:\Users\PC\source\repos\mozo-grau\UR4Demo\bin\Debug\Microsoft.Office.Interop.Excel.dll
+C:\Users\PC\source\repos\mozo-grau\UR4Demo\bin\Debug\Microsoft.Vbe.Interop.dll
+C:\Users\PC\source\repos\mozo-grau\UR4Demo\bin\Debug\Newtonsoft.Json.dll
+C:\Users\PC\source\repos\mozo-grau\UR4Demo\bin\Debug\office.dll
+C:\Users\PC\source\repos\mozo-grau\UR4Demo\bin\Debug\UHFControl.dll
+C:\Users\PC\source\repos\mozo-grau\UR4Demo\bin\Debug\stdole.dll
+C:\Users\PC\source\repos\mozo-grau\UR4Demo\bin\Debug\Lucene.Net.pdb
+C:\Users\PC\source\repos\mozo-grau\UR4Demo\bin\Debug\Lucene.Net.xml
+C:\Users\PC\source\repos\mozo-grau\UR4Demo\obj\Debug\mozo-grau.csproj.AssemblyReference.cache
+C:\Users\PC\source\repos\mozo-grau\UR4Demo\obj\Debug\Interop.WMPLib.dll
+C:\Users\PC\source\repos\mozo-grau\UR4Demo\obj\Debug\mozo-grau.csproj.ResolveComReference.cache
+C:\Users\PC\source\repos\mozo-grau\UR4Demo\obj\Debug\UHFAPP.BaseForm.resources
+C:\Users\PC\source\repos\mozo-grau\UR4Demo\obj\Debug\WinForm_Test.frmWaitingBox.resources
+C:\Users\PC\source\repos\mozo-grau\UR4Demo\obj\Debug\UHFAPP.MainForm.resources
+C:\Users\PC\source\repos\mozo-grau\UR4Demo\obj\Debug\UHFAPP.multidevice.DeviceListForm.resources
+C:\Users\PC\source\repos\mozo-grau\UR4Demo\obj\Debug\UHFAPP.MultiDevice.NetWork.API.MainForm.resources
+C:\Users\PC\source\repos\mozo-grau\UR4Demo\obj\Debug\UHFAPP.USB.multidevice.DeviceListForm.resources
+C:\Users\PC\source\repos\mozo-grau\UR4Demo\obj\Debug\UHFAPP.USB.multidevice.UsbMainForm.resources
+C:\Users\PC\source\repos\mozo-grau\UR4Demo\obj\Debug\UHFAPP.Properties.Resources.resources
+C:\Users\PC\source\repos\mozo-grau\UR4Demo\obj\Debug\UHFAPP.RFID.RFIDMainForm.resources
+C:\Users\PC\source\repos\mozo-grau\UR4Demo\obj\Debug\mozo-grau.csproj.GenerateResource.cache
+C:\Users\PC\source\repos\mozo-grau\UR4Demo\obj\Debug\mozo-grau.csproj.CoreCompileInputs.cache
+C:\Users\PC\source\repos\mozo-grau\UR4Demo\obj\Debug\mozo-grau.csproj.Up2Date
+C:\Users\PC\source\repos\mozo-grau\UR4Demo\obj\Debug\UHFAPP.exe
+C:\Users\PC\source\repos\mozo-grau\UR4Demo\obj\Debug\UHFAPP.pdb
+C:\Users\PC\source\repos\mozo-grau\mozo-calidad\bin\Debug\UHFAPP.exe.config
+C:\Users\PC\source\repos\mozo-grau\mozo-calidad\bin\Debug\UHFAPP.exe
+C:\Users\PC\source\repos\mozo-grau\mozo-calidad\bin\Debug\UHFAPP.pdb
+C:\Users\PC\source\repos\mozo-grau\mozo-calidad\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-calidad\bin\Debug\Lucene.Net.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-calidad\bin\Debug\Microsoft.Office.Interop.Excel.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-calidad\bin\Debug\Microsoft.Vbe.Interop.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-calidad\bin\Debug\Newtonsoft.Json.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-calidad\bin\Debug\office.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-calidad\bin\Debug\UHFControl.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-calidad\bin\Debug\stdole.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-calidad\bin\Debug\Lucene.Net.pdb
+C:\Users\PC\source\repos\mozo-grau\mozo-calidad\bin\Debug\Lucene.Net.xml
+C:\Users\PC\source\repos\mozo-grau\mozo-calidad\obj\Debug\mozo-grau.csproj.AssemblyReference.cache
+C:\Users\PC\source\repos\mozo-grau\mozo-calidad\obj\Debug\Interop.WMPLib.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-calidad\obj\Debug\mozo-grau.csproj.ResolveComReference.cache
+C:\Users\PC\source\repos\mozo-grau\mozo-calidad\obj\Debug\UHFAPP.BaseForm.resources
+C:\Users\PC\source\repos\mozo-grau\mozo-calidad\obj\Debug\UHFAPP.MainForm.resources
+C:\Users\PC\source\repos\mozo-grau\mozo-calidad\obj\Debug\UHFAPP.Properties.Resources.resources
+C:\Users\PC\source\repos\mozo-grau\mozo-calidad\obj\Debug\UHFAPP.RFID.RFIDMainForm.resources
+C:\Users\PC\source\repos\mozo-grau\mozo-calidad\obj\Debug\mozo-grau.csproj.GenerateResource.cache
+C:\Users\PC\source\repos\mozo-grau\mozo-calidad\obj\Debug\mozo-grau.csproj.CoreCompileInputs.cache
+C:\Users\PC\source\repos\mozo-grau\mozo-calidad\obj\Debug\mozo-grau.csproj.Up2Date
+C:\Users\PC\source\repos\mozo-grau\mozo-calidad\obj\Debug\UHFAPP.exe
+C:\Users\PC\source\repos\mozo-grau\mozo-calidad\obj\Debug\UHFAPP.pdb
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\obj\Debug\mozo-grau.csproj.AssemblyReference.cache
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\obj\Debug\Interop.WMPLib.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\obj\Debug\mozo-grau.csproj.ResolveComReference.cache
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\obj\Debug\UHFAPP.exe
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\obj\Debug\UHFAPP.pdb
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\obj\Debug\UHFAPP.MainFormBajas.resources
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\obj\Debug\UHFAPP.BaseForm.resources
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\obj\Debug\UHFAPP.MainFormOrdenInversa.resources
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\obj\Debug\UHFAPP.MainForm.resources
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\obj\Debug\UHFAPP.Properties.Resources.resources
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\obj\Debug\UHFAPP.RFID.RFIDMainForm.resources
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\obj\Debug\mozo-grau.csproj.GenerateResource.cache
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\obj\Debug\mozo-grau.csproj.CoreCompileInputs.cache
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\UHFAPP.exe.config
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\UHFAPP.exe
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\UHFAPP.pdb
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Lucene.Net.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.Office.Interop.Excel.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.Vbe.Interop.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Newtonsoft.Json.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\office.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\UHFControl.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\stdole.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Lucene.Net.pdb
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Lucene.Net.xml
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\obj\Debug\mozo-grau.csproj.Up2Date
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Azure.Core.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\DocumentFormat.OpenXml.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\DocumentFormat.OpenXml.Framework.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.Bcl.Memory.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.Bcl.TimeProvider.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.Graph.Core.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.Graph.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.IdentityModel.Protocols.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.IdentityModel.Validators.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.Kiota.Abstractions.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.Kiota.Authentication.Azure.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.Kiota.Http.HttpClientLibrary.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.Kiota.Serialization.Form.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.Kiota.Serialization.Json.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.Kiota.Serialization.Multipart.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.Kiota.Serialization.Text.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Std.UriTemplate.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\System.Buffers.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\System.ClientModel.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\System.Memory.Data.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\System.Memory.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\System.Net.Http.WinHttpHandler.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\System.Text.Json.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\System.ValueTuple.dll
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Azure.Core.xml
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\DocumentFormat.OpenXml.xml
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\DocumentFormat.OpenXml.Framework.xml
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.Bcl.Memory.xml
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.Bcl.TimeProvider.xml
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.Graph.xml
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.Graph.Core.xml
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.IdentityModel.Abstractions.xml
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.IdentityModel.Logging.xml
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.IdentityModel.Protocols.xml
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.IdentityModel.Protocols.OpenIdConnect.xml
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.IdentityModel.Validators.xml
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.Kiota.Abstractions.xml
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.Kiota.Authentication.Azure.xml
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.Kiota.Http.HttpClientLibrary.xml
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.Kiota.Serialization.Form.xml
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.Kiota.Serialization.Json.xml
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.Kiota.Serialization.Multipart.xml
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\Microsoft.Kiota.Serialization.Text.xml
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\System.Buffers.xml
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\System.ClientModel.xml
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\System.Memory.xml
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\System.Memory.Data.xml
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\System.Net.Http.WinHttpHandler.xml
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\System.Text.Json.xml
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\System.ValueTuple.xml
