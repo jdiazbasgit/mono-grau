@@ -50,10 +50,9 @@ public class GrabacionRestController {
 
 	@Autowired
 	private BajaCRUDRepository bajaCRUDRepository;
-	
+
 	@Autowired
 	private OrdenInversaCRUDRepository ordenInversaCRUDRepository;
-
 
 	GrabacionRestController(MonoApplication monoApplication) {
 		this.monoApplication = monoApplication;
@@ -95,7 +94,7 @@ public class GrabacionRestController {
 	@PostMapping("grabarTagContador")
 	public RespuestaContador grabaTag(@RequestBody GrabacionDTO grabacionDTO) {
 		Orden orden = getOrdenCrudRepository().findByCodigo(grabacionDTO.getOrden());
-		
+
 		// if(grabaciones.size()>=orden.getCantidad()) {
 		List<Grabacion> grabaciones = getGrabacionCrudRepository().getTagsByOrden(grabacionDTO.getOrden());
 		if (grabaciones.size() < orden.getCantidad()) {
@@ -118,21 +117,20 @@ public class GrabacionRestController {
 	@PostMapping("grabarBaja")
 	public Baja grabarBaja(@RequestBody BajaAmipem bajaAmipemOut) {
 
-		Grabacion grabacion= getGrabacionCrudRepository().findByTag(bajaAmipemOut.getTag());
-		Baja baja= new Baja(0, bajaAmipemOut.getDescripcion(),	new GregorianCalendar(),grabacion);
+		Grabacion grabacion = getGrabacionCrudRepository().findByTag(bajaAmipemOut.getTag());
+		Baja baja = new Baja(0, bajaAmipemOut.getDescripcion(), new GregorianCalendar(), grabacion);
 		baja = getBajaCRUDRepository().save(baja);
 		return baja;
 	}
-	
+
 	@PostMapping("ordenInversa")
 	public OrdenInversa ordenInversa(@RequestBody Tag tag) {
 
-		Grabacion grabacion= getGrabacionCrudRepository().findByTag(tag.getLecturaRFID());
-		OrdenInversa ordenInversa= new OrdenInversa(0, 	new GregorianCalendar(),grabacion);
+		Grabacion grabacion = getGrabacionCrudRepository().findByTag(tag.getLecturaRFID());
+		OrdenInversa ordenInversa = new OrdenInversa(0, new GregorianCalendar(), grabacion);
 		ordenInversa = getOrdenInversaCRUDRepository().save(ordenInversa);
 		return ordenInversa;
 	}
-
 
 	@PostMapping("grabarOrden")
 	public Orden grabaOrden(@RequestBody Orden orden) {
@@ -157,11 +155,12 @@ public class GrabacionRestController {
 	 * e.printStackTrace(); } return orden; }
 	 */
 
-	@PostMapping("borraUltimaGrabacion/{epc}")
-	public void borraUltimaGrabacion(@PathVariable String epc) {
+	@PostMapping("borraUltimaGrabacion")
+	public void borraUltimaGrabacion(@RequestBody Tag tag) {
 
-		Grabacion grabacion = getGrabacionCrudRepository().findByTag(epc);
-		getGrabacionCrudRepository().delete(grabacion);
+		Grabacion grabacion = getGrabacionCrudRepository().findByTag(tag.getLecturaRFID());
+		if (grabacion != null)
+			getGrabacionCrudRepository().delete(grabacion);
 	}
 
 	@GetMapping("simulacion")
