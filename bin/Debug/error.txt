@@ -3768,3 +3768,104 @@ Application_ThreadException:Error al crear identificador de ventana.
    en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
    en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
 -----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-07-28 11:53:35
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textBox1' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.TextBoxBase.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.TextBoxBase.set_Text(String value)
+   en System.Windows.Forms.TextBox.set_Text(String value)
+   en UHFAPP.MainForm.dameOrdenFromLote(String lote) en C:\Users\PC\source\repos\mozo-grau\mozo-completo\MainForm.cs:línea 650
+   en UHFAPP.MainForm.recuperaInfoBiocam(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-completo\MainForm.cs:línea 575
+   en UHFAPP.MainForm.<>c__DisplayClass115_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-completo\MainForm.cs:línea 1164
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+CurrentDomain_UnhandledException2025-08-04 11:00:13
+IsTerminating : True
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'textBox1' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.TextBoxBase.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.TextBoxBase.set_Text(String value)
+   en System.Windows.Forms.TextBox.set_Text(String value)
+   en UHFAPP.MainForm.dameOrdenFromLote(String lote) en C:\Users\PC\source\repos\mozo-grau\mozo-completo\MainForm.cs:línea 650
+   en UHFAPP.MainForm.recuperaInfoBiocam(String epc) en C:\Users\PC\source\repos\mozo-grau\mozo-completo\MainForm.cs:línea 575
+   en UHFAPP.MainForm.<>c__DisplayClass115_0.<ReadEPC>b__0() en C:\Users\PC\source\repos\mozo-grau\mozo-completo\MainForm.cs:línea 1166
+   en System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   en System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   en System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   en System.Threading.ThreadHelper.ThreadStart()
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Error al crear identificador de ventana.
+   en System.Windows.Forms.NativeWindow.CreateHandle(CreateParams cp)
+   en System.Windows.Forms.Control.CreateHandle()
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.VisualStyles.VisualStyleRenderer.DrawParentBackground(IDeviceContext dc, Rectangle bounds, Control childControl)
+   en System.Windows.Forms.ButtonRenderer.DrawParentBackground(Graphics g, Rectangle bounds, Control childControl)
+   en System.Windows.Forms.ButtonInternal.ButtonStandardAdapter.PaintThemedButtonBackground(PaintEventArgs e, Rectangle bounds, Boolean up)
+   en System.Windows.Forms.ButtonInternal.ButtonStandardAdapter.PaintWorker(PaintEventArgs e, Boolean up, CheckState state)
+   en System.Windows.Forms.ButtonInternal.ButtonStandardAdapter.PaintUp(PaintEventArgs e, CheckState state)
+   en System.Windows.Forms.ButtonInternal.ButtonBaseAdapter.Paint(PaintEventArgs pevent)
+   en System.Windows.Forms.ButtonBase.OnPaint(PaintEventArgs pevent)
+   en System.Windows.Forms.Control.PaintWithErrorHandling(PaintEventArgs e, Int16 layer)
+   en System.Windows.Forms.Control.WmPaint(Message& m)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   en System.Windows.Forms.Button.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Error al crear identificador de ventana.
+   en System.Windows.Forms.NativeWindow.CreateHandle(CreateParams cp)
+   en System.Windows.Forms.Control.CreateHandle()
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.VisualStyles.VisualStyleRenderer.DrawParentBackground(IDeviceContext dc, Rectangle bounds, Control childControl)
+   en System.Windows.Forms.ButtonRenderer.DrawParentBackground(Graphics g, Rectangle bounds, Control childControl)
+   en System.Windows.Forms.ButtonInternal.ButtonStandardAdapter.PaintThemedButtonBackground(PaintEventArgs e, Rectangle bounds, Boolean up)
+   en System.Windows.Forms.ButtonInternal.ButtonStandardAdapter.PaintWorker(PaintEventArgs e, Boolean up, CheckState state)
+   en System.Windows.Forms.ButtonInternal.ButtonStandardAdapter.PaintUp(PaintEventArgs e, CheckState state)
+   en System.Windows.Forms.ButtonInternal.ButtonBaseAdapter.Paint(PaintEventArgs pevent)
+   en System.Windows.Forms.ButtonBase.OnPaint(PaintEventArgs pevent)
+   en System.Windows.Forms.Control.PaintWithErrorHandling(PaintEventArgs e, Int16 layer)
+   en System.Windows.Forms.Control.WmPaint(Message& m)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   en System.Windows.Forms.Button.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+-----------------------end----------------------------
+-----------------------begin--------------------------
+Application_ThreadException:Error al crear identificador de ventana.
+   en System.Windows.Forms.NativeWindow.CreateHandle(CreateParams cp)
+   en System.Windows.Forms.Control.CreateHandle()
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.VisualStyles.VisualStyleRenderer.DrawParentBackground(IDeviceContext dc, Rectangle bounds, Control childControl)
+   en System.Windows.Forms.ButtonRenderer.DrawParentBackground(Graphics g, Rectangle bounds, Control childControl)
+   en System.Windows.Forms.ButtonInternal.ButtonStandardAdapter.PaintThemedButtonBackground(PaintEventArgs e, Rectangle bounds, Boolean up)
+   en System.Windows.Forms.ButtonInternal.ButtonStandardAdapter.PaintWorker(PaintEventArgs e, Boolean up, CheckState state)
+   en System.Windows.Forms.ButtonInternal.ButtonStandardAdapter.PaintUp(PaintEventArgs e, CheckState state)
+   en System.Windows.Forms.ButtonInternal.ButtonBaseAdapter.Paint(PaintEventArgs pevent)
+   en System.Windows.Forms.ButtonBase.OnPaint(PaintEventArgs pevent)
+   en System.Windows.Forms.Control.PaintWithErrorHandling(PaintEventArgs e, Int16 layer)
+   en System.Windows.Forms.Control.WmPaint(Message& m)
+   en System.Windows.Forms.Control.WndProc(Message& m)
+   en System.Windows.Forms.ButtonBase.WndProc(Message& m)
+   en System.Windows.Forms.Button.WndProc(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   en System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   en System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+-----------------------end----------------------------
