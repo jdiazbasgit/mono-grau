@@ -147,13 +147,7 @@ public class GrabacionRestController {
 		return orden1;
 	}
 
-	/*
-	 * @PostMapping("actualiza") public Orden actualiza() { Orden orden1 =
-	 * getOrdenCrudRepository().findByCodigo(orden.getCodigo()); if (orden1 != null)
-	 * orden.setId(orden1.getId()); else orden.setId(0); try { orden =
-	 * getOrdenCrudRepository().save(orden); } catch (Exception e) {
-	 * e.printStackTrace(); } return orden; }
-	 */
+	
 
 	@PostMapping("borraUltimaGrabacion")
 	public void borraUltimaGrabacion(@RequestBody Tag tag) {
