@@ -1,6 +1,6 @@
 #url servidor amipem
-http://82.223.202.137/mozov2/Ordenes/
-#http://localhost:8080/Ordenes/
+#http://82.223.202.137/mozov2/Ordenes/
+http://localhost:8080/Ordenes/
 #url servidor mozo
 https://webservice.mozo-grau.com:7048/BC200_MG/
 #https://webservice.mozo-grau.com:7048/BC200_MG_desarrollo/
@@ -18,7 +18,7 @@ mozo1
 #potencia de la antena
 20
 #session de la antena
-00
+01
 #tag focus (1 activado, 0 desactivado)
 1
 #buzer (1 activado, 0 desactivado)
@@ -32,5 +32,4 @@ false
 #antena
 1
 #timeout
-300
-d
+100

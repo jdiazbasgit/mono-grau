@@ -201,6 +201,7 @@ namespace UHFAPP
             buttonBiocam.Location = new System.Drawing.Point(((bounds.Width / 4) * 3) + 50, bounds.Height - 120);
             button3.Location = new System.Drawing.Point(((bounds.Width / 8) * 2) + 50, bounds.Height - 120);
             panelCaja.Location = new System.Drawing.Point(((bounds.Width / 8) * 2) + 50, (bounds.Height / 3));
+            uhf = UHFAPI.getInstance();
         }
         public void cargarDatos(string archivo)
         {
@@ -632,7 +633,7 @@ namespace UHFAPP
             else
             {
 
-                if (textBox1.Text.Trim().Equals("") && ordenBiocam == null)
+                if (textBox1.Text.Trim().Equals("") )
                 {
                     if (result)
                         caja("Orden no puede estar vacia", "", true);
@@ -1646,6 +1647,7 @@ namespace UHFAPP
 
                 return;
             }
+
             consulta = false;
             biocam = false;
             lecturaDirecta = false;
@@ -1728,6 +1730,7 @@ namespace UHFAPP
         }
         private void buttonConsulta_Click(object sender, EventArgs e)
         {
+            uhf = UHFAPI.getInstance();
             if (!result)
                 toolStripButton1_Click();
             tagsTotales.Clear();

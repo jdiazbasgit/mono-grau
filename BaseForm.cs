@@ -21,8 +21,8 @@ namespace UHFAPP
         public UHFAPI uhf = null;
         public BaseForm()
         {
-            InitializeComponent();
-            uhf = UHFAPI.getInstance();
+            //InitializeComponent();
+            
 
         }
  
