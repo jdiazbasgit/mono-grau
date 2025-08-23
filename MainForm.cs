@@ -108,6 +108,7 @@ namespace UHFAPP
         delegate void GrabarTagContadorMozoCallback(string epc, int lote, bool comprobarErrores);
         GrabarTagContadorMozoCallback grabarTagContadorMozoCallback;
         private int timeOut = 100;
+        private int lecturas;
         #region  OnDisconnect
 
         private static void DataReceived(IntPtr pdata, short len)
@@ -220,6 +221,7 @@ namespace UHFAPP
             ipAntena = leerParametro(sr);
             puertoAntena = leerParametro(sr);
             antena = Int32.Parse(leerParametro(sr));
+            timeOut = Int32.Parse(leerParametro(sr));
             sr.Close();
             Console.ReadLine();
             //loteActual++;
@@ -605,6 +607,7 @@ namespace UHFAPP
                         }
                     }
                 }
+
             }
             catch (Exception ex)
             {
@@ -691,6 +694,7 @@ namespace UHFAPP
                                       caja("Orden no existe", null, true);
                                     return false;*/
                                     leerOrdenAmipem();
+                                    leerTagsOrdenAmipem();
                                     return;
                                 }
 
@@ -723,7 +727,10 @@ namespace UHFAPP
             request.ContentType = "application/json";
             request.Accept = "application/json";
             request.Timeout = timeOut;
-            string salida = "{\"codigo\":\"" + textBox1.Text + "\"}";
+            string orden = ordenBiocam;
+            if (orden == null || orden.Equals(""))
+                orden = textBox1.Text;
+            string salida = "{\"codigo\":\"" + orden + "\"}";
             byte[] data = Encoding.UTF8.GetBytes(salida);
             request.ContentLength = data.Length;
             Stream stream = request.GetRequestStream();
@@ -760,7 +767,7 @@ namespace UHFAPP
                                 if (!tagsOrden.ContainsKey(grabacionRespuesta.grabaciones[i].tag))
                                     tagsOrden.Add(grabacionRespuesta.grabaciones[i].tag, grabacionRespuesta.grabaciones[i].linea);
                                 //new Thread(new ThreadStart(delegate { desglosaEpc(grabacionRespuesta.grabaciones[i].tag, grabacionRespuesta.grabaciones[grabacionRespuesta.grabaciones.Length - 1].fecha.ToLocalTime().ToString(), false); })).Start();
-                                desglosaEpc(grabacionRespuesta.grabaciones[i].tag, grabacionRespuesta.grabaciones[grabacionRespuesta.grabaciones.Length - 1].fecha.ToLocalTime().ToString(), false);
+                                desglosaEpc(grabacionRespuesta.grabaciones[i].tag, grabacionRespuesta.grabaciones[grabacionRespuesta.grabaciones.Length - 1].fecha.ToLocalTime().ToString(), false,"");
                                 // epcs.Refresh();
                                 cantidadReal++;
                                 //lCantidadTotal.Text = "" + cantidadTotal + "/" + cantidadReal;
@@ -960,7 +967,7 @@ namespace UHFAPP
         {
             if (ubicación.Equals("casa"))
             {
-                desglosaEpc(epc, DateTime.Now.ToString(), true);
+                desglosaEpc(epc, DateTime.Now.ToString(), true,"");
                 return;
             }
             try
@@ -997,8 +1004,8 @@ namespace UHFAPP
                     }
 
 
-                    this.BeginInvoke(grabarTagContadorMozoCallback, new object[] { epc, Int32.Parse(tbLinea.Text), true });
-
+                    //this.BeginInvoke(grabarTagContadorMozoCallback, new object[] { epc, Int32.Parse(tbLinea.Text), true });
+                    grabarTagContadorMozo(epc, 1, true);
 
                 }
 
@@ -1014,7 +1021,7 @@ namespace UHFAPP
 
             if (ubicación.Equals("casa"))
             {
-                desglosaEpc(epc, DateTime.Now.ToString(), true);
+                desglosaEpc(epc, DateTime.Now.ToString(), true,"");
                 return;
             }
 
@@ -1050,19 +1057,16 @@ namespace UHFAPP
 
                     if (ordenRetorno.textoError != null && ordenRetorno.textoError.Length > 0 && comprobarErrores)
                     {
-                        if (result)
+                        if (result & !biocam)
                             caja(ordenRetorno.textoError + "\n" + desglosaEpcErroneo(epc), epc, true);
-
                         return;
                     }
                     if (ordenRetorno.textoError != null && ordenRetorno.textoError.Length == 0)
                     {
-                        if (comprobarErrores)
-                        {
-                            // grabarTagContadorMozo(epc, lote, false);
-                            desglosaEpc(epc, DateTime.Now.ToString(), true);
-                            this.BeginInvoke(grabarTagContadorAmipemCallback, new object[] { epc, Int32.Parse(tbLinea.Text), true });
-                        }
+
+                        grabarTagContadorMozo(epc, lote, false);
+                        //this.BeginInvoke(grabarTagContadorMozoCallback, new object[] { epc, Int32.Parse(tbLinea.Text), true });
+                        desglosaEpc(epc, DateTime.Now.ToString(), true, ordenRetorno.textoError);
 
                         return;
 
@@ -1148,33 +1152,37 @@ namespace UHFAPP
         }
         private void ReadEPC()
         {
-
-
             while (isRuning)
             {
                 try
                 {
-
                     UHFTAGInfo info = uhf.ReadTagFromBuffer();
                     if (tcp && Int32.Parse(info.Ant) == antena || bt)
+                    {
                         if (info != null)
+                        {
+                            // Correctly invoke the delegate using Invoke or BeginInvoke
                             this.BeginInvoke(setTextCallback, new object[] { info.Epc, info.Tid, info.Rssi, "1", info.Ant, info.User });
-
+                        }
+                    }
                 }
                 catch (Exception ex)
                 {
-                    //caja("Problemas de conexion ", "", true);
                     log("readEpc:" + ex.Message);
                 }
             }
-
-
         }
 
         private void UpdataEPC(string epc, string tid, string rssi, string couint, string ant, string user)
         {
+
+            if (string.IsNullOrEmpty(epc))
+            {
+                return;
+            }
             if (!tagsTotales.ContainsKey(epc))
             {
+               
                 tagsTotales.Add(epc, 0);
                 if (epc.StartsWith("0108"))
                 {
@@ -1192,7 +1200,7 @@ namespace UHFAPP
                                     try
                                     {
                                         //hiloLectura = new Thread(new ThreadStart(delegate { recuperaInfoBiocam(info.Epc); }));
-                                        desglosaEpc(epc);
+                                        recuperaInfoBiocam(epc);
 
                                     }
                                     catch (Exception e)
@@ -1203,8 +1211,9 @@ namespace UHFAPP
                                 }
                                 else
                                 {
-                                    //grabarTagContadorAmipem(epc, Int32.Parse(tbLinea.Text));
-                                    this.BeginInvoke(grabarTagContadorAmipemCallback, new object[] { epc, Int32.Parse(tbLinea.Text) });
+                                    
+                                    grabarTagContadorAmipem(epc, Int32.Parse(tbLinea.Text));
+                                    //this.BeginInvoke(grabarTagContadorAmipemCallback, new object[] { epc, Int32.Parse(tbLinea.Text) });
 
                                 }
 
@@ -1237,7 +1246,48 @@ namespace UHFAPP
                     caja("PRODUCTO ERRONEO", "", true);
             }
         }
+        private void recuperaInfoBiocam(string epc)
+        {
+            string lote = desglosaEpc(epc);
+            string orden = dameOrdenFromLote(lote);
+            ordenBiocam = orden;
+            if (orden.StartsWith("OFBC"))
+            {
+                leerOrden();
+                grabarOrdenAmipem();
+                leerOrdenAmipem();
+                leerTagsOrdenAmipem();
+            }
+            else
+                caja("Producto no es biocam", "", true);
 
+            //textBox1.Text = orden;
+            epcs.Invoke(new Action(() => textBox1.Text = orden));
+            /*try
+            {
+                hiloLectura = new Thread(new ThreadStart(delegate { validaProducto(epc); }));
+                hiloLectura.IsBackground = true;
+                hiloLectura.Start();
+            }
+            catch (Exception e)
+            {
+                log("StartReceiveThread:" + e.Message);
+            }*/
+
+
+
+
+            // leerOrdenAmipem();
+            int lotes = 1;
+            if (!tbLotes.Text.Trim().Equals(""))
+                lotes = Int32.Parse(tbLotes.Text);
+            /** grabarTagContadorAmipem(epc,lotes );
+             if (ubicación.Equals("mozo"))
+                 grabarTagContadorMozo(epc, lotes, true);*/
+
+
+
+        }
         private string desglosaEpc(string epc)
         {
 
@@ -1257,7 +1307,7 @@ namespace UHFAPP
                     dataGridView1.Rows.Add(new object[] { "23207930", "25017318", "250173180017", 1, "01/01/2025" });
 
                 }
-                cantidadComprobacion.Invoke(new Action(() => cantidadComprobacion.Text = "Cantidad: " + tagsComprobacion.Count));
+                cantidadComprobacion.Invoke(new Action(() => cantidadComprobacion.Text = "Cantidad: " + tagsComprobacion.Count ));
             }
             else
             {
@@ -1303,8 +1353,9 @@ namespace UHFAPP
                             {
                                 dataGridView1.Rows.Add(new object[] { desglose.noProducto, desglose.noLote, desglose.noSerie });
                             }
-                            cantidadComprobacion.Invoke(new Action(() => cantidadComprobacion.Text = "Cantidad: " + tagsComprobacion.Count));
+                            cantidadComprobacion.Invoke(new Action(() => cantidadComprobacion.Text = "Cantidad: " + tagsComprobacion.Count + " totales: " + tagsTotales.Count));
                         }
+                        
                     }
                 }
                 catch (Exception e)
@@ -1318,7 +1369,7 @@ namespace UHFAPP
             return salidaLote;
         }
 
-        private void desglosaEpc(string epc, string fecha, bool grabar)
+        private void desglosaEpc(string epc, string fecha, bool grabar,string error)
         {
             try
             {
@@ -1428,13 +1479,17 @@ namespace UHFAPP
                                     string responseBody = objReader.ReadToEnd();
                                     string responseBodyFormater = responseBody.Replace("@odata.context", "dataContext");
                                     responseBodyFormater = responseBodyFormater.Replace("@odata.etag", "odataETag");
-
                                     OrigenOrden origenOrden = JsonConvert.DeserializeObject<OrigenOrden>(responseBodyFormater);
                                     response.Close();
                                     if (origenOrden != null)
                                     {
-                                        //recuperar información pieza biocam
-                                        leerBiocam(origenOrden.value[0].sourceNo);
+                                        if (origenOrden.value.Length == 0)
+                                        {
+                                            caja("BIOCAM YA PROCESADO", "", true);
+                                            return;
+                                        }
+
+                                        leerBiocam(origenOrden.value[0].sourceNo,error);
 
                                     }
                                     else
@@ -1465,7 +1520,7 @@ namespace UHFAPP
 
 
 
-        private void leerBiocam(String pedido)
+        private void leerBiocam(String pedido, string error)
         {
 
             var url1 = apiMozoBase + "api/mozo/apiArco/v2.0/companies(0c0574f1-f098-ed11-965c-6045bd89ef6b)/pedidosVentaArco?$expand=linPedidosVentaArco($expand=vinculosEnsamblarPedidoArco($expand=linPedidosEnsambladoArco))&$filter=no eq '" + pedido + "'";
@@ -1491,14 +1546,17 @@ namespace UHFAPP
                             string responseBodyFormaterBiocam = responseBodyBiocam.Replace("@odata.context", "dataContext");
                             responseBodyFormaterBiocam = responseBodyFormaterBiocam.Replace("@odata.etag", "odataETag");
 
-                            Biocam biocam = JsonConvert.DeserializeObject<Biocam>(responseBodyFormaterBiocam);
-                            if (biocam != null)
+                            Biocam biocam1 = JsonConvert.DeserializeObject<Biocam>(responseBodyFormaterBiocam);
+                            if (biocam1 != null)
                             {
-                                LinPedidosVentaArco[] linPedidosVentaArcos = biocam.value[0].linPedidosVentaArco;
+                                LinPedidosVentaArco[] linPedidosVentaArcos = biocam1.value[0].linPedidosVentaArco;
                                 StringBuilder resultadoBiocam = new StringBuilder();
+                                resultadoBiocam.Append(error+"\n\r");
                                 bool contornillos = false;
+                                
                                 for (int i = 0; i < linPedidosVentaArcos.Length; i++)
                                 {
+
                                     if (linPedidosVentaArcos[i].description.StartsWith("Tornillo"))
                                     {
                                         contornillos = true;
@@ -1526,7 +1584,7 @@ namespace UHFAPP
                 log("desglosaEPC:" + ex.Message);
                 caja("BIOCAM YA PROCESADO", "", true);
 
-                textBox1.Text = "";
+                //textBox1.Text = "";
             }
         }
         private string desglosaEpcErroneo(string epc)
@@ -1603,10 +1661,8 @@ namespace UHFAPP
                 StopEPC(false);
 
                 // Ensure the delegate is instantiated correctly  
-                grabarTagContadorMozoCallback = new GrabarTagContadorMozoCallback(grabarTagContadorMozo);
-                setTextCallback = new SetTextCallback(UpdataEPC);
-                grabarTagContadorAmipemCallback = new GrabarTagContadorAmipemCallback(grabarTagContadorAmipem);
 
+                setTextCallback = new SetTextCallback(UpdataEPC);
             }
         }
 
@@ -1827,7 +1883,6 @@ namespace UHFAPP
                 {
                     StartReceiveThread();
                     StopEPC(false);
-                    setTextCallback = new SetTextCallback(UpdataEPC);
                 }
 
             }

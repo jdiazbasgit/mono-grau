@@ -341,7 +341,7 @@ namespace UHFAPP
             this.Name = "MainFormOrdenInversa";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "UHF(1.3.2)";
+            this.Text = "u";
             this.TransparencyKey = System.Drawing.Color.White;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainFormOrdenInversa_FormClosing);

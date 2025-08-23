@@ -18,7 +18,7 @@ mozo1
 #potencia de la antena
 20
 #session de la antena
-01
+00
 #tag focus (1 activado, 0 desactivado)
 1
 #buzer (1 activado, 0 desactivado)
@@ -31,3 +31,6 @@ false
 8888
 #antena
 1
+#timeout
+300
+d
