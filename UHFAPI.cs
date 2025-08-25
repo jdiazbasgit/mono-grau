@@ -2007,22 +2007,22 @@ namespace UHFAPP
             if (ReadTagFromBuffer(ref uLen, ref bufData))
             {
                 string epc_data = string.Empty;
-               
+                string uii_data = string.Empty;//uii数据
+                string tid_data = string.Empty; //tid数据
+                string rssi_data = string.Empty;
                 string ant_data = string.Empty;
-               
+                string user_data = string.Empty;
 
                 int uii_len = bufData[0];//uii长度
                 int tid_leng = bufData[uii_len + 1];//tid数据长度
                 int tid_idex = uii_len + 2;//tid起始位
                 int rssi_index = 1 + uii_len + 1 + tid_leng;
                 int ant_index = rssi_index + 2;
+
                 string strData = BitConverter.ToString(bufData, 0, uLen).Replace("-", "");
                 epc_data = strData.Substring(6, uii_len * 2 - 4);  //Epc
-                ant_data = Convert.ToInt32((strData.Substring(ant_index * 2, 2)), 16).ToString();
-                UHFTAGInfo info = new UHFTAGInfo();
-                info.Ant = ant_data;
-                info.Epc = epc_data;
-                /*if (tid_leng > 12)
+
+                if (tid_leng > 12)
                 {
                     tid_data = strData.Substring(tid_idex * 2, 24); //Tid
                     user_data = strData.Substring(tid_idex * 2 + 24, (tid_leng - 12) * 2); //Tid
@@ -2044,14 +2044,14 @@ namespace UHFAPP
                     rssi_data = rssi_data + ".0";
                 }
                 ant_data = Convert.ToInt32((strData.Substring(ant_index * 2, 2)), 16).ToString();
-                
+
                 UHFTAGInfo info = new UHFTAGInfo();
                 info.Epc = epc_data;
                 info.Tid = tid_data;
                 info.Rssi = rssi_data;
                 info.Ant = ant_data;
                 info.User = user_data;
-                Thread.Sleep(300);*/
+
                 return info;
             }
             else

@@ -152,7 +152,6 @@ namespace UHFAPP
 
         private void OnDisconnectCallback(int id)
         {
-            uhf.Close();
             try
             {
                 if (!this.IsDisposed)
@@ -285,7 +284,60 @@ namespace UHFAPP
             return true;
 
         }
-        
+        /* private void btnGetANT_Click(object sender, EventArgs e)
+         {
+
+             string msg = !IsChineseSimple() ? "Failure!" : "失败!";
+             byte[] ant = new byte[4];
+             if (uhf.GetANTTo32(ant))
+             {
+                 cmbAnt16.Checked = (ant[0] & 128) == 128 ? true : false;
+                 cmbAnt15.Checked = (ant[0] & 64) == 64 ? true : false;
+                 cmbAnt14.Checked = (ant[0] & 32) == 32 ? true : false;
+                 cmbAnt13.Checked = (ant[0] & 16) == 16 ? true : false;
+                 cmbAnt12.Checked = (ant[0] & 8) == 8 ? true : false;
+                 cmbAnt11.Checked = (ant[0] & 4) == 4 ? true : false;
+                 cmbAnt10.Checked = (ant[0] & 2) == 2 ? true : false;
+                 cmbAnt9.Checked = (ant[0] & 1) == 1 ? true : false;
+
+                 cmbAnt8.Checked = (ant[1] & 128) == 128 ? true : false;
+                 cmbAnt7.Checked = (ant[1] & 64) == 64 ? true : false;
+                 cmbAnt6.Checked = (ant[1] & 32) == 32 ? true : false;
+                 cmbAnt5.Checked = (ant[1] & 16) == 16 ? true : false;
+                 cmbAnt4.Checked = (ant[1] & 8) == 8 ? true : false;
+                 cmbAnt3.Checked = (ant[1] & 4) == 4 ? true : false;
+                 cmbAnt2.Checked = (ant[1] & 2) == 2 ? true : false;
+                 cmbAnt1.Checked = (ant[1] & 1) == 1 ? true : false;
+
+                 if (ant.Length == 4)
+                 {
+                     cbANT32.Checked = (ant[2] & 128) == 128 ? true : false;
+                     cbANT31.Checked = (ant[2] & 64) == 64 ? true : false;
+                     cbANT30.Checked = (ant[2] & 32) == 32 ? true : false;
+                     cbANT29.Checked = (ant[2] & 16) == 16 ? true : false;
+                     cbANT28.Checked = (ant[2] & 8) == 8 ? true : false;
+                     cbANT27.Checked = (ant[2] & 4) == 4 ? true : false;
+                     cbANT26.Checked = (ant[2] & 2) == 2 ? true : false;
+                     cbANT25.Checked = (ant[2] & 1) == 1 ? true : false;
+
+                     cbANT24.Checked = (ant[3] & 128) == 128 ? true : false;
+                     cbANT23.Checked = (ant[3] & 64) == 64 ? true : false;
+                     cbANT22.Checked = (ant[3] & 32) == 32 ? true : false;
+                     cbANT21.Checked = (ant[3] & 16) == 16 ? true : false;
+                     cbANT20.Checked = (ant[3] & 8) == 8 ? true : false;
+                     cbANT19.Checked = (ant[3] & 4) == 4 ? true : false;
+                     cbANT18.Checked = (ant[3] & 2) == 2 ? true : false;
+                     cbANT17.Checked = (ant[3] & 1) == 1 ? true : false;
+                 }
+
+
+
+                 msg = !IsChineseSimple() ? "Success" : "成功!";
+                 //  msg = Common.isEnglish?"success":"获取天线成功!("+ DataConvert.ByteArrayToHexString(ant)+")";
+             }
+
+
+         }*/
 
         private void toolStripButton1_Click()
         {
@@ -322,7 +374,7 @@ namespace UHFAPP
                 {
                     uhf.SetPower(1, Byte.Parse(potencia));
                     uhf.SetTagfocus(Byte.Parse(tagFocus));
-                    uhf.SetGen2(0, 0, 0, 1, 4, 0, 15, 1, 2, 1, 1, Byte.Parse(session), 0, 3);
+                    uhf.SetGen2(0, 0, 0, 1, 4, 0, 15, 1, 2, 1, 1, 1, 0, 3);
                     uhf.UHFSetBuzzer(Byte.Parse(buzzer));
                 }
                 // UHFAPI.setOnDataReceived(onDataReceived);
@@ -381,12 +433,10 @@ namespace UHFAPP
             {
                 if (uhf.StopInventory())
                 {
-                    hiloLectura.Interrupt();
                     if (!consulta)
                         if (!lecturaDirecta)
                             if (btnScanEPC.InvokeRequired)
                             {
-                               
                                 btnScanEPC.Invoke(new Action(() => btnScanEPC.Text = strStart));
                                 btnScanEPC.Invoke(new Action(() => btnScanEPC.BackColor = System.Drawing.Color.Green));
                                 btnScanEPC.Invoke(new Action(() => btnScanEPC.ForeColor = System.Drawing.Color.White));
@@ -428,10 +478,6 @@ namespace UHFAPP
             }
             else
             {
-                hiloLectura = new Thread(new ThreadStart(delegate { ReadEPC(); }));
-                hiloLectura.IsBackground = true;
-                hiloLectura.Start();
-
                 if (uhf.StartInventory())
                 {
                     if (!consulta)
@@ -463,7 +509,6 @@ namespace UHFAPP
                         }
                     else if (buttonConsulta.InvokeRequired)
                     {
-                        hiloLectura.Start();
                         buttonConsulta.Invoke(new Action(() => buttonConsulta.Text = strStopConsulta));
                         buttonConsulta.Invoke(new Action(() => buttonConsulta.BackColor = System.Drawing.Color.Red));
                         buttonConsulta.Invoke(new Action(() => buttonConsulta.ForeColor = System.Drawing.Color.White));
@@ -786,6 +831,7 @@ namespace UHFAPP
 
                 request.Method = "POST";
                 request.ContentType = "application/json";
+                request.Accept = "application/json";
                 request.Timeout = timeOut;
                 //Orden orden = new Orden(idOrdenAmipem, textBox1.Text, lDescripcion.Text, lReferencia.Text, Int32.Parse(lCantidadTotal.Text));
                 string numorden = "";
@@ -1118,8 +1164,6 @@ namespace UHFAPP
                         {
                             // Correctly invoke the delegate using Invoke or BeginInvoke
                             this.BeginInvoke(setTextCallback, new object[] { info.Epc, info.Tid, info.Rssi, "1", info.Ant, info.User });
-
-                            //this.BeginInvoke(setTextCallback, new object[] { "010843548261926610BC25011142240000000002100111121082025170000000", info.Tid, info.Rssi, "1", info.Ant, info.User });
                         }
                     }
                 }
@@ -1696,6 +1740,8 @@ namespace UHFAPP
                 biocam = false;
                 // dataGridView1.Rows.Clear();
                 // tagsComprobacion.Clear();
+                if (!result)
+                    result = uhf.OpenUsb();
                 consulta = true;
                 if (buttonConsulta.Text == strStopConsulta)
                 {

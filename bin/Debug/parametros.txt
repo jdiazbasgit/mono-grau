@@ -13,12 +13,12 @@ WSAMIPEM
 #BLZNChVZ4LAab/kewV3J0v1J/2rYZSwuDUcyyOWEkbY=
 +dgV6q4lqOZ/4ARsjz+PsQ7jDRnQvzRKhOJR3J6+ens=
 #ubicacion de la ejecucion  para simulacion (casa,oficina,mozo)
-mozo
+mozo1
 #oficina
 #potencia de la antena
 30
 #session de la antena
-1
+0
 #tag focus (1 activado, 0 desactivado)
 1
 #buzer (1 activado, 0 desactivado)

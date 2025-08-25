@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|c:\\users\\pc\\source\\repos\\mozo-grau\\mozo-completo\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|c:\\users\\pc\\source\\repos\\mozo-grau\\mozo-completo\\uhfapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|solutionrelative:uhfapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|solutionrelative:mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\uhfapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|solutionrelative:uhfapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -214,7 +214,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
@@ -256,13 +256,26 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UHFAPI.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\UHFAPI.cs",
+              "RelativeDocumentMoniker": "UHFAPI.cs",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\UHFAPI.cs",
+              "RelativeToolTip": "UHFAPI.cs",
+              "ViewState": "AgIAAMIFAAAAAAAAAAAwwNMFAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-11T01:40:35.8Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "MainForm.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\MainForm.cs",
               "RelativeDocumentMoniker": "MainForm.cs",
               "ToolTip": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\MainForm.cs",
               "RelativeToolTip": "MainForm.cs",
-              "ViewState": "AgIAAPYDAAAAAAAAAAAowAAEAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAJEBAAAAAAAAAAAWwFUBAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-16T08:42:39.461Z",
               "EditorCaption": ""
@@ -318,19 +331,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "UHFAPI.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\UHFAPI.cs",
-              "RelativeDocumentMoniker": "UHFAPI.cs",
-              "ToolTip": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\UHFAPI.cs",
-              "RelativeToolTip": "UHFAPI.cs",
-              "ViewState": "AgIAADEEAAAAAAAAAAApwLcFAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-11T01:40:35.8Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "MainForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\MainForm.Designer.cs",
               "RelativeDocumentMoniker": "MainForm.Designer.cs",
