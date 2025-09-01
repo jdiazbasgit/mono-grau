@@ -13,7 +13,7 @@ WSAMIPEM
 #BLZNChVZ4LAab/kewV3J0v1J/2rYZSwuDUcyyOWEkbY=
 +dgV6q4lqOZ/4ARsjz+PsQ7jDRnQvzRKhOJR3J6+ens=
 #ubicacion de la ejecucion  para simulacion (casa,oficina,mozo)
-mozo1
+mozo
 #oficina
 #potencia de la antena
 30
@@ -32,4 +32,4 @@ false
 #antena
 1
 #timeout
-100
+300
