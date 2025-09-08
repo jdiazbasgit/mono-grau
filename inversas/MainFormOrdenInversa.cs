@@ -467,26 +467,26 @@ namespace UHFAPP
 
         private void log(string texto)
         {
-            try
-            {
-                var url = apiAmipemBase + "log";
-                var request = (HttpWebRequest)WebRequest.Create(url);
-                request.Method = "POST";
-                request.ContentType = "application/json";
-                request.Accept = "application/json";
-                string salida = "{\"texto\":\"" + texto + "\"}";
-                byte[] data = Encoding.UTF8.GetBytes(salida);
-                request.ContentLength = data.Length;
-                Stream stream = request.GetRequestStream();
-                stream.Write(data, 0, data.Length);
-                stream.Close();
+            /* try
+             {
+                 var url = apiAmipemBase + "log";
+                 var request = (HttpWebRequest)WebRequest.Create(url);
+                 request.Method = "POST";
+                 request.ContentType = "application/json";
+                 request.Accept = "application/json";
+                 string salida = "{\"texto\":\"" + texto + "\"}";
+                 byte[] data = Encoding.UTF8.GetBytes(salida);
+                 request.ContentLength = data.Length;
+                 Stream stream = request.GetRequestStream();
+                 stream.Write(data, 0, data.Length);
+                 stream.Close();
 
-            }
-            catch (Exception e)
-            {
-                log(e.Message);
-                //caja("Problemas de conexion con la base de datos, contacte con el administrador", "");
-            }
+             }
+             catch (Exception e)
+             {
+                 log(e.Message);
+                 //caja("Problemas de conexion con la base de datos, contacte con el administrador", "");
+             }*/
 
         }
 
@@ -521,10 +521,7 @@ namespace UHFAPP
                         if (info != null && !tagsOrden.ContainsKey(info.Epc))
                         {
                             tagsOrden.Add(info.Epc, 1);
-                            if (ubicación.Equals("mozo"))
-                                grabaOrdenInversa(info.Epc, true);
-                            else
-                                grabaOrdenInversaAmipem(info.Epc);
+                            grabaOrdenInversa(info.Epc, true);
                         }
                     }
                 }
@@ -609,11 +606,10 @@ namespace UHFAPP
                         if (ordenInversaIn.textoError != null && ordenInversaIn.textoError.Length == 0)
                         {
                             if (comprobarErrores)
-                                grabaOrdenInversa(epc, false);
-                            else
                             {
+                                grabaOrdenInversa(epc, false);
                                 desglosaEpc(epc, DateTime.Now.ToString(), true);
-                                grabaOrdenInversaAmipem(epc);
+
                             }
                             resultado = true;
                         }
