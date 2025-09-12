@@ -7,12 +7,24 @@
       "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|solutionrelative:mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\bajas\\mainformbajas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|solutionrelative:bajas\\mainformbajas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\properties\\settings.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|solutionrelative:properties\\settings.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|solutionrelative:mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\inversas\\mainformordeninversa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -27,10 +39,6 @@
       "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|solutionrelative:packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\properties\\settings.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|solutionrelative:properties\\settings.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}",
       "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|solutionrelative:properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}"
     },
@@ -43,7 +51,7 @@
       "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|solutionrelative:properties\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|c:\\users\\pc\\source\\repos\\mozo-grau\\mozo-completo\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|solutionrelative:app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
@@ -59,16 +67,8 @@
       "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|solutionrelative:baseform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\baseform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|solutionrelative:baseform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\bajas\\mainformbajas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|solutionrelative:bajas\\mainformbajas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\bajas\\mainformbajas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -133,10 +133,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\utils\\common.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|solutionrelative:utils\\common.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\utils\\checkutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|solutionrelative:utils\\checkutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FFAD45F3-D7E8-4232-8457-45CC7CB5D414}|mozo-grau.csproj|C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\utils\\biocam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -218,33 +214,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "CheckUtils.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\utils\\CheckUtils.cs",
-              "RelativeDocumentMoniker": "utils\\CheckUtils.cs",
-              "ToolTip": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\utils\\CheckUtils.cs",
-              "RelativeToolTip": "utils\\CheckUtils.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAwwA4AAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-05T13:29:50.228Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 2,
               "Title": "MainFormBajas.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\bajas\\MainFormBajas.cs",
               "RelativeDocumentMoniker": "bajas\\MainFormBajas.cs",
               "ToolTip": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\bajas\\MainFormBajas.cs",
               "RelativeToolTip": "bajas\\MainFormBajas.cs",
-              "ViewState": "AgIAAPEBAAAAAAAAAAAswPkBAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAIkBAAAAAAAAAAAAwKQBAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-01T10:42:53.72Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -252,24 +236,11 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "app.config",
-              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\app.config",
-              "RelativeDocumentMoniker": "app.config",
-              "ToolTip": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\app.config",
-              "RelativeToolTip": "app.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-09-04T16:28:37.98Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
@@ -277,12 +248,97 @@
               "Title": "MainForm.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\MainForm.cs",
               "RelativeDocumentMoniker": "MainForm.cs",
-              "ToolTip": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\MainForm.cs",
-              "RelativeToolTip": "MainForm.cs",
-              "ViewState": "AgIAABUDAAAAAAAAAAApwBcDAAAVAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\MainForm.cs*",
+              "RelativeToolTip": "MainForm.cs*",
+              "ViewState": "AgIAAEYEAAAAAAAAAAAhwCkEAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-16T08:42:39.461Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Settings.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\Properties\\Settings.Designer.cs",
+              "RelativeDocumentMoniker": "Properties\\Settings.Designer.cs",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\Properties\\Settings.Designer.cs",
+              "RelativeToolTip": "Properties\\Settings.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T19:07:02.541Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "packages.config",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\packages.config",
+              "RelativeDocumentMoniker": "packages.config",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\packages.config",
+              "RelativeToolTip": "packages.config",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAEAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-05-20T09:00:25.844Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\Properties\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "Properties\\AssemblyInfo.cs",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\Properties\\AssemblyInfo.cs",
+              "RelativeToolTip": "Properties\\AssemblyInfo.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAA8AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T19:04:17.024Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Resources.resx",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\Properties\\Resources.resx",
+              "RelativeDocumentMoniker": "Properties\\Resources.resx",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\Properties\\Resources.resx",
+              "RelativeToolTip": "Properties\\Resources.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-04-30T19:05:27.091Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MainForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\MainForm.Designer.cs",
+              "RelativeDocumentMoniker": "MainForm.Designer.cs",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\MainForm.Designer.cs",
+              "RelativeToolTip": "MainForm.Designer.cs",
+              "ViewState": "AgIAAJcCAAAAAAAAAAAMwJ8CAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T22:01:20.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainForm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\MainForm.cs",
+              "RelativeDocumentMoniker": "MainForm.cs",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\MainForm.cs [Dise\u00F1o]*",
+              "RelativeToolTip": "MainForm.cs [Dise\u00F1o]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-16T09:05:15.862Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T09:21:18.049Z"
             },
             {
               "$type": "Document",
@@ -298,58 +354,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Settings.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\Properties\\Settings.Designer.cs",
-              "RelativeDocumentMoniker": "Properties\\Settings.Designer.cs",
-              "ToolTip": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\Properties\\Settings.Designer.cs",
-              "RelativeToolTip": "Properties\\Settings.Designer.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAQwAQAAAB/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T19:07:02.541Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "packages.config",
-              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\packages.config",
-              "RelativeDocumentMoniker": "packages.config",
-              "ToolTip": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\packages.config",
-              "RelativeToolTip": "packages.config",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAEAAAAKAAAAAAAAAA==",
+              "DocumentIndex": 12,
+              "Title": "app.config",
+              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\app.config",
+              "RelativeDocumentMoniker": "app.config",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\app.config",
+              "RelativeToolTip": "app.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-05-20T09:00:25.844Z",
+              "WhenOpened": "2025-09-04T16:28:37.98Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "AssemblyInfo.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\Properties\\AssemblyInfo.cs",
-              "RelativeDocumentMoniker": "Properties\\AssemblyInfo.cs",
-              "ToolTip": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\Properties\\AssemblyInfo.cs",
-              "RelativeToolTip": "Properties\\AssemblyInfo.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAA8AAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T19:04:17.024Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Resources.resx",
-              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\Properties\\Resources.resx",
-              "RelativeDocumentMoniker": "Properties\\Resources.resx",
-              "ToolTip": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\Properties\\Resources.resx",
-              "RelativeToolTip": "Properties\\Resources.resx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-04-30T19:05:27.091Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "Settings.settings",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\Properties\\Settings.settings",
               "RelativeDocumentMoniker": "Properties\\Settings.settings",
@@ -361,7 +379,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "MainFormOrdenInversa.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\inversas\\MainFormOrdenInversa.cs",
               "RelativeDocumentMoniker": "inversas\\MainFormOrdenInversa.cs",
@@ -373,32 +391,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "MainForm.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\MainForm.Designer.cs",
-              "RelativeDocumentMoniker": "MainForm.Designer.cs",
-              "ToolTip": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\MainForm.Designer.cs",
-              "RelativeToolTip": "MainForm.Designer.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAA1wBYAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T22:01:20.196Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainForm.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\MainForm.cs",
-              "RelativeDocumentMoniker": "MainForm.cs",
-              "ToolTip": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\MainForm.cs [Dise\u00F1o]",
-              "RelativeToolTip": "MainForm.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T09:05:15.862Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "MainFormOrdenInversa.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\inversas\\MainFormOrdenInversa.cs",
               "RelativeDocumentMoniker": "inversas\\MainFormOrdenInversa.cs",
@@ -411,7 +404,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 14,
               "Title": "UHFAPI.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\UHFAPI.cs",
               "RelativeDocumentMoniker": "UHFAPI.cs",
@@ -424,19 +417,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAewBMAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T09:21:18.049Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 13,
               "Title": "GrabacionMozo.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\utils\\GrabacionMozo.cs",
               "RelativeDocumentMoniker": "utils\\GrabacionMozo.cs",
@@ -448,7 +429,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 15,
               "Title": "BaseForm.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\BaseForm.cs",
               "RelativeDocumentMoniker": "BaseForm.cs",
@@ -460,7 +441,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "BaseForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\BaseForm.Designer.cs",
               "RelativeDocumentMoniker": "BaseForm.Designer.cs",
@@ -479,7 +460,8 @@
               "ToolTip": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\bajas\\MainFormBajas.cs [Dise\u00F1o]",
               "RelativeToolTip": "bajas\\MainFormBajas.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T10:44:48.606Z"
+              "WhenOpened": "2025-07-10T10:44:48.606Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
@@ -538,7 +520,8 @@
               "RelativeToolTip": "bajas\\MainFormBajas.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAKMBAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T08:05:32.652Z"
+              "WhenOpened": "2025-07-02T08:05:32.652Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -578,7 +561,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 34,
               "Title": "Value.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\utils\\Value.cs",
               "RelativeDocumentMoniker": "utils\\Value.cs",
@@ -590,7 +573,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 33,
               "Title": "Biocam.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\utils\\Biocam.cs",
               "RelativeDocumentMoniker": "utils\\Biocam.cs",
@@ -626,7 +609,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 35,
               "Title": "Value.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\utils\\biocam\\Value.cs",
               "RelativeDocumentMoniker": "utils\\biocam\\Value.cs",
@@ -638,7 +621,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 36,
               "Title": "Contador.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\Contador.cs",
               "RelativeDocumentMoniker": "Contador.cs",
@@ -674,7 +657,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 37,
               "Title": "GetMozo.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\GetMozo.cs",
               "RelativeDocumentMoniker": "GetMozo.cs",
@@ -698,7 +681,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 38,
               "Title": "Datos.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\Datos.cs",
               "RelativeDocumentMoniker": "Datos.cs",
@@ -722,7 +705,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 39,
               "Title": "Resources.Designer.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\Properties\\Resources.Designer.cs",
               "RelativeDocumentMoniker": "Properties\\Resources.Designer.cs",
@@ -734,19 +717,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 40,
               "Title": "BaseForm.resx",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\BaseForm.resx",
               "RelativeDocumentMoniker": "BaseForm.resx",
               "ToolTip": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\BaseForm.resx",
               "RelativeToolTip": "BaseForm.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-07-01T09:24:20.139Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-01T09:24:20.139Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 43,
               "Title": "GrabacionRespuesta.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\utils\\GrabacionRespuesta.cs",
               "RelativeDocumentMoniker": "utils\\GrabacionRespuesta.cs",
@@ -758,7 +740,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 41,
               "Title": "LinPedidosVentaArco.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\utils\\LinPedidosVentaArco.cs",
               "RelativeDocumentMoniker": "utils\\LinPedidosVentaArco.cs",
@@ -770,7 +752,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 45,
               "Title": "Tag.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\utils\\Tag.cs",
               "RelativeDocumentMoniker": "utils\\Tag.cs",
@@ -782,7 +764,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 42,
               "Title": "MainForm.resx",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\MainForm.resx",
               "RelativeDocumentMoniker": "MainForm.resx",
@@ -795,7 +777,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 47,
               "Title": "Gtin.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\utils\\Gtin.cs",
               "RelativeDocumentMoniker": "utils\\Gtin.cs",
@@ -807,7 +789,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 44,
               "Title": "Desglose.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\utils\\Desglose.cs",
               "RelativeDocumentMoniker": "utils\\Desglose.cs",
@@ -819,7 +801,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 49,
+              "DocumentIndex": 48,
               "Title": "Settings.settings",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\Properties\\Settings.settings",
               "RelativeDocumentMoniker": "Properties\\Settings.settings",
@@ -832,7 +814,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 46,
               "Title": "ObjectSend.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\utils\\ObjectSend.cs",
               "RelativeDocumentMoniker": "utils\\ObjectSend.cs",
@@ -844,7 +826,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 51,
+              "DocumentIndex": 50,
               "Title": "parametros.txt",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\parametros.txt",
               "RelativeDocumentMoniker": "parametros.txt",
@@ -856,7 +838,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 50,
+              "DocumentIndex": 49,
               "Title": "Lectura.cs",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\utils\\Lectura.cs",
               "RelativeDocumentMoniker": "utils\\Lectura.cs",

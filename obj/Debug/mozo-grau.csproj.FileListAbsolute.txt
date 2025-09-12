@@ -213,3 +213,4 @@ C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\System.Text.Encodings
 C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\System.Text.Json.xml
 C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\PC\source\repos\mozo-grau\mozo-completo\bin\Debug\System.ValueTuple.xml
+C:\Users\PC\source\repos\mozo-grau\mozo-completo\obj\Debug\UHFAPP.exe.config
