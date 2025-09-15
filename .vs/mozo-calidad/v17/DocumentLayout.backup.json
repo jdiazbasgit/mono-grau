@@ -214,7 +214,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
@@ -227,8 +227,7 @@
               "ViewState": "AgIAAIkBAAAAAAAAAAAAwKQBAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-01T10:42:53.72Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -239,10 +238,6 @@
               "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "MainForm.cs",
@@ -250,10 +245,14 @@
               "RelativeDocumentMoniker": "MainForm.cs",
               "ToolTip": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\MainForm.cs*",
               "RelativeToolTip": "MainForm.cs*",
-              "ViewState": "AgIAAEYEAAAAAAAAAAAhwCkEAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAHkEAAAAAAAAAAAawHAEAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-16T08:42:39.461Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
@@ -300,8 +299,7 @@
               "ToolTip": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\Properties\\Resources.resx",
               "RelativeToolTip": "Properties\\Resources.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-04-30T19:05:27.091Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-30T19:05:27.091Z"
             },
             {
               "$type": "Document",
@@ -313,8 +311,7 @@
               "RelativeToolTip": "MainForm.Designer.cs",
               "ViewState": "AgIAAJcCAAAAAAAAAAAMwJ8CAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T22:01:20.196Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-30T22:01:20.196Z"
             },
             {
               "$type": "Document",
@@ -322,11 +319,10 @@
               "Title": "MainForm.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\MainForm.cs",
               "RelativeDocumentMoniker": "MainForm.cs",
-              "ToolTip": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\MainForm.cs [Dise\u00F1o]*",
-              "RelativeToolTip": "MainForm.cs [Dise\u00F1o]*",
+              "ToolTip": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\MainForm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "MainForm.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T09:05:15.862Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-05-16T09:05:15.862Z"
             },
             {
               "$type": "Document",
@@ -362,8 +358,7 @@
               "RelativeToolTip": "app.config",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-09-04T16:28:37.98Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-04T16:28:37.98Z"
             },
             {
               "$type": "Document",
@@ -374,8 +369,7 @@
               "ToolTip": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\Properties\\Settings.settings",
               "RelativeToolTip": "Properties\\Settings.settings",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002767|",
-              "WhenOpened": "2025-04-30T19:06:58.051Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-30T19:06:58.051Z"
             },
             {
               "$type": "Document",
@@ -386,8 +380,7 @@
               "ToolTip": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\inversas\\MainFormOrdenInversa.cs [Dise\u00F1o]",
               "RelativeToolTip": "inversas\\MainFormOrdenInversa.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-14T10:47:22.434Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-07-14T10:47:22.434Z"
             },
             {
               "$type": "Document",
@@ -399,8 +392,7 @@
               "RelativeToolTip": "inversas\\MainFormOrdenInversa.cs",
               "ViewState": "AgIAAAQCAAAAAAAAAAArwAwCAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-01T10:47:48.462Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-01T10:47:48.462Z"
             },
             {
               "$type": "Document",
@@ -412,8 +404,7 @@
               "RelativeToolTip": "UHFAPI.cs",
               "ViewState": "AgIAAMIFAAAAAAAAAAAwwNMFAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-11T01:40:35.8Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-11T01:40:35.8Z"
             },
             {
               "$type": "Document",
@@ -460,8 +451,7 @@
               "ToolTip": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\bajas\\MainFormBajas.cs [Dise\u00F1o]",
               "RelativeToolTip": "bajas\\MainFormBajas.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-10T10:44:48.606Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2025-07-10T10:44:48.606Z"
             },
             {
               "$type": "Document",
@@ -520,8 +510,7 @@
               "RelativeToolTip": "bajas\\MainFormBajas.Designer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAKMBAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T08:05:32.652Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-02T08:05:32.652Z"
             },
             {
               "$type": "Document",
@@ -544,8 +533,7 @@
               "ToolTip": "C:\\Users\\PC\\source\\repos\\mozo-grau\\mozo-completo\\MainForm.resx",
               "RelativeToolTip": "MainForm.resx",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-07-02T08:06:27.83Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-02T08:06:27.83Z"
             },
             {
               "$type": "Document",
@@ -772,8 +760,7 @@
               "RelativeToolTip": "MainForm.resx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAKwPAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-05-10T22:40:52.508Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-10T22:40:52.508Z"
             },
             {
               "$type": "Document",
@@ -809,8 +796,7 @@
               "RelativeToolTip": "Properties\\Settings.settings",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002767|",
-              "WhenOpened": "2025-05-11T01:37:01.975Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-11T01:37:01.975Z"
             },
             {
               "$type": "Document",

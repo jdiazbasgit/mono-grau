@@ -1061,6 +1061,7 @@ namespace UHFAPP
                 //caja(epc + " no se ha podido grabar", epc, true);
                 //grabarTagContadorAmipem(epc, 1);
                 log("grabarTagContadorAmipem:" + e1.Message);
+               //grabarTagContadorAmipem(epc, 1);
             }
         }
         private void grabarTagContadorMozo(string epc, int lote, bool comprobarErrores)
@@ -1133,6 +1134,7 @@ namespace UHFAPP
                 //grabarTagContadorMozo(epc, lote, true);
                 //borraUltimaGrabacion(epc);
                 log("grabarTagContadorMozo:" + e.Message);
+                cajaError(e.Message, epc);
             }
 
             return;
