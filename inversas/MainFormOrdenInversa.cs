@@ -467,26 +467,22 @@ namespace UHFAPP
 
         private void log(string texto)
         {
-            /* try
-             {
-                 var url = apiAmipemBase + "log";
-                 var request = (HttpWebRequest)WebRequest.Create(url);
-                 request.Method = "POST";
-                 request.ContentType = "application/json";
-                 request.Accept = "application/json";
-                 string salida = "{\"texto\":\"" + texto + "\"}";
-                 byte[] data = Encoding.UTF8.GetBytes(salida);
-                 request.ContentLength = data.Length;
-                 Stream stream = request.GetRequestStream();
-                 stream.Write(data, 0, data.Length);
-                 stream.Close();
+            string rutaArchivo = "log.txt";
+           // string textoAAnadir = "Esta línea se añadirá.";
 
-             }
-             catch (Exception e)
-             {
-                 log(e.Message);
-                 //caja("Problemas de conexion con la base de datos, contacte con el administrador", "");
-             }*/
+            try
+            {
+                // El 'true' indica que se añadirá contenido al final del archivo
+                using (StreamWriter sw = new StreamWriter(rutaArchivo, true))
+                {
+                    sw.WriteLine(texto);
+                  //  Console.WriteLine("Texto añadido correctamente.");
+                }
+            }
+            catch (Exception e)
+            {
+                //Console.WriteLine("Error al escribir en el archivo: " + e.Message);
+            }
 
         }
 
@@ -608,6 +604,7 @@ namespace UHFAPP
                             if (comprobarErrores)
                             {
                                 grabaOrdenInversa(epc, false);
+                                log(DateTime.Now+" - Orden Inversa correcta: " + epc);
                                 desglosaEpc(epc, DateTime.Now.ToString(), true);
 
                             }
@@ -771,8 +768,9 @@ namespace UHFAPP
             epcs.Rows.Clear();
 
 
-            if (!result)
-                result = uhf.OpenUsb();
+            //if (!result)
+                
+            epcs.Invoke(new Action(() => result = uhf.OpenUsb()));
             if (!result)
             {
                 try

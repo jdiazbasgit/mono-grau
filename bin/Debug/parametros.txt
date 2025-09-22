@@ -1,5 +1,5 @@
 #url servidor amipem
-http://192.168.0.135:3122/Ordenes
+http://82.223.202.137/Ordenes
 #http://localhost:8080/Ordenes/
 #url servidor mozo
 https://webservice.mozo-grau.com:7048/BC200_MG/

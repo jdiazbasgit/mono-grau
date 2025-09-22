@@ -11,7 +11,7 @@ using System.Threading;
 
 namespace UHFAPP
 {
-    public class UHFAPI  
+    public class UHFAPI
     {
 
 
@@ -112,7 +112,7 @@ namespace UHFAPP
         *********************************************************************************************************/
         [DllImport("UHFAPI.dll", CallingConvention = CallingConvention.Cdecl)]
         public static extern int UHFGetDeviceIdEx(byte[] id);
-    
+
 
         /**********************************************************************************************************
         * 功能：设置功率
@@ -206,7 +206,7 @@ namespace UHFAPP
           * 输入：buf--4bytes, 共32bits, 每bit 置1选择对应天线
           *********************************************************************************************************/
         [DllImport("UHFAPI.dll", CallingConvention = CallingConvention.Cdecl)]
-        private static extern int UHFSetAntEx(byte saveflag,byte[] buf,int len);
+        private static extern int UHFSetAntEx(byte saveflag, byte[] buf, int len);
 
         /**********************************************************************************************************
         * 功能：获取天线设置支持32个天线
@@ -217,7 +217,7 @@ namespace UHFAPP
         [DllImport("UHFAPI.dll", CallingConvention = CallingConvention.Cdecl)]
         private static extern int UHFGetAntEx(byte[] status, int slen);
 
-         
+
         /**********************************************************************************************************
         * 功能：区域设置
         * 输入：saveflag -- 1:掉电保存，  0：不保存
@@ -606,14 +606,14 @@ namespace UHFAPP
         [DllImport("UHFAPI.dll", CallingConvention = CallingConvention.Cdecl)]
         private static extern int UHFSetIOControl(byte output1, byte output2, byte outStatus);
 
- 
+
 
         [DllImport("UHFAPI.dll", CallingConvention = CallingConvention.Cdecl)]
-        private static extern int  UHFSetOutputIO(byte[] output, byte outputLen);
+        private static extern int UHFSetOutputIO(byte[] output, byte outputLen);
 
         [DllImport("UHFAPI.dll", CallingConvention = CallingConvention.Cdecl)]
-        private static extern int UHFGetIOStatus(byte[] statusData,int[] dataLen);
- 
+        private static extern int UHFGetIOStatus(byte[] statusData, int[] dataLen);
+
 
 
         [DllImport("UHFAPI.dll", CallingConvention = CallingConvention.Cdecl)]
@@ -710,8 +710,8 @@ namespace UHFAPP
         *save -- 0-不保存、1-保存日志文件
         *返回值：无 
         *********************************************************************************************************/
-         [DllImport("UHFAPI.dll", CallingConvention = CallingConvention.Cdecl)]
-          private static extern int SaveLogFile(int lsaveevel);
+        [DllImport("UHFAPI.dll", CallingConvention = CallingConvention.Cdecl)]
+        private static extern int SaveLogFile(int lsaveevel);
 
 
 
@@ -849,26 +849,26 @@ namespace UHFAPP
         //tdata tag data, type+length+content+...+type+length+content
         //type:1-epc,2-tid,3-user,4-rssi,5-antenna,6-id
         //
- 
+
         [DllImport("UHFAPI.dll", CallingConvention = CallingConvention.Cdecl)]
         public extern static int UHFGetTagData(byte[] tdata, int recvlen);
 
 
         [DllImport("UHFAPI.dll", CallingConvention = CallingConvention.Cdecl)]
         private extern static int UHFInventorySingle(int id);
- 
+
         [DllImport("UHFAPI.dll", CallingConvention = CallingConvention.Cdecl)]
         private extern static int UHFStopSingle(int id);
- 
+
         [DllImport("UHFAPI.dll", CallingConvention = CallingConvention.Cdecl)]
         private extern static int UHFInventoryById(int id);
 
         [DllImport("UHFAPI.dll", CallingConvention = CallingConvention.Cdecl)]
         private extern static int UHFStopById(int id);
 
- 
 
-   //   typedef enum{CELL_INVALID=0, CELL_CONNECT_ID=1, CELL_CONNECT_IP, CELL_UHF_PC, CELL_UHF_RSSI, CELL_UHF_ANTENNA, CELL_UHF_EPC, CELL_UHF_TID, CELL_UHF_USER,CELL_UHF_RESERVE,CELL_BARCODE, CELL_UHF_SENSOR} CELL_DATA_TYPE;
+
+        //   typedef enum{CELL_INVALID=0, CELL_CONNECT_ID=1, CELL_CONNECT_IP, CELL_UHF_PC, CELL_UHF_RSSI, CELL_UHF_ANTENNA, CELL_UHF_EPC, CELL_UHF_TID, CELL_UHF_USER,CELL_UHF_RESERVE,CELL_BARCODE, CELL_UHF_SENSOR} CELL_DATA_TYPE;
 
 
 
@@ -887,10 +887,10 @@ namespace UHFAPP
         public extern static void setOnDataReceived(OnDataReceived onDataRecved);
 
         [DllImport("UHFAPI.dll", CallingConvention = CallingConvention.Cdecl)]
-        public extern static int PrintTextToCursor(int codeType,byte[] text,short len);
+        public extern static int PrintTextToCursor(int codeType, byte[] text, short len);
 
         [DllImport("UHFAPI.dll", CallingConvention = CallingConvention.StdCall)]
-        public extern static  int BindUDP(int bindport);
+        public extern static int BindUDP(int bindport);
         [DllImport("UHFAPI.dll", CallingConvention = CallingConvention.StdCall)]
         public extern static void UnbindUDP();
         #endregion
@@ -909,6 +909,8 @@ namespace UHFAPP
         public const byte CELL_UHF_SENSOR = 11;
         public const byte CELL_INPUT = 12;
         public const byte CELL_KEY_CODE = 13;
+
+        public HashSet<string> leidos = new HashSet<string>();
         //return 0,no data, > 0 tag length, < 0 error code
         //tdata tag data, type+length+content+...+type+length+content
         //type:1-epc,2-tid,3-user,4-rssi,5-antenna,6-id
@@ -1237,13 +1239,13 @@ namespace UHFAPP
         public string GetUHFGetDeviceID()
         {
             byte[] id = new byte[100];
-            int len=UHFGetDeviceIdEx(id);
+            int len = UHFGetDeviceIdEx(id);
             if (len != 0)
             {
                 return null;
             }
             byte[] data = Utils.CopyArray(id, 1, id[0]);
-           return DataConvert.ByteArrayToHexString(data, data.Length);  
+            return DataConvert.ByteArrayToHexString(data, data.Length);
         }
         public string GetAPIVersion()
         {
@@ -1352,8 +1354,8 @@ namespace UHFAPP
             }
             return string.Empty;
         }
-     
-         
+
+
         /// <summary>
         /// 设置功率 (Set the power.)
         /// </summary>
@@ -1367,13 +1369,13 @@ namespace UHFAPP
                 if (UHFSetPower(save, uPower) == 0)
                     return true;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Console.WriteLine("SetPower error:" + e.Message);
                 return false;
             }
-            
-            
+
+
             return false;
         }
         /// <summary>
@@ -1619,7 +1621,7 @@ namespace UHFAPP
         /// <returns>true:success  false:failure</returns>
         public bool GetFastID(ref byte flag)
         {
-            if (UHFGetFastID(ref   flag) == 0)
+            if (UHFGetFastID(ref flag) == 0)
                 return true;
             return false;
 
@@ -1669,7 +1671,7 @@ namespace UHFAPP
         /// <returns></returns>
         public bool GetTagfocus(ref byte flag)
         {
-            if (UHFGetTagfocus(ref  flag) == 0)
+            if (UHFGetTagfocus(ref flag) == 0)
             {
                 return true;
             }
@@ -1722,9 +1724,9 @@ namespace UHFAPP
                 sb.Append("\r\n读取的数据长度：" + uCnt);
                 sb.Append("\r\n");
 
-               // FileManage.WriterFile("C:\\Users\\Administrator\\Desktop\\UHFLog.txt", sb.ToString(), true);
+                // FileManage.WriterFile("C:\\Users\\Administrator\\Desktop\\UHFLog.txt", sb.ToString(), true);
 
-                int result = UHFReadData(uAccessPwd, FilterBank, FilterStartaddr, FilterLen, FilterData, uBank, uPtr, uCnt, uReadDatabuf, ref   uReadDataLen);
+                int result = UHFReadData(uAccessPwd, FilterBank, FilterStartaddr, FilterLen, FilterData, uBank, uPtr, uCnt, uReadDatabuf, ref uReadDataLen);
                 if (result == 0)
                 {
                     return DataConvert.ByteArrayToHexString(uReadDatabuf, uReadDataLen);
@@ -1923,7 +1925,7 @@ namespace UHFAPP
             }
             return false;
         }
- 
+
         /// <summary>
         /// 开始循环识别标签
         /// Begin looping through the identification labels
@@ -2044,6 +2046,10 @@ namespace UHFAPP
                     rssi_data = rssi_data + ".0";
                 }
                 ant_data = Convert.ToInt32((strData.Substring(ant_index * 2, 2)), 16).ToString();
+                if (leidos.Contains(epc_data))
+                    return null;
+                else
+                    leidos.Add(epc_data);
 
                 UHFTAGInfo info = new UHFTAGInfo();
                 info.Epc = epc_data;
@@ -2483,7 +2489,7 @@ namespace UHFAPP
             }
         }
 
-  
+
         /// <summary>
         /// Get GPI state  On UR1A
         /// </summary>
@@ -2493,7 +2499,7 @@ namespace UHFAPP
         {
             byte[] temp = new byte[10];
             int[] dataLen = new int[1];
-            int result = UHFGetIOStatus(temp,  dataLen);
+            int result = UHFGetIOStatus(temp, dataLen);
             if (result == 0)
             {
                 statusData[0] = temp[1];
@@ -2522,9 +2528,9 @@ namespace UHFAPP
 
         #region 多设备连接
 
-        public const int  DEVICE_ALL = 0;
-        public const int  DEVICE_CONNECTED = 1;
-        public const int  DEVICE_DISCONNECT = 2;
+        public const int DEVICE_ALL = 0;
+        public const int DEVICE_CONNECTED = 1;
+        public const int DEVICE_DISCONNECT = 2;
         //获取当前连接的ip信息
         /// <summary>
         /// 
@@ -2535,7 +2541,7 @@ namespace UHFAPP
         {
             try
             {
-                byte[] info = new byte[1024*100];
+                byte[] info = new byte[1024 * 100];
                 int resultLen = LinkGetInfo(info, info.Length);
                 if (resultLen > 0)
                 {
@@ -2552,7 +2558,7 @@ namespace UHFAPP
                         object _ip = arr[k]["ip"];
                         object _port = arr[k]["port"];
                         object _connected = arr[k]["connected"];
-                        
+
                         if (type == 1)
                         {
                             if (_connected.ToString().ToLower() != "true")
@@ -2571,7 +2577,7 @@ namespace UHFAPP
                         {
                             continue;
                         }
-                         
+
 
 
                         DeviceInfo deviceInfo = new DeviceInfo();
@@ -2599,7 +2605,8 @@ namespace UHFAPP
                 }
                 return null;
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 return null;
             }
         }
@@ -2621,11 +2628,11 @@ namespace UHFAPP
 
         public bool InventoryById(int id)
         {
-           return UHFInventoryById(id)==0;
+            return UHFInventoryById(id) == 0;
         }
         public bool StopById(int id)
         {
-            return UHFStopById(id)==0;
+            return UHFStopById(id) == 0;
         }
         #endregion
 
@@ -2679,7 +2686,7 @@ namespace UHFAPP
 
         public bool SetDebug(bool debug)
         {
-            return SetLogLevel(debug ? 3 : 0)==0;
+            return SetLogLevel(debug ? 3 : 0) == 0;
         }
 
         public bool SaveLog(bool debug)
@@ -2844,4 +2851,3 @@ namespace UHFAPP
 
 
 
- 
