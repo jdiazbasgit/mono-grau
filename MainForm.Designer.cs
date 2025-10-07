@@ -43,10 +43,13 @@ namespace UHFAPP
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.panelCaja = new System.Windows.Forms.Panel();
+            this.textoCaja = new System.Windows.Forms.Label();
+            this.botonCaja = new System.Windows.Forms.Button();
             this.panelError = new System.Windows.Forms.Panel();
+            this.textoError = new System.Windows.Forms.Label();
             this.botonForzado = new System.Windows.Forms.Button();
             this.botonError = new System.Windows.Forms.Button();
-            this.textoError = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.buttonExcel = new System.Windows.Forms.Button();
@@ -58,14 +61,12 @@ namespace UHFAPP
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.version = new System.Windows.Forms.Label();
             this.buttonInversa = new System.Windows.Forms.Button();
             this.pPelPda = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pLinea = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.panelCaja = new System.Windows.Forms.Panel();
-            this.textoCaja = new System.Windows.Forms.Label();
-            this.botonCaja = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.pReferencia = new System.Windows.Forms.Panel();
@@ -75,11 +76,10 @@ namespace UHFAPP
             this.tbLinea = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.epcs)).BeginInit();
             this.panel9.SuspendLayout();
+            this.panelCaja.SuspendLayout();
             this.panelError.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel11.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panelCaja.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -154,7 +154,6 @@ namespace UHFAPP
             this.epcs.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.epcs.Size = new System.Drawing.Size(0, 0);
             this.epcs.TabIndex = 37;
-            this.epcs.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.epcs_CellContentClick);
             // 
             // Column1
             // 
@@ -244,6 +243,7 @@ namespace UHFAPP
             // 
             this.panel9.BackColor = System.Drawing.Color.Transparent;
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel9.Controls.Add(this.panelCaja);
             this.panel9.Controls.Add(this.panelError);
             this.panel9.Controls.Add(this.button3);
             this.panel9.Controls.Add(this.buttonExcel);
@@ -266,21 +266,64 @@ namespace UHFAPP
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(1360, 768);
             this.panel9.TabIndex = 37;
-            this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
+            // 
+            // panelCaja
+            // 
+            this.panelCaja.BackColor = System.Drawing.Color.Aquamarine;
+            this.panelCaja.Controls.Add(this.textoCaja);
+            this.panelCaja.Controls.Add(this.botonCaja);
+            this.panelCaja.Location = new System.Drawing.Point(329, 211);
+            this.panelCaja.Name = "panelCaja";
+            this.panelCaja.Size = new System.Drawing.Size(700, 500);
+            this.panelCaja.TabIndex = 50;
+            this.panelCaja.Visible = false;
+            // 
+            // textoCaja
+            // 
+            this.textoCaja.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textoCaja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.textoCaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textoCaja.Location = new System.Drawing.Point(87, 72);
+            this.textoCaja.Name = "textoCaja";
+            this.textoCaja.Size = new System.Drawing.Size(694, 388);
+            this.textoCaja.TabIndex = 0;
+            this.textoCaja.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.textoCaja.Visible = false;
+            // 
+            // botonCaja
+            // 
+            this.botonCaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonCaja.Location = new System.Drawing.Point(326, 421);
+            this.botonCaja.Name = "botonCaja";
+            this.botonCaja.Size = new System.Drawing.Size(116, 39);
+            this.botonCaja.TabIndex = 1;
+            this.botonCaja.Text = "CERRAR";
+            this.botonCaja.UseVisualStyleBackColor = true;
+            this.botonCaja.Click += new System.EventHandler(this.botonCaja_Click);
             // 
             // panelError
             // 
             this.panelError.BackColor = System.Drawing.Color.DarkKhaki;
+            this.panelError.Controls.Add(this.textoError);
             this.panelError.Controls.Add(this.botonForzado);
             this.panelError.Controls.Add(this.botonError);
-            this.panelError.Controls.Add(this.textoError);
             this.panelError.Controls.Add(this.label1);
             this.panelError.Location = new System.Drawing.Point(114, 644);
             this.panelError.Name = "panelError";
             this.panelError.Size = new System.Drawing.Size(1086, 75);
             this.panelError.TabIndex = 55;
             this.panelError.Visible = false;
-            this.panelError.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
+            // 
+            // textoError
+            // 
+            this.textoError.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textoError.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.textoError.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textoError.Location = new System.Drawing.Point(20, 0);
+            this.textoError.Name = "textoError";
+            this.textoError.Size = new System.Drawing.Size(694, 388);
+            this.textoError.TabIndex = 0;
+            this.textoError.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // botonForzado
             // 
@@ -303,19 +346,6 @@ namespace UHFAPP
             this.botonError.Text = "CERRAR";
             this.botonError.UseVisualStyleBackColor = true;
             this.botonError.Click += new System.EventHandler(this.botonError_Click);
-            // 
-            // textoError
-            // 
-            this.textoError.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textoError.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.textoError.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textoError.Location = new System.Drawing.Point(20, 0);
-            this.textoError.Name = "textoError";
-            this.textoError.Size = new System.Drawing.Size(694, 388);
-            this.textoError.TabIndex = 0;
-            this.textoError.Text = "dfsardfgdsgdfsgdf";
-            this.textoError.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.textoError.Click += new System.EventHandler(this.textoCaja_Click);
             // 
             // label1
             // 
@@ -465,6 +495,7 @@ namespace UHFAPP
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.LightGray;
+            this.panel11.Controls.Add(this.version);
             this.panel11.Controls.Add(this.buttonInversa);
             this.panel11.Controls.Add(this.pPelPda);
             this.panel11.Controls.Add(this.panel2);
@@ -475,6 +506,16 @@ namespace UHFAPP
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(1766, 89);
             this.panel11.TabIndex = 47;
+            // 
+            // version
+            // 
+            this.version.AutoSize = true;
+            this.version.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.version.Location = new System.Drawing.Point(1056, 31);
+            this.version.Name = "version";
+            this.version.Size = new System.Drawing.Size(69, 24);
+            this.version.TabIndex = 55;
+            this.version.Text = "V3.1.5";
             // 
             // buttonInversa
             // 
@@ -524,47 +565,11 @@ namespace UHFAPP
             // 
             this.panel4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel4.BackgroundImage")));
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel4.Controls.Add(this.panelCaja);
             this.panel4.Location = new System.Drawing.Point(53, 131);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(142, 44);
             this.panel4.TabIndex = 43;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
-            // 
-            // panelCaja
-            // 
-            this.panelCaja.BackColor = System.Drawing.Color.Aquamarine;
-            this.panelCaja.Controls.Add(this.textoCaja);
-            this.panelCaja.Controls.Add(this.botonCaja);
-            this.panelCaja.Location = new System.Drawing.Point(137, 7);
-            this.panelCaja.Name = "panelCaja";
-            this.panelCaja.Size = new System.Drawing.Size(700, 500);
-            this.panelCaja.TabIndex = 50;
-            this.panelCaja.Visible = false;
-            // 
-            // textoCaja
-            // 
-            this.textoCaja.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textoCaja.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.textoCaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textoCaja.Location = new System.Drawing.Point(6, 8);
-            this.textoCaja.Name = "textoCaja";
-            this.textoCaja.Size = new System.Drawing.Size(694, 388);
-            this.textoCaja.TabIndex = 0;
-            this.textoCaja.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.textoCaja.Click += new System.EventHandler(this.textoCaja_Click);
-            // 
-            // botonCaja
-            // 
-            this.botonCaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonCaja.Location = new System.Drawing.Point(326, 421);
-            this.botonCaja.Name = "botonCaja";
-            this.botonCaja.Size = new System.Drawing.Size(116, 39);
-            this.botonCaja.TabIndex = 1;
-            this.botonCaja.Text = "CERRAR";
-            this.botonCaja.UseVisualStyleBackColor = true;
-            this.botonCaja.Click += new System.EventHandler(this.botonCaja_Click);
             // 
             // panel3
             // 
@@ -652,7 +657,7 @@ namespace UHFAPP
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1683, 735);
+            this.ClientSize = new System.Drawing.Size(1717, 735);
             this.Controls.Add(this.panel9);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
@@ -671,11 +676,11 @@ namespace UHFAPP
             ((System.ComponentModel.ISupportInitialize)(this.epcs)).EndInit();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            this.panelCaja.ResumeLayout(false);
             this.panelError.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel11.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panelCaja.ResumeLayout(false);
+            this.panel11.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -726,5 +731,6 @@ namespace UHFAPP
         private Label textoError;
         private Button botonError;
         private Button botonForzado;
+        private Label version;
     }
 }

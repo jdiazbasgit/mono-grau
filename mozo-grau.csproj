@@ -275,12 +275,6 @@
     <Compile Include="Datos.cs" />
     <Compile Include="DeviceInfo.cs" />
     <Compile Include="GetMozo.cs" />
-    <Compile Include="inversas\MainFormOrdenInversa.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="inversas\MainFormOrdenInversa.Designer.cs">
-      <DependentUpon>MainFormOrdenInversa.cs</DependentUpon>
-    </Compile>
     <Compile Include="inversas\utils\OrdenInversa.cs" />
     <Compile Include="inversas\utils\OrdenInversaIn.cs" />
     <Compile Include="inversas\utils\OrdenInversaOut.cs" />
@@ -332,9 +326,6 @@
     <EmbeddedResource Include="BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="inversas\MainFormOrdenInversa.resx">
-      <DependentUpon>MainFormOrdenInversa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

@@ -1,0 +1,47 @@
+23/09/2025 14:15:46 - grabarTagContadorMozo:Error en el servidor remoto: (404) No se encontró.
+23/09/2025 14:15:56 - grabarTagContadorMozo:Error en el servidor remoto: (404) No se encontró.
+23/09/2025 14:15:56 - grabarTagContadorMozo:Error en el servidor remoto: (404) No se encontró.
+23/09/2025 14:16:09 - desglosado consulta: 0108435482643957103502202524240559431782105021117062024172106290
+23/09/2025 14:19:15 - grabarTagContadorMozo:Error en el servidor remoto: (404) No se encontró.
+23/09/2025 14:19:15 - grabarTagContadorMozo:Error en el servidor remoto: (404) No se encontró.
+23/09/2025 14:22:34 - 23/09/2025 14:22:34 - Orden Inversa correcta: 0108435482613394100025031834240599608622100111123092025170000000
+23/09/2025 14:22:34 - grabarTagContadorMozo:Error en el servidor remoto: (404) No se encontró.
+23/09/2025 14:22:34 - grabarTagContadorMozo:Error en el servidor remoto: (404) No se encontró.
+23/09/2025 14:24:11 - grabarTagContadorMozo:Error en el servidor remoto: (404) No se encontró.
+23/09/2025 14:24:11 - grabarTagContadorMozo:Error en el servidor remoto: (404) No se encontró.
+23/09/2025 14:24:26 - grabarTagContadorMozo:Error en el servidor remoto: (404) No se encontró.
+23/09/2025 14:24:26 - grabarTagContadorMozo:Error en el servidor remoto: (404) No se encontró.
+23/09/2025 14:26:39 - desglosaEpc:Operación no válida a través de subprocesos: Se tuvo acceso al control 'epcs' desde un subproceso distinto a aquel en que lo creó.
+23/09/2025 14:26:39 - 23/09/2025 14:26:39 - Orden Inversa correcta: 0108435482613394100025031834240590263112100131123092025170000000
+23/09/2025 14:26:39 - grabarTagContadorMozo:Error en el servidor remoto: (404) No se encontró.
+23/09/2025 14:26:43 - grabarTagContadorMozo:Error en el servidor remoto: (404) No se encontró.
+23/09/2025 14:26:43 - grabarTagContadorMozo:Error en el servidor remoto: (404) No se encontró.
+23/09/2025 14:28:40 - grabarTagContadorMozo:Error en el servidor remoto: (404) No se encontró.
+23/09/2025 14:28:44 - grabarTagContadorMozo:Error en el servidor remoto: (404) No se encontró.
+23/09/2025 14:30:12 - desglosaEpc:Operación no válida a través de subprocesos: Se tuvo acceso al control 'epcs' desde un subproceso distinto a aquel en que lo creó.
+23/09/2025 14:30:12 - 23/09/2025 14:30:12 - Orden Inversa correcta: 0108435482613394100025031834240590740192100171123092025170000000
+23/09/2025 14:30:12 - grabarTagContadorMozo:Error en el servidor remoto: (404) No se encontró.
+23/09/2025 14:30:13 - grabarTagContadorMozo:Error en el servidor remoto: (404) No se encontró.
+23/09/2025 14:39:35 - 23/09/2025 14:39:35 - Orden Inversa correcta: 0108435482613394100025031834240591495512100181123092025170000000
+23/09/2025 15:09:33 - grabarTagContadorMozo:Error en el servidor remoto: (404) No se encontró.
+23/09/2025 15:09:33 - grabarTagContadorMozo:Error en el servidor remoto: (404) No se encontró.
+23/09/2025 15:09:34 - grabarTagContadorMozo:Error en el servidor remoto: (404) No se encontró.
+23/09/2025 15:09:35 - grabarTagContadorMozo:Error en el servidor remoto: (404) No se encontró.
+23/09/2025 15:09:36 - grabarTagContadorMozo:Error en el servidor remoto: (404) No se encontró.
+23/09/2025 15:09:36 - grabarTagContadorMozo:Error en el servidor remoto: (404) No se encontró.
+24/09/2025 9:50:22 - 24/09/2025 9:50:22 - Orden Inversa correcta: 0108435482613394100025031859240592565972100121123092025170000000
+24/09/2025 9:53:42 - grabarTagContadorMozo:Error en el servidor remoto: (404) No se encontró.
+24/09/2025 9:53:42 - grabarTagContadorMozo:Error en el servidor remoto: (404) No se encontró.
+24/09/2025 9:59:53 - 24/09/2025 9:59:53 - Orden Inversa correcta: 0108435482613394100025031859240598516322100111123092025170000000
+24/09/2025 10:02:33 - grabarTagContadorMozo:Error en el servidor remoto: (404) No se encontró.
+24/09/2025 10:03:10 - grabarTagContadorMozo:Error en el servidor remoto: (404) No se encontró.
+24/09/2025 10:04:55 - grabarTagContadorMozo:Error en el servidor remoto: (404) No se encontró.
+24/09/2025 10:05:51 - desglosado consulta: 0108435482613394100025031859240598516322100111123092025170000000
+24/09/2025 10:07:18 - desglosado consulta: 0108435482613394100025031859240598516322100111123092025170000000
+24/09/2025 10:07:26 - desglosaEpc:Operación no válida a través de subprocesos: Se tuvo acceso al control 'epcs' desde un subproceso distinto a aquel en que lo creó.
+24/09/2025 10:07:45 - desglosaEpc:Operación no válida a través de subprocesos: Se tuvo acceso al control 'epcs' desde un subproceso distinto a aquel en que lo creó.
+24/09/2025 10:07:53 - desglosaEpc:Operación no válida a través de subprocesos: Se tuvo acceso al control 'epcs' desde un subproceso distinto a aquel en que lo creó.
+24/09/2025 10:07:57 - desglosaEpc:Operación no válida a través de subprocesos: Se tuvo acceso al control 'epcs' desde un subproceso distinto a aquel en que lo creó.
+24/09/2025 10:08:54 - desglosado consulta: 0108435482613394100025031859240598516322100111123092025170000000
+24/09/2025 10:10:46 - desglosado consulta: 0108435482613394100025031859240598516322100111123092025170000000
+24/09/2025 10:15:38 - desglosaEpc:Operación no válida a través de subprocesos: Se tuvo acceso al control 'epcs' desde un subproceso distinto a aquel en que lo creó.

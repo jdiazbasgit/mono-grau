@@ -1,6 +1,36 @@
-http://localhost:8080/
-https://webservice.mozo-grau.com:7048/BC200_MG_DESARROLLO/
+#url servidor amipem
+http://192.168.0.135:9122/Ordenes
+#http://localhost:8080/Ordenes/
+#url servidor mozo
+https://webservice.mozo-grau.com:7048/BC200_MG/
+#https://webservice.mozo-grau.com:7048/BC200_MG_desarrollo/
+#company
 0c0574f1-f098-ed11-965c-6045bd89ef6b
-WEBSERVICE
-BLZNChVZ4LAab/kewV3J0v1J/2rYZSwuDUcyyOWEkbY=
-casa
+#usuario servidor mozo
+#WEBSERVICE
+WSAMIPEM
+#password servidor mozo
+#BLZNChVZ4LAab/kewV3J0v1J/2rYZSwuDUcyyOWEkbY=
++dgV6q4lqOZ/4ARsjz+PsQ7jDRnQvzRKhOJR3J6+ens=
+#ubicacion de la ejecucion  para simulacion (casa,oficina,mozo)
+mozo
+#oficina
+#potencia de la antena
+30
+#session de la antena
+0
+#tag focus (1 activado, 0 desactivado)
+1
+#buzer (1 activado, 0 desactivado)
+0
+#simulacion sin valid.ación
+false
+#ip antena
+10.5.50.210
+#puerto antena
+8888
+#antena
+1
+#timeout
+500
+#C88C001D1300 0109C409C4 0209C409C4 0309C409C4 0409C409C4 0A0D0A

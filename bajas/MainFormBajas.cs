@@ -861,8 +861,7 @@ namespace UHFAPP
                 eventOpen(false);
             }
             this.Hide();
-            Form form = new MainFormOrdenInversa();
-            form.Show();
+            
         }
 
         private void MainFormBajas_FormClosing_1(object sender, FormClosingEventArgs e)
